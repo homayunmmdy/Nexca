@@ -11,6 +11,7 @@ const EditPostForm = ({ ticket }) => {
     description: "",
     body: "",
     section: "1",
+    service: "2",
     imgurl: "",
   };
 
@@ -18,6 +19,7 @@ const EditPostForm = ({ ticket }) => {
     startingTicketData["title"] = ticket.title;
     startingTicketData["description"] = ticket.description;
     startingTicketData["body"] = ticket.body;
+    startingTicketData["service"] = ticket.service;
     startingTicketData["section"] = ticket.section;
     startingTicketData["imgurl"] = ticket.imgurl;
   }
@@ -64,6 +66,21 @@ const EditPostForm = ({ ticket }) => {
     router.refresh();
     router.push("/admin/posts");
   };
+  const [services, setServices] = useState();
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const response = await axios.get(`/api/Services`);
+        setServices(response.data.services);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+      }
+    };
+
+    fetchServices();
+  }, []);
+
   const [sections, setSections] = useState();
 
   useEffect(() => {
@@ -112,7 +129,6 @@ const EditPostForm = ({ ticket }) => {
           id="description"
           name="description"
           onChange={handleChange}
-          required={true}
           value={formData.description}
           rows="5"
           className="textarea textarea-primary"
@@ -127,6 +143,19 @@ const EditPostForm = ({ ticket }) => {
           rows="10"
           className="textarea textarea-primary"
         />
+          <label>سرویس</label>
+        <select
+          className="select select-primary w-full"
+          name="section"
+          value={formData.section}
+          onChange={handleChange}
+        >
+          {services?.map((service) => (
+            <option key={service._id} value={service.secid}>
+              {service.name}
+            </option>
+          ))}
+        </select>
         <label>بخش</label>
         <select
           className="select select-primary w-full"
