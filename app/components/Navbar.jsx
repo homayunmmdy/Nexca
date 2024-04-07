@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Link from "next/link";
-import SiteConfig from '../config/site';
+import SiteConfig from '@/app/config/site';
 import { IoSearch } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { usePathname } from "next/navigation";
@@ -28,7 +28,7 @@ const Navbar = () => {
                     <Link href="/" className="btn btn-ghost text-xl text-red-600">{SiteConfig.name}</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex px-7">
-                    <ul className="menu menu-horizontal px-1 bg-neutral-500 rounded-2xl">
+                    <ul className="menu menu-horizontal px-4 bg-neutral-500 rounded-2xl">
                         {SiteConfig.navbar.map(item => (
                             <>
                                 {pathname === item.href ? <li key={item.id} className="hover:bg-neutral-100 rounded-2xl"> <Link className='text-red-600 font-extrabold' href={item.href}>{item.name}</Link> </li> : <li key={item.id} className="hover:bg-pageColor rounded-2xl"><Link className='text-neutral-200 font-extrabold' href={item.href}>{item.name}</Link></li>}
