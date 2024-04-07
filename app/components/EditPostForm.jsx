@@ -94,7 +94,6 @@ const EditPostForm = ({ ticket }) => {
           name="imgurl"
           type="text"
           onChange={handleChange}
-          required={true}
           value={formData.imgurl}
           className="input input-bordered input-primary w-full"
         />
