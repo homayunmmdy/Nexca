@@ -8,10 +8,9 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
     const pathname = usePathname();
-
     return (
-        <div>
-            <div className="flex-wrap justify-center sm:flex-nowrap navbar bg-neutral-900 md:px-12 py-3">
+        <>
+            <header className="flex-wrap justify-center sm:flex-nowrap navbar bg-neutral-900 md:px-12 py-3 mb-8">
                 <div className=" sm:navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,13 +25,13 @@ const Navbar = () => {
                             ))}
                         </ul>
                     </div>
-                    <Link href="/" className="btn btn-ghost text-xl text-pageColor">{SiteConfig.name}</Link>
+                    <Link href="/" className="btn btn-ghost text-xl text-red-600">{SiteConfig.name}</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex px-7">
                     <ul className="menu menu-horizontal px-1 bg-neutral-500 rounded-2xl">
                         {SiteConfig.navbar.map(item => (
                             <>
-                                {pathname === item.href ? <li key={item.id} className="hover:bg-neutral-100 rounded-2xl"> <Link className='text-pageColor font-extrabold' href={item.href}>{item.name}</Link> </li> : <li key={item.id} className="hover:bg-pageColor rounded-2xl"><Link className='text-neutral-200 font-extrabold' href={item.href}>{item.name}</Link></li>}
+                                {pathname === item.href ? <li key={item.id} className="hover:bg-neutral-100 rounded-2xl"> <Link className='text-red-600 font-extrabold' href={item.href}>{item.name}</Link> </li> : <li key={item.id} className="hover:bg-pageColor rounded-2xl"><Link className='text-neutral-200 font-extrabold' href={item.href}>{item.name}</Link></li>}
                             </>
                         ))}
                     </ul>
@@ -43,8 +42,8 @@ const Navbar = () => {
                         <IoSearch size={22} color='#E51E1E' />
                     </label>
                 </div>
-            </div>
-        </div>
+            </header>
+        </>
     )
 }
 
