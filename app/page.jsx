@@ -1,6 +1,7 @@
 import React from 'react'
 import MainNews from './components/sections/MainNews'
 import MostTabs from './components/sections/MostTabs'
+import ListAds from './components/ads/ListAds'
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
             <MostTabs />
         </div>
         <div className="col-span-12 md:col-span-3">
-          <div className='h-full w-ful bg-teal-400'>three</div>
+          <ListAds />
         </div>
       </div>
     </div>
