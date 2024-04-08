@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import HorizontalNew from "./HorizontalNew";
 
-const HorizontalNews = () => {
+const HorizontalNews = ({secid}) => {
   const [data, setData] = useState();
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const HorizontalNews = () => {
   if (!data) {
     return <h1>loading</h1>;
   }
-  const filteredData = data.filter((item) => item.section == "5");
+  const filteredData = data.filter((item) => item.section == secid);
   return (
     <>
       {filteredData.map((filteredData, _index) => (

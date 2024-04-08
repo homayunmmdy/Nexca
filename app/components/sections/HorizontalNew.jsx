@@ -9,8 +9,6 @@ const HorizontalNew = ({ post }) => {
                     alt={post.title} /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{post.title}</h2>
-                    <p>{post.description}</p>
-
                 </div>
             </a>
         </div>
