@@ -2,6 +2,7 @@ import React from 'react'
 import MainNews from './components/sections/MainNews'
 import MostTabs from './components/sections/MostTabs'
 import ListAds from './components/ads/ListAds'
+import VerticalNews from './components/sections/VerticalNews'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         </div>
         <div className="col-span-12 md:col-span-3">
           <ListAds />
+          <VerticalNews />
         </div>
       </div>
     </div>
