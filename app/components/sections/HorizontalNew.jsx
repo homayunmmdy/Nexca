@@ -1,15 +1,15 @@
 import React from 'react'
 
-const VerticalNew = ({ post }) => {
+const HorizontalNew = ({ post }) => {
     return (
         <div>
-            <a href={`/Posts/${post._id}`} className="card w-96 bg-base-100 shadow-xl">
+            <a href={`/Posts/${post._id}`} className="card card-side bg-base-100 h-[200px] shadow-xl">
                 <figure><img
                     src={post.imgurl}
-                    alt={post.title} 
-                    /></figure>
+                    alt={post.title} /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{post.title}</h2>
+                    <p>{post.description}</p>
 
                 </div>
             </a>
@@ -17,4 +17,4 @@ const VerticalNew = ({ post }) => {
     )
 }
 
-export default VerticalNew
+export default HorizontalNew
