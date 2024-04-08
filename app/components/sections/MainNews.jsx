@@ -39,7 +39,6 @@ const MainNews = () => {
         navigation
         loop={true}
         autoplay={{ delay: 3000 }}
-        onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         >
           {filteredData.map((filteredData, _index) => (
