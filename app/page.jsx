@@ -19,8 +19,24 @@ const Home = () => {
         </div>
         <div className="col-span-12 md:col-span-3">
           <ListAds />
-          <VerticalNews />
-          <UnderVertical />
+          <VerticalNews secid="4" />
+          <UnderVertical secid="5" />
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+        <VerticalNews secid="7" />
+      </div>
+      <div className="grid grid-cols-12 gap-4">
+        <div className="col-span-12 md:col-span-4">
+          <VerticalNews secid="8" />
+          <UnderVertical secid="9" />
+        </div>
+        <div className="col-span-12 md:col-span-4">
+        <VerticalNews secid="10" />
+          <UnderVertical secid="11" />
+        </div>
+        <div className="col-span-12 md:col-span-4">
+
         </div>
       </div>
     </div>

@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import VerticalNew from "./VerticalNew";
 
-const UnderVertical = () => {
+const UnderVertical = ({secid}) => {
     const [data, setData] = useState();
 
     useEffect(() => {
@@ -21,7 +20,7 @@ const UnderVertical = () => {
     if (!data) {
         return <h1>loading</h1>;
     }
-    const filteredData = data.filter((item) => item.section == "4");
+    const filteredData = data.filter((item) => item.section == secid);
     return (
         <>
             {filteredData.map((item) => (
