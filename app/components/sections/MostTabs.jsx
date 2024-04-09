@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import axios from "axios"
+import { FaCircleDot } from "react-icons/fa6";
 
 const MostTabs = () => {
     const [activeTab, setActiveTab] = useState(1);
@@ -46,17 +47,27 @@ const MostTabs = () => {
                 </button>
             </div>
             <div className="p-4">
-                <div className={`${activeTab === 1 ? '' : 'hidden'}`}>
+                <ul className={`${activeTab === 1 ? '' : 'hidden'} mb-5 flex flex-col gap-4`}>
                     {latestNews.map((filteredData) => (
-                        <p key={filteredData.id}>{filteredData.title}</p>
+                        <a href={`/Posts/${filteredData._id}`}>
+                            <li className="flex p-2 gap-2 items-center border-dotted border-b-2 border-gray-400 hover:border-gray-900 hover:border-solid" key={filteredData.id}>
+                                <FaCircleDot color='#E51E1E' />
+                                <span className="hover:text-red-600 font-semibold truncate" >{filteredData.title}</span>
+                            </li>
+                        </a>
                     ))}
 
-                </div>
-                <div className={`${activeTab === 2 ? '' : 'hidden'}`}>
+                </ul>
+                <ul className={`${activeTab === 2 ? '' : 'hidden'} mb-5 flex flex-col gap-4`}>
                     {mostvisited.map((filteredData) => (
-                        <p key={filteredData.id}>{filteredData.title}</p>
+                        <a href={`/Posts/${filteredData._id}`}>
+                            <li className="flex p-2 gap-2 items-center border-dotted border-b-2 border-gray-400 hover:border-gray-900 hover:border-solid" key={filteredData.id}>
+                                <FaCircleDot color='#E51E1E' />
+                                <span className="hover:text-red-600 font-semibold truncate" >{filteredData.title}</span>
+                            </li>
+                        </a>
                     ))}
-                </div>
+                </ul>
             </div>
         </div>
     );

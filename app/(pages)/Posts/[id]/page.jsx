@@ -29,7 +29,6 @@ const PostPage = () => {
             height="450"
             loading="lazy"
           />
-              
               <p>
               {post.description}
             </p>
