@@ -32,19 +32,21 @@ const MostTabs = () => {
 
     return (
         <div className="w-full max-w-md mx-auto">
-            <div className="flex">
-                <button
-                    className={`flex-1 p-3 text-center ${activeTab === 1 ? 'bg-gray-400' : 'bg-gray-200'}`}
-                    onClick={() => handleTabClick(1)}
-                >
-                    جدیدترین اخبار
-                </button>
-                <button
-                    className={`flex-1 p-3 text-center ${activeTab === 2 ? 'bg-gray-400' : 'bg-gray-200'}`}
-                    onClick={() => handleTabClick(2)}
-                >
-                    پربازدیدترین ها
-                </button>
+            <div className=' bg-neutral-700 p-2 rounded-lg'>
+                <div className="flex">
+                    <button
+                        className={`flex-1 text-gray-100 p-1 mx-1 text-center rounded-md text-lg ${activeTab === 1 ? 'bg-gray-200 border-2 border-red-600 text-gray-900' : 'bg-neutral-700'}`}
+                        onClick={() => handleTabClick(1)}
+                    >
+                        جدیدترین اخبار
+                    </button>
+                    <button
+                        className={`flex-1 text-gray-100 p-1 mx-1 text-center rounded-md text-lg ${activeTab === 2 ? 'bg-gray-200 border-2 border-red-600 text-gray-900' : 'bg-neutral-700'}`}
+                        onClick={() => handleTabClick(2)}
+                    >
+                        پربازدیدترین ها
+                    </button>
+                </div>
             </div>
             <div className="p-4">
                 <ul className={`${activeTab === 1 ? '' : 'hidden'} mb-5 flex flex-col gap-4`}>
