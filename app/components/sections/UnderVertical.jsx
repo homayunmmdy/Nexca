@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { FaCircleDot } from "react-icons/fa6";
 
-const UnderVertical = ({secid}) => {
+const UnderVertical = ({ secid }) => {
     const [data, setData] = useState();
 
     useEffect(() => {
@@ -24,7 +25,10 @@ const UnderVertical = ({secid}) => {
     return (
         <>
             {filteredData.map((item) => (
-                <li >{item.title}</li>
+                <li className="flex p-2 gap-2 items-center border-dotted border-b-2 border-gray-400 hover:border-gray-900 hover:border-solid">
+                    <FaCircleDot color='#E51E1E' />
+                    <span class="hover:text-red-600 font-semibold truncate">{item.title}</span>
+                </li>
             ))}
         </>
     )

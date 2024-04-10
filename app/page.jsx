@@ -24,10 +24,10 @@ const Home = () => {
           <UnderVertical secid="5" />
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-6 px-3">
         <VerticalNews secid="7" />
       </div>
-      <div className="grid grid-cols-12 gap-4">
+      <div className="grid grid-cols-12 gap-4 my-5">
         <div className="col-span-12 md:col-span-4">
           <VerticalNews secid="8" />
           <UnderVertical secid="9" />

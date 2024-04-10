@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { FaCircleDot } from "react-icons/fa6";
 
 const LinearNews = ({secid}) => {
     const [data, setData] = useState();
@@ -24,7 +25,11 @@ const LinearNews = ({secid}) => {
     return (
         <>
             {filteredData.map((item) => (
-                <li >{item.title}</li>
+                <li class="flex p-2 gap-2 items-center border-dotted border-b-2 border-gray-400 hover:border-gray-900 hover:border-solid">
+                                        <FaCircleDot color='#E51E1E' />
+
+                    {item.title}
+                    </li>
             ))}
         </>
     )

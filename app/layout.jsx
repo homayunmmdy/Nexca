@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang={SiteConfig.lang} dir={SiteConfig.dir}>
       <body className={inter.className}>
+        <h1 className="hidden">SiteConfig.name</h1>
         <Navbar />
         {children}
         <Footer />
