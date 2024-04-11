@@ -1,6 +1,6 @@
 const SiteConfig = {
-  name: "سایت خبری",
-  description: "با ما باشید با جدیدترین اخبار روز دنیا",
+  name: "نکسا",
+  description: "با ما باشید با جدیدترین اخبار روز هوش مصنوعی",
   lang: "fa",
   dir: "rtl"
 };

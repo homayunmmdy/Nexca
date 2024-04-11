@@ -8,14 +8,14 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
   useEffect(() => {
-    const isAuthenticated = localStorage.getItem("isLoggedIn");
+    const isAuthenticated = localStorage.getItem("checkLogin");
     if (isAuthenticated) {
       router.push("/admin");
     }
   }, []);
   const handleLogin = () => {
-    if (username == "master" && password == "123456") {
-      localStorage.setItem("isLoggedIn", true);
+    if (username == "admin" && password == "654321") {
+      localStorage.setItem("checkLogin", true);
       router.push("/admin");
     } else {
       alert("Invalid username or password");
