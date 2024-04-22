@@ -19,7 +19,7 @@ const EditPostForm = ({ ticket }) => {
     startingTicketData["title"] = ticket.title;
     startingTicketData["description"] = ticket.description;
     startingTicketData["body"] = ticket.body;
-    startingTicketData["service"] = ticket.service;
+    // startingTicketData["service"] = ticket.service;
     startingTicketData["section"] = ticket.section;
     startingTicketData["imgurl"] = ticket.imgurl;
   }
@@ -66,20 +66,20 @@ const EditPostForm = ({ ticket }) => {
     router.refresh();
     router.push("/admin/posts");
   };
-  const [services, setServices] = useState();
+  // const [services, setServices] = useState();
 
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const response = await axios.get(`/api/Services`);
-        setServices(response.data.services);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchServices = async () => {
+  //     try {
+  //       const response = await axios.get(`/api/Services`);
+  //       setServices(response.data.services);
+  //     } catch (error) {
+  //       console.error("Error fetching services:", error);
+  //     }
+  //   };
 
-    fetchServices();
-  }, []);
+  //   fetchServices();
+  // }, []);
 
   const [sections, setSections] = useState();
 
@@ -143,7 +143,7 @@ const EditPostForm = ({ ticket }) => {
           rows="10"
           className="textarea textarea-primary"
         />
-          <label>سرویس</label>
+          {/* <label>سرویس</label>
         <select
           className="select select-primary w-full"
           name="section"
@@ -155,7 +155,7 @@ const EditPostForm = ({ ticket }) => {
               {service.name}
             </option>
           ))}
-        </select>
+        </select> */}
         <label>بخش</label>
         <select
           className="select select-primary w-full"
