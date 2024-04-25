@@ -5,21 +5,18 @@ import { useRouter } from "next/navigation";
 
 const DeleteBlock = ({ path, id }) => {
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
-  const [loading, setloading] = useState(false);
   const router = useRouter();
 
   const handleDelete = async () => {
-    setloading(false);
     const res = await fetch(`/api/${path}/${id}`, {
       method: "DELETE",
     });
-
+    setIsConfirmOpen(false);
     if (res.ok) {
       router.refresh();
     } else {
       console.error("Error deleting item:", res.statusText);
     }
-    setloading(false);
 
   };
 
@@ -64,7 +61,7 @@ const DeleteBlock = ({ path, id }) => {
                 onClick={handleDelete}
                 className="text-white bg-red-500 hover:bg-red-600 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
               >
-                 {loading ? 'Deleting...' : 'حذف'}
+                 حذف
               </button>
             </div>
           </div>
