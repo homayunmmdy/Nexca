@@ -28,7 +28,7 @@ const AdminNavLink = () => {
               <li className="mt-0.5 w-full">
                 {pathname === link.href ? (
                   <a
-                    className="py-2.7 shadow-soft-xl p-1 text-sm ease-nav-brand my-0 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors"
+                    className="py-2.7 shadow-soft-xl p-1 text-sm ease-nav-brand my-0 flex items-center whitespace-nowrap rounded-xl bg-white px-4 font-semibold text-slate-700 transition-colors"
                     href={link.href}
                   >
                     <div className="bg-gradient-to-tl from-purple-700 to-pink-500 shadow-soft-2xl ml-2 flex h-9 w-9 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
@@ -40,7 +40,7 @@ const AdminNavLink = () => {
                   </a>
                 ) : (
                   <a
-                    className="py-2.7 text-sm ease-nav-brand  p-1 my-0 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-white"
+                    className="py-2.7 text-sm ease-nav-brand  p-1 my-0 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-white rounded-xl"
                     href={link.href}
                   >
                     <div className="shadow-soft-2xl ml-2 flex h-9 w-9 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
