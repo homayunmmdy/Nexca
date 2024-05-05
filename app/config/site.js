@@ -1,8 +1,8 @@
 const SiteConfig = {
-  name: "نکسا",
-  description: "با ما باشید با جدیدترین اخبار روز هوش مصنوعی",
-  lang: "fa",
-  dir: "rtl"
+  name: "Nexa",
+  description: "Powerfull admin for you site",
+  lang: "en",
+  dir: "ltr"
 };
 
 export default SiteConfig;

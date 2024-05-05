@@ -2,34 +2,39 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import SiteConfig from '@/app/config/site';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
   useEffect(() => {
-    const isAuthenticated = localStorage.getItem("checkLogin");
+    const isAuthenticated = localStorage.getItem("authenticated");
     if (isAuthenticated) {
       router.push("/admin");
     }
   }, []);
   const handleLogin = () => {
-    if (username == "admin" && password == "654321") {
-      localStorage.setItem("checkLogin", true);
+    const PASSWORD = process.env.NEXT_PUBLIC_PASSWORD;
+    if (username == "admin" && password == `${PASSWORD}`) {
+      localStorage.setItem("authenticated", true);
+      toast.success("you're welcome")
       router.push("/admin");
     } else {
-      alert("Invalid username or password");
+      toast.error("Invalid username or password");
     }
   };
   return (
     <div className="flex h-screen bg-indigo-700">
+      <ToastContainer />
       <div className="w-full max-w-xs m-auto bg-indigo-100 rounded p-5">
         <header className="text-indigo-500 text-2xl	font-extrabold text-center">
-           <span className="text-black font-normal">ادمین</span> {SiteConfig.name}
+          <span className="text-black font-normal">Admin</span> {SiteConfig.name}
         </header>
         <div>
-          <label className="block mb-2 text-indigo-500" for="username">
-            نام کاربری
+          <label className="block mb-2 text-indigo-500" htmlFor="username">
+            UserName
           </label>
           <input
             className="w-full p-2 mb-3 text-black border-b-2 border-indigo-500 outline-none bg-gray-300"
@@ -40,8 +45,8 @@ const Login = () => {
           />
         </div>
         <div>
-          <label className="block mb-2 text-indigo-500" for="password">
-            رمز
+          <label className="block mb-2 text-indigo-500" htmlFor="password">
+            Password
           </label>
           <input
             className="w-full p-2 mb-3 text-black border-b-2 border-indigo-500 outline-none bg-gray-300"
@@ -57,7 +62,7 @@ const Login = () => {
             type="submit"
             onClick={handleLogin}
           >
-            ورود
+            Login
           </button>
         </div>
       </div>

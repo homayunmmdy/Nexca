@@ -3,18 +3,14 @@ import { MdOutlinePostAdd } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { CgFeed } from "react-icons/cg";
 import { usePathname } from "next/navigation";
-import { FaRegNewspaper } from "react-icons/fa";
 import { TbNewSection } from "react-icons/tb";
-import { FaUserGroup } from "react-icons/fa6";
 
 const links = [
-  { name: " ادمین", href: "/admin", icon: TiHome },
-  { name: "پست ها", href: "/admin/posts", icon: CgFeed },
-  { name: "پست جدید", href: "/admin/post/new", icon: MdOutlinePostAdd },
-  { name: "قسمت ها", href: "/admin/sections", icon: TbNewSection },
-  // { name: " تماس باما", href: "/admin/contacts", icon: PiPhoneCallFill },
-  // { name: "خبرنامه", href: "/admin/newsletter", icon: FaRegNewspaper },
-  // { name: "کاربر ها", href: "/admin/users", icon: FaUserGroup },
+  { name: "Admin", href: "/admin", icon: TiHome },
+  { name: "Posts", href: "/admin/posts", icon: CgFeed },
+  { name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
+  { name: "Sections", href: "/admin/sections", icon: TbNewSection },
+  { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
 ];
 const AdminNavLink = () => {
   const pathname = usePathname();

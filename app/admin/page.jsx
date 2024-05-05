@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 const Admin = () => {
   const router = useRouter()
   useEffect(() => {
-    const isAuthenticated = localStorage.getItem("checkLogin");
+    const isAuthenticated = localStorage.getItem("authenticated");
     if (!isAuthenticated) {
       router.push("/login");
     }

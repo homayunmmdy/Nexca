@@ -6,7 +6,7 @@ import AdminSidbar from "@/app/components/Sidebar";
 export default function AdminLayout({ children }) {
   const router = useRouter();
   useEffect(() => {
-    const isAuthenticated = localStorage.getItem("checkLogin");
+    const isAuthenticated = localStorage.getItem("authenticated");
     if (!isAuthenticated) {
       router.push("/login");
     }

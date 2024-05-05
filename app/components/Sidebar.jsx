@@ -18,7 +18,7 @@ const Sidebar = () => {
             href="/"
             target="_blank"
           >
-            ادمین
+            Admin
             <span className="ml-1 font-semibold transition-all duration-200 ease-nav-brand">
               {" "}
               {SiteConfig.name}

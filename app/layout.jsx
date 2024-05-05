@@ -5,11 +5,9 @@ import SiteConfig from "@/app/config/site"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: `${SiteConfig.name} `,
+  title: SiteConfig.name,
   description: SiteConfig.description,
 };
-
-
 
 export default function RootLayout({ children }) {
   return (
