@@ -9,6 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tiptap/extension-document": "^2.3.1",
+    "@tiptap/extension-italic": "^2.3.1",
+    "@tiptap/extension-paragraph": "^2.3.1",
+    "@tiptap/extension-text": "^2.3.1",
+    "@tiptap/pm": "^2.3.1",
+    "@tiptap/react": "^2.3.1",
+    "@tiptap/starter-kit": "^2.3.1",
     "axios": "^1.6.8",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.0",

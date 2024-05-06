@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 import { TbNewSection } from "react-icons/tb";
 
 const links = [
-  { name: "Admin", href: "/admin", icon: TiHome },
-  { name: "Posts", href: "/admin/posts", icon: CgFeed },
-  { name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
-  { name: "Sections", href: "/admin/sections", icon: TbNewSection },
-  { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
+  {id: 1, name: "Admin", href: "/admin", icon: TiHome },
+  {id: 2, name: "Posts", href: "/admin/posts", icon: CgFeed },
+  {id: 3, name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
+  {id: 4, name: "Sections", href: "/admin/sections", icon: TbNewSection },
+  {id: 5, name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
 ];
 const AdminNavLink = () => {
   const pathname = usePathname();
@@ -21,7 +21,7 @@ const AdminNavLink = () => {
           {links.map((link) => {
             const LinkIcon = link.icon;
             return (
-              <li className="mt-0.5 w-full">
+              <li className="mt-0.5 w-full" key={link.id}>
                 {pathname === link.href ? (
                   <a
                     className="py-2.7 shadow-soft-xl p-1 text-sm ease-nav-brand my-0 flex items-center whitespace-nowrap rounded-xl bg-white px-4 font-semibold text-slate-700 transition-colors"
