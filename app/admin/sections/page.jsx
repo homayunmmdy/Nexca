@@ -85,9 +85,9 @@ const Section = () => {
         <table className="table table-zebra">
           <thead>
             <tr>
-              <th>آیدی</th>
-              <th>قسمت</th>
-              <th>حذف</th>
+              <th>id</th>
+              <th>sec</th>
+              <th>delete</th>
             </tr>
           </thead>
           {data?.map((item) => (

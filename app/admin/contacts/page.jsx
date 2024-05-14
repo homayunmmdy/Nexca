@@ -33,10 +33,10 @@ const ContactsPage = async () => {
           <table className="table table-xs">
             <thead>
               <tr>
-                <th>اسم</th>
-                <th>ایمیل</th>
-                <th>پیام</th>
-                <th>حذف</th>
+                <th>name</th>
+                <th>email</th>
+                <th>message</th>
+                <th>delete</th>
               </tr>
             </thead>
             {contactData.map((data) => (

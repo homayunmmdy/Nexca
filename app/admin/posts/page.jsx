@@ -20,10 +20,10 @@ const Posts = async () => {
               <table className="table">
                 <thead>
                   <tr>
-                    <th>تیتر</th>
-                    <th className="hidden lg:block">لید</th>
-                    <th>ویرایش</th>
-                    <th>حذف</th>
+                    <th>title</th>
+                    <th className="hidden lg:block">lead</th>
+                    <th>edit</th>
+                    <th>delete</th>
                   </tr>
                 </thead>
                 <tbody>

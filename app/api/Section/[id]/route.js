@@ -7,7 +7,7 @@ export async function DELETE(req, { params }) {
     const { id } = params;
 
     await Section.findByIdAndDelete(id);
-    return NextResponse.json({ message: "قسمت مورد نظر با موفقیت حذف شد" }, { status: 200 });
+    return NextResponse.json({ message: "Section Delete Successfully" }, { status: 200 });
   } catch (error) {
     console.log(error);
     return NextResponse.json({ message: "Error", error }, { status: 500 });

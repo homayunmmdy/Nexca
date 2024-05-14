@@ -104,8 +104,8 @@ const EditPostForm = ({ ticket }) => {
         method="post"
         className="flex flex-col gap-3 w-full md:w-1/2 mb-3"
       >
-        <h3 className="text-center font-semibold	text-2xl">{EDITMODE ? "ویرایش پست" : "پست جدید"}</h3>
-        <label>لینک عکس</label>
+        <h3 className="text-center font-semibold	text-2xl">{EDITMODE ? "Edit Post" : "New Post"}</h3>
+        <label>Image Link</label>
         <input
           id="imgurl"
           name="imgurl"
@@ -114,7 +114,7 @@ const EditPostForm = ({ ticket }) => {
           value={formData.imgurl}
           className="input input-bordered input-primary w-full"
         />
-        <label>تیتر</label>
+        <label>title</label>
         <input
           id="title"
           name="title"
@@ -124,7 +124,7 @@ const EditPostForm = ({ ticket }) => {
           value={formData.title}
           className="input input-bordered input-primary w-full"
         />
-        <label>لید</label>
+        <label>lead</label>
         <textarea
           id="description"
           name="description"
@@ -133,7 +133,7 @@ const EditPostForm = ({ ticket }) => {
           rows="5"
           className="textarea textarea-primary"
         />
-        <label>متن</label>
+        <label>body</label>
         <textarea
           id="body"
           name="body"
@@ -156,7 +156,7 @@ const EditPostForm = ({ ticket }) => {
             </option>
           ))}
         </select> */}
-        <label>بخش</label>
+        <label>Section</label>
         <select
           className="select select-primary w-full"
           name="section"
@@ -172,7 +172,7 @@ const EditPostForm = ({ ticket }) => {
         <input
           type="submit"
           className="btn btn-active btn-primary"
-          value={EDITMODE ? "دخیره" : "پست"}
+          value={EDITMODE ? "Save" : "Post"}
         />
       </form>
     </div>
