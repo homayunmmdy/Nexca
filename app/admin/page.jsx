@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation';
+import Stats from '../components/Stats';
 const Admin = () => {
   const router = useRouter()
   useEffect(() => {
@@ -16,7 +17,8 @@ const Admin = () => {
   }
   return (
     <div>
-      <button onClick={handleLogout}>خروج</button>
+      <button className='btn btn-error m-3' onClick={handleLogout}>خروج</button>
+      <Stats />
     </div>
   )
 }
