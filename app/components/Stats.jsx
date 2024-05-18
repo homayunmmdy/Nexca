@@ -18,8 +18,8 @@ const Stats = () => {
                 ]);
 
                 setPosts(postsResponse.data.data);
-                setSections(sectionsResponse.data.sections);
-                setContacts(contactsResponse.data.contact);
+                setSections(sectionsResponse.data.data);
+                setContacts(contactsResponse.data.data);
     
             } catch (error) {
                 console.error("Error fetching data:", error);

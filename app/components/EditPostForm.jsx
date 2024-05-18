@@ -87,7 +87,7 @@ const EditPostForm = ({ ticket }) => {
     const fetchSections = async () => {
       try {
         const response = await axios.get(`/api/Section`);
-        setSections(response.data.sections);
+        setSections(response.data.data);
       } catch (error) {
         console.error("Error fetching sections:", error);
       }

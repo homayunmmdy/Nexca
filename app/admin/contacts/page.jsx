@@ -20,11 +20,11 @@ const getData = async () => {
 
 const ContactsPage = async () => {
   const data = await getData();
-  if (!data?.contact) {
+  if (!data.data) {
     return <p>No data send.</p>;
   }
 
-  const contactData = data.contact;
+  const contactData = data.data;
 
   return (
     <div className="p-5">

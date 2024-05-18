@@ -10,13 +10,13 @@ export async function handleGetRequest(Model) {
   }
 }
 
-export async function handlePostRequest(req, Model) {
+export async function handlePostRequest(req, Model, successMessage) {
   try {
     const body = await req.json();
     const formData = body.formData;
     await Model.create(formData);
     return NextResponse.json(
-      { message: "Data created successfully" },
+      { message: successMessage || "Data created successfully" },
       { status: 201 }
     );
   } catch (err) {

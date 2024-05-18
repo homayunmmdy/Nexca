@@ -7,19 +7,5 @@ export async function GET() {
 }
 
 export async function POST(req) {
-  return handlePostRequest(req, Post);
+  return handlePostRequest(req, Post, "Post Created successfully");
 }
-
-// export async function POST(req) {
-//   try {
-//     const body = await req.json();
-//     const ticketData = body.formData;
-
-//     await Post.create(ticketData);
-
-//     return NextResponse.json({ message: "Your message has been successfully sent" }, { status: 201 });
-//   } catch (err) {
-//     console.log(err);
-//     return NextResponse.json({ message: "Error", err }, { status: 500 });
-//   }
-// }
