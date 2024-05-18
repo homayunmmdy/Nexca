@@ -4,13 +4,15 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import { CgFeed } from "react-icons/cg";
 import { usePathname } from "next/navigation";
 import { TbNewSection } from "react-icons/tb";
+import { SiCloudflarepages } from "react-icons/si";
 
 const links = [
   {id: 1, name: "Admin", href: "/admin", icon: TiHome },
   {id: 2, name: "Posts", href: "/admin/posts", icon: CgFeed },
   {id: 3, name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
-  {id: 4, name: "Sections", href: "/admin/sections", icon: TbNewSection },
-  {id: 5, name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
+  {id: 4, name: "Services", href: "/admin/services", icon: SiCloudflarepages },
+  {id: 5, name: "Sections", href: "/admin/sections", icon: TbNewSection },
+  {id: 6, name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
 ];
 const AdminNavLink = () => {
   const pathname = usePathname();
