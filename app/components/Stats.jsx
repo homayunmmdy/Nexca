@@ -17,7 +17,7 @@ const Stats = () => {
                     axios.get(`/api/Contacts`)
                 ]);
 
-                setPosts(postsResponse.data.posts);
+                setPosts(postsResponse.data.data);
                 setSections(sectionsResponse.data.sections);
                 setContacts(contactsResponse.data.contact);
     

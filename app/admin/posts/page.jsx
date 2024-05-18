@@ -5,11 +5,11 @@ import PostTable from "@/app/components/PostTable";
 const Posts = async () => {
   const data = await AllPost();
 
-  if (!data?.posts) {
+  if (!data?.data) {
     return <p>No posts.</p>;
   }
 
-  const posts = data.posts;
+  const posts = data.data;
 
   return (
     <div className="p-5">
