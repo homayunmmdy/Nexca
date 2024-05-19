@@ -46,7 +46,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="relative mx-auto mt-10 max-w-lg">
-                    <Image  src={HeroImage} width={100} height={100} className="w-full rounded-2xl border border-gray-100 shadow" alt="powerfull Admin panel" />
+                    <Image  src={HeroImage} width={520} height={240} className="w-full rounded-2xl border border-gray-100 shadow" alt="powerfull Admin panel" />
                 </div>
             </div>
         </section>
