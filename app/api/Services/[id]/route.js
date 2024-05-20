@@ -1,4 +1,4 @@
-import Service from "../../models/Services";
+import Service from "@/app/models/Services";
 
 import { NextResponse } from "next/server";
 

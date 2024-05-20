@@ -1,5 +1,5 @@
 import { handleGetRequest, handlePostRequest } from "@/app/util/apiUtil";
-import Post from "../../models/Post";
+import Post from "@/app/models/Post";
 
 
 export async function GET() {

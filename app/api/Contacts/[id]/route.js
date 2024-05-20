@@ -1,4 +1,4 @@
-import Contacts from "../../../models/Contacts";
+import Contacts from "@/app/models/Contacts";
 import { NextResponse } from "next/server";
 
 export async function DELETE(req, { params }) {
