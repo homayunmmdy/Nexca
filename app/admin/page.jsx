@@ -17,7 +17,7 @@ const Admin = () => {
   }
   return (
     <div>
-      <button className='btn btn-error m-3' onClick={handleLogout}>خروج</button>
+      <button className='btn btn-error m-3' onClick={handleLogout}>Logout</button>
       <Stats />
     </div>
   )
