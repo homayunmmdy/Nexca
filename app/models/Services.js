@@ -1,7 +1,6 @@
-import mongoose, { Schema } from "mongoose";
-
-mongoose.connect(process.env.MONGODB_URI);
-mongoose.Promise = global.Promise;
+import { Schema } from "mongoose";
+import baseSchema from "./baseSchema";
+import initModel from "./initModel";
 
 const serviceSchema = new Schema(
   {
@@ -14,12 +13,8 @@ const serviceSchema = new Schema(
       type: Number,
     },
   },
-  {
-    timestamps: true,
-  }
+  baseSchema
 );
 
-const Service =
-  mongoose.models.Service || mongoose.model("Service", serviceSchema);
-
+const Service = initModel("Service", serviceSchema);
 export default Service;
