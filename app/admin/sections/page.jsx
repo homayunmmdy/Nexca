@@ -1,13 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import DeleteBlock from "@/app/components/DeleteBlock";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import DataForm from "../components/DataForm";
+import DataTable from "../components/DataTable";
 
 const Section = () => {
   const [formData, setFormData] = useState({ name: '', secid: 1 });
-  const [message, setMessage] = useState('');
-  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,82 +27,25 @@ const Section = () => {
         body: JSON.stringify({ formData }),
       });
 
-      if (res.ok) {
-        router.refresh();
-      } else {
-        console.error("Error deleting item:", res.statusText);
-      }
-
       const data = await response.json();
-      setMessage(data.message);
+      toast.success(data.message);
     } catch (error) {
       console.error('Error:', error);
-      setMessage('Failed to submit data');
+      toast.error("Failed Please Try Again");
     }
   };
-  const [data, setData] = useState();
+  const { data: sections } = useFetch("/api/Section");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`/api/Section`);
-        setData(response.data.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
   return (
-    <div>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.title}
-            onChange={handleChange}
-            required
-          />
+    <>
+      <ToastContainer />
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 mt-3">
+        <div className="h-[200px]">
+          <DataForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
         </div>
-        <div>
-          <label>secid:</label>
-          <input
-          type="number"
-            name="secid"
-            value={formData.content}
-            onChange={handleChange}
-            required
-         />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      <div className="overflow-x-auto">
-        <table className="table table-zebra">
-          <thead>
-            <tr>
-              <th>id</th>
-              <th>sec</th>
-              <th>delete</th>
-            </tr>
-          </thead>
-          {data?.map((item) => (
-            <tbody key={item.id}>
-              <tr>
-                <td>{item.secid}</td>
-                <td>{item.name}</td>
-                <td>
-                  <DeleteBlock path="Section" id={item._id} />
-                </td>
-              </tr>
-            </tbody>
-          ))}
-        </table>
+        <DataTable data={sections} path="/api/Section" />
       </div>
-    </div>
+    </>
   );
 };
 

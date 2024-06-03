@@ -19,8 +19,8 @@ const Login = () => {
     const PASSWORD = process.env.NEXT_PUBLIC_PASSWORD;
     if (username == "admin" && password == `${PASSWORD}`) {
       localStorage.setItem("authenticated", true);
-      toast.success("you're welcome")
       router.push("/admin");
+      toast.success("you're welcome")
     } else {
       toast.error("Invalid username or password");
     }
