@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Stat from "./Stat";
+import Link from "next/link";
 
 const Stats = () => {
     const [posts, setPosts] = useState([]);
@@ -23,21 +24,29 @@ const Stats = () => {
                 setSections(sectionsResponse.data.data);
                 setContacts(contactsResponse.data.data);
                 setService(serviceResponse.data.data);
-    
+
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
         };
-    
+
         fetchData();
     }, []);
 
     return (
         <div className='grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-            <Stat title="Available Posts" number={posts.length} />
-            <Stat title="Available Sections" number={sections.length} />
-            <Stat title="Available Services" number={service.length} />
-            <Stat title="Messages" number={contacts.length} />
+            <Link href="/admin/posts">
+                <Stat title="Available Posts" number={posts.length} />
+            </Link>
+            <Link href="/admin/sections">
+                <Stat title="Available Sections" number={sections.length} />
+            </Link>
+            <Link href="/admin/services">
+                <Stat title="Available Services" number={service.length} />
+            </Link>
+            <Link href="/admin/contacts">
+                <Stat title="Messages" number={contacts.length} />
+            </Link>
         </div>
     );
 };

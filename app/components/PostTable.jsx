@@ -10,7 +10,7 @@ const PostTable = ({ post }) => {
           <div className="flex items-center gap-3">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src={post.imgurl} alt={post.title} className="bg-gray-600"/>
+                <img src={post.imgurl} width={48} height={48} alt={post.title} className="bg-gray-600"/>
               </div>
             </div>
             <div>
