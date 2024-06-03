@@ -1,10 +1,11 @@
 import React from "react";
 import DeleteBlock from "@/app/components/DeleteBlock";
+import { CONTACTS_API_URL } from "@/app/config/constants";
 
 const getData = async () => {
   const API_URL = process.env.API_URL;
   try {
-    const res = await fetch(`${API_URL}/api/Contacts`, {
+    const res = await fetch(`${API_URL}${CONTACTS_API_URL}`, {
       cache: "no-store",
     });
 

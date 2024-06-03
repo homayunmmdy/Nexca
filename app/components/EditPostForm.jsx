@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import FormField from "./FormField";
 import SelectField from "./SelectField";
 import useFetch from "@/app/hooks/useFetch";
+import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "../config/constants";
 
 const EditPostForm = ({ ticket }) => {
   const EDITMODE = ticket._id !== "new";
@@ -31,7 +32,7 @@ const EditPostForm = ({ ticket }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const url = EDITMODE ? `/api/Posts/${ticket._id}` : "/api/Posts";
+    const url = EDITMODE ? `${POST_API_URL}/${ticket._id}` : `${POST_API_URL}`;
     const method = EDITMODE ? "PUT" : "POST";
     const headers = { "Content-Type": "application/json" };
 
@@ -50,8 +51,8 @@ const EditPostForm = ({ ticket }) => {
     router.push("/admin/posts");
   };
 
-  const { data: services } = useFetch("/api/Services");
-  const { data: sections } = useFetch("/api/Section");
+  const { data: services } = useFetch(`${SERVICES_API_URL}`);
+  const { data: sections } = useFetch(`${SECTIONS_API_URL}`);
 
   return (
     <div className="flex justify-center">

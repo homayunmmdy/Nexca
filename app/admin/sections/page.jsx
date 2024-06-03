@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DataForm from "../components/DataForm";
 import DataTable from "../components/DataTable";
+import { SECTIONS_API_URL } from "@/app/config/constants";
 
 const Section = () => {
   const [formData, setFormData] = useState({ name: '', secid: 1 });
@@ -19,7 +20,7 @@ const Section = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/Section', {
+      const response = await fetch(`${SECTIONS_API_URL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,7 +35,7 @@ const Section = () => {
       toast.error("Failed Please Try Again");
     }
   };
-  const { data: sections } = useFetch("/api/Section");
+  const { data: sections } = useFetch(`${SECTIONS_API_URL}`);
 
   return (
     <>
@@ -43,7 +44,7 @@ const Section = () => {
         <div className="h-[200px]">
           <DataForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
         </div>
-        <DataTable data={sections} path="/api/Section" />
+        <DataTable data={sections} path={`${SECTIONS_API_URL}`} />
       </div>
     </>
   );

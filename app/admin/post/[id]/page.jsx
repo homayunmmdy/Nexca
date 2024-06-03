@@ -1,10 +1,11 @@
 import EditPostForm from "@/app/components/EditPostForm";
+import { POST_API_URL } from "@/app/config/constants";
 
 const getTicketById = async (id) => {
   const API_URL = process.env.API_URL
 
   try {
-    const res = await fetch(`${API_URL}/api/Posts/${id}`, {
+    const res = await fetch(`${API_URL}${POST_API_URL}/${id}`, {
       cache: "no-store",
     });
 

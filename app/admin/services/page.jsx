@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DataForm from "../components/DataForm";
 import DataTable from "../components/DataTable";
+import { SERVICES_API_URL } from "@/app/config/constants";
 
 const Services = () => {
   const [formData, setFormData] = useState({ name: '', secid: 1 });
@@ -20,7 +21,7 @@ const Services = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/Services', {
+      const response = await fetch(`${SERVICES_API_URL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +37,7 @@ const Services = () => {
       toast.error("Failed Please Try Again");
     }
   };
-  const { data: services } = useFetch("/api/Services");
+  const { data: services } = useFetch(`${SERVICES_API_URL}`);
   return (
     <>
       <ToastContainer />
@@ -44,7 +45,7 @@ const Services = () => {
         <div className="h-[200px]">
           <DataForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
         </div>
-        <DataTable data={services} path="/api/Services" />
+        <DataTable data={services} path={`${SERVICES_API_URL}`} />
       </div>
     </>
   );

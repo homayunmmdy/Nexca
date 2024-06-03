@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Stat from "./Stat";
 import Link from "next/link";
+import { CONTACTS_API_URL, POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "../config/constants";
 
 const Stats = () => {
     const [posts, setPosts] = useState([]);
@@ -14,10 +15,10 @@ const Stats = () => {
         const fetchData = async () => {
             try {
                 const [postsResponse, sectionsResponse, contactsResponse, serviceResponse] = await Promise.all([
-                    axios.get(`/api/Posts`),
-                    axios.get(`/api/Section`),
-                    axios.get(`/api/Contacts`),
-                    axios.get(`/api/Services`),
+                    axios.get(`${POST_API_URL}`),
+                    axios.get(`${SECTIONS_API_URL}`),
+                    axios.get(`${CONTACTS_API_URL}`),
+                    axios.get(`${SERVICES_API_URL}`),
                 ]);
 
                 setPosts(postsResponse.data.data);

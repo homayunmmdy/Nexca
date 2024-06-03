@@ -1,8 +1,10 @@
+import { POST_API_URL } from "../config/constants";
+
 const AllPost = async () => {
   const API_URL = process.env.API_URL;
 
   try {
-    const res = await fetch(`${API_URL}/api/Posts`, {
+    const res = await fetch(`${API_URL}${POST_API_URL}`, {
       cache: "no-store",
     });
 

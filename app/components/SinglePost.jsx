@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { usePathname } from "next/navigation";
+import { POST_API_URL } from "../config/constants";
 
 const SinglePost = () => {
   const pathname = usePathname();
@@ -11,7 +12,7 @@ const SinglePost = () => {
   useEffect(() => {
     const fetchBattle = async () => {
       try {
-        const response = await axios.get(`/api/Posts/${id}`);
+        const response = await axios.get(`${POST_API_URL}/${id}`);
         setBattle(response.data.foundTicket);
       } catch (error) {
         console.error("Error fetching battle:", error);
