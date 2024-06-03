@@ -1,8 +1,9 @@
+import SectionData from "@/app/cash/SectionData";
 import Section from "@/app/models/Section";
-import { handleGetRequest, handlePostRequest } from "@/app/util/apiUtil";
+import { handleGetRequest } from "@/app/util/apiUtil";
 
 export async function GET() {
-  return handleGetRequest(Section);
+  return handleGetRequest(Section , SectionData);
 }
 
 export async function POST(req) {

@@ -1,9 +1,13 @@
 import { NextResponse } from "next/server";
 
-export async function handleGetRequest(Model) {
+export async function handleGetRequest(Model, cash) {
   try {
-    const data = await Model.find();
-    return NextResponse.json({ data }, { status: 200 });
+    if (process.env.NEXT_PUBLIC_STATUS == "dev") {
+      return NextResponse.json({ data: cash }, { status: 200 });
+    } else {
+      const data = await Model.find();
+      return NextResponse.json({ data }, { status: 200 });
+    }
   } catch (err) {
     console.error(err);
     return handleErrorResponse(err);
@@ -21,6 +25,26 @@ export async function handlePostRequest(req, Model, successMessage) {
     );
   } catch (err) {
     console.error(err);
+    return handleErrorResponse(err);
+  }
+}
+
+export async function handleGetSingleRequest(Model, id, cash) {
+  try {
+    if (process.env.NEXT_PUBLIC_STATUS === "dev") {
+      const cachedDoc = cash.find((doc) => doc._id === id);
+      if (cachedDoc) {
+        return NextResponse.json(cachedDoc, { status: 200 });
+      }
+    } else {
+      const document = await Model.findOne({ _id: id });
+      if (!document) {
+        return NextResponse.json({ message: "Not Found" }, { status: 404 });
+      }
+      return NextResponse.json(document, { status: 200 });
+    }
+  } catch (error) {
+    console.log(error);
     return handleErrorResponse(err);
   }
 }
