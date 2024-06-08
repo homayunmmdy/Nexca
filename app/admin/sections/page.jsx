@@ -4,7 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DataForm from "../components/DataForm";
 import DataTable from "../components/DataTable";
-import { SECTIONS_API_URL } from "@/app/config/constants";
+import { SECTIONS_API_URL } from "@/app/config/apiConstants";
+import useFetch from "@/app/hooks/useFetch";
 
 const Section = () => {
   const [formData, setFormData] = useState({ name: '', secid: 1 });

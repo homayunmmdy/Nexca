@@ -1,3 +1,5 @@
+import SiteConfig from '@/app/config/site'
+import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
@@ -5,10 +7,9 @@ const Footer = () => {
         <>
             <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
                 <nav className="grid grid-flow-col gap-4">
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <Link className="link link-hover" href="/contacts">Contact</Link>
+                    <Link className="link link-hover" href="/privacy_policy">Privacy Policy</Link>
+                    <Link className="link link-hover" href="/FAQs">FAQs</Link>
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">
@@ -18,7 +19,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+                    <p>Copyright@{new Date().getFullYear()} All Right Reserved  by <Link href="/">{SiteConfig.name}</Link></p>
                 </aside>
             </footer>
         </>

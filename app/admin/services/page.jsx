@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DataForm from "../components/DataForm";
 import DataTable from "../components/DataTable";
-import { SERVICES_API_URL } from "@/app/config/constants";
+import { SERVICES_API_URL } from "@/app/config/apiConstants";
 
 const Services = () => {
   const [formData, setFormData] = useState({ name: '', secid: 1 });

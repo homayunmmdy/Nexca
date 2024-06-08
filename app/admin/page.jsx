@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation';
 import Stats from '../components/Stats';
+import { RecentPosts } from '../components/sections';
 const Admin = () => {
   const router = useRouter()
   useEffect(() => {
@@ -19,6 +20,7 @@ const Admin = () => {
     <div>
       <button className='btn btn-error m-3' onClick={handleLogout}>Logout</button>
       <Stats />
+      <RecentPosts />
     </div>
   )
 }

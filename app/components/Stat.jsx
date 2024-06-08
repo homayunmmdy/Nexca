@@ -1,15 +1,14 @@
 import React from 'react'
 
-const Stat = ({title , number}) => {
+const Stat = ({ title, number, icon }) => {
     return (
         <>
-            <div className="stats shadow">
-                <div className="stat">
-                    <div className="stat-title">{title}</div>
-                    <div className="stat-value">{number}</div>
-                </div>
+            <button className="btn h-full w-full shadow-lg px-2 py-7">
+                <span>{icon}</span>
+                {title}
+                <div className="badge badge-secondary">+{number}</div>
+            </button>
 
-            </div>
         </>
     )
 }

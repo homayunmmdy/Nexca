@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { usePathname } from "next/navigation";
-import { POST_API_URL } from "../config/constants";
+import { POST_API_URL } from "../config/apiConstants";
 
 const SinglePost = () => {
   const pathname = usePathname();

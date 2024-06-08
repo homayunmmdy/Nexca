@@ -1,5 +1,5 @@
 import EditPostForm from "@/app/components/EditPostForm";
-import { POST_API_URL } from "@/app/config/constants";
+import { POST_API_URL } from "@/app/config/apiConstants";
 
 const getTicketById = async (id) => {
   const API_URL = process.env.API_URL

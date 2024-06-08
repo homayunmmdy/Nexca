@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import FormField from "./FormField";
 import SelectField from "./SelectField";
 import useFetch from "@/app/hooks/useFetch";
-import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "../config/constants";
+import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "../config/apiConstants";
 
 const EditPostForm = ({ ticket }) => {
   const EDITMODE = ticket._id !== "new";

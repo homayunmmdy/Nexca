@@ -1,6 +1,6 @@
 import React from "react";
 import DeleteBlock from "@/app/components/DeleteBlock";
-import { CONTACTS_API_URL } from "@/app/config/constants";
+import { CONTACTS_API_URL } from "@/app/config/apiConstants";
 
 const getData = async () => {
   const API_URL = process.env.API_URL;

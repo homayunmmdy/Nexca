@@ -1,4 +1,4 @@
-import { POST_API_URL } from "../config/constants";
+import { POST_API_URL } from "../config/apiConstants";
 
 const AllPost = async () => {
   const API_URL = process.env.API_URL;
