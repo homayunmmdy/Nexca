@@ -1,4 +1,4 @@
-import Section from "@/app/models/Section";
+import { SectionModel } from "@/app/models";
 
 import { NextResponse } from "next/server";
 
@@ -6,7 +6,7 @@ export async function DELETE(req, { params }) {
   try {
     const { id } = params;
 
-    await Section.findByIdAndDelete(id);
+    await SectionModel.findByIdAndDelete(id);
     return NextResponse.json({ message: "Section Delete Successfully" }, { status: 200 });
   } catch (error) {
     console.log(error);

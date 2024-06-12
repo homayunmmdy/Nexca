@@ -1,11 +1,11 @@
-import Contacts from "@/app/models/Contacts";
+import { ContactsModel } from "@/app/models";
 import { NextResponse } from "next/server";
 
 export async function DELETE(req, { params }) {
   try {
     const { id } = params;
 
-    await Contacts.findByIdAndDelete(id);
+    await ContactsModel.findByIdAndDelete(id);
     return NextResponse.json({ message: "Contacts Deleted" }, { status: 200 });
   } catch (error) {
     console.log(error);

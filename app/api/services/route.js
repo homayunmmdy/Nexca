@@ -1,11 +1,11 @@
 import ServicesData from "@/app/cash/ServicesData";
-import Service from "@/app/models/Services";
+import { ServiceModel } from "@/app/models";
 import { handleGetRequest } from "@/app/util/apiUtil";
 
 export async function GET() {
-  return handleGetRequest(Service , ServicesData);
+  return handleGetRequest(ServiceModel , ServicesData);
 }
 
 export async function POST(req) {
-  return handlePostRequest(req, Service, "Service Created successfully");
+  return handlePostRequest(req, ServiceModel, "Service Created successfully");
 }
