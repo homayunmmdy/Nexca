@@ -5,6 +5,8 @@ import { CgFeed } from "react-icons/cg";
 import { usePathname } from "next/navigation";
 import { TbNewSection } from "react-icons/tb";
 import { SiCloudflarepages } from "react-icons/si";
+import { FiBookOpen } from "react-icons/fi";
+import { MdOutlineMenuBook } from "react-icons/md";
 
 const links = [
   {id: 1, name: "Admin", href: "/admin", icon: TiHome },
@@ -12,7 +14,9 @@ const links = [
   {id: 3, name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
   {id: 4, name: "Services", href: "/admin/services", icon: SiCloudflarepages },
   {id: 5, name: "Sections", href: "/admin/sections", icon: TbNewSection },
-  {id: 6, name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
+  {id: 6, name: "Publications", href: "/admin/publications", icon: FiBookOpen },
+  {id: 7, name: "New Publication", href: "/admin/publications/new", icon: MdOutlineMenuBook },
+  {id: 8, name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
 ];
 const AdminNavLink = () => {
   const pathname = usePathname();
