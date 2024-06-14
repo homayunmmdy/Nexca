@@ -1,11 +1,11 @@
+import CashData from "@/app/cash/CashData";
 import { PublicationModel } from "@/app/models";
+import { handleGetSingleRequest } from "@/app/util/apiUtil";
 import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
   const { id } = params;
-
-  const foundTicket = await PublicationModel.findOne({ _id: id });
-  return NextResponse.json({ foundTicket }, { status: 200 });
+  return handleGetSingleRequest(PublicationModel, id , CashData);
 }
 
 export async function PUT(req, { params }) {
