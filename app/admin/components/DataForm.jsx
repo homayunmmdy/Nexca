@@ -1,4 +1,3 @@
-import React from "react";
 
 const DataForm = ({ formData, handleChange, handleSubmit }) => (
     <form onSubmit={handleSubmit} className="space-y-4 p-4  shadow-md rounded-md">
@@ -9,6 +8,7 @@ const DataForm = ({ formData, handleChange, handleSubmit }) => (
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
+                placeholder={`Enter your ${formData.name} `}
                 required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2"
             />
@@ -19,6 +19,7 @@ const DataForm = ({ formData, handleChange, handleSubmit }) => (
                 type="number"
                 name="secid"
                 value={formData.secid}
+                placeholder={`Enter your ${formData.name} `}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2"

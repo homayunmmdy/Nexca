@@ -4,14 +4,8 @@ import initModel from "../initModel";
 
 const serviceSchema = new Schema(
   {
-    name: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    secid: {
-      type: Number,
-    },
+    name: String,
+    secid: Number,
   },
   baseSchema
 );
