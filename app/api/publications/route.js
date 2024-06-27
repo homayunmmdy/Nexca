@@ -1,4 +1,4 @@
-import { handleGetRequest } from "@/app/util/apiUtil";
+import { handleGetRequest, handlePostRequest } from "@/app/util/apiUtil";
 import CashData from "@/app/cash/CashData";
 import { PublicationModel } from "@/app/models";
 

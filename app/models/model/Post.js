@@ -10,7 +10,9 @@ const postSchema = new Schema(
     section: String,
     body: String,
   },
-  baseSchema
+  {
+    baseSchema
+  }
 );
 
 const Post = initModel('Post', postSchema);
