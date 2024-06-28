@@ -25,7 +25,7 @@ const PublicationPage = async ({ params }) => {
 
     if (EDITMODE) {
         updatePublicationData = await getTicketById(params.id);
-        updatePublicationData = updatePublicationData.foundTicket;
+        updatePublicationData = updatePublicationData.document;
     } else {
         updatePublicationData = {
             _id: "new",
