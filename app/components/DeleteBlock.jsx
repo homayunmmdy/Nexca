@@ -7,28 +7,32 @@ const DeleteBlock = ({ path, id }) => {
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const router = useRouter();
 
+  // Handle modal auto close after a specific time (e.g., 10 seconds)
   useEffect(() => {
-    if (!isConfirmOpen) {
-      return;
-    }
-    const handleDelete = async () => {
-      try {
-        const res = await fetch(`/api/${path}/${id}`, {
-          method: "DELETE",
-        });
+    let timer;
+    if (isConfirmOpen) {
+      timer = setTimeout(() => {
         setIsConfirmOpen(false);
-        if (res.ok) {
-          router.refresh();
-        } else {
-          console.error("Error deleting item:", res.statusText);
-        }
-      } catch (error) {
-        console.error("Error deleting item:", error);
-      }
-    };
+      }, 10000); // Change this duration as needed
+    }
+    return () => clearTimeout(timer);
+  }, [isConfirmOpen]);
 
-    handleDelete();
-  }, [isConfirmOpen, path, id, router]);
+  const handleDelete = async () => {
+    try {
+      const res = await fetch(`/api/${path}/${id}`, {
+        method: "DELETE",
+      });
+      setIsConfirmOpen(false);
+      if (res.ok) {
+        router.refresh();
+      } else {
+        console.error("Error deleting item:", res.statusText);
+      }
+    } catch (error) {
+      console.error("Error deleting item:", error);
+    }
+  };
 
   return (
     <>
@@ -66,7 +70,7 @@ const DeleteBlock = ({ path, id }) => {
               </button>
               <button
                 type="button"
-                onClick={() => setIsConfirmOpen(true)}
+                onClick={handleDelete}
                 className="text-white bg-red-500 hover:bg-red-600 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5"
               >
                 Delete

@@ -45,7 +45,7 @@ const Section = () => {
         <div className="h-[200px]">
           <DataForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
         </div>
-        <DataTable data={sections} path={`${SECTIONS_API_URL}`} />
+        <DataTable data={sections} path="sections" />
       </div>
     </>
   );

@@ -47,7 +47,7 @@ const ContactsPage = async () => {
                   <td>{data.email}</td>
                   <td>{data.message}</td>
                   <td>
-                    <DeleteBlock path="Contacts" id={data._id} />
+                    <DeleteBlock path="contacts" id={data._id} />
                   </td>
                 </tr>
               </tbody>

@@ -45,7 +45,7 @@ const Services = () => {
         <div className="h-[200px]">
           <DataForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
         </div>
-        <DataTable data={services} path={`${SERVICES_API_URL}`} />
+        <DataTable data={services} path="services" />
       </div>
     </>
   );
