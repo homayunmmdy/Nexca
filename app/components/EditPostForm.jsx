@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import FormField from "./FormField";
 import SelectField from "./SelectField";
-import useFetch from "@/app/hooks/useFetch";
+import useFetch from "../hooks/useFetch";
 import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "../config/apiConstants";
 
 const EditPostForm = ({ ticket }) => {
@@ -51,8 +51,8 @@ const EditPostForm = ({ ticket }) => {
     router.push("/admin/posts");
   };
 
-  const { data: services } = useFetch(`${SERVICES_API_URL}`);
-  const { data: sections } = useFetch(`${SECTIONS_API_URL}`);
+  const { data: services } = useFetch(SERVICES_API_URL);
+  const { data: sections } = useFetch(SECTIONS_API_URL);
 
   return (
     <div className="flex justify-center">
