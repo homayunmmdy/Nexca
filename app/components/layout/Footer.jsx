@@ -14,7 +14,7 @@ const Footer = () => {
                     <Link className="link link-hover" href="/privacy_policy">Privacy Policy</Link>
                     <Link className="link link-hover" href="/Admin">Admin</Link>
                 </nav>
-                <nav>
+            <nav>
                     <div className="grid grid-flow-col gap-4">
                         <Link href="https://github.com/homayunmmdy/Nexca" className="ease-in-out delay-100 transition-colors hover:text-indigo-600"><FaGithub size={25} /></Link>
                         <Link title="Linkedin" href='www.linkedin.com/in/homayunmmdy' className="ease-in-out delay-100 transition-colors hover:text-indigo-600" ><FaLinkedinIn size={25} /></Link>

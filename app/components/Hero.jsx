@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import HeroImage from '@/public/img/admin.png'
 import Link from 'next/link'
+import { FaGithub } from "react-icons/fa";
+
 const Hero = () => {
     return (
         <section
@@ -32,11 +34,16 @@ const Hero = () => {
                         </span>
                     </h1>
                     <h2 className="mt-6 text-lg leading-8 text-gray-600">
-                        One of the fastest and easy to use admin panel for any website.
+                        Open the github account clone the project change the .env.sample to .env.local and then write our own 
+                        .env and enjoy the admin
                     </h2>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
-                        <Link className="isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            href="/admin">Let's GO
+                        <Link className="isomorphic-link isomorphic-link--internal border border-black inline-flex items-center justify-center gap-2 rounded-xl hover:bg-black px-4 py-3 text-sm font-semibold hover:text-white shadow-sm transition-all duration-150 text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            href="/get_started">Github
+                            <FaGithub className='w-4 h-4'/>
+                        </Link>
+                        <Link className="isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 text-indigo-600 rounded-xl border border-indigo-600 px-4 py-3 text-sm font-semibold hover:text-white shadow-sm transition-all duration-150 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            href="/get_started">See Demo
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd"
                                     d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
