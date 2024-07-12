@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 const Hero = () => {
     return (
         <section
-            className="relative overflow-hidden bg-gradient-to-b from-indigo-50 via-transparent to-transparent pb-12 pt-20 sm:pb-16 sm:pt-32 lg:pb-24 xl:pb-32 xl:pt-40">
+            className="relative overflow-hidden bg-gradient-to-b from-indigo-50 via-transparent to-transparent pb-12 pt-20 sm:pb-16 sm:pt-30 lg:pb-22">
             <div className="relative z-10">
                 <div
                     className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
@@ -39,11 +39,11 @@ const Hero = () => {
                     </h2>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link className="isomorphic-link isomorphic-link--internal border border-black inline-flex items-center justify-center gap-2 rounded-xl hover:bg-black px-4 py-3 text-sm font-semibold hover:text-white shadow-sm transition-all duration-150 text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            href="/get_started">Github
+                            href="https://github.com/homayunmmdy/Nexca">Github
                             <FaGithub className='w-4 h-4'/>
                         </Link>
                         <Link className="isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 text-indigo-600 rounded-xl border border-indigo-600 px-4 py-3 text-sm font-semibold hover:text-white shadow-sm transition-all duration-150 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            href="/get_started">See Demo
+                            href="/admin">See Demo
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                 <path fillRule="evenodd"
                                     d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"

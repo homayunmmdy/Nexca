@@ -16,6 +16,11 @@ const SiteConfig = {
     },
     {
       id: 3,
+      name: " Demo",
+      link: "/demo",
+    },
+    {
+      id: 3,
       name: "Contacts",
       link: "/contacts",
     },
