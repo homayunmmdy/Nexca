@@ -1,26 +1,12 @@
+"use client"
 import React from "react";
 import DeleteBlock from "@/app/components/DeleteBlock";
 import { CONTACTS_API_URL } from "@/app/config/apiConstants";
+import useFetch from "@/app/hooks/useFetch";
 
-const getData = async () => {
-  const API_URL = process.env.API_URL;
-  try {
-    const res = await fetch(`${API_URL}${CONTACTS_API_URL}`, {
-      cache: "no-store",
-    });
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch topics");
-    }
-
-    return res.json();
-  } catch (error) {
-    console.log("Error loading topics: ", error);
-  }
-};
-
-const ContactsPage = async () => {
-  const data = await getData();
+const ContactsPage =  () => {
+  const data = useFetch(CONTACTS_API_URL)
   if (!data.data) {
     return <p>No data send.</p>;
   }
