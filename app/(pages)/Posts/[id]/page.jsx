@@ -2,29 +2,27 @@
 import RecentPosts from "@/app/(pages)/Posts/[id]/components/RecentPosts";
 import PostSeclton from "./PostSkelton";
 import { usePathname } from "next/navigation";
-import { readingTime } from 'reading-time-estimator'
 import { useState } from "react";
-import useSinglePost from "@/app/hooks/useSinglePost";
 import { FormatTime } from "@/app/components/layout";
+import useSinglePost from "@/app/hooks/useSinglePost";
 
 const Post = () => {
   const post = useSinglePost();
-  const API_URL = process.env.API_URL;
-  const pathname = usePathname();
-  const id = pathname.slice(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
-
+console.log(post)
 
   if (!post) {
     return <PostSeclton />
   }
+
   const options = {
     year: "numeric",
     month: "2-digit",
     day: "2-digit"
   };
-  const text = `${post?.title}. ${post?.body}`
-  const readingTimeEstimate = readingTime(text, 100, "en")
+
+  // const text = `${post?.title}. ${post?.body}`
+  // const readingTimeEstimate = readingTime(text, 100, "fa")
 
   const handleReadText = () => {
     const utterance = new SpeechSynthesisUtterance(text);
@@ -60,7 +58,7 @@ const Post = () => {
                 loading="lazy"
               />
               <div className="flex gap-3 items-center justify-between px-3">
-                <p className="text-center">{readingTimeEstimate.text}</p>
+                {/* <p className="text-center">{readingTimeEstimate.text}</p> */}
                 <div>
                   {!isSpeaking ? (
                     <button
