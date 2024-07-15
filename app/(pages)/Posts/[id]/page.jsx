@@ -21,8 +21,6 @@ console.log(post)
     day: "2-digit"
   };
 
-  // const text = `${post?.title}. ${post?.body}`
-  // const readingTimeEstimate = readingTime(text, 100, "fa")
 
   const handleReadText = () => {
     const utterance = new SpeechSynthesisUtterance(text);
@@ -44,7 +42,7 @@ console.log(post)
         <div className="bg-indigo-500 pt-10">
           <div className="w-[94%] md:w-[92%] mx-auto px-4 py-8">
             <h1 className="text-4xl text-center font-extrabold text-white">{post.title}</h1>
-            <p className="text-lg  text-center my-3 text-white"><FormatTime timestamp={post.createdAt} options={options} /></p>
+            {/* <p className="text-lg  text-center my-3 text-white"><FormatTime timestamp={post.createdAt} options={options} /></p> */}
           </div>
         </div>
         <div className="bg-white py-8">

@@ -13,11 +13,11 @@ const PostTable = ({ post }) => {
             </div>
           </div>
           <div>
-            <div className="font-normal md:font-bold">{post.title}</div>
+            <div className="font-normal md:font-bold">{post.title.slice(0,60)}</div>
           </div>
         </div>
       </td>
-      <td className="hidden lg:block">{post.description}</td>
+      <td className="hidden lg:block">{post.description.slice(0,60)}</td>
       <td>
         <Link href={`/admin/post/${post._id}`}>
           <CiEdit size={25} />
