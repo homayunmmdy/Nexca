@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
-import DeleteBlock from "@/app/components/DeleteBlock";
 import { CONTACTS_API_URL } from "@/app/config/apiConstants";
 import useFetch from "@/app/hooks/useFetch";
+import { DeleteBlock } from "../components/elements";
 
 
 const ContactsPage =  () => {

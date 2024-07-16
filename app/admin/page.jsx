@@ -1,8 +1,9 @@
 'use client'
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation';
-import Stats from '../components/Stats';
 import { RecentPosts } from '../components/sections';
+import { Stats } from './components/sections';
+
 const Admin = () => {
   const router = useRouter()
   useEffect(() => {

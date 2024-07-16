@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 const PostCard = ({ post }) => {
     return (
       <>
         <div className="card  bg-base-100 shadow-xl md:hover:scale-105 rounded-xl transition-transform ease-in-out duration-500">
-          <a href={`/Posts/${post._id}`} >
+          <Link href={`/Posts/${post._id}`} >
           <figure className="px-5 pt-5">
             <img
               src={post.imgurl}
@@ -14,7 +16,7 @@ const PostCard = ({ post }) => {
             <h2 className="card-title text-slate-950	">{post.title.slice(0, 100)}</h2>
             <p className="text-slate-950	">{post.description.slice(0, 60)}</p>
           </div>
-          </a>
+          </Link>
         </div>
       </>
     );

@@ -5,27 +5,28 @@ import { CgFeed } from "react-icons/cg";
 import { usePathname } from "next/navigation";
 import { TbNewSection } from "react-icons/tb";
 import { SiCloudflarepages } from "react-icons/si";
+import Link from "next/link";
 
 const links = [
-  {id: 1, name: "Admin", href: "/admin", icon: TiHome },
-  {id: 2, name: "Posts", href: "/admin/posts", icon: CgFeed },
-  {id: 3, name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
-  {id: 4, name: "Services", href: "/admin/services", icon: SiCloudflarepages },
-  {id: 5, name: "Sections", href: "/admin/sections", icon: TbNewSection },
-  {id: 6, name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
+  {name: "Admin", href: "/admin", icon: TiHome },
+  {name: "Posts", href: "/admin/posts", icon: CgFeed },
+  {name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
+  {name: "Services", href: "/admin/services", icon: SiCloudflarepages },
+  {name: "Sections", href: "/admin/sections", icon: TbNewSection },
+  {name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
 ];
-const AdminNavLink = () => {
+const NavLink = () => {
   const pathname = usePathname();
   return (
     <>
       <div className="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
         <ul className="flex flex-col pl-0 mb-0 gap-2">
-          {links.map((link) => {
+          {links.map((link , index) => {
             const LinkIcon = link.icon;
             return (
-              <li className="mt-0.5 w-full" key={link.id}>
+              <li className="mt-0.5 w-full" key={index}>
                 {pathname === link.href ? (
-                  <a
+                  <Link
                     className="py-2.7 shadow-soft-xl p-1 text-sm ease-nav-brand my-0 flex items-center whitespace-nowrap rounded-xl bg-white px-4 font-semibold text-slate-700 transition-colors"
                     href={link.href}
                   >
@@ -35,9 +36,9 @@ const AdminNavLink = () => {
                     <span className="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">
                       {link.name}
                     </span>
-                  </a>
+                  </Link>
                 ) : (
-                  <a
+                  <Link
                     className="py-2.7 text-sm ease-nav-brand  p-1 my-0 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-white rounded-xl"
                     href={link.href}
                   >
@@ -47,7 +48,7 @@ const AdminNavLink = () => {
                     <span className="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">
                       {link.name}
                     </span>
-                  </a>
+                  </Link>
                 )}
               </li>
             );
@@ -58,4 +59,4 @@ const AdminNavLink = () => {
   );
 };
 
-export default AdminNavLink;
+export default NavLink;

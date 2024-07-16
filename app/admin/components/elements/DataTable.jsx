@@ -1,5 +1,5 @@
-import DeleteBlock from "@/app/components/DeleteBlock";
 import React from "react";
+import { DeleteBlock } from ".";
 
 const DataTable = ({ data, path }) => {
     // Sort data by `secid` in ascending order

@@ -5,7 +5,7 @@ const MainItem = ({ post }) => {
     <div className="col-span-12 md:col-span-6">
       <div className="group cursor-pointer">
         <div className=" overflow-hidden rounded-md transition-all hover:scale-105   ">
-          <a
+          <Link
             className="relative block aspect-video"
             href={`/Posts/${post._id}`}
             title={post.title}
@@ -19,7 +19,7 @@ const MainItem = ({ post }) => {
               height={270}
               className="w-full h-full"
             />
-          </a>
+          </Link>
         </div>
         <div className="">
           <div>

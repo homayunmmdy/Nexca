@@ -1,11 +1,10 @@
 "use client";
+import { SERVICES_API_URL } from "@/app/config/apiConstants";
 import useFetch from "@/app/hooks/useFetch";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import DataForm from "../components/DataForm";
-import DataTable from "../components/DataTable";
-import { SERVICES_API_URL } from "@/app/config/apiConstants";
+import { DataForm, DataTable } from "../components/elements";
 
 const Services = () => {
   const [formData, setFormData] = useState({ name: '', secid: 1 });

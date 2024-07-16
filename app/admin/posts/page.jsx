@@ -2,8 +2,7 @@
 import { POST_API_URL } from "@/app/config/apiConstants";
 import useFetch from "@/app/hooks/useFetch";
 import { useEffect, useState } from "react";
-import Pagination from "../components/Pagination";
-import PostTable from "../components/PostTable";
+import { Pagination, PostTable } from "../components/elements";
 
 const Posts =  () => {
   const data = useFetch(POST_API_URL);

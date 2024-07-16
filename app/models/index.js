@@ -1,4 +1,4 @@
-export { default as PostModel } from "./Post";
-export { default as SectionModel } from "./Section";
-export { default as ServiceModel } from "./Services";
-export { default as ContactsModel } from "./Contacts";
+export { default as PostModel } from "./model/Post";
+export { default as SectionModel } from "./model/Section";
+export { default as ServiceModel } from "./model/Services";
+export { default as ContactsModel } from "./model/Contacts";

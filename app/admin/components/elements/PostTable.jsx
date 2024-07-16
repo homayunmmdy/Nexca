@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
-import DeleteBlock from "@/app/components/DeleteBlock";
+import { DeleteBlock } from ".";
 
 const PostTable = ({ post }) => {
   return (

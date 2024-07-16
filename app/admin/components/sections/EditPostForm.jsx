@@ -1,10 +1,9 @@
 "use client";
+import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/app/config/apiConstants";
+import useFetch from "@/app/hooks/useFetch";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-import FormField from "./FormField";
-import SelectField from "./SelectField";
-import useFetch from "../hooks/useFetch";
-import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "../config/apiConstants";
+import { useState } from "react";
+import { FormField, SelectField } from "../elements";
 
 const EditPostForm = ({ ticket }) => {
   const EDITMODE = ticket._id !== "new";

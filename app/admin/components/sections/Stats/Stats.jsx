@@ -1,13 +1,13 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import { CONTACTS_API_URL, POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/app/config/apiConstants";
 import axios from "axios";
-import Stat from "./Stat";
 import Link from "next/link";
-import { CONTACTS_API_URL, POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "../config/apiConstants";
+import { useEffect, useState } from "react";
+import { CgFeed } from "react-icons/cg";
+import { FiServer } from "react-icons/fi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { RxSection } from "react-icons/rx";
-import { FiServer } from "react-icons/fi";
-import { CgFeed } from "react-icons/cg";
+import Stat from "./Stat";
 
 const Stats = () => {
     const [posts, setPosts] = useState([]);
