@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SiteConfig from '@/app/config/site';
 import Link from "next/link";
 import NavLink from "./NavLink";
+import { LogoutButton } from "../../elements";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -52,12 +53,7 @@ const Sidebar = () => {
         </div>
         <hr className="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent mb-2" />
         {isOpen && <NavLink />}
-        <Link
-          className="inline-block w-full px-6 py-3 my-4 font-bold text-center text-white uppercase align-middle transition-all ease-in border-0 rounded-lg select-none shadow-soft-md bg-150 bg-x-25 leading-pro text-xs bg-gradient-to-tl from-purple-700 to-pink-500 hover:shadow-soft-2xl hover:scale-102"
-          href="/"
-        >
-          Upgrade to pro
-        </Link>
+        <LogoutButton />
       </div>
     </>
   );

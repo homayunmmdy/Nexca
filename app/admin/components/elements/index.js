@@ -5,3 +5,4 @@ export { default as Pagination } from "./Pagination";
 export { default as FormField } from "./FormField";
 export { default as SelectField } from "./SelectField";
 export { default as DeleteBlock } from "./DeleteBlock";
+export { default as LogoutButton } from "./LogoutButton";
