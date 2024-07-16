@@ -5,7 +5,7 @@ import useGetLatestPosts from '@/app/hooks/useGetLatestPosts';
 
 const RecentPosts = () => {
     const [recentSize] = useState(-5);
-    const { posts, loading } = useGetLatestPosts(recentSize);
+    const { posts } = useGetLatestPosts(recentSize);
     return (
         <>
             <ul className="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start py-8">

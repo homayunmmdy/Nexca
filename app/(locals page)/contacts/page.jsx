@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { CONTACTS_API_URL } from "@/app/config/apiConstants";
 import SiteConfig from "@/app/config/site";
-import Circles from "./components/Circle";
+import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { CONTACTS_API_URL } from "@/app/config/apiConstants";
+import Circles from "./components/Circle";
 
 const ContactsPage = () => {
   const [formData, setFormData] = useState({

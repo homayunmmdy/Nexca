@@ -1,4 +1,4 @@
-import { Companies, FAQ, Hero, Services } from './components/sections'
+import { Companies, FAQ, Hero, Newsletter, Services } from './components/sections'
 
 const Home = () => {
   return (
@@ -7,6 +7,7 @@ const Home = () => {
       <Companies />
       <Services />
       <FAQ />
+      <Newsletter />
     </div>
   )
 }

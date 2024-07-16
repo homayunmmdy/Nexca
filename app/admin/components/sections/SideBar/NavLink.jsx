@@ -1,11 +1,11 @@
-import { TiHome } from "react-icons/ti";
-import { MdOutlinePostAdd } from "react-icons/md";
-import { PiPhoneCallFill } from "react-icons/pi";
-import { CgFeed } from "react-icons/cg";
-import { usePathname } from "next/navigation";
-import { TbNewSection } from "react-icons/tb";
-import { SiCloudflarepages } from "react-icons/si";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { CgFeed } from "react-icons/cg";
+import { MdOutlineMail, MdOutlinePostAdd } from "react-icons/md";
+import { PiPhoneCallFill } from "react-icons/pi";
+import { SiCloudflarepages } from "react-icons/si";
+import { TbNewSection } from "react-icons/tb";
+import { TiHome } from "react-icons/ti";
 
 const links = [
   {name: "Admin", href: "/admin", icon: TiHome },
@@ -13,6 +13,7 @@ const links = [
   {name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
   {name: "Services", href: "/admin/services", icon: SiCloudflarepages },
   {name: "Sections", href: "/admin/sections", icon: TbNewSection },
+  {name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
   {name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
 ];
 const NavLink = () => {
