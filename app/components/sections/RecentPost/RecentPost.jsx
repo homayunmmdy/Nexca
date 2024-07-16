@@ -9,13 +9,13 @@ const RecentPost = ({ post }) => {
                     <img
                         src={post.imgurl}
                         alt={post.title}
-                        className="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640" />
+                        className="mb-6 aspect-video shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640" />
                     <div className="order-1 sm:ml-6 xl:ml-0">
                         <h3 className="mb-1 text-slate-900 font-semibold">
-                            {post.title}
+                            {post.title.slice(0,60)}
                         </h3>
                         <div className="prose prose-slate prose-sm text-slate-600">
-                            <p>{post.description}</p>
+                            <p>{post.description.slice(0,60)}</p>
                         </div>
                     </div>
 
