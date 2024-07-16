@@ -8,7 +8,7 @@ export async function DELETE(req, { params }) {
     await ContactsModel.findByIdAndDelete(id);
     return NextResponse.json({ message: "Contacts Deleted" }, { status: 200 });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return NextResponse.json({ message: "Error", error }, { status: 500 });
   }
 }

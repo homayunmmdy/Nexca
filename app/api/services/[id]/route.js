@@ -9,7 +9,7 @@ export async function DELETE(req, { params }) {
     await ServiceModel.findByIdAndDelete(id);
     return NextResponse.json({ message: "Service Delete Successfully" }, { status: 200 });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return NextResponse.json({ message: "Error", error }, { status: 500 });
   }
 }

@@ -10,8 +10,6 @@ const useSinglePost = () => {
     const [post, setPost] = useState();
     const apiClient = new APIClient(POST_API_URL);
 
-    console.log(pathname , "pathname")
-    console.log(id , "id")
     useEffect(() => {
         const fetchPost = async () => {
             try {

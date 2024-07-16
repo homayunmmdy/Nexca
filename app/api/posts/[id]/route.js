@@ -22,7 +22,7 @@ export async function PUT(req, { params }) {
 
     return NextResponse.json({ message: "Post Crated Successfully"}, { status: 200 });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return NextResponse.json({ message: "Error", error }, { status: 500 });
   }
 }
@@ -34,7 +34,7 @@ export async function DELETE(req, { params }) {
     await PostModel.findByIdAndDelete(id);
     return NextResponse.json({ message: "Post Delete Successfully" }, { status: 200 });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return NextResponse.json({ message: "Error", error }, { status: 500 });
   }
 }

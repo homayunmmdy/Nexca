@@ -15,7 +15,7 @@ const getTicketById = async (id) => {
 
     return res.json();
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 

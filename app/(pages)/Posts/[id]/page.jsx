@@ -1,15 +1,14 @@
 "use client";
 import RecentPosts from "@/app/(pages)/Posts/[id]/components/RecentPosts";
-import PostSeclton from "./PostSkelton";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { FormatTime } from "@/app/components/layout";
 import useSinglePost from "@/app/hooks/useSinglePost";
+import PostSeclton from "./PostSkelton";
+import useReadText from "@/app/hooks/useReadText";
+import { FormatTime } from "@/app/components/layout";
 
 const Post = () => {
   const post = useSinglePost();
-  const [isSpeaking, setIsSpeaking] = useState(false);
-console.log(post)
+  const text = `${post?.title}. ${post?.body}`;
+  const { isSpeaking, handleReadText, handleStopReading } = useReadText(text);
 
   if (!post) {
     return <PostSeclton />
@@ -21,28 +20,13 @@ console.log(post)
     day: "2-digit"
   };
 
-
-  const handleReadText = () => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(utterance);
-    setIsSpeaking(true);
-
-    utterance.onend = () => {
-      setIsSpeaking(false);
-    };
-  };
-
-  const handleStopReading = () => {
-    window.speechSynthesis.cancel();
-    setIsSpeaking(false);
-  };
   return (
     <>
       <div className="flex flex-col ">
-        <div className="bg-indigo-500 pt-10">
+        <div className="bg-indigo-500">
           <div className="w-[94%] md:w-[92%] mx-auto px-4 py-8">
             <h1 className="text-4xl text-center font-extrabold text-white">{post.title}</h1>
-            {/* <p className="text-lg  text-center my-3 text-white"><FormatTime timestamp={post.createdAt} options={options} /></p> */}
+            <p className="text-lg  text-center my-3 text-white"><FormatTime timestamp={post.createdAt} options={options} /></p>
           </div>
         </div>
         <div className="bg-white py-8">
