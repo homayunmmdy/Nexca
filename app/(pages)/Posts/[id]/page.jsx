@@ -4,6 +4,10 @@ import useSinglePost from "@/app/hooks/useSinglePost";
 import PostSeclton from "./PostSkelton";
 import useReadText from "@/app/hooks/useReadText";
 import { FormatTime } from "@/app/components/layout";
+import Link from "next/link";
+import { FaPlay } from "react-icons/fa";
+import { FaStop } from "react-icons/fa6";
+
 
 const Post = () => {
   const post = useSinglePost();
@@ -41,23 +45,22 @@ const Post = () => {
               />
               <div className="flex gap-3 items-center justify-between px-3">
                 {/* <p className="text-center">{readingTimeEstimate.text}</p> */}
-                <div>
                   {!isSpeaking ? (
                     <button
                       onClick={handleReadText}
-                      className="px-4 py-2 btn btn-outline btn-secondary rounded-full"
+                      className="px-4 py-2 btn btn-primary rounded-full text-white"
                     >
-                      Read
+                      <FaPlay />
                     </button>
                   ) : (
                     <button
                       onClick={handleStopReading}
-                      className="px-4 py-2 btn btn-outline btn-secondary rounded-full"
+                      className="px-4 py-2 btn btn-primary rounded-full text-white"
                     >
-                      Stop
+                      <FaStop />
                     </button>
                   )}
-                </div>
+                  <Link href="/" className="btn btn-outline btn-primary rounded-full">Back Home</Link>
               </div>
               <div className="prose max-w-none">
                 <p className="p-3 text-lg leading-9	">
