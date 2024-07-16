@@ -2,30 +2,49 @@
 import SiteConfig from '@/app/config/site'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = () => {
     const pathname = usePathname();
     const nav = SiteConfig.nav;
+    const [isOpen, setIsOpen] = useState(true);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
     return (
         <>
             <header className='bg-base-100'>
                 <div className="navbar w-[94%] md:w-[92%] mx-auto ">
                     <div className="navbar-start">
                         <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                            </div>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                {nav?.map((item) => {
-                                    return (
-                                        <li key={item.id} className="mx-1">
-                                            {pathname === item.link ? <Link href={item.link} className="bg-indigo-700 hover:bg-indigo-700 text-white rounded-xl">{item.name}</Link> :
-                                                <Link href={item.link}>{item.name}</Link>}
-                                        </li>
-                                    )
-                                })}
-                            </ul>
+                            <button className="btn btn-ghost lg:hidden">
+                                <svg
+                                    onClick={toggleMenu}
+                                    className="h-6 w-6 lg:hidden"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    {isOpen ? (
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    ) : (
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M4 6h16M4 12h16m-7 6h7"
+                                        />
+                                    )}
+                                </svg>
+                            </button>
+
                         </div>
                         <Link className="btn btn-ghost text-xl" href="/">{SiteConfig.name}</Link>
                     </div>
@@ -53,6 +72,18 @@ const Navbar = () => {
                     </div>
                 </div>
             </header>
+            {isOpen && (
+                <ul className="flex gap-4 items-center justify-center flex-col my-3 p-2 shadow lg:hidden bg-inherit">
+                    {nav?.map((item) => {
+                        return (
+                            <li key={item.id} className="mx-1 w-3/4">
+                                {pathname === item.link ? <Link href={item.link} className="p-2 bg-indigo-700 hover:bg-indigo-700 text-white rounded-xl block w-full text-center">{item.name}</Link> :
+                                    <Link className='p-2 bg-white rounded-xl block w-full text-center' href={item.link}>{item.name}</Link>}
+                            </li>
+                        )
+                    })}
+                </ul>
+            )}
         </>
     )
 }
