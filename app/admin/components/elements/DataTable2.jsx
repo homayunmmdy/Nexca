@@ -9,7 +9,7 @@ const DataTable = ({ data, path }) => {
     return (
         <div className="overflow-x-auto">
             <div className="w-full flex justify-center">
-                <Link href="/admin/sections/new" className="btn btn-outline btn-primary m-3">New {path}</Link>
+                <Link href={`/admin/${path}/new`} className="btn btn-outline btn-primary m-3">New {path}</Link>
             </div>
             <table className="table table-zebra my-2">
                 <thead>
@@ -26,7 +26,7 @@ const DataTable = ({ data, path }) => {
                             <td>{item.secid}</td>
                             <td>{item.name}</td>
                             <td>
-                                <Link href={`/admin/sections/${item._id}`}>
+                                <Link href={`/admin/${path}/${item._id}`}>
                                     <CiEdit size={25} />
                                 </Link>
                             </td>

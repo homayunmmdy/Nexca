@@ -4,7 +4,7 @@ import RecentPost from './RecentPost';
 import useGetLatestPosts from '@/app/hooks/useGetLatestPosts';
 
 const RecentPosts = () => {
-    const [recentSize] = useState(-5);
+    const [recentSize] = useState(-3);
     const { posts } = useGetLatestPosts(recentSize);
     return (
         <>
