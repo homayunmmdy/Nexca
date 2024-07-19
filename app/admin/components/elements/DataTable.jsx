@@ -1,5 +1,6 @@
-import React from "react";
+import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
+import Link from "next/link";
 
 const DataTable = ({ data, path }) => {
     // Sort data by `secid` in ascending order
@@ -7,11 +8,15 @@ const DataTable = ({ data, path }) => {
 
     return (
         <div className="overflow-x-auto">
-            <table className="table table-zebra">
+            <div className="w-full flex justify-center">
+                <Link href={`/admin/${path}/new`} className="btn btn-outline btn-primary m-3">New {path}</Link>
+            </div>
+            <table className="table table-zebra my-2">
                 <thead>
                     <tr>
                         <th>id</th>
                         <th>sec</th>
+                        <th>edit</th>
                         <th>delete</th>
                     </tr>
                 </thead>
@@ -20,6 +25,11 @@ const DataTable = ({ data, path }) => {
                         <tr key={item.id}>
                             <td>{item.secid}</td>
                             <td>{item.name}</td>
+                            <td>
+                                <Link href={`/admin/${path}/${item._id}`}>
+                                    <CiEdit size={25} />
+                                </Link>
+                            </td>
                             <td>
                                 <DeleteBlock path={path} id={item._id} />
                             </td>

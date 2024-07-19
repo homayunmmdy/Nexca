@@ -1,16 +1,14 @@
 "use client";
 import { SERVICES_API_URL } from "@/app/config/apiConstants";
-import { DataTable2 } from "../components/elements";
 import useFetch from "@/app/hooks/useFetch";
+import { DataTable } from "../components/elements";
 
 const Services = () => {
   const { data: services } = useFetch(`${SERVICES_API_URL}`);
 
   return (
     <>
-      <div>
-        <DataTable2 data={services} path="services" />
-      </div>
+      <DataTable data={services} path="services" />
     </>
   );
 };

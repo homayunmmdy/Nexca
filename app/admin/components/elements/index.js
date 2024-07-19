@@ -1,6 +1,5 @@
 export { default as DataForm } from "./DataForm";
 export { default as DataTable } from "./DataTable";
-export { default as DataTable2 } from "./DataTable2";
 export { default as DeleteBlock } from "./DeleteBlock";
 export { default as EditForm } from "./EditForm";
 export { default as EditSectionForm } from "./EditSectionForm";
