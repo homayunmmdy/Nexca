@@ -8,7 +8,10 @@ const DataTable = ({ data, path }) => {
 
     return (
         <div className="overflow-x-auto">
-            <table className="table table-zebra">
+            <div className="w-full flex justify-center">
+                <Link href="/admin/sections/new" className="btn btn-outline btn-primary m-3">New {path}</Link>
+            </div>
+            <table className="table table-zebra my-2">
                 <thead>
                     <tr>
                         <th>id</th>

@@ -40,10 +40,7 @@ const Section = () => {
   return (
     <>
       <ToastContainer />
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 mt-3">
-        <div className="h-[200px]">
-          <DataForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
-        </div>
+      <div>
         <DataTable2 data={sections} path="sections" />
       </div>
     </>
