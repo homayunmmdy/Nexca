@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 const Navbar = () => {
     const pathname = usePathname();
     const nav = SiteConfig.nav;
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);

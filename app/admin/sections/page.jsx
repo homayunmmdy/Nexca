@@ -4,7 +4,7 @@ import useFetch from "@/app/hooks/useFetch";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { DataForm, DataTable } from "../components/elements";
+import { DataForm, DataTable2 } from "../components/elements";
 
 const Section = () => {
   const [formData, setFormData] = useState({ name: '', secid: 1 });
@@ -44,7 +44,7 @@ const Section = () => {
         <div className="h-[200px]">
           <DataForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
         </div>
-        <DataTable data={sections} path="sections" />
+        <DataTable2 data={sections} path="sections" />
       </div>
     </>
   );
