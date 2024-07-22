@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SiteConfig from "@/app/config/site"
 import { Footer, Navbar } from "./components/layout";
+import { Analytics } from '@vercel/analytics/react'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,7 +13,6 @@ export const metadata = {
   verification: {
     google: "gTVvXWgVqXKU6AfSRkuQa4O39VGzRS9zcA4y9eT3uUo",
   },
-
 };
 
 export default function RootLayout({ children }) {
@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
       </body>
+      <Analytics />
       <Footer />
     </html>
   );

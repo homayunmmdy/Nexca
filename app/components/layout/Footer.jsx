@@ -1,8 +1,5 @@
-import SiteConfig from '@/app/config/site'
-import Link from 'next/link'
-import React from 'react'
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
+import Link from 'next/link';
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -10,9 +7,10 @@ const Footer = () => {
         <>
             <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
                 <nav className="grid grid-flow-col gap-4">
-                    <Link className="link link-hover" href="/contacts">Contact</Link>
-                    <Link className="link link-hover" href="/privacy_policy">Privacy Policy</Link>
-                    <Link className="link link-hover" href="/Admin">Admin</Link>
+                    <Link title='Contact' className="link link-hover" href="/contacts">Contact</Link>
+                    <Link title='About' className="link link-hover" href="/about">About</Link>
+                    <Link title="Privacy Policy" className="link link-hover" href="/privacy_policy">Privacy Policy</Link>
+                    <Link title="Admin" className="link link-hover" href="/Admin">Admin</Link>
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">
