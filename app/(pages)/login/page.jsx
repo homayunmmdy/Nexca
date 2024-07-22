@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from "next/link";
+import Toast from "./components/Toast";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -29,7 +30,7 @@ const Login = () => {
   return (
     <>
       <ToastContainer />
-
+      <Toast />
       <div className="flex font-poppins items-center justify-center">
         <div className="h-screen w-screen flex justify-center items-center dark:bg-gray-900">
           <div className="grid gap-8 p-4">
