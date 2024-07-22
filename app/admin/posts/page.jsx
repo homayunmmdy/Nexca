@@ -3,8 +3,9 @@ import { POST_API_URL } from "@/app/config/apiConstants";
 import useFetch from "@/app/hooks/useFetch";
 import { useEffect, useState } from "react";
 import { Pagination, PostTable } from "../components/elements";
+import { FiSearch } from "react-icons/fi";
 
-const Posts =  () => {
+const Posts = () => {
   const data = useFetch(POST_API_URL);
 
   const [posts, setPosts] = useState(data?.data || []);
@@ -19,7 +20,7 @@ const Posts =  () => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
-  const filteredPosts = posts.filter(post => 
+  const filteredPosts = posts.filter(post =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -39,13 +40,12 @@ const Posts =  () => {
   return (
     <div className="p-5">
       <div>
-        <input 
-          type="text"
-          placeholder="Search posts"
-          value={searchQuery}
-          onChange={handleSearch}
-          className="mb-4 p-2 border rounded"
-        />
+        <label className="input input-primary input-bordered flex items-center gap-2 my-2">
+          <input type="text" className="grow" placeholder="Search posts"
+            value={searchQuery}
+            onChange={handleSearch} />
+            <FiSearch size={24} className="h-4 w-4 opacity-70" color="#4F46E5"/>
+        </label>
         {currentPosts.length > 0 ? (
           <div className="!z-5 relative flex flex-col rounded-[20px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:shadow-none w-full p-4 h-full">
             <div className="overflow-x-auto">

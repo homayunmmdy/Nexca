@@ -53,7 +53,6 @@ const Sidebar = () => {
         </div>
         <hr className="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent mb-2" />
         {isOpen && <NavLink />}
-        <LogoutButton />
       </div>
     </>
   );

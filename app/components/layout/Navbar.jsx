@@ -1,8 +1,8 @@
 "use client"
-import SiteConfig from '@/app/config/site'
+import SiteConfig from '@/app/config/site';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react'
+import { useState } from 'react';
 
 const Navbar = () => {
     const pathname = usePathname();
