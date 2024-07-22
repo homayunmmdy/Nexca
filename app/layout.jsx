@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         <h1 className="hidden">{SiteConfig.name}</h1>
-        {children}
+        <main className="bg-white">
+          {children}
+        </main>
       </body>
       <Footer />
     </html>
