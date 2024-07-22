@@ -5,5 +5,6 @@ export default function robots() {
       allow: "/",
       disallow: "/private/",
     },
+    sitemap: "https://nexca.vercel.app/sitemap.xml",
   };
 }
