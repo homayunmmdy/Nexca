@@ -1,6 +1,8 @@
 const SiteConfig = {
-  name: "Nexa",
-  description: "Powerfull admin for you site",
+  name: "Nexca",
+  description: "CMS admin panel for blogger or agency",
+  keywords : "blog , CMS admin , nexca , blogger",
+  authors: "Nexca Team",
   lang: "en",
   dir: "ltr",
   nav: [

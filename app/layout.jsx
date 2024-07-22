@@ -7,6 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: SiteConfig.name,
   description: SiteConfig.description,
+  keywords: SiteConfig.keywords,
+  authors: SiteConfig.authors,
+  verification: {
+    google: "gTVvXWgVqXKU6AfSRkuQa4O39VGzRS9zcA4y9eT3uUo",
+  },
+
 };
 
 export default function RootLayout({ children }) {
