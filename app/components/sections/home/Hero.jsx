@@ -1,62 +1,53 @@
-import Image from 'next/image'
-import React from 'react'
-import HeroImage from '@/public/img/admin.png'
-import Link from 'next/link'
-import { FaGithub } from "react-icons/fa";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
-        <section
-            className="relative overflow-hidden bg-gradient-to-b from-indigo-50 via-transparent to-transparent pb-12 pt-20 sm:pb-16 sm:pt-30 lg:pb-22">
-            <div className="relative z-10">
-                <div
-                    className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-                    <svg className="h-[60rem] w-[100rem] flex-none stroke-indigo-600 opacity-20" aria-hidden="true">
-                        <defs>
-                            <pattern id="e9033f3e-f665-41a6-84ef-756f6778e6fe" width="200" height="200" x="50%" y="50%"
-                                patternUnits="userSpaceOnUse" patternTransform="translate(-100 0)">
-                                <path d="M.5 200V.5H200" fill="none"></path>
-                            </pattern>
-                        </defs>
-                        <svg x="50%" y="50%" className="overflow-visible fill-indigo-50">
-                            <path d="M-300 0h201v201h-201Z M300 200h201v201h-201Z" strokeWidth="0"></path>
-                        </svg>
-                        <rect width="100%" height="100%" strokeWidth="0" fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)">
-                        </rect>
-                    </svg>
-                </div>
-            </div>
-            <div className="relative z-20 mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl text-center">
-                    <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                        Expercice Power with
-                        <span className="text-indigo-600 px-2">Nexca
-                        </span>
-                    </h1>
-                    <h2 className="mt-6 text-lg leading-8 text-gray-600">
-                        Open the github account clone the project change the .env.sample to .env.local and then write our own 
-                        .env and enjoy the admin
-                    </h2>
-                    <div className="mt-10 flex items-center justify-center gap-x-6">
-                        <Link className="isomorphic-link isomorphic-link--internal border border-black inline-flex items-center justify-center gap-2 rounded-xl hover:bg-black px-4 py-3 text-sm font-semibold hover:text-white shadow-sm transition-all duration-150 text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            href="https://github.com/homayunmmdy/Nexca">Github
-                            <FaGithub className='w-4 h-4'/>
-                        </Link>
-                        <Link className="isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 text-indigo-600 rounded-xl border border-indigo-600 px-4 py-3 text-sm font-semibold hover:text-white shadow-sm transition-all duration-150 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            href="/admin">Admin Demo
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd"
-                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                    clipRule="evenodd"></path>
-                            </svg>
-                        </Link>
+        <>
+            <section className="relative py-32 lg:py-36 bg-white">
+                <div className="container mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
+                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
+                        {/* Decorative Elements (Optional) */}
+                        <div className="hidden lg:block absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
+                            <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95" />
+                            <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-blue-600 blur-xl opacity-80" />
+                        </div>
+                        <span className="absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90 w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-blue-600 to-green-400" />
+
+                        {/* Content */}
+                        <div className="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
+                            <h1 className="text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900">
+                                Build Your <span className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-green-600">Own Blog</span> Website Right Now
+                            </h1>
+                            <p className="mt-8 text-gray-700">
+                                Create your blog website in less than a day with Nexca. Our powerful admin panel lets you manage your content effortlessly, no coding required.
+                            </p>
+                            <div className="mt-8 flex items-center justify-center">
+                                <Link className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-green-400 text-white font-bold rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="/admin">
+                                    Admin demo
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Hero Image */}
+                        <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+                            <Image
+                                src="/img/admin.png"
+                                alt="Nexca Admin Panel"
+                                title="Nexca Admin Panel"
+                                blurDataURL="/img/admin.png"
+                                placeholder="blur"
+                                layout="responsive"
+                                loading="lazy"
+                                width={1200}
+                                height={800}
+                                className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div className="relative mx-auto mt-10 max-w-lg">
-                    <Image  src={HeroImage} width={520} height={240} className="w-full rounded-2xl border border-gray-100 shadow" alt="powerfull Admin panel" />
-                </div>
-            </div>
-        </section>
+            </section>
+        </>
     )
 }
 
