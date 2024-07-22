@@ -1,18 +1,15 @@
 "use client"
-import React from "react";
+import { Spinner } from "@/app/components/elements";
 import { CONTACTS_API_URL } from "@/app/config/apiConstants";
 import useFetch from "@/app/hooks/useFetch";
 import { DeleteBlock } from "../components/elements";
 
 
-const ContactsPage =  () => {
-  const data = useFetch(CONTACTS_API_URL)
-  if (!data.data) {
-    return <p>No data send.</p>;
+const ContactsPage = () => {
+  const { data: contactData, loading } = useFetch(`${CONTACTS_API_URL}`)
+  if (loading) {
+    return <Spinner />
   }
-
-  const contactData = data.data;
-
   return (
     <div className="p-5">
       <div>
@@ -26,7 +23,7 @@ const ContactsPage =  () => {
                 <th>delete</th>
               </tr>
             </thead>
-            {contactData.map((data) => (
+            {contactData?.map((data) => (
               <tbody key={data.id}>
                 <tr>
                   <td>{data.name}</td>

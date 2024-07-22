@@ -4,6 +4,7 @@ import useFetch from "@/app/hooks/useFetch";
 import { useEffect, useState } from "react";
 import { Pagination, PostTable } from "../components/elements";
 import { FiSearch } from "react-icons/fi";
+import { Spinner } from "@/app/components/elements";
 
 const Posts = () => {
   const data = useFetch(POST_API_URL);
@@ -34,7 +35,7 @@ const Posts = () => {
   };
 
   if (!data?.data) {
-    return <p>No posts.</p>;
+    return <Spinner />
   }
 
   return (
@@ -44,7 +45,7 @@ const Posts = () => {
           <input type="text" className="grow" placeholder="Search posts"
             value={searchQuery}
             onChange={handleSearch} />
-            <FiSearch size={24} className="h-4 w-4 opacity-70" color="#4F46E5"/>
+          <FiSearch size={24} className="h-4 w-4 opacity-70" color="#4F46E5" />
         </label>
         {currentPosts.length > 0 ? (
           <div className="!z-5 relative flex flex-col rounded-[20px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:shadow-none w-full p-4 h-full">

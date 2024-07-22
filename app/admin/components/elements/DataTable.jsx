@@ -21,7 +21,7 @@ const DataTable = ({ data, path }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {sortedData.map((item) => (
+                    {sortedData?.map((item) => (
                         <tr key={item.id}>
                             <td>{item.secid}</td>
                             <td>{item.name}</td>

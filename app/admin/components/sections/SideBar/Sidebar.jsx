@@ -13,7 +13,7 @@ const Sidebar = () => {
   };
   return (
     <>
-      <div className="w-full h-full px-4">
+      <div className="w-full h-full p-4">
         <div className="flex justify-between items-center">
           <Link
             className="block px-4 py-3 m-0 text-lg whitespace-nowrap text-slate-700"

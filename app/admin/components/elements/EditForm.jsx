@@ -45,8 +45,12 @@ const EditForm = ({ data, apiUrl, name }) => {
     };
     return (
         <>
+            {loading && (
+                <div className="w-full h-full flex justify-center items-center">
+                    <span class="loading loading-spinner text-primary loading-lg"></span>
+                </div>
+            )}
             <div className="flex justify-center">
-                {loading && <span className="absolute loading loading-ring loading-lg"></span>}
                 <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-3 w-full md:w-1/2 mb-3">
                     <h3 className="text-center font-semibold text-2xl capitalize">{EDITMODE ? `Edit ${name}` : `New ${name}`}</h3>
                     <FormField id="name" name="name" label="Name" value={formData.name} onChange={handleChange} />

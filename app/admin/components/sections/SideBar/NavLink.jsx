@@ -6,6 +6,7 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import { SiCloudflarepages } from "react-icons/si";
 import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
+import { LogoutButton } from "../../elements";
 
 const links = [
   { name: "Admin", href: "/admin", icon: TiHome },
@@ -20,7 +21,7 @@ const NavLink = () => {
   const pathname = usePathname();
   return (
     <>
-      <div className="items-center block w-auto h-screen overflow-auto grow basis-full">
+      <div className="items-center block w-auto h-full overflow-auto grow basis-full">
         <ul className="flex flex-col pl-0 mb-0 gap-2">
           {links.map((link, index) => {
             const LinkIcon = link.icon;
