@@ -18,7 +18,9 @@ const Navbar = () => {
                 <div className="navbar w-[94%] md:w-[92%] mx-auto ">
                     <div className="navbar-start">
                         <div className="dropdown">
-                            <button className="btn btn-ghost lg:hidden">
+                            <button
+                                aria-label="close and open menu"
+                                className="btn btn-ghost lg:hidden">
                                 <svg
                                     onClick={toggleMenu}
                                     className="h-6 w-6 lg:hidden"

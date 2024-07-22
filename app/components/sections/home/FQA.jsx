@@ -15,47 +15,47 @@ const FQA = () => {
                             <div className="flex flex-wrap -m-3">
                                 <div className="join join-vertical w-full my-10">
                                     <div className="collapse collapse-arrow join-item border border-base-300">
-                                        <input type="radio" name="my-accordion-4" defaultChecked />
-                                        <div className="collapse-title text-xl font-bold ">
+                                        <input  id="nexca-question-1" type="radio" name="my-accordion-4" defaultChecked />
+                                        <label htmlFor="nexca-question-1" className="collapse-title text-xl font-bold ">
                                             What is Nexca?
-                                        </div>
+                                        </label>
                                         <div className="collapse-content">
                                             Nexca is an admin panel designed to help you manage and administer your site. It's built with Next.js, JavaScript, TailwindCSS, and uses MongoDB for the database.
                                         </div>
                                     </div>
                                     <div className="collapse collapse-arrow join-item border border-base-300">
-                                        <input type="radio" name="my-accordion-4" />
-                                        <div className="collapse-title text-xl font-bold">
+                                        <input  id="nexca-question-2" type="radio" name="my-accordion-4" />
+                                        <label htmlFor="nexca-question-2" className="collapse-title text-xl font-bold">
                                         What is the purpose of Nexca?
-                                        </div>
+                                        </label>
                                         <div className="collapse-content">
                                         Nexca aims to provide a user-friendly admin panel to efficiently manage and control your website's content and functionalities.
                                         </div>
                                     </div>
                                     <div className="collapse collapse-arrow join-item border border-base-300">
-                                        <input type="radio" name="my-accordion-4" defaultChecked />
-                                        <div className="collapse-title text-xl font-bold">
+                                        <input  id="nexca-question-3" type="radio" name="my-accordion-4" defaultChecked />
+                                        <label htmlFor="nexca-question-3" className="collapse-title text-xl font-bold">
                                             How do I set up Nexca?
-                                        </div>
+                                        </label>
                                         <div className="collapse-content">
                                             <p>To set up Nexca, clone the repository, install all necessary packages, configure the .env file with your environment variables, and then host it to use with your site.</p>
                                         </div>
                                     </div>
 
                                     <div className="collapse collapse-arrow join-item border border-base-300">
-                                        <input type="radio" name="my-accordion-4" defaultChecked />
-                                        <div className="collapse-title text-xl font-bold">
+                                        <input  id="nexca-question-4" type="radio" name="my-accordion-4" defaultChecked />
+                                        <label htmlFor="nexca-question-4" className="collapse-title text-xl font-bold">
                                             How do I configure the environment variables?
-                                        </div>
+                                        </label>
                                         <div className="collapse-content">
                                             <p> Change the env.sample to env.local then Enter your specific environment variables in the .env file as per your hosting requirements.</p>
                                         </div>
                                     </div>
                                     <div className="collapse collapse-arrow join-item border border-base-300">
-                                        <input type="radio" name="my-accordion-4" defaultChecked />
-                                        <div className="collapse-title text-xl font-bold">
+                                        <input  id="nexca-question-5" type="radio" name="my-accordion-4" defaultChecked />
+                                        <label htmlFor="nexca-question-5" className="collapse-title text-xl font-bold">
                                             What are the system requirements for Nexca?
-                                        </div>
+                                        </label>
                                         <div className="collapse-content">
                                             You need Node.js installed on your system to run Nexca, along with a MongoDB database instance.
                                         </div>

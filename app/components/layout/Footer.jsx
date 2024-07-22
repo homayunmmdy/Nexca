@@ -16,8 +16,8 @@ const Footer = () => {
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">
-                        <Link href="https://github.com/homayunmmdy/Nexca" className="ease-in-out delay-100 transition-colors hover:text-indigo-600"><FaGithub size={25} /></Link>
-                        <Link title="Linkedin" href='www.linkedin.com/in/homayunmmdy' className="ease-in-out delay-100 transition-colors hover:text-indigo-600" ><FaLinkedinIn size={25} /></Link>
+                        <Link title="GitHub" rel="nofollow" aria-label='GitHub' href="https://github.com/homayunmmdy/Nexca" className="ease-in-out delay-100 transition-colors hover:text-indigo-600"><FaGithub size={25} /></Link>
+                        <Link title="Linkedin" rel="nofollow" aria-label='Linkedin' href='www.linkedin.com/in/homayunmmdy' className="ease-in-out delay-100 transition-colors hover:text-indigo-600" ><FaLinkedinIn size={25} /></Link>
                     </div>
                 </nav>
                 <aside>
