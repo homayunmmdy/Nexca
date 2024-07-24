@@ -1,8 +1,8 @@
+import SiteConfig from "@/app/config/site";
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from "next/font/google";
-import "./globals.css";
-import SiteConfig from "@/app/config/site"
 import { Footer, Navbar } from "./components/layout";
-import { Analytics } from '@vercel/analytics/react'
+import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,20 +13,25 @@ export const metadata = {
   verification: {
     google: "gTVvXWgVqXKU6AfSRkuQa4O39VGzRS9zcA4y9eT3uUo",
   },
+  alternates: {
+    canonical: SiteConfig.siteUrl,
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang={SiteConfig.lang} dir={SiteConfig.dir}>
-      <body className={inter.className}>
-        <Navbar />
-        <h1 className="hidden">{SiteConfig.name}</h1>
-        <main className="bg-white">
-          {children}
-        </main>
-      </body>
-      <Analytics />
-      <Footer />
-    </html>
+    <>
+      <html lang={SiteConfig.lang} dir={SiteConfig.dir}>
+        <body className={inter.className}>
+          <Navbar />
+          <h1 className="hidden">{SiteConfig.name}</h1>
+          <main className="bg-white">
+            {children}
+          </main>
+          <Footer />
+        </body>
+        <Analytics />
+      </html>
+    </>
   );
 }

@@ -1,8 +1,10 @@
+const API_URL = process.env.API_URL;
 const SiteConfig = {
   name: "Nexca",
   description: "CMS admin panel for blogger or agency",
-  keywords : "blog , CMS admin , nexca , blogger",
+  keywords: "blog , CMS admin , nexca , blogger",
   authors: "Nexca Team",
+  siteUrl: `${API_URL}`,
   lang: "en",
   dir: "ltr",
   nav: [
