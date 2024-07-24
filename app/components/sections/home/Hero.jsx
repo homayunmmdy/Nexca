@@ -1,11 +1,13 @@
+import HeroImage from '@/public/img/admin.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaArrowDown } from "react-icons/fa6";
 
 const Hero = () => {
     return (
         <>
-            <section className="relative py-32 lg:py-36 bg-white">
-                <div className="container mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
+            <section className="relative py-24 lg:py-28 bg-white">
+                <div className="mx-auto max-w-7xl px-4 my-5">
                     <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
                         {/* Decorative Elements (Optional) */}
                         <div className="hidden lg:block absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
@@ -22,20 +24,22 @@ const Hero = () => {
                             <p className="mt-8 text-gray-700">
                                 Create your blog website in less than a day with Nexca. Our powerful admin panel lets you manage your content effortlessly, no coding required.
                             </p>
-                            <div className="mt-8 flex items-center justify-center">
+                            <div className="mt-8 flex items-center justify-center gap-3">
                                 <Link className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-green-400 text-white font-bold rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="/admin">
                                     Admin demo
                                 </Link>
+                                <Link href="#services" className="btn btn-circle btn-outline btn-primary animate-bounce">
+                                    <FaArrowDown size={24} />
+                                </Link>
                             </div>
                         </div>
-
                         {/* Hero Image */}
                         <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
                             <Image
-                                src="/img/admin.png"
+                                src={HeroImage}
                                 alt="Nexca Admin Panel"
                                 title="Nexca Admin Panel"
-                                blurDataURL="/img/admin.png"
+                                blurDataURL="img/admin.png"
                                 placeholder="blur"
                                 layout="responsive"
                                 loading="lazy"

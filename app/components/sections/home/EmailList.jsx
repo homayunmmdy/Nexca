@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Newsletter = () => {
+const EmailList = () => {
     const [formData, setFormData] = useState({
         emails: "",
     });
@@ -41,11 +41,11 @@ const Newsletter = () => {
     return (
         <>
             <ToastContainer />
-            <div className="p-6">
+            <div className="mx-auto max-w-7xl px-4 my-5">
                 <div
-                    className="flex flex-wrap items-center w-full max-w-5xl p-5 mx-auto text-left border border-gray-200 rounded lg:flex-nowrap md:p-8 dark:border-gray-700">
+                    className="flex flex-wrap items-center w-full  p-5 mx-auto text-left border border-gray-200 rounded lg:flex-nowrap md:p-8 dark:border-gray-700">
                     <div className="flex-1 w-full mb-5 md:mb-0 md:pr-5 lg:pr-10 md:w-1/2">
-                        <h3 className="mb-2 text-2xl font-bold text-gray-700 ">Subscribe to Newsletter</h3>
+                        <h3 className="mb-2 text-2xl font-bold text-gray-700 ">Subscribe to EmailList</h3>
                         <p className="text-gray-500 ">Provide your email to get email notification when we launch
                             new
                             products or publish new articles
@@ -67,4 +67,4 @@ const Newsletter = () => {
     )
 }
 
-export default Newsletter
+export default EmailList

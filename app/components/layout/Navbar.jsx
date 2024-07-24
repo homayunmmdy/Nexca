@@ -49,7 +49,7 @@ const Navbar = () => {
                             </button>
 
                         </div>
-                        <Link className="btn btn-ghost text-xl" href="/">{SiteConfig.name}</Link>
+                        <Link className="btn btn-ghost text-xl bg-gray-200 hover:bg-indigo-700 hover:text-white" href="/">{SiteConfig.name}</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -65,9 +65,9 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end">
                         <Link
-                         className="isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                            className="isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-150"
                             href="/https://github.com/homayunmmdy/Nexca">GitHub
-                            <FaGithub color='white' size={20}/>
+                            <FaGithub color='white' size={20} />
                         </Link>
                     </div>
                 </div>

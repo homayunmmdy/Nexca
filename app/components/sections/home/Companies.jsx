@@ -5,13 +5,13 @@ import { SiClerk, SiMongodb, SiVercel } from "react-icons/si";
 const Companies = () => {
   return (
     <>
-      <section className="max-w-7xl mx-auto px-4 space-y-6 bg-slate-50 rounded-xl shadow-xl py-8 md:py-12 lg:py-28 my-4">
+      <section className="mx-auto max-w-7xl px-4 bg-slate-50 rounded-xl shadow-xl py-8 md:py-12 lg:py-28 my-4">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
             Companies
           </h2>
 
-          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 py-5">
             The list of the companies that we work to make this happend
           </p>
         </div>
