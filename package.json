@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "@tiptap/extension-document": "^2.3.1",
@@ -30,9 +32,14 @@
     "swiper": "^11.1.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/ui": "^2.0.4",
     "autoprefixer": "^10.0.1",
     "daisyui": "^4.9.0",
+    "jsdom": "^24.1.1",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0"
+    "tailwindcss": "^3.3.0",
+    "vitest": "^2.0.4"
   }
 }
