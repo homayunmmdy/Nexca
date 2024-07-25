@@ -1,7 +1,6 @@
 import SiteConfig from "@/app/config/site";
-import { Analytics } from '@vercel/analytics/react';
 import { Inter } from "next/font/google";
-import { Footer, Navbar } from "./components/layout";
+import { Dependencies, Footer, Navbar, Provider } from "./components/general";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
+      <Provider />
       <html lang={SiteConfig.lang} dir={SiteConfig.dir}>
         <body className={inter.className}>
           <Navbar />
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           </main>
           <Footer />
         </body>
-        <Analytics />
+        <Dependencies />
       </html>
     </>
   );

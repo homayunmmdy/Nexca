@@ -1,11 +1,10 @@
-import { PageTitle } from '@/app/components/layout'
 import React from 'react'
 
 const PrivicyPolicyPage = () => {
     return (
         <>
-            <PageTitle title="Privacy Policy" />
             <div className="w-[94%] md:w-[92%] mx-auto">
+                <h1 className='font-bold text-2xl'>Privacy Policy</h1>
                 <div className="py-8">
                     <p className="mb-4">
                         This privacy policy sets out how our website uses and protects any information that you give us when you use

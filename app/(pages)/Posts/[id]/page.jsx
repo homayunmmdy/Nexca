@@ -3,7 +3,7 @@ import RecentPosts from "@/app/(pages)/Posts/[id]/components/RecentPosts";
 import useSinglePost from "@/app/hooks/useSinglePost";
 import PostSeclton from "./PostSkelton";
 import useReadText from "@/app/hooks/useReadText";
-import { FormatTime } from "@/app/components/layout";
+import { FormatTime } from "@/app/components/general";
 import Link from "next/link";
 import { FaPlay } from "react-icons/fa";
 import { FaStop } from "react-icons/fa6";
