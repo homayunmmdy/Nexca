@@ -2,36 +2,53 @@ import { it, expect, describe } from "vitest";
 import SiteConfig from "../../app/config/site";
 
 describe("config", () => {
-  it("should have correct name", () => {
-    expect(SiteConfig.name).toBe("Nexca");
+  it.each([
+    {
+      name: "Name",
+      config: SiteConfig.name,
+      value: "Nexca",
+    },
+    {
+      name: "Description",
+      config: SiteConfig.description,
+      value: "CMS admin panel for blogger or agency",
+    },
+    {
+      name: "Keywords",
+      config: SiteConfig.keywords,
+      value: "blog , CMS admin , nexca , blogger",
+    },
+    {
+      name: "Authors",
+      config: SiteConfig.authors,
+      value: "Nexca Team",
+    },
+    {
+      name: "Langague",
+      config: SiteConfig.lang,
+      value: "en",
+    },
+    {
+      name: "Direction",
+      config: SiteConfig.dir,
+      value: "ltr",
+    },
+  ])("should have correct $name", ({name, config, value }) => {
+    expect(config).toBe(value);
   });
-  it("should have correct description", () => {
-    expect(SiteConfig.description).toBe(
-      "CMS admin panel for blogger or agency"
-    );
-  });
-  it("should have correct keywords", () => {
-    expect(SiteConfig.keywords).toBe("blog , CMS admin , nexca , blogger");
-  });
-  it("should have correct authors", () => {
-    expect(SiteConfig.authors).toBe("Nexca Team");
-  });
+
   it("should have correct siteUrl", () => {
     const API_URL = process.env.API_URL;
     expect(SiteConfig.siteUrl).toBe(`${API_URL}`);
   });
-  it("should have correct langague", () => {
-    expect(SiteConfig.lang).toBe("en");
+
+  it.each([
+    { name: "Langague", config: SiteConfig.lang, characters: 2 },
+    { name: "Direction", config: SiteConfig.dir, characters: 3 },
+  ])("$name should have $characters characters", ({ config, characters }) => {
+    expect(config).toHaveLength(characters);
   });
-  it("Langague should have 2 charactres ", () => {
-    expect(SiteConfig.lang).toHaveLength(2);
-  });
-  it("should have correct direction", () => {
-    expect(SiteConfig.dir).toBe("ltr");
-  });
-  it("direction should have 3 charactres ", () => {
-    expect(SiteConfig.dir).toHaveLength(3);
-  });
+
   it("should have correct navigation item", () => {
     expect(SiteConfig.nav).toEqual([
       {
