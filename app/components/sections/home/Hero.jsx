@@ -27,7 +27,7 @@ const Hero = () => {
                                 <Link className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-green-400 text-white font-bold rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="/admin">
                                     Admin demo
                                 </Link>
-                                <Link href="#services" className="btn btn-circle btn-outline btn-primary animate-bounce">
+                                <Link title="scroll down" href="#services" className="btn btn-circle btn-outline btn-primary animate-bounce">
                                     <FaArrowDown size={24} />
                                 </Link>
                             </div>

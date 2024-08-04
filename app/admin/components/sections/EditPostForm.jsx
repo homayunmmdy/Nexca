@@ -50,7 +50,7 @@ const EditPostForm = ({ ticket }) => {
     router.push("/admin/posts");
   };
 
-  const { data: services } = useFetch(SERVICES_API_URL);
+  const { data: service } = useFetch(SERVICES_API_URL);
   const { data: sections } = useFetch(SECTIONS_API_URL);
 
   return (
@@ -62,7 +62,7 @@ const EditPostForm = ({ ticket }) => {
         <FormField id="title" name="title" label="Title" value={formData.title} onChange={handleChange} required />
         <FormField id="description" name="description" type="textarea" label="Lead" value={formData.description} onChange={handleChange} />
         <FormField id="body" name="body" type="textarea" label="Body" value={formData.body} onChange={handleChange} required />
-        {services && <SelectField id="service" name="service" label="Services" value={formData.service} onChange={handleChange} options={services} />}
+        {service && <SelectField id="service" name="service" label="Service" value={formData.service} onChange={handleChange} options={service} />}
         {sections && <SelectField id="section" name="section" label="Section" value={formData.section} onChange={handleChange} options={sections} />}
         <input type="submit" className="btn btn-active btn-primary" value={EDITMODE ? "Save" : "Post"} />
       </form>

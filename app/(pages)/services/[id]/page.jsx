@@ -1,36 +1,31 @@
 "use client"
-import { SERVICES_API_URL } from "@/app/config/apiConstants";
-import axios from "axios";
-import { notFound, usePathname } from "next/navigation";
-import { useEffect, useState } from 'react';
+import { POST_API_URL } from "@/app/config/apiConstants";
+import useFetch from "@/app/hooks/useFetch";
+import { usePathname } from "next/navigation";
+import PostCard from "../../demo/components/posts/PostCard";
+import PostsSkeleton from "../../demo/components/posts/PostsSkeleton";
+import { SubNavbar } from "../../demo/components";
 
 const ServicesPage = () => {
     const pathname = usePathname();
     const id = pathname.slice(10);
-    const [data, setData] = useState();
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(SERVICES_API_URL);
-                setData(response.data.data);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        };
-
-        fetchData();
-    }, []);
-    const secids = data.map((item) => item.secid);
-    if (secids.includes(parseInt(id))) {
-        return (
-            <>
-            Correct
-            </>
-        )
-    } else {
-        return notFound();
+    const { data: posts, loading } = useFetch(POST_API_URL)
+    const filteredData = posts?.filter((item) => item.service == id);
+    if (loading) {
+        return <PostsSkeleton />
     }
-
+    return (
+        <>
+            <SubNavbar />
+            <div className="mx-auto p-10">
+                <div className="hidden md:grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
+                    {filteredData?.map((item) => (
+                        <PostCard key={item._id} post={item} />
+                    ))}
+                </div>
+            </div>
+        </>
+    )
 }
 
 export default ServicesPage
