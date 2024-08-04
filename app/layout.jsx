@@ -1,7 +1,10 @@
 import SiteConfig from "@/app/config/site";
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from "next/font/google";
-import { Dependencies, Footer, Navbar, Provider } from "./components/general";
+import { Footer, Navbar } from "./components/general";
 import "./globals.css";
+import { Suspense } from "react";
+import Loading from "./loading";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -20,17 +23,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <Provider />
       <html lang={SiteConfig.lang} dir={SiteConfig.dir}>
         <body className={inter.className}>
           <Navbar />
           <h1 className="hidden">{SiteConfig.name}</h1>
           <main className="bg-white">
-            {children}
+            <Suspense fallback={<Loading />}>
+              {children}
+            </Suspense>
           </main>
           <Footer />
         </body>
-        <Dependencies />
+        <Analytics />
       </html>
     </>
   );

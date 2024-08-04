@@ -1,4 +1,3 @@
-import HeroImage from '@/public/img/admin.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowDown } from "react-icons/fa6";
@@ -36,7 +35,7 @@ const Hero = () => {
                         {/* Hero Image */}
                         <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
                             <Image
-                                src={HeroImage}
+                                src="/img/admin.png"
                                 alt="Nexca Admin Panel"
                                 title="Nexca Admin Panel"
                                 blurDataURL="img/admin.png"
