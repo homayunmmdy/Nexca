@@ -1,11 +1,13 @@
 import EmailData from "@/app/cash/EmailData";
 import { EmailsModel } from "@/app/models";
-import { handleGetRequest, handlePostRequest } from "@/app/util/apiUtil";
+import RequestHandeler from "@/services/RequestHandeler";
 
 export async function GET() {
-  return handleGetRequest(EmailsModel, EmailData);
+  const handler = new RequestHandeler(EmailsModel, EmailData);
+  return handler.GetAll();
 }
 
 export async function POST(req) {
-  return handlePostRequest(req, EmailsModel, "Email Send successfully");
+  const handler = new RequestHandeler(EmailsModel, EmailData);
+  return handler.Post(req, "Email Send successfully");
 }

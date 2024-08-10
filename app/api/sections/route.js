@@ -1,11 +1,13 @@
 import SectionData from "@/app/cash/SectionData";
 import { SectionModel } from "@/app/models";
-import { handleGetRequest, handlePostRequest } from "@/app/util/apiUtil";
+import RequestHandeler from "@/services/RequestHandeler";
 
 export async function GET() {
-  return handleGetRequest(SectionModel , SectionData);
+  const handler = new RequestHandeler(SectionModel, SectionData);
+  return handler.GetAll();
 }
 
 export async function POST(req) {
-  return handlePostRequest(req, SectionModel, "Section Created successfully");
+  const handler = new RequestHandeler(SectionModel, SectionData);
+  return handler.Post(req, "Section Created successfully");
 }

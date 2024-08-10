@@ -1,13 +1,12 @@
 import SectionData from "@/app/cash/SectionData";
 import { SectionModel } from "@/app/models";
-import { handleGetSingleRequest } from "@/app/util/apiUtil";
-
+import RequestHandeler from "@/services/RequestHandeler";
 import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
   const { id } = params;
-  return handleGetSingleRequest(SectionModel, id , SectionData);
-
+  const handler = new RequestHandeler(SectionModel, SectionData);
+  return handler.Get(id);
 }
 
 export async function PUT(req, { params }) {

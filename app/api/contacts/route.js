@@ -1,11 +1,13 @@
 import ContactsData from "@/app/cash/ContactsData";
 import { ContactsModel } from "@/app/models";
-import { handleGetRequest, handlePostRequest } from "@/app/util/apiUtil";
+import RequestHandeler from "@/services/RequestHandeler";
 
 export async function GET() {
-  return handleGetRequest(ContactsModel, ContactsData);
+  const handler = new RequestHandeler(ContactsModel, ContactsData);
+  return handler.GetAll();
 }
 
 export async function POST(req) {
-  return handlePostRequest(req, ContactsModel, "Message Send successfully");
+  const handler = new RequestHandeler(ContactsModel, ContactsData);
+  return handler.Post(req, "Message Send successfully");
 }

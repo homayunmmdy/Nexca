@@ -1,10 +1,13 @@
-import { handleGetRequest, handlePostRequest } from "@/app/util/apiUtil";
 import CashData from "@/app/cash/CashData";
 import { PostModel } from "@/app/models";
+import RequestHandeler from "@/services/RequestHandeler";
 
 export async function GET() {
-  return handleGetRequest(PostModel, CashData);
+  const handler = new RequestHandeler(PostModel, CashData);
+  return handler.GetAll();
 }
+
 export async function POST(req) {
-  return handlePostRequest(req, PostModel, "Post Created successfully");
+  const handler = new RequestHandeler(PostModel, CashData);
+  return handler.Post(req, "Post Created successfully");
 }

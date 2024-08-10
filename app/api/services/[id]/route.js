@@ -1,12 +1,13 @@
 import ServicesData from "@/app/cash/ServicesData";
 import { ServiceModel } from "@/app/models";
-import { handleGetSingleRequest } from "@/app/util/apiUtil";
-
+import RequestHandeler from "@/services/RequestHandeler";
 import { NextResponse } from "next/server";
+
 
 export async function GET(request, { params }) {
   const { id } = params;
-  return handleGetSingleRequest(ServiceModel, id, ServicesData);
+  const handler = new RequestHandeler(ServiceModel, ServicesData);
+  return handler.Get(id);
 }
 
 export async function PUT(req, { params }) {

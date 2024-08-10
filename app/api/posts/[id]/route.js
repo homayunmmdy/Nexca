@@ -1,12 +1,12 @@
 import CashData from "@/app/cash/CashData";
 import { PostModel } from "@/app/models";
-import { handleGetSingleRequest } from "@/app/util/apiUtil";
+import RequestHandeler from "@/services/RequestHandeler";
 import { NextResponse } from "next/server";
 
 export async function GET(request, { params }) {
   const { id } = params;
-  return handleGetSingleRequest(PostModel, id , CashData);
-
+  const handler = new RequestHandeler(PostModel, CashData);
+  return handler.Get(id);
 }
 
 export async function PUT(req, { params }) {
