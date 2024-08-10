@@ -1,14 +1,8 @@
 import { EmailsModel } from "@/app/models";
-import { NextResponse } from "next/server";
+import RequestHandeler from "@/services/RequestHandeler";
 
 export async function DELETE(req, { params }) {
-  try {
-    const { id } = params;
-
-    await EmailsModel.findByIdAndDelete(id);
-    return NextResponse.json({ message: "Email is Deleted" }, { status: 200 });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
-  }
+  const { id } = params;
+  const handler = new RequestHandeler(EmailsModel);
+  return handler.DELETE(id, "Email Deleted successfully");
 }

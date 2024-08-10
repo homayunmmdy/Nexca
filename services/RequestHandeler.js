@@ -39,7 +39,7 @@ class RequestHandeler {
     try {
       if (process.env.NEXT_PUBLIC_STATUS === "dev") {
         const document = this.Cache.find((doc) => doc._id === id);
-      if (document) {
+        if (document) {
           return NextResponse.json({ document }, { status: 200 });
         }
       } else {
@@ -49,6 +49,22 @@ class RequestHandeler {
         }
         return NextResponse.json({ document }, { status: 200 });
       }
+    } catch (error) {
+      console.error(error);
+      return this.ErrorResponse(err);
+    }
+  }
+
+  async DELETE(id, successMessage) {
+    try {
+      const deleteDocument = await this.Model.findByIdAndDelete(id);
+      if (!deleteDocument) {
+        return NextResponse.json({ message: "Not Found" }, { status: 404 });
+      }
+      return NextResponse.json(
+        { message: successMessage || "Data Delete Successfully" },
+        { status: 200 }
+      );
     } catch (error) {
       console.error(error);
       return this.ErrorResponse(err);

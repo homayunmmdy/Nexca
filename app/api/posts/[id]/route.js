@@ -20,7 +20,10 @@ export async function PUT(req, { params }) {
       ...ticketData,
     });
 
-    return NextResponse.json({ message: "Post Crated Successfully"}, { status: 200 });
+    return NextResponse.json(
+      { message: "Post Crated Successfully" },
+      { status: 200 }
+    );
   } catch (error) {
     console.error(error);
     return NextResponse.json({ message: "Error", error }, { status: 500 });
@@ -28,13 +31,7 @@ export async function PUT(req, { params }) {
 }
 
 export async function DELETE(req, { params }) {
-  try {
-    const { id } = params;
-
-    await PostModel.findByIdAndDelete(id);
-    return NextResponse.json({ message: "Post Delete Successfully" }, { status: 200 });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
-  }
+  const { id } = params;
+  const handler = new RequestHandeler(PostModel);
+  return handler.DELETE(id, "Post Deleted successfully");
 }
