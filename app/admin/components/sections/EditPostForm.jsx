@@ -58,6 +58,12 @@ const EditPostForm = ({ ticket }) => {
       {loading && <span className="absolute loading loading-ring loading-lg"></span>}
       <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-3 w-full md:w-1/2 mb-3">
         <h3 className="text-center font-semibold text-2xl">{EDITMODE ? "Edit Post" : "New Post"}</h3>
+        <div><img
+          src={formData.imgurl}
+          title={formData.title}
+          alt={formData.title}
+          className="w-full rounded-xl border border-indigo-500"
+        /></div>
         <FormField id="imgurl" name="imgurl" label="Image Link" value={formData.imgurl} onChange={handleChange} />
         <FormField id="title" name="title" label="Title" value={formData.title} onChange={handleChange} required />
         <FormField id="description" name="description" type="textarea" label="Lead" value={formData.description} onChange={handleChange} />

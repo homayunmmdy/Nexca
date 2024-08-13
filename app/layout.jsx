@@ -8,7 +8,7 @@ import Loading from "./loading";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: SiteConfig.name,
+  title: SiteConfig.title,
   description: SiteConfig.description,
   keywords: SiteConfig.keywords,
   authors: SiteConfig.authors,
