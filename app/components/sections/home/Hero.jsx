@@ -38,6 +38,7 @@ const Hero = () => {
                                 src="/img/admin.png"
                                 alt="Nexca Admin Panel"
                                 title="Nexca Admin Panel"
+                                blurDataURL="img/admin.png"
                                 placeholder="blur"
                                 layout="responsive"
                                 loading="lazy"

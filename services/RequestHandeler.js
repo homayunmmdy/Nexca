@@ -14,9 +14,9 @@ class RequestHandeler {
         const data = await this.Model.find();
         return NextResponse.json({ data }, { status: 200 });
       }
-    } catch (err) {
-      console.error(err);
-      return this.ErrorResponse(err);
+    } catch (error) {
+      console.error(error);
+      return this.ErrorResponse(error);
     }
   }
 
@@ -29,9 +29,9 @@ class RequestHandeler {
         { message: successMessage || "Data created successfully" },
         { status: 201 }
       );
-    } catch (err) {
-      console.error(err);
-      return this.ErrorResponse(err);
+    } catch (error) {
+      console.error(error);
+      return this.ErrorResponse(error);
     }
   }
 
@@ -51,7 +51,7 @@ class RequestHandeler {
       }
     } catch (error) {
       console.error(error);
-      return this.ErrorResponse(err);
+      return this.ErrorResponse(error);
     }
   }
 
@@ -67,7 +67,7 @@ class RequestHandeler {
       );
     } catch (error) {
       console.error(error);
-      return this.ErrorResponse(err);
+      return this.ErrorResponse(error);
     }
   }
 
