@@ -1,0 +1,1 @@
+export type AllowedColors = "primary" | "secondary" | "accent" | "info" | "success" | "warning" | "error";
