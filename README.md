@@ -1,8 +1,10 @@
 # Nexca
 
-![Screenshot from 2024-07-16 20-45-05](https://github.com/user-attachments/assets/b5f58f29-ef27-4c52-ba59-628eb4fd62e3)
+![353180851-98ac4f61-fb74-49d1-90c1-556db79f0494](https://github.com/user-attachments/assets/9248320b-d279-44c6-a702-92d1f0905db5)
 
-Nexca is a project that provides admin panel for personal project , blogs and small e-commerces. This guide will help you get started with setting up the admin for you project.
+
+Nexca is your go-to platform for creating powerful admin panels. Manage data, share thoughts, and connect with your audience easily, whether you're an agency or an individual looking to build your brand.
+
 
 ## Getting Started
 
