@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components";
 import SiteConfig from "@/config/stie";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,8 +16,8 @@ const Header = () => {
   };
   return (
     <>
-      <header className="bg-base-100">
-        <div className="navbar w-[94%] md:w-[92%] mx-auto ">
+      <header className="fixed top-0 left-0 right-0 navbar bg-base-100 z-[50] transition-all w-[94%] md:w-[92%] mx-auto rounded-xl shadow-xl border-2 border-indigo-400 hover:border-indigo-700 my-2">
+        <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
               <button
@@ -49,11 +50,8 @@ const Header = () => {
                 </svg>
               </button>
             </div>
-            <Link
-              className="btn btn-ghost text-xl bg-gray-200 hover:bg-indigo-700 hover:text-white"
-              href="/"
-            >
-              {SiteConfig.name}
+            <Link href="/">
+              <Button title={SiteConfig.name} color="btn-primary" />
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -93,29 +91,31 @@ const Header = () => {
         </div>
       </header>
       {isOpen && (
-        <ul className="flex gap-4 items-center justify-center flex-col my-3 p-2 shadow lg:hidden bg-inherit">
-          {nav?.map((item) => {
-            return (
-              <li key={`mobile_menu_item_${item.id}`} className="mx-1 w-3/4">
-                {pathname === item.link ? (
-                  <Link
-                    href={item.link}
-                    className="p-2 bg-indigo-700 hover:bg-indigo-700 text-white rounded-xl block w-full text-center"
-                  >
-                    {item.name}
-                  </Link>
-                ) : (
-                  <Link
-                    className="p-2 bg-white rounded-xl block w-full text-center"
-                    href={item.link}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+        <nav className="fixed top-[95px] bg-white rounded-xl shadow-xl mx-auto left-0 right-0 z-[50] w-[94%] md:w-[92%] border-2 border-indigo-700">
+          <ul className="flex gap-4 items-center  flex-col my-3 p-2 shadow lg:hidden bg-inherit">
+            {nav?.map((item) => {
+              return (
+                <li key={`mobile_menu_item_${item.id}`} className="mx-1 w-3/4">
+                  {pathname === item.link ? (
+                    <Link
+                      href={item.link}
+                      className="p-2 bg-indigo-700 hover:bg-indigo-700 text-white rounded-xl block w-full text-center"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <Link
+                      className="p-2 bg-white rounded-xl block w-full text-center"
+                      href={item.link}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+          </nav>
       )}
     </>
   );
