@@ -1,7 +1,7 @@
 'use client'
-import { RecentPosts } from '../components/sections';
-import useCheckLogin from '../hooks/useCheckLogin';
+import useCheckLogin from '@/hooks/useCheckLogin';
 import { Stats } from './components/sections';
+import RecentPosts from './components/sections/RecentPosts';
 
 const Admin = () => {
   useCheckLogin()

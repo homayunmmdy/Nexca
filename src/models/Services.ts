@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-
+//@ts-ignore
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.Promise = global.Promise;
 

@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import SiteConfig from '@/app/config/site';
 import Link from "next/link";
 import NavLink from "./NavLink";
-import { LogoutButton } from "../../elements";
+import SiteConfig from "@/config/stie";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);

@@ -4,7 +4,7 @@ import RequestHandeler from "@/util/handler/RequestHandeler";
 import { NextResponse } from "next/server";
 
 //@ts-ignore
-export async function GET({ params }) {
+export async function GET(req, { params }) {
   const { id } = params;
   const handler = new RequestHandeler(PostModel, CashData);
   return handler.Get(id);

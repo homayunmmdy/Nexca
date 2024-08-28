@@ -1,16 +1,21 @@
 import { NextResponse } from "next/server";
 
 class RequestHandeler {
+  //@ts-ignore
   constructor(Model, Cache) {
+    //@ts-ignore
     this.Model = Model;
+    //@ts-ignore
     this.Cache = Cache;
   }
 
   async GetAll() {
     try {
       if (process.env.NEXT_PUBLIC_STATUS == "dev") {
+        //@ts-ignore
         return NextResponse.json({ data: this.Cache }, { status: 200 });
       } else {
+        //@ts-ignore
         const data = await this.Model.find();
         return NextResponse.json({ data }, { status: 200 });
       }
@@ -19,11 +24,12 @@ class RequestHandeler {
       return this.ErrorResponse(error);
     }
   }
-
+  //@ts-ignore
   async Post(req, successMessage) {
     try {
       const body = await req.json();
       const formData = body.formData;
+      //@ts-ignore
       await this.Model.create(formData);
       return NextResponse.json(
         { message: successMessage || "Data created successfully" },
@@ -34,15 +40,17 @@ class RequestHandeler {
       return this.ErrorResponse(error);
     }
   }
-
+  //@ts-ignore
   async Get(id) {
     try {
       if (process.env.NEXT_PUBLIC_STATUS === "dev") {
+        //@ts-ignore
         const document = this.Cache.find((doc) => doc._id === id);
         if (document) {
           return NextResponse.json({ document }, { status: 200 });
         }
       } else {
+        //@ts-ignore
         const document = await this.Model.findOne({ _id: id });
         if (!document) {
           return NextResponse.json({ message: "Not Found" }, { status: 404 });
@@ -54,9 +62,10 @@ class RequestHandeler {
       return this.ErrorResponse(error);
     }
   }
-
+  //@ts-ignore
   async DELETE(id, successMessage) {
     try {
+      //@ts-ignore
       const deleteDocument = await this.Model.findByIdAndDelete(id);
       if (!deleteDocument) {
         return NextResponse.json({ message: "Not Found" }, { status: 404 });
@@ -70,7 +79,7 @@ class RequestHandeler {
       return this.ErrorResponse(error);
     }
   }
-
+  //@ts-ignore
   ErrorResponse(err) {
     return NextResponse.json({ message: "Error", err }, { status: 500 });
   }

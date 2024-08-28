@@ -1,7 +1,7 @@
 "use client"
-import { Spinner } from "@/app/components/elements";
-import { EMAIL_API_URL } from "@/app/config/apiConstants";
-import useFetch from "@/app/hooks/useFetch";
+import { EMAIL_API_URL } from "@/config/apiConstants";
+import { Spinner } from "@/components";
+import useFetch from "@/hooks/useFetch";
 import { DeleteBlock } from "../components/elements";
 
 
@@ -21,6 +21,7 @@ const EmailsPage = () => {
                 <th>delete</th>
               </tr>
             </thead>
+            {/* @ts-ignore */}
             {emailData?.map((data) => (
               <tbody key={data.id}>
                 <tr>

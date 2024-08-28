@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FormField } from '.';
 
+//@ts-ignore
 const EditForm = ({ data, apiUrl, name }) => {
     const EDITMODE = data._id !== "new";
     const router = useRouter();
@@ -14,6 +15,7 @@ const EditForm = ({ data, apiUrl, name }) => {
     const [formData, setFormData] = useState(startingData);
     const [loading, setLoading] = useState(false);
 
+    //@ts-ignore
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({
@@ -22,6 +24,7 @@ const EditForm = ({ data, apiUrl, name }) => {
         }));
     };
 
+    //@ts-ignore
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -47,7 +50,7 @@ const EditForm = ({ data, apiUrl, name }) => {
         <>
             {loading && (
                 <div className="w-full h-full flex justify-center items-center">
-                    <span class="loading loading-spinner text-primary loading-lg"></span>
+                    <span className="loading loading-spinner text-primary loading-lg"></span>
                 </div>
             )}
             <div className="flex justify-center">

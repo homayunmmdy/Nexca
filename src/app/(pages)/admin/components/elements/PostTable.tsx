@@ -2,9 +2,10 @@ import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
 
+//@ts-ignore
 const PostTable = ({ post }) => {
   return (
-    <tr>
+    <tr key={post.id}>
       <td>
         <div className="flex items-center gap-3">
           <div className="avatar">
@@ -24,7 +25,7 @@ const PostTable = ({ post }) => {
         </Link>
       </td>
       <th>
-        <DeleteBlock path="Posts" id={post._id} />
+        <DeleteBlock path="posts" id={post._id} />
       </th>
     </tr>
   );

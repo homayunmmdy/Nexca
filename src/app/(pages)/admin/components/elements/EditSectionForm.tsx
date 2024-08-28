@@ -1,9 +1,10 @@
 "use client"
-import { SECTIONS_API_URL } from '@/app/config/apiConstants';
+import { SECTIONS_API_URL } from '@/config/apiConstants';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FormField } from '.';
 
+//@ts-ignore
 const EditSectionForm = ({ data }) => {
     const EDITMODE = data._id !== "new";
     const router = useRouter();
@@ -15,6 +16,7 @@ const EditSectionForm = ({ data }) => {
     const [formData, setFormData] = useState(startingData);
     const [loading, setLoading] = useState(false);
 
+    //@ts-ignore
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({
@@ -22,7 +24,7 @@ const EditSectionForm = ({ data }) => {
             [name]: value,
         }));
     };
-
+    //@ts-ignore
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);

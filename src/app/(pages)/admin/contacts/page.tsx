@@ -1,7 +1,7 @@
 "use client"
-import { Spinner } from "@/app/components/elements";
-import { CONTACTS_API_URL } from "@/app/config/apiConstants";
-import useFetch from "@/app/hooks/useFetch";
+import { Spinner } from "@/components";
+import { CONTACTS_API_URL } from "@/config/apiConstants";
+import useFetch from "@/hooks/useFetch";
 import { DeleteBlock } from "../components/elements";
 
 
@@ -23,6 +23,7 @@ const ContactsPage = () => {
                 <th>delete</th>
               </tr>
             </thead>
+            {/* @ts-ignore */}
             {contactData?.map((data) => (
               <tbody key={data.id}>
                 <tr>

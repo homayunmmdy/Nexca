@@ -1,5 +1,5 @@
 import React from 'react'
-
+//@ts-ignore
 const Stat = ({ title, number, icon }) => {
     return (
         <>

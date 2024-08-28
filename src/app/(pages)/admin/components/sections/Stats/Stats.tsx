@@ -1,5 +1,5 @@
 "use client"
-import { CONTACTS_API_URL, POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/app/config/apiConstants";
+import { CONTACTS_API_URL, POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/config/apiConstants";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";

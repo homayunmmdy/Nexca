@@ -1,6 +1,7 @@
+"use client"
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import useCheckLogin from '@/app/hooks/useCheckLogin';
+import useCheckLogin from '@/hooks/useCheckLogin';
 
 const LogoutButton = () => {
   const router = useRouter();

@@ -1,6 +1,6 @@
-import { SERVICES_API_URL } from '@/app/config/apiConstants';
+import { SERVICES_API_URL } from '@/config/apiConstants';
 import { EditForm, EditSectionForm } from '../../components/elements';
-
+{/* @ts-ignore */}
 const getServicesById = async (id) => {
     const API_URL = process.env.API_URL
 
@@ -19,12 +19,13 @@ const getServicesById = async (id) => {
     }
 };
 let updateservicesData = {};
-
+{/* @ts-ignore */}
 const EditServicesPage = async ({ params }) => {
     const EDITMODE = params.id === "new" ? false : true;
 
     if (EDITMODE) {
         updateservicesData = await getServicesById(params.id);
+        {/* @ts-ignore */}
         updateservicesData = updateservicesData.document;
     } else {
         updateservicesData = {

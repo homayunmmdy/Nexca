@@ -4,7 +4,7 @@ import RequestHandeler from "@/util/handler/RequestHandeler";
 import { NextResponse } from "next/server";
 
 //@ts-ignore
-export async function GET({ params }) {
+export async function GET(req,{ params }) {
   const { id } = params;
   const handler = new RequestHandeler(SectionModel, SectionData);
   return handler.Get(id);
@@ -32,7 +32,7 @@ export async function PUT(req, { params }) {
   }
 }
 //@ts-ignore
-export async function DELETE({ params }) {
+export async function DELETE(req,{ params }) {
   const { id } = params;
   const handler = new RequestHandeler(SectionModel, SectionData);
   return handler.DELETE(id, "Section Deleted successfully");

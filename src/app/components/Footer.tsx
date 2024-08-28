@@ -19,7 +19,7 @@ const Footer = () => {
           >
             Privacy Policy
           </Link>
-          <Link title="Admin" className="link link-hover" href="/Admin">
+          <Link title="Admin" className="link link-hover" href="/admin">
             Admin
           </Link>
         </nav>

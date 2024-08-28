@@ -1,5 +1,6 @@
 import React from "react";
 
+//@ts-ignore
 const FormField = ({ id, name, type = "text", label, value, onChange, required = false}) => {
   return (
     <div>
@@ -11,7 +12,8 @@ const FormField = ({ id, name, type = "text", label, value, onChange, required =
           value={value}
           onChange={onChange}
           required={required}
-          rows={type === "body" ? "10" : "5"}
+          //@ts-ignore
+          rows={type === `body` ? 10 : 5}
           className = "textarea textarea-bordered textarea-primary w-full" 
         />
       ) : (

@@ -1,7 +1,7 @@
 "use client";
-import useCheckLogin from "../hooks/useCheckLogin";
+import useCheckLogin from "@/hooks/useCheckLogin";
 import { Sidebar } from "./components/sections";
-
+ {/* @ts-ignore */}
 export default function AdminLayout({ children }) {
   useCheckLogin()
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 
+//@ts-ignore
 const DataForm = ({ formData, handleChange, handleSubmit }) => (
     <form onSubmit={handleSubmit} className="space-y-4 p-4  shadow-md rounded-md">
         <div className="flex gap-3 items-center">

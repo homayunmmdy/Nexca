@@ -1,3 +1,4 @@
+//@ts-ignore
 const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
   const pageNumbers = [];
 

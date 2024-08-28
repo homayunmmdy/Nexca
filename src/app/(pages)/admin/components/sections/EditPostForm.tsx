@@ -1,10 +1,11 @@
 "use client";
-import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/app/config/apiConstants";
-import useFetch from "@/app/hooks/useFetch";
+import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/config/apiConstants";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FormField, SelectField } from "../elements";
+import useFetch from "@/hooks/useFetch";
 
+//@ts-ignore
 const EditPostForm = ({ ticket }) => {
   const EDITMODE = ticket._id !== "new";
   const router = useRouter();
@@ -20,6 +21,7 @@ const EditPostForm = ({ ticket }) => {
   const [formData, setFormData] = useState(startingTicketData);
   const [loading, setLoading] = useState(false);
 
+  //@ts-ignore
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -28,6 +30,7 @@ const EditPostForm = ({ ticket }) => {
     }));
   };
 
+  //@ts-ignore
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);

@@ -1,6 +1,7 @@
-import { POST_API_URL } from "@/app/config/apiConstants";
+import { POST_API_URL } from "@/config/apiConstants";
 import { EditPostForm } from "../../components/sections";
 
+//@ts-ignore
 const getTicketById = async (id) => {
   const API_URL = process.env.API_URL
 
@@ -20,11 +21,13 @@ const getTicketById = async (id) => {
 };
 
 let updateTicketData = {};
+{/* @ts-ignore */}
 const TicketPage = async ({ params }) => {
   const EDITMODE = params.id === "new" ? false : true;
 
   if (EDITMODE) {
     updateTicketData = await getTicketById(params.id);
+    {/* @ts-ignore */}
     updateTicketData = updateTicketData.document;
   } else {
     updateTicketData = {

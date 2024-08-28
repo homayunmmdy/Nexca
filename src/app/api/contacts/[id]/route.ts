@@ -4,7 +4,7 @@ import RequestHandeler from "@/util/handler/RequestHandeler";
 
 
 //@ts-ignore
-export async function DELETE({ params }) {
+export async function DELETE(req,{ params }) {
   const { id } = params;
   const handler = new RequestHandeler(ContactsModel, ContactsData);
   return handler.DELETE(id, "Post Deleted successfully");

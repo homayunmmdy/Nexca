@@ -3,18 +3,22 @@ import { useState, useEffect } from "react";
 import { MdDeleteOutline } from "react-icons/md";
 import { useRouter } from "next/navigation";
 
+//@ts-ignore
 const DeleteBlock = ({ path, id }) => {
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const router = useRouter();
 
   // Handle modal auto close after a specific time (e.g., 10 seconds)
   useEffect(() => {
+    //@ts-ignore
     let timer;
+    //@ts-ignore
     if (isConfirmOpen) {
       timer = setTimeout(() => {
         setIsConfirmOpen(false);
       }, 10000); // Change this duration as needed
     }
+    //@ts-ignore
     return () => clearTimeout(timer);
   }, [isConfirmOpen]);
 

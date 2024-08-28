@@ -1,6 +1,7 @@
-import { TEXTADV_API_URL } from '@/app/config/apiConstants';
+import { TEXTADV_API_URL } from '@/config/apiConstants';
 import EditTextAdvForm from '../../components/elements/EditTextAdvForm';
 
+{/* @ts-ignore */}
 const getTextAdvById = async (id) => {
     const API_URL = process.env.API_URL
 
@@ -19,12 +20,13 @@ const getTextAdvById = async (id) => {
     }
 };
 let updatetextadvData = {};
-
+{/* @ts-ignore */}
 const EditSectionPage = async ({ params }) => {
     const EDITMODE = params.id === "new" ? false : true;
 
     if (EDITMODE) {
         updatetextadvData = await getTextAdvById(params.id);
+        {/* @ts-ignore */}
         updatetextadvData = updatetextadvData.document;
     } else {
         updatetextadvData = {

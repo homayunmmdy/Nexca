@@ -1,6 +1,6 @@
-import { SECTIONS_API_URL } from '@/app/config/apiConstants';
+import { SECTIONS_API_URL } from '@/config/apiConstants';
 import { EditSectionForm } from '../../components/elements';
-
+{/* @ts-ignore */}
 const getSectionById = async (id) => {
     const API_URL = process.env.API_URL
 
@@ -19,12 +19,13 @@ const getSectionById = async (id) => {
     }
 };
 let updatesectionData = {};
-
+{/* @ts-ignore */}
 const EditSectionPage = async ({ params }) => {
     const EDITMODE = params.id === "new" ? false : true;
 
     if (EDITMODE) {
         updatesectionData = await getSectionById(params.id);
+        {/* @ts-ignore */}
         updatesectionData = updatesectionData.document;
     } else {
         updatesectionData = {

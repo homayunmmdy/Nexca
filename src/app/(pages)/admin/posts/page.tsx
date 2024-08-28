@@ -1,10 +1,10 @@
 "use client"
-import { POST_API_URL } from "@/app/config/apiConstants";
-import useFetch from "@/app/hooks/useFetch";
+import { POST_API_URL } from "@/config/apiConstants";
+import useFetch from "@/hooks/useFetch";
 import { useEffect, useState } from "react";
 import { Pagination, PostTable } from "../components/elements";
 import { FiSearch } from "react-icons/fi";
-import { Spinner } from "@/app/components/elements";
+import { Spinner } from "@/components";
 
 const Posts = () => {
   const data = useFetch(POST_API_URL);
@@ -20,15 +20,17 @@ const Posts = () => {
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-
+  //@ts-ignore
   const filteredPosts = posts.filter(post =>
+    //@ts-ignore
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-
+  //@ts-ignore
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  //@ts-ignore
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
     setCurrentPage(1);
@@ -61,7 +63,7 @@ const Posts = () => {
                 </thead>
                 <tbody>
                   {currentPosts.map((Post, _index) => (
-                    <PostTable id={_index} key={_index} post={Post} />
+                    <PostTable post={Post} />
                   ))}
                 </tbody>
               </table>

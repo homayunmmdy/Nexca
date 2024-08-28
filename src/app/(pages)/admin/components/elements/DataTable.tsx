@@ -2,6 +2,7 @@ import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
 import Link from "next/link";
 
+//@ts-ignore
 const DataTable = ({ data, path }) => {
     // Sort data by `secid` in ascending order
     const sortedData = data ? [...data].sort((a, b) => a.secid - b.secid) : [];
