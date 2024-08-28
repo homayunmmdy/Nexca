@@ -1,10 +1,20 @@
 import React from "react";
-import { Hero } from "./components/sections";
+import {
+  Companies,
+  EmailList,
+  FAQs,
+  Hero,
+  Services,
+} from "./components/sections";
 
 const Home: React.FC = () => {
   return (
     <>
       <Hero />
+      <Services />
+      <Companies />
+      <FAQs />
+      <EmailList />
     </>
   );
 };

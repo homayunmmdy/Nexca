@@ -1,4 +1,4 @@
-import { Button } from "@/components";
+import { Button, FullHoverAnimation } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa6";
@@ -19,12 +19,8 @@ const Hero: React.FC = () => {
             {/* Content */}
             <div className="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
               <h1 className="text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900">
-                Build Your{" "}
-                <div className="cursor-pointer relative before:absolute before:bg-indigo-500 before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.35] hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500">
-                  <Link href="/feed" className="relative">
-                    Own Blog Website
-                  </Link>
-                </div>{" "}
+                Build Your
+                <FullHoverAnimation text="Own Blog Website" link="feed" />
                 Right Now
               </h1>
               <p className="mt-8 text-gray-700">

@@ -9,3 +9,8 @@ export type ButtonType = {
   disabled?: boolean;
   onCllick?: () => void;
 };
+
+export type FullHoverAnimationType = {
+  text: string;
+  link?: string;
+};
