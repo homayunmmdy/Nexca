@@ -6,6 +6,7 @@ const SiteConfig = {
   keywords: "Admin panel , Dashboard , Custom panel, Data Ma Data management",
   authors: "Nexca Team",
   siteUrl: `${API_URL}`,
+  email: "homayounmmdy.me@gmail.com",
   lang: "en",
   dir: "ltr",
   nav: [
