@@ -9,6 +9,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "types": ["vitest/globals"],
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
