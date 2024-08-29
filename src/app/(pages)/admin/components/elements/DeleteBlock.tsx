@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { MdDeleteOutline } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components";
 
 //@ts-ignore
 const DeleteBlock = ({ path, id }) => {
@@ -40,45 +41,25 @@ const DeleteBlock = ({ path, id }) => {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setIsConfirmOpen(true)}
-        className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-      >
-        <MdDeleteOutline />
-      </button>
+      <Button title={<MdDeleteOutline />} color="btn-error"
+      style="me-2 mb-2"
+      type="button"
+      onClick={() => setIsConfirmOpen(true)}
+      />
 
       {isConfirmOpen && (
         <div className="fixed z-10 inset-0 overflow-y-auto bg-gray-400 bg-opacity-75 p-4 md:p-8">
           <div className="w-full max-w-sm mx-auto bg-white rounded-lg shadow-md">
             <div className="flex justify-between items-center p-5 border-b border-gray-200">
               <h5 className="text-xl font-medium text-gray-800">Delete</h5>
-              <button
-                type="button"
-                onClick={() => setIsConfirmOpen(false)}
-                className="focus:outline-none"
-              >
-                &times;
-              </button>
+              <Button title="&times;" color="btn-error" type="button" onClick={() => setIsConfirmOpen(false)}/>
             </div>
             <div className="p-3 text-gray-700">
               Are you sure you want to delete this item?
             </div>
             <div className="flex justify-end items-center p-3">
-              <button
-                type="button"
-                onClick={() => setIsConfirmOpen(false)}
-                className="text-gray-500 hover:text-gray-700 focus:outline-none rounded-md border border-gray-200 p-2 mr-2"
-              >
-                Cancel
-              </button>
-              <button
-                type="button"
-                onClick={handleDelete}
-                className="text-white bg-red-500 hover:bg-red-600 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5"
-              >
-                Delete
-              </button>
+              <Button title="Cancel" type="button" color="btn-ghost" style="mr-2" onClick={() => setIsConfirmOpen(false)}/>
+              <Button title="Delete" type="button" color="btn-error" onClick={handleDelete}/>
             </div>
           </div>
         </div>

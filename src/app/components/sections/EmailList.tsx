@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components";
 import { EMAIL_API_URL } from "@/config/apiConstants";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
@@ -59,7 +60,7 @@ const EmailList = () => {
                             <div className="flex flex-col sm:flex-row">
                                 <input value={formData.emails}
                                     onChange={handleChange} type="emails" id="emails" name="emails" placeholder="Enter your email address" required className="flex-1 px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md sm:mr-5 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-                                <button type="submit" className="w-full px-6 py-4 mt-5 text-white text-lg bg-gray-900 rounded-md sm:mt-0 sm:w-auto whitespace-nowrap dark:bg-gray-900"> Subscribe </button>
+                                <Button title="Subscribe" type="submit" style="mt-5 sm:mt-0 " color="btn-primary"/>
                             </div>
                         </form>
                     </div>

@@ -1,6 +1,7 @@
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
 import Link from "next/link";
+import { Button } from "@/components";
 
 //@ts-ignore
 const DataTable = ({ data, path }) => {
@@ -10,7 +11,9 @@ const DataTable = ({ data, path }) => {
     return (
         <div className="overflow-x-auto">
             <div className="w-full flex justify-center">
-                <Link href={`/admin/${path}/new`} className="btn btn-outline btn-primary m-3">New {path}</Link>
+                <Link href={`/admin/${path}/new`} >
+                    <Button title={`New ${path}`} color="btn-error" style="btn-outline m-3"/>
+                </Link>
             </div>
             <table className="table table-zebra my-2">
                 <thead>
@@ -28,7 +31,9 @@ const DataTable = ({ data, path }) => {
                             <td>{item.name}</td>
                             <td>
                                 <Link href={`/admin/${path}/${item._id}`}>
-                                    <CiEdit size={25} />
+                                    <Button title={<CiEdit size={25} />} color="btn-warning"
+                                    style="me-2 mb-2"
+                                    />
                                 </Link>
                             </td>
                             <td>

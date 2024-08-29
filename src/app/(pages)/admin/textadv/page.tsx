@@ -4,7 +4,7 @@ import useFetch from "@/hooks/useFetch";
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from "../components/elements";
-import { Spinner } from "@/components";
+import { Button, Spinner } from "@/components";
 
 const AdminTextAdvPage = () => {
   const { data: sections, loading } = useFetch(TEXTADV_API_URL);
@@ -20,9 +20,8 @@ const AdminTextAdvPage = () => {
         <div className="w-full flex justify-center">
           <Link
             href={`/admin/textadv/new`}
-            className="btn btn-outline btn-primary m-3"
           >
-            New textadv
+            <Button title="New textadv" color="btn-primary" style="btn-outline m-3"/>
           </Link>
         </div>
         <table className="table table-zebra my-2">

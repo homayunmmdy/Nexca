@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Circles from "./components/Circle";
+import { Button } from "@/components";
 
 const ContactsPage = () => {
   const [formData, setFormData] = useState({
@@ -89,12 +90,7 @@ const ContactsPage = () => {
                     ></textarea>
                   </div>
                   <div>
-                    <button
-                      type="submit"
-                      className="w-full bg-indigo-500 p-3 text-white transition border rounded border-indigo-500  hover:bg-opacity-90"
-                    >
-                      Send
-                    </button>
+                    <Button title="send" type="submit" color="btn-primary" style="p-3 w-full"/>
                   </div>
                 </form>
                 <div>

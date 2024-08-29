@@ -20,35 +20,37 @@ const Header = () => {
         <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
-              <button
-                aria-label="close and open menu"
-                className="btn btn-ghost lg:hidden"
-              >
-                <svg
-                  onClick={toggleMenu}
-                  className="h-6 w-6 lg:hidden"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  {isOpen ? (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16m-7 6h7"
-                    />
-                  )}
-                </svg>
-              </button>
+              <Button
+                title={
+                  <svg
+                    onClick={toggleMenu}
+                    className="h-6 w-6 lg:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    {isOpen ? (
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    ) : (
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16m-7 6h7"
+                      />
+                    )}
+                  </svg>
+                }
+                color="btn-ghost"
+                style="lg:hidden"
+                ariaLabel="close and open menu"
+              />
             </div>
             <Link href="/">
               <Button title={SiteConfig.name} color="btn-primary" />
@@ -80,12 +82,12 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <Link
-              className="isomorphic-link isomorphic-link--internal inline-flex items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-150"
-              href="/https://github.com/homayunmmdy/Nexca"
-            >
-              GitHub
-              <FaGithub color="white" size={20} />
+            <Link href="/https://github.com/homayunmmdy/Nexca">
+              <Button
+                title="GitHub"
+                color="btn-neutral"
+                icon={<FaGithub color="white" size={20} />}
+              />
             </Link>
           </div>
         </div>
@@ -115,7 +117,7 @@ const Header = () => {
               );
             })}
           </ul>
-          </nav>
+        </nav>
       )}
     </>
   );

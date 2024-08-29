@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
+import { Button } from "@/components";
 
 //@ts-ignore
 const PostTable = ({ post }) => {
@@ -21,7 +22,7 @@ const PostTable = ({ post }) => {
       <td className="hidden lg:block">{post.description.slice(0,60)}</td>
       <td>
         <Link href={`/admin/post/${post._id}`}>
-          <CiEdit size={25} />
+          <Button title={<CiEdit size={25} />} color="btn-warning" style="me-2 mb-2"/>
         </Link>
       </td>
       <th>

@@ -1,7 +1,8 @@
-"use client"
-import React from 'react';
-import { useRouter } from 'next/navigation';
-import useCheckLogin from '@/hooks/useCheckLogin';
+"use client";
+import React from "react";
+import { useRouter } from "next/navigation";
+import useCheckLogin from "@/hooks/useCheckLogin";
+import { Button } from "@/components";
 
 const LogoutButton = () => {
   const router = useRouter();
@@ -9,13 +10,20 @@ const LogoutButton = () => {
   useCheckLogin();
 
   const handleLogout = () => {
-    localStorage.removeItem('authenticated');
-    router.push('/');
-  }
+    localStorage.removeItem("authenticated");
+    router.push("/");
+  };
 
   return (
-    <button className='btn btn-error w-full' onClick={handleLogout}>Logout</button>
+    <>
+      <Button
+        title="Logout"
+        color="btn-error"
+        onClick={handleLogout}
+        style="w-full"
+      />
+    </>
   );
-}
+};
 
 export default LogoutButton;

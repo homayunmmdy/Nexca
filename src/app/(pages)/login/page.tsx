@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Toast from "./components/Toast";
+import { Button } from "@/components";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -73,14 +74,7 @@ const Login = () => {
                       className="border p-3 shadow-md dark:bg-indigo-700 dark:text-gray-300  dark:border-gray-700 placeholder:text-base focus:scale-105 ease-in-out duration-300 border-gray-300 rounded-lg w-full"
                     />
                   </div>
-
-                  <button
-                    className="bg-gradient-to-r dark:text-gray-300 from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
-                    type="submit"
-                    onClick={handleLogin}
-                  >
-                    LOG IN
-                  </button>
+                  <Button title="LOG IN" type="submit" color="btn-primary" style="w-full mt-6 text-white" onClick={handleLogin} />
                 </form>
 
                 <div className="text-gray-500 flex text-center flex-col mt-4 items-center text-sm">
