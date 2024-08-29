@@ -8,7 +8,7 @@ import { FaPlay } from "react-icons/fa";
 import { FaStop } from "react-icons/fa6";
 import FormatTime from "../components/FormatTime";
 import { Button } from "@/components";
-
+import Image from "next/image";
 
 const Post = () => {
   //@ts-ignore
@@ -41,7 +41,7 @@ const Post = () => {
         <div className="bg-white py-8">
           <div className="w-[94%] md:w-[92%] mx-auto flex flex-col md:flex-row gap-8">
             <div className="w-full md:w-3/4 ">
-              <img
+              <Image
                 className="w-full py-3 aspect-video rounded-3xl"
                 //@ts-ignore
                 src={post.imgurl}
@@ -49,6 +49,8 @@ const Post = () => {
                 title={post.title}
                 //@ts-ignore
                 alt={post.title}
+                width={662.172}
+                height={372.469}
                 loading="lazy"
               />
               <div className="flex gap-3 items-center justify-between px-3">

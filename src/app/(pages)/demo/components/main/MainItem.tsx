@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 //@ts-ignore
@@ -11,7 +12,7 @@ const MainItem = ({ post }) => {
             href={`/posts/${post._id}`}
             title={post.title}
           >
-            <img
+            <Image
               src={post.imgurl}
               alt={post.title}
               title={post.title}

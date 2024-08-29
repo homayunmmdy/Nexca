@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
                 loading="lazy"
                 width={1200}
                 height={800}
-                className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
+                className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96 bg-slate-400"
               />
             </div>
           </div>

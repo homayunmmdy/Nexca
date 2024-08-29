@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FormField, SelectField } from "../elements";
 import useFetch from "@/hooks/useFetch";
+import Image from "next/image";
 
 //@ts-ignore
 const EditPostForm = ({ ticket }) => {
@@ -61,11 +62,13 @@ const EditPostForm = ({ ticket }) => {
       {loading && <span className="absolute loading loading-ring loading-lg"></span>}
       <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-3 w-full md:w-1/2 mb-3">
         <h3 className="text-center font-semibold text-2xl">{EDITMODE ? "Edit Post" : "New Post"}</h3>
-        <div><img
+        <div><Image
           src={formData.imgurl}
           title={formData.title}
           alt={formData.title}
-          className="w-full rounded-xl border border-indigo-500"
+          height={390.938}
+          width={695}
+          className="w-full rounded-xl border border-indigo-500 aspect-video"
         /></div>
         <FormField id="imgurl" name="imgurl" label="Image Link" value={formData.imgurl} onChange={handleChange} />
         <FormField id="title" name="title" label="Title" value={formData.title} onChange={handleChange} required />
