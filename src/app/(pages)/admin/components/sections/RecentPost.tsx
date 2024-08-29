@@ -6,7 +6,7 @@ const RecentPost = ({ post }) => {
     return (
         <>
             <li className="relative flex flex-col sm:flex-row xl:flex-col items-start">
-                <Link href={`/Posts/${post._id}`}>
+                <Link href={`/posts/${post._id}`}>
                     <img
                         src={post.imgurl}
                         alt={post.title}
