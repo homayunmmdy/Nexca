@@ -1,7 +1,8 @@
 "use client"
-import useGetSection from "@/hooks/useGetSection";
-import MainItem from "./MainItem";
 import { POST_API_URL } from "@/config/apiConstants";
+import useGetSection from "@/hooks/useGetSection";
+import { PostsCashType } from "@/types/entities";
+import MainItem from "./MainItem";
 import MainSkeleton from "./MainSkeleton";
 
 const MainSec = () => {
@@ -13,8 +14,7 @@ const MainSec = () => {
 
   return (
     <div className="grid grid-cols-12 gap-6">
-      {/* @ts-ignore */}
-      {data?.map((item) => (
+      {data?.map((item: PostsCashType) => (
         <MainItem post={item} key={item._id}  />
       ))}
     </div>

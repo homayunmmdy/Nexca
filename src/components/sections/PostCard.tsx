@@ -10,14 +10,14 @@ const PostCard = ({ post }) => {
           <figure className="px-5 pt-5">
             <Image
               src={post.imgurl}
-              alt={post.title}
+              alt={post.title.slice(0,70)}
               width={662.172}
               height={372.469}
               className="rounded-xl aspect-video bg-gray-600 object-cover"
             />
           </figure>
           <div className="card-body items-center text-center p-5">
-            <h2 className="card-title text-slate-950	">{post.title.slice(0, 100)}</h2>
+            <h2 className="card-title text-slate-950	">{post.title.slice(0,70).slice(0, 100)}</h2>
             <p className="text-slate-950	">{post.description.slice(0, 60)}</p>
           </div>
           </Link>
