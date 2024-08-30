@@ -1,11 +1,10 @@
-import CashData from "@/cash/CashData";
 import TextAdvCash from "@/cash/TextAdvCash";
 import { TextAdvModel } from "@/models";
 import RequestHandeler from "@/util/handler/RequestHandeler";
 import { NextResponse } from "next/server";
 
 //@ts-ignore
-export async function GET(req,{ params }) {
+export async function GET(req, { params }) {
   const { id } = params;
   const handler = new RequestHandeler(TextAdvModel, TextAdvCash);
   return handler.Get(id);
@@ -36,6 +35,6 @@ export async function PUT(req, { params }) {
 //@ts-ignore
 export async function DELETE(req, { params }) {
   const { id } = params;
-  const handler = new RequestHandeler(TextAdvModel,CashData);
+  const handler = new RequestHandeler(TextAdvModel, TextAdvCash);
   return handler.DELETE(id, "Ads Deleted successfully");
 }

@@ -26,7 +26,20 @@ export type InputType = {
   type: AllowedInputType;
   placeholder?: string;
   onChange?: (e: any) => void;
-  required?: boolean; 
+  required?: boolean;
   icon?: JSX.Element;
-  defaultChecked? : boolean;
+  defaultChecked?: boolean;
+};
+
+export type PostsCashType = {
+  _id: string;
+  title: string;
+  imgurl: string;
+  description: string;
+  service: string;
+  section: string;
+  body: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
 };
