@@ -12,7 +12,7 @@ const SubNavbar = () => {
     <>
       <div className="navbar w-[94%] md:w-[92%] mx-auto ">
         <div className="navbar-start">
-          <div className="navbar-center hidden lg:flex">
+          <div className="navbar-center lg:flex">
             <ul className="menu menu-horizontal px-1">
               {/* @ts-ignore */}
               {services?.map((item) => {

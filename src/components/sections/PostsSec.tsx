@@ -15,7 +15,7 @@ const PostsSec = () => {
   return (
     <>
       <div className="mx-auto py-6">
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
           {data?.map((post: PostsCashType) => (
             <PostCard key={post._id} post={post} />
           ))}

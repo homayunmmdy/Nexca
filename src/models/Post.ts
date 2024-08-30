@@ -9,7 +9,7 @@ const postSchema = new Schema(
     imgurl: String,
     description: String,
     section: String,
-    service: String,
+    services: String,
     body: String,
   },
   {

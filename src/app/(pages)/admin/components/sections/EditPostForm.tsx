@@ -16,7 +16,7 @@ const EditPostForm = ({ ticket }) => {
     description: EDITMODE ? ticket.description : "",
     body: EDITMODE ? ticket.body : "",
     section: EDITMODE ? ticket.section : "1",
-    service: EDITMODE ? ticket.service : "1",
+    services: EDITMODE ? ticket.services : "1",
     imgurl: EDITMODE ? ticket.imgurl : "",
   };
 
@@ -55,7 +55,7 @@ const EditPostForm = ({ ticket }) => {
     router.push("/admin/posts");
   };
 
-  const { data: service } = useFetch(SERVICES_API_URL);
+  const { data: services } = useFetch(SERVICES_API_URL);
   const { data: sections } = useFetch(SECTIONS_API_URL);
 
   return (
@@ -75,7 +75,7 @@ const EditPostForm = ({ ticket }) => {
         <FormField id="title" name="title" label="Title" value={formData.title} onChange={handleChange} required />
         <FormField id="description" name="description" type="textarea" label="Lead" value={formData.description} onChange={handleChange} />
         <FormField id="body" name="body" type="textarea" label="Body" value={formData.body} onChange={handleChange} required />
-        {service && <SelectField id="service" name="service" label="Service" value={formData.service} onChange={handleChange} options={service} />}
+        {services && <SelectField id="services" name="services" label="Services" value={formData.services} onChange={handleChange} options={services} />}
         {sections && <SelectField id="section" name="section" label="Section" value={formData.section} onChange={handleChange} options={sections} />}
         <Input  type="submit" style='btn btn-active btn-primary' value={EDITMODE ? "Save" : "Post"}/>
       </form>

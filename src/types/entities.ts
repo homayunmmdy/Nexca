@@ -36,7 +36,7 @@ export type PostsCashType = {
   title: string;
   imgurl: string;
   description: string;
-  service: string;
+  services: string;
   section: string;
   body: string;
   createdAt: string;
