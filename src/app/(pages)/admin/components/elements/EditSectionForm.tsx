@@ -3,6 +3,7 @@ import { SECTIONS_API_URL } from '@/config/apiConstants';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FormField } from '.';
+import { Input } from '@/components';
 
 //@ts-ignore
 const EditSectionForm = ({ data }) => {
@@ -54,7 +55,7 @@ const EditSectionForm = ({ data }) => {
                     <h3 className="text-center font-semibold text-2xl">{EDITMODE ? "Edit Section" : "New Section"}</h3>
                     <FormField id="name" name="name" label="Name" value={formData.name} onChange={handleChange} />
                     <FormField id="secid" type='number' name="secid" label="secid" value={formData.secid} onChange={handleChange} required />
-                    <input type="submit" className="btn btn-active btn-primary" value={EDITMODE ? "Save" : "Post"} />
+                    <Input type="submit" style='btn btn-active btn-primary' value={EDITMODE ? "Save" : "Post"}/>
                 </form>
             </div>
         </>

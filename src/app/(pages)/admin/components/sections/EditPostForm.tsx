@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FormField, SelectField } from "../elements";
 import useFetch from "@/hooks/useFetch";
 import Image from "next/image";
+import { Input } from "@/components";
 
 //@ts-ignore
 const EditPostForm = ({ ticket }) => {
@@ -76,7 +77,7 @@ const EditPostForm = ({ ticket }) => {
         <FormField id="body" name="body" type="textarea" label="Body" value={formData.body} onChange={handleChange} required />
         {service && <SelectField id="service" name="service" label="Service" value={formData.service} onChange={handleChange} options={service} />}
         {sections && <SelectField id="section" name="section" label="Section" value={formData.section} onChange={handleChange} options={sections} />}
-        <input type="submit" className="btn btn-active btn-primary" value={EDITMODE ? "Save" : "Post"} />
+        <Input  type="submit" style='btn btn-active btn-primary' value={EDITMODE ? "Save" : "Post"}/>
       </form>
     </div>
   );

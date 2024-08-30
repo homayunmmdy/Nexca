@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Toast from "./components/Toast";
-import { Button } from "@/components";
+import { Button, Input } from "@/components";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -49,13 +49,13 @@ const Login = () => {
                     >
                       Username
                     </label>
-                    <input
-                      type="text"
-                      name="username"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                      className="border p-3 dark:bg-indigo-700 dark:text-gray-300  dark:border-gray-700 shadow-md placeholder:text-base focus:scale-105 ease-in-out duration-300 border-gray-300 rounded-lg w-full"
-                      required
+                    <Input 
+                     type="text"
+                     name="username"
+                     value={username}
+                     onChange={(e) => setUsername(e.target.value)}
+                     style="p-3 focus:scale-105 ease-in-out duration-300 rounded-lg w-full"
+                     required={true}
                     />
                   </div>
                   <div>
@@ -65,13 +65,13 @@ const Login = () => {
                     >
                       Password
                     </label>
-                    <input
+                    <Input
                       type="password"
                       name="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      required
-                      className="border p-3 shadow-md dark:bg-indigo-700 dark:text-gray-300  dark:border-gray-700 placeholder:text-base focus:scale-105 ease-in-out duration-300 border-gray-300 rounded-lg w-full"
+                      required={true}
+                      style="p-3 focus:scale-105 ease-in-out duration-300 rounded-lg w-full"
                     />
                   </div>
                   <Button title="LOG IN" type="submit" color="btn-primary" style="w-full mt-6 text-white" onClick={handleLogin} />

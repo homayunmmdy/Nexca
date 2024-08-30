@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FormField } from '.';
 import { TEXTADV_API_URL } from '@/config/apiConstants';
+import { Input } from '@/components';
 
 //@ts-ignore
 const EditTextAdvForm = ({ data }) => {
@@ -58,7 +59,7 @@ const EditTextAdvForm = ({ data }) => {
                     <FormField id="advname" name="advname" label="advname" value={formData.advname} onChange={handleChange} required/>
                     <FormField id="body" name="body" label="body" value={formData.body} onChange={handleChange} required/>
                     <FormField id="link" name="link" label="link" value={formData.link} onChange={handleChange} required/>
-                    <input type="submit" className="btn btn-active btn-primary" value={EDITMODE ? "Save" : "Post"} />
+                    <Input type="submit" style='btn btn-active btn-primary' value={EDITMODE ? "Save" : "Post"}/>
                 </form>
             </div>
         </>

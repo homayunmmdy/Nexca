@@ -1,3 +1,4 @@
+import { Input } from "@/components";
 import React from "react";
 
 const FQAs: React.FC = () => {
@@ -18,11 +19,11 @@ const FQAs: React.FC = () => {
               <div className="flex flex-wrap -m-3">
                 <div className="join join-vertical w-full my-10">
                   <div className="collapse collapse-arrow join-item border border-base-300">
-                    <input
+                    <Input
                       id="nexca-question-1"
                       type="radio"
                       name="my-accordion-4"
-                      defaultChecked
+                      defaultChecked={true}
                     />
                     <label
                       htmlFor="nexca-question-1"
@@ -37,10 +38,10 @@ const FQAs: React.FC = () => {
                     </div>
                   </div>
                   <div className="collapse collapse-arrow join-item border border-base-300">
-                    <input
-                      id="nexca-question-2"
-                      type="radio"
-                      name="my-accordion-4"
+                    <Input 
+                     id="nexca-question-2"
+                     type="radio"
+                     name="my-accordion-4"
                     />
                     <label
                       htmlFor="nexca-question-2"
@@ -55,7 +56,7 @@ const FQAs: React.FC = () => {
                     </div>
                   </div>
                   <div className="collapse collapse-arrow join-item border border-base-300">
-                    <input
+                    <Input
                       id="nexca-question-3"
                       type="radio"
                       name="my-accordion-4"
@@ -78,7 +79,7 @@ const FQAs: React.FC = () => {
                   </div>
 
                   <div className="collapse collapse-arrow join-item border border-base-300">
-                    <input
+                    <Input
                       id="nexca-question-4"
                       type="radio"
                       name="my-accordion-4"
@@ -100,7 +101,7 @@ const FQAs: React.FC = () => {
                     </div>
                   </div>
                   <div className="collapse collapse-arrow join-item border border-base-300">
-                    <input
+                    <Input
                       id="nexca-question-5"
                       type="radio"
                       name="my-accordion-4"

@@ -1,3 +1,4 @@
+import { Input } from "@/components";
 import React from "react";
 
 //@ts-ignore
@@ -17,15 +18,18 @@ const FormField = ({ id, name, type = "text", label, value, onChange, required =
           className = "textarea textarea-bordered textarea-primary w-full" 
         />
       ) : (
-        <input
-          id={id}
-          name={name}
-          type={type}
-          value={value}
-          onChange={onChange}
-          required={required}
-          className = "input input-bordered input-primary w-full" 
+        <>
+        <Input 
+        id={id}
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        required={required}
+        color="input-primary"
+        style="w-full"
         />
+        </>
       )}
     </div>
   );

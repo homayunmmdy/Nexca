@@ -5,7 +5,9 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Circles from "./components/Circle";
-import { Button } from "@/components";
+import { Button, Input } from "@/components";
+import { FaUser } from "react-icons/fa";
+import { TfiEmail } from "react-icons/tfi";
 
 const ContactsPage = () => {
   const [formData, setFormData] = useState({
@@ -57,25 +59,27 @@ const ContactsPage = () => {
               <div className="relative p-8  rounded-lg shadow-2xl  sm:p-12">
                 <form onSubmit={handleSubmit}>
                   <div className="mb-6">
-                    <input
+                    <Input
                       type="text"
                       name="name"
                       placeholder="Name"
                       value={formData.name}
                       onChange={handleChange}
-                      required
-                      className="border-stroke focus:border-indigo-500 w-full rounded border py-3 px-[14px] text-base outline-none"
+                      required={true}
+                      style="w-full"
+                      icon={<FaUser />}
                     />
                   </div>
                   <div className="mb-6">
-                    <input
+                    <Input
                       type="email"
                       name="email"
                       placeholder="Email Address"
                       value={formData.email}
                       onChange={handleChange}
-                      required
-                      className="border-stroke focus:border-indigo-500 w-full rounded border py-3 px-[14px] text-base outline-none"
+                      required={true}
+                      style="w-full"
+                      icon={<TfiEmail />}
                     />
                   </div>
                   <div className="mb-6">
@@ -90,7 +94,12 @@ const ContactsPage = () => {
                     ></textarea>
                   </div>
                   <div>
-                    <Button title="send" type="submit" color="btn-primary" style="p-3 w-full"/>
+                    <Button
+                      title="send"
+                      type="submit"
+                      color="btn-primary"
+                      style="p-3 w-full"
+                    />
                   </div>
                 </form>
                 <div>
