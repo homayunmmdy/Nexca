@@ -15,7 +15,7 @@ const ServicesPage = () => {
     //@ts-ignore
     const filteredData = posts?.filter((item: PostsCashType) => item.services == id);
     if (loading) {
-        return <PostsSkeleton />
+        return <div className="mx-auto p-10"><PostsSkeleton /></div>
     }
     return (
         <>
