@@ -2,7 +2,7 @@
 import { POST_API_URL } from "@/config/apiConstants";
 import useFetch from "@/hooks/useFetch";
 import { usePathname } from "next/navigation";
-import { SubNavbar } from "../../demo/components";
+import  SubNavbar  from "../../demo/components/SubNavbar";
 import PostsSkeleton from "@/components/sections/PostsSkeleton";
 import PostCard from "@/components/sections/PostCard";
 import { PostsCashType } from "@/types/entities";

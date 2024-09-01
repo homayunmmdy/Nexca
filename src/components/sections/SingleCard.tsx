@@ -3,6 +3,7 @@ import { POST_API_URL } from "@/config/apiConstants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/entities";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../Button";
 import SingleCardSkeleton from "./SingleCardSkeleton";
 
@@ -16,7 +17,8 @@ const SingleCard = () => {
   return (
     <>
       {data?.map((post: PostsCashType) => (
-        <div
+        <Link
+          href={`/posts/${post._id}`}
           key={post._id}
           className="card lg:card-side bg-base-100 shadow-xl my-5"
         >
@@ -35,7 +37,7 @@ const SingleCard = () => {
               <Button title="Read Now" color="btn-primary" />
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </>
   );

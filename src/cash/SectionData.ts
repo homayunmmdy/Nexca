@@ -23,6 +23,14 @@ const SectionData = [
     updatedAt: "2024-05-22T08:39:50.781Z",
     __v: 0,
   },
+  {
+    _id: "664daf56373932f6a08928b4",
+    name: "Vertical Posts",
+    secid: 4,
+    createdAt: "2024-05-22T08:39:50.781Z",
+    updatedAt: "2024-05-22T08:39:50.781Z",
+    __v: 0,
+  },
 ];
 
 export default SectionData;

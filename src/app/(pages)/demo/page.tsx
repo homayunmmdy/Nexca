@@ -1,6 +1,6 @@
 import React from "react";
-import { SubNavbar } from "./components";
-import { MainSec, PostsSec, SingleCard } from "@/components";
+import { MainSec, PostsSec, SingleCard, VerticalPostsSec  } from "@/components";
+import SubNavbar from "./components/SubNavbar";
 
 const DemoPage = () => {
   return (
@@ -10,6 +10,7 @@ const DemoPage = () => {
         <MainSec />
         <PostsSec />
         <SingleCard />
+        <VerticalPostsSec />
       </div>
     </>
   );
