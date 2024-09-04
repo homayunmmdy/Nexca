@@ -1,7 +1,7 @@
 const ServicesData = [
   {
     _id: "664dab349ddca5e2184ff317",
-    name: "Business",
+    name: "Home",
     secid: 1,
     createdAt: "2024-05-22T08:22:12.196Z",
     updatedAt: "2024-05-22T08:22:12.196Z",
@@ -9,7 +9,7 @@ const ServicesData = [
   },
   {
     _id: "664dab45ab3af5ae5e7a3885",
-    name: "AI",
+    name: "Sport",
     secid: 2,
     createdAt: "2024-05-22T08:22:29.121Z",
     updatedAt: "2024-05-22T08:22:29.121Z",
@@ -17,7 +17,7 @@ const ServicesData = [
   },
   {
     _id: "664dab55ab3af5ae5e7a3888",
-    name: "You",
+    name: "Business",
     secid: 3,
     createdAt: "2024-05-22T08:22:45.326Z",
     updatedAt: "2024-05-22T08:22:45.326Z",
