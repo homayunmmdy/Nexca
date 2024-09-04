@@ -1,14 +1,14 @@
 import EmailData from "@/cash/EmailData";
 import { EmailsModel } from "@/models";
-import RequestHandeler from "@/util/handler/RequestHandeler";
+import RequestHandler from "@/util/handler/RequestHandler";
 
 export async function GET() {
-  const handler = new RequestHandeler(EmailsModel, EmailData);
+  const handler = new RequestHandler(EmailsModel, EmailData);
   return handler.GetAll();
 }
 
 //@ts-ignore
 export async function POST(req) {
-  const handler = new RequestHandeler(EmailsModel, EmailData);
+  const handler = new RequestHandler(EmailsModel, EmailData);
   return handler.Post(req, "Email Send successfully");
 }

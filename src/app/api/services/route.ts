@@ -1,15 +1,14 @@
 import ServicesData from "@/cash/ServicesData";
 import { ServiceModel } from "@/models";
-import RequestHandeler from "@/util/handler/RequestHandeler";
-
+import RequestHandler from "@/util/handler/RequestHandler";
 
 export async function GET() {
-  const handler = new RequestHandeler(ServiceModel , ServicesData);
+  const handler = new RequestHandler(ServiceModel, ServicesData);
   return handler.GetAll();
 }
 
 //@ts-ignore
 export async function POST(req) {
-  const handler = new RequestHandeler(ServiceModel , ServicesData);
+  const handler = new RequestHandler(ServiceModel, ServicesData);
   return handler.Post(req, "Service Created successfully");
 }

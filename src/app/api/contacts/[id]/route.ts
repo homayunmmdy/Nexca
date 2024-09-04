@@ -1,11 +1,10 @@
 import ContactsData from "@/cash/ContactsData";
 import { ContactsModel } from "@/models";
-import RequestHandeler from "@/util/handler/RequestHandeler";
-
+import RequestHandler from "@/util/handler/RequestHandler";
 
 //@ts-ignore
-export async function DELETE(req,{ params }) {
+export async function DELETE(req, { params }) {
   const { id } = params;
-  const handler = new RequestHandeler(ContactsModel, ContactsData);
+  const handler = new RequestHandler(ContactsModel, ContactsData);
   return handler.DELETE(id, "Post Deleted successfully");
 }

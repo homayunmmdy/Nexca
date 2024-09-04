@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-class RequestHandeler {
+class RequestHandler {
   //@ts-ignore
   constructor(Model, Cache) {
     //@ts-ignore
@@ -64,17 +64,16 @@ class RequestHandeler {
   }
 
   //@ts-ignore
-  async PUT(id,req, successMessage) {
+  async PUT(id, req, successMessage) {
     try {
-  
       const body = await req.json();
       const Data = body.formData;
-  
+
       //@ts-ignore
       const updateData = await this.Model.findByIdAndUpdate(id, {
         ...Data,
       });
-  
+
       return NextResponse.json(
         { message: successMessage || "Data Update Successfully" },
         { status: 200 }
@@ -108,4 +107,4 @@ class RequestHandeler {
   }
 }
 
-export default RequestHandeler;
+export default RequestHandler;
