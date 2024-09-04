@@ -1,7 +1,6 @@
 import PostsCash from "@/cash/PostsCash";
 import { PostModel } from "@/models";
 import RequestHandeler from "@/util/handler/RequestHandeler";
-import { NextResponse } from "next/server";
 
 //@ts-ignore
 export async function GET(req, { params }) {
@@ -12,24 +11,9 @@ export async function GET(req, { params }) {
 
 //@ts-ignore
 export async function PUT(req, { params }) {
-  try {
-    const { id } = params;
-
-    const body = await req.json();
-    const ticketData = body.formData;
-
-    const updateTicketData = await PostModel.findByIdAndUpdate(id, {
-      ...ticketData,
-    });
-
-    return NextResponse.json(
-      { message: "Post Crated Successfully" },
-      { status: 200 }
-    );
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
-  }
+  const { id } = params;
+  const handler = new RequestHandeler(PostModel, PostsCash);
+  return handler.PUT(id, req, "Post Update Successfully");
 }
 
 //@ts-ignore

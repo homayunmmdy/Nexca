@@ -62,6 +62,29 @@ class RequestHandeler {
       return this.ErrorResponse(error);
     }
   }
+
+  //@ts-ignore
+  async PUT(id,req, successMessage) {
+    try {
+  
+      const body = await req.json();
+      const Data = body.formData;
+  
+      //@ts-ignore
+      const updateData = await this.Model.findByIdAndUpdate(id, {
+        ...Data,
+      });
+  
+      return NextResponse.json(
+        { message: successMessage || "Data Update Successfully" },
+        { status: 200 }
+      );
+    } catch (error) {
+      console.error(error);
+      return NextResponse.json({ message: "Error", error }, { status: 500 });
+    }
+  }
+
   //@ts-ignore
   async DELETE(id, successMessage) {
     try {
