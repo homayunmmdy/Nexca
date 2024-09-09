@@ -13,7 +13,7 @@ const MainSec = () => {
 }
 
   return (
-    <div className="grid grid-cols-12 gap-6">
+    <div className="grid grid-cols-12 md:gap-9">
       {data?.map((item: PostsCashType) => (
         <MainItem post={item} key={item._id}  />
       ))}
