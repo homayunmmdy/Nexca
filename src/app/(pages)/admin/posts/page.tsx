@@ -7,7 +7,7 @@ import { FiSearch } from "react-icons/fi";
 import { Input, Spinner } from "@/components";
 
 const Posts = () => {
-  const data = useFetch(POST_API_URL);
+  const data = useFetch("all_posts",POST_API_URL);
 
   const [posts, setPosts] = useState(data?.data || []);
   const [currentPage, setCurrentPage] = useState(1);
@@ -65,6 +65,7 @@ const Posts = () => {
                   </tr>
                 </thead>
                 <tbody>
+                  {/* @ts-ignore */}
                   {currentPosts.map((Post, _index) => (
                     <PostTable post={Post} />
                   ))}

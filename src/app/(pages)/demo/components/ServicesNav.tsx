@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const ServicesNav = () => {
-  const { data: services, loading } = useFetch(SERVICES_API_URL);
+  const { data: services, loading } = useFetch("services",SERVICES_API_URL);
   const pathname = usePathname();
 
   if (loading) {

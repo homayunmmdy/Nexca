@@ -5,7 +5,7 @@ import useFetch from "@/hooks/useFetch";
 import { DataTable } from "../components/elements";
 
 const AdminSectionPage = () => {
-  const { data: sections , loading} = useFetch(`${SECTIONS_API_URL}`);
+  const { data: sections , loading} = useFetch("sections",SECTIONS_API_URL);
   if (loading) {
     return <Spinner />
   }

@@ -1,29 +1,20 @@
-"use client"
-import { useState, useEffect } from "react";
+"use client";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const useFetch = (url: string) => {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+const useFetch = (queryKey: string, url: string) => {
+  const {
+    data: mainData,
+    isLoading: loading,
+    error,
+  } = useQuery({
+    queryKey: [queryKey],
+    queryFn: () => axios.get(url).then((res) => res.data),
+  });
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(url);
-                setData(response.data.data);
-            } catch (err) {
-                //@ts-ignore
-                setError(err);
-            } finally {
-                setLoading(false);
-            }
-        };
+  const data = mainData?.data
 
-        fetchData();
-    }, [url]);
-
-    return { data, loading, error };
+  return { data, loading, error };
 };
 
 export default useFetch;

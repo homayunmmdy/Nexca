@@ -7,7 +7,7 @@ import { DeleteBlock } from "../components/elements";
 import { Button, Spinner } from "@/components";
 
 const AdminTextAdvPage = () => {
-  const { data: sections, loading } = useFetch(TEXTADV_API_URL);
+  const { data: sections, loading } = useFetch("all_textadv",TEXTADV_API_URL);
   if (loading) {
     return <Spinner />;
   }

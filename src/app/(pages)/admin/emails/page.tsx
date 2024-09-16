@@ -6,7 +6,7 @@ import { DeleteBlock } from "../components/elements";
 
 
 const EmailsPage = () => {
-  const { data: emailData , loading} = useFetch(`${EMAIL_API_URL}`)
+  const { data: emailData , loading} = useFetch("emails",EMAIL_API_URL)
   if (loading) {
     return <Spinner />
   }

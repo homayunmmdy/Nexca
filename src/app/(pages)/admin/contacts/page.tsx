@@ -6,7 +6,7 @@ import { DeleteBlock } from "../components/elements";
 
 
 const ContactsPage = () => {
-  const { data: contactData, loading } = useFetch(`${CONTACTS_API_URL}`)
+  const { data: contactData, loading } = useFetch("contacts",CONTACTS_API_URL)
   if (loading) {
     return <Spinner />
   }

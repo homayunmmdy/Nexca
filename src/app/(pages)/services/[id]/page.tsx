@@ -10,7 +10,7 @@ import ServicesNav from "../../demo/components/ServicesNav";
 const ServicesPage = () => {
   const pathname = usePathname();
   const id = pathname.slice(10);
-  const { data: posts, loading } = useFetch(POST_API_URL);
+  const { data: posts, loading } = useFetch("all_posts", POST_API_URL);
 
   //@ts-ignore
   const filteredData = posts?.filter(
@@ -18,11 +18,15 @@ const ServicesPage = () => {
   );
   if (loading) {
     return (
-      <div className="mx-auto p-10">
-        <PostsSkeleton />
-      </div>
+      <>
+        <ServicesNav />
+        <div className="mx-auto p-10">
+          <PostsSkeleton />
+        </div>
+      </>
     );
   }
+  console.log("url id",id)
   return (
     <>
       <ServicesNav />

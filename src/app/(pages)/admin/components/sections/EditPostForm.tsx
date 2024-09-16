@@ -55,8 +55,8 @@ const EditPostForm = ({ ticket }) => {
     router.push("/admin/posts");
   };
 
-  const { data: services } = useFetch(SERVICES_API_URL);
-  const { data: sections } = useFetch(SECTIONS_API_URL);
+  const { data: services } = useFetch("services",SERVICES_API_URL);
+  const { data: sections } = useFetch("sections",SECTIONS_API_URL);
 
   return (
     <div className="flex justify-center">
