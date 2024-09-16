@@ -18,7 +18,7 @@ const FQAs: React.FC = () => {
               </div>
               <div className="flex flex-wrap -m-3">
                 <div className="join join-vertical w-full my-10">
-                  <div className="collapse collapse-arrow join-item border border-base-300">
+                  <div className="collapse collapse-arrow join-item border">
                     <Input
                       id="nexca-question-1"
                       type="radio"
@@ -37,7 +37,7 @@ const FQAs: React.FC = () => {
                       TailwindCSS, and uses MongoDB for the database.
                     </div>
                   </div>
-                  <div className="collapse collapse-arrow join-item border border-base-300">
+                  <div className="collapse collapse-arrow join-item border">
                     <Input 
                      id="nexca-question-2"
                      type="radio"
@@ -55,7 +55,7 @@ const FQAs: React.FC = () => {
                       functionalities.
                     </div>
                   </div>
-                  <div className="collapse collapse-arrow join-item border border-base-300">
+                  <div className="collapse collapse-arrow join-item border">
                     <Input
                       id="nexca-question-3"
                       type="radio"
@@ -78,7 +78,7 @@ const FQAs: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="collapse collapse-arrow join-item border border-base-300">
+                  <div className="collapse collapse-arrow join-item border">
                     <Input
                       id="nexca-question-4"
                       type="radio"
@@ -100,7 +100,7 @@ const FQAs: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="collapse collapse-arrow join-item border border-base-300">
+                  <div className="collapse collapse-arrow join-item border">
                     <Input
                       id="nexca-question-5"
                       type="radio"

@@ -6,7 +6,7 @@ import { FaArrowDown } from "react-icons/fa6";
 const Hero: React.FC = () => {
   return (
     <>
-      <section className="relative pb-24 pt-4 lg:pb-28 bg-white">
+      <section className="relative pb-24 pt-4 lg:pb-28 ">
         <div className="mx-auto max-w-7xl px-4 my-5">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
             {/* Decorative Elements (Optional) */}
@@ -18,12 +18,12 @@ const Hero: React.FC = () => {
 
             {/* Content */}
             <div className="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
-              <h1 className="text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900">
+              <h1 className="text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl font-bold ">
                 Build Your
                 <FullHoverAnimation text="Own Blog Website" link="demo" />
                 Right Now
               </h1>
-              <p className="mt-8 text-gray-700">
+              <p className="mt-8">
                 Create your blog website in less than a day with Nexca. Our
                 powerful admin panel lets you manage your content effortlessly,
                 no coding required.

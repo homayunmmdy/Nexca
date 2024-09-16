@@ -48,10 +48,10 @@ const EmailList = () => {
       <div className="mx-auto max-w-7xl px-4 my-5">
         <div className="flex flex-wrap items-center w-full  p-5 mx-auto text-left border border-gray-200 rounded lg:flex-nowrap md:p-8 dark:border-gray-700">
           <div className="flex-1 w-full mb-5 md:mb-0 md:pr-5 lg:pr-10 md:w-1/2">
-            <h3 className="mb-2 text-2xl font-bold text-gray-700 ">
+            <h3 className="mb-2 text-2xl font-bold">
               Subscribe to EmailList
             </h3>
-            <p className="text-gray-500 ">
+            <p>
               Provide your email to get email notification when we launch new
               products or publish new articles
             </p>

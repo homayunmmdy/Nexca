@@ -5,7 +5,7 @@ import { SiClerk, SiMongodb, SiVercel } from "react-icons/si";
 const Companies = () => {
   return (
     <>
-      <section className="mx-auto max-w-7xl px-4 bg-slate-50 rounded-xl shadow-xl py-8 md:py-12 lg:py-28 my-4">
+      <section className="mx-auto max-w-7xl px-4 rounded-xl shadow-xl py-8 md:py-12 lg:py-28 m-4 border-2 border-indigo-400 hover:border-indigo-700">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
             Companies
@@ -17,7 +17,7 @@ const Companies = () => {
         </div>
 
         <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-          <div className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-indigo-800 p-2">
+          <div className="relative overflow-hidden rounded-lg border select-none hover:shadow hover:shadow-indigo-800 p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
               <RiNextjsFill className="h-12 w-12 fill-current" />
 
@@ -30,7 +30,7 @@ const Companies = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-indigo-800 p-2">
+          <div className="relative overflow-hidden rounded-lg border select-none hover:shadow hover:shadow-indigo-800 p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
               <FaReact className="h-12 w-12 fill-current" />
               <div className="space-y-2">
@@ -42,7 +42,7 @@ const Companies = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-indigo-800 p-2">
+          <div className="relative overflow-hidden rounded-lg border select-none hover:shadow hover:shadow-indigo-800 p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
               <SiMongodb className="h-12 w-12 fill-current" />
               <div className="space-y-2">
@@ -54,7 +54,7 @@ const Companies = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-indigo-800 p-2">
+          <div className="relative overflow-hidden rounded-lg border select-none hover:shadow hover:shadow-indigo-800 p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
               <RiTailwindCssFill className="h-12 w-12 fill-current" />
 
@@ -68,7 +68,7 @@ const Companies = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-indigo-800 p-2">
+          <div className="relative overflow-hidden rounded-lg border select-none hover:shadow hover:shadow-indigo-800 p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
               <SiClerk className="h-12 w-12 fill-current" />
 
@@ -81,7 +81,7 @@ const Companies = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-indigo-800 p-2">
+          <div className="relative overflow-hidden rounded-lg border select-none hover:shadow hover:shadow-indigo-800 p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
               <SiVercel className="h-12 w-12 fill-current" />
 
