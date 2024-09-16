@@ -13,9 +13,7 @@ const ServicesPage = () => {
   const { data: posts, loading } = useFetch("all_posts", POST_API_URL);
 
   //@ts-ignore
-  const filteredData = posts?.filter(
-    (item: PostsCashType) => item.services == id
-  );
+  const filteredData = posts?.filter((item) => item.services == id);
   if (loading) {
     return (
       <>
@@ -26,13 +24,13 @@ const ServicesPage = () => {
       </>
     );
   }
-  console.log("url id",id)
   return (
     <>
       <ServicesNav />
       <div className="mx-auto p-10">
         <div className="hidden md:grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
-          {filteredData?.map((item: PostsCashType) => (
+          {/* @ts-ignore */}
+          {filteredData?.map((item) => (
             <PostCard key={item._id} post={item} />
           ))}
         </div>
