@@ -16,7 +16,7 @@ const RecentPost = ({ post }) => {
             height={640}
           />
           <div className="order-1 sm:ml-6 xl:ml-0">
-            <h3 className="mb-1 text-slate-900 font-semibold">
+            <h3 className="mb-1 font-semibold">
               {post.title.slice(0, 60)}
             </h3>
             <div className="prose prose-slate prose-sm text-slate-600">

@@ -46,8 +46,8 @@ const NavLink = () => {
                     className="py-2.7 text-sm ease-nav-brand  p-1 my-0 flex items-center whitespace-nowrap px-4 hover:text-white hover:bg-indigo-500 transition-colors rounded-xl"
                     href={link.href}
                   >
-                    <div className="shadow-soft-2xl ml-2 flex h-9 w-9 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
-                      <LinkIcon size={24} color="#333" />
+                    <div className="shadow-soft-2xl ml-2 flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-700 bg-center stroke-0 text-center xl:p-2.5">
+                      <LinkIcon size={24} color="#FFF" />
                     </div>
                     <span className="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">
                       {link.name}

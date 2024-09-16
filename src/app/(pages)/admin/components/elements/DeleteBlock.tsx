@@ -48,17 +48,17 @@ const DeleteBlock = ({ path, id }) => {
       />
 
       {isConfirmOpen && (
-        <div className="fixed z-10 inset-0 overflow-y-auto bg-gray-400 bg-opacity-75 p-4 md:p-8">
-          <div className="w-full max-w-sm mx-auto bg-white rounded-lg shadow-md">
-            <div className="flex justify-between items-center p-5 border-b border-gray-200">
-              <h5 className="text-xl font-medium text-gray-800">Delete</h5>
+        <div className="fixed z-10 inset-0 overflow-y-auto  bg-opacity-75 p-4 md:p-8 mt-[120px]">
+          <div className="w-full max-w-sm mx-auto  rounded-lg shadow-md">
+            <div className="flex justify-between items-center p-5 border-b ">
+              <h5 className="text-xl font-medium ">Delete</h5>
               <Button title="&times;" color="btn-error" type="button" onClick={() => setIsConfirmOpen(false)}/>
             </div>
-            <div className="p-3 text-gray-700">
+            <div className="p-3">
               Are you sure you want to delete this item?
             </div>
             <div className="flex justify-end items-center p-3">
-              <Button title="Cancel" type="button" color="btn-ghost" style="mr-2" onClick={() => setIsConfirmOpen(false)}/>
+              <Button title="Cancel" type="button" color="btn-primary" style="mr-2" onClick={() => setIsConfirmOpen(false)}/>
               <Button title="Delete" type="button" color="btn-error" onClick={handleDelete}/>
             </div>
           </div>

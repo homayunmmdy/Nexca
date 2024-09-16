@@ -53,7 +53,7 @@ const Posts = () => {
           color="input-primary"
         />
         {currentPosts.length > 0 ? (
-          <div className="!z-5 relative flex flex-col rounded-[20px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:shadow-none w-full p-4 h-full">
+          <div className="!z-5 relative flex flex-col rounded-[20px] bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:shadow-none w-full p-4 h-full">
             <div className="overflow-x-auto">
               <table className="table">
                 <thead>

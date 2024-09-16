@@ -16,8 +16,8 @@ const Sidebar = () => {
       <div className="w-full h-full p-4">
         <div className="flex justify-between items-center">
           <Link
-            className="block px-4 py-3 m-0 text-lg whitespace-nowrap text-slate-700"
-            href="/"
+            className="block px-4 py-3 m-0 text-lg space-nowrap "
+            href="/admin"
             target="_blank"
           >
             Admin
