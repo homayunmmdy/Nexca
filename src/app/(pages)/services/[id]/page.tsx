@@ -1,34 +1,40 @@
-"use client"
+"use client";
+import PostCard from "@/components/sections/PostCard";
+import PostsSkeleton from "@/components/sections/PostsSkeleton";
 import { POST_API_URL } from "@/config/apiConstants";
 import useFetch from "@/hooks/useFetch";
-import { usePathname } from "next/navigation";
-import  SubNavbar  from "../../demo/components/SubNavbar";
-import PostsSkeleton from "@/components/sections/PostsSkeleton";
-import PostCard from "@/components/sections/PostCard";
 import { PostsCashType } from "@/types/entities";
+import { usePathname } from "next/navigation";
+import ServicesNav from "../../demo/components/ServicesNav";
 
 const ServicesPage = () => {
-    const pathname = usePathname();
-    const id = pathname.slice(10);
-    const { data: posts, loading } = useFetch(POST_API_URL)
-    
-    //@ts-ignore
-    const filteredData = posts?.filter((item: PostsCashType) => item.services == id);
-    if (loading) {
-        return <div className="mx-auto p-10"><PostsSkeleton /></div>
-    }
-    return (
-        <>
-            <SubNavbar />
-            <div className="mx-auto p-10">
-                <div className="hidden md:grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
-                    {filteredData?.map((item: PostsCashType) => (
-                        <PostCard key={item._id} post={item} />
-                    ))}
-                </div>
-            </div>
-        </>
-    )
-}
+  const pathname = usePathname();
+  const id = pathname.slice(10);
+  const { data: posts, loading } = useFetch(POST_API_URL);
 
-export default ServicesPage
+  //@ts-ignore
+  const filteredData = posts?.filter(
+    (item: PostsCashType) => item.services == id
+  );
+  if (loading) {
+    return (
+      <div className="mx-auto p-10">
+        <PostsSkeleton />
+      </div>
+    );
+  }
+  return (
+    <>
+      <ServicesNav />
+      <div className="mx-auto p-10">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
+          {filteredData?.map((item: PostsCashType) => (
+            <PostCard key={item._id} post={item} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ServicesPage;
