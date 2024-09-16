@@ -22,7 +22,6 @@ const LinearAds = () => {
   
   //@ts-ignore
   const filteredData = data?.data?.filter((item) => item.textadvid == 1);
-  console.log("filter",filteredData)
   const ads = filteredData?.slice(-12);
 
   return (

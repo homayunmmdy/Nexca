@@ -8,7 +8,7 @@ import Button from "../Button";
 import SingleCardSkeleton from "./SingleCardSkeleton";
 
 const SingleCard = () => {
-  const { data, loading } = useGetSection(POST_API_URL, -1, 3);
+  const { data, loading } = useGetSection("single_post",POST_API_URL, -1, 3);
 
   if (loading) {
     return <SingleCardSkeleton />;

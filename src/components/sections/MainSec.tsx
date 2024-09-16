@@ -6,7 +6,7 @@ import MainItem from "./MainItem";
 import MainSkeleton from "./MainSkeleton";
 
 const MainSec = () => {
-  const { data , loading } = useGetSection(POST_API_URL, -2, 1);
+  const { data , loading } = useGetSection("main_posts",POST_API_URL, -2, 1);
 
   if (loading) {
     return <MainSkeleton />

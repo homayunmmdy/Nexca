@@ -6,7 +6,7 @@ import PostCard from "./PostCard";
 import PostsSecSkeleton from "./PostsSecSkeleton";
 
 const PostsSec = () => {
-  const { data, loading } = useGetSection(POST_API_URL, -6, 2);
+  const { data, loading } = useGetSection("posts",POST_API_URL, -6, 2);
 
   if (loading) {
     return <PostsSecSkeleton />;

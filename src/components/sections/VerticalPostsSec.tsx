@@ -2,13 +2,11 @@
 import { POST_API_URL } from "@/config/apiConstants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/entities";
-import PostCard from "./PostCard";
-import PostsSkeleton from "./PostsSkeleton";
 import VerticalSkeleton from "./VerticalSkeleton";
 import VerticalPost from "./VerticalPost";
 
 const VerticalPostsSec = () => {
-  const { data, loading } = useGetSection(POST_API_URL, -4,4);
+  const { data, loading } = useGetSection("vertical_posts",POST_API_URL, -4,4);
 
   if (loading) {
     return <VerticalSkeleton />;

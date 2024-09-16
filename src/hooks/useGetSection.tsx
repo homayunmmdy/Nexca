@@ -1,36 +1,20 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 //@ts-ignore
-const useGetSection = (url, lengthItem, secId) => {
-    const [postData, setPostData] = useState(null);
-    const [loading, setLoading] = useState(true);
+const useGetSection = (queryKey, url, lengthItem, secId) => {
+  //@ts-ignore
+  const { data: mainData, isLoading: loading } = useQuery({
+    queryKey: [queryKey],
+    queryFn: () => axios.get(url).then((res) => res.data),
+  });
 
-    useEffect(() => {
-        const fetchPostData = async () => {
-            try {
-                setLoading(true);
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                setPostData(data.data);
-                setLoading(false);
-            } catch (error) {
-                console.error("Error fetching postData:", error);
-                setLoading(false);
-            }
-        };
+  //@ts-ignore
+  const filteredData = mainData?.data?.filter((item) => item.section === `${secId}`);
+  const data = filteredData?.slice(lengthItem);
 
-        fetchPostData();
-    }, [url]);
-
-    //@ts-ignore
-    const filteredData = postData?.filter((item) => item.section === `${secId}`);
-    const data = filteredData?.slice(lengthItem);
-
-    return { data, loading };
+  return { data, loading };
 };
 
 export default useGetSection;
