@@ -17,8 +17,8 @@ const PostCard = ({ post }) => {
             />
           </figure>
           <div className="card-body items-center text-center p-5">
-            <h2 className="card-title text-slate-950	">{post.title.slice(0,70).slice(0, 100)}</h2>
-            <p className="text-slate-950	">{post.description.slice(0, 60)}</p>
+            <h2 className="card-title">{post.title.slice(0,70).slice(0, 100)}</h2>
+            <p>{post.description.slice(0, 60)}</p>
           </div>
           </Link>
         </div>

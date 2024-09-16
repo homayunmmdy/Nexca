@@ -29,7 +29,7 @@ const MainItem = ({ post }) => {
                 href={`/posts/${post._id}`}
                 title={post.title.slice(0,60)}
               >
-                <span className="text-slate-950	 bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+                <span className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
                   {post.title.slice(0,60)}
                 </span>
               </Link>

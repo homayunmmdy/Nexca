@@ -93,7 +93,7 @@ const Header = () => {
         </div>
       </header>
       {isOpen && (
-        <nav className="fixed top-[95px] bg-white rounded-xl shadow-xl mx-auto left-0 right-0 z-[50] w-[94%] md:w-[92%] border-2 border-indigo-700">
+        <nav className="fixed top-[95px] backdrop-blur-md rounded-xl shadow-xl mx-auto left-0 right-0 z-[50] w-[94%] md:w-[92%] border-2 border-indigo-700">
           <ul className="flex gap-4 items-center  flex-col my-3 p-2 shadow lg:hidden bg-inherit">
             {nav?.map((item) => {
               return (
@@ -107,7 +107,7 @@ const Header = () => {
                     </Link>
                   ) : (
                     <Link
-                      className="p-2 bg-white rounded-xl block w-full text-center"
+                      className="p-2 border-2 border-indigo-700 rounded-xl block w-full text-center"
                       href={item.link}
                     >
                       {item.name}

@@ -91,7 +91,7 @@ const ContactsPage = () => {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="border-stroke focus:border-indigo-500 w-full resize-none rounded border py-3 px-[14px] text-base outline-none"
+                      className="textarea textarea-bordered w-full"
                     ></textarea>
                   </div>
                   <div>

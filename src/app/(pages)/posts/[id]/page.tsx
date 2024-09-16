@@ -29,7 +29,7 @@ const Post = () => {
 
   return (
     <>
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         <div className="bg-indigo-500">
           <div className="w-[94%] md:w-[92%] mx-auto px-4 py-8">
           {/* @ts-ignore */}
@@ -38,7 +38,7 @@ const Post = () => {
             <p className="text-lg  text-center my-3 text-white"><FormatTime  timestamp={post.createdAt} options={options} /></p>
           </div>
         </div>
-        <div className="bg-white py-8">
+        <div className="py-8">
           <div className="w-[94%] md:w-[92%] mx-auto flex flex-col md:flex-row gap-8">
             <div className="w-full md:w-3/4 ">
               <Image

@@ -10,7 +10,7 @@ const PostSkelton = () => {
             <div className="skeleton h-4 w-32 mb-4"></div>
           </div>
         </div>
-        <div className="bg-white py-8">
+        <div className="py-8">
           <div className="w-[94%] md:w-[92%] mx-auto flex flex-col md:flex-row gap-8">
             <div className="w-full md:w-3/4 ">
               <div className="skeleton aspect-video rounded-3xl w-full"></div>
