@@ -1,9 +1,11 @@
 import React from 'react'
+import Titr from '../Titr'
 
 const PostsSecSkeleton: React.FC = () => {
     return (
         <>
-            <div className=" mx-auto py-6">
+            <div className=" mx-auto pb-6">
+            <Titr title="Posts" item="text-left" />
                 <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-5">
                     <div className="flex w-full flex-col gap-4">
                         <div className="skeleton h-32 w-full"></div>

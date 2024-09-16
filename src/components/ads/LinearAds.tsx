@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { FaCircleDot } from "react-icons/fa6";
 import LinearAdsLoading from "./LinearAdsLoading";
+import Titr from "../Titr";
 
 const LinearAds = () => {
   const { data, isLoading } = useQuery<TextAdvCashType[]>({
@@ -26,9 +27,7 @@ const LinearAds = () => {
 
   return (
     <>
-      <h2 className="border-b-2 border-gray-600 font-bold my-3 text-center p-2">
-        Ads Demo Page
-      </h2>
+      <Titr title="Ads Demo Page" item="text-center" />
       <ul className="flex flex-col gap-4 mb-3">
         {/* @ts-ignore */}
         {ads.map((adv) => (

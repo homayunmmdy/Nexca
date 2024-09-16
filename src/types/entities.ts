@@ -17,6 +17,12 @@ export type FullHoverAnimationType = {
   link?: string;
 };
 
+export type TitrType = {
+  title: string;
+  item: "text-center" | "text-left" | "text-right";
+  style?: string;
+};
+
 export type InputType = {
   id?: string;
   name?: string;

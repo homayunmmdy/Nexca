@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
 import SingleCardSkeleton from "./SingleCardSkeleton";
+import Titr from "../Titr";
 
 const SingleCard = () => {
   const { data, loading } = useGetSection("single_post",POST_API_URL, -1, 3);
@@ -16,6 +17,7 @@ const SingleCard = () => {
 
   return (
     <>
+    <Titr title="Single Posts" item="text-center" style="mb-4 text-xl md:text-2xl lg:text-3xl"/>
       {data?.map((post: PostsCashType) => (
         <Link
           href={`/posts/${post._id}`}
