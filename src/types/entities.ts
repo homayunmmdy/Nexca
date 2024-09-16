@@ -43,3 +43,14 @@ export type PostsCashType = {
   updatedAt: string;
   __v: number;
 };
+
+export type TextAdvCashType = {
+  _id: string;
+  textadvid: number;
+  advname: string;
+  body: string;
+  link: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+};
