@@ -5,13 +5,20 @@ import useFetch from "@/hooks/useFetch";
 import { DataTable } from "../components/elements";
 
 const AdminSectionPage = () => {
-  const { data: sections , loading} = useFetch("sections",SECTIONS_API_URL);
+  const { data: sections, loading } = useFetch("sections", SECTIONS_API_URL);
   if (loading) {
-    return <Spinner />
+    return <Spinner />;
+  }
+  let master: boolean;
+  const isMaster = localStorage.getItem("masterEditor");
+  if (isMaster) {
+    master = true;
+  } else {
+    master = false;
   }
   return (
     <>
-      <DataTable data={sections} path="sections" />
+      <DataTable editor={master} data={sections} path="sections" />
     </>
   );
 };

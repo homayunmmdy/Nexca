@@ -11,7 +11,7 @@ const Services = () => {
   }
   return (
     <>
-      <DataTable data={services} path="services" />
+      <DataTable editor={true} data={services} path="services" />
     </>
   );
 };

@@ -1,3 +1,4 @@
+import React from "react";
 import { AllowedColors, AllowedInputType } from "./AllowedOptions";
 
 // Components
@@ -9,6 +10,7 @@ export type ButtonType = {
   style?: string;
   disabled?: boolean;
   onClick?: () => void;
+  onClickEvent?: (e: any) => void;
   ariaLabel?: string;
 };
 

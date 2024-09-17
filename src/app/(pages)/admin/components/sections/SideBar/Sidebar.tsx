@@ -18,7 +18,6 @@ const Sidebar = () => {
           <Link
             className="block px-4 py-3 m-0 text-lg space-nowrap "
             href="/admin"
-            target="_blank"
           >
             Admin
             <span className="ml-1 font-semibold transition-all duration-200 ease-nav-brand">
