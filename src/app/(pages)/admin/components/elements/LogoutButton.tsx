@@ -3,6 +3,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import useCheckLogin from "@/hooks/useCheckLogin";
 import { Button } from "@/components";
+import { AUTH_KEY } from "@/config/Constants";
 
 const LogoutButton = () => {
   const router = useRouter();
@@ -10,7 +11,7 @@ const LogoutButton = () => {
   useCheckLogin();
 
   const handleLogout = () => {
-    localStorage.removeItem("authenticated");
+    localStorage.removeItem(AUTH_KEY);
     router.push("/");
   };
 

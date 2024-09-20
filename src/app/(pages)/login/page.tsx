@@ -6,13 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 import Toast from "./components/Toast";
 import { Button, Input } from "@/components";
+import { AUTH_KEY } from "@/config/Constants";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
   useEffect(() => {
-    const isAuthenticated = localStorage.getItem("authenticated");
+    const isAuthenticated = localStorage.getItem(AUTH_KEY);
     if (isAuthenticated) {
       router.push("/admin");
     }
@@ -22,7 +23,7 @@ const Login = () => {
     const USERNAME = process.env.NEXT_PUBLIC_USERNAME;
     if (username == `${USERNAME}` && password == `${PASSWORD}`) {
       //@ts-ignore
-      localStorage.setItem("authenticated", true);
+      localStorage.setItem(AUTH_KEY, true);
       router.push("/admin");
       toast.success("you're welcome");
     } else {

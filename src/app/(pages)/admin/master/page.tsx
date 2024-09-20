@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { useRouter } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
+import { MASTER_KEY } from "@/config/Constants";
 
 const MasterEditorPage = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
   useEffect(() => {
-    const isMasterEditor = localStorage.getItem("masterEditor");
+    const isMasterEditor = localStorage.getItem(MASTER_KEY);
     if (isMasterEditor) {
       router.push("/admin");
     }
@@ -20,7 +21,7 @@ const MasterEditorPage = () => {
     const KEY = process.env.NEXT_PUBLIC_MASTER_EDITOR_KEY;
     if (password == `${KEY}`) {
       //@ts-ignore
-      localStorage.setItem("masterEditor", true);
+      localStorage.setItem(MASTER_KEY, true);
       router.push("/admin");
       toast.success("you're welcome");
     } else {
