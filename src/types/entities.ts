@@ -21,7 +21,7 @@ export type FullHoverAnimationType = {
 
 export type TitrType = {
   title: string;
-  item: "text-center" | "text-left" | "text-right";
+  item: "text-center" | "text-left" | "text-right" | string;
   style?: string;
 };
 
