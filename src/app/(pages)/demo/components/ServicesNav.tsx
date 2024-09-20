@@ -1,11 +1,12 @@
 "use client";
 import { SERVICES_API_URL } from "@/config/apiConstants";
+import { SERVICES_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const ServicesNav = () => {
-  const { data: services, loading } = useFetch("services",SERVICES_API_URL);
+  const { data: services, loading } = useFetch(SERVICES_QUERY_KEY,SERVICES_API_URL);
   const pathname = usePathname();
 
   if (loading) {

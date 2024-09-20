@@ -5,9 +5,10 @@ import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from "../components/elements";
 import { Button, Spinner } from "@/components";
+import { ALL_TEXTADV_QUERY_KEY } from "@/config/Constants";
 
 const AdminTextAdvPage = () => {
-  const { data: sections, loading } = useFetch("all_textadv",TEXTADV_API_URL);
+  const { data: sections, loading } = useFetch(ALL_TEXTADV_QUERY_KEY,TEXTADV_API_URL);
   if (loading) {
     return <Spinner />;
   }

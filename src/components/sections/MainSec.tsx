@@ -4,9 +4,10 @@ import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/entities";
 import MainItem from "./MainItem";
 import MainSkeleton from "./MainSkeleton";
+import { MAIN_POSTS_QUERY_KEY } from "@/config/Constants";
 
 const MainSec = () => {
-  const { data, loading } = useGetSection("main_posts", POST_API_URL, -2, 1);
+  const { data, loading } = useGetSection(MAIN_POSTS_QUERY_KEY, POST_API_URL, -2, 1);
 
   if (loading) {
     return <MainSkeleton />;

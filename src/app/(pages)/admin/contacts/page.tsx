@@ -3,10 +3,11 @@ import { Spinner } from "@/components";
 import { CONTACTS_API_URL } from "@/config/apiConstants";
 import useFetch from "@/hooks/useFetch";
 import { DeleteBlock } from "../components/elements";
+import { CONTACTS_QUERY_KEY } from "@/config/Constants";
 
 
 const ContactsPage = () => {
-  const { data: contactData, loading } = useFetch("contacts",CONTACTS_API_URL)
+  const { data: contactData, loading } = useFetch(CONTACTS_QUERY_KEY,CONTACTS_API_URL)
   if (loading) {
     return <Spinner />
   }

@@ -1,13 +1,14 @@
-"use client"
+"use client";
+import { Input, Spinner } from "@/components";
 import { POST_API_URL } from "@/config/apiConstants";
+import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { useEffect, useState } from "react";
-import { Pagination, PostTable } from "../components/elements";
 import { FiSearch } from "react-icons/fi";
-import { Input, Spinner } from "@/components";
+import { Pagination, PostTable } from "../components/elements";
 
 const Posts = () => {
-  const data = useFetch("all_posts",POST_API_URL);
+  const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
 
   const [posts, setPosts] = useState(data?.data || []);
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,7 +22,7 @@ const Posts = () => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   //@ts-ignore
-  const filteredPosts = posts.filter(post =>
+  const filteredPosts = posts.filter((post) =>
     //@ts-ignore
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -37,18 +38,24 @@ const Posts = () => {
   };
 
   if (!data?.data) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   return (
     <div className="p-5">
       <div>
-        <Input 
+        <Input
           type="text"
           placeholder="Search posts"
           value={searchQuery}
-          onChange={handleSearch} 
-          icon={<FiSearch size={24} className="h-4 w-4 opacity-70" color="#4F46E5" />}
+          onChange={handleSearch}
+          icon={
+            <FiSearch
+              size={24}
+              className="h-4 w-4 opacity-70"
+              color="#4F46E5"
+            />
+          }
           style="my-2"
           color="input-primary"
         />

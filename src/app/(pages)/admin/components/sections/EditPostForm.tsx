@@ -6,6 +6,7 @@ import { FormField, SelectField } from "../elements";
 import useFetch from "@/hooks/useFetch";
 import Image from "next/image";
 import { Input } from "@/components";
+import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
 
 //@ts-ignore
 const EditPostForm = ({ ticket }) => {
@@ -55,8 +56,8 @@ const EditPostForm = ({ ticket }) => {
     router.push("/admin/posts");
   };
 
-  const { data: services } = useFetch("services",SERVICES_API_URL);
-  const { data: sections } = useFetch("sections",SECTIONS_API_URL);
+  const { data: services } = useFetch(SERVICES_QUERY_KEY,SERVICES_API_URL);
+  const { data: sections } = useFetch(SECTIONS_QUERY_KEY,SECTIONS_API_URL);
 
   return (
     <div className="flex justify-center">

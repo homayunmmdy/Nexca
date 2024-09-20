@@ -5,9 +5,10 @@ import { PostsCashType } from "@/types/entities";
 import PostCard from "./PostCard";
 import PostsSecSkeleton from "./PostsSecSkeleton";
 import Titr from "../Titr";
+import { POSTS_QUERY_KEY } from "@/config/Constants";
 
 const PostsSec = () => {
-  const { data, loading } = useGetSection("posts",POST_API_URL, -6, 2);
+  const { data, loading } = useGetSection(POSTS_QUERY_KEY,POST_API_URL, -6, 2);
 
   if (loading) {
     return <PostsSecSkeleton />;

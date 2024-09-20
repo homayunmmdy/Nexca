@@ -2,15 +2,15 @@
 import PostCard from "@/components/sections/PostCard";
 import PostsSkeleton from "@/components/sections/PostsSkeleton";
 import { POST_API_URL } from "@/config/apiConstants";
+import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
-import { PostsCashType } from "@/types/entities";
 import { usePathname } from "next/navigation";
 import ServicesNav from "../../demo/components/ServicesNav";
 
 const ServicesPage = () => {
   const pathname = usePathname();
   const id = pathname.slice(10);
-  const { data: posts, loading } = useFetch("all_posts", POST_API_URL);
+  const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
 
   //@ts-ignore
   const filteredData = posts?.filter((item) => item.services == id);

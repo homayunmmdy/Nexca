@@ -5,9 +5,10 @@ import { PostsCashType } from "@/types/entities";
 import VerticalSkeleton from "./VerticalSkeleton";
 import VerticalPost from "./VerticalPost";
 import Titr from "../Titr";
+import { VERTICAL_POSTS_QUERY_KEY } from "@/config/Constants";
 
 const VerticalPostsSec = () => {
-  const { data, loading } = useGetSection("vertical_posts",POST_API_URL, -4,4);
+  const { data, loading } = useGetSection(VERTICAL_POSTS_QUERY_KEY,POST_API_URL, -4,4);
 
   if (loading) {
     return <VerticalSkeleton />;

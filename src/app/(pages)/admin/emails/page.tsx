@@ -3,10 +3,11 @@ import { EMAIL_API_URL } from "@/config/apiConstants";
 import { Spinner } from "@/components";
 import useFetch from "@/hooks/useFetch";
 import { DeleteBlock } from "../components/elements";
+import { EMAIL_QUERY_KEY } from "@/config/Constants";
 
 
 const EmailsPage = () => {
-  const { data: emailData , loading} = useFetch("emails",EMAIL_API_URL)
+  const { data: emailData , loading} = useFetch(EMAIL_QUERY_KEY,EMAIL_API_URL)
   if (loading) {
     return <Spinner />
   }
