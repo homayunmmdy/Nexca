@@ -6,8 +6,13 @@ import { PostsCashType } from "@/types/entities";
 import { MainSecSkeleton } from "../skelton";
 import MainItem from "./MainItem";
 
-const MainSec = () => {
-  const { data, loading } = useGetSection(MAIN_POSTS_QUERY_KEY, POST_API_URL, -2, 1);
+const Main = () => {
+  const { data, loading } = useGetSection(
+    MAIN_POSTS_QUERY_KEY,
+    POST_API_URL,
+    -2,
+    1
+  );
 
   if (loading) {
     return <MainSecSkeleton />;
@@ -24,4 +29,4 @@ const MainSec = () => {
   );
 };
 
-export default MainSec;
+export default Main;

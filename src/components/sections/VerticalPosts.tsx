@@ -7,7 +7,7 @@ import { PostsCashType } from "@/types/entities";
 import { VerticalSkeleton } from "../skelton";
 import VerticalPost from "./VerticalPost";
 
-const VerticalPostsSec = () => {
+const VerticalPosts = () => {
   const { data, loading } = useGetSection(
     VERTICAL_POSTS_QUERY_KEY,
     POST_API_URL,
@@ -33,4 +33,4 @@ const VerticalPostsSec = () => {
   );
 };
 
-export default VerticalPostsSec;
+export default VerticalPosts;

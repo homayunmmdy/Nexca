@@ -7,7 +7,7 @@ import { PostsCashType } from "@/types/entities";
 import { PostsSecSkeleton } from "../skelton";
 import PostCard from "./PostCard";
 
-const PostsSec = () => {
+const Posts = () => {
   const { data, loading } = useGetSection(POSTS_QUERY_KEY, POST_API_URL, -6, 2);
 
   if (loading) {
@@ -28,4 +28,4 @@ const PostsSec = () => {
   );
 };
 
-export default PostsSec;
+export default Posts;

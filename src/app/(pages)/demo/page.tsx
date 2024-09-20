@@ -1,5 +1,6 @@
-import { LinearAds, MainSec, PostsSec, SingleCard, VerticalPostsSec } from "@/components";
+import { LinearAds } from "@/components";
 import ServicesNav from "./components/ServicesNav";
+import { MainSec, PostsSec, SingleCardSec, VerticalPostsSec } from "@/components/sections";
 
 const DemoPage = () => {
   return (
@@ -15,7 +16,7 @@ const DemoPage = () => {
             <LinearAds />
           </div>
         </div>
-        <SingleCard />
+        <SingleCardSec />
         <VerticalPostsSec />
       </div>
     </>
