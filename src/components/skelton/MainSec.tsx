@@ -1,6 +1,4 @@
-import React from "react";
-
-const MainSkeleton = () => {
+const MainSec = () => {
   return (
     <div className="grid grid-cols-12 gap-6">
       <div className="col-span-12 md:col-span-6">
@@ -27,4 +25,4 @@ const MainSkeleton = () => {
   );
 };
 
-export default MainSkeleton;
+export default MainSec;

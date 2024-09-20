@@ -1,6 +1,6 @@
-import Titr from "../Titr";
+import Titr from "@/components/Titr";
 
-const VerticalSkeleton = () => {
+const Vertical = () => {
   return (
     <div className=" mx-auto py-6">
       <Titr title="Vertical Posts" item="text-left" />
@@ -14,4 +14,4 @@ const VerticalSkeleton = () => {
   );
 };
 
-export default VerticalSkeleton;
+export default Vertical;

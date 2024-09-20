@@ -1,16 +1,21 @@
 "use client";
+import Titr from "@/components/Titr";
 import { POST_API_URL } from "@/config/apiConstants";
+import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/entities";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";
-import SingleCardSkeleton from "./SingleCardSkeleton";
-import Titr from "../Titr";
-import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
+import { SingleCardSkeleton } from "../skelton";
 
 const SingleCard = () => {
-  const { data, loading } = useGetSection(SINGLE_POST_QUERY_KEY,POST_API_URL, -1, 3);
+  const { data, loading } = useGetSection(
+    SINGLE_POST_QUERY_KEY,
+    POST_API_URL,
+    -1,
+    3
+  );
 
   if (loading) {
     return <SingleCardSkeleton />;
@@ -18,7 +23,11 @@ const SingleCard = () => {
 
   return (
     <>
-    <Titr title="Single Posts" item="text-center" style="mb-4 text-xl md:text-2xl lg:text-3xl"/>
+      <Titr
+        title="Single Posts"
+        item="text-center"
+        style="mb-4 text-xl md:text-2xl lg:text-3xl"
+      />
       {data?.map((post: PostsCashType) => (
         <Link
           href={`/posts/${post._id}`}

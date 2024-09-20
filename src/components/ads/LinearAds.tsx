@@ -1,13 +1,12 @@
-"use client"
+"use client";
+import Titr from "@/components/Titr";
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { TextAdvCashType } from "@/types/entities";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Link from "next/link";
-import React from "react";
 import { FaCircleDot } from "react-icons/fa6";
 import LinearAdsLoading from "./LinearAdsLoading";
-import Titr from "../Titr";
 
 const LinearAds = () => {
   const { data, isLoading } = useQuery<TextAdvCashType[]>({
@@ -20,7 +19,6 @@ const LinearAds = () => {
     return <LinearAdsLoading />;
   }
 
-  
   //@ts-ignore
   const filteredData = data?.data?.filter((item) => item.textadvid == 1);
   const ads = filteredData?.slice(-12);

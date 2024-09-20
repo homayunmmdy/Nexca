@@ -1,7 +1,6 @@
-import React from "react";
-import Titr from "../Titr";
+import Titr from "@/components/Titr";
 
-const SingleCardSkeleton = () => {
+const SingleCard = () => {
   return (
     <>
       <Titr
@@ -21,4 +20,4 @@ const SingleCardSkeleton = () => {
   );
 };
 
-export default SingleCardSkeleton;
+export default SingleCard;

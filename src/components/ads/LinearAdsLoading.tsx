@@ -1,5 +1,4 @@
-import React from "react";
-import Titr from "../Titr";
+import Titr from "@/components/Titr";
 
 const LinearAdsLoading = () => {
   return (

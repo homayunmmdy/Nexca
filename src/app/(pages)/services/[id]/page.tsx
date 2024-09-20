@@ -1,6 +1,6 @@
 "use client";
 import PostCard from "@/components/sections/PostCard";
-import PostsSkeleton from "@/components/sections/PostsSkeleton";
+import { PostsSkeleton } from "@/components/skelton";
 import { POST_API_URL } from "@/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
