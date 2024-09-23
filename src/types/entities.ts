@@ -52,6 +52,21 @@ export type PostsCashType = {
   __v: number;
 };
 
+export type TicketsCashType = {
+  _id: string;
+  title: string;
+  description: string;
+  body: string;
+  priority: number;
+  progress: number;
+  status: string;
+  startTime: string;
+  endTime: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+};
+
 export type TextAdvCashType = {
   _id: string;
   textadvid: number;
