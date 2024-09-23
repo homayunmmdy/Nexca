@@ -11,7 +11,7 @@ const AdminSectionPage = () => {
     return <Spinner />;
   }
   let master: boolean;
-  const isMaster = localStorage.getItem(MASTER_KEY);
+  const isMaster = window.localStorage.getItem(MASTER_KEY);
   if (isMaster) {
     master = true;
   } else {

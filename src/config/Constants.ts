@@ -9,6 +9,7 @@ export const SERVICES_QUERY_KEY = "services"
 export const SECTIONS_QUERY_KEY = "sections"
 export const CONTACTS_QUERY_KEY = "contacts"
 export const EMAIL_QUERY_KEY = "emails"
+export const TICKETS_QUERY_KEY = "tickets"
 export const LATEST_POSTS_KEY = "latest_posts"
 
 //sections query key

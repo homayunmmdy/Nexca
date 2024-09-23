@@ -3,11 +3,12 @@ import { usePathname } from "next/navigation";
 import { CgFeed } from "react-icons/cg";
 import { MdOutlineMail, MdOutlinePostAdd } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
+import { RiAdvertisementLine } from "react-icons/ri";
 import { SiCloudflarepages } from "react-icons/si";
 import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
 import { LogoutButton } from "../../elements";
-import { RiAdvertisementLine } from "react-icons/ri";
+import { GiTicket } from "react-icons/gi";
 
 const links = [
   { name: "Admin", href: "/admin", icon: TiHome },
@@ -17,7 +18,8 @@ const links = [
   { name: "Services", href: "/admin/services", icon: SiCloudflarepages },
   { name: "Sections", href: "/admin/sections", icon: TbNewSection },
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
-  { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
+  { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
+  { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },
 ];
 const NavLink = () => {
   const pathname = usePathname();

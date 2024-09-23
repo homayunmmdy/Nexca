@@ -1,16 +1,9 @@
 "use client";
-import {
-  POST_API_URL,
-  SECTIONS_API_URL,
-  SERVICES_API_URL,
-  TICKETS_API_URL,
-} from "@/config/apiConstants";
+import { Input } from "@/components";
+import { TICKETS_API_URL } from "@/config/apiConstants";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import useFetch from "@/hooks/useFetch";
-import Image from "next/image";
-import { Input } from "@/components";
-import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
+import { toast, ToastContainer } from "react-toastify";
 
 //@ts-ignore
 const TicketForm = ({ ticket }) => {
@@ -57,14 +50,18 @@ const TicketForm = ({ ticket }) => {
 
     if (!res.ok) {
       setLoading(false);
+      toast.error(`Failed to ${EDITMODE ? "update" : "create"} ticket`)
       throw new Error(`Failed to ${EDITMODE ? "update" : "create"} ticket`);
     }
 
+    toast.success('Ticket Created Successfully')
     router.refresh();
     router.push("/");
   };
 
   return (
+    <>
+    <ToastContainer />
     <div className="flex items-center justify-center px-12">
       {loading && (
         <span className="absolute loading loading-ring loading-lg"></span>
@@ -230,6 +227,7 @@ const TicketForm = ({ ticket }) => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
