@@ -19,8 +19,8 @@ const Footer = () => {
           >
             Privacy Policy
           </Link>
-          <Link title="Admin" className="link link-hover" href="/admin">
-            Admin
+          <Link title="New Ticket" className="link link-hover" href="/tickets/new">
+            New Ticket
           </Link>
         </nav>
         <nav>
