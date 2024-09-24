@@ -26,6 +26,7 @@ const Footer = () => {
         <nav>
           <div className="grid grid-flow-col gap-4">
             <Link
+              target="_blank"
               title="GitHub"
               rel="nofollow"
               aria-label="GitHub"
@@ -37,8 +38,9 @@ const Footer = () => {
             <Link
               title="Linkedin"
               rel="nofollow"
+              target="_blank"
               aria-label="Linkedin"
-              href="www.linkedin.com/in/homayunmmdy"
+              href="https://www.linkedin.com/in/homayunmmdy/"
               className="ease-in-out delay-100 transition-colors hover:text-indigo-600"
             >
               <FaLinkedinIn size={25} />

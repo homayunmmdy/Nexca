@@ -82,7 +82,13 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <Link href="/https://github.com/homayunmmdy/Nexca">
+            <Link
+              href="https://github.com/homayunmmdy/Nexca"
+              title="GitHub"
+              rel="nofollow"
+              aria-label="GitHub"
+              target="_blank"
+            >
               <Button
                 title="GitHub"
                 color="btn-neutral"
