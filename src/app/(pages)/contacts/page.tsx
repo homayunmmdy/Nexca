@@ -149,7 +149,7 @@ const ContactsPage = () => {
                   </div>
                   <div className="w-full">
                     <h4 className="mb-1 text-xl font-bold ">Phone Number</h4>
-                    <p className="text-sm sm:text-base">0922 4003 487</p>
+                    <p className="text-sm sm:text-base">{SiteConfig.phoneNumber}</p>
                   </div>
                 </div>
                 <div className="mb-8 flex w-full max-w-[370px] gap-3">
