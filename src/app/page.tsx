@@ -4,6 +4,7 @@ import {
   EmailList,
   FAQs,
   Hero,
+  PriceList,
   Services,
 } from "./components/sections";
 
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <Services />
       <Companies />
       <FAQs />
+      <PriceList />
       <EmailList />
     </>
   );
