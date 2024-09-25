@@ -1,6 +1,5 @@
 "use client";
 import Titr from "@/components/Titr";
-import { POST_API_URL } from "@/config/apiConstants";
 import { POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/entities";
@@ -8,7 +7,7 @@ import { PostsSecSkeleton } from "../skelton";
 import PostCard from "./PostCard";
 
 const Posts = () => {
-  const { data, loading } = useGetSection(POSTS_QUERY_KEY, POST_API_URL, -6, 2);
+  const { data, loading } = useGetSection(POSTS_QUERY_KEY, -6, 2);
 
   if (loading) {
     return <PostsSecSkeleton />;
