@@ -1,3 +1,4 @@
+import SiteConfig from "@/config/stie";
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
@@ -30,7 +31,7 @@ const Footer = () => {
               title="GitHub"
               rel="nofollow"
               aria-label="GitHub"
-              href="https://github.com/homayunmmdy/Nexca"
+              href={SiteConfig.github}
               className="ease-in-out delay-100 transition-colors hover:text-indigo-600"
             >
               <FaGithub size={25} />
@@ -40,7 +41,7 @@ const Footer = () => {
               rel="nofollow"
               target="_blank"
               aria-label="Linkedin"
-              href="https://www.linkedin.com/in/homayunmmdy/"
+              href={SiteConfig.linkedin}
               className="ease-in-out delay-100 transition-colors hover:text-indigo-600"
             >
               <FaLinkedinIn size={25} />

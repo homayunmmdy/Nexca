@@ -83,7 +83,7 @@ const Header = () => {
           </div>
           <div className="navbar-end">
             <Link
-              href="https://github.com/homayunmmdy/Nexca"
+              href={SiteConfig.github}
               title="GitHub"
               rel="nofollow"
               aria-label="GitHub"
