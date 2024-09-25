@@ -1,6 +1,5 @@
 "use client";
 import Titr from "@/components/Titr";
-import { POST_API_URL } from "@/config/apiConstants";
 import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/entities";
@@ -10,12 +9,7 @@ import Button from "../Button";
 import { SingleCardSkeleton } from "../skelton";
 
 const SingleCard = () => {
-  const { data, loading } = useGetSection(
-    SINGLE_POST_QUERY_KEY,
-    POST_API_URL,
-    -1,
-    3
-  );
+  const { data, loading } = useGetSection(SINGLE_POST_QUERY_KEY, -1, 3);
 
   if (loading) {
     return <SingleCardSkeleton />;

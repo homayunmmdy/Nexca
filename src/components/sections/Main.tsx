@@ -1,5 +1,4 @@
 "use client";
-import { POST_API_URL } from "@/config/apiConstants";
 import { MAIN_POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/entities";
@@ -7,12 +6,7 @@ import { MainSecSkeleton } from "../skelton";
 import MainItem from "./MainItem";
 
 const Main = () => {
-  const { data, loading } = useGetSection(
-    MAIN_POSTS_QUERY_KEY,
-    POST_API_URL,
-    -2,
-    1
-  );
+  const { data, loading } = useGetSection(MAIN_POSTS_QUERY_KEY, -2, 1);
 
   if (loading) {
     return <MainSecSkeleton />;

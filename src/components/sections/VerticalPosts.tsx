@@ -1,6 +1,5 @@
 "use client";
 import Titr from "@/components/Titr";
-import { POST_API_URL } from "@/config/apiConstants";
 import { VERTICAL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/entities";
@@ -8,12 +7,7 @@ import { VerticalSkeleton } from "../skelton";
 import VerticalPost from "./VerticalPost";
 
 const VerticalPosts = () => {
-  const { data, loading } = useGetSection(
-    VERTICAL_POSTS_QUERY_KEY,
-    POST_API_URL,
-    -4,
-    4
-  );
+  const { data, loading } = useGetSection(VERTICAL_POSTS_QUERY_KEY, -4, 4);
 
   if (loading) {
     return <VerticalSkeleton />;
