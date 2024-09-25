@@ -13,6 +13,7 @@ export const LATEST_POSTS_KEY = "latest_posts"
 
 //sections query key
 export const POSTS_QUERY_KEY = "posts"
+export const MORE_POSTS_QUERY_KEY = "more_posts"
 export const MAIN_POSTS_QUERY_KEY = "main_posts"
 export const SINGLE_POST_QUERY_KEY = "single_post"
 export const VERTICAL_POSTS_QUERY_KEY = "vertical_posts"

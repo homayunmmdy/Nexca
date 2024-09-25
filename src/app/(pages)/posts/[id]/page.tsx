@@ -9,6 +9,7 @@ import { FaStop } from "react-icons/fa6";
 import FormatTime from "../components/FormatTime";
 import { Button } from "@/components";
 import Image from "next/image";
+import { MorePostsSec } from "@/components/sections";
 
 const Post = () => {
   //@ts-ignore
@@ -62,12 +63,13 @@ const Post = () => {
                   )}
                   <Link href="/demo" className="btn btn-outline btn-primary rounded-full">Back Home</Link>
               </div>
-              <div className="prose max-w-none">
+              <div className="prose max-w-none mb-3">
                 <p className="p-3 text-lg leading-9	">
                   {/* @ts-ignore */}
                   {post.body}
                 </p>
               </div>
+              <MorePostsSec />
             </div>
             <div className="w-full md:w-1/4 py-3">
               <RecentPosts />
