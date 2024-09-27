@@ -1,13 +1,12 @@
 import { Button, FullHoverAnimation } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowDown } from "react-icons/fa6";
-import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline, IoArrowUpCircleSharp } from "react-icons/io5";
+import { IoArrowUpCircleSharp } from "react-icons/io5";
 
 const Hero: React.FC = () => {
   return (
     <>
-      <section className="relative pb-24 pt-4 lg:pb-28 ">
+      <section className="relative pt-4">
         <div className="mx-auto max-w-7xl px-4 my-5">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
             {/* Decorative Elements (Optional) */}

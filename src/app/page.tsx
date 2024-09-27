@@ -3,16 +3,16 @@ import {
   Companies,
   EmailList,
   FAQs,
+  Features,
   Hero,
   PriceList,
-  Services,
 } from "./components/sections";
 
 const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <Services />
+      <Features />
       <Companies />
       <FAQs />
       <PriceList />

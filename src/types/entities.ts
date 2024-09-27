@@ -1,4 +1,3 @@
-import React from "react";
 import { AllowedColors, AllowedInputType } from "./AllowedOptions";
 
 // Components
@@ -25,6 +24,13 @@ export type TitrType = {
   item: "text-center" | "text-left" | "text-right" | string;
   style?: string;
 };
+
+export type  FeaturesType =  {
+  id: number;
+  title: string;
+  icon: JSX.Element ;
+  description: string;
+}
 
 export type InputType = {
   id?: string;
