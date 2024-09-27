@@ -8,6 +8,7 @@ import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
 import { LogoutButton } from "../../elements";
 import { RiAdvertisementLine } from "react-icons/ri";
+import SpecialButton from "../../elements/SpecialButton";
 
 const links = [
   { name: "Admin", href: "/admin", icon: TiHome },
@@ -58,9 +59,12 @@ const NavLink = () => {
             );
           })}
         </ul>
-        <div className="max-w-full mt-4">
+        <div className="max-w-full my-4">
           <LogoutButton />
         </div>
+        <Link href="/admin/master" className="max-w-full my-4">
+          <SpecialButton title="Become Master Editor"/>
+        </Link>
       </div>
     </>
   );
