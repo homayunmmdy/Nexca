@@ -27,6 +27,12 @@ describe("button components", () => {
     expect(ButtonElement).toHaveAttribute("type", "button");
     expect(ButtonElement).toHaveClass("text-white");
     expect(ButtonElement).toBeDisabled();
-    expect(screen.getByLabelText('Click Button')).toBeInTheDocument();
+    expect(screen.getByLabelText("Click Button")).toBeInTheDocument();
+  });
+
+  it("should remove default btn style if user set removeDefaultStyle to true", () => {
+    render(<Button {...defaultProps} removeDefaultStyle={true} color={null} />);
+
+    expect(screen.queryByText("Click Here")).not.toHaveClass("btn");
   });
 });

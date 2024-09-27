@@ -2,6 +2,7 @@ import { Button, FullHoverAnimation } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa6";
+import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline, IoArrowUpCircleSharp } from "react-icons/io5";
 
 const Hero: React.FC = () => {
   return (
@@ -32,15 +33,10 @@ const Hero: React.FC = () => {
                 <Link href="/admin">
                   <Button
                     title="Admin Demo"
-                    color="btn-primary"
-                    style="btn-outline"
-                  />
-                </Link>
-                <Link title="scroll down" href="#services">
-                  <Button
-                    title={<FaArrowDown size={24} />}
-                    color="btn-primary"
-                    style="btn-circle btn-outline animate-bounce"
+                    removeDefaultStyle={true}
+                    color={null}
+                    icon={<IoArrowUpCircleSharp size={40} className="justify-end group-hover:rotate-90  ease-linear duration-300 rounded-full  group-hover:border-none p-1 rotate-45"/>}
+                    style="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg backdrop-blur-md lg:font-semibold isolation-auto border-indigo-500 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-indigo-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-3 py-1 overflow-hidden border-2 rounded-full group"
                   />
                 </Link>
               </div>

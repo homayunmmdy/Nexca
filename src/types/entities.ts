@@ -5,13 +5,14 @@ import { AllowedColors, AllowedInputType } from "./AllowedOptions";
 export type ButtonType = {
   title: string | JSX.Element;
   icon?: JSX.Element;
-  color: `btn-${AllowedColors}`;
+  color: `btn-${AllowedColors}`| null;
   type?: "submit" | "reset" | "button" | undefined;
   style?: string;
   disabled?: boolean;
   onClick?: () => void;
   onClickEvent?: (e: any) => void;
   ariaLabel?: string;
+  removeDefaultStyle? : boolean;
 };
 
 export type FullHoverAnimationType = {

@@ -9,14 +9,15 @@ const Button: React.FC<ButtonType> = ({
   onClick,
   disabled,
   type,
-  ariaLabel
+  ariaLabel,
+  removeDefaultStyle,
 }: ButtonType) => {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       type={type}
-      className={`btn ${color} ${style}`}
+      className={removeDefaultStyle ? style : `btn ${color} ${style}`}
       aria-label={ariaLabel}
     >
       {icon}
