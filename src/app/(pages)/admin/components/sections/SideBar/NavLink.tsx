@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CgFeed } from "react-icons/cg";
+import { GiTicket } from "react-icons/gi";
 import { MdOutlineMail, MdOutlinePostAdd } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
+import { RiAdvertisementLine } from "react-icons/ri";
 import { SiCloudflarepages } from "react-icons/si";
 import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
 import { LogoutButton } from "../../elements";
-import { RiAdvertisementLine } from "react-icons/ri";
 import SpecialButton from "../../elements/SpecialButton";
 
 const links = [
@@ -18,7 +19,8 @@ const links = [
   { name: "Services", href: "/admin/services", icon: SiCloudflarepages },
   { name: "Sections", href: "/admin/sections", icon: TbNewSection },
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
-  { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill }
+  { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
+  { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },
 ];
 const NavLink = () => {
   const pathname = usePathname();
@@ -63,7 +65,7 @@ const NavLink = () => {
           <LogoutButton />
         </div>
         <Link href="/admin/master" className="max-w-full my-4">
-          <SpecialButton title="Become Master Editor"/>
+          <SpecialButton title="Become Master Editor" />
         </Link>
       </div>
     </>
