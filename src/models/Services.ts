@@ -13,6 +13,8 @@ const servicesSchema = new Schema(
     secid: {
       type: Number,
     },
+    imgurl : String,
+    descrition: String,
   },
   {
     timestamps: true,

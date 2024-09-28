@@ -6,6 +6,7 @@ import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { usePathname } from "next/navigation";
 import ServicesNav from "../../demo/components/ServicesNav";
+import ServicesImg from './components/ServicesImg';
 
 const ServicesPage = () => {
   const pathname = usePathname();
@@ -28,6 +29,7 @@ const ServicesPage = () => {
     <>
       <ServicesNav />
       <div className="mx-auto p-10">
+        <ServicesImg />
         <div className="hidden md:grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
           {/* @ts-ignore */}
           {filteredData?.map((item) => (

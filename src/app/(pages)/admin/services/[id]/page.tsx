@@ -1,5 +1,6 @@
 import { SERVICES_API_URL } from '@/config/apiConstants';
-import { EditForm, EditSectionForm } from '../../components/elements';
+import EditServicesForm from '../../components/elements/EditServicesForm';
+
 {/* @ts-ignore */}
 const getServicesById = async (id) => {
     const API_URL = process.env.API_URL
@@ -32,7 +33,7 @@ const EditServicesPage = async ({ params }) => {
             _id: "new",
         };
     }
-    return <EditForm data={updateservicesData} apiUrl={SERVICES_API_URL} name="services"/>;
+    return <EditServicesForm data={updateservicesData} />;
 
 }
 

@@ -58,6 +58,16 @@ export type PostsCashType = {
   updatedAt: string;
   __v: number;
 };
+export type ServicesCashType = {
+  _id: string;
+  name: string;
+  secid: number;
+  description: string;
+  imgurl: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+};
 
 export type TicketsCashType = {
   _id: string;
