@@ -14,7 +14,7 @@ const servicesSchema = new Schema(
       type: Number,
     },
     imgurl : String,
-    descrition: String,
+    description: String,
   },
   {
     timestamps: true,

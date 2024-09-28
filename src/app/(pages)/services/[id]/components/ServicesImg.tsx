@@ -5,7 +5,7 @@ import useFetch from "@/hooks/useFetch";
 import { usePathname } from "next/navigation";
 
 const ServicesImg = () => {
-  const pathname = usePathname();
+  const pathname = usePathname(); 
   const id = pathname.slice(10);
   const { data: services, loading } = useFetch(
     SERVICES_IMG_KEY,
@@ -22,7 +22,7 @@ const ServicesImg = () => {
       {/* @ts-ignore */}
       {filteredData?.map((service) => (
         <div
-          className="hero min-h-screen mb-5 rounded-xl"
+          className="hero aspect-video md:min-h-screen mb-5 rounded-xl"
           key={service._id}
           style={{
             backgroundImage: `url(${service?.imgurl})`,
@@ -31,8 +31,8 @@ const ServicesImg = () => {
           <div className="hero-overlay bg-opacity-60 rounded-xl"></div>
           <div className="hero-content text-neutral-content text-center">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">{service.name}</h1>
-              <p className="mb-5">{service.description.slice(0, 90)}</p>
+              <h1 className="mb-5 text-5xl font-bold">{service?.name}</h1>
+              <p className="mb-5">{service?.description.slice(0, 90)}</p>
             </div>
           </div>
         </div>
