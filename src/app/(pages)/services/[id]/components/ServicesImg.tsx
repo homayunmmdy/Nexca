@@ -25,7 +25,7 @@ const ServicesImg = () => {
           className="hero min-h-screen mb-5 rounded-xl"
           key={service._id}
           style={{
-            backgroundImage: `url(${service.imgurl})`,
+            backgroundImage: `url(${service?.imgurl})`,
           }}
         >
           <div className="hero-overlay bg-opacity-60 rounded-xl"></div>

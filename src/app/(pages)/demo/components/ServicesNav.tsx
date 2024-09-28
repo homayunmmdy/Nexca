@@ -6,14 +6,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const ServicesNav = () => {
-  const { data: services, loading } = useFetch(SERVICES_QUERY_KEY,SERVICES_API_URL);
+  const { data: services, loading } = useFetch(
+    SERVICES_QUERY_KEY,
+    SERVICES_API_URL
+  );
   const pathname = usePathname();
 
   if (loading) {
     return (
       <>
         <h1 className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl my-3 md:my-4 lg:my-5 xl:my-6">
-          Serevices
+          {pathname.includes("services") ? "Services" : "Home"}
         </h1>
         <div className="w-[94%] md:w-[92%] mx-auto skeleton h-16"></div>
       </>
@@ -22,12 +25,12 @@ const ServicesNav = () => {
   return (
     <>
       <h1 className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl my-3 md:my-4 lg:my-5 xl:my-6">
-        Serevices
+        {pathname.includes("services") ? "Services" : "Home"}
       </h1>
       <div className="navbar w-[94%] md:w-[92%] mx-auto border-t-2 border-b-2 border-gray-500 p-0">
-        <div className="navbar-start">
-          <div className="navbar-center lg:flex">
-            <ul className="menu menu-horizontal p-0">
+        <div className="w-full  navbar-start">
+          <div className="navbar-center justify-center sm:justify-normal w-full py-2 flex-wrap flex">
+            <ul className="menu  menu-horizontal justify-center sm:justify-normal items-center sm:items-stretch p-0">
               {/* @ts-ignore */}
               {services?.map((item) => {
                 const href = `/services/${item.secid}`;
