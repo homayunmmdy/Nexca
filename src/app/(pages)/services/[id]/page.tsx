@@ -28,9 +28,9 @@ const ServicesPage = () => {
   return (
     <>
       <ServicesNav />
-      <div className="mx-auto p-10">
+      <div className="mx-auto p-4 md:p-10">
         <ServicesImg />
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
           {/* @ts-ignore */}
           {filteredData?.map((item) => (
             <PostCard key={item._id} post={item} />
