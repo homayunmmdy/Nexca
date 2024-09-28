@@ -76,7 +76,7 @@ const EditServicesForm = ({ data }) => {
               className="w-full rounded-xl border border-indigo-500 aspect-video"
             />
           </div>
-          
+          <FormField id="imgurl" name="imgurl" label="Image Link" value={formData.imgurl} onChange={handleChange} />
           <FormField
             id="name"
             name="name"
