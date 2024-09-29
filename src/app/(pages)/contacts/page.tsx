@@ -1,52 +1,33 @@
 "use client";
+import { Button, Input } from "@/components";
 import { CONTACTS_API_URL } from "@/config/apiConstants";
 import SiteConfig from "@/config/stie";
+import FormHandler from "@/util/handler/FormHandler";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Circles from "./components/Circle";
-import { Button, Input } from "@/components";
 import { FaUser } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
-import FormHandler from "@/util/handler/FormHandler";
+import { useRouter } from "next/navigation";
+import Circles from "./components/Circle";
 
 const ContactsPage = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handler = new FormHandler(setFormData)
+  const handler = new FormHandler(setFormData, CONTACTS_API_URL,router);
 
-  //@ts-ignore
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch(CONTACTS_API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ formData }),
-      });
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData);
 
-      const data = await response.json();
-      toast.success(data.message);
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Error:", error);
-      toast.error("Please Try One more time");
-    }
-  };
   return (
     <>
-      <ToastContainer />
+      {handler.isLoading && (
+        <span className="absolute loading loading-ring loading-lg"></span>
+      )}
       <section className="relative z-10 overflow-hidden py-12 sm:py-20 lg:py-[120px]">
         <div className="container mx-auto">
           <div className="flex flex-wrap mx-4 justify-center lg:justify-between">
@@ -59,7 +40,7 @@ const ContactsPage = () => {
                       name="name"
                       placeholder="Name"
                       value={formData.name}
-                      onChange={handler.handleChange}
+                      onChange={handler.trakeChange}
                       required={true}
                       style="w-full"
                       icon={<FaUser />}
@@ -71,7 +52,7 @@ const ContactsPage = () => {
                       name="email"
                       placeholder="Email Address"
                       value={formData.email}
-                      onChange={handler.handleChange}
+                      onChange={handler.trakeChange}
                       required={true}
                       style="w-full"
                       icon={<TfiEmail />}
@@ -83,7 +64,7 @@ const ContactsPage = () => {
                       name="message"
                       placeholder="Message"
                       value={formData.message}
-                      onChange={handler.handleChange}
+                      onChange={handler.trakeChange}
                       required
                       className="textarea textarea-bordered w-full"
                     ></textarea>
@@ -143,7 +124,9 @@ const ContactsPage = () => {
                   </div>
                   <div className="w-full">
                     <h4 className="mb-1 text-xl font-bold ">Phone Number</h4>
-                    <p className="text-sm sm:text-base">{SiteConfig.phoneNumber}</p>
+                    <p className="text-sm sm:text-base">
+                      {SiteConfig.phoneNumber}
+                    </p>
                   </div>
                 </div>
                 <div className="mb-8 flex w-full max-w-[370px] gap-3">

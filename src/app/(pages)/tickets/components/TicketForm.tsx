@@ -2,11 +2,10 @@
 import { Input } from "@/components";
 import { TICKETS_API_URL } from "@/config/apiConstants";
 import { MASTER_KEY } from "@/config/Constants";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
-import { Sidebar } from "../../admin/components/sections";
 import FormHandler from "@/util/handler/FormHandler";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+import { Sidebar } from "../../admin/components/sections";
 
 //@ts-ignore
 const TicketForm = ({ ticket }) => {
@@ -24,36 +23,9 @@ const TicketForm = ({ ticket }) => {
   };
 
   const [formData, setFormData] = useState(startingTicketData);
-  const [loading, setLoading] = useState(false);
+  const handler = new FormHandler(setFormData, TICKETS_API_URL, router);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => handler.submit(e, formData, ticket._id);
 
-  const handler = new FormHandler(setFormData)
-
-  //@ts-ignore
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const url = EDITMODE
-      ? `${TICKETS_API_URL}/${ticket._id}`
-      : `${TICKETS_API_URL}`;
-    const method = EDITMODE ? "PUT" : "POST";
-    const headers = { "Content-Type": "application/json" };
-
-    const res = await fetch(url, {
-      method,
-      headers,
-      body: JSON.stringify({ formData }),
-    });
-
-    if (!res.ok) {
-      setLoading(false);
-      toast.error(`Failed to ${EDITMODE ? "update" : "create"} ticket`);
-      throw new Error(`Failed to ${EDITMODE ? "update" : "create"} ticket`);
-    }
-
-    toast.success("Ticket Created Successfully");
-    router.refresh();
-    router.push("/");
-  };
   let master: boolean;
   const isMaster =
     typeof window !== "undefined" ? localStorage.getItem(MASTER_KEY) : false;
@@ -66,8 +38,7 @@ const TicketForm = ({ ticket }) => {
 
   return (
     <>
-      <ToastContainer />
-      {loading && (
+      {handler.isLoading && (
         <span className="absolute loading loading-ring loading-lg"></span>
       )}
       {master ? (
@@ -90,7 +61,7 @@ const TicketForm = ({ ticket }) => {
                         name="title"
                         placeholder="Title"
                         value={formData.title}
-                        onChange={handler.handleChange}
+                        onChange={handler.trakeChange}
                         color="input-primary"
                         required
                         style="w-full"
@@ -102,7 +73,7 @@ const TicketForm = ({ ticket }) => {
                         name="description"
                         placeholder="description"
                         value={formData.description}
-                        onChange={handler.handleChange}
+                        onChange={handler.trakeChange}
                         required
                         className="textarea textarea-primary w-full"
                       />
@@ -117,7 +88,7 @@ const TicketForm = ({ ticket }) => {
                             name="startTime"
                             placeholder="startTime"
                             value={formData.startTime}
-                            onChange={handler.handleChange}
+                            onChange={handler.trakeChange}
                             color="input-primary"
                             required
                             style="w-full"
@@ -133,7 +104,7 @@ const TicketForm = ({ ticket }) => {
                             placeholder="endTime"
                             value={formData.endTime}
                             color="input-primary"
-                            onChange={handler.handleChange}
+                            onChange={handler.trakeChange}
                             required
                             style="w-full"
                           />
@@ -147,7 +118,7 @@ const TicketForm = ({ ticket }) => {
                         placeholder="body"
                         value={formData.body}
                         rows={10}
-                        onChange={handler.handleChange}
+                        onChange={handler.trakeChange}
                         required
                         className="textarea textarea-primary w-full"
                       />
@@ -158,7 +129,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-1"
                           name="priority"
                           type="radio"
-                          onChange={handler.handleChange}
+                          onChange={handler.trakeChange}
                           value={1}
                           checked={formData.priority == 1}
                           className="radio radio-primary"
@@ -168,7 +139,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-2"
                           name="priority"
                           type="radio"
-                          onChange={handler.handleChange}
+                          onChange={handler.trakeChange}
                           value={2}
                           checked={formData.priority == 2}
                           className="radio radio-primary"
@@ -178,7 +149,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-3"
                           name="priority"
                           type="radio"
-                          onChange={handler.handleChange}
+                          onChange={handler.trakeChange}
                           value={3}
                           checked={formData.priority == 3}
                           className="radio radio-primary"
@@ -188,7 +159,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-4"
                           name="priority"
                           type="radio"
-                          onChange={handler.handleChange}
+                          onChange={handler.trakeChange}
                           value={4}
                           checked={formData.priority == 4}
                           className="radio radio-primary"
@@ -198,7 +169,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-5"
                           name="priority"
                           type="radio"
-                          onChange={handler.handleChange}
+                          onChange={handler.trakeChange}
                           value={5}
                           checked={formData.priority == 5}
                           className="radio radio-primary"
@@ -214,7 +185,7 @@ const TicketForm = ({ ticket }) => {
                         value={formData.progress}
                         min="0"
                         max="100"
-                        onChange={handler.handleChange}
+                        onChange={handler.trakeChange}
                         className="bg-red-600 h-2.5 rounded-full w-full"
                       />
                     </div>
@@ -222,7 +193,7 @@ const TicketForm = ({ ticket }) => {
                       <select
                         name="status"
                         value={formData.status}
-                        onChange={handler.handleChange}
+                        onChange={handler.trakeChange}
                         className="select select-primary w-full"
                       >
                         <option value="not started">Not Started</option>
@@ -256,7 +227,7 @@ const TicketForm = ({ ticket }) => {
                   name="title"
                   placeholder="Title"
                   value={formData.title}
-                  onChange={handler.handleChange}
+                  onChange={handler.trakeChange}
                   color="input-primary"
                   required
                   style="w-full"
@@ -268,7 +239,7 @@ const TicketForm = ({ ticket }) => {
                   name="description"
                   placeholder="description"
                   value={formData.description}
-                  onChange={handler.handleChange}
+                  onChange={handler.trakeChange}
                   required
                   className="textarea textarea-primary w-full"
                 />
@@ -280,7 +251,7 @@ const TicketForm = ({ ticket }) => {
                   placeholder="body"
                   value={formData.body}
                   rows={10}
-                  onChange={handler.handleChange}
+                  onChange={handler.trakeChange}
                   required
                   className="textarea textarea-primary w-full"
                 />

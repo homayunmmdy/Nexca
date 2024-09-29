@@ -1,11 +1,11 @@
 "use client";
+import { Input } from "@/components";
+import { SERVICES_API_URL } from "@/config/apiConstants";
+import FormHandler from "@/util/handler/FormHandler";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FormField } from ".";
-import { Input } from "@/components";
-import { SERVICES_API_URL } from "@/config/apiConstants";
-import Image from "next/image";
-import FormHandler from "@/util/handler/FormHandler";
 
 //@ts-ignore
 const EditServicesForm = ({ data }) => {
@@ -18,39 +18,14 @@ const EditServicesForm = ({ data }) => {
     imgurl: EDITMODE ? data.imgurl : "",
     description: EDITMODE ? data.description : "",
   };
+  
   const [formData, setFormData] = useState(startingData);
-  const [loading, setLoading] = useState(false);
-
-  const handler = new FormHandler(setFormData)
-
-  //@ts-ignore
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const url = EDITMODE
-      ? `${SERVICES_API_URL}/${data._id}`
-      : `${SERVICES_API_URL}`;
-    const method = EDITMODE ? "PUT" : "POST";
-    const headers = { "Content-Type": "application/json" };
-
-    const res = await fetch(url, {
-      method,
-      headers,
-      body: JSON.stringify({ formData }),
-    });
-
-    if (!res.ok) {
-      setLoading(false);
-      throw new Error(`Failed to ${EDITMODE ? "update" : "create"} services`);
-    }
-
-    router.refresh();
-    router.push("/admin");
-  };
+  const handler = new FormHandler(setFormData,SERVICES_API_URL,router);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => handler.submit(e, formData, data._id);
   return (
     <>
       <div className="flex justify-center">
-        {loading && (
+        {handler.isLoading && (
           <span className="absolute loading loading-ring loading-lg"></span>
         )}
         <form
@@ -71,13 +46,19 @@ const EditServicesForm = ({ data }) => {
               className="w-full rounded-xl border border-indigo-500 aspect-video"
             />
           </div>
-          <FormField id="imgurl" name="imgurl" label="Image Link" value={formData.imgurl} onChange={handler.handleChange} />
+          <FormField
+            id="imgurl"
+            name="imgurl"
+            label="Image Link"
+            value={formData.imgurl}
+            onChange={handler.trakeChange}
+          />
           <FormField
             id="name"
             name="name"
             label="Name"
             value={formData.name}
-            onChange={handler.handleChange}
+            onChange={handler.trakeChange}
           />
           <FormField
             id="secid"
@@ -85,7 +66,7 @@ const EditServicesForm = ({ data }) => {
             name="secid"
             label="secid"
             value={formData.secid}
-            onChange={handler.handleChange}
+            onChange={handler.trakeChange}
             required
           />
           <FormField
@@ -94,7 +75,7 @@ const EditServicesForm = ({ data }) => {
             type="textarea"
             label="Lead"
             value={formData.description}
-            onChange={handler.handleChange}
+            onChange={handler.trakeChange}
           />
           <Input
             type="submit"

@@ -2,49 +2,31 @@
 import { Button, Input } from "@/components";
 import { EMAIL_API_URL } from "@/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { TfiEmail } from "react-icons/tfi";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const EmailList = () => {
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     emails: "",
   });
 
-  const handler = new FormHandler(setFormData)
+  const handler = new FormHandler(setFormData, EMAIL_API_URL,router);
 
-  //@ts-ignore
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch(EMAIL_API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ formData }),
-      });
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData);
 
-      const data = await response.json();
-      toast.success(data.message);
-      setFormData({
-        emails: "",
-      });
-    } catch (error) {
-      console.error("Error:", error);
-      toast.error("Please Try One more time");
-    }
-  };
   return (
     <>
-      <ToastContainer />
+      {handler.isLoading && (
+        <span className="absolute loading loading-ring loading-lg"></span>
+      )}
       <div className="mx-auto max-w-7xl px-4 my-5">
         <div className="flex flex-wrap items-center w-full  p-5 mx-auto text-left border border-gray-200 rounded lg:flex-nowrap md:p-8 dark:border-gray-700">
           <div className="flex-1 w-full mb-5 md:mb-0 md:pr-5 lg:pr-10 md:w-1/2">
-            <h3 className="mb-2 text-2xl font-bold">
-              Subscribe to EmailList
-            </h3>
+            <h3 className="mb-2 text-2xl font-bold">Subscribe to EmailList</h3>
             <p>
               Provide your email to get email notification when we launch new
               products or publish new articles
@@ -64,7 +46,7 @@ const EmailList = () => {
                   style="flex-1 sm:mr-5 px-3 py-2"
                   icon={<TfiEmail />}
                   color="input-primary"
-                  onChange={handler.handleChange}
+                  onChange={handler.trakeChange}
                 />
                 <Button
                   title="Subscribe"
