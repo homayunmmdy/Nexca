@@ -7,6 +7,7 @@ import useFetch from "@/hooks/useFetch";
 import Image from "next/image";
 import { Input } from "@/components";
 import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
+import FormHandler from "@/util/handler/FormHandler";
 
 //@ts-ignore
 const EditPostForm = ({ ticket }) => {
@@ -24,14 +25,7 @@ const EditPostForm = ({ ticket }) => {
   const [formData, setFormData] = useState(startingTicketData);
   const [loading, setLoading] = useState(false);
 
-  //@ts-ignore
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  const handler = new FormHandler(setFormData)
 
   //@ts-ignore
   const handleSubmit = async (e) => {
@@ -72,12 +66,12 @@ const EditPostForm = ({ ticket }) => {
           width={695}
           className="w-full rounded-xl border border-indigo-500 aspect-video"
         /></div>
-        <FormField id="imgurl" name="imgurl" label="Image Link" value={formData.imgurl} onChange={handleChange} />
-        <FormField id="title" name="title" label="Title" value={formData.title} onChange={handleChange} required />
-        <FormField id="description" name="description" type="textarea" label="Lead" value={formData.description} onChange={handleChange} />
-        <FormField id="body" name="body" type="textarea" label="Body" value={formData.body} onChange={handleChange} required />
-        {services && <SelectField id="services" name="services" label="Services" value={formData.services} onChange={handleChange} options={services} />}
-        {sections && <SelectField id="section" name="section" label="Section" value={formData.section} onChange={handleChange} options={sections} />}
+        <FormField id="imgurl" name="imgurl" label="Image Link" value={formData.imgurl} onChange={handler.handleChange} />
+        <FormField id="title" name="title" label="Title" value={formData.title} onChange={handler.handleChange} required />
+        <FormField id="description" name="description" type="textarea" label="Lead" value={formData.description} onChange={handler.handleChange} />
+        <FormField id="body" name="body" type="textarea" label="Body" value={formData.body} onChange={handler.handleChange} required />
+        {services && <SelectField id="services" name="services" label="Services" value={formData.services} onChange={handler.handleChange} options={services} />}
+        {sections && <SelectField id="section" name="section" label="Section" value={formData.section} onChange={handler.handleChange} options={sections} />}
         <Input  type="submit" style='btn btn-active btn-primary' value={EDITMODE ? "Save" : "Post"}/>
       </form>
     </div>

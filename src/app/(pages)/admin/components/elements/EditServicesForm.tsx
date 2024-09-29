@@ -5,6 +5,7 @@ import { FormField } from ".";
 import { Input } from "@/components";
 import { SERVICES_API_URL } from "@/config/apiConstants";
 import Image from "next/image";
+import FormHandler from "@/util/handler/FormHandler";
 
 //@ts-ignore
 const EditServicesForm = ({ data }) => {
@@ -20,14 +21,8 @@ const EditServicesForm = ({ data }) => {
   const [formData, setFormData] = useState(startingData);
   const [loading, setLoading] = useState(false);
 
-  //@ts-ignore
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  const handler = new FormHandler(setFormData)
+
   //@ts-ignore
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -76,13 +71,13 @@ const EditServicesForm = ({ data }) => {
               className="w-full rounded-xl border border-indigo-500 aspect-video"
             />
           </div>
-          <FormField id="imgurl" name="imgurl" label="Image Link" value={formData.imgurl} onChange={handleChange} />
+          <FormField id="imgurl" name="imgurl" label="Image Link" value={formData.imgurl} onChange={handler.handleChange} />
           <FormField
             id="name"
             name="name"
             label="Name"
             value={formData.name}
-            onChange={handleChange}
+            onChange={handler.handleChange}
           />
           <FormField
             id="secid"
@@ -90,7 +85,7 @@ const EditServicesForm = ({ data }) => {
             name="secid"
             label="secid"
             value={formData.secid}
-            onChange={handleChange}
+            onChange={handler.handleChange}
             required
           />
           <FormField
@@ -99,7 +94,7 @@ const EditServicesForm = ({ data }) => {
             type="textarea"
             label="Lead"
             value={formData.description}
-            onChange={handleChange}
+            onChange={handler.handleChange}
           />
           <Input
             type="submit"

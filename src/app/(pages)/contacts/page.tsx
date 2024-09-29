@@ -9,6 +9,7 @@ import { Button, Input } from "@/components";
 import { FaUser } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
+import FormHandler from "@/util/handler/FormHandler";
 
 const ContactsPage = () => {
   const [formData, setFormData] = useState({
@@ -17,14 +18,7 @@ const ContactsPage = () => {
     message: "",
   });
 
-  //@ts-ignore
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  const handler = new FormHandler(setFormData)
 
   //@ts-ignore
   const handleSubmit = async (e) => {
@@ -65,7 +59,7 @@ const ContactsPage = () => {
                       name="name"
                       placeholder="Name"
                       value={formData.name}
-                      onChange={handleChange}
+                      onChange={handler.handleChange}
                       required={true}
                       style="w-full"
                       icon={<FaUser />}
@@ -77,7 +71,7 @@ const ContactsPage = () => {
                       name="email"
                       placeholder="Email Address"
                       value={formData.email}
-                      onChange={handleChange}
+                      onChange={handler.handleChange}
                       required={true}
                       style="w-full"
                       icon={<TfiEmail />}
@@ -89,7 +83,7 @@ const ContactsPage = () => {
                       name="message"
                       placeholder="Message"
                       value={formData.message}
-                      onChange={handleChange}
+                      onChange={handler.handleChange}
                       required
                       className="textarea textarea-bordered w-full"
                     ></textarea>

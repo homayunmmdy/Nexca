@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { Sidebar } from "../../admin/components/sections";
+import FormHandler from "@/util/handler/FormHandler";
 
 //@ts-ignore
 const TicketForm = ({ ticket }) => {
@@ -25,14 +26,7 @@ const TicketForm = ({ ticket }) => {
   const [formData, setFormData] = useState(startingTicketData);
   const [loading, setLoading] = useState(false);
 
-  //@ts-ignore
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  const handler = new FormHandler(setFormData)
 
   //@ts-ignore
   const handleSubmit = async (e) => {
@@ -96,7 +90,7 @@ const TicketForm = ({ ticket }) => {
                         name="title"
                         placeholder="Title"
                         value={formData.title}
-                        onChange={handleChange}
+                        onChange={handler.handleChange}
                         color="input-primary"
                         required
                         style="w-full"
@@ -108,7 +102,7 @@ const TicketForm = ({ ticket }) => {
                         name="description"
                         placeholder="description"
                         value={formData.description}
-                        onChange={handleChange}
+                        onChange={handler.handleChange}
                         required
                         className="textarea textarea-primary w-full"
                       />
@@ -123,7 +117,7 @@ const TicketForm = ({ ticket }) => {
                             name="startTime"
                             placeholder="startTime"
                             value={formData.startTime}
-                            onChange={handleChange}
+                            onChange={handler.handleChange}
                             color="input-primary"
                             required
                             style="w-full"
@@ -139,7 +133,7 @@ const TicketForm = ({ ticket }) => {
                             placeholder="endTime"
                             value={formData.endTime}
                             color="input-primary"
-                            onChange={handleChange}
+                            onChange={handler.handleChange}
                             required
                             style="w-full"
                           />
@@ -153,7 +147,7 @@ const TicketForm = ({ ticket }) => {
                         placeholder="body"
                         value={formData.body}
                         rows={10}
-                        onChange={handleChange}
+                        onChange={handler.handleChange}
                         required
                         className="textarea textarea-primary w-full"
                       />
@@ -164,7 +158,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-1"
                           name="priority"
                           type="radio"
-                          onChange={handleChange}
+                          onChange={handler.handleChange}
                           value={1}
                           checked={formData.priority == 1}
                           className="radio radio-primary"
@@ -174,7 +168,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-2"
                           name="priority"
                           type="radio"
-                          onChange={handleChange}
+                          onChange={handler.handleChange}
                           value={2}
                           checked={formData.priority == 2}
                           className="radio radio-primary"
@@ -184,7 +178,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-3"
                           name="priority"
                           type="radio"
-                          onChange={handleChange}
+                          onChange={handler.handleChange}
                           value={3}
                           checked={formData.priority == 3}
                           className="radio radio-primary"
@@ -194,7 +188,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-4"
                           name="priority"
                           type="radio"
-                          onChange={handleChange}
+                          onChange={handler.handleChange}
                           value={4}
                           checked={formData.priority == 4}
                           className="radio radio-primary"
@@ -204,7 +198,7 @@ const TicketForm = ({ ticket }) => {
                           id="priority-5"
                           name="priority"
                           type="radio"
-                          onChange={handleChange}
+                          onChange={handler.handleChange}
                           value={5}
                           checked={formData.priority == 5}
                           className="radio radio-primary"
@@ -220,7 +214,7 @@ const TicketForm = ({ ticket }) => {
                         value={formData.progress}
                         min="0"
                         max="100"
-                        onChange={handleChange}
+                        onChange={handler.handleChange}
                         className="bg-red-600 h-2.5 rounded-full w-full"
                       />
                     </div>
@@ -228,7 +222,7 @@ const TicketForm = ({ ticket }) => {
                       <select
                         name="status"
                         value={formData.status}
-                        onChange={handleChange}
+                        onChange={handler.handleChange}
                         className="select select-primary w-full"
                       >
                         <option value="not started">Not Started</option>
@@ -262,7 +256,7 @@ const TicketForm = ({ ticket }) => {
                   name="title"
                   placeholder="Title"
                   value={formData.title}
-                  onChange={handleChange}
+                  onChange={handler.handleChange}
                   color="input-primary"
                   required
                   style="w-full"
@@ -274,7 +268,7 @@ const TicketForm = ({ ticket }) => {
                   name="description"
                   placeholder="description"
                   value={formData.description}
-                  onChange={handleChange}
+                  onChange={handler.handleChange}
                   required
                   className="textarea textarea-primary w-full"
                 />
@@ -286,7 +280,7 @@ const TicketForm = ({ ticket }) => {
                   placeholder="body"
                   value={formData.body}
                   rows={10}
-                  onChange={handleChange}
+                  onChange={handler.handleChange}
                   required
                   className="textarea textarea-primary w-full"
                 />

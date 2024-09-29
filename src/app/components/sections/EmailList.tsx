@@ -1,6 +1,7 @@
 "use client";
 import { Button, Input } from "@/components";
 import { EMAIL_API_URL } from "@/config/apiConstants";
+import FormHandler from "@/util/handler/FormHandler";
 import { useState } from "react";
 import { TfiEmail } from "react-icons/tfi";
 import { ToastContainer, toast } from "react-toastify";
@@ -11,14 +12,7 @@ const EmailList = () => {
     emails: "",
   });
 
-  //@ts-ignore
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  const handler = new FormHandler(setFormData)
 
   //@ts-ignore
   const handleSubmit = async (e) => {
@@ -70,7 +64,7 @@ const EmailList = () => {
                   style="flex-1 sm:mr-5 px-3 py-2"
                   icon={<TfiEmail />}
                   color="input-primary"
-                  onChange={handleChange}
+                  onChange={handler.handleChange}
                 />
                 <Button
                   title="Subscribe"

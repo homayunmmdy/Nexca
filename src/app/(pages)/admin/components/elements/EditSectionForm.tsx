@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FormField } from '.';
 import { Input } from '@/components';
+import FormHandler from '@/util/handler/FormHandler';
 
 //@ts-ignore
 const EditSectionForm = ({ data }) => {
@@ -17,14 +18,8 @@ const EditSectionForm = ({ data }) => {
     const [formData, setFormData] = useState(startingData);
     const [loading, setLoading] = useState(false);
 
-    //@ts-ignore
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevState) => ({
-            ...prevState,
-            [name]: value,
-        }));
-    };
+    const handler = new FormHandler(setFormData)
+
     //@ts-ignore
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -53,8 +48,8 @@ const EditSectionForm = ({ data }) => {
                 {loading && <span className="absolute loading loading-ring loading-lg"></span>}
                 <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-3 w-full md:w-1/2 mb-3">
                     <h3 className="text-center font-semibold text-2xl">{EDITMODE ? "Edit Section" : "New Section"}</h3>
-                    <FormField id="name" name="name" label="Name" value={formData.name} onChange={handleChange} />
-                    <FormField id="secid" type='number' name="secid" label="secid" value={formData.secid} onChange={handleChange} required />
+                    <FormField id="name" name="name" label="Name" value={formData.name} onChange={handler.handleChange} />
+                    <FormField id="secid" type='number' name="secid" label="secid" value={formData.secid} onChange={handler.handleChange} required />
                     <Input type="submit" style='btn btn-active btn-primary' value={EDITMODE ? "Save" : "Post"}/>
                 </form>
             </div>

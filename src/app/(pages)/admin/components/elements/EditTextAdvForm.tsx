@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { FormField } from '.';
 import { TEXTADV_API_URL } from '@/config/apiConstants';
 import { Input } from '@/components';
+import FormHandler from '@/util/handler/FormHandler';
 
 //@ts-ignore
 const EditTextAdvForm = ({ data }) => {
@@ -19,14 +20,8 @@ const EditTextAdvForm = ({ data }) => {
     const [formData, setFormData] = useState(startingData);
     const [loading, setLoading] = useState(false);
 
-    //@ts-ignore
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevState) => ({
-            ...prevState,
-            [name]: value,
-        }));
-    };
+    const handler = new FormHandler(setFormData)
+
      //@ts-ignore
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -55,10 +50,10 @@ const EditTextAdvForm = ({ data }) => {
                 {loading && <span className="absolute loading loading-ring loading-lg"></span>}
                 <form onSubmit={handleSubmit} method="post" className="flex flex-col gap-3 w-full md:w-1/2 mb-3">
                     <h3 className="text-center font-semibold text-2xl">{EDITMODE ? "Edit TextAdv" : "New TextAdv"}</h3>
-                    <FormField id="textadvid" type='number' name="textadvid" label="textadvid" value={formData.textadvid} onChange={handleChange} required />
-                    <FormField id="advname" name="advname" label="advname" value={formData.advname} onChange={handleChange} required/>
-                    <FormField id="body" name="body" label="body" value={formData.body} onChange={handleChange} required/>
-                    <FormField id="link" name="link" label="link" value={formData.link} onChange={handleChange} required/>
+                    <FormField id="textadvid" type='number' name="textadvid" label="textadvid" value={formData.textadvid} onChange={handler.handleChange} required />
+                    <FormField id="advname" name="advname" label="advname" value={formData.advname} onChange={handler.handleChange} required/>
+                    <FormField id="body" name="body" label="body" value={formData.body} onChange={handler.handleChange} required/>
+                    <FormField id="link" name="link" label="link" value={formData.link} onChange={handler.handleChange} required/>
                     <Input type="submit" style='btn btn-active btn-primary' value={EDITMODE ? "Save" : "Post"}/>
                 </form>
             </div>
