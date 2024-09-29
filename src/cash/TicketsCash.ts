@@ -1,4 +1,4 @@
-import { TicketsCashType } from "@/types/entities";
+import { TicketsCashType } from "@/types/CashTypes";
 
 const TicketsCash: TicketsCashType[] = [
   {

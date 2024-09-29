@@ -1,4 +1,4 @@
-import { ServicesCashType } from "@/types/entities";
+import { ServicesCashType } from "@/types/CashTypes";
 
 const ServicesCash: ServicesCashType[] = [
   {

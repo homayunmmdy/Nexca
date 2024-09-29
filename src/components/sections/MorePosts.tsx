@@ -1,7 +1,7 @@
 "use client";
 import { MORE_POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
-import { PostsCashType } from "@/types/entities";
+import { PostsCashType } from "@/types/CashTypes";
 import { PostsSkeleton } from "../skelton";
 import Titr from "../Titr";
 import PostCard from "./PostCard";

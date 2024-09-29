@@ -1,4 +1,6 @@
-const ContactsData = [
+import { ContactsCashType } from "@/types/CashTypes";
+
+const ContactsData: ContactsCashType[] = [
   {
     _id: "6641b06d0caf3407cd78b61e",
     name: "Homayoun",

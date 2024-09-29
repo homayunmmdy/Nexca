@@ -2,7 +2,7 @@
 import Titr from "@/components/Titr";
 import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
-import { PostsCashType } from "@/types/entities";
+import { PostsCashType } from "@/types/CashTypes";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button";

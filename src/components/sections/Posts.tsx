@@ -2,7 +2,7 @@
 import Titr from "@/components/Titr";
 import { POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
-import { PostsCashType } from "@/types/entities";
+import { PostsCashType } from "@/types/CashTypes";
 import { PostsSecSkeleton } from "../skelton";
 import PostCard from "./PostCard";
 

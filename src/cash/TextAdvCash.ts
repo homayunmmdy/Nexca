@@ -1,4 +1,4 @@
-import { TextAdvCashType } from "@/types/entities";
+import { TextAdvCashType } from "@/types/CashTypes";
 
 const TextAdvCash: TextAdvCashType[] = [
     {

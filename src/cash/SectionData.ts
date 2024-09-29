@@ -1,4 +1,6 @@
-const SectionData = [
+import { SectionCashType } from "@/types/CashTypes";
+
+const SectionData: SectionCashType[] = [
   {
     _id: "664dab119ddca5e2184ff315",
     name: "Main Post",

@@ -1,4 +1,6 @@
-const EmailData = [
+import { EmailCashType } from "@/types/CashTypes";
+
+const EmailData: EmailCashType[] = [
   {
     _id: "6641b06d0caf3407cd78b61e",
     email: "mosh@gmail.com",
