@@ -1,22 +1,22 @@
 "use client";
 import { Spinner } from "@/components";
 import { SECTIONS_API_URL } from "@/config/apiConstants";
+import { SECTIONS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { checkMaster } from "@/util/checkMaster";
 import { DataTable } from "../components/elements";
-import { MASTER_KEY, SECTIONS_QUERY_KEY } from "@/config/Constants";
 
 const AdminSectionPage = () => {
-  const { data: sections, loading } = useFetch(SECTIONS_QUERY_KEY, SECTIONS_API_URL);
+  const { data: sections, loading } = useFetch(
+    SECTIONS_QUERY_KEY,
+    SECTIONS_API_URL
+  );
   if (loading) {
     return <Spinner />;
   }
-  let master: boolean;
-  const isMaster = localStorage.getItem(MASTER_KEY);
-  if (isMaster) {
-    master = true;
-  } else {
-    master = false;
-  }
+
+  let master = checkMaster();
+
   return (
     <>
       <DataTable editor={master} data={sections} path="sections" />

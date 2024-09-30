@@ -1,7 +1,7 @@
 "use client";
 import { Input } from "@/components";
 import { TICKETS_API_URL } from "@/config/apiConstants";
-import { MASTER_KEY } from "@/config/Constants";
+import { checkMaster } from "@/util/checkMaster";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -24,17 +24,10 @@ const TicketForm = ({ ticket }) => {
 
   const [formData, setFormData] = useState(startingTicketData);
   const handler = new FormHandler(setFormData, TICKETS_API_URL, router);
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => handler.submit(e, formData, ticket._id);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData, ticket._id);
 
-  let master: boolean;
-  const isMaster =
-    typeof window !== "undefined" ? localStorage.getItem(MASTER_KEY) : false;
-
-  if (isMaster) {
-    master = true;
-  } else {
-    master = false;
-  }
+  let master = checkMaster();
 
   return (
     <>
