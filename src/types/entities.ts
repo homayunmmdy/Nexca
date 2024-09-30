@@ -47,3 +47,8 @@ export type InputType = {
 };
 
 
+export type CollapseType = {
+  id: number;
+  label: string;
+  body: string;
+};
