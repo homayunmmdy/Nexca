@@ -11,6 +11,7 @@ const postSchema = new Schema(
     section: String,
     services: String,
     body: String,
+    categories: [{ id: Number, name: String }],
   },
   {
     timestamps: true,

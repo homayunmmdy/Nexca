@@ -24,14 +24,51 @@ const EditPostForm = ({ ticket }) => {
     section: EDITMODE ? ticket.section : "1",
     services: EDITMODE ? ticket.services : "1",
     imgurl: EDITMODE ? ticket.imgurl : "",
+    categories: EDITMODE ? ticket.categories : [],
   };
 
   const [formData, setFormData] = useState(startingTicketData);
+  const [categoryInput, setCategoryInput] = useState("");
   const handler = new FormHandler(setFormData,POST_API_URL,router);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => handler.submit(e, formData, ticket._id);
 
   const { data: services } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
   const { data: sections } = useFetch(SECTIONS_QUERY_KEY, SECTIONS_API_URL);
+
+    // Add new category to the formData.categories array
+    const addCategory = () => {
+      const newCategory = {
+        id: Date.now(), 
+        name: categoryInput,
+      };
+      setFormData((prevState) => ({
+        ...prevState,
+        categories: [...prevState.categories, newCategory],
+      }));
+      setCategoryInput(""); // Clear the input field
+    };
+  
+    // Handle category name change for existing categories
+    const handleCategoryChange = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
+      const { value } = e.target;
+      setFormData((prevState) => ({
+        ...prevState,
+        // @ts-ignore
+        categories: prevState.categories.map((cat) =>
+          cat.id === id ? { ...cat, name: value } : cat
+        ),
+      }));
+    };
+  
+    // Remove category
+    const removeCategory = (id: number) => {
+      setFormData((prevState) => ({
+        ...prevState,
+        // @ts-ignore
+        categories: prevState.categories.filter((cat) => cat.id !== id),
+      }));
+    };
+  
 
   return (
     <div className="flex justify-center">
@@ -88,6 +125,42 @@ const EditPostForm = ({ ticket }) => {
           onChange={handler.trakeChange}
           required
         />
+         {/* Categories List */}
+         <div className="flex flex-col gap-2">
+            <h4>Categories</h4>
+            {/* @ts-ignore */}
+            {formData.categories.map((category, index) => (
+              <div key={category.id} className="flex items-center gap-2">
+                <input
+                  type="text"
+                  value={category.name}
+                  onChange={(e) => handleCategoryChange(e, category.id)}
+                  className="input input-bordered"
+                />
+                <button
+                  type="button"
+                  onClick={() => removeCategory(category.id)}
+                  className="btn btn-error"
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
+
+            {/* Add New Category */}
+            <div className="flex gap-2 mt-2">
+              <input
+                type="text"
+                value={categoryInput}
+                onChange={(e) => setCategoryInput(e.target.value)}
+                placeholder="New Category"
+                className="input input-bordered"
+              />
+              <button type="button" onClick={addCategory} className="btn btn-primary">
+                Add Category
+              </button>
+            </div>
+          </div>
         {services && (
           <SelectField
             id="services"
