@@ -1,5 +1,5 @@
 "use client";
-import { Input } from "@/components";
+import { Button, Input } from "@/components";
 import {
   POST_API_URL,
   SECTIONS_API_URL,
@@ -12,6 +12,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FormField, SelectField } from "../elements";
+import { MdDeleteOutline } from "react-icons/md";
 
 //@ts-ignore
 const EditPostForm = ({ ticket }) => {
@@ -125,41 +126,40 @@ const EditPostForm = ({ ticket }) => {
           onChange={handler.trakeChange}
           required
         />
-         {/* Categories List */}
-         <div className="flex flex-col gap-2">
-            <h4>Categories</h4>
-            {/* @ts-ignore */}
-            {formData.categories.map((category, index) => (
-              <div key={category.id} className="flex items-center gap-2">
-                <input
-                  type="text"
-                  value={category.name}
-                  onChange={(e) => handleCategoryChange(e, category.id)}
-                  className="input input-bordered"
-                />
-                <button
-                  type="button"
-                  onClick={() => removeCategory(category.id)}
-                  className="btn btn-error"
-                >
-                  Remove
-                </button>
-              </div>
-            ))}
-
-            {/* Add New Category */}
-            <div className="flex gap-2 mt-2">
-              <input
+          {/* Add New Category */}
+          <div className="flex w-full gap-2 mt-2">
+              <Input
                 type="text"
                 value={categoryInput}
                 onChange={(e) => setCategoryInput(e.target.value)}
                 placeholder="New Category"
-                className="input input-bordered"
+                style="w-full"
               />
-              <button type="button" onClick={addCategory} className="btn btn-primary">
-                Add Category
-              </button>
+              <Button title="Add Category" type="button" onClick={addCategory} color="btn-primary" />
             </div>
+
+         {/* Categories List */}
+         <div className="flex flex-col gap-2">
+            <h4>Categories</h4>
+            {/* @ts-ignore */}
+            {formData.categories.map((category) => (
+              <div key={category.id} className="flex w-full items-center gap-2">
+                <Input
+                  type="text"
+                  value={category.name}
+                  onChange={(e) => handleCategoryChange(e, category.id)}
+                  style="w-full"
+                />
+                <Button
+                  type="button"
+                  onClick={() => removeCategory(category.id)}
+                  color="btn-error"
+                  title={<MdDeleteOutline />} 
+                  />
+              </div>
+            ))}
+
+          
           </div>
         {services && (
           <SelectField
