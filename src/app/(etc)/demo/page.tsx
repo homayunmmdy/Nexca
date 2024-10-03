@@ -1,6 +1,11 @@
-import { LinearAds } from "@/components";
+import {
+  MainSec,
+  PostsSec,
+  SingleCardSec,
+  VerticalPostsSec,
+} from "@/etc/components/sections";
 import ServicesNav from "./components/ServicesNav";
-import { MainSec, PostsSec, SingleCardSec, VerticalPostsSec } from "@/components/sections";
+import { LinearAds } from "@/etc/components/ads";
 
 const DemoPage = () => {
   return (

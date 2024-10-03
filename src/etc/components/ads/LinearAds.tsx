@@ -1,6 +1,6 @@
 "use client";
 import Titr from "@/components/Titr";
-import { TEXTADV_API_URL } from "@/config/apiConstants";
+import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
 import { TextAdvCashType } from "@/types/CashTypes";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";

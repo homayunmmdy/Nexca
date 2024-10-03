@@ -1,4 +1,4 @@
-import TicketsCash from "@/cash/TicketsCash";
+import TicketsCash from "@/etc/cash/TicketsCash";
 import { TicketModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

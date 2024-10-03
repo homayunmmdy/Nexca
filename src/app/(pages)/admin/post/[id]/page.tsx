@@ -1,9 +1,9 @@
-import { POST_API_URL } from "@/config/apiConstants";
+import { POST_API_URL } from "@/etc/config/apiConstants";
 import { EditPostForm } from "../../components/sections";
 
 //@ts-ignore
 const getTicketById = async (id) => {
-  const API_URL = process.env.API_URL
+  const API_URL = process.env.API_URL;
 
   try {
     const res = await fetch(`${API_URL}${POST_API_URL}/${id}`, {

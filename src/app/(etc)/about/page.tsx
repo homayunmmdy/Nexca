@@ -1,4 +1,4 @@
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/etc/config/stie";
 import Link from "next/link";
 
 export default function About() {
@@ -27,9 +27,7 @@ export default function About() {
           ! Our platform allows you to create and manage your blog website
           effortlessly with our powerful admin panel.
         </p>
-        <h2 className="mt-8 text-2xl font-semibold">
-          Our Mission
-        </h2>
+        <h2 className="mt-8 text-2xl font-semibold">Our Mission</h2>
         <p className="mt-4 text-lg ">
           At{" "}
           <Link
@@ -42,9 +40,7 @@ export default function About() {
           , we aim to simplify website management, making it accessible to
           everyone, regardless of coding knowledge.
         </p>
-        <h2 className="mt-8 text-2xl font-semibold">
-          Technologies We Use
-        </h2>
+        <h2 className="mt-8 text-2xl font-semibold">Technologies We Use</h2>
         <ul className="mt-4 text-lg  lzist-disc list-inside">
           <li>Next.js for application structure and routing</li>
           <li>React for dynamic and interactive user interfaces</li>
@@ -53,16 +49,12 @@ export default function About() {
           <li>Clerk for secure authentication</li>
           <li>Vercel for hosting</li>
         </ul>
-        <h2 className="mt-8 text-2xl font-semibold">
-          Our Partners
-        </h2>
+        <h2 className="mt-8 text-2xl font-semibold">Our Partners</h2>
         <p className="mt-4 text-lg ">
           We collaborate with industry leaders like Next.js, React, and Vercel
           to provide you with the best tools and services.
         </p>
-        <h2 className="mt-8 text-2xl font-semibold">
-          Contact Us
-        </h2>
+        <h2 className="mt-8 text-2xl font-semibold">Contact Us</h2>
         <p className="mt-4 text-lg ">
           Got questions? We're here to help! Reach out to us anytime for support
           and inquiries.{" "}

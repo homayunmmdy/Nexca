@@ -1,4 +1,4 @@
-import ContactsData from "@/cash/ContactsData";
+import ContactsData from "@/etc/cash/ContactsData";
 import { ContactsModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

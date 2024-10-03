@@ -1,4 +1,4 @@
-import TextAdvCash from "@/cash/TextAdvCash";
+import TextAdvCash from "@/etc/cash/TextAdvCash";
 import { TextAdvModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

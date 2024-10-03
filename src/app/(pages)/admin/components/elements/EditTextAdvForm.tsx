@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@/components";
-import { TEXTADV_API_URL } from "@/config/apiConstants";
+import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -18,8 +18,9 @@ const EditTextAdvForm = ({ data }) => {
     link: EDITMODE ? data.link : "",
   };
   const [formData, setFormData] = useState(startingData);
-  const handler = new FormHandler(setFormData,TEXTADV_API_URL,router);
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => handler.submit(e, formData, data._id);
+  const handler = new FormHandler(setFormData, TEXTADV_API_URL, router);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData, data._id);
 
   return (
     <>

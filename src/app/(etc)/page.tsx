@@ -6,7 +6,7 @@ import {
   Features,
   Hero,
   PriceList,
-} from "./components/sections";
+} from "@/app/(etc)/components/sections";
 
 const Home: React.FC = () => {
   return (

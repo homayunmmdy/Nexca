@@ -1,6 +1,6 @@
 "use client";
-import { SERVICES_API_URL } from "@/config/apiConstants";
-import { SERVICES_QUERY_KEY } from "@/config/Constants";
+import { SERVICES_API_URL } from "@/etc/config/apiConstants";
+import { SERVICES_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

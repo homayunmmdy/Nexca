@@ -1,10 +1,10 @@
+import { ReactQueryProvider } from "@/components";
+import SiteConfig from "@/etc/config/stie";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Footer } from "./(etc)/components";
+import Header from "./(etc)/components/Header";
 import "./globals.css";
-import Header from "./components/Header";
-import { Footer } from "./components";
-import SiteConfig from "@/config/stie";
-import { ReactQueryProvider } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 

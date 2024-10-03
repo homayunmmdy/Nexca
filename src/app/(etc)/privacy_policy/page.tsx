@@ -1,4 +1,4 @@
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/etc/config/stie";
 import React from "react";
 
 const PrivicyPolicyPage: React.FC = () => {
@@ -103,7 +103,8 @@ const PrivicyPolicyPage: React.FC = () => {
             <li>
               If you have previously agreed to us using your personal
               information for direct marketing purposes, you may change your
-              mind at any time by writing to or emailing us at {SiteConfig.email}
+              mind at any time by writing to or emailing us at{" "}
+              {SiteConfig.email}
             </li>
             <li>
               We will not sell, distribute, or lease your personal information

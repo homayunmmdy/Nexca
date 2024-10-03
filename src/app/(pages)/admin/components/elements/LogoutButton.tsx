@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
-import { useRouter } from "next/navigation";
-import useCheckLogin from "@/hooks/useCheckLogin";
 import { Button } from "@/components";
-import { AUTH_KEY } from "@/config/Constants";
+import { AUTH_KEY } from "@/etc/config/Constants";
+import useCheckLogin from "@/hooks/useCheckLogin";
+import { useRouter } from "next/navigation";
 
 const LogoutButton = () => {
   const router = useRouter();

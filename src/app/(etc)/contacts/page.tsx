@@ -1,13 +1,13 @@
 "use client";
 import { Button, Input } from "@/components";
-import { CONTACTS_API_URL } from "@/config/apiConstants";
-import SiteConfig from "@/config/stie";
+import { CONTACTS_API_URL } from "@/etc/config/apiConstants";
+import SiteConfig from "@/etc/config/stie";
 import FormHandler from "@/util/handler/FormHandler";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
-import { useRouter } from "next/navigation";
 import Circles from "./components/Circle";
 
 const ContactsPage = () => {
@@ -18,7 +18,7 @@ const ContactsPage = () => {
     message: "",
   });
 
-  const handler = new FormHandler(setFormData, CONTACTS_API_URL,router);
+  const handler = new FormHandler(setFormData, CONTACTS_API_URL, router);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
     handler.submit(e, formData);

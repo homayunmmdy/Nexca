@@ -1,15 +1,17 @@
-"use client"
+"use client";
 import { Spinner } from "@/components";
-import { CONTACTS_API_URL } from "@/config/apiConstants";
+import { CONTACTS_API_URL } from "@/etc/config/apiConstants";
+import { CONTACTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { DeleteBlock } from "../components/elements";
-import { CONTACTS_QUERY_KEY } from "@/config/Constants";
-
 
 const ContactsPage = () => {
-  const { data: contactData, loading } = useFetch(CONTACTS_QUERY_KEY,CONTACTS_API_URL)
+  const { data: contactData, loading } = useFetch(
+    CONTACTS_QUERY_KEY,
+    CONTACTS_API_URL
+  );
   if (loading) {
-    return <Spinner />
+    return <Spinner />;
   }
   return (
     <div className="p-5">

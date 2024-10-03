@@ -1,11 +1,11 @@
 "use client";
 import Titr from "@/components/Titr";
-import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
+import { SINGLE_POST_QUERY_KEY } from "@/etc/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../Button";
+import Button from "../../../components/Button";
 import { SingleCardSkeleton } from "../skelton";
 
 const SingleCard = () => {

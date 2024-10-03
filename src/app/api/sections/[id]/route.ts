@@ -1,4 +1,4 @@
-import SectionData from "@/cash/SectionData";
+import SectionData from "@/etc/cash/SectionData";
 import { SectionModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

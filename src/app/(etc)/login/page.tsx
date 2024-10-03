@@ -1,12 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Button, Input } from "@/components";
+import { AUTH_KEY } from "@/etc/config/Constants";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Link from "next/link";
 import Toast from "./components/Toast";
-import { Button, Input } from "@/components";
-import { AUTH_KEY } from "@/config/Constants";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -50,13 +50,13 @@ const Login = () => {
                     >
                       Username
                     </label>
-                    <Input 
-                     type="text"
-                     name="username"
-                     value={username}
-                     onChange={(e) => setUsername(e.target.value)}
-                     style="p-3 focus:scale-105 ease-in-out duration-300 rounded-lg w-full"
-                     required={true}
+                    <Input
+                      type="text"
+                      name="username"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                      style="p-3 focus:scale-105 ease-in-out duration-300 rounded-lg w-full"
+                      required={true}
                     />
                   </div>
                   <div>
@@ -75,7 +75,13 @@ const Login = () => {
                       style="p-3 focus:scale-105 ease-in-out duration-300 rounded-lg w-full"
                     />
                   </div>
-                  <Button title="LOG IN" type="submit" color="btn-primary" style="w-full mt-6 text-white" onClick={handleLogin} />
+                  <Button
+                    title="LOG IN"
+                    type="submit"
+                    color="btn-primary"
+                    style="w-full mt-6 text-white"
+                    onClick={handleLogin}
+                  />
                 </form>
 
                 <div className="text-gray-500 flex text-center flex-col mt-4 items-center text-sm">

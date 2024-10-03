@@ -1,4 +1,4 @@
-import EmailData from "@/cash/EmailData";
+import EmailData from "@/etc/cash/EmailData";
 import { EmailsModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

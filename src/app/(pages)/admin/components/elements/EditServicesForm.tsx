@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@/components";
-import { SERVICES_API_URL } from "@/config/apiConstants";
+import { SERVICES_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -18,10 +18,11 @@ const EditServicesForm = ({ data }) => {
     imgurl: EDITMODE ? data.imgurl : "",
     description: EDITMODE ? data.description : "",
   };
-  
+
   const [formData, setFormData] = useState(startingData);
-  const handler = new FormHandler(setFormData,SERVICES_API_URL,router);
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => handler.submit(e, formData, data._id);
+  const handler = new FormHandler(setFormData, SERVICES_API_URL, router);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData, data._id);
   return (
     <>
       <div className="flex justify-center">

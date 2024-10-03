@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@/components";
-import { TICKETS_API_URL } from "@/config/apiConstants";
+import { TICKETS_API_URL } from "@/etc/config/apiConstants";
 import { checkMaster } from "@/util/checkMaster";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";

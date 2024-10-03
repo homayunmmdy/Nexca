@@ -1,9 +1,9 @@
-import { TICKETS_API_URL } from "@/config/apiConstants";
+import { TICKETS_API_URL } from "@/etc/config/apiConstants";
 import TicketForm from "../components/TicketForm";
 
 //@ts-ignore
 const getTicketById = async (id) => {
-  const API_URL = process.env.API_URL
+  const API_URL = process.env.API_URL;
 
   try {
     const res = await fetch(`${API_URL}${TICKETS_API_URL}/${id}`, {

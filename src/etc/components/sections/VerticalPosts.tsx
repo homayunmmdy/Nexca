@@ -1,6 +1,6 @@
 "use client";
 import Titr from "@/components/Titr";
-import { VERTICAL_POSTS_QUERY_KEY } from "@/config/Constants";
+import { VERTICAL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import { VerticalSkeleton } from "../skelton";

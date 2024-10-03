@@ -1,7 +1,7 @@
-'use client'
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { AUTH_KEY } from '@/config/Constants';
+"use client";
+import { AUTH_KEY } from "@/etc/config/Constants";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const useCheckLogin = () => {
   const router = useRouter();

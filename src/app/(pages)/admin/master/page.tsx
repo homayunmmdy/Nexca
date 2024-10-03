@@ -1,10 +1,10 @@
 "use client";
 import { Button, Input } from "@/components";
+import { MASTER_KEY } from "@/etc/config/Constants";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import { useRouter } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
-import { MASTER_KEY } from "@/config/Constants";
 
 const MasterEditorPage = () => {
   const [password, setPassword] = useState("");

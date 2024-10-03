@@ -1,6 +1,6 @@
 "use client";
 import { Button, Input } from "@/components";
-import { EMAIL_API_URL } from "@/config/apiConstants";
+import { EMAIL_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -13,7 +13,7 @@ const EmailList = () => {
     emails: "",
   });
 
-  const handler = new FormHandler(setFormData, EMAIL_API_URL,router);
+  const handler = new FormHandler(setFormData, EMAIL_API_URL, router);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
     handler.submit(e, formData);

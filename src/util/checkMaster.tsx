@@ -1,4 +1,4 @@
-import { MASTER_KEY } from "@/config/Constants";
+import { MASTER_KEY } from "@/etc/config/Constants";
 
 export const checkMaster = (): boolean => {
   let master: boolean;

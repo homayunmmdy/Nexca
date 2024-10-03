@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@/components";
-import { SECTIONS_API_URL } from "@/config/apiConstants";
+import { SECTIONS_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -17,9 +17,10 @@ const EditSectionForm = ({ data }) => {
   };
 
   const [formData, setFormData] = useState(startingData);
-  const handler = new FormHandler(setFormData,SECTIONS_API_URL,router);
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => handler.submit(e, formData, data._id);
- 
+  const handler = new FormHandler(setFormData, SECTIONS_API_URL, router);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData, data._id);
+
   return (
     <>
       <div className="flex justify-center">

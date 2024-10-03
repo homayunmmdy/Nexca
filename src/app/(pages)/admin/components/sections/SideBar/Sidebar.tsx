@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import Link from "next/link";
-import NavLink from "./NavLink";
-import SiteConfig from "@/config/stie";
 import { Button } from "@/components";
+import SiteConfig from "@/etc/config/stie";
+import Link from "next/link";
+import { useState } from "react";
+import NavLink from "./NavLink";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -25,33 +25,36 @@ const Sidebar = () => {
               {SiteConfig.name}
             </span>
           </Link>
-          <Button title={<svg
-            onClick={toggleMenu}
-            className="h-6 w-6 lg:hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {isOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            )}
-          </svg>}
-          style="lg:hidden"
-          color="btn-primary"
-          ariaLabel="close and open menu"
+          <Button
+            title={
+              <svg
+                onClick={toggleMenu}
+                className="h-6 w-6 lg:hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                )}
+              </svg>
+            }
+            style="lg:hidden"
+            color="btn-primary"
+            ariaLabel="close and open menu"
           />
         </div>
         <hr className="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent mb-2" />

@@ -1,8 +1,8 @@
 "use client";
+import { LATEST_POSTS_KEY } from "@/etc/config/Constants";
+import useGetLatestPosts from "@/hooks/useGetLatestPosts";
 import { useState } from "react";
 import RecentPost from "./RecentPost";
-import useGetLatestPosts from "@/hooks/useGetLatestPosts";
-import { LATEST_POSTS_KEY } from "@/config/Constants";
 
 const RecentPosts = () => {
   const [recentSize] = useState(-3);

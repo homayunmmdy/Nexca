@@ -4,15 +4,15 @@ import {
   POST_API_URL,
   SECTIONS_API_URL,
   SERVICES_API_URL,
-} from "@/config/apiConstants";
-import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
+} from "@/etc/config/apiConstants";
+import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FormField, SelectField } from "../elements";
 import { MdDeleteOutline } from "react-icons/md";
+import { FormField, SelectField } from "../elements";
 
 //@ts-ignore
 const EditPostForm = ({ ticket }) => {
@@ -30,46 +30,49 @@ const EditPostForm = ({ ticket }) => {
 
   const [formData, setFormData] = useState(startingTicketData);
   const [categoryInput, setCategoryInput] = useState("");
-  const handler = new FormHandler(setFormData,POST_API_URL,router);
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => handler.submit(e, formData, ticket._id);
+  const handler = new FormHandler(setFormData, POST_API_URL, router);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData, ticket._id);
 
   const { data: services } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
   const { data: sections } = useFetch(SECTIONS_QUERY_KEY, SECTIONS_API_URL);
 
-    // Add new category to the formData.categories array
-    const addCategory = () => {
-      const newCategory = {
-        id: Date.now(), 
-        name: categoryInput,
-      };
-      setFormData((prevState) => ({
-        ...prevState,
-        categories: [...prevState.categories, newCategory],
-      }));
-      setCategoryInput(""); // Clear the input field
+  // Add new category to the formData.categories array
+  const addCategory = () => {
+    const newCategory = {
+      id: Date.now(),
+      name: categoryInput,
     };
-  
-    // Handle category name change for existing categories
-    const handleCategoryChange = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
-      const { value } = e.target;
-      setFormData((prevState) => ({
-        ...prevState,
-        // @ts-ignore
-        categories: prevState.categories.map((cat) =>
-          cat.id === id ? { ...cat, name: value } : cat
-        ),
-      }));
-    };
-  
-    // Remove category
-    const removeCategory = (id: number) => {
-      setFormData((prevState) => ({
-        ...prevState,
-        // @ts-ignore
-        categories: prevState.categories.filter((cat) => cat.id !== id),
-      }));
-    };
-  
+    setFormData((prevState) => ({
+      ...prevState,
+      categories: [...prevState.categories, newCategory],
+    }));
+    setCategoryInput(""); // Clear the input field
+  };
+
+  // Handle category name change for existing categories
+  const handleCategoryChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    id: number
+  ) => {
+    const { value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      // @ts-ignore
+      categories: prevState.categories.map((cat) =>
+        cat.id === id ? { ...cat, name: value } : cat
+      ),
+    }));
+  };
+
+  // Remove category
+  const removeCategory = (id: number) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      // @ts-ignore
+      categories: prevState.categories.filter((cat) => cat.id !== id),
+    }));
+  };
 
   return (
     <div className="flex justify-center">
@@ -126,41 +129,44 @@ const EditPostForm = ({ ticket }) => {
           onChange={handler.trakeChange}
           required
         />
-          {/* Add New Category */}
-          <div className="flex w-full gap-2 mt-2">
+        {/* Add New Category */}
+        <div className="flex w-full gap-2 mt-2">
+          <Input
+            type="text"
+            value={categoryInput}
+            onChange={(e) => setCategoryInput(e.target.value)}
+            placeholder="New Category"
+            style="w-full"
+          />
+          <Button
+            title="Add Category"
+            type="button"
+            onClick={addCategory}
+            color="btn-primary"
+          />
+        </div>
+
+        {/* Categories List */}
+        <div className="flex flex-col gap-2">
+          <h4>Categories</h4>
+          {/* @ts-ignore */}
+          {formData.categories.map((category) => (
+            <div key={category.id} className="flex w-full items-center gap-2">
               <Input
                 type="text"
-                value={categoryInput}
-                onChange={(e) => setCategoryInput(e.target.value)}
-                placeholder="New Category"
+                value={category.name}
+                onChange={(e) => handleCategoryChange(e, category.id)}
                 style="w-full"
               />
-              <Button title="Add Category" type="button" onClick={addCategory} color="btn-primary" />
+              <Button
+                type="button"
+                onClick={() => removeCategory(category.id)}
+                color="btn-error"
+                title={<MdDeleteOutline />}
+              />
             </div>
-
-         {/* Categories List */}
-         <div className="flex flex-col gap-2">
-            <h4>Categories</h4>
-            {/* @ts-ignore */}
-            {formData.categories.map((category) => (
-              <div key={category.id} className="flex w-full items-center gap-2">
-                <Input
-                  type="text"
-                  value={category.name}
-                  onChange={(e) => handleCategoryChange(e, category.id)}
-                  style="w-full"
-                />
-                <Button
-                  type="button"
-                  onClick={() => removeCategory(category.id)}
-                  color="btn-error"
-                  title={<MdDeleteOutline />} 
-                  />
-              </div>
-            ))}
-
-          
-          </div>
+          ))}
+        </div>
         {services && (
           <SelectField
             id="services"

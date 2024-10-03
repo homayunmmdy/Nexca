@@ -1,5 +1,5 @@
 "use client";
-import { LATEST_POSTS_KEY } from "@/config/Constants";
+import { LATEST_POSTS_KEY } from "@/etc/config/Constants";
 import useGetLatestPosts from "@/hooks/useGetLatestPosts";
 import { useState } from "react";
 import RecentPost from "./RecentPost";

@@ -1,12 +1,12 @@
 "use client";
-import PostCard from "@/components/sections/PostCard";
-import { PostsSkeleton } from "@/components/skelton";
-import { POST_API_URL } from "@/config/apiConstants";
-import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
+import PostCard from "@/etc/components/sections/PostCard";
+import { PostsSkeleton } from "@/etc/components/skelton";
+import { POST_API_URL } from "@/etc/config/apiConstants";
+import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { usePathname } from "next/navigation";
-import ServicesNav from "../../demo/components/ServicesNav";
-import ServicesImg from './components/ServicesImg';
+import ServicesNav from "../../../(etc)/demo/components/ServicesNav";
+import ServicesImg from "./components/ServicesImg";
 
 const ServicesPage = () => {
   const pathname = usePathname();

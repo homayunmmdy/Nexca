@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components";
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/etc/config/stie";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";

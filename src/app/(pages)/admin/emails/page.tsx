@@ -1,15 +1,14 @@
-"use client"
-import { EMAIL_API_URL } from "@/config/apiConstants";
+"use client";
 import { Spinner } from "@/components";
+import { EMAIL_API_URL } from "@/etc/config/apiConstants";
+import { EMAIL_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { DeleteBlock } from "../components/elements";
-import { EMAIL_QUERY_KEY } from "@/config/Constants";
-
 
 const EmailsPage = () => {
-  const { data: emailData , loading} = useFetch(EMAIL_QUERY_KEY,EMAIL_API_URL)
+  const { data: emailData, loading } = useFetch(EMAIL_QUERY_KEY, EMAIL_API_URL);
   if (loading) {
-    return <Spinner />
+    return <Spinner />;
   }
   return (
     <div className="p-5">

@@ -1,4 +1,4 @@
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/etc/config/stie";
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
@@ -20,7 +20,11 @@ const Footer = () => {
           >
             Privacy Policy
           </Link>
-          <Link title="New Ticket" className="link link-hover" href="/tickets/new">
+          <Link
+            title="New Ticket"
+            className="link link-hover"
+            href="/tickets/new"
+          >
             New Ticket
           </Link>
         </nav>

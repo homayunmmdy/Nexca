@@ -1,11 +1,11 @@
 "use client";
-import { SERVICES_API_URL } from "@/config/apiConstants";
-import { SERVICES_IMG_KEY } from "@/config/Constants";
+import { SERVICES_API_URL } from "@/etc/config/apiConstants";
+import { SERVICES_IMG_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { usePathname } from "next/navigation";
 
 const ServicesImg = () => {
-  const pathname = usePathname(); 
+  const pathname = usePathname();
   const id = pathname.slice(10);
   const { data: services, loading } = useFetch(
     SERVICES_IMG_KEY,
@@ -14,8 +14,8 @@ const ServicesImg = () => {
   //@ts-ignore
   const filteredData = services?.filter((item) => item.secid == id);
 
-  if(loading) {
-    return <div className="hero min-h-screen skeleton mb-5 rounded-xl"></div>
+  if (loading) {
+    return <div className="hero min-h-screen skeleton mb-5 rounded-xl"></div>;
   }
   return (
     <>

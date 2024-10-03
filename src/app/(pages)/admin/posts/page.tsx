@@ -1,7 +1,7 @@
 "use client";
 import { Input, Spinner } from "@/components";
-import { POST_API_URL } from "@/config/apiConstants";
-import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
+import { POST_API_URL } from "@/etc/config/apiConstants";
+import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
