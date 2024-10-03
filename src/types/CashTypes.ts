@@ -1,4 +1,4 @@
-type BaseCashType = {
+type BaseType = {
   _id: string;
   body: string;
   createdAt: string;
@@ -12,29 +12,29 @@ export type PostsCashType = {
   description: string;
   services: string;
   section: string;
-} & BaseCashType;
+} & BaseType;
 
 export type ServicesCashType = {
   name: string;
   secid: number;
   description: string;
   imgurl: string;
-} & Omit<BaseCashType, "body">;
+} & Omit<BaseType, "body">;
 
 export type SectionCashType = {
   name: string;
   secid: number;
-} & Omit<BaseCashType, "body">;
+} & Omit<BaseType, "body">;
 
 export type ContactsCashType = {
   name: string;
   email: string;
   message: string;
-} & Omit<BaseCashType, "body">;
+} & Omit<BaseType, "body">;
 
 export type EmailCashType = {
   email: string;
-} & Omit<BaseCashType, "body">;
+} & Omit<BaseType, "body">;
 
 export type TicketsCashType = {
   title: string;
@@ -44,11 +44,11 @@ export type TicketsCashType = {
   status: string;
   startTime: string;
   endTime: string;
-} & BaseCashType;
+} & BaseType;
 
 export type TextAdvCashType = {
   textadvid: number;
   advname: string;
   body: string;
   link: string;
-} & BaseCashType;
+} & BaseType;

@@ -1,4 +1,3 @@
-import { Input } from "@/components";
 import { CollapseType } from "@/types/entities";
 import React from "react";
 import Collapse from "./Collapse";

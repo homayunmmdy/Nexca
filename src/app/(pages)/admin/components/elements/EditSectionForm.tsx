@@ -4,7 +4,6 @@ import { SECTIONS_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FormField } from ".";
 
 //@ts-ignore
 const EditSectionForm = ({ data }) => {
@@ -35,24 +34,28 @@ const EditSectionForm = ({ data }) => {
           <h3 className="text-center font-semibold text-2xl">
             {EDITMODE ? "Edit Section" : "New Section"}
           </h3>
-          <FormField
+          <Input
             id="name"
+            type="text"
             name="name"
             label="Name"
+            color="input-primary"
             value={formData.name}
             onChange={handler.trakeChange}
           />
-          <FormField
+          <Input
             id="secid"
             type="number"
             name="secid"
             label="secid"
+            color="input-primary"
             value={formData.secid}
             onChange={handler.trakeChange}
             required
           />
           <Input
             type="submit"
+            color={null}
             style="btn btn-active btn-primary"
             value={EDITMODE ? "Save" : "Post"}
           />

@@ -1,11 +1,10 @@
 "use client";
-import { Input } from "@/components";
+import { Input, Textarea } from "@/components";
 import { SERVICES_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FormField } from ".";
 
 //@ts-ignore
 const EditServicesForm = ({ data }) => {
@@ -47,39 +46,45 @@ const EditServicesForm = ({ data }) => {
               className="w-full rounded-xl border border-indigo-500 aspect-video"
             />
           </div>
-          <FormField
+          <Input
             id="imgurl"
+            type="text"
             name="imgurl"
             label="Image Link"
+            color="input-primary"
             value={formData.imgurl}
             onChange={handler.trakeChange}
           />
-          <FormField
+          <Input
             id="name"
+            type="text"
             name="name"
             label="Name"
+            color="input-primary"
             value={formData.name}
             onChange={handler.trakeChange}
           />
-          <FormField
+          <Input
             id="secid"
             type="number"
             name="secid"
             label="secid"
             value={formData.secid}
+            color="input-primary"
             onChange={handler.trakeChange}
             required
           />
-          <FormField
+          <Textarea
             id="description"
             name="description"
-            type="textarea"
-            label="Lead"
+            label="description"
+            color="textarea-primary"
             value={formData.description}
             onChange={handler.trakeChange}
           />
           <Input
             type="submit"
+            color={null}
             style="btn btn-active btn-primary"
             value={EDITMODE ? "Save" : "Post"}
           />

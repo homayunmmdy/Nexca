@@ -52,6 +52,7 @@ const Login = () => {
                     </label>
                     <Input
                       type="text"
+                      color={null}
                       name="username"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
@@ -70,6 +71,7 @@ const Login = () => {
                       type="password"
                       name="password"
                       value={password}
+                      color={null}
                       onChange={(e) => setPassword(e.target.value)}
                       required={true}
                       style="p-3 focus:scale-105 ease-in-out duration-300 rounded-lg w-full"

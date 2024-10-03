@@ -1,12 +1,12 @@
 "use client";
-import { Button, Input } from "@/components";
+import { Button, Input, Textarea } from "@/components";
 import { CONTACTS_API_URL } from "@/etc/config/apiConstants";
 import SiteConfig from "@/etc/config/stie";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaUser } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone, FaRegMessage } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import Circles from "./components/Circle";
 
@@ -40,6 +40,7 @@ const ContactsPage = () => {
                       name="name"
                       placeholder="Name"
                       value={formData.name}
+                      color="input-primary"
                       onChange={handler.trakeChange}
                       required={true}
                       style="w-full"
@@ -50,6 +51,7 @@ const ContactsPage = () => {
                     <Input
                       type="email"
                       name="email"
+                      color="input-primary"
                       placeholder="Email Address"
                       value={formData.email}
                       onChange={handler.trakeChange}
@@ -59,15 +61,17 @@ const ContactsPage = () => {
                     />
                   </div>
                   <div className="mb-6">
-                    <textarea
+                    <Textarea
                       rows={6}
                       name="message"
                       placeholder="Message"
                       value={formData.message}
+                      color="textarea-primary"
                       onChange={handler.trakeChange}
-                      required
-                      className="textarea textarea-bordered w-full"
-                    ></textarea>
+                      required={true}
+                      style="w-full"
+                      icon={<FaRegMessage />}
+                    />
                   </div>
                   <div>
                     <Button

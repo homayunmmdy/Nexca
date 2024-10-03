@@ -4,7 +4,6 @@ import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FormField } from ".";
 
 //@ts-ignore
 const EditTextAdvForm = ({ data }) => {
@@ -36,41 +35,49 @@ const EditTextAdvForm = ({ data }) => {
           <h3 className="text-center font-semibold text-2xl">
             {EDITMODE ? "Edit TextAdv" : "New TextAdv"}
           </h3>
-          <FormField
+          <Input
             id="textadvid"
             type="number"
             name="textadvid"
             label="textadvid"
+            color="input-primary"
             value={formData.textadvid}
             onChange={handler.trakeChange}
             required
           />
-          <FormField
+          <Input
+            type="text"
             id="advname"
             name="advname"
             label="advname"
+            color="input-primary"
             value={formData.advname}
             onChange={handler.trakeChange}
             required
           />
-          <FormField
+          <Input
+            type="text"
             id="body"
             name="body"
             label="body"
+            color="input-primary"
             value={formData.body}
             onChange={handler.trakeChange}
             required
           />
-          <FormField
+          <Input
             id="link"
+            type="text"
             name="link"
             label="link"
             value={formData.link}
+            color="input-primary"
             onChange={handler.trakeChange}
             required
           />
           <Input
             type="submit"
+            color={null}
             style="btn btn-active btn-primary"
             value={EDITMODE ? "Save" : "Post"}
           />

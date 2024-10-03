@@ -1,11 +1,12 @@
 import React from "react";
 import Button from "../../components/Button";
-import { ButtonType } from "@/types/entities";
+import { ButtonType } from "@/types/FormFiledType";
 import { render, screen } from "@testing-library/react";
 import { Fa0 } from "react-icons/fa6";
 
 describe("button components", () => {
   const defaultProps: ButtonType = {
+    id: "1",
     title: "Click Here",
     icon: <Fa0 />,
     color: "btn-primary",
@@ -25,6 +26,7 @@ describe("button components", () => {
     expect(<Fa0 />).toBeDefined();
     expect(ButtonElement).toHaveClass("btn btn-primary");
     expect(ButtonElement).toHaveAttribute("type", "button");
+    expect(ButtonElement).toHaveAttribute("id", "1");
     expect(ButtonElement).toHaveClass("text-white");
     expect(ButtonElement).toBeDisabled();
     expect(screen.getByLabelText("Click Button")).toBeInTheDocument();

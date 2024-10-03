@@ -45,6 +45,7 @@ const MasterEditorPage = () => {
               type="password"
               id="password"
               style="w-full"
+              color="input-primary"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               name="password"

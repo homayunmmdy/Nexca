@@ -1,21 +1,20 @@
+import { TextareaType } from "@/types/FormFiledType";
 import React from "react";
-import { InputType } from "@/types/FormFiledType";
 
-const Input: React.FC<InputType> = ({
+const Textarea: React.FC<TextareaType> = ({
   id,
   style,
   value,
   placeholder,
   name,
+  rows,
   color,
-  type,
   onChange,
   required,
-  icon,
   label,
-  defaultChecked,
-}: InputType) => {
-  const classes = `input input-bordered ${icon ? "" : style} ${
+  icon,
+}: TextareaType) => {
+  const classes = `textarea textarea-bordered ${icon ? "" : style} ${
     color ? color : ""
   }`;
   return (
@@ -26,24 +25,23 @@ const Input: React.FC<InputType> = ({
           className={`${classes} flex items-center gap-2`}
         >
           {icon}
-          <input
-            type={type}
+          <textarea
             value={value}
+            rows={rows}
+            className={style}
             placeholder={placeholder}
             onChange={onChange}
             name={name}
             id={id}
             required={required}
-            className={style}
-            defaultChecked={defaultChecked}
           />
         </label>
       ) : label ? (
         <>
           <label htmlFor={id}>{label}</label>
-          <input
-            type={type}
+          <textarea
             value={value}
+            rows={rows}
             className={classes}
             placeholder={placeholder}
             onChange={onChange}
@@ -53,9 +51,9 @@ const Input: React.FC<InputType> = ({
           />
         </>
       ) : (
-        <input
-          type={type}
+        <textarea
           value={value}
+          rows={rows}
           className={classes}
           placeholder={placeholder}
           onChange={onChange}
@@ -68,4 +66,4 @@ const Input: React.FC<InputType> = ({
   );
 };
 
-export default Input;
+export default Textarea;

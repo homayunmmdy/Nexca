@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input } from "@/components";
+import { Button, Input, Textarea } from "@/components";
 import {
   POST_API_URL,
   SECTIONS_API_URL,
@@ -12,7 +12,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { MdDeleteOutline } from "react-icons/md";
-import { FormField, SelectField } from "../elements";
+import { SelectField } from "../elements";
 
 //@ts-ignore
 const EditPostForm = ({ ticket }) => {
@@ -97,34 +97,38 @@ const EditPostForm = ({ ticket }) => {
             className="w-full rounded-xl border border-indigo-500 aspect-video"
           />
         </div>
-        <FormField
+        <Input
           id="imgurl"
+          type="text"
           name="imgurl"
           label="Image Link"
+          color="input-primary"
           value={formData.imgurl}
           onChange={handler.trakeChange}
         />
-        <FormField
+        <Input
+          type="text"
           id="title"
           name="title"
           label="Title"
+          color="input-primary"
           value={formData.title}
           onChange={handler.trakeChange}
           required
         />
-        <FormField
+        <Textarea
           id="description"
           name="description"
-          type="textarea"
-          label="Lead"
+          color="textarea-primary"
+          label="description"
           value={formData.description}
           onChange={handler.trakeChange}
         />
-        <FormField
+        <Textarea
           id="body"
           name="body"
-          type="textarea"
           label="Body"
+          color="textarea-primary"
           value={formData.body}
           onChange={handler.trakeChange}
           required
@@ -134,6 +138,7 @@ const EditPostForm = ({ ticket }) => {
           <Input
             type="text"
             value={categoryInput}
+            color="input-primary"
             onChange={(e) => setCategoryInput(e.target.value)}
             placeholder="New Category"
             style="w-full"
@@ -155,6 +160,7 @@ const EditPostForm = ({ ticket }) => {
               <Input
                 type="text"
                 value={category.name}
+                color="input-primary"
                 onChange={(e) => handleCategoryChange(e, category.id)}
                 style="w-full"
               />
@@ -189,6 +195,7 @@ const EditPostForm = ({ ticket }) => {
         )}
         <Input
           type="submit"
+          color={null}
           style="btn btn-active btn-primary"
           value={EDITMODE ? "Save" : "Post"}
         />

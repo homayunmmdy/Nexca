@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../../components/Input";
-import { InputType } from "@/types/entities";
+import { InputType } from "@/types/FormFiledType";
 import { render, screen } from "@testing-library/react";
 import { FaUser } from "react-icons/fa";
 
