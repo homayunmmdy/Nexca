@@ -8,7 +8,7 @@ export default function About() {
         <h1 className="text-4xl font-bold mb-8">
           About{" "}
           <Link
-            href={SiteConfig.siteUrl}
+            href={SiteConfig.siteURL}
             className="underline text-indigo-700"
             title={SiteConfig.name}
           >
@@ -18,7 +18,7 @@ export default function About() {
         <p className="mt-4 text-lg ">
           Welcome to{" "}
           <Link
-            href={SiteConfig.siteUrl}
+            href={SiteConfig.siteURL}
             className="underline text-indigo-700"
             title={SiteConfig.name}
           >
@@ -31,7 +31,7 @@ export default function About() {
         <p className="mt-4 text-lg ">
           At{" "}
           <Link
-            href={SiteConfig.siteUrl}
+            href={SiteConfig.siteURL}
             className="underline text-indigo-700"
             title={SiteConfig.name}
           >

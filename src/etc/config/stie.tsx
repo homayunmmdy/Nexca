@@ -6,7 +6,7 @@ const SiteConfig = {
     "Nexca offers a robust admin panel for agencies and individuals, enabling seamless data management, content sharing, and audience engagement. Build your brand effortlessly with Nexca.",
   keywords: "Admin panel , Dashboard , Custom panel, Data Ma Data management",
   authors: [{ name: "Nexca Team", url: API_URL }],
-  siteUrl: `${API_URL}`,
+  siteURL: `${API_URL}`,
   lang: "en",
   dir: "ltr",
   // media
@@ -14,6 +14,9 @@ const SiteConfig = {
   github: "https://github.com/homayunmmdy/Nexca",
   phoneNumber: "0922 4003 487",
   linkedin: "https://www.linkedin.com/in/homayunmmdy/",
+  robots: "index , follow",
+  author: "Magnitify Team",
+  authorID: "magnitify_Team",
   // Navbar
   nav: [
     {

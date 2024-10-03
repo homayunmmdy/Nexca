@@ -1,3 +1,5 @@
+import SiteConfig from "@/etc/config/stie";
+
 export default function robots() {
   return {
     rules: {
@@ -5,6 +7,6 @@ export default function robots() {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://nexca.vercel.app/sitemap.xml",
+    sitemap: `${SiteConfig.siteURL}/sitemap.xml`,
   };
 }
