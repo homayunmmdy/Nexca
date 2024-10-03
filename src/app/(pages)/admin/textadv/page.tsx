@@ -4,10 +4,11 @@ import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
 import { ALL_TEXTADV_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import Link from "next/link";
+import React from "react";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from "../components/elements";
 
-const AdminTextAdvPage = () => {
+const AdminTextAdvPage: React.FC = () => {
   const { data: sections, loading } = useFetch(
     ALL_TEXTADV_QUERY_KEY,
     TEXTADV_API_URL
@@ -58,7 +59,11 @@ const AdminTextAdvPage = () => {
                   <td>
                     {/* @ts-ignore */}
                     <Link href={`/admin/textadv/${item._id}`}>
-                      <CiEdit size={25} />
+                      <Button
+                        title={<CiEdit size={25} />}
+                        color="btn-warning"
+                        style="me-2 mb-2"
+                      />
                     </Link>
                   </td>
                   <td>

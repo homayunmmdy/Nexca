@@ -4,9 +4,10 @@ import { SECTIONS_API_URL } from "@/etc/config/apiConstants";
 import { SECTIONS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { checkMaster } from "@/util/checkMaster";
+import React from "react";
 import { DataTable } from "../components/elements";
 
-const AdminSectionPage = () => {
+const AdminSectionPage: React.FC = () => {
   const { data: sections, loading } = useFetch(
     SECTIONS_QUERY_KEY,
     SECTIONS_API_URL
