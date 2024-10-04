@@ -40,7 +40,7 @@ const Input: React.FC<InputType> = ({
         </label>
       ) : label ? (
         <>
-          <label htmlFor={id}>{label}</label>
+          <label data-testid="label" htmlFor={id}>{label}</label>
           <input
             type={type}
             value={value}
