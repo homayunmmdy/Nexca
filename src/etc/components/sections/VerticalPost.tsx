@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import React from 'react'
 //@ts-ignore
 const VerticalPost = ({ post }) => {
   return (

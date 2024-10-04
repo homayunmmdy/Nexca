@@ -1,7 +1,12 @@
 import { Input } from "@/components";
 import { CollapseType } from "@/types/entities";
+import React from "react";
 
-const Collapse = ({ data }: { data: CollapseType }) => {
+interface Props {
+  data: CollapseType;
+}
+
+const Collapse: React.FC<Props> = ({ data }: Props) => {
   return (
     <>
       <div key={data.id} className="collapse collapse-arrow join-item border">
@@ -9,7 +14,6 @@ const Collapse = ({ data }: { data: CollapseType }) => {
           id={`nexca-question-${data.id}`}
           type="radio"
           name="my-accordion-4"
-          color={null}
           defaultChecked={true}
         />
         <label

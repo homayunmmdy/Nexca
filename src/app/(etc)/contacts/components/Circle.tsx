@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Circles = () => {
+const Circles: React.FC = () => {
     return (
         <>
             <svg

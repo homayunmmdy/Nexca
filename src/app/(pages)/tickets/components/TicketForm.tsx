@@ -1,5 +1,5 @@
 "use client";
-import { Input } from "@/components";
+import { Input, Textarea } from "@/components";
 import { TICKETS_API_URL } from "@/etc/config/apiConstants";
 import { checkMaster } from "@/util/checkMaster";
 import FormHandler from "@/util/handler/FormHandler";
@@ -61,14 +61,14 @@ const TicketForm = ({ ticket }) => {
                       />
                     </div>
                     <div className="mb-5">
-                      <textarea
+                      <Textarea
                         id="description"
                         name="description"
                         placeholder="description"
+                        color="textarea-primary"
                         value={formData.description}
                         onChange={handler.trakeChange}
-                        required
-                        className="textarea textarea-primary w-full"
+                        style="w-full"
                       />
                     </div>
 
@@ -83,7 +83,6 @@ const TicketForm = ({ ticket }) => {
                             value={formData.startTime}
                             onChange={handler.trakeChange}
                             color="input-primary"
-                            required
                             style="w-full"
                           />
                         </div>
@@ -98,88 +97,95 @@ const TicketForm = ({ ticket }) => {
                             value={formData.endTime}
                             color="input-primary"
                             onChange={handler.trakeChange}
-                            required
                             style="w-full"
                           />
                         </div>
                       </div>
                     </div>
                     <div className="mb-5">
-                      <textarea
+                      <Textarea
                         id="body"
                         name="body"
                         placeholder="body"
                         value={formData.body}
                         rows={10}
+                        color="textarea-primary"
                         onChange={handler.trakeChange}
-                        required
-                        className="textarea textarea-primary w-full"
+                        required={true}
+                        style="w-full"
                       />
                     </div>
                     <div className="mb-5 ">
                       <div className="flex gap-2">
-                        <input
+                        <Input
                           id="priority-1"
                           name="priority"
                           type="radio"
+                          label="1"
                           onChange={handler.trakeChange}
                           value={1}
                           checked={formData.priority == 1}
-                          className="radio radio-primary"
+                          style="radio radio-primary"
+                          removeDefaultStyle={true}
                         />
-                        <label>1</label>
-                        <input
+                        <Input
                           id="priority-2"
                           name="priority"
                           type="radio"
+                          label="2"
                           onChange={handler.trakeChange}
                           value={2}
                           checked={formData.priority == 2}
-                          className="radio radio-primary"
+                          style="radio radio-primary"
+                          removeDefaultStyle={true}
                         />
-                        <label>2</label>
-                        <input
+                        <Input
                           id="priority-3"
                           name="priority"
                           type="radio"
+                          label="3"
                           onChange={handler.trakeChange}
                           value={3}
                           checked={formData.priority == 3}
-                          className="radio radio-primary"
+                          style="radio radio-primary"
+                          removeDefaultStyle={true}
                         />
-                        <label>3</label>
-                        <input
+                        <Input
                           id="priority-4"
                           name="priority"
                           type="radio"
+                          label="4"
                           onChange={handler.trakeChange}
                           value={4}
                           checked={formData.priority == 4}
-                          className="radio radio-primary"
+                          style="radio radio-primary"
+                          removeDefaultStyle={true}
                         />
-                        <label>4</label>
-                        <input
+                        <Input
                           id="priority-5"
                           name="priority"
                           type="radio"
+                          label="5"
                           onChange={handler.trakeChange}
                           value={5}
+                          color="input-null"
                           checked={formData.priority == 5}
-                          className="radio radio-primary"
+                          style="radio radio-primary"
+                          removeDefaultStyle={true}
                         />
-                        <label>5</label>
                       </div>
                     </div>
                     <div className="mb-5 ">
-                      <input
+                      <Input
                         type="range"
                         id="progress"
                         name="progress"
                         value={formData.progress}
-                        min="0"
+                        min={0}
                         max="100"
                         onChange={handler.trakeChange}
-                        className="bg-red-600 h-2.5 rounded-full w-full"
+                        style="bg-red-600 h-2.5 rounded-full w-full"
+                        removeDefaultStyle={true}
                       />
                     </div>
                     <div className="mb-5">
@@ -195,9 +201,10 @@ const TicketForm = ({ ticket }) => {
                         <option value="done">Done</option>
                       </select>
                     </div>
-                    <input
+                    <Input
                       type="submit"
-                      className="btn w-full  btn-primary mb-5"
+                      style="btn w-full  btn-primary mb-5"
+                      removeDefaultStyle={true}
                       value={EDITMODE ? "Update Ticket" : "Create Ticket"}
                     />
                   </form>
@@ -227,32 +234,34 @@ const TicketForm = ({ ticket }) => {
                 />
               </div>
               <div className="mb-5">
-                <textarea
+                <Textarea
                   id="description"
                   name="description"
                   placeholder="description"
+                  color="textarea-primary"
                   value={formData.description}
                   onChange={handler.trakeChange}
-                  required
-                  className="textarea textarea-primary w-full"
+                  style="w-full"
                 />
               </div>
               <div className="mb-5">
-                <textarea
+                <Textarea
                   id="body"
                   name="body"
                   placeholder="body"
+                  color="textarea-primary"
                   value={formData.body}
                   rows={10}
                   onChange={handler.trakeChange}
-                  required
-                  className="textarea textarea-primary w-full"
+                  required={true}
+                  style="w-full"
                 />
               </div>
-              <input
+              <Input
                 type="submit"
-                className="btn w-full  btn-primary mb-5"
+                style="btn w-full  btn-primary mb-5"
                 value={EDITMODE ? "Update Ticket" : "Create Ticket"}
+                removeDefaultStyle={true}
               />
             </form>
           </div>

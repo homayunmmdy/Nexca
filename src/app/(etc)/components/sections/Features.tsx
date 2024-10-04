@@ -5,6 +5,7 @@ import { CgWebsite } from "react-icons/cg";
 import { SlEnergy } from "react-icons/sl";
 import { VscFeedback } from "react-icons/vsc";
 import Feature from "./Feature";
+import React from 'react'
 
 const features: FeaturesType[] = [
   {
@@ -37,7 +38,7 @@ const features: FeaturesType[] = [
   },
 ];
 
-const Features = () => {
+const Features: React.FC = () => {
   return (
     <>
       <div className="mx-auto max-w-7xl px-4 my-10">

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const PriceList = () => {
+const PriceList: React.FC = () => {
   return (
     <>
       <div className="flex  items-center justify-center ">

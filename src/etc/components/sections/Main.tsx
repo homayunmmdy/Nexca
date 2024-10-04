@@ -4,8 +4,9 @@ import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import { MainSecSkeleton } from "../skelton";
 import MainItem from "./MainItem";
+import React from 'react'
 
-const Main = () => {
+const Main: React.FC = () => {
   const { data, loading } = useGetSection(MAIN_POSTS_QUERY_KEY, -2, 1);
 
   if (loading) {

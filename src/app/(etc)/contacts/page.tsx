@@ -9,8 +9,9 @@ import { FaUser } from "react-icons/fa";
 import { FaPhone, FaRegMessage } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import Circles from "./components/Circle";
+import React from 'react'
 
-const ContactsPage = () => {
+const ContactsPage : React.FC = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",

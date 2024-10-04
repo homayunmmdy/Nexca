@@ -6,8 +6,9 @@ import {
 } from "@/etc/components/sections";
 import ServicesNav from "./components/ServicesNav";
 import { LinearAds } from "@/etc/components/ads";
+import React from 'react'
 
-const DemoPage = () => {
+const DemoPage: React.FC = () => {
   return (
     <>
       <ServicesNav />

@@ -5,8 +5,9 @@ import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import { PostsSecSkeleton } from "../skelton";
 import PostCard from "./PostCard";
+import React from 'react'
 
-const Posts = () => {
+const Posts: React.FC = () => {
   const { data, loading } = useGetSection(POSTS_QUERY_KEY, -6, 2);
 
   if (loading) {

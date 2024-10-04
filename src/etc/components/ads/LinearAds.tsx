@@ -7,8 +7,9 @@ import axios from "axios";
 import Link from "next/link";
 import { FaCircleDot } from "react-icons/fa6";
 import LinearAdsLoading from "./LinearAdsLoading";
+import React from 'react'
 
-const LinearAds = () => {
+const LinearAds: React.FC = () => {
   const { data, isLoading } = useQuery<TextAdvCashType[]>({
     queryKey: ["textadv"],
     queryFn: () =>

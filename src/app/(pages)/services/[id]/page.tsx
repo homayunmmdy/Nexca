@@ -7,8 +7,9 @@ import useFetch from "@/hooks/useFetch";
 import { usePathname } from "next/navigation";
 import ServicesNav from "../../../(etc)/demo/components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
+import React from 'react'
 
-const ServicesPage = () => {
+const ServicesPage: React.FC = () => {
   const pathname = usePathname();
   const id = pathname.slice(10);
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);

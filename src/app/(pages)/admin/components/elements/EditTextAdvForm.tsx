@@ -3,7 +3,7 @@ import { Input } from "@/components";
 import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import React,{ useState } from "react";
 
 //@ts-ignore
 const EditTextAdvForm = ({ data }) => {
@@ -77,7 +77,6 @@ const EditTextAdvForm = ({ data }) => {
           />
           <Input
             type="submit"
-            color={null}
             style="btn btn-active btn-primary"
             value={EDITMODE ? "Save" : "Post"}
           />

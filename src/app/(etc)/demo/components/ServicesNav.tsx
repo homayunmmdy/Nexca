@@ -4,8 +4,9 @@ import { SERVICES_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from 'react'
 
-const ServicesNav = () => {
+const ServicesNav: React.FC = () => {
   const { data: services, loading } = useFetch(
     SERVICES_QUERY_KEY,
     SERVICES_API_URL

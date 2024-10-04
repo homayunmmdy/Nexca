@@ -1,6 +1,6 @@
 import Titr from "@/components/Titr";
-
-const SingleCard = () => {
+import React from 'react'
+const SingleCard: React.FC = () => {
   return (
     <>
       <Titr

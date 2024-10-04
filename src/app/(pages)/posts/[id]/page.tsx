@@ -10,8 +10,9 @@ import { FaPlay } from "react-icons/fa";
 import { FaStop } from "react-icons/fa6";
 import FormatTime from "../components/FormatTime";
 import PostSeclton from "./PostSkelton";
+import React from 'react'
 
-const Post = () => {
+const Post: React.FC = () => {
   //@ts-ignore
   const post = useSinglePost();
   //@ts-ignore

@@ -4,7 +4,7 @@ import { SERVICES_API_URL } from "@/etc/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import React, { useState } from "react";
 
 //@ts-ignore
 const EditServicesForm = ({ data }) => {
@@ -84,7 +84,6 @@ const EditServicesForm = ({ data }) => {
           />
           <Input
             type="submit"
-            color={null}
             style="btn btn-active btn-primary"
             value={EDITMODE ? "Save" : "Post"}
           />

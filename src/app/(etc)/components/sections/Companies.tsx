@@ -1,8 +1,9 @@
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiClerk, SiMongodb, SiVercel } from "react-icons/si";
+import React from 'react'
 
-const Companies = () => {
+const Companies: React.FC = () => {
   return (
     <>
       <section className="mx-auto max-w-7xl px-4 rounded-xl shadow-xl py-8 md:py-12 lg:py-28 m-4 border-2 border-indigo-400 hover:border-indigo-700">

@@ -195,7 +195,6 @@ const EditPostForm = ({ ticket }) => {
         )}
         <Input
           type="submit"
-          color={null}
           style="btn btn-active btn-primary"
           value={EDITMODE ? "Save" : "Post"}
         />

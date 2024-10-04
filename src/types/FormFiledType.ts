@@ -1,3 +1,4 @@
+import { InputHTMLAttributes } from "react";
 import { AllowedColors, AllowedInputType } from "./AllowedOptions";
 
 type BaseType = {
@@ -19,15 +20,15 @@ export type ButtonType = {
 } & Omit<BaseType, "required">;
 
 export type InputType = {
-  name?: string;
-  value?: string | number;
-  color: `input-${AllowedColors}`| null;
+  color?: `input-${AllowedColors}` ;
   type: AllowedInputType;
   placeholder?: string;
   onChange?: (e: any) => void;
   defaultChecked?: boolean;
   label?: string;
-} & BaseType;
+  checked?:boolean;
+  removeDefaultStyle?:boolean;
+} & BaseType & InputHTMLAttributes<HTMLInputElement>;
 
 export type TextareaType = {
   name?: string;

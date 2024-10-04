@@ -5,8 +5,9 @@ import { PostsCashType } from "@/types/CashTypes";
 import Titr from "../../../components/Titr";
 import { PostsSkeleton } from "../skelton";
 import PostCard from "./PostCard";
+import React from 'react'
 
-const MorePosts = () => {
+const MorePosts: React.FC = () => {
   const { data, loading } = useGetSection(MORE_POSTS_QUERY_KEY, -3, 5);
 
   if (loading) {

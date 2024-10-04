@@ -5,8 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
+import React from 'react'
 
-const Header = () => {
+const Header: React.FC = () => {
   const pathname = usePathname();
   const nav = SiteConfig.nav;
   const [isOpen, setIsOpen] = useState(false);

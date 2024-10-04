@@ -1,6 +1,11 @@
 import { FeaturesType } from "@/types/entities";
+import React from "react";
 
-const Feature = ({ data }: { data: FeaturesType }) => {
+interface Props {
+  data: FeaturesType;
+}
+
+const Feature: React.FC<Props> = ({ data }: Props) => {
   return (
     <>
       <div className="relative pl-16" key={data.id}>

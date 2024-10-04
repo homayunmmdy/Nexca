@@ -1,6 +1,7 @@
 import Titr from "@/components/Titr";
+import React from 'react'
 
-const LinearAdsLoading = () => {
+const LinearAdsLoading: React.FC = () => {
   return (
     <>
       <Titr title="Ads Demo Page" item="text-center" />

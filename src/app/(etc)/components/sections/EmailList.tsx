@@ -5,8 +5,9 @@ import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { TfiEmail } from "react-icons/tfi";
+import React from 'react'
 
-const EmailList = () => {
+const EmailList: React.FC = () => {
   const router = useRouter();
 
   const [formData, setFormData] = useState({
