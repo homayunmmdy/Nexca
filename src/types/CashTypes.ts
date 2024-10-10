@@ -14,6 +14,18 @@ export type PostsCashType = {
   section: string;
 } & BaseType;
 
+export type PublicationsCashType = {
+  title: string;
+  imgurl: string;
+  description: string;
+  author: string,
+  page_amount: number,
+  publisher: string,
+  publication_date?: string ,
+  pdf_link?: string,
+  categories?: { id: number, name: string },
+} & BaseType;
+
 export type ServicesCashType = {
   name: string;
   secid: number;

@@ -5,3 +5,4 @@ export const CONTACTS_API_URL = "/api/contacts";
 export const EMAIL_API_URL = "/api/emails";
 export const TEXTADV_API_URL = "/api/textadv";
 export const TICKETS_API_URL = "/api/tickets";
+export const PUBLICARIONS_API_URL = "/api/publications";
