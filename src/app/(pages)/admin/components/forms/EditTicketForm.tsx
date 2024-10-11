@@ -5,10 +5,10 @@ import { checkMaster } from "@/util/checkMaster";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { Sidebar } from "../../admin/components/sections";
+import { Sidebar } from "../sections";
 
 //@ts-ignore
-const TicketForm = ({ ticket }) => {
+const EditTicketForm = ({ ticket }) => {
   const EDITMODE = ticket._id !== "new";
   const router = useRouter();
   const startingTicketData = {
@@ -271,4 +271,4 @@ const TicketForm = ({ ticket }) => {
   );
 };
 
-export default TicketForm;
+export default EditTicketForm;

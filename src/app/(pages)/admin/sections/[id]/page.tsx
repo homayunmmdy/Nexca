@@ -1,6 +1,6 @@
 import { SECTIONS_API_URL } from "@/etc/config/apiConstants";
-import { EditSectionForm } from "../../components/elements";
 import { getById } from "@/util/getById";
+import { EditSectionForm } from "../../components";
 
 let updatesectionData = {};
 {/* @ts-ignore */}

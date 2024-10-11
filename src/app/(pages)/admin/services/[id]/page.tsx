@@ -1,6 +1,6 @@
 import { SERVICES_API_URL } from "@/etc/config/apiConstants";
-import EditServicesForm from "../../components/elements/EditServicesForm";
 import { getById } from "@/util/getById";
+import { EditServicesForm } from "../../components";
 
 let updateservicesData = {};
 {/* @ts-ignore */}

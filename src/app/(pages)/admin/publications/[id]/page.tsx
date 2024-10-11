@@ -1,6 +1,6 @@
 import { PUBLICARIONS_API_URL } from "@/etc/config/apiConstants";
 import { getById } from "@/util/getById";
-import { EditPublicationForm } from "../../components/sections";
+import { EditPublicationForm } from "../../components";
 
 let updatesectionData = {};
 {/* @ts-ignore */}

@@ -1,6 +1,6 @@
 import { POST_API_URL } from "@/etc/config/apiConstants";
 import { getById } from "@/util/getById";
-import { EditPostForm } from "../../components/sections";
+import { EditPostForm } from "../../components";
 
 let updateTicketData = {};
 {/* @ts-ignore */}
