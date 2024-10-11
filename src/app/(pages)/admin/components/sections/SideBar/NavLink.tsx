@@ -16,11 +16,11 @@ import { LogoutButton } from "../../elements";
 const links = [
   { name: "Admin", href: "/admin", icon: TiHome },
   { name: "Posts", href: "/admin/posts", icon: CgFeed },
-  { name: "New Post", href: "/admin/post/new", icon: MdOutlinePostAdd },
+  { name: "New Post", href: "/admin/posts/new", icon: MdOutlinePostAdd },
   { name: "Text Adv", href: "/admin/textadv", icon: RiAdvertisementLine },
   { name: "Services", href: "/admin/services", icon: SiCloudflarepages },
   { name: "Sections", href: "/admin/sections", icon: TbNewSection },
-  {name: "New Publication", href: "/admin/publications/new", icon: LuBookPlus},
+  { name: "New Publication", href: "/admin/publications/new", icon: LuBookPlus},
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
   { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
   { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },

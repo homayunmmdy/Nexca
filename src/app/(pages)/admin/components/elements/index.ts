@@ -1,4 +1,3 @@
-export { default as DataForm } from "./DataForm";
 export { default as DataTable } from "./DataTable";
 export { default as DeleteBlock } from "./DeleteBlock";
 export { default as LogoutButton } from "./LogoutButton";

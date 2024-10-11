@@ -15,24 +15,24 @@ import { MdDeleteOutline } from "react-icons/md";
 import { SelectField } from "../elements";
 
 //@ts-ignore
-const EditPostForm = ({ ticket }) => {
-  const EDITMODE = ticket._id !== "new";
+const EditPostForm = ({  post }) => {
+  const EDITMODE = post._id !== "new";
   const router = useRouter();
   const startingTicketData = {
-    title: EDITMODE ? ticket.title : "",
-    description: EDITMODE ? ticket.description : "",
-    body: EDITMODE ? ticket.body : "",
-    section: EDITMODE ? ticket.section : "1",
-    services: EDITMODE ? ticket.services : "1",
-    imgurl: EDITMODE ? ticket.imgurl : "",
-    categories: EDITMODE ? ticket.categories : [],
+    title: EDITMODE ? post.title : "",
+    description: EDITMODE ? post.description : "",
+    body: EDITMODE ? post.body : "",
+    section: EDITMODE ? post.section : "1",
+    services: EDITMODE ? post.services : "1",
+    imgurl: EDITMODE ? post.imgurl : "",
+    categories: EDITMODE ? post.categories : [],
   };
 
   const [formData, setFormData] = useState(startingTicketData);
   const [categoryInput, setCategoryInput] = useState("");
   const handler = new FormHandler(setFormData, POST_API_URL, router);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    handler.submit(e, formData, ticket._id);
+    handler.submit(e, formData, post._id);
 
   const { data: services } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
   const { data: sections } = useFetch(SECTIONS_QUERY_KEY, SECTIONS_API_URL);

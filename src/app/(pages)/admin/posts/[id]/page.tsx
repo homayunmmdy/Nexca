@@ -4,7 +4,7 @@ import { EditPostForm } from "../../components";
 
 let updateTicketData = {};
 {/* @ts-ignore */}
-const TicketPage = async ({ params }) => {
+const SinglePostsPage = async ({ params }) => {
   const EDITMODE = params.id === "new" ? false : true;
 
   if (EDITMODE) {
@@ -17,7 +17,7 @@ const TicketPage = async ({ params }) => {
     };
   }
 
-  return <EditPostForm ticket={updateTicketData} />;
+  return <EditPostForm post={updateTicketData} />;
 };
 
-export default TicketPage;
+export default SinglePostsPage;

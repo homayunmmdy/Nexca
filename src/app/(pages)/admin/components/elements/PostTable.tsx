@@ -22,7 +22,7 @@ const PostTable = ({ post }) => {
       </td>
       <td className="hidden lg:block">{post.description.slice(0,60)}</td>
       <td>
-        <Link href={`/admin/post/${post._id}`}>
+        <Link href={`/admin/posts/${post._id}`}>
           <Button title={<CiEdit size={25} />} color="btn-warning" style="me-2 mb-2"/>
         </Link>
       </td>
