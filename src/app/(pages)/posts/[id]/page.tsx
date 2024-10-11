@@ -11,6 +11,7 @@ import { FaStop } from "react-icons/fa6";
 import FormatTime from "../components/FormatTime";
 import PostSeclton from "./PostSkelton";
 import React from 'react'
+import RenderTags from "./components/RenderTags";
 
 const Post: React.FC = () => {
   //@ts-ignore
@@ -89,6 +90,7 @@ const Post: React.FC = () => {
                   {post.body}
                 </p>
               </div>
+              <RenderTags post={post}/>
               <MorePostsSec />
             </div>
             <div className="w-full md:w-1/4 py-3">
