@@ -1,28 +1,28 @@
 "use client";
 import { Input, Spinner } from "@/components";
-import { POST_API_URL } from "@/etc/config/apiConstants";
-import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
+import { PUBLICARIONS_API_URL } from "@/etc/config/apiConstants";
+import { ALL_PUBLICATIONS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { Pagination, ItemsTable } from "../components/elements";
 
-const Posts = () => {
-  const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
+const Publications = () => {
+  const data = useFetch(ALL_PUBLICATIONS_QUERY_KEY, PUBLICARIONS_API_URL);
 
-  const [posts, setPosts] = useState(data?.data || []);
+  const [publications, setPublications] = useState(data?.data || []);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
+  const [publicationPerPage] = useState(10);
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    setPosts(data?.data || []);
+    setPublications(data?.data || []);
   }, [data]);
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const indexOfLastPost = currentPage * publicationPerPage;
+  const indexOfFirstPost = indexOfLastPost - publicationPerPage;
   //@ts-ignore
-  const filteredPosts = posts.filter((post) =>
+  const filteredPosts = publications.filter((post) =>
     //@ts-ignore
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -74,12 +74,12 @@ const Posts = () => {
                 <tbody>
                   {/* @ts-ignore */}
                   {currentPosts.map((Post, _index) => (
-                    <ItemsTable post={Post} baseURL="posts"/>
+                    <ItemsTable post={Post} baseURL="publications"/>
                   ))}
                 </tbody>
               </table>
               <Pagination
-                postsPerPage={postsPerPage}
+                postsPerPage={publicationPerPage}
                 totalPosts={filteredPosts.length}
                 paginate={paginate}
                 currentPage={currentPage}
@@ -87,11 +87,11 @@ const Posts = () => {
             </div>
           </div>
         ) : (
-          <p className="text-red-600 font-bold">No posts found.</p>
+          <p className="text-red-600 font-bold">No book found.</p>
         )}
       </div>
     </div>
   );
 };
 
-export default Posts;
+export default Publications;

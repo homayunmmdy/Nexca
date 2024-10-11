@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { CgFeed } from "react-icons/cg";
 import { GiTicket } from "react-icons/gi";
-import { LuBookPlus } from "react-icons/lu";
+import { LuBookCopy, LuBookPlus } from "react-icons/lu";
 import { MdOutlineMail, MdOutlinePostAdd } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { RiAdvertisementLine } from "react-icons/ri";
@@ -20,7 +20,8 @@ const links = [
   { name: "Text Adv", href: "/admin/textadv", icon: RiAdvertisementLine },
   { name: "Services", href: "/admin/services", icon: SiCloudflarepages },
   { name: "Sections", href: "/admin/sections", icon: TbNewSection },
-  { name: "New Publication", href: "/admin/publications/new", icon: LuBookPlus},
+  { name: "New book", href: "/admin/publications/new", icon: LuBookPlus},
+  { name: "books", href: "/admin/publications", icon: LuBookCopy},
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
   { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
   { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },
