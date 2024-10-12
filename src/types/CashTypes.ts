@@ -19,6 +19,12 @@ export type PostsCashType = {
   categories?: Category[],
 } & BaseType;
 
+export type TimeLIneCashType = {
+  title: string;
+  date: string;
+  description: string;
+} & Omit<BaseType, "body">;
+
 export type PublicationsCashType = {
   title: string;
   imgurl: string;

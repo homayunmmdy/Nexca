@@ -12,6 +12,7 @@ import { SiCloudflarepages } from "react-icons/si";
 import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
 import { LogoutButton } from "../../elements";
+import { FaTimeline } from "react-icons/fa6";
 
 const links = [
   { name: "Admin", href: "/admin", icon: TiHome },
@@ -23,6 +24,7 @@ const links = [
   { name: "New book", href: "/admin/publications/new", icon: LuBookPlus},
   { name: "books", href: "/admin/publications", icon: LuBookCopy},
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
+  { name: "TimeLine", href: "/admin/time/new", icon: FaTimeline },
   { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
   { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },
 ];
