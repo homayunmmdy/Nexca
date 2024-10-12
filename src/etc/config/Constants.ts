@@ -13,6 +13,7 @@ export const EMAIL_QUERY_KEY = "emails";
 export const LATEST_POSTS_KEY = "latest_posts";
 export const TICKETS_QUERY_KEY = "tickets";
 export const SERVICES_IMG_KEY = "services_img";
+export const TIMELINE_KEY = "timeLine";
 
 //sections query key
 export const POSTS_QUERY_KEY = "posts";

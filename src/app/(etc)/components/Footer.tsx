@@ -13,6 +13,9 @@ const Footer = () => {
           <Link title="About" className="link link-hover" href="/about">
             About
           </Link>
+          <Link title="Time" className="link link-hover" href="/time">
+            Time
+          </Link>
           <Link
             title="Privacy Policy"
             className="link link-hover"
