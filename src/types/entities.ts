@@ -21,3 +21,10 @@ export type CollapseType = {
   label: string;
   body: string;
 };
+
+export type PriceDataType = {
+  planType: string,
+  price: number,
+  description: string,
+  features: string[];
+}
