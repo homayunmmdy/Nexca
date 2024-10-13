@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: SiteConfig.name,
-    description: SiteConfig.description.slice(0, 160),
+    description: SiteConfig.description.slice(0, 150),
     siteName: SiteConfig.name,
     authors: SiteConfig.author,
     images: {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: `@${SiteConfig.name}`,
-    description: SiteConfig.description.slice(0, 160),
+    description: SiteConfig.description.slice(0, 150),
     creator: `@${SiteConfig.authorID}`,
     images: {
       url: `${SiteConfig.siteURL}/static/Image/logo.jpg`,

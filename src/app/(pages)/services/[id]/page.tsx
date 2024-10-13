@@ -8,10 +8,10 @@ import { usePathname } from "next/navigation";
 import ServicesNav from "../../../(etc)/demo/components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
 import React from 'react'
+import { getParameterId } from "@/util/getParameterId";
 
 const ServicesPage: React.FC = () => {
-  const pathname = usePathname();
-  const id = pathname.slice(10);
+  const id = getParameterId(10);
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
 
   //@ts-ignore
