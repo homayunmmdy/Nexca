@@ -1,3 +1,5 @@
+import { useCallback } from "react";
+
 class FormHandler {
   private loading: boolean = false;
 
@@ -7,13 +9,13 @@ class FormHandler {
     private router: any
   ) {}
 
-  trakeChange = (e: React.ChangeEvent<any>) => {
+  trakeChange = useCallback((e: React.ChangeEvent<any>) => {
     const { name, value } = e.target;
     this.setForm((prevState: any) => ({
       ...prevState,
       [name]: value,
     }));
-  };
+  }, [])
 
   async submit(
     e: React.FormEvent<HTMLFormElement>,
