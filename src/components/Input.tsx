@@ -19,9 +19,7 @@ const Input: React.FC<InputType> = ({
   min ,
   max
 }: InputType) => {
-  const classes = removeDefaultStyle ? style :`input input-bordered ${icon ? "" : style} ${
-    color ? color : ""
-  }`;
+  const classes = removeDefaultStyle ? style :`input input-bordered ${icon ? "" : style} ${color}`;
   return (
     <>
       {icon ? (
@@ -72,7 +70,7 @@ const Input: React.FC<InputType> = ({
           name={name}
           id={id}
           min={min}
-            max={max}
+          max={max}
           checked={checked}
           required={required}
         />

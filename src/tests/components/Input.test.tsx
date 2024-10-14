@@ -44,7 +44,7 @@ describe("Input Compoennets", () => {
   });
   it("should applies the correct class based on style and color props for input with icon", () => {
     const { inputElement, labelElement } = renderComponents({
-       icon: <FaUser />,
+      icon: <FaUser />,
       style: "custom-style",
       color: "input-primary",
     });
@@ -55,6 +55,19 @@ describe("Input Compoennets", () => {
     expect(inputElement).toHaveClass("custom-style");
   });
 
+  it("should remove default style if user set removeDefaultStyle to true", () => {
+    const { inputElement } = renderComponents({ removeDefaultStyle: true});
+
+    expect(inputElement).not.toHaveClass("input");
+  });
+
+  it('should return simple input if is not meet any of options', () => {
+    const { inputElement, labelElement } = renderComponents({label: undefined});
+
+    expect(labelElement).not.toBeInTheDocument();
+    expect(inputElement).toHaveClass('input input-bordered')
+  })
+  
   const renderComponents = (props: Partial<InputType> = {}) => {
     const defaultProps: InputType = {
       id: "1",
@@ -71,7 +84,7 @@ describe("Input Compoennets", () => {
     };
     render(<Input {...defaultProps} {...props} />);
     return {
-      labelElement: screen.getByTestId("label"),
+      labelElement: screen.queryByTestId("label"),
       inputElement: screen.getByPlaceholderText("Enter Text"),
     };
   };

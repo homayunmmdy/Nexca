@@ -4,6 +4,7 @@ import React from 'react'
 
 describe("PriorityDisplay Components", () => {
   it.each([
+    { amount: 0 },
     { amount: 1 },
     { amount: 2 },
     { amount: 3 },

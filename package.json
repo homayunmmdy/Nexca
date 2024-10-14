@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "4.28",
+    "@vitest/coverage-v8": "^1.2.2",
     "axios": "^1.7.5",
     "daisyui": "^4.12.10",
     "mongodb": "^6.8.0",
