@@ -38,7 +38,7 @@ const PublicationsCash: PublicationsCashType[] = [
     __v: 0,
   },
   {
-    _id: "664db351373932f6a08928dd",
+    _id: "664db351373932f6b08928dd",
     title:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl:
@@ -56,7 +56,7 @@ const PublicationsCash: PublicationsCashType[] = [
     __v: 0,
   },
   {
-    _id: "664db351373932f6a08928dd",
+    _id: "664db351373932f6a08925dd",
     title:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl:
