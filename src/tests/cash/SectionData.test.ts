@@ -1,4 +1,4 @@
-import SectionData from "@/etc/cash/SectionData";
+import SectionData from "../../etc/cash/SectionData";
 import { SectionCashType } from "@/types/CashTypes";
 
 describe("SectionData", () => {
@@ -30,7 +30,7 @@ describe("SectionData", () => {
   });
 
   it("should have unique _id value", () => {
-    const idSet = new Set(SectionData.map((s) => s._id));
+    const idSet = new Set(SectionData.map((i) => i._id));
     expect(idSet.size).toBe(SectionData.length);
   });
 });

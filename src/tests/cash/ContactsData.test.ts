@@ -39,7 +39,7 @@ describe("ContactsData", () => {
   });
   
   it("should have unique _id value", () => {
-    const idSet = new Set(ContactsData.map((c) => c._id));
+    const idSet = new Set(ContactsData.map((i) => i._id));
     expect(idSet.size).toBe(ContactsData.length);
   });
 });

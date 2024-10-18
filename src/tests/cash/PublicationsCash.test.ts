@@ -45,7 +45,7 @@ describe("PublicationsCash", () => {
   });
 
   it("should have unique _id value", () => {
-    const idSet = new Set(PublicationsCash.map((b) => b._id));
+    const idSet = new Set(PublicationsCash.map((i) => i._id));
     expect(idSet.size).toBe(PublicationsCash.length);
   });
 });

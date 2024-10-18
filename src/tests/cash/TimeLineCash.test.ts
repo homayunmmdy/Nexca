@@ -33,7 +33,7 @@ describe("TimeLineCash", () => {
   });
 
   it("should have unique _id value", () => {
-    const idSet = new Set(TimeLineCash.map((t) => t._id));
+    const idSet = new Set(TimeLineCash.map((i) => i._id));
     expect(idSet.size).toBe(TimeLineCash.length);
   });
 });

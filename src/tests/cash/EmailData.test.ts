@@ -30,7 +30,7 @@ describe("EmailData", () => {
   });
 
   it("should have unique _id value", () => {
-    const idSet = new Set(EmailData.map((e) => e._id));
+    const idSet = new Set(EmailData.map((i) => i._id));
     expect(idSet.size).toBe(EmailData.length);
   });
 });

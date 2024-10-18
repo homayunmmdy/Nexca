@@ -1,4 +1,4 @@
-import ServicesCash from "@/etc/cash/ServicesCash";
+import ServicesCash from "../../etc/cash/ServicesCash";
 import { ServicesCashType } from "@/types/CashTypes";
 
 describe("ServicesCash", () => {
@@ -34,7 +34,7 @@ describe("ServicesCash", () => {
   });
 
   it("should have unique _id value", () => {
-    const idSet = new Set(ServicesCash.map((s) => s._id));
+    const idSet = new Set(ServicesCash.map((i) => i._id));
     expect(idSet.size).toBe(ServicesCash.length);
   });
 });

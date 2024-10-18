@@ -18,7 +18,6 @@ describe("Ticket Cash", () => {
       expect(tickets).toHaveProperty("priority");
       expect(tickets).toHaveProperty("progress");
       expect(tickets).toHaveProperty("status");
-      expect(tickets).toHaveProperty("status");
       expect(tickets).toHaveProperty("startTime");
       expect(tickets).toHaveProperty("endTime");
       expect(tickets).toHaveProperty("createdAt");
@@ -61,7 +60,7 @@ describe("Ticket Cash", () => {
   })
 
   it("should have unique _id value", () => {
-    const idSet = new Set(TicketsCash.map((t) => t._id));
+    const idSet = new Set(TicketsCash.map((i) => i._id));
     expect(idSet.size).toBe(TicketsCash.length);
   });
   

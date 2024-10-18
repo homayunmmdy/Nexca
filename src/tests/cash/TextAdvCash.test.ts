@@ -1,4 +1,4 @@
-import TextAdvCash from "@/etc/cash/TextAdvCash";
+import TextAdvCash from "../../etc/cash/TextAdvCash";
 import { TextAdvCashType } from "@/types/CashTypes";
 
 describe("TextAdvCash", () => {
@@ -27,9 +27,9 @@ describe("TextAdvCash", () => {
   });
 
   it("should have show valid data string for date", () => {
-    TextAdvCash.forEach((book: TextAdvCashType) => {
-      expect(isNaN(Date.parse(book.createdAt))).toBeFalsy();
-      expect(isNaN(Date.parse(book.updatedAt))).toBeFalsy();
+    TextAdvCash.forEach((adv: TextAdvCashType) => {
+      expect(isNaN(Date.parse(adv.createdAt))).toBeFalsy();
+      expect(isNaN(Date.parse(adv.updatedAt))).toBeFalsy();
     });
   });
 
