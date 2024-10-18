@@ -4,11 +4,10 @@ import { PostsSkeleton } from "@/etc/components/skelton";
 import { POST_API_URL } from "@/etc/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
-import { usePathname } from "next/navigation";
+import { getParameterId } from "@/util/Util";
+import React from "react";
 import ServicesNav from "../../../(etc)/demo/components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
-import React from 'react'
-import { getParameterId } from "@/util/getParameterId";
 
 const ServicesPage: React.FC = () => {
   const id = getParameterId(10);

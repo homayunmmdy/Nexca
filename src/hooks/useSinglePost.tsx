@@ -2,7 +2,7 @@
 import APIClient from "@/util/apiClient";
 import { useEffect, useState } from "react";
 import { POST_API_URL } from "../etc/config/apiConstants";
-import { getParameterId } from "@/util/getParameterId";
+import { getParameterId } from "@/util/Util";
 
 const useSinglePost = () => {
   const id = getParameterId(7);

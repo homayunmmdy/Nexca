@@ -1,7 +1,7 @@
 "use client";
 import { Input, Textarea } from "@/components";
 import { TICKETS_API_URL } from "@/etc/config/apiConstants";
-import { checkMaster } from "@/util/checkMaster";
+import { checkMaster } from "@/util/Util";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";

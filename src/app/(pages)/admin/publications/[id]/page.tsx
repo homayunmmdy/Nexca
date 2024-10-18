@@ -1,5 +1,5 @@
 import { PUBLICARIONS_API_URL } from "@/etc/config/apiConstants";
-import { getById } from "@/util/getById";
+import { getById } from "@/util/Util";
 import { EditPublicationForm } from "../../components";
 
 let updatesectionData = {};
@@ -9,7 +9,7 @@ const EditSectionPage = async ({ params }) => {
 
   if (EDITMODE) {
     updatesectionData = await getById(PUBLICARIONS_API_URL,params.id);
-   {/* @ts-ignore */}
+    {/* @ts-ignore */}
     updatesectionData = updatesectionData.document;
   } else {
     updatesectionData = {

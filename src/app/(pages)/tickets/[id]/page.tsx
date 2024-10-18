@@ -1,6 +1,6 @@
 import { TICKETS_API_URL } from "@/etc/config/apiConstants";
-import { getById } from "../../../../util/getById";
 import { EditTicketForm } from "../../admin/components";
+import { getById } from "@/util/Util";
 
 let updateTicketData = {};
 {/* @ts-ignore */}

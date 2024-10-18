@@ -1,5 +1,5 @@
 import { POST_API_URL } from "@/etc/config/apiConstants";
-import { getById } from "@/util/getById";
+import { getById } from "@/util/Util";
 import { EditPostForm } from "../../components";
 
 let updateTicketData = {};

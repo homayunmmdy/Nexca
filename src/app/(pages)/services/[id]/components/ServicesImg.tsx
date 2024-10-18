@@ -2,8 +2,8 @@
 import { SERVICES_API_URL } from "@/etc/config/apiConstants";
 import { SERVICES_IMG_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
-import { getParameterId } from "@/util/getParameterId";
-import React from 'react'
+import { getParameterId } from "@/util/Util";
+import React from "react";
 
 const ServicesImg: React.FC = () => {
   const id = getParameterId(10);

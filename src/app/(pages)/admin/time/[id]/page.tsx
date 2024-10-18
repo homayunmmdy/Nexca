@@ -1,6 +1,6 @@
-import { getById } from "@/util/getById";
-import { EditTimeLineForm } from "../../components";
 import { TIMELINE_API_URL } from "@/etc/config/apiConstants";
+import { getById } from "@/util/Util";
+import { EditTimeLineForm } from "../../components";
 
 let updateservicesData = {};
 {/* @ts-ignore */}
@@ -9,7 +9,7 @@ const EditServicesPage = async ({ params }) => {
 
   if (EDITMODE) {
     updateservicesData = await getById(TIMELINE_API_URL,params.id);
-  {/* @ts-ignore */}
+    {/* @ts-ignore */}
     updateservicesData = updateservicesData.document;
   } else {
     updateservicesData = {
