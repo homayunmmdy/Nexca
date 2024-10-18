@@ -8,14 +8,19 @@ import React from "react";
 import { FaEdit } from "react-icons/fa";
 import { DeleteBlock } from "../admin/components/elements";
 
-const TimePage: React.FC = () => {
+const TimeLinePage: React.FC = () => {
   const { data } = useFetch(TIMELINE_KEY, TIMELINE_API_URL);
+
+  // @ts-ignore
+  const sortedByTime = data?.sort((a, b) => {
+    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+  });
 
   return (
     <>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical p-6">
         {/* @ts-ignore */}
-        {data?.map((item, index) => (
+        {sortedByTime?.map((item, index) => (
           <li key={item._id}>
             <div className="timeline-middle">
               <svg
@@ -68,4 +73,4 @@ const TimePage: React.FC = () => {
   );
 };
 
-export default TimePage;
+export default TimeLinePage;
