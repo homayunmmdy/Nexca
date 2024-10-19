@@ -21,8 +21,12 @@ const Posts = () => {
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
+   // @ts-ignore
+   const sortedByTime = posts?.sort((a, b) => {
+    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+  });
   //@ts-ignore
-  const filteredPosts = posts.filter((post) =>
+  const filteredPosts = sortedByTime.filter((post) =>
     //@ts-ignore
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
