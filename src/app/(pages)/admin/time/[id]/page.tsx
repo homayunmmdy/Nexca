@@ -1,5 +1,5 @@
 import { TIMELINE_API_URL } from "@/etc/config/apiConstants";
-import { getById } from "@/util/Util";
+import { getById } from "@/util/ServerUtil";
 import { EditTimeLineForm } from "../../components";
 
 let updateservicesData = {};

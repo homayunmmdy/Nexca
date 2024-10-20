@@ -1,5 +1,5 @@
 import { SECTIONS_API_URL } from "@/etc/config/apiConstants";
-import { getById } from "@/util/Util";
+import { getById } from "@/util/ServerUtil";
 import { EditSectionForm } from "../../components";
 
 let updatesectionData = {};

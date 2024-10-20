@@ -1,5 +1,5 @@
 import { SERVICES_API_URL } from "@/etc/config/apiConstants";
-import { getById } from "@/util/Util";
+import { getById } from "@/util/ServerUtil";
 import { EditServicesForm } from "../../components";
 
 let updateservicesData = {};
