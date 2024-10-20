@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoArrowUpCircleSharp } from "react-icons/io5";
+import AdminImage from "@/../public/static/Image/admin.webp";
 
 const Hero: React.FC = () => {
   return (
@@ -49,13 +50,9 @@ const Hero: React.FC = () => {
             {/* Hero Image */}
             <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
               <Image
-                src="/img/admin.webp"
+                src={AdminImage}
                 alt="Nexca Admin Panel"
                 title="Nexca Admin Panel"
-                blurDataURL="img/default.gif"
-                placeholder="blur"
-                layout="responsive"
-                loading="lazy"
                 width={1200}
                 height={800}
                 className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96 bg-slate-400"
