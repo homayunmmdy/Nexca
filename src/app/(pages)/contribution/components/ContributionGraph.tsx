@@ -1,15 +1,19 @@
-import { PointsCashType } from '@/types/CashTypes';
-import React from 'react';
-
-
+import { ContributeCashType } from "@/types/CashTypes";
+import React from "react";
 
 interface ContributionGraphProps {
-  points?: PointsCashType[];
+  contribute?: ContributeCashType[];
 }
 
-const ContributionGraph: React.FC<ContributionGraphProps> = ({ points = [] }) => {
+const ContributionGraph: React.FC<ContributionGraphProps> = ({
+  contribute: contributions = [],
+}) => {
   const today = new Date();
-  const oneYearAgo = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate());
+  const oneYearAgo = new Date(
+    today.getFullYear() - 1,
+    today.getMonth(),
+    today.getDate()
+  );
 
   const daysArray = Array.from({ length: 365 }, (_, i) => {
     const date = new Date(oneYearAgo);
@@ -18,23 +22,38 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({ points = [] }) =>
   });
 
   const getContributionCount = (date: Date) => {
-    return points.filter(point => {
-      const pointDate = new Date(point.date);
-      return pointDate.toDateString() === date.toDateString();
+    return contributions.filter((contribute) => {
+      const contributionDate = new Date(contribute.date);
+      return contributionDate.toDateString() === date.toDateString();
     }).length;
   };
 
   const getColor = (count: number) => {
-    if (count === 0) return 'bg-gray-100';
-    if (count < 3) return 'bg-green-200';
-    if (count < 5) return 'bg-green-300';
-    if (count < 7) return 'bg-green-400';
-    return 'bg-green-500';
+    if (count === 0) return "bg-gray-100";
+    if (count < 3) return "bg-green-200";
+    if (count < 5) return "bg-green-300";
+    if (count < 7) return "bg-green-400";
+    return "bg-green-500";
   };
 
   const formatDate = (date: Date): string => {
-    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${
+      months[date.getMonth()]
+    } ${date.getDate()}, ${date.getFullYear()}`;
   };
 
   return (
@@ -45,19 +64,30 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({ points = [] }) =>
           <div
             key={index}
             className={`w-3 h-3 ${getColor(getContributionCount(date))}`}
-            title={`${formatDate(date)}: ${getContributionCount(date)} contributions`}
+            title={`${formatDate(date)}: ${getContributionCount(
+              date
+            )} contributions`}
           />
         ))}
       </div>
       <div className="mt-4">
         <h3 className="text-xl font-semibold mb-2">Contributions</h3>
-        {points.length > 0 ? (
+        {contributions.length > 0 ? (
           <ul className="space-y-2">
-            {points.map((point, index) => (
+            {contributions.map((contribute, index) => (
               <li key={index} className="border p-2 rounded">
-                <a href={point.link} className="text-blue-500 hover:underline">{point.point}</a>
-                <p className="text-sm text-gray-600">{point.description}</p>
-                <p className="text-xs text-gray-400">{formatDate(new Date(point.date))}</p>
+                <a
+                  href={contribute.link}
+                  className="text-blue-500 hover:underline"
+                >
+                  {contribute.title}
+                </a>
+                <p className="text-sm text-gray-600">
+                  {contribute.description}
+                </p>
+                <p className="text-xs text-gray-400">
+                  {formatDate(new Date(contribute.date))}
+                </p>
               </li>
             ))}
           </ul>

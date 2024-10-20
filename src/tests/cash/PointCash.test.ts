@@ -1,41 +1,41 @@
-import PointsCash from "@/etc/cash/PointsCash";
-import { PointsCashType } from "@/types/CashTypes";
+import ContributionCash from "@/etc/cash/ContributionCash";
+import { ContributeCashType } from "@/types/CashTypes";
 
 describe("Points Cash", () => {
   it("should have the correct structure", () => {
-    expect(Array.isArray(PointsCash)).toBe(true);
-    expect(PointsCash.length).toBeGreaterThan(0);
+    expect(Array.isArray(ContributionCash)).toBe(true);
+    expect(ContributionCash.length).toBeGreaterThan(0);
 
-    PointsCash.forEach((point: PointsCashType) => {
-      expect(point).toHaveProperty("_id");
-      expect(point).toHaveProperty("point");
-      expect(point).toHaveProperty("description");
-      expect(point).toHaveProperty("link");
-      expect(point).toHaveProperty("date");
-      expect(point).toHaveProperty("createdAt");
-      expect(point).toHaveProperty("updatedAt");
-      expect(point).toHaveProperty("__v");
+    ContributionCash.forEach((contribute: ContributeCashType) => {
+      expect(contribute).toHaveProperty("_id");
+      expect(contribute).toHaveProperty("title");
+      expect(contribute).toHaveProperty("description");
+      expect(contribute).toHaveProperty("link");
+      expect(contribute).toHaveProperty("date");
+      expect(contribute).toHaveProperty("createdAt");
+      expect(contribute).toHaveProperty("updatedAt");
+      expect(contribute).toHaveProperty("__v");
     });
   });
 
   it("should not have non-empty values", () => {
-    PointsCash.forEach((point: PointsCashType) => {
-      expect(point.point.trim()).not.toBe("");
-      expect(point.description.trim()).not.toBe("");
-      expect(point.link.trim()).not.toBe("");
+    ContributionCash.forEach((contribute: ContributeCashType) => {
+      expect(contribute.title.trim()).not.toBe("");
+      expect(contribute.description.trim()).not.toBe("");
+      expect(contribute.link.trim()).not.toBe("");
     });
   });
 
   it("should have show valid data string for date", () => {
-    PointsCash.forEach((point: PointsCashType) => {
-      expect(isNaN(Date.parse(point.date))).toBeFalsy();
-      expect(isNaN(Date.parse(point.createdAt))).toBeFalsy();
-      expect(isNaN(Date.parse(point.updatedAt))).toBeFalsy();
+    ContributionCash.forEach((contribute: ContributeCashType) => {
+      expect(isNaN(Date.parse(contribute.date))).toBeFalsy();
+      expect(isNaN(Date.parse(contribute.createdAt))).toBeFalsy();
+      expect(isNaN(Date.parse(contribute.updatedAt))).toBeFalsy();
     });
   });
 
   it("should have unique _id value", () => {
-    const idSet = new Set(PointsCash.map((i) => i._id));
-    expect(idSet.size).toBe(PointsCash.length);
+    const idSet = new Set(ContributionCash.map((i) => i._id));
+    expect(idSet.size).toBe(ContributionCash.length);
   });
 });

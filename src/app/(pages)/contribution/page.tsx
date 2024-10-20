@@ -1,8 +1,12 @@
-import PointsCash from "@/etc/cash/PointsCash";
+import ContributionCash from "@/etc/cash/ContributionCash";
 import ContributionGraph from "./components/ContributionGraph";
 
 const PointsPage = () => {
-  return <><ContributionGraph points={PointsCash}/></>;
+  return (
+    <>
+      <ContributionGraph contribute={ContributionCash} />
+    </>
+  );
 };
 
 export default PointsPage;
