@@ -1,14 +1,10 @@
+import { PointsCashType } from '@/types/CashTypes';
 import React from 'react';
 
-interface Point {
-  Point: string;
-  description: string;
-  link: string;
-  createdAt: string;
-}
+
 
 interface ContributionGraphProps {
-  points?: Point[];
+  points?: PointsCashType[];
 }
 
 const ContributionGraph: React.FC<ContributionGraphProps> = ({ points = [] }) => {
@@ -59,7 +55,7 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({ points = [] }) =>
           <ul className="space-y-2">
             {points.map((point, index) => (
               <li key={index} className="border p-2 rounded">
-                <a href={point.link} className="text-blue-500 hover:underline">{point.Point}</a>
+                <a href={point.link} className="text-blue-500 hover:underline">{point.point}</a>
                 <p className="text-sm text-gray-600">{point.description}</p>
                 <p className="text-xs text-gray-400">{formatDate(new Date(point.createdAt))}</p>
               </li>

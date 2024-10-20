@@ -75,3 +75,9 @@ export type TextAdvCashType = {
   body: string;
   link: string;
 } & BaseType;
+
+export type PointsCashType = {
+  point: string;
+  description: string;
+  link: string;
+} & Omit<BaseType, "body">;
