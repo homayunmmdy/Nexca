@@ -7,3 +7,4 @@ export const TEXTADV_API_URL = "/api/textadv";
 export const TICKETS_API_URL = "/api/tickets";
 export const PUBLICARIONS_API_URL = "/api/publications";
 export const TIMELINE_API_URL = "/api/time";
+export const CONTRIBUTION_API_URL = '/api/contribution'
