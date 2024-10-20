@@ -13,6 +13,7 @@ import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
 import { LogoutButton } from "../../elements";
 import { FaTimeline } from "react-icons/fa6";
+import { VscGraphScatter } from "react-icons/vsc";
 
 const links = [
   { name: "Admin", href: "/admin", icon: TiHome },
@@ -24,6 +25,7 @@ const links = [
   { name: "New book", href: "/admin/publications/new", icon: LuBookPlus},
   { name: "books", href: "/admin/publications", icon: LuBookCopy},
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
+  { name: "Contributions", href: "/admin/contribution/new", icon: VscGraphScatter },
   { name: "TimeLine", href: "/admin/time/new", icon: FaTimeline },
   { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
   { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },

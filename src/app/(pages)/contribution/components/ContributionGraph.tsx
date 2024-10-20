@@ -1,13 +1,5 @@
-import { ContributeCashType } from "@/types/CashTypes";
-import React from "react";
-
-interface ContributionGraphProps {
-  contribute?: ContributeCashType[];
-}
-
-const ContributionGraph: React.FC<ContributionGraphProps> = ({
-  contribute: contributions = [],
-}) => {
+// @ts-ignore
+const ContributionGraph = ({ contributions }) => {
   const today = new Date();
   const oneYearAgo = new Date(
     today.getFullYear() - 1,
@@ -22,7 +14,8 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({
   });
 
   const getContributionCount = (date: Date) => {
-    return contributions.filter((contribute) => {
+    // @ts-ignore
+    return contributions?.filter((contribute) => {
       const contributionDate = new Date(contribute.date);
       return contributionDate.toDateString() === date.toDateString();
     }).length;
@@ -72,9 +65,10 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({
       </div>
       <div className="mt-4">
         <h3 className="text-xl font-semibold mb-2">Contributions</h3>
-        {contributions.length > 0 ? (
+        {contributions?.length > 0 ? (
           <ul className="space-y-2">
-            {contributions.map((contribute, index) => (
+            {/* @ts-ignore */}
+            {contributions?.map((contribute, index) => (
               <li key={index} className="border p-2 rounded">
                 <a
                   href={contribute.link}
