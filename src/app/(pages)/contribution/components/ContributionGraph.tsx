@@ -1,3 +1,8 @@
+import { Button } from "@/components";
+import Link from "next/link";
+import { FaEdit } from "react-icons/fa";
+import { DeleteBlock } from "../../admin/components/elements";
+
 // @ts-ignore
 const ContributionGraph = ({ contributions }) => {
   const today = new Date();
@@ -76,6 +81,19 @@ const ContributionGraph = ({ contributions }) => {
                 >
                   {contribute.title}
                 </a>
+                <div className="flex gap-2">
+                {/* <Link
+                  href={`/admin/contribution/${contribute._id}`}
+                  style={{ display: "contents" }}
+                >
+                  <Button
+                    title={<FaEdit />}
+                    color="btn-warning"
+                    type="button"
+                  />
+                </Link> */}
+                <DeleteBlock path="contribution" id={contribute._id} />
+                </div>
                 <p className="text-sm text-gray-600">
                   {contribute.description}
                 </p>
