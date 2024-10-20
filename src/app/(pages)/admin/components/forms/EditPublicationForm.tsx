@@ -30,43 +30,6 @@ const EditPublicationForm = ({ data }) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
     handler.submit(e, formData, data._id);
 
-  // Add new category to the formData.categories array
-  const addCategory = () => {
-    const newCategory = {
-      id: Date.now(),
-      name: categoryInput,
-    };
-    setFormData((prevState) => ({
-      ...prevState,
-      categories: [...prevState.categories, newCategory],
-    }));
-    setCategoryInput(""); // Clear the input field
-  };
-
-  // Handle category name change for existing categories
-  const handleCategoryChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    id: number
-  ) => {
-    const { value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      // @ts-ignore
-      categories: prevState.categories.map((cat) =>
-        cat.id === id ? { ...cat, name: value } : cat
-      ),
-    }));
-  };
-
-  // Remove category
-  const removeCategory = (id: number) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      // @ts-ignore
-      categories: prevState.categories.filter((cat) => cat.id !== id),
-    }));
-  };
-
   return (
     <div className="flex justify-center">
       {handler.isLoading && (
@@ -187,7 +150,7 @@ const EditPublicationForm = ({ data }) => {
           <Button
             title="Add Category"
             type="button"
-            onClick={addCategory}
+            onClick={() => handler.addCategory(categoryInput,setCategoryInput)}
             color="btn-primary"
           />
         </div>
@@ -202,12 +165,12 @@ const EditPublicationForm = ({ data }) => {
                 type="text"
                 value={category.name}
                 color="input-primary"
-                onChange={(e) => handleCategoryChange(e, category.id)}
+                onChange={(e) => handler.CategoryChanges(e, category.id)}
                 style="w-full"
               />
               <Button
                 type="button"
-                onClick={() => removeCategory(category.id)}
+                onClick={() => handler.removeCategory(category.id)}
                 color="btn-error"
                 title={<MdDeleteOutline />}
               />

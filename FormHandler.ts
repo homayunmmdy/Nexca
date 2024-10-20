@@ -50,7 +50,7 @@ class FormHandler {
       name: categoryInput,
     };
     // @ts-ignore
-    this.setForm((prevState) => ({
+    this.setFormData((prevState) => ({
       ...prevState,
       categories: [...prevState.categories, newCategory],
     }));
@@ -63,7 +63,7 @@ class FormHandler {
   ) => {
     const { value } = e.target;
     // @ts-ignore
-    this.setForm((prevState) => ({
+    this.setFormData((prevState) => ({
       ...prevState,
       // @ts-ignore
       categories: prevState.categories.map((cat) =>
@@ -74,7 +74,7 @@ class FormHandler {
 
   removeCategory = (id: number) => {
     // @ts-ignore
-    this.setForm((prevState) => ({
+    this.setFormData((prevState) => ({
       ...prevState,
       // @ts-ignore
       categories: prevState.categories.filter((cat) => cat.id !== id),
