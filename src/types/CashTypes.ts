@@ -80,4 +80,5 @@ export type PointsCashType = {
   point: string;
   description: string;
   link: string;
+  date: string;
 } & Omit<BaseType, "body">;

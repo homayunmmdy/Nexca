@@ -11,6 +11,7 @@ describe("Points Cash", () => {
       expect(point).toHaveProperty("point");
       expect(point).toHaveProperty("description");
       expect(point).toHaveProperty("link");
+      expect(point).toHaveProperty("date");
       expect(point).toHaveProperty("createdAt");
       expect(point).toHaveProperty("updatedAt");
       expect(point).toHaveProperty("__v");
@@ -27,6 +28,7 @@ describe("Points Cash", () => {
 
   it("should have show valid data string for date", () => {
     PointsCash.forEach((point: PointsCashType) => {
+      expect(isNaN(Date.parse(point.date))).toBeFalsy();
       expect(isNaN(Date.parse(point.createdAt))).toBeFalsy();
       expect(isNaN(Date.parse(point.updatedAt))).toBeFalsy();
     });

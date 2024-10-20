@@ -19,7 +19,7 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({ points = [] }) =>
 
   const getContributionCount = (date: Date) => {
     return points.filter(point => {
-      const pointDate = new Date(point.createdAt);
+      const pointDate = new Date(point.date);
       return pointDate.toDateString() === date.toDateString();
     }).length;
   };
@@ -57,7 +57,7 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({ points = [] }) =>
               <li key={index} className="border p-2 rounded">
                 <a href={point.link} className="text-blue-500 hover:underline">{point.point}</a>
                 <p className="text-sm text-gray-600">{point.description}</p>
-                <p className="text-xs text-gray-400">{formatDate(new Date(point.createdAt))}</p>
+                <p className="text-xs text-gray-400">{formatDate(new Date(point.date))}</p>
               </li>
             ))}
           </ul>

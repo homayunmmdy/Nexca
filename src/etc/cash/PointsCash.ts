@@ -7,6 +7,7 @@ const PointsCash: PointsCashType[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam.",
     link: "http://nexca.vercel.app/",
+    date: "2024-05-22T08:56:49.785Z",
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
@@ -17,6 +18,7 @@ const PointsCash: PointsCashType[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam.",
     link: "http://nexca.vercel.app/",
+    date: "2024-05-24T08:56:49.785Z",
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
@@ -27,6 +29,7 @@ const PointsCash: PointsCashType[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam.",
     link: "http://nexca.vercel.app/",
+    date: "2024-06-22T08:56:49.785Z",
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
@@ -37,6 +40,7 @@ const PointsCash: PointsCashType[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam.",
     link: "http://nexca.vercel.app/",
+    date: "2024-08-22T08:56:49.785Z",
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
@@ -47,6 +51,7 @@ const PointsCash: PointsCashType[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam.",
     link: "http://nexca.vercel.app/",
+    date: "2024-10-22T08:56:49.785Z",
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
