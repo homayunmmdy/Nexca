@@ -32,11 +32,13 @@ const LinearAds: React.FC = () => {
         {ads.map((adv) => (
           <li
             key={adv._id}
-            className="group flex p-2 gap-2 items-center border-dotted border-2 border-gray-400 rounded-xl hover:border-gray-900 hover:border-solid cursor-pointer"
+            className="group flex p-2 gap-2 items-start border-dotted border-2 border-gray-400 rounded-xl hover:border-gray-900 hover:border-solid cursor-pointer"
           >
-            <FaCircleDot size={28} color="#4338CA" />
+<div className="flex-shrink-0 w-7 h-7">
+            <FaCircleDot className="w-full h-full text-indigo-700" size={28} color="#4338CA" />
+</div>
             <Link
-              className="group-hover:text-indigo-600 font-semibold truncate"
+              className="group-hover:text-indigo-600 font-semibold line-clamp-2"
               href={adv.link}
             >
               {adv.body}
