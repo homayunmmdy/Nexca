@@ -1,7 +1,7 @@
+import { PostsCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import React from 'react'
-//@ts-ignore
-const VerticalPost = ({ post }) => {
+const VerticalPost = ({ post }: {post : PostsCashType}) => {
   return (
     <>
       <Link

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react'
-//@ts-ignore
-const PostCard = ({ post }) => {
+import { PostsCashType } from '../../../types/CashTypes';
+
+const PostCard = ({ post }: {post : PostsCashType}) => {
     return (
       <>
         <div className="card  bg-base-100 shadow-xl md:hover:scale-105 rounded-xl transition-transform ease-in-out duration-500">

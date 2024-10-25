@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PostsCashType } from '../../../types/CashTypes';
 
-//@ts-ignore
-const MainItem = ({ post }) => {
+const MainItem = ({ post }: {post : PostsCashType}) => {
   return (
     <div className="col-span-12 md:col-span-6">
       <div className="group cursor-pointer">
