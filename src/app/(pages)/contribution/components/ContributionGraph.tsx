@@ -82,7 +82,7 @@ const ContributionGraph = ({ contributions }) => {
                   {contribute.title}
                 </a>
                 <div className="flex gap-2">
-                {/* <Link
+                <Link
                   href={`/admin/contribution/${contribute._id}`}
                   style={{ display: "contents" }}
                 >
@@ -91,7 +91,7 @@ const ContributionGraph = ({ contributions }) => {
                     color="btn-warning"
                     type="button"
                   />
-                </Link> */}
+                </Link>
                 <DeleteBlock path="contribution" id={contribute._id} />
                 </div>
                 <p className="text-sm text-gray-600">
