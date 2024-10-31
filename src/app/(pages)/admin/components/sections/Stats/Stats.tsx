@@ -48,7 +48,7 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4">
       <Link href="/admin/posts">
         <Stat title="Available Posts" number={posts.length} icon={<CgFeed />} />
       </Link>

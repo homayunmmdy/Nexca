@@ -6,11 +6,11 @@ import RecentPost from "./RecentPost";
 import React from 'react'
 
 const RecentPosts: React.FC = () => {
-  const [recentSize] = useState(-3);
+  const [recentSize] = useState(-4);
   const { posts } = useGetLatestPosts(recentSize, LATEST_POSTS_KEY);
   return (
     <>
-      <ul className="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-10 gap-x-6 items-start py-8">
         {/* @ts-ignore */}
         {posts?.map((post, _index) => (
           <>
@@ -18,7 +18,7 @@ const RecentPosts: React.FC = () => {
             <RecentPost id={_index} key={_index} post={post} />
           </>
         ))}
-      </ul>
+      </div>
     </>
   );
 };

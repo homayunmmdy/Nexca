@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import {PostsCashType} from "@/types/CashTypes"
 
-//@ts-ignore
-const RecentPost = ({ post }) => {
+const RecentPost = ({ post }: {post : PostsCashType}) => {
   return (
     <>
-      <li className="relative flex flex-col sm:flex-row xl:flex-col items-start">
-        <Link href={`/posts/${post._id}`}>
+      <Link href={`/posts/${post._id}`} className="relative flex flex-col sm:flex-row xl:flex-col items-start">
+       
           <Image
             src={post.imgurl}
             alt={post.title}
@@ -24,7 +24,6 @@ const RecentPost = ({ post }) => {
             </div>
           </div>
         </Link>
-      </li>
     </>
   );
 };
