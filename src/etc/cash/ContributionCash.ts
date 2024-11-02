@@ -6,7 +6,7 @@ const ContributionCash: ContributeCashType[] = [
     title: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam.",
-    link: "http://nexca.vercel.app/",
+    link: "",
     date: "2024-05-22T08:56:49.785Z",
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",

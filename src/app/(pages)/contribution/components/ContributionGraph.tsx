@@ -1,8 +1,8 @@
 import { Button } from "@/components";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaEdit } from "react-icons/fa";
 import { DeleteBlock } from "../../admin/components/elements";
-
 // @ts-ignore
 const ContributionGraph = ({ contributions }) => {
   const today = new Date();
@@ -27,11 +27,11 @@ const ContributionGraph = ({ contributions }) => {
   };
 
   const getColor = (count: number) => {
-    if (count === 0) return "bg-gray-100";
-    if (count < 3) return "bg-green-200";
-    if (count < 5) return "bg-green-300";
-    if (count < 7) return "bg-green-400";
-    return "bg-green-500";
+    if (count === 0) return "bg-gray-200";
+    if (count < 3) return "bg-indigo-500";
+    if (count < 5) return "bg-indigo-600";
+    if (count < 7) return "bg-indigo-700";
+    return "bg-indigo-800";
   };
 
   const formatDate = (date: Date): string => {
@@ -55,13 +55,13 @@ const ContributionGraph = ({ contributions }) => {
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Contribution Graph</h2>
+    <div className="mx-auto w-[94%] pt-4 md:w-[92%]">
+      <h2 className="mb-4 text-2xl font-bold">Contribution Graph</h2>
       <div className="flex flex-wrap gap-1">
         {daysArray.map((date, index) => (
           <div
             key={index}
-            className={`w-3 h-3 ${getColor(getContributionCount(date))}`}
+            className={`w-6 h-6 ${getColor(getContributionCount(date))}`}
             title={`${formatDate(date)}: ${getContributionCount(
               date
             )} contributions`}
@@ -69,30 +69,42 @@ const ContributionGraph = ({ contributions }) => {
         ))}
       </div>
       <div className="mt-4">
-        <h3 className="text-xl font-semibold mb-2">Contributions</h3>
+        <h3 className="mb-2 text-xl font-semibold">Contributions</h3>
         {contributions?.length > 0 ? (
-          <ul className="space-y-2">
+          <div className="group space-y-2">
             {/* @ts-ignore */}
             {contributions?.map((contribute, index) => (
-              <li key={index} className="border p-2 rounded">
-                <a
-                  href={contribute.link}
-                  className="text-blue-500 hover:underline"
-                >
-                  {contribute.title}
-                </a>
-                <div className="flex gap-2">
-                <Link
-                  href={`/admin/contribution/${contribute._id}`}
-                  style={{ display: "contents" }}
-                >
-                  <Button
-                    title={<FaEdit />}
-                    color="btn-warning"
-                    type="button"
-                  />
-                </Link>
-                <DeleteBlock path="contribution" id={contribute._id} />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 1 }}
+                key={index}
+                className="rounded border p-3 hover:border-indigo-600"
+              >
+                <div className="flex items-center justify-between">
+                  {contribute.link ? (
+                    <Link
+                      href={contribute.link}
+                      className="text-indigo-600 hover:underline group-hover:text-indigo-600"
+                    >
+                      {contribute.title}
+                    </Link>
+                  ) : (
+                    <span>{contribute.title}</span>
+                  )}
+                  <div className="flex gap-3">
+                    <Link
+                      href={`/admin/contribution/${contribute._id}`}
+                      style={{ display: "contents" }}
+                    >
+                      <Button
+                        title={<FaEdit />}
+                        color="btn-warning"
+                        type="button"
+                      />
+                    </Link>
+                    <DeleteBlock path="contribution" id={contribute._id} />
+                  </div>
                 </div>
                 <p className="text-sm text-gray-600">
                   {contribute.description}
@@ -100,9 +112,9 @@ const ContributionGraph = ({ contributions }) => {
                 <p className="text-xs text-gray-400">
                   {formatDate(new Date(contribute.date))}
                 </p>
-              </li>
+              </motion.div>
             ))}
-          </ul>
+          </div>
         ) : (
           <p>No contributions yet.</p>
         )}
