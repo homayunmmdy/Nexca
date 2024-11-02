@@ -6,3 +6,4 @@ export { default as Spinner } from "./Spinner";
 export { default as Textarea } from "./Textarea";
 export { default as TicketCard } from "./tickets/TicketCard";
 export { default as Titr } from "./Titr";
+export { default as LogoSec } from "./LogoSec";
