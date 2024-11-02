@@ -21,3 +21,13 @@ export type CollapseType = {
   label: string;
   body: string;
 };
+
+
+export type MenuTypes = {
+  pathname: string;
+  nav: {
+    id: number;
+    name: string;
+    link: string;
+  }[];
+}
