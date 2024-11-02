@@ -1,67 +1,27 @@
 import { Button } from "@/components";
+import ContributionHandler from "@/util/handler/ContributionHandler";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaEdit } from "react-icons/fa";
 import { DeleteBlock } from "../../admin/components/elements";
 // @ts-ignore
 const ContributionGraph = ({ contributions }) => {
-  const today = new Date();
-  const oneYearAgo = new Date(
-    today.getFullYear() - 1,
-    today.getMonth(),
-    today.getDate()
-  );
+  const handler = new ContributionHandler(contributions);
 
-  const daysArray = Array.from({ length: 365 }, (_, i) => {
-    const date = new Date(oneYearAgo);
-    date.setDate(date.getDate() + i);
-    return date;
-  });
+  const getContributionCount = handler.getContributionCount
 
-  const getContributionCount = (date: Date) => {
-    // @ts-ignore
-    return contributions?.filter((contribute) => {
-      const contributionDate = new Date(contribute.date);
-      return contributionDate.toDateString() === date.toDateString();
-    }).length;
-  };
-
-  const getColor = (count: number) => {
-    if (count === 0) return "bg-gray-200";
-    if (count < 3) return "bg-indigo-500";
-    if (count < 5) return "bg-indigo-600";
-    if (count < 7) return "bg-indigo-700";
-    return "bg-indigo-800";
-  };
-
-  const formatDate = (date: Date): string => {
-    const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    return `${
-      months[date.getMonth()]
-    } ${date.getDate()}, ${date.getFullYear()}`;
-  };
+  const formatDate = handler.formatDate
 
   return (
     <div className="mx-auto w-[94%] pt-4 md:w-[92%]">
       <h2 className="mb-4 text-2xl font-bold">Contribution Graph</h2>
       <div className="flex flex-wrap gap-1">
-        {daysArray.map((date, index) => (
+        {handler.daysArray.map((date, index) => (
           <div
             key={index}
-            className={`w-6 h-6 ${getColor(getContributionCount(date))}`}
+            className={`w-6 h-6 ${handler.getColor(
+              getContributionCount(date)
+            )}`}
             title={`${formatDate(date)}: ${getContributionCount(
               date
             )} contributions`}
@@ -85,7 +45,7 @@ const ContributionGraph = ({ contributions }) => {
                   {contribute.link ? (
                     <Link
                       href={contribute.link}
-                      className="text-indigo-600 hover:underline group-hover:text-indigo-600"
+                      className="text-indigo-600 hover:underline"
                     >
                       {contribute.title}
                     </Link>
