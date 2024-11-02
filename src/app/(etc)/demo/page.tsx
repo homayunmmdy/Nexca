@@ -1,18 +1,19 @@
+import { LinearAds } from "@/etc/components/ads";
 import {
   MainSec,
   PostsSec,
   SingleCardSec,
+  SwiperSec,
   VerticalPostsSec,
 } from "@/etc/components/sections";
+import React from "react";
 import ServicesNav from "./components/ServicesNav";
-import { LinearAds } from "@/etc/components/ads";
-import React from 'react'
 
 const DemoPage: React.FC = () => {
   return (
     <>
       <ServicesNav />
-      <div className="w-[94%] md:w-[92%] mx-auto pt-2">
+      <div className="mx-auto w-[94%] pt-2 md:w-[92%]">
         <MainSec />
         <div className="grid grid-cols-12 md:gap-9">
           <div className="col-span-12 md:col-span-9">
@@ -22,6 +23,13 @@ const DemoPage: React.FC = () => {
             <LinearAds />
           </div>
         </div>
+      </div>
+      <div className="bg-indigo-600 p-3 sm:p-4 md:p-6 lg:p-9">
+        <div className="mt-5' mx-auto w-[94%] md:w-[92%]">
+          <SwiperSec />
+        </div>
+      </div>
+      <div className="mx-auto w-[94%] pt-2 md:w-[92%]">
         <SingleCardSec />
         <VerticalPostsSec />
       </div>

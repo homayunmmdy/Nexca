@@ -5,6 +5,7 @@ export type FullHoverAnimationType = {
 
 export type TitrType = {
   title: string;
+  borderColor?: string;
   item: "text-center" | "text-left" | "text-right" | string;
   style?: string;
 };
