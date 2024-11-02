@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components";
+import { Button, ThemeToggle } from "@/components";
 import SiteConfig from "@/etc/config/stie";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,8 +17,8 @@ const Header: React.FC = () => {
   };
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 navbar bg-base-100 z-[50] transition-all w-[94%] md:w-[92%] mx-auto rounded-xl shadow-xl border-2 border-indigo-400 hover:border-indigo-700 my-2">
-        <div className="navbar ">
+      <header className="navbar fixed left-0 right-0 top-0 z-[50] mx-auto my-2 w-[94%] rounded-xl border-2 border-indigo-400 bg-base-100 shadow-xl transition-all hover:border-indigo-700 md:w-[92%]">
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <Button
@@ -65,13 +65,13 @@ const Header: React.FC = () => {
                     {pathname == item.link ? (
                       <Link
                         href={item.link}
-                        className="bg-indigo-700 hover:bg-indigo-700 text-white rounded-xl"
+                        className="rounded-xl bg-indigo-700 text-white hover:bg-indigo-700"
                       >
                         {item.name}
                       </Link>
                     ) : (
                       <Link
-                        className="hover:bg-base-100 border-2 border-base-100 hover:text-indigo-700 hover:border-blue-700 rounded-xl"
+                        className="rounded-xl border-2 border-base-100 hover:border-blue-700 hover:bg-base-100 hover:text-indigo-700"
                         href={item.link}
                       >
                         {item.name}
@@ -82,7 +82,8 @@ const Header: React.FC = () => {
               })}
             </ul>
           </div>
-          <div className="navbar-end">
+          <div className="navbar-end gap-5">
+          <ThemeToggle />
             <Link
               href={SiteConfig.github}
               title="GitHub"
@@ -95,26 +96,27 @@ const Header: React.FC = () => {
                 color="btn-neutral"
                 icon={<FaGithub color="white" size={20} />}
               />
+            
             </Link>
           </div>
         </div>
       </header>
       {isOpen && (
-        <nav className="fixed top-[95px] backdrop-blur-md rounded-xl shadow-xl mx-auto left-0 right-0 z-[50] w-[94%] md:w-[92%] border-2 border-indigo-700">
-          <ul className="flex gap-4 items-center  flex-col my-3 p-2 shadow lg:hidden bg-inherit">
+        <nav className="fixed left-0 right-0 top-[95px] z-[50] mx-auto w-[94%] rounded-xl border-2 border-indigo-700 shadow-xl backdrop-blur-md md:w-[92%]">
+          <ul className="my-3 flex flex-col items-center gap-4 bg-inherit p-2 shadow lg:hidden">
             {nav?.map((item) => {
               return (
                 <li key={`mobile_menu_item_${item.id}`} className="mx-1 w-3/4">
                   {pathname === item.link ? (
                     <Link
                       href={item.link}
-                      className="p-2 bg-indigo-700 hover:bg-indigo-700 text-white rounded-xl block w-full text-center"
+                      className="block w-full rounded-xl bg-indigo-700 p-2 text-center text-white hover:bg-indigo-700"
                     >
                       {item.name}
                     </Link>
                   ) : (
                     <Link
-                      className="p-2 border-2 border-indigo-700 rounded-xl block w-full text-center"
+                      className="block w-full rounded-xl border-2 border-indigo-700 p-2 text-center"
                       href={item.link}
                     >
                       {item.name}
