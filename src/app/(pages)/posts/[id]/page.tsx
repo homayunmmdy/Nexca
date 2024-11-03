@@ -1,5 +1,6 @@
 "use client";
 import RecentPosts from "@/app/(pages)/posts/[id]/components/RecentPosts";
+import "@/app/tiptap.css";
 import { Button } from "@/components";
 import { MorePostsSec } from "@/etc/components/sections";
 import useReadText from "@/hooks/useReadText";
@@ -7,20 +8,23 @@ import useSinglePost from "@/hooks/useSinglePost";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaPlay } from "react-icons/fa";
 import { FaStop } from "react-icons/fa6";
 import FormatTime from "../components/FormatTime";
 import RenderTags from "./components/RenderTags";
 import PostSeclton from "./PostSkelton";
-import "@/app/tiptap.css";
 
 const Post: React.FC = () => {
   //@ts-ignore
   const post = useSinglePost();
   //@ts-ignore
   const text = `${post?.title}. ${post?.body}`;
-  const { isSpeaking, handleReadText, handleStopReading } = useReadText(text);
+  const { isSpeaking, handleReadText, handleStopReading, cleanup } = useReadText(text);
+
+  useEffect(() => {
+    return cleanup;
+  }, [cleanup]);
 
   if (!post) {
     return <PostSeclton />;
@@ -70,14 +74,14 @@ const Post: React.FC = () => {
                   <Button
                     title={<FaPlay />}
                     style="text-white rounded-full"
-                    onClick={handleReadText}
+                    onClick={isSpeaking ? handleStopReading : handleReadText}
                     color="btn-primary"
                   />
                 ) : (
                   <Button
                     title={<FaStop />}
                     style="text-white rounded-full"
-                    onClick={handleStopReading}
+                    onClick={isSpeaking ? handleStopReading : handleReadText}
                     color="btn-primary"
                   />
                 )}
