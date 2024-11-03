@@ -1,18 +1,16 @@
 class ContributionHandler {
-  private today: Date = new Date();
+  private currentYear : number = 2024;
+  private startDate: Date = new Date(this.currentYear, 0, 1);
+  private endDate: Date = new Date(this.currentYear, 11, 31);
 
-  constructor(
-    private contributions: any
-  ) {}
+  constructor(private contributions: any) {}
 
-  private oneYearAgo = new Date(
-    this.today.getFullYear() - 1,
-    this.today.getMonth(),
-    this.today.getDate()
-  );
+  private getDaysInYear(year : number): number {
+    return ((year % 4 === 0 && year % 100 > 0) || year % 400 === 0)? 366 : 365;
+  }
 
-  private daysInArray = Array.from({ length: 365 }, (_, i) => {
-    const date = new Date(this.oneYearAgo);
+  private daysInArray = Array.from({ length: this.getDaysInYear(this.currentYear) }, (_, i) => {
+    const date = new Date(this.startDate);
     date.setDate(date.getDate() + i);
     return date;
   });
@@ -26,13 +24,12 @@ class ContributionHandler {
   };
 
   getContributionCount = (date: Date) => {
-    // @ts-ignore
-    return this.contributions?.filter((contribute) => {
+    return this.contributions?.filter((contribute: any) => {
       const contributionDate = new Date(contribute.date);
       return contributionDate.toDateString() === date.toDateString();
-    }).length;
+    }).length ?? 0;
   };
-  
+
   formatDate = (date: Date): string => {
     const months = [
       "Jan",
@@ -53,8 +50,8 @@ class ContributionHandler {
     } ${date.getDate()}, ${date.getFullYear()}`;
   };
 
-  get daysArray() : Date[] {
-    return this.daysInArray
+  get daysArray(): Date[] {
+    return this.daysInArray;
   }
 }
 

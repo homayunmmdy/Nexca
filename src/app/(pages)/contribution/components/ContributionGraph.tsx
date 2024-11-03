@@ -14,7 +14,7 @@ const ContributionGraph = ({ contributions }) => {
 
   return (
     <div className="mx-auto w-[94%] pt-4 md:w-[92%]">
-      <h2 className="mb-4 text-2xl font-bold">Contribution Graph</h2>
+      <h2 className="mb-4 text-2xl font-bold">Contribution Graph of 2024</h2>
       <div className="flex flex-wrap gap-1">
         {handler.daysArray.map((date, index) => (
           <div
