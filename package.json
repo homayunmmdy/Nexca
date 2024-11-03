@@ -17,6 +17,9 @@
   },
   "dependencies": {
     "@tanstack/react-query": "4.28",
+    "@tiptap/pm": "^2.9.1",
+    "@tiptap/react": "^2.9.1",
+    "@tiptap/starter-kit": "^2.9.1",
     "@vitest/coverage-v8": "^1.2.2",
     "axios": "^1.7.5",
     "daisyui": "^4.12.10",
