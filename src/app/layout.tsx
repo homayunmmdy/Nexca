@@ -52,8 +52,8 @@ export default function RootLayout({
 }>) {
   return (
     <ReactQueryProvider>
-      <html lang="en">
-        <body className={inter.className} data-theme="light">
+      <html lang="en" data-theme="light">
+        <body className={inter.className} >
           <Header />
           <main className="mt-[120px]">{children}</main>
           <Footer />
