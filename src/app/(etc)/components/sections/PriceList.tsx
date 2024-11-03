@@ -12,14 +12,14 @@ const PriceList: React.FC = () => {
             </h2>
           </div>
           <div className="space-y-8  lg:grid md:grid-cols-3 lg:space-y-0 lg:gap-10">
-            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl border border-gray-200 bg-white p-6 text-gray-900 xl:p-8">
+            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl border border-gray-200 bg-white p-6 text-black xl:p-8">
               <h3 className="text-lg font-normal ">Basic</h3>
               <div className="my-8 flex items-baseline justify-center ">
                 <span className="mr-2 text-5xl font-extrabold">$9</span>
                 <span>/month</span>
               </div>
 
-              <p className="font-light text-gray-600 sm:text-sm">
+              <p className="font-light text-black sm:text-sm">
                 Best option for personal use & for your next project.
               </p>
               <Link href="/admin" className="cursor-pointer bg-gray-900 w-full rounded-md  p-3 text-center text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
@@ -27,7 +27,7 @@ const PriceList: React.FC = () => {
               </Link>
               <ul
                 role="list"
-                className="mb-8 space-y-4 text-left text-gray-600  text-sm"
+                className="mb-8 space-y-4 text-left text-black  text-sm"
               >
                 <li className="flex items-center space-x-3 ">
                   <svg
@@ -106,14 +106,14 @@ const PriceList: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl  bg-[#D8FA6D] p-6 text-gray-900 xl:p-8">
+            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl  bg-[#D8FA6D] p-6 text-black xl:p-8">
               <h3 className="text-lg font-normal ">Essential</h3>
               <div className="my-8 flex items-baseline justify-center ">
                 <span className="mr-2 text-5xl font-extrabold">$19</span>
-                <span className="text-gray-600">/month</span>
+                <span className="text-black">/month</span>
               </div>
 
-              <p className="font-light text-gray-600 sm:text-sm">
+              <p className="font-light text-black sm:text-sm">
                 Best option for personal use & for your next project.
               </p>
               <a className="cursor-pointer bg-gray-900 w-full rounded-md  p-3 text-center text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
@@ -121,7 +121,7 @@ const PriceList: React.FC = () => {
               </a>
               <ul
                 role="list"
-                className="mb-8 space-y-4 text-left text-gray-600  text-sm"
+                className="mb-8 space-y-4 text-left text-black  text-sm"
               >
                 <li className="flex items-center space-x-3 ">
                   <svg
@@ -200,14 +200,14 @@ const PriceList: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl  bg-[#DCA6F3] p-6 text-center text-gray-900 xl:p-8">
+            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl  bg-[#DCA6F3] p-6 text-center text-black xl:p-8">
               <h3 className="text-lg font-normal ">Growth</h3>
               <div className="my-8 flex items-baseline justify-center ">
                 <span className="mr-2 text-5xl font-extrabold">$29</span>
-                <span className="text-gray-600">/month</span>
+                <span className="text-black">/month</span>
               </div>
 
-              <p className="font-light text-gray-600 sm:text-sm">
+              <p className="font-light text-black sm:text-sm">
                 Best option for personal use & for your next project.
               </p>
               <a className="cursor-pointer bg-gray-900 w-full rounded-md  p-3  text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
@@ -215,7 +215,7 @@ const PriceList: React.FC = () => {
               </a>
               <ul
                 role="list"
-                className="mb-8 space-y-4 text-left text-gray-600  text-sm"
+                className="mb-8 space-y-4 text-left text-black  text-sm"
               >
                 <li className="flex items-center space-x-3 ">
                   <svg
