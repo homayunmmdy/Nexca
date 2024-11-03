@@ -20,6 +20,7 @@ const LogoSec = ({ siteName, LogoOnlyInDesktop }: Props) => {
            height={60}
            title={siteName}
            alt={siteName}
+           aria-label={`${siteName} logo`}
          />
           <span className="hidden text-2xl font-bold md:block">{siteName}</span>
           </div>
@@ -31,6 +32,7 @@ const LogoSec = ({ siteName, LogoOnlyInDesktop }: Props) => {
             height={60}
             title={siteName}
             alt={siteName}
+            aria-label={`${siteName} logo`}
           />
           <span className="text-2xl font-bold">{siteName}</span>
         </div>
