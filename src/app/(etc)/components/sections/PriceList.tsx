@@ -116,9 +116,9 @@ const PriceList: React.FC = () => {
               <p className="font-light text-black sm:text-sm">
                 Best option for personal use & for your next project.
               </p>
-              <a className="cursor-pointer bg-gray-900 w-full rounded-md  p-3 text-center text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
+              <Link href="/admin" className="cursor-pointer bg-gray-900 w-full rounded-md  p-3 text-center text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
                 Get started
-              </a>
+              </Link>
               <ul
                 role="list"
                 className="mb-8 space-y-4 text-left text-black  text-sm"
@@ -210,9 +210,9 @@ const PriceList: React.FC = () => {
               <p className="font-light text-black sm:text-sm">
                 Best option for personal use & for your next project.
               </p>
-              <a className="cursor-pointer bg-gray-900 w-full rounded-md  p-3  text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
+              <Link href="/admin" className="cursor-pointer bg-gray-900 w-full rounded-md  p-3  text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
                 Get started
-              </a>
+              </Link>
               <ul
                 role="list"
                 className="mb-8 space-y-4 text-left text-black  text-sm"
