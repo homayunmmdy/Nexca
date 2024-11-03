@@ -1,7 +1,6 @@
 class ContributionHandler {
   private currentYear : number = 2024;
   private startDate: Date = new Date(this.currentYear, 0, 1);
-  private endDate: Date = new Date(this.currentYear, 11, 31);
 
   constructor(private contributions: any) {}
 
