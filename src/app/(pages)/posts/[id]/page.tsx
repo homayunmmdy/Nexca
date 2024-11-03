@@ -13,6 +13,8 @@ import { FaStop } from "react-icons/fa6";
 import FormatTime from "../components/FormatTime";
 import RenderTags from "./components/RenderTags";
 import PostSeclton from "./PostSkelton";
+import "@/app/tiptap.css";
+
 const Post: React.FC = () => {
   //@ts-ignore
   const post = useSinglePost();
