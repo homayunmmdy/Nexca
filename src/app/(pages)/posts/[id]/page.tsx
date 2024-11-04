@@ -40,7 +40,7 @@ const Post: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-col" id="tiptap-style">
         <div className="bg-indigo-500">
           <div className="mx-auto w-[94%] px-4 py-8 md:w-[92%]">
             <h1 className="text-center text-4xl font-extrabold text-white">

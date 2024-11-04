@@ -39,7 +39,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
   }
 
   return (
-    <div className="rounded-md border border-indigo-500 p-2">
+    <div className="rounded-md border border-indigo-500 p-2" id="tiptap-style">
       <div className="mb-2 flex flex-wrap gap-2 px-3">
         <Button
           title={"H1"}

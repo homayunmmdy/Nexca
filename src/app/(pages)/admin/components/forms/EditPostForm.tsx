@@ -88,7 +88,7 @@ const EditPostForm = ({ post }) => {
           value={formData.description}
           onChange={handler.trakeChange}
         />
-        <div>
+        <div id="tiptap-style">
           <label htmlFor="body" className="label">
             Body
           </label>
