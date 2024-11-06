@@ -5,7 +5,6 @@ import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import Logo from "@/../public/static/Image/logo.jpg";
 
 //@ts-ignore
 const EditServicesForm = ({ data }) => {
@@ -39,7 +38,7 @@ const EditServicesForm = ({ data }) => {
           </h3>
           <div>
             <Image
-              src={!formData.imgurl ? Logo : formData.imgurl}
+              src={!formData.imgurl ? "/static/Image/logo.jpg" : formData.imgurl}
               title={formData.name}
               alt={formData.name}
               height={390.938}

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PostsCashType } from '../../../types/CashTypes';
-import Logo from "@/../public/static/Image/logo.jpg";
 
 const MainItem = ({ post }: {post : PostsCashType}) => {
   return (
@@ -14,7 +13,7 @@ const MainItem = ({ post }: {post : PostsCashType}) => {
             title={post.title.slice(0,60)}
           >
             <Image
-              src={!post.imgurl ? Logo : post.imgurl}
+              src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
               alt={post.title}
               title={post.title.slice(0,60)}
               width={500}

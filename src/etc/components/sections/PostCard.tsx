@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from 'react'
 import { PostsCashType } from '../../../types/CashTypes';
-import Logo from "@/../public/static/Image/logo.jpg";
 
 const PostCard = ({ post }: {post : PostsCashType}) => {
     return (
@@ -11,7 +10,7 @@ const PostCard = ({ post }: {post : PostsCashType}) => {
           <Link href={`/posts/${post._id}`} >
           <figure className="px-5 pt-5">
             <Image
-              src={!post.imgurl? Logo: post.imgurl}
+              src={!post.imgurl? "/static/Image/logo.jpg" : post.imgurl}
               alt={post.title.slice(0,70)}
               width={662.172}
               height={372.469}

@@ -1,7 +1,6 @@
 import { PostsCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import React from 'react'
-import Logo from "@/../public/static/Image/logo.jpg";
 
 const VerticalPost = ({ post }: {post : PostsCashType}) => {
   return (
@@ -10,7 +9,7 @@ const VerticalPost = ({ post }: {post : PostsCashType}) => {
         key={post._id}
         href={`/posts/${post._id}`}
         className="group relative flex h-[450px] w-full items-end justify-start rounded-md bg-indigo-600 bg-cover bg-center text-left"
-        style={{ backgroundImage: `url(${!post.imgurl? Logo : post.imgurl})` }}
+        style={{ backgroundImage: `url(${!post.imgurl? "/static/Image/logo.jpg" : post.imgurl})` }}
       >
         <div className="absolute bottom-0 left-0 right-0 top-0 mt-20 bg-gradient-to-b from-transparent to-gray-900"></div>
         <main className="z-10 p-5">

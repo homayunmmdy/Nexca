@@ -8,13 +8,14 @@ import { PostsSecSkeleton } from "../skelton";
 import PostCard from "./PostCard";
 
 const CodingTabs = () => {
-  const [activeTab, setActiveTab] = useState<"6" | "7" | "8" | "9">("6");
+  const [activeTab, setActiveTab] = useState<"6" | "7" | "8" | "9" | "10">("6");
 
   const tabs = [
     { id: "6", title: "JS/TS" },
     { id: "7", title: "React" },
-    { id: "8", title: "Technical" },
-    { id: "9", title: "Behaviour" },
+    { id: "8", title: "DSA" },
+    { id: "9", title: "Technical" },
+    { id: "10", title: "Behaviour" },
   ];
 
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
