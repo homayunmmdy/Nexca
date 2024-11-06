@@ -14,6 +14,7 @@ import { useState } from "react";
 import { MdDeleteOutline } from "react-icons/md";
 import { SelectField } from "../elements";
 import TiptapEditor from "../TiptapEditor";
+import Logo from "@/../public/static/Image/logo.jpg";
 
 //@ts-ignore
 const EditPostForm = ({ post }) => {
@@ -53,7 +54,7 @@ const EditPostForm = ({ post }) => {
         </h3>
         <div>
           <Image
-            src={formData.imgurl}
+            src={!formData.imgurl ? Logo : formData.imgurl}
             title={formData.title}
             alt={formData.title}
             height={390.938}

@@ -8,6 +8,7 @@ import Link from "next/link";
 import Button from "../../../components/Button";
 import { SingleCardSkeleton } from "../skelton";
 import React from 'react'
+import Logo from "@/../public/static/Image/logo.jpg";
 
 const SingleCard: React.FC = () => {
   const { data, loading } = useGetSection(SINGLE_POST_QUERY_KEY, -1, 3);
@@ -27,11 +28,11 @@ const SingleCard: React.FC = () => {
         <Link
           href={`/posts/${post._id}`}
           key={post._id}
-          className="card lg:card-side bg-base-100 shadow-xl my-5"
+          className="card my-5 bg-base-100 shadow-xl lg:card-side"
         >
           <figure>
             <Image
-              src={post.imgurl}
+              src={!post.imgurl? Logo : post.imgurl }
               alt={post.title.slice(0, 70)}
               width={928}
               height={548}

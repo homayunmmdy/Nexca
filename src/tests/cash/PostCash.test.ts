@@ -27,7 +27,6 @@ describe("Ticket Cash", () => {
   it("should not have non-empty values", () => {
     PostsCash.forEach((post: PostsCashType) => {
       expect(post.title.trim()).not.toBe("");
-      expect(post.imgurl.trim()).not.toBe("");
       expect(post.description.trim()).not.toBe("");
       expect(post.body.trim()).not.toBe("");
     });

@@ -1,18 +1,20 @@
 import { PostsCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import React from 'react'
+import Logo from "@/../public/static/Image/logo.jpg";
+
 const VerticalPost = ({ post }: {post : PostsCashType}) => {
   return (
     <>
       <Link
         key={post._id}
         href={`/posts/${post._id}`}
-        className="group relative w-full flex items-end justify-start text-left bg-cover bg-center h-[450px]  rounded-md bg-slate-400"
-        style={{ backgroundImage: `url(${post.imgurl})` }}
+        className="group relative flex h-[450px] w-full items-end justify-start rounded-md bg-indigo-600 bg-cover bg-center text-left"
+        style={{ backgroundImage: `url(${!post.imgurl? Logo : post.imgurl})` }}
       >
-        <div className="absolute top-0 mt-20 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent to-gray-900"></div>
-        <main className="p-5 z-10">
-          <h4 className="text-md tracking-tight font-medium leading-7 font-regular text-white group-hover:underline group-hover:text-indigo-700">
+        <div className="absolute bottom-0 left-0 right-0 top-0 mt-20 bg-gradient-to-b from-transparent to-gray-900"></div>
+        <main className="z-10 p-5">
+          <h4 className="text-md font-regular font-medium leading-7 tracking-tight text-white group-hover:text-indigo-700 group-hover:underline">
             {post.title.slice(0,90)}
           </h4>
         </main>

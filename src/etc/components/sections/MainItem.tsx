@@ -1,30 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PostsCashType } from '../../../types/CashTypes';
+import Logo from "@/../public/static/Image/logo.jpg";
 
 const MainItem = ({ post }: {post : PostsCashType}) => {
   return (
     <div className="col-span-12 md:col-span-6">
       <div className="group cursor-pointer">
-        <div className=" overflow-hidden rounded-md transition-all hover:scale-105   ">
+        <div className="overflow-hidden rounded-md transition-all hover:scale-105">
           <Link
             className="relative block aspect-video"
             href={`/posts/${post._id}`}
             title={post.title.slice(0,60)}
           >
             <Image
-              src={post.imgurl}
+              src={!post.imgurl ? Logo : post.imgurl}
               alt={post.title}
               title={post.title.slice(0,60)}
               width={500}
               height={270}
-              className="w-full h-full bg-gray-600"
+              className="h-full w-full bg-gray-600"
             />
           </Link>
         </div>
         <div className="">
           <div>
-            <h2 className="text-lg font-semibold leading-snug tracking-tight mt-4  ">
+            <h2 className="mt-4 text-lg font-semibold leading-snug tracking-tight">
               <Link
                 href={`/posts/${post._id}`}
                 title={post.title.slice(0,60)}

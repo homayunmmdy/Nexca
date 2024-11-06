@@ -21,7 +21,6 @@ describe("ServicesCash", () => {
   it("should not have non-empty values", () => {
     ServicesCash.forEach((service: ServicesCashType) => {
       expect(service.name.trim()).not.toBe("");
-      expect(service.imgurl.trim()).not.toBe("");
       expect(service.description.trim()).not.toBe("");
     });
   });

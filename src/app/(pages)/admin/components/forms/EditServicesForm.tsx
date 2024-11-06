@@ -5,6 +5,7 @@ import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import Logo from "@/../public/static/Image/logo.jpg";
 
 //@ts-ignore
 const EditServicesForm = ({ data }) => {
@@ -26,24 +27,24 @@ const EditServicesForm = ({ data }) => {
     <>
       <div className="flex justify-center">
         {handler.isLoading && (
-          <span className="absolute loading loading-ring loading-lg"></span>
+          <span className="loading loading-ring loading-lg absolute"></span>
         )}
         <form
           onSubmit={handleSubmit}
           method="post"
-          className="flex flex-col gap-3 w-full md:w-1/2 mb-3"
+          className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
         >
-          <h3 className="text-center font-semibold text-2xl">
+          <h3 className="text-center text-2xl font-semibold">
             {EDITMODE ? "Edit Services" : "New Services"}
           </h3>
           <div>
             <Image
-              src={formData.imgurl}
+              src={!formData.imgurl ? Logo : formData.imgurl}
               title={formData.name}
               alt={formData.name}
               height={390.938}
               width={695}
-              className="w-full rounded-xl border border-indigo-500 aspect-video"
+              className="aspect-video w-full rounded-xl border border-indigo-500"
             />
           </div>
           <Input
