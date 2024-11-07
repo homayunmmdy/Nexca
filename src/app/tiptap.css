@@ -59,3 +59,11 @@ element to not have effect in other part of applications */
   color: blue;
   text-decoration: underline;
 }
+
+#tiptap-style pre {
+  background: #2E2B29;
+  border-radius: 0.5rem;
+  color: white;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+}

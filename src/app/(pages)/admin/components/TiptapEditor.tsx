@@ -1,5 +1,6 @@
 import "@/app/tiptap.css";
 import { Button } from "@/components";
+import CodeBlock from "@tiptap/extension-code-block";
 import Highlight from "@tiptap/extension-highlight";
 import Link from "@tiptap/extension-link";
 import Underline from "@tiptap/extension-underline";
@@ -7,7 +8,7 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import React, { useCallback } from "react";
 import { GrOrderedList } from "react-icons/gr";
-import { IoMdLink } from "react-icons/io";
+import { IoMdCode, IoMdLink } from "react-icons/io";
 import {
   MdFormatItalic,
   MdFormatListBulleted,
@@ -17,7 +18,6 @@ import {
   MdOutlineFormatBold,
   MdStrikethroughS,
 } from "react-icons/md";
-import { PiHighlighterFill } from "react-icons/pi";
 
 interface TiptapEditorProps {
   content: string;
@@ -29,6 +29,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
     extensions: [
       StarterKit,
       Underline,
+      CodeBlock,
       Highlight.configure({ multicolor: true }),
       Link.configure({
         openOnClick: false,
@@ -173,12 +174,13 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           style={editor.isActive("bulletList") ? "is-active" : ""}
         />
+
         <Button
-          title={<PiHighlighterFill size={20} />}
+          title={<IoMdCode size={20} />}
           type="button"
           color="btn-ghost"
-          onClick={() => editor.chain().focus().toggleHighlight().run()}
-          style={editor.isActive("highlight") ? "is-active" : ""}
+          onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+          style={editor.isActive("codeBlock") ? "is-active" : ""}
         />
       </div>
       <EditorContent editor={editor} className="prose max-w-none" />
