@@ -1,3 +1,7 @@
+/* All the style of this only for tiptap rich text editor and if you wants 
+to modifiy or add new remember to user #tiptap-style before you select 
+element to not have effect in other part of applications */
+
 #tiptap-style h1 {
   font-size: 2.125rem;
   font-weight: bold;
@@ -49,4 +53,9 @@
 
 #tiptap-style .ProseMirror {
   padding: 30px;
+}
+
+#tiptap-style a {
+  color: blue;
+  text-decoration: underline;
 }

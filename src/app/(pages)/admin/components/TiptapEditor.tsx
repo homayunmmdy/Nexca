@@ -1,16 +1,19 @@
 import "@/app/tiptap.css";
 import { Button } from "@/components";
 import Highlight from "@tiptap/extension-highlight";
+import Link from "@tiptap/extension-link";
 import Underline from "@tiptap/extension-underline";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import React from "react";
+import React, { useCallback } from "react";
 import { GrOrderedList } from "react-icons/gr";
+import { IoMdLink } from "react-icons/io";
 import {
   MdFormatItalic,
   MdFormatListBulleted,
   MdFormatQuote,
   MdFormatUnderlined,
+  MdLinkOff,
   MdOutlineFormatBold,
   MdStrikethroughS,
 } from "react-icons/md";
@@ -27,12 +30,42 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
       StarterKit,
       Underline,
       Highlight.configure({ multicolor: true }),
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        defaultProtocol: "https",
+      }),
     ],
     content,
     onUpdate: ({ editor }) => {
       onChange(editor.getHTML());
     },
   });
+
+  const setLink = useCallback(() => {
+    const previousUrl = editor?.getAttributes("link").href;
+    const url = window.prompt("URL", previousUrl);
+
+    // cancelled
+    if (url === null) {
+      return;
+    }
+
+    // empty
+    if (url === "") {
+      editor?.chain().focus().extendMarkRange("link").unsetLink().run();
+
+      return;
+    }
+
+    // update link
+    editor
+      ?.chain()
+      .focus()
+      .extendMarkRange("link")
+      .setLink({ href: url })
+      .run();
+  }, [editor]);
 
   if (!editor) {
     return null;
@@ -93,7 +126,24 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
           style={editor.isActive("blockquote") ? "is-active" : ""}
         />
-
+        <div className="control-group">
+          <div className="button-group">
+            <Button
+              title={<IoMdLink size={20} />}
+              type="button"
+              color="btn-ghost"
+              onClick={setLink}
+              style={editor.isActive("link") ? "is-active" : ""}
+            />
+            <Button
+              title={<MdLinkOff size={20} />}
+              type="button"
+              color="btn-ghost"
+              onClick={() => editor.chain().focus().unsetLink().run()}
+              disabled={!editor.isActive("link")}
+            />
+          </div>
+        </div>
         <Button
           title={<MdFormatUnderlined size={20} />}
           type="button"
