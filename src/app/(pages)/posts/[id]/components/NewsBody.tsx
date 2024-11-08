@@ -1,0 +1,42 @@
+import { MorePostsSec } from "@/etc/components/sections";
+import DOMPurify from "isomorphic-dompurify";
+import Image from "next/image";
+import Link from "next/link";
+import ReadPost from "./ReadPost";
+import RenderTags from "./RenderTags";
+import "@/app/tiptap.css";
+
+const NewsBody = ({ post }: { post: any }) => {
+  const text = `${post?.title}. ${post?.body}`;
+  const PostBody = DOMPurify.sanitize(post.body);
+
+  return (
+    <>
+      <Image
+        className="aspect-video w-full rounded-3xl py-3"
+        src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
+        title={post.title}
+        alt={post.title}
+        width={662.172}
+        height={372.469}
+        loading="lazy"
+      />
+      <div className="flex items-center justify-between gap-3 px-3">
+        {/* <p className="text-center">{readingTimeEstimate.text}</p> */}
+        <ReadPost text={text} />
+        <Link href="/demo" className="btn btn-outline btn-primary rounded-full">
+          Back Home
+        </Link>
+      </div>
+      <div
+        className="prose mb-3 max-w-none text-lg leading-9"
+        id="tiptap-style"
+        dangerouslySetInnerHTML={{ __html: PostBody }}
+      />
+      <RenderTags post={post} />
+      <MorePostsSec />
+    </>
+  );
+};
+
+export default NewsBody;
