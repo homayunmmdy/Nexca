@@ -20,6 +20,12 @@ export type PostsCashType = {
   categories?: Category[];
 } & BaseType;
 
+export type LearnCashType = {
+  title: string;
+  imgurl: string;
+  description: string;
+} & BaseType;
+
 export type TimeLIneCashType = {
   title: string;
   date: string;
