@@ -7,7 +7,7 @@ import { SWIPER_SEC } from "@/etc/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import { A11y, Autoplay, Navigation } from "swiper/modules";
-import { PostsSecSkeleton } from "../skelton";
+import { Posts4x4Skeleton } from "../skelton";
 import PostCard from "./PostCard";
 import { Titr } from "@/components";
 
@@ -15,7 +15,7 @@ export default () => {
   const { data, loading } = useGetSection(SWIPER_SEC, -8, 5);
 
   if (loading) {
-    return <PostsSecSkeleton />;
+    return <Posts4x4Skeleton />;
   }
 
   return (

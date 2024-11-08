@@ -4,7 +4,7 @@ import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import { useState } from "react";
-import { PostsSecSkeleton } from "../skelton";
+import { Posts4x4Skeleton } from "../skelton";
 import PostCard from "./PostCard";
 
 const CodingTabs = () => {
@@ -21,7 +21,7 @@ const CodingTabs = () => {
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
 
   if (loading) {
-    return <PostsSecSkeleton />;
+    return <Posts4x4Skeleton />;
   }
   const filteredPosts = posts.filter(
     (post: PostsCashType) => post.section == activeTab
@@ -31,7 +31,7 @@ const CodingTabs = () => {
     <>
       {/* Tabs */}
       <div className="mb-12 flex flex-wrap justify-center gap-4">
-        {tabs.map(({id , title}) => (
+        {tabs.map(({ id, title }) => (
           <button
             key={id}
             onClick={() => setActiveTab(id as typeof activeTab)}
