@@ -5,8 +5,8 @@ mongoose.Promise = global.Promise;
 
 const learnSchema = new Schema(
   {
-    title: String,
     imgurl: String,
+    title: String,
     description: String,
     body: String,
   },
