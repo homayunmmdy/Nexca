@@ -1,17 +1,14 @@
 "use client";
 import RecentPosts from "@/app/(pages)/posts/[id]/components/RecentPosts";
 import "@/app/tiptap.css";
-import { Button } from "@/components";
 import { MorePostsSec } from "@/etc/components/sections";
-import useReadText from "@/hooks/useReadText";
 import useSinglePost from "@/hooks/useSinglePost";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
-import { FaPlay } from "react-icons/fa";
-import { FaStop } from "react-icons/fa6";
+import React from "react";
 import FormatTime from "../components/FormatTime";
+import ReadPost from "./components/ReadPost";
 import RenderTags from "./components/RenderTags";
 import PostSeclton from "./PostSkelton";
 
@@ -20,12 +17,6 @@ const Post: React.FC = () => {
   const post = useSinglePost();
   //@ts-ignore
   const text = `${post?.title}. ${post?.body}`;
-  const { isSpeaking, handleReadText, handleStopReading, cleanup } =
-    useReadText(text);
-
-  useEffect(() => {
-    return cleanup;
-  }, [cleanup]);
 
   if (!post) {
     return <PostSeclton />;
@@ -60,7 +51,7 @@ const Post: React.FC = () => {
               <Image
                 className="aspect-video w-full rounded-3xl py-3"
                 //@ts-ignore
-                src={post.imgurl}
+                src={!post.imgurl? "/static/Image/logo.jpg" : post.imgurl}
                 //@ts-ignore
                 title={post.title}
                 //@ts-ignore
@@ -71,21 +62,7 @@ const Post: React.FC = () => {
               />
               <div className="flex items-center justify-between gap-3 px-3">
                 {/* <p className="text-center">{readingTimeEstimate.text}</p> */}
-                {!isSpeaking ? (
-                  <Button
-                    title={<FaPlay />}
-                    style="text-white rounded-full"
-                    onClick={isSpeaking ? handleStopReading : handleReadText}
-                    color="btn-primary"
-                  />
-                ) : (
-                  <Button
-                    title={<FaStop />}
-                    style="text-white rounded-full"
-                    onClick={isSpeaking ? handleStopReading : handleReadText}
-                    color="btn-primary"
-                  />
-                )}
+                <ReadPost text={text} />
                 <Link
                   href="/demo"
                   className="btn btn-outline btn-primary rounded-full"
