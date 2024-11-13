@@ -18,7 +18,7 @@ const TimeLinePage: React.FC = () => {
 
   return (
     <>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical p-6">
+      <ul className="timeline timeline-vertical timeline-snap-icon p-6 max-md:timeline-compact">
         {/* @ts-ignore */}
         {sortedByTime?.map((item, index) => (
           <li key={item._id}>
@@ -57,10 +57,9 @@ const TimeLinePage: React.FC = () => {
                   style={{ display: "contents" }}
                 >
                   <Button
-                    title={<FaEdit />}
                     color="btn-warning"
                     type="button"
-                  />
+                  ><FaEdit /></Button>
                 </Link>
                 <DeleteBlock path="time" id={item._id} />
               </span>

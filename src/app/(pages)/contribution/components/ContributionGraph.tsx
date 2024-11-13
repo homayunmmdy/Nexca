@@ -58,10 +58,9 @@ const ContributionGraph = ({ contributions }) => {
                       style={{ display: "contents" }}
                     >
                       <Button
-                        title={<FaEdit />}
                         color="btn-warning"
                         type="button"
-                      />
+                      ><FaEdit /></Button>
                     </Link>
                     <DeleteBlock path="contribution" id={contribute._id} />
                   </div>

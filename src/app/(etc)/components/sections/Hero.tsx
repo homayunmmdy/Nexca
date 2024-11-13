@@ -1,59 +1,59 @@
-"use client"
+"use client";
+import AdminImage from "@/../public/static/Image/admin.webp";
 import { Button, FullHoverAnimation } from "@/components";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoArrowUpCircleSharp } from "react-icons/io5";
-import AdminImage from "@/../public/static/Image/admin.webp";
-import { motion } from "framer-motion";
 
 const Hero: React.FC = () => {
   // Animation variants for content
   const contentVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 20 
+    hidden: {
+      opacity: 0,
+      y: 20,
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   // Animation variants for decorative elements
   const decorativeVariants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.8 
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
     },
-    visible: { 
+    visible: {
       opacity: [0, 0.6, 0.4, 0.8],
       scale: 1,
       transition: {
         duration: 1.5,
-        times: [0, 0.3, 0.6, 1]
-      }
-    }
+        times: [0, 0.3, 0.6, 1],
+      },
+    },
   };
 
   // Animation variants for the image
   const imageVariants = {
-    hidden: { 
-      opacity: 0, 
-      x: 100 
+    hidden: {
+      opacity: 0,
+      x: 100,
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -98,10 +98,7 @@ const Hero: React.FC = () => {
                 <FullHoverAnimation text="Own Blog Website" link="demo" />
                 Right Now
               </motion.h1>
-              <motion.p
-                variants={contentVariants}
-                className="mt-8"
-              >
+              <motion.p variants={contentVariants} className="mt-8">
                 Create your blog website in less than a day with Nexca. Our
                 powerful admin panel lets you manage your content effortlessly,
                 no coding required.
@@ -112,17 +109,16 @@ const Hero: React.FC = () => {
               >
                 <Link href="/admin">
                   <Button
-                    title="Admin Demo"
                     removeDefaultStyle={true}
                     color={null}
-                    icon={
-                      <IoArrowUpCircleSharp
-                        size={40}
-                        className="rotate-45 justify-end rounded-full p-1 duration-300 ease-linear group-hover:rotate-90 group-hover:border-none"
-                      />
-                    }
                     style="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg backdrop-blur-md lg:font-semibold isolation-auto border-indigo-500 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-indigo-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-3 py-1 overflow-hidden border-2 rounded-full group"
-                  />
+                  >
+                    <IoArrowUpCircleSharp
+                      size={40}
+                      className="rotate-45 justify-end rounded-full p-1 duration-300 ease-linear group-hover:rotate-90 group-hover:border-none"
+                    />{" "}
+                    Admin Demo
+                  </Button>
                 </Link>
               </motion.div>
             </motion.div>

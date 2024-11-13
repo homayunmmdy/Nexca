@@ -22,7 +22,7 @@ const ItemsTable = ({ post , baseURL}) => {
       </td>
       <td>
         <Link href={`/admin/${baseURL}/${post._id}`}>
-          <Button title={<CiEdit size={25} />} color="btn-warning" style="me-2 mb-2"/>
+          <Button color="btn-warning" style="me-2 mb-2"><CiEdit size={25} /></Button>
         </Link>
       </td>
       <th>

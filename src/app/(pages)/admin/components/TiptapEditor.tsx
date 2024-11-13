@@ -76,112 +76,99 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
     <div className="rounded-md border border-indigo-500 p-2" id="tiptap-style">
       <div className="mb-2 flex flex-wrap gap-2 px-3">
         <Button
-          title={"H1"}
           type="button"
           color="btn-ghost"
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
           style={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
-        />
+        >H1</Button>
         <Button
-          title={"H2"}
           type="button"
           color="btn-ghost"
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
           style={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
-        />
+        >H2</Button>
 
         <Button
-          title={"H3"}
           type="button"
           color="btn-ghost"
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 3 }).run()
           }
           style={editor.isActive("heading", { level: 3 }) ? "is-active" : ""}
-        />
+        >H3</Button>
 
         <Button
           onClick={() => editor.chain().focus().toggleBold().run()}
-          title={<MdOutlineFormatBold size={20} />}
           type="button"
           color="btn-ghost"
           style={editor.isActive("bold") ? "is-active" : ""}
-        />
+        ><MdOutlineFormatBold size={20} /></Button>
 
         <Button
-          title={<MdStrikethroughS size={20} />}
           onClick={() => editor.chain().focus().toggleStrike().run()}
           type="button"
           color="btn-ghost"
           style={editor.isActive("strike") ? "is-active" : ""}
-        />
+        ><MdStrikethroughS size={20} /></Button>
 
         <Button
-          title={<MdFormatQuote size={20} />}
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
           style={editor.isActive("blockquote") ? "is-active" : ""}
-        />
+        ><MdFormatQuote size={20} /></Button>
         <div className="control-group">
           <div className="button-group">
             <Button
-              title={<IoMdLink size={20} />}
               type="button"
               color="btn-ghost"
               onClick={setLink}
               style={editor.isActive("link") ? "is-active" : ""}
-            />
+            ><IoMdLink size={20} /></Button>
             <Button
-              title={<MdLinkOff size={20} />}
               type="button"
               color="btn-ghost"
               onClick={() => editor.chain().focus().unsetLink().run()}
               disabled={!editor.isActive("link")}
-            />
+            ><MdLinkOff size={20} /></Button>
           </div>
         </div>
         <Button
-          title={<MdFormatUnderlined size={20} />}
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleUnderline().run()}
           style={editor.isActive("underline") ? "is-active" : ""}
-        />
+        ><MdFormatUnderlined size={20} /></Button>
 
         <Button
           onClick={() => editor.chain().focus().toggleItalic().run()}
-          title={<MdFormatItalic size={20} />}
           type="button"
           color="btn-ghost"
           style={editor.isActive("italic") ? "is-active" : ""}
-        />
+        ><MdFormatItalic size={20} /></Button>
         <Button
-          title={<GrOrderedList size={20} />}
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
           style={editor.isActive("orderedList") ? "is-active" : ""}
-        />
+        ><GrOrderedList size={20} /></Button>
         <Button
-          title={<MdFormatListBulleted size={20} />}
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleBulletList().run()}
           style={editor.isActive("bulletList") ? "is-active" : ""}
-        />
+        ><MdFormatListBulleted size={20} /></Button>
 
         <Button
-          title={<IoMdCode size={20} />}
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleCodeBlock().run()}
           style={editor.isActive("codeBlock") ? "is-active" : ""}
-        />
+        ><IoMdCode size={20} /></Button>
       </div>
       <EditorContent editor={editor} className="prose max-w-none" />
     </div>

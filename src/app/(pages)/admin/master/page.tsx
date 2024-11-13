@@ -32,13 +32,13 @@ const MasterEditorPage: React.FC = () => {
     <>
       <ToastContainer />
       <div className="container mx-auto max-w-xl p-6">
-        <div className="p-6 rounded-lg shadow-xl border-2 border-indigo-400">
-          <h1 className="text-2xl font-semibold mb-4">
+        <div className="rounded-lg border-2 border-indigo-400 p-6 shadow-xl">
+          <h1 className="mb-4 text-2xl font-semibold">
             Enter Your Master Key and Enjoy it!
           </h1>
 
           <div className="mb-4">
-            <label htmlFor="password" className="block  font-semibold mb-2">
+            <label htmlFor="password" className="mb-2 block font-semibold">
               Secret Key:
             </label>
             <Input
@@ -58,8 +58,7 @@ const MasterEditorPage: React.FC = () => {
               onClick={handleLogin}
               type="submit"
               color="btn-primary"
-              title="Submit"
-            />
+            >Submit</Button>
           </div>
         </div>
       </div>

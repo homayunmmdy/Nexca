@@ -41,7 +41,7 @@ const SingleCard: React.FC = () => {
             <h2 className="card-title">{post.title.slice(0, 70)}</h2>
             <p>{post.description.slice(0, 150)}</p>
             <div className="card-actions justify-end">
-              <Button title="Read Now" color="btn-primary" />
+              <Button color="btn-primary" >Read Now</Button>
             </div>
           </div>
         </Link>

@@ -17,8 +17,8 @@ const TicketCard = ({ ticket, master }) => {
     hour12: true,
   };
   return (
-    <div className="card flex flex-col hover:bg-card-hover bg-card rounded-md shadow-xl p-5 m-2 h-full">
-      <div className="flex mb-3">
+    <div className="hover:bg-card-hover bg-card card m-2 flex h-full flex-col rounded-md p-5 shadow-xl">
+      <div className="mb-3 flex">
         <PriorityDisplay priority={ticket.priority} />
         {master ? (
           <div className="ml-auto">
@@ -27,19 +27,19 @@ const TicketCard = ({ ticket, master }) => {
               href={`/tickets/${ticket._id}`}
               style={{ display: "contents" }}
             >
-              <Button title={<FaEdit />} color="btn-warning" type="button" />
+              <Button color="btn-warning" type="button" ><FaEdit /></Button>
             </Link>
           </div>
         ) : null}
       </div>
       <div>
         <h4 className="mb-1 font-bold">{ticket.title}</h4>
-        <hr className="h-px  border-0 bg-page mb-2 "></hr>
+        <hr className="bg-page mb-2 h-px border-0"></hr>
         <p className="whitespace-pre-wrap">{ticket.description}</p>
         <div className="flex-grow"></div>
-        <div className="flex mt-2">
+        <div className="mt-2 flex">
           <div className="flex flex-col">
-            <p className="text-xs  my-1">
+            <p className="my-1 text-xs">
               <FormattedTimestamp
                 timestamp={ticket.createdAt}
                 options={options}
@@ -47,7 +47,7 @@ const TicketCard = ({ ticket, master }) => {
             </p>
             <ProgressDisplay progress={ticket.progress} />
           </div>
-          <div className="ml-auto  flex items-end">
+          <div className="ml-auto flex items-end">
             <StatusDisplay status={ticket.status} />
           </div>
         </div>

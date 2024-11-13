@@ -46,25 +46,25 @@ const DeleteBlock: React.FC<Props> = ({ path, id }: Props) => {
 
   return (
     <>
-      <Button title={<MdDeleteOutline />} color="btn-error"
+      <Button color="btn-error"
       style="me-2 mb-2"
       type="button"
       onClick={() => setIsConfirmOpen(true)}
-      />
+      ><MdDeleteOutline /></Button>
 
       {isConfirmOpen && (
-        <div className="fixed z-10 inset-0 overflow-y-auto  bg-opacity-75 p-4 md:p-8 mt-[120px]">
-          <div className="w-full max-w-sm mx-auto  rounded-lg shadow-md">
-            <div className="flex justify-between items-center p-5 border-b ">
-              <h5 className="text-xl font-medium ">Delete</h5>
-              <Button title="&times;" color="btn-error" type="button" onClick={() => setIsConfirmOpen(false)}/>
+        <div className="fixed inset-0 z-10 mt-[120px] overflow-y-auto bg-opacity-75 p-4 md:p-8">
+          <div className="mx-auto w-full max-w-sm rounded-lg shadow-md">
+            <div className="flex items-center justify-between border-b p-5">
+              <h5 className="text-xl font-medium">Delete</h5>
+              <Button  color="btn-error" type="button" onClick={() => setIsConfirmOpen(false)}>"&times;"</Button>
             </div>
             <div className="p-3">
               Are you sure you want to delete this item?
             </div>
-            <div className="flex justify-end items-center p-3">
-              <Button title="Cancel" type="button" color="btn-primary" style="mr-2" onClick={() => setIsConfirmOpen(false)}/>
-              <Button title="Delete" type="button" color="btn-error" onClick={handleDelete}/>
+            <div className="flex items-center justify-end p-3">
+              <Button  type="button" color="btn-primary" style="mr-2" onClick={() => setIsConfirmOpen(false)}>Cancel</Button>
+              <Button type="button" color="btn-error" onClick={handleDelete}>Delete</Button>
             </div>
           </div>
         </div>

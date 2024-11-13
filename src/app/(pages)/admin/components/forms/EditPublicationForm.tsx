@@ -33,14 +33,14 @@ const EditPublicationForm = ({ data }) => {
   return (
     <div className="flex justify-center">
       {handler.isLoading && (
-        <span className="absolute loading loading-ring loading-lg"></span>
+        <span className="loading loading-ring loading-lg absolute"></span>
       )}
       <form
         onSubmit={handleSubmit}
         method="post"
-        className="flex flex-col gap-3 w-full md:w-1/2 mb-3"
+        className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
       >
-        <h3 className="text-center font-semibold text-2xl">
+        <h3 className="text-center text-2xl font-semibold">
           {EDITMODE ? "Edit Post" : "New Post"}
         </h3>
         <div>
@@ -50,7 +50,7 @@ const EditPublicationForm = ({ data }) => {
             alt={formData.title}
             height={390.938}
             width={695}
-            className="w-full rounded-xl border border-indigo-500 aspect-video"
+            className="aspect-video w-full rounded-xl border border-indigo-500"
           />
         </div>
         <Input
@@ -138,7 +138,7 @@ const EditPublicationForm = ({ data }) => {
           onChange={handler.trakeChange}
         />
         {/* Add New Category */}
-        <div className="flex w-full gap-2 mt-2">
+        <div className="mt-2 flex w-full gap-2">
           <Input
             type="text"
             value={categoryInput}
@@ -148,11 +148,10 @@ const EditPublicationForm = ({ data }) => {
             style="w-full"
           />
           <Button
-            title="Add Category"
             type="button"
             onClick={() => handler.addCategory(categoryInput,setCategoryInput)}
             color="btn-primary"
-          />
+          >Add Category</Button>
         </div>
 
         {/* Categories List */}
@@ -172,8 +171,7 @@ const EditPublicationForm = ({ data }) => {
                 type="button"
                 onClick={() => handler.removeCategory(category.id)}
                 color="btn-error"
-                title={<MdDeleteOutline />}
-              />
+              ><MdDeleteOutline /></Button>
             </div>
           ))}
         </div>

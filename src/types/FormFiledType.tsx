@@ -5,13 +5,12 @@ type BaseType = {
   id?: string;
   style?: string;
   ariaLabel?: string;
-  icon?: JSX.Element;
   required?: boolean;
 };
 
 export type ButtonType = {
-  title: string | JSX.Element;
   color: `btn-${AllowedColors}` | null;
+  children: React.ReactNode;
   type?: "submit" | "reset" | "button" | undefined;
   disabled?: boolean;
   onClick?: () => void;
@@ -27,6 +26,7 @@ export type InputType = {
   defaultChecked?: boolean;
   label?: string;
   checked?:boolean;
+  icon?: JSX.Element;
   removeDefaultStyle?:boolean;
 } & BaseType & InputHTMLAttributes<HTMLInputElement>;
 
@@ -38,4 +38,5 @@ export type TextareaType = {
   placeholder?: string;
   onChange?: (e: any) => void;
   label?: string;
+  icon?: JSX.Element;
 } & BaseType;

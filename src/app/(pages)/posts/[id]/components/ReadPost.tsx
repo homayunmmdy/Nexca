@@ -15,18 +15,16 @@ const ReadPost = ({ text }: { text: string }) => {
     <>
       {!isSpeaking ? (
         <Button
-          title={<FaPlay />}
           style="text-white rounded-full"
           onClick={isSpeaking ? handleStopReading : handleReadText}
           color="btn-primary"
-        />
+        ><FaPlay /></Button>
       ) : (
         <Button
-          title={<FaStop />}
           style="text-white rounded-full"
           onClick={isSpeaking ? handleStopReading : handleReadText}
           color="btn-primary"
-        />
+        ><FaStop /></Button>
       )}
     </>
   );

@@ -35,19 +35,19 @@ const Login: React.FC = () => {
     <>
       <ToastContainer />
       <Toast />
-      <div className="flex font-poppins items-center justify-center">
-        <div className="h-screen w-screen flex justify-center items-center dark:bg-gray-900">
+      <div className="font-poppins flex items-center justify-center">
+        <div className="flex h-screen w-screen items-center justify-center dark:bg-gray-900">
           <div className="grid gap-8 p-4">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-[26px] m-4">
-              <div className="border-[20px] border-transparent rounded-[20px] dark:bg-gray-900 bg-white shadow-lg xl:p-10 2xl:p-10 lg:p-10 md:p-10 sm:p-2 m-2">
-                <h1 className="pt-8 pb-6 font-bold dark:text-gray-400 text-5xl text-center cursor-default">
+            <div className="m-4 rounded-[26px] bg-gradient-to-r from-blue-500 to-purple-500">
+              <div className="m-2 rounded-[20px] border-[20px] border-transparent bg-white shadow-lg sm:p-2 md:p-10 lg:p-10 xl:p-10 2xl:p-10 dark:bg-gray-900">
+                <h1 className="cursor-default pb-6 pt-8 text-center text-5xl font-bold dark:text-gray-400">
                   Log in
                 </h1>
                 <form className="space-y-4">
                   <div>
                     <label
                       htmlFor="username"
-                      className="mb-2  dark:text-gray-400 text-lg"
+                      className="mb-2 text-lg dark:text-gray-400"
                     >
                       Username
                     </label>
@@ -63,7 +63,7 @@ const Login: React.FC = () => {
                   <div>
                     <label
                       htmlFor="password"
-                      className="mb-2 dark:text-gray-400 text-lg"
+                      className="mb-2 text-lg dark:text-gray-400"
                     >
                       Password
                     </label>
@@ -77,15 +77,16 @@ const Login: React.FC = () => {
                     />
                   </div>
                   <Button
-                    title="LOG IN"
                     type="submit"
                     color="btn-primary"
                     style="w-full mt-6 text-white"
                     onClick={handleLogin}
-                  />
+                  >
+                    LOG IN
+                  </Button>
                 </form>
 
-                <div className="text-gray-500 flex text-center flex-col mt-4 items-center text-sm">
+                <div className="mt-4 flex flex-col items-center text-center text-sm text-gray-500">
                   <p className="cursor-default">
                     By signing in, you agree to our
                     <Link
@@ -93,7 +94,7 @@ const Login: React.FC = () => {
                       href="/privacy_policy"
                       title="Privacy Policy"
                     >
-                      <span className="cursor-pointer px-1 bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                      <span className="cursor-pointer bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-left-bottom bg-no-repeat px-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                         Privacy Policy
                       </span>
                     </Link>

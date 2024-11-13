@@ -26,13 +26,12 @@ const AdminTextAdvPage: React.FC = () => {
   return (
     <>
       <div className="overflow-x-auto">
-        <div className="w-full flex justify-center">
+        <div className="flex w-full justify-center">
           <Link href={`/admin/textadv/new`}>
             <Button
-              title="New textadv"
               color="btn-primary"
               style="btn-outline m-3"
-            />
+            >New textadv</Button>
           </Link>
         </div>
         <table className="table table-zebra my-2">
@@ -60,10 +59,9 @@ const AdminTextAdvPage: React.FC = () => {
                     {/* @ts-ignore */}
                     <Link href={`/admin/textadv/${item._id}`}>
                       <Button
-                        title={<CiEdit size={25} />}
                         color="btn-warning"
                         style="me-2 mb-2"
-                      />
+                      ><CiEdit size={25} /></Button>
                     </Link>
                   </td>
                   <td>

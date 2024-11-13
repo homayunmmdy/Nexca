@@ -18,11 +18,10 @@ const LogoutButton: React.FC = () => {
   return (
     <>
       <Button
-        title="Logout"
         color="btn-error"
         onClick={handleLogout}
         style="w-full"
-      />
+      >Logout</Button>
     </>
   );
 };

@@ -37,11 +37,9 @@ const Header = () => {
               aria-label="GitHub"
               target="_blank"
             >
-              <Button
-                title="GitHub"
-                color="btn-neutral"
-                icon={<FaGithub color="white" size={20} />}
-              />
+              <Button color="btn-neutral">
+                <FaGithub color="white" size={20} /> GitHub
+              </Button>
             </Link>
           </div>
         </div>

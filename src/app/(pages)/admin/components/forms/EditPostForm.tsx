@@ -108,11 +108,10 @@ const EditPostForm = ({ post }) => {
             style="w-full"
           />
           <Button
-            title="Add Category"
             type="button"
             onClick={() => handler.addCategory(categoryInput, setCategoryInput)}
             color="btn-primary"
-          />
+          >Add Category</Button>
         </div>
 
         {/* Categories List */}
@@ -132,8 +131,7 @@ const EditPostForm = ({ post }) => {
                 type="button"
                 onClick={() => handler.removeCategory(category.id)}
                 color="btn-error"
-                title={<MdDeleteOutline />}
-              />
+              ><MdDeleteOutline /></Button>
             </div>
           ))}
         </div>

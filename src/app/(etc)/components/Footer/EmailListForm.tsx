@@ -29,12 +29,12 @@ const EmailListForm = () => {
         value={formData.emails}
       />
       <Button
-        icon={<GrFormNextLink size={24} />}
-        title="Subscribe"
         style="rounded-full"
         color="btn-primary"
         type="submit"
-      />
+      >
+       <GrFormNextLink size={24} /> Subscribe
+      </Button>
     </form>
   );
 };

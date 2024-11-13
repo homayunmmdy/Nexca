@@ -3,8 +3,7 @@ import { ButtonType } from "@/types/FormFiledType";
 
 const Button: React.FC<ButtonType> = ({
   id,
-  title,
-  icon,
+  children,
   color,
   style,
   onClick,
@@ -22,8 +21,7 @@ const Button: React.FC<ButtonType> = ({
       className={removeDefaultStyle ? style : `btn ${color} ${style}`}
       aria-label={ariaLabel}
     >
-      {icon}
-      {title}
+      {children}
     </button>
   );
 };

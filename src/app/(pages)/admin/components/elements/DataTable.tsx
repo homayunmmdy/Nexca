@@ -11,13 +11,12 @@ const DataTable = ({ data, path, editor }) => {
   return (
     <div className="overflow-x-auto">
       {editor ? (
-        <div className="w-full flex justify-center">
+        <div className="flex w-full justify-center">
           <Link href={`/admin/${path}/new`}>
             <Button
-              title={`New ${path}`}
               color="btn-error"
               style="btn-outline m-3"
-            />
+            >{`New ${path}`}</Button>
           </Link>
         </div>
       ) : null}
@@ -38,10 +37,9 @@ const DataTable = ({ data, path, editor }) => {
               <td>
                 <Link href={`/admin/${path}/${item._id}`}>
                   <Button
-                    title={<CiEdit size={25} />}
                     color="btn-warning"
                     style="me-2 mb-2"
-                  />
+                  ><CiEdit size={25} /></Button>
                 </Link>
               </td>
               {editor ? (
