@@ -23,8 +23,7 @@ const Login: React.FC = () => {
     const PASSWORD = process.env.NEXT_PUBLIC_PASSWORD;
     const USERNAME = process.env.NEXT_PUBLIC_USERNAME;
     if (username == `${USERNAME}` && password == `${PASSWORD}`) {
-      //@ts-ignore
-      localStorage.setItem(AUTH_KEY, true);
+      localStorage.setItem(AUTH_KEY, "" + true);
       router.push("/admin");
       toast.success("you're welcome");
     } else {
