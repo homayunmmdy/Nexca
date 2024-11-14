@@ -4,7 +4,7 @@ class FormHandler {
   private loading: boolean = false;
 
   constructor(
-    private setForm: React.SetStateAction<any>,
+    private setForm: any,
     private API_URL: string,
     private router: any
   ) {}
@@ -59,8 +59,7 @@ class FormHandler {
       id: Date.now(),
       name: categoryInput,
     };
-    // @ts-ignore
-    this.setForm((prevState) => ({
+    this.setForm((prevState: { categories: any }) => ({
       ...prevState,
       categories: [...prevState.categories, newCategory],
     }));
@@ -69,22 +68,20 @@ class FormHandler {
 
   CategoryChanges = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
     const { value } = e.target;
-    // @ts-ignore
-    this.setForm((prevState) => ({
+    this.setForm((prevState: { categories: any[] }) => ({
       ...prevState,
-      // @ts-ignore
-      categories: prevState.categories.map((cat) =>
+      categories: prevState.categories.map((cat: { id: number }) =>
         cat.id === id ? { ...cat, name: value } : cat
       ),
     }));
   };
 
   removeCategory = (id: number) => {
-    // @ts-ignore
-    this.setForm((prevState) => ({
+    this.setForm((prevState: { categories: any[] }) => ({
       ...prevState,
-      // @ts-ignore
-      categories: prevState.categories.filter((cat) => cat.id !== id),
+      categories: prevState.categories.filter(
+        (cat: { id: number }) => cat.id !== id
+      ),
     }));
   };
 

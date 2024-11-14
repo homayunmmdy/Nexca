@@ -25,7 +25,7 @@ const EditPostForm = ({ post }: {post : PostsCashType}) => {
     section: EDITMODE ? post.section : "1",
     services: EDITMODE ? post.services : "1",
     imgurl: EDITMODE ? post.imgurl : "",
-    categories: EDITMODE ? post.categories : [],
+    categories: EDITMODE ? post.categories ?? [] : [],
   };
 
   const [formData, setFormData] = useState(startingTicketData);
@@ -158,3 +158,4 @@ const EditPostForm = ({ post }: {post : PostsCashType}) => {
 };
 
 export default EditPostForm;
+
