@@ -7,8 +7,7 @@ export async function GET() {
   return handler.GetAll();
 }
 
-//@ts-ignore
-export async function POST(req) {
+export async function POST(req: Request) {
   const handler = new RequestHandler(PublicationsModel, PublicationsCash);
   return handler.Post(req, "Section Created successfully");
 }

@@ -2,22 +2,19 @@ import ContributionCash from "@/cash/ContributionCash";
 import { ContributionModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 
-//@ts-ignore
-export async function GET(req, { params }) {
+export async function GET(req: Request, { params }: { params: { id: string } }) {
   const { id } = params;
   const handler = new RequestHandler(ContributionModel, ContributionCash);
   return handler.Get(id);
 }
 
-//@ts-ignore
-export async function PUT(req, { params }) {
+export async function PUT(req: Request, { params }: { params: { id: string } }) {
   const { id } = params;
   const handler = new RequestHandler(ContributionModel, ContributionCash);
   return handler.PUT(id, req, "Contribue Update Successfully");
 }
 
-//@ts-ignore
-export async function DELETE(req, { params }) {
+export async function DELETE(req: Request, { params }: { params: { id: string } }) {
   const { id } = params;
   const handler = new RequestHandler(ContributionModel, ContributionCash);
   return handler.DELETE(id, "Contribute Deleted successfully");

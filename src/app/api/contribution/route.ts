@@ -7,8 +7,7 @@ export async function GET() {
   return handler.GetAll();
 }
 
-//@ts-ignore
-export async function POST(req) {
+export async function POST(req: Request) {
   const handler = new RequestHandler(ContributionModel, ContributionCash);
   return handler.Post(req, "Your Contribution added successfully");
 }
