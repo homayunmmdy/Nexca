@@ -6,9 +6,9 @@ import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { Sidebar } from "../sections";
+import { TicketsCashType } from "@/types/CashTypes";
 
-//@ts-ignore
-const EditTicketForm = ({ ticket }) => {
+const EditTicketForm = ({ ticket }: {ticket : TicketsCashType}) => {
   const EDITMODE = ticket._id !== "new";
   const router = useRouter();
   const startingTicketData = {
@@ -32,18 +32,18 @@ const EditTicketForm = ({ ticket }) => {
   return (
     <>
       {handler.isLoading && (
-        <span className="absolute loading loading-ring loading-lg"></span>
+        <span className="loading loading-ring loading-lg absolute"></span>
       )}
       {master ? (
-        <div className="grid grid-cols-12 p-5 gap-5">
-          <aside className="col-span-12  lg:col-span-3 rounded-xl shadow-xl border-2 border-indigo-400">
+        <div className="grid grid-cols-12 gap-5 p-5">
+          <aside className="col-span-12 rounded-xl border-2 border-indigo-400 shadow-xl lg:col-span-3">
             <Sidebar />
           </aside>
-          <main className="col-span-12  lg:col-span-9 rounded-xl mt-5 lg:mt-0 shadow-xl border-2 border-indigo-400">
-            <div className=" w-full h-full p-4">
+          <main className="col-span-12 mt-5 rounded-xl border-2 border-indigo-400 shadow-xl lg:col-span-9 lg:mt-0">
+            <div className="h-full w-full p-4">
               <div className="flex items-center justify-center px-12">
-                <div className="mx-auto w-full max-w-[550px] ">
-                  <h1 className="font-bold my-2 text-center">
+                <div className="mx-auto w-full max-w-[550px]">
+                  <h1 className="my-2 text-center font-bold">
                     {EDITMODE ? "Edit Ticket" : "Create New Ticket"}
                   </h1>
                   <form onSubmit={handleSubmit} method="post">
@@ -115,7 +115,7 @@ const EditTicketForm = ({ ticket }) => {
                         style="w-full"
                       />
                     </div>
-                    <div className="mb-5 ">
+                    <div className="mb-5">
                       <div className="flex gap-2">
                         <Input
                           id="priority-1"
@@ -175,7 +175,7 @@ const EditTicketForm = ({ ticket }) => {
                         />
                       </div>
                     </div>
-                    <div className="mb-5 ">
+                    <div className="mb-5">
                       <Input
                         type="range"
                         id="progress"
@@ -215,8 +215,8 @@ const EditTicketForm = ({ ticket }) => {
         </div>
       ) : (
         <div className="flex items-center justify-center px-12">
-          <div className="mx-auto w-full max-w-[550px] ">
-            <h1 className="font-bold my-2 text-center">
+          <div className="mx-auto w-full max-w-[550px]">
+            <h1 className="my-2 text-center font-bold">
               {EDITMODE ? "Edit Ticket" : "Create New Ticket"}
             </h1>
             <form onSubmit={handleSubmit} method="post">

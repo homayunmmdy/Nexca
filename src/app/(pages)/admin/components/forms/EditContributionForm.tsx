@@ -1,19 +1,23 @@
 "use client";
 import { Input, Textarea } from "@/components";
 import { CONTRIBUTION_API_URL } from "@/etc/config/apiConstants";
+import { ContributeCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-//@ts-ignore
-const EditContributionForm = ({  contribute }) => {
+const EditContributionForm = ({
+  contribute,
+}: {
+  contribute: ContributeCashType;
+}) => {
   const EDITMODE = contribute._id !== "new";
   const router = useRouter();
   const startingTicketData = {
     title: EDITMODE ? contribute.title : "",
     description: EDITMODE ? contribute.description : "",
-    link: EDITMODE ? contribute.body : "",
-    date: EDITMODE ? contribute.imgurl : "",
+    link: EDITMODE ? contribute.link : "",
+    date: EDITMODE ? contribute.date : "",
   };
 
   const [formData, setFormData] = useState(startingTicketData);
@@ -24,14 +28,14 @@ const EditContributionForm = ({  contribute }) => {
   return (
     <div className="flex justify-center">
       {handler.isLoading && (
-        <span className="absolute loading loading-ring loading-lg"></span>
+        <span className="loading loading-ring loading-lg absolute"></span>
       )}
       <form
         onSubmit={handleSubmit}
         method="post"
-        className="flex flex-col gap-3 w-full md:w-1/2 mb-3"
+        className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
       >
-        <h3 className="text-center font-semibold text-2xl">
+        <h3 className="text-center text-2xl font-semibold">
           {EDITMODE ? "Edit Contribution" : "New Contribution"}
         </h3>
 

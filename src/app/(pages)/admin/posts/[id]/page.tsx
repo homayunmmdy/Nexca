@@ -3,7 +3,7 @@ import { getById } from "@/util/ServerUtil";
 import { EditPostForm } from "../../components";
 import { SinglePagepParamsType } from "@/types/entities";
 
-let updateTicketData: any = {};
+let updateTicketData;
 const SinglePostsPage = async ({ params }: {params : SinglePagepParamsType}) => {
   const EDITMODE = params.id === "new" ? false : true;
 

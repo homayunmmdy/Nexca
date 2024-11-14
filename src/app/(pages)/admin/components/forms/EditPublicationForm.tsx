@@ -7,9 +7,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { MdDeleteOutline } from "react-icons/md";
 import { CategoryList } from "../elements";
+import { PublicationsCashType } from "@/types/CashTypes";
 
-//@ts-ignore
-const EditPublicationForm = ({ data }) => {
+const EditPublicationForm = ({ data }: {data : PublicationsCashType}) => {
   const EDITMODE = data._id !== "new";
   const router = useRouter();
   const startingData = {

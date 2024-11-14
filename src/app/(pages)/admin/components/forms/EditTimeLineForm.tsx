@@ -1,12 +1,12 @@
 "use client";
 import { Input } from "@/components";
 import { TIMELINE_API_URL } from "@/etc/config/apiConstants";
+import { TimeLIneCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-//@ts-ignore
-const EditTextAdvForm = ({ data }) => {
+const EditTimeLineForm = ({ data }: { data: TimeLIneCashType }) => {
   const EDITMODE = data._id !== "new";
   const router = useRouter();
 
@@ -24,14 +24,14 @@ const EditTextAdvForm = ({ data }) => {
     <>
       <div className="flex justify-center">
         {handler.isLoading && (
-          <span className="absolute loading loading-ring loading-lg"></span>
+          <span className="loading loading-ring loading-lg absolute"></span>
         )}
         <form
           onSubmit={handleSubmit}
           method="post"
-          className="flex flex-col gap-3 w-full md:w-1/2 mb-3"
+          className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
         >
-          <h3 className="text-center font-semibold text-2xl">
+          <h3 className="text-center text-2xl font-semibold">
             {EDITMODE ? "Edit TimeLine" : "New TimeLine"}
           </h3>
           <Input
@@ -74,4 +74,4 @@ const EditTextAdvForm = ({ data }) => {
   );
 };
 
-export default EditTextAdvForm;
+export default EditTimeLineForm;

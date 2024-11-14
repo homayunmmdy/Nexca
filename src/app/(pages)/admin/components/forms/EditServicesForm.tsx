@@ -1,13 +1,13 @@
 "use client";
 import { Input, Textarea } from "@/components";
 import { SERVICES_API_URL } from "@/etc/config/apiConstants";
+import { ServicesCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-//@ts-ignore
-const EditServicesForm = ({ data }) => {
+const EditServicesForm = ({ data }: {data : ServicesCashType}) => {
   const EDITMODE = data._id !== "new";
   const router = useRouter();
 

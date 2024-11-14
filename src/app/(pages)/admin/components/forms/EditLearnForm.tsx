@@ -1,14 +1,14 @@
 "use client";
 import { Input, Textarea } from "@/components";
 import { LEARN_API_URL } from "@/etc/config/apiConstants";
+import { LearnCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import TiptapEditor from "../TiptapEditor";
 
-//@ts-ignore
-const EditLearnForm = ({ data }) => {
+const EditLearnForm = ({ data }: { data: LearnCashType }) => {
   const EDITMODE = data._id !== "new";
   const router = useRouter();
 
