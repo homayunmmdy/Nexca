@@ -2,6 +2,7 @@
 import { SERVICES_API_URL } from "@/etc/config/apiConstants";
 import { SERVICES_IMG_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { ServicesCashType } from "@/types/CashTypes";
 import { getParameterId } from "@/util/Util";
 import React from "react";
 
@@ -11,21 +12,23 @@ const ServicesImg: React.FC = () => {
     SERVICES_IMG_KEY,
     SERVICES_API_URL
   );
-  //@ts-ignore
-  const filteredData = services?.filter((item) => item.secid == id);
+  const filteredData = services?.filter(
+    (item: ServicesCashType) => item.secid == parseInt(id)
+  );
 
   if (loading) {
     return <div className="hero skeleton mb-5 min-h-screen rounded-xl"></div>;
   }
   return (
     <>
-      {/* @ts-ignore */}
-      {filteredData?.map((service) => (
+      {filteredData?.map((service: ServicesCashType) => (
         <div
           className="hero mb-5 aspect-video rounded-xl bg-indigo-600 md:min-h-screen"
           key={service._id}
           style={{
-            backgroundImage: `url(${!service?.imgurl ? "/static/Image/logo.jpg" : service?.imgurl})`,
+            backgroundImage: `url(${
+              !service?.imgurl ? "/static/Image/logo.jpg" : service?.imgurl
+            })`,
           }}
         >
           <div className="hero-overlay rounded-xl bg-opacity-60"></div>
