@@ -3,14 +3,13 @@ import { getById } from "@/util/ServerUtil";
 import { EditPostForm } from "../../components";
 import { SinglePagepParamsType } from "@/types/entities";
 
-let updateTicketData = {};
+let updateTicketData: any = {};
 const SinglePostsPage = async ({ params }: {params : SinglePagepParamsType}) => {
   const EDITMODE = params.id === "new" ? false : true;
 
   if (EDITMODE) {
     updateTicketData = await getById(POST_API_URL,params.id);
-    {/* @ts-ignore */}
-    updateTicketData = updateTicketData.document;
+    updateTicketData = updateTicketData?.document || {};
   } else {
     updateTicketData = {
       _id: "new",

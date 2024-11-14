@@ -13,9 +13,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CategoryList, SelectField } from "../elements";
 import TiptapEditor from "../TiptapEditor";
+import { PostsCashType } from "@/types/CashTypes";
 
-//@ts-ignore
-const EditPostForm = ({ post }) => {
+const EditPostForm = ({ post }: {post : PostsCashType}) => {
   const EDITMODE = post._id !== "new";
   const router = useRouter();
   const startingTicketData = {
