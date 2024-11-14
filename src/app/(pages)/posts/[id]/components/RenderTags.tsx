@@ -5,7 +5,7 @@ const RenderTags = ({ post }: { post: PostsCashType }) => {
     <>
       <ul className="my-2 flex flex-wrap gap-2">
         {post.categories?.map((category) => (
-          <li key={category.id} className="badge badge-primary badge-outline">
+          <li key={category.id} className="badge badge-primary badge-outline p-4">
             {category.name}
           </li>
         ))}
