@@ -6,7 +6,7 @@ type BaseType = {
   __v: number;
 };
 
-type Category = {
+export type CategoryType = {
   id: number;
   name: string;
 };
@@ -17,7 +17,7 @@ export type PostsCashType = {
   description: string;
   services: string;
   section: string;
-  categories?: Category[];
+  categories?: CategoryType[];
 } & BaseType;
 
 export type LearnCashType = {
@@ -41,7 +41,7 @@ export type PublicationsCashType = {
   publisher: string;
   publication_date?: string;
   pdf_link?: string;
-  categories?: Category[];
+  categories?: CategoryType[];
 } & BaseType;
 
 export type ServicesCashType = {

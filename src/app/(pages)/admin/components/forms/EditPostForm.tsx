@@ -11,8 +11,7 @@ import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { MdDeleteOutline } from "react-icons/md";
-import { SelectField } from "../elements";
+import { CategoryList, SelectField } from "../elements";
 import TiptapEditor from "../TiptapEditor";
 
 //@ts-ignore
@@ -111,7 +110,9 @@ const EditPostForm = ({ post }) => {
             type="button"
             onClick={() => handler.addCategory(categoryInput, setCategoryInput)}
             color="btn-primary"
-          >Add Category</Button>
+          >
+            Add Category
+          </Button>
         </div>
 
         {/* Categories List */}
@@ -119,20 +120,11 @@ const EditPostForm = ({ post }) => {
           <h4>Categories</h4>
           {/* @ts-ignore */}
           {formData.categories.map((category) => (
-            <div key={category.id} className="flex w-full items-center gap-2">
-              <Input
-                type="text"
-                value={category.name}
-                color="input-primary"
-                onChange={(e) => handler.CategoryChanges(e, category.id)}
-                style="w-full"
-              />
-              <Button
-                type="button"
-                onClick={() => handler.removeCategory(category.id)}
-                color="btn-error"
-              ><MdDeleteOutline /></Button>
-            </div>
+            <CategoryList
+              category={category}
+              onChange={handler.trakeChange}
+              onRemove={handler.removeCategory}
+            />
           ))}
         </div>
         {services && (

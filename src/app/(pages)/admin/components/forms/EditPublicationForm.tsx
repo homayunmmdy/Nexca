@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { MdDeleteOutline } from "react-icons/md";
+import { CategoryList } from "../elements";
 
 //@ts-ignore
 const EditPublicationForm = ({ data }) => {
@@ -158,22 +159,7 @@ const EditPublicationForm = ({ data }) => {
         <div className="flex flex-col gap-2">
           <h4>Categories</h4>
           {/* @ts-ignore */}
-          {formData.categories.map((category) => (
-            <div key={category.id} className="flex w-full items-center gap-2">
-              <Input
-                type="text"
-                value={category.name}
-                color="input-primary"
-                onChange={(e) => handler.CategoryChanges(e, category.id)}
-                style="w-full"
-              />
-              <Button
-                type="button"
-                onClick={() => handler.removeCategory(category.id)}
-                color="btn-error"
-              ><MdDeleteOutline /></Button>
-            </div>
-          ))}
+          <CategoryList category={formData.categories} onChange={handler.trakeChange} onRemove={handler.removeCategory}/>
         </div>
         <Input
           type="submit"
