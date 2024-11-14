@@ -1,6 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-//@ts-ignore
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI as string);
 mongoose.Promise = global.Promise;
 
 const servicesSchema = new Schema(
@@ -13,7 +12,7 @@ const servicesSchema = new Schema(
     secid: {
       type: Number,
     },
-    imgurl : String,
+    imgurl: String,
     description: String,
   },
   {
@@ -21,6 +20,7 @@ const servicesSchema = new Schema(
   }
 );
 
-const Services = mongoose.models.Services || mongoose.model("Services", servicesSchema);
+const Services =
+  mongoose.models.Services || mongoose.model("Services", servicesSchema);
 
 export default Services;

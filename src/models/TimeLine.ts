@@ -1,6 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-//@ts-ignore
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI as string);
 mongoose.Promise = global.Promise;
 
 const TimeLineSchema = new Schema(
@@ -14,6 +13,7 @@ const TimeLineSchema = new Schema(
   }
 );
 
-const TimeLine = mongoose.models.TimeLine || mongoose.model("TimeLine", TimeLineSchema);
+const TimeLine =
+  mongoose.models.TimeLine || mongoose.model("TimeLine", TimeLineSchema);
 
 export default TimeLine;

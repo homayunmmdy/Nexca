@@ -1,6 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-//@ts-ignore
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI as string);
 mongoose.Promise = global.Promise;
 
 const PublicationsSchema = new Schema(
@@ -21,6 +20,8 @@ const PublicationsSchema = new Schema(
   }
 );
 
-const Publications = mongoose.models.Publications || mongoose.model("Publications", PublicationsSchema);
+const Publications =
+  mongoose.models.Publications ||
+  mongoose.model("Publications", PublicationsSchema);
 
 export default Publications;

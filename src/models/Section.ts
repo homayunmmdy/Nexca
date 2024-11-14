@@ -1,6 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-//@ts-ignore
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI as string);
 mongoose.Promise = global.Promise;
 
 const sectionSchema = new Schema(
@@ -19,6 +18,7 @@ const sectionSchema = new Schema(
   }
 );
 
-const Section = mongoose.models.Section || mongoose.model("Section", sectionSchema);
+const Section =
+  mongoose.models.Section || mongoose.model("Section", sectionSchema);
 
 export default Section;
