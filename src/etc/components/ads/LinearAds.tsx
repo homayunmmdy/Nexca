@@ -10,35 +10,33 @@ import LinearAdsLoading from "./LinearAdsLoading";
 import React from 'react'
 
 const LinearAds: React.FC = () => {
-  const { data, isLoading } = useQuery<TextAdvCashType[]>({
+  const { data: mainData, isLoading } = useQuery({
     queryKey: ["textadv"],
     queryFn: () =>
-      axios.get<TextAdvCashType[]>(TEXTADV_API_URL).then((res) => res.data),
+      axios.get(TEXTADV_API_URL).then((res) => res.data),
   });
 
   if (isLoading) {
     return <LinearAdsLoading />;
   }
 
-  //@ts-ignore
-  const filteredData = data?.data?.filter((item) => item.textadvid == 1);
+  const filteredData = mainData?.data?.filter((item: TextAdvCashType) => item.textadvid == 1);
   const ads = filteredData?.slice(-12);
 
   return (
     <>
       <Titr title="Ads Demo Page" item="text-center" />
-      <ul className="flex flex-col gap-4 mb-3">
-        {/* @ts-ignore */}
-        {ads.map((adv) => (
+      <ul className="mb-3 flex flex-col gap-4">
+        {ads.map((adv: TextAdvCashType) => (
           <li
             key={adv._id}
-            className="group flex p-2 gap-2 items-start border-dotted border-2 border-gray-400 rounded-xl hover:border-gray-900 hover:border-solid cursor-pointer"
+            className="group flex cursor-pointer items-start gap-2 rounded-xl border-2 border-dotted border-gray-400 p-2 hover:border-solid hover:border-gray-900"
           >
-<div className="flex-shrink-0 w-7 h-7">
-            <FaCircleDot className="w-full h-full text-indigo-700" size={28} color="#4338CA" />
+<div className="h-7 w-7 flex-shrink-0">
+            <FaCircleDot className="h-full w-full text-indigo-700" size={28} color="#4338CA" />
 </div>
             <Link
-              className="group-hover:text-indigo-600 font-semibold line-clamp-2"
+              className="line-clamp-2 font-semibold group-hover:text-indigo-600"
               href={adv.link}
             >
               {adv.body}
