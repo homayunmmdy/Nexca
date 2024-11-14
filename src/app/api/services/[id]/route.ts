@@ -20,6 +20,6 @@ export async function PUT(req, { params }) {
 //@ts-ignore
 export async function DELETE(req, { params }) {
   const { id } = params;
-  const handler = new RequestHandler(ServiceModel, Services);
+  const handler = new RequestHandler(ServiceModel, ServicesCash);
   return handler.DELETE(id, "Service Deleted successfully");
 }

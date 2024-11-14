@@ -1,35 +1,38 @@
+import { Model } from "mongoose";
 import { NextResponse } from "next/server";
 
-class RequestHandler {
-  //@ts-ignore
-  constructor(Model, Cache) {
-    //@ts-ignore
+class RequestHandler<
+  T extends {
+    _id: string;
+  }
+> {
+  private Model: Model<T>;
+  private Cache: T[];
+
+  constructor(Model: Model<T>, Cache: T[]) {
     this.Model = Model;
-    //@ts-ignore
     this.Cache = Cache;
   }
 
   async GetAll() {
     try {
-      if (process.env.NEXT_PUBLIC_STATUS == "dev") {
-        //@ts-ignore
-        return NextResponse.json({ data: this.Cache }, { status: 200 });
+      if (process.env.NEXT_PUBLIC_STATUS === "dev") {
+        return NextResponse.json<T[]>({ data: this.Cache } as any, {
+          status: 200,
+        });
       } else {
-        //@ts-ignore
         const data = await this.Model.find();
-        return NextResponse.json({ data }, { status: 200 });
+        return NextResponse.json<T[]>({ data } as any, { status: 200 });
       }
     } catch (error) {
       console.error(error);
       return this.ErrorResponse(error);
     }
   }
-  //@ts-ignore
-  async Post(req, successMessage) {
+  async Post(req: Request, successMessage: string) {
     try {
       const body = await req.json();
-      const formData = body.formData;
-      //@ts-ignore
+      const formData = body.formData as T;
       await this.Model.create(formData);
       return NextResponse.json(
         { message: successMessage || "Data created successfully" },
@@ -40,22 +43,19 @@ class RequestHandler {
       return this.ErrorResponse(error);
     }
   }
-  //@ts-ignore
-  async Get(id) {
+  async Get(id: string) {
     try {
       if (process.env.NEXT_PUBLIC_STATUS === "dev") {
-        //@ts-ignore
         const document = this.Cache.find((doc) => doc._id === id);
         if (document) {
-          return NextResponse.json({ document }, { status: 200 });
+          return NextResponse.json<T>({ document } as any, { status: 200 });
         }
       } else {
-        //@ts-ignore
         const document = await this.Model.findOne({ _id: id });
         if (!document) {
           return NextResponse.json({ message: "Not Found" }, { status: 404 });
         }
-        return NextResponse.json({ document }, { status: 200 });
+        return NextResponse.json<T>({ document } as any, { status: 200 });
       }
     } catch (error) {
       console.error(error);
@@ -63,13 +63,11 @@ class RequestHandler {
     }
   }
 
-  //@ts-ignore
-  async PUT(id, req, successMessage) {
+  async PUT(id: string, req: Request, successMessage: string) {
     try {
       const body = await req.json();
-      const Data = body.formData;
+      const Data = body.formData as T;
 
-      //@ts-ignore
       const updateData = await this.Model.findByIdAndUpdate(id, {
         ...Data,
       });
@@ -84,10 +82,8 @@ class RequestHandler {
     }
   }
 
-  //@ts-ignore
-  async DELETE(id, successMessage) {
+  async DELETE(id: string, successMessage: string) {
     try {
-      //@ts-ignore
       const deleteDocument = await this.Model.findByIdAndDelete(id);
       if (!deleteDocument) {
         return NextResponse.json({ message: "Not Found" }, { status: 404 });
@@ -101,8 +97,8 @@ class RequestHandler {
       return this.ErrorResponse(error);
     }
   }
-  //@ts-ignore
-  ErrorResponse(err) {
+
+  ErrorResponse(err: any) {
     return NextResponse.json({ message: "Error", err }, { status: 500 });
   }
 }
