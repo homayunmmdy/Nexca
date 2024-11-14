@@ -1,5 +1,4 @@
-
-import TimeLineCash from "@/etc/cash/TimeLineCash";
+import TimeLineCash from "@/cash/TimeLineCash";
 import { TimeLineModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

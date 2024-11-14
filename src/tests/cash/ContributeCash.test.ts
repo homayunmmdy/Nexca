@@ -1,5 +1,5 @@
-import ContributionCash from "../../etc/cash/ContributionCash";
 import { ContributeCashType } from "@/types/CashTypes";
+import ContributionCash from "../../cash/ContributionCash";
 
 describe("Points Cash", () => {
   it("should have the correct structure", () => {
@@ -22,8 +22,7 @@ describe("Points Cash", () => {
     ContributionCash.forEach((contribute: ContributeCashType) => {
       expect(contribute.title.trim()).not.toBe("");
       expect(contribute.description.trim()).not.toBe("");
-      if(contribute.link)
-        expect(contribute.link.trim()).not.toBe("");
+      if (contribute.link) expect(contribute.link.trim()).not.toBe("");
     });
   });
 

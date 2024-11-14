@@ -1,5 +1,5 @@
 import { PublicationsCashType } from "@/types/CashTypes";
-import PublicationsCash from "../../etc/cash/PublicationsCash";
+import PublicationsCash from "../../cash/PublicationsCash";
 
 describe("PublicationsCash", () => {
   it("should have the correct structure", () => {

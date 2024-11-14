@@ -1,5 +1,5 @@
 import { ContactsCashType } from "@/types/CashTypes";
-import ContactsData from "../../etc/cash/ContactsData";
+import ContactsData from "../../cash/ContactsData";
 
 describe("ContactsData", () => {
   it("should have the correct structure", () => {
@@ -37,7 +37,7 @@ describe("ContactsData", () => {
       expect(isNaN(Date.parse(contact.updatedAt))).toBeFalsy();
     });
   });
-  
+
   it("should have unique _id value", () => {
     const idSet = new Set(ContactsData.map((i) => i._id));
     expect(idSet.size).toBe(ContactsData.length);

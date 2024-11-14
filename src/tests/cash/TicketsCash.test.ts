@@ -1,11 +1,11 @@
 import { TicketsCashType } from "@/types/CashTypes";
-import TicketsCash from "../../etc/cash/TicketsCash";
+import TicketsCash from "../../cash/TicketsCash";
 
 describe("Ticket Cash", () => {
-    const priorityMin = 0
-    const priorityMax = 5
-    const progressMin = 0
-    const progressMax = 100
+  const priorityMin = 0;
+  const priorityMax = 5;
+  const progressMin = 0;
+  const progressMax = 100;
   it("should have the correct structure", () => {
     expect(Array.isArray(TicketsCash)).toBe(true);
     expect(TicketsCash.length).toBeGreaterThan(0);
@@ -50,18 +50,17 @@ describe("Ticket Cash", () => {
     });
   });
 
-  it('should have right min and max for values', () => {
+  it("should have right min and max for values", () => {
     TicketsCash.forEach((ticket: TicketsCashType) => {
-        expect(ticket.priority).toBeGreaterThan(priorityMin);
-        expect(ticket.priority).toBeLessThanOrEqual(priorityMax);
-        expect(ticket.priority).toBeGreaterThan(progressMin);
-        expect(ticket.priority).toBeLessThanOrEqual(progressMax);
-      });
-  })
+      expect(ticket.priority).toBeGreaterThan(priorityMin);
+      expect(ticket.priority).toBeLessThanOrEqual(priorityMax);
+      expect(ticket.priority).toBeGreaterThan(progressMin);
+      expect(ticket.priority).toBeLessThanOrEqual(progressMax);
+    });
+  });
 
   it("should have unique _id value", () => {
     const idSet = new Set(TicketsCash.map((i) => i._id));
     expect(idSet.size).toBe(TicketsCash.length);
   });
-  
 });

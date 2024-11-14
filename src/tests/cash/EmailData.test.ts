@@ -1,5 +1,5 @@
 import { EmailCashType } from "@/types/CashTypes";
-import EmailData from "../../etc/cash/EmailData";
+import EmailData from "../../cash/EmailData";
 
 describe("EmailData", () => {
   it("should have the correct structure", () => {
@@ -14,7 +14,7 @@ describe("EmailData", () => {
       expect(email).toHaveProperty("__v");
     });
   });
-  
+
   it("should have valid email addresses", () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     EmailData.forEach((email: EmailCashType) => {

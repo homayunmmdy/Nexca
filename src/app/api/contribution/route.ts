@@ -1,4 +1,4 @@
-import ContributionCash from "@/etc/cash/ContributionCash";
+import ContributionCash from "@/cash/ContributionCash";
 import { ContributionModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

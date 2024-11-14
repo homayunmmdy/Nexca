@@ -1,5 +1,5 @@
 import { TimeLIneCashType } from "@/types/CashTypes";
-import TimeLineCash from "../../etc/cash/TimeLineCash";
+import TimeLineCash from "../../cash/TimeLineCash";
 
 describe("TimeLineCash", () => {
   it("should have the correct structure", () => {

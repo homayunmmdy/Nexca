@@ -1,5 +1,5 @@
-import ServicesCash from "../../etc/cash/ServicesCash";
 import { ServicesCashType } from "@/types/CashTypes";
+import ServicesCash from "../../cash/ServicesCash";
 
 describe("ServicesCash", () => {
   it("should have the correct structure", () => {

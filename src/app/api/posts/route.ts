@@ -1,4 +1,4 @@
-import PostsCash from "@/etc/cash/PostsCash";
+import PostsCash from "@/cash/PostsCash";
 import { PostModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

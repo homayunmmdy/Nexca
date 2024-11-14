@@ -1,4 +1,4 @@
-import PublicationsCash from "@/etc/cash/PublicationsCash";
+import PublicationsCash from "@/cash/PublicationsCash";
 import { PublicationsModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

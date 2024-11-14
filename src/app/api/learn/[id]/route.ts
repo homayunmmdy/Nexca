@@ -1,4 +1,4 @@
-import LearnCash from "@/etc/cash/LearnCash";
+import LearnCash from "@/cash/LearnCash";
 import { LearnModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

@@ -1,4 +1,4 @@
-import ServicesCash from "@/etc/cash/ServicesCash";
+import ServicesCash from "@/cash/ServicesCash";
 import { ServiceModel } from "@/models";
 import RequestHandler from "@/util/handler/RequestHandler";
 

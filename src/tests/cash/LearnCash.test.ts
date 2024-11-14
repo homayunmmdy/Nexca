@@ -1,5 +1,5 @@
-import LearnCash from "../../etc/cash/LearnCash";
 import { LearnCashType } from "@/types/CashTypes";
+import LearnCash from "../../cash/LearnCash";
 
 describe("Ticket Cash", () => {
   it("should have the correct structure", () => {

@@ -1,5 +1,5 @@
-import SectionData from "../../etc/cash/SectionData";
 import { SectionCashType } from "@/types/CashTypes";
+import SectionData from "../../cash/SectionData";
 
 describe("SectionData", () => {
   it("should have the correct structure", () => {
