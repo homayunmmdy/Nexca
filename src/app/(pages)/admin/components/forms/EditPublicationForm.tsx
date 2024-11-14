@@ -1,15 +1,14 @@
 "use client";
 import { Button, Input, Textarea } from "@/components";
 import { PUBLICARIONS_API_URL } from "@/etc/config/apiConstants";
+import { CategoryType, PublicationsCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { MdDeleteOutline } from "react-icons/md";
 import { CategoryList } from "../elements";
-import { PublicationsCashType } from "@/types/CashTypes";
 
-const EditPublicationForm = ({ data }: {data : PublicationsCashType}) => {
+const EditPublicationForm = ({ data }: { data: PublicationsCashType }) => {
   const EDITMODE = data._id !== "new";
   const router = useRouter();
   const startingData = {
@@ -22,7 +21,7 @@ const EditPublicationForm = ({ data }: {data : PublicationsCashType}) => {
     publisher: EDITMODE ? data.publisher : "",
     publication_date: EDITMODE ? data.publication_date : "",
     pdf_link: EDITMODE ? data.pdf_link : "",
-    categories: EDITMODE ? data.categories : [],
+    categories: EDITMODE ? data.categories ?? [] : [],
   };
 
   const [formData, setFormData] = useState(startingData);
@@ -150,16 +149,23 @@ const EditPublicationForm = ({ data }: {data : PublicationsCashType}) => {
           />
           <Button
             type="button"
-            onClick={() => handler.addCategory(categoryInput,setCategoryInput)}
+            onClick={() => handler.addCategory(categoryInput, setCategoryInput)}
             color="btn-primary"
-          >Add Category</Button>
+          >
+            Add Category
+          </Button>
         </div>
 
         {/* Categories List */}
         <div className="flex flex-col gap-2">
           <h4>Categories</h4>
-          {/* @ts-ignore */}
-          <CategoryList category={formData.categories} onChange={handler.trakeChange} onRemove={handler.removeCategory}/>
+          {formData.categories.map((category: CategoryType) => (
+            <CategoryList
+              category={category}
+              onChange={handler.trakeChange}
+              onRemove={handler.removeCategory}
+            />
+          ))}
         </div>
         <Input
           type="submit"

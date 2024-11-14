@@ -118,7 +118,6 @@ const EditPostForm = ({ post }: {post : PostsCashType}) => {
         {/* Categories List */}
         <div className="flex flex-col gap-2">
           <h4>Categories</h4>
-          {/* @ts-ignore */}
           {formData.categories.map((category) => (
             <CategoryList
               category={category}
