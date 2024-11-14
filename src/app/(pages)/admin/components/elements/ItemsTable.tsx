@@ -5,24 +5,37 @@ import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
 
 //@ts-ignore
-const ItemsTable = ({ post , baseURL}) => {
+const ItemsTable = ({ post, baseURL }) => {
   return (
     <tr key={post.id}>
       <td>
         <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap">
           <div className="avatar">
-            <div className="mask mask-squircle h-32 w-32">
-              <Image src={post.imgurl} width={300} height={300} alt={post.title} className="bg-gray-600"/>
-            </div>
+            <Link
+              href={`/posts/${post._id}`}
+              className="mask mask-squircle h-32 w-32"
+            >
+              <Image
+                src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
+                width={300}
+                height={300}
+                alt={post.title}
+                className="bg-gray-600"
+              />
+            </Link>
           </div>
           <div>
-            <div className="font-normal md:font-bold">{post.title.slice(0,60)}</div>
+            <div className="font-normal md:font-bold">
+              {post.title.slice(0, 60)}
+            </div>
           </div>
         </div>
       </td>
       <td>
         <Link href={`/admin/${baseURL}/${post._id}`}>
-          <Button color="btn-warning" style="me-2 mb-2"><CiEdit size={25} /></Button>
+          <Button color="btn-warning" style="me-2 mb-2">
+            <CiEdit size={25} />
+          </Button>
         </Link>
       </td>
       <th>
