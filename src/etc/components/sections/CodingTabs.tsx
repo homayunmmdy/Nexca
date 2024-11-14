@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components";
 import { POST_API_URL } from "@/etc/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
@@ -32,18 +33,13 @@ const CodingTabs = () => {
       {/* Tabs */}
       <div className="mb-12 flex flex-wrap justify-center gap-4">
         {tabs.map(({ id, title }) => (
-          <button
-            key={id}
+          <Button
+            color="btn-primary"
             onClick={() => setActiveTab(id as typeof activeTab)}
-            className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
-              ${
-                activeTab === id
-                  ? "bg-blue-600 text-white shadow-lg transform scale-105"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
+            style={activeTab !== id ? "btn-outline" : ""}
           >
             {title}
-          </button>
+          </Button>
         ))}
       </div>
 
