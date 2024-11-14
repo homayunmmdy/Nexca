@@ -23,7 +23,9 @@ export type CollapseType = {
   body: string;
 };
 
-
+export type SinglePagepParamsType = {
+  id: string;
+};
 export type MenuTypes = {
   pathname: string;
   nav: {
@@ -31,4 +33,4 @@ export type MenuTypes = {
     name: string;
     link: string;
   }[];
-}
+};

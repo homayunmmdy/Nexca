@@ -1,10 +1,10 @@
 import { POST_API_URL } from "@/etc/config/apiConstants";
 import { getById } from "@/util/ServerUtil";
 import { EditPostForm } from "../../components";
+import { SinglePagepParamsType } from "@/types/entities";
 
 let updateTicketData = {};
-{/* @ts-ignore */}
-const SinglePostsPage = async ({ params }) => {
+const SinglePostsPage = async ({ params }: {params : SinglePagepParamsType}) => {
   const EDITMODE = params.id === "new" ? false : true;
 
   if (EDITMODE) {

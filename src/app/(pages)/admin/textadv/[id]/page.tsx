@@ -1,10 +1,10 @@
 import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
 import { getById } from "@/util/ServerUtil";
 import { EditTextAdvForm } from "../../components";
+import { SinglePagepParamsType } from "@/types/entities";
 
 let updatetextadvData = {};
-{/* @ts-ignore */}
-const EditSectionPage = async ({ params }) => {
+const EditSectionPage = async ({ params }: {params : SinglePagepParamsType}) => {
   const EDITMODE = params.id === "new" ? false : true;
 
   if (EDITMODE) {

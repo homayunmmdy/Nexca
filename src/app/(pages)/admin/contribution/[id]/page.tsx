@@ -1,10 +1,10 @@
 import { CONTRIBUTION_API_URL } from "@/etc/config/apiConstants";
 import { getById } from "@/util/ServerUtil";
 import { EditContributionForm } from "../../components";
+import { SinglePagepParamsType } from "@/types/entities";
 
 let updateTicketData = {};
-{/* @ts-ignore */}
-const SingleContributionPage = async ({ params }) => {
+const SingleContributionPage = async ({ params }: {params : SinglePagepParamsType}) => {
   const EDITMODE = params.id === "new" ? false : true;
 
   if (EDITMODE) {

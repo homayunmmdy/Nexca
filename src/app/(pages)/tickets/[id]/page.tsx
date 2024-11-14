@@ -1,10 +1,10 @@
 import { TICKETS_API_URL } from "@/etc/config/apiConstants";
 import { getById } from "@/util/ServerUtil";
 import { EditTicketForm } from "../../admin/components";
+import { SinglePagepParamsType } from "@/types/entities";
 
 let updateTicketData = {};
-{/* @ts-ignore */}
-const TicketPage = async ({ params }) => {
+const TicketPage = async ({ params }: {params : SinglePagepParamsType}) => {
   const EDITMODE = params.id === "new" ? false : true;
 
   if (EDITMODE) {
