@@ -9,7 +9,7 @@ import { GrFormNextLink } from "react-icons/gr";
 const EmailListForm = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
-    emails: "",
+    email: "",
   });
 
   const handler = new FormHandler(setFormData, EMAIL_API_URL, router);
@@ -26,7 +26,7 @@ const EmailListForm = () => {
         type="email"
         id="emails"
         name="emails"
-        value={formData.emails}
+        value={formData.email}
       />
       <Button
         style="rounded-full"

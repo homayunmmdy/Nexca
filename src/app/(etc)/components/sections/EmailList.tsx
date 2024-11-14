@@ -10,7 +10,7 @@ const EmailList: React.FC = () => {
   const router = useRouter();
 
   const [formData, setFormData] = useState({
-    emails: "",
+    email: "",
   });
 
   const handler = new FormHandler(setFormData, EMAIL_API_URL, router);
@@ -35,10 +35,10 @@ const EmailList: React.FC = () => {
           <div className="flex-0 w-full px-1 md:w-auto lg:w-1/2">
             <form onSubmit={handleSubmit}>
               <input type="hidden" name="tags" value="earlyaccess" />
-              <div className="flex flex-col sm:flex-row">
+              <div className="flex flex-col gap-2 sm:flex-row">
                 <Input
                   type="email"
-                  value={formData.emails}
+                  value={formData.email}
                   placeholder="Enter your email address"
                   required={true}
                   id="emails"
