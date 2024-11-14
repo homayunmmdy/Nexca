@@ -1,16 +1,15 @@
+import { DeleteBlock } from "@/app/(pages)/admin/components/elements";
+import FormatTime from "@/app/(pages)/posts/components/FormatTime";
+import { Button } from "@/components";
+import { TicketsCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import { FaEdit } from "react-icons/fa";
-import FormattedTimestamp from "./FormattedTimestamp";
-import ProgressDisplay from "./ProgressDisplay";
 import PriorityDisplay from "./PriorityDisplay";
+import ProgressDisplay from "./ProgressDisplay";
 import StatusDisplay from "./StatusDisplay";
-import { Button } from "@/components";
-import { DeleteBlock } from "@/app/(pages)/admin/components/elements";
-import { TicketsCashType } from "@/types/CashTypes";
-import FormatTime from "@/app/(pages)/posts/components/FormatTime";
-interface Props{
-  ticket : TicketsCashType;
-  master : boolean
+interface Props {
+  ticket: TicketsCashType;
+  master: boolean;
 }
 const TicketCard = ({ ticket, master }: Props) => {
   const options = {
@@ -32,7 +31,9 @@ const TicketCard = ({ ticket, master }: Props) => {
               href={`/tickets/${ticket._id}`}
               style={{ display: "contents" }}
             >
-              <Button color="btn-warning" type="button" ><FaEdit /></Button>
+              <Button color="btn-warning" type="button">
+                <FaEdit />
+              </Button>
             </Link>
           </div>
         ) : null}

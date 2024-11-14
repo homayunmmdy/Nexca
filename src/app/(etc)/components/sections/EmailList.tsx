@@ -41,8 +41,8 @@ const EmailList: React.FC = () => {
                   value={formData.email}
                   placeholder="Enter your email address"
                   required={true}
-                  id="emails"
-                  name="emails"
+                  id="email"
+                  name="email"
                   style="flex-1 sm:mr-5 px-3 py-2"
                   icon={<TfiEmail />}
                   color="input-primary"

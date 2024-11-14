@@ -24,8 +24,8 @@ const EmailListForm = () => {
         placeholder="Please Enter Your Email here"
         onChange={handler.trakeChange}
         type="email"
-        id="emails"
-        name="emails"
+        id="email"
+        name="email"
         value={formData.email}
       />
       <Button
