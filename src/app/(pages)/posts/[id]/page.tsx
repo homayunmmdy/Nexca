@@ -7,8 +7,18 @@ import NewsBody from "./components/NewsBody";
 import NewsHead from "./components/NewsHead";
 import PostSeclton from "./PostSkelton";
 
+type PostsCashType = {
+  _id: string;
+  title: string;
+  body: string;
+  description: string;
+  createdAt: string;
+  imgurl: string;
+  categories: { id: string; name: string }[];
+};
+
 const Post: React.FC = () => {
-  const post = useSinglePost();
+  const post = useSinglePost() as PostsCashType | undefined;
 
   if (!post) {
     return <PostSeclton />;
@@ -17,7 +27,6 @@ const Post: React.FC = () => {
   return (
     <>
       <div className="flex flex-col">
-        {/* @ts-ignore */}
         <NewsHead title={post.title} createdAt={post.createdAt} />
         <div className="py-8">
           <div className="mx-auto flex w-[94%] flex-col gap-8 md:w-[92%] md:flex-row">
@@ -35,3 +44,4 @@ const Post: React.FC = () => {
 };
 
 export default Post;
+

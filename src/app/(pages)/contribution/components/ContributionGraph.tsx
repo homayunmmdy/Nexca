@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaEdit } from "react-icons/fa";
 import { DeleteBlock } from "../../admin/components/elements";
-// @ts-ignore
-const ContributionGraph = ({ contributions }) => {
+import { ContributeCashType } from "@/types/CashTypes";
+
+const ContributionGraph = ({ contributions }: { contributions: ContributeCashType[] }) => {
   const handler = new ContributionHandler(contributions);
 
-  const getContributionCount = handler.getContributionCount
+  const getContributionCount = handler.getContributionCount;
 
-  const formatDate = handler.formatDate
+  const formatDate = handler.formatDate;
 
   return (
     <div className="mx-auto w-[94%] pt-4 md:w-[92%]">
@@ -30,14 +31,13 @@ const ContributionGraph = ({ contributions }) => {
       </div>
       <div className="mt-4">
         <h3 className="mb-2 text-xl font-semibold">Contributions</h3>
-        {contributions?.length > 0 ? (
+        {contributions.length > 0 ? (
           <div className="group space-y-2">
-            {/* @ts-ignore */}
-            {contributions?.map((contribute, index) => (
+            {contributions.map((contribute, index) => (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 1 }}
+                transition={{ delay: index * 0.1 }}
                 key={index}
                 className="rounded border p-3 hover:border-indigo-600"
               >
@@ -60,7 +60,9 @@ const ContributionGraph = ({ contributions }) => {
                       <Button
                         color="btn-warning"
                         type="button"
-                      ><FaEdit /></Button>
+                      >
+                        <FaEdit />
+                      </Button>
                     </Link>
                     <DeleteBlock path="contribution" id={contribute._id} />
                   </div>
@@ -83,3 +85,4 @@ const ContributionGraph = ({ contributions }) => {
 };
 
 export default ContributionGraph;
+

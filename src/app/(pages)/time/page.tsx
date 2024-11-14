@@ -7,20 +7,19 @@ import Link from "next/link";
 import React from "react";
 import { FaEdit } from "react-icons/fa";
 import { DeleteBlock } from "../admin/components/elements";
+import { TimeLIneCashType } from "@/types/CashTypes";
 
 const TimeLinePage: React.FC = () => {
   const { data } = useFetch(TIMELINE_KEY, TIMELINE_API_URL);
 
-  // @ts-ignore
-  const sortedByTime = data?.sort((a, b) => {
+  const sortedByTime = data?.sort((a: { createdAt: string | number | Date; }, b: { createdAt: string | number | Date; }) => {
     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
   });
 
   return (
     <>
       <ul className="timeline timeline-vertical timeline-snap-icon p-6 max-md:timeline-compact">
-        {/* @ts-ignore */}
-        {sortedByTime?.map((item, index) => (
+        {sortedByTime?.map((item : TimeLIneCashType, index: number) => (
           <li key={item._id}>
             <div className="timeline-middle">
               <svg

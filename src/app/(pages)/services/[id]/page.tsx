@@ -14,8 +14,7 @@ const ServicesPage: React.FC = () => {
   const id = getParameterId(10);
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
 
-  //@ts-ignore
-  const filteredData = posts?.filter((item) => item.services == id);
+  const filteredData = posts?.filter((item : PostsCashType) => item.services == id);
   if (loading) {
     return (
       <>

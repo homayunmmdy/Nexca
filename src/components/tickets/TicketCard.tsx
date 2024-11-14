@@ -6,8 +6,13 @@ import PriorityDisplay from "./PriorityDisplay";
 import StatusDisplay from "./StatusDisplay";
 import { Button } from "@/components";
 import { DeleteBlock } from "@/app/(pages)/admin/components/elements";
-// @ts-ignore
-const TicketCard = ({ ticket, master }) => {
+import { TicketsCashType } from "@/types/CashTypes";
+import FormatTime from "@/app/(pages)/posts/components/FormatTime";
+interface Props{
+  ticket : TicketsCashType;
+  master : boolean
+}
+const TicketCard = ({ ticket, master }: Props) => {
   const options = {
     year: "numeric",
     month: "2-digit",
@@ -40,8 +45,8 @@ const TicketCard = ({ ticket, master }) => {
         <div className="mt-2 flex">
           <div className="flex flex-col">
             <p className="my-1 text-xs">
-              <FormattedTimestamp
-                timestamp={ticket.createdAt}
+              <FormatTime
+                timestamp={Number(ticket.createdAt)}
                 options={options as Intl.DateTimeFormatOptions}
               />
             </p>
