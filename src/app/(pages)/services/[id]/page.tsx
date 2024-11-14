@@ -8,6 +8,7 @@ import { getParameterId } from "@/util/Util";
 import React from "react";
 import ServicesNav from "../../../(etc)/demo/components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
+import { PostsCashType } from "@/types/CashTypes";
 
 const ServicesPage: React.FC = () => {
   const id = getParameterId(10);
@@ -30,9 +31,8 @@ const ServicesPage: React.FC = () => {
       <ServicesNav />
       <div className="mx-auto p-4 md:p-10">
         <ServicesImg />
-        <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
-          {/* @ts-ignore */}
-          {filteredData?.map((item) => (
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
+          {filteredData?.map((item: PostsCashType) => (
             <PostCard key={item._id} post={item} />
           ))}
         </div>

@@ -3,9 +3,10 @@ import { Input, Spinner } from "@/components";
 import { PUBLICARIONS_API_URL } from "@/etc/config/apiConstants";
 import { ALL_PUBLICATIONS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { Pagination, ItemsTable } from "../components/elements";
+import { PostsCashType, PublicationsCashType } from "@/types/CashTypes";
 
 const Publications = () => {
   const data = useFetch(ALL_PUBLICATIONS_QUERY_KEY, PUBLICARIONS_API_URL);
@@ -21,18 +22,14 @@ const Publications = () => {
 
   const indexOfLastPost = currentPage * publicationPerPage;
   const indexOfFirstPost = indexOfLastPost - publicationPerPage;
-  //@ts-ignore
-  const filteredPosts = publications.filter((post) =>
-    //@ts-ignore
-    post.title.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredPosts = publications.filter((book: PublicationsCashType) =>
+    book.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-  //@ts-ignore
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: SetStateAction<number>) => setCurrentPage(pageNumber);
 
-  //@ts-ignore
-  const handleSearch = (event) => {
+  const handleSearch = (event: { target: { value: SetStateAction<string>; }; }) => {
     setSearchQuery(event.target.value);
     setCurrentPage(1);
   };
@@ -60,7 +57,7 @@ const Publications = () => {
           color="input-primary"
         />
         {currentPosts.length > 0 ? (
-          <div className="!z-5 relative flex flex-col rounded-[20px] bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:shadow-none w-full p-4 h-full">
+          <div className="!z-5 shadow-3xl shadow-shadow-500 dark:!bg-navy-800 relative flex h-full w-full flex-col rounded-[20px] bg-clip-border p-4 dark:text-white dark:shadow-none">
             <div className="overflow-x-auto">
               <table className="table">
                 <thead>
@@ -72,9 +69,8 @@ const Publications = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* @ts-ignore */}
-                  {currentPosts.map((Post, _index) => (
-                    <ItemsTable post={Post} baseURL="publications"/>
+                  {currentPosts.map((book: PostsCashType) => (
+                    <ItemsTable post={book} baseURL="publications"/>
                   ))}
                 </tbody>
               </table>
@@ -87,7 +83,7 @@ const Publications = () => {
             </div>
           </div>
         ) : (
-          <p className="text-red-600 font-bold">No book found.</p>
+          <p className="font-bold text-red-600">No book found.</p>
         )}
       </div>
     </div>

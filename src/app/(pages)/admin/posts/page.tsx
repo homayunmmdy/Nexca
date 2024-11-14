@@ -3,9 +3,10 @@ import { Input, Spinner } from "@/components";
 import { POST_API_URL } from "@/etc/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { Pagination, ItemsTable } from "../components/elements";
+import { PostsCashType } from "@/types/CashTypes";
 
 const Posts = () => {
   const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
@@ -21,22 +22,17 @@ const Posts = () => {
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-   // @ts-ignore
-   const sortedByTime = posts?.sort((a, b) => {
+   const sortedByTime = posts?.sort((a: { createdAt: string | number | Date; }, b: { createdAt: string | number | Date; }) => {
     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
   });
-  //@ts-ignore
-  const filteredPosts = sortedByTime.filter((post) =>
-    //@ts-ignore
+  const filteredPosts = sortedByTime.filter((post: PostsCashType) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-  //@ts-ignore
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: SetStateAction<number>) => setCurrentPage(pageNumber);
 
-  //@ts-ignore
-  const handleSearch = (event) => {
+  const handleSearch = (event: { target: { value: SetStateAction<string>; }; }) => {
     setSearchQuery(event.target.value);
     setCurrentPage(1);
   };
@@ -75,8 +71,7 @@ const Posts = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* @ts-ignore */}
-                  {currentPosts.map((Post, _index) => (
+                  {currentPosts.map((Post: PostsCashType) => (
                     <ItemsTable post={Post} baseURL="posts"/>
                   ))}
                 </tbody>

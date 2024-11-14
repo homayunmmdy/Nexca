@@ -42,7 +42,7 @@ const TicketCard = ({ ticket, master }) => {
             <p className="my-1 text-xs">
               <FormattedTimestamp
                 timestamp={ticket.createdAt}
-                options={options}
+                options={options as Intl.DateTimeFormatOptions}
               />
             </p>
             <ProgressDisplay progress={ticket.progress} />

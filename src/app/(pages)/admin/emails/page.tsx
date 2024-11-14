@@ -3,6 +3,7 @@ import { Spinner } from "@/components";
 import { EMAIL_API_URL } from "@/etc/config/apiConstants";
 import { EMAIL_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { EmailCashType } from "@/types/CashTypes";
 import { DeleteBlock } from "../components/elements";
 
 const EmailsPage = () => {
@@ -21,11 +22,10 @@ const EmailsPage = () => {
                 <th>delete</th>
               </tr>
             </thead>
-            {/* @ts-ignore */}
-            {emailData?.map((data) => (
-              <tbody key={data.id}>
+            {emailData?.map((data: EmailCashType) => (
+              <tbody key={data._id}>
                 <tr>
-                  <td>{data.emails}</td>
+                  <td>{data.email}</td>
                   <td>
                     <DeleteBlock path="emails" id={data._id} />
                   </td>

@@ -16,15 +16,12 @@ const DeleteBlock: React.FC<Props> = ({ path, id }: Props) => {
 
   // Handle modal auto close after a specific time (e.g., 10 seconds)
   useEffect(() => {
-    //@ts-ignore
-    let timer;
-    //@ts-ignore
+    let timer: string | number | NodeJS.Timeout | undefined;
     if (isConfirmOpen) {
       timer = setTimeout(() => {
         setIsConfirmOpen(false);
       }, 10000); // Change this duration as needed
     }
-    //@ts-ignore
     return () => clearTimeout(timer);
   }, [isConfirmOpen]);
 

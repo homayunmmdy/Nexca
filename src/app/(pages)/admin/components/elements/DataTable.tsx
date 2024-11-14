@@ -1,10 +1,14 @@
+import { Button } from "@/components";
+import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
-import Link from "next/link";
-import { Button } from "@/components";
 
-//@ts-ignore
-const DataTable = ({ data, path, editor }) => {
+interface Props {
+  data: any;
+  path: string;
+  editor?: boolean;
+}
+const DataTable = ({ data, path, editor }: Props) => {
   // Sort data by `secid` in ascending order
   const sortedData = data ? [...data].sort((a, b) => a.secid - b.secid) : [];
 
@@ -36,10 +40,9 @@ const DataTable = ({ data, path, editor }) => {
               <td>{item.name}</td>
               <td>
                 <Link href={`/admin/${path}/${item._id}`}>
-                  <Button
-                    color="btn-warning"
-                    style="me-2 mb-2"
-                  ><CiEdit size={25} /></Button>
+                  <Button color="btn-warning" style="me-2 mb-2">
+                    <CiEdit size={25} />
+                  </Button>
                 </Link>
               </td>
               {editor ? (

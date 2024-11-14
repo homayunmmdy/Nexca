@@ -1,8 +1,11 @@
 import React from 'react'
-// @ts-ignore
-const FormattedTimestamp = ({ timestamp, options }) => {
-    // @ts-ignore
-    const formatDate = (timestamp, options) => {
+interface FormattedTimestampProps {
+    timestamp: number;
+    options?: Intl.DateTimeFormatOptions;
+}
+
+const FormattedTimestamp = ({ timestamp, options }: FormattedTimestampProps) => {
+    const formatDate = (timestamp: number, options?: Intl.DateTimeFormatOptions) => {
         const date = new Date(timestamp);
         return date.toLocaleString("en-GB", options);
     };

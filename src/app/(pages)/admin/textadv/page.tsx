@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from "../components/elements";
+import { TextAdvCashType } from "@/types/CashTypes";
 
 const AdminTextAdvPage: React.FC = () => {
   const { data: sections, loading } = useFetch(
@@ -16,9 +17,7 @@ const AdminTextAdvPage: React.FC = () => {
   if (loading) {
     return <Spinner />;
   }
-  {
-    /* @ts-ignore */
-  }
+
   const sortedData = sections
     ? [...sections].sort((a, b) => a.textadvid - b.textadvid)
     : [];
@@ -45,18 +44,13 @@ const AdminTextAdvPage: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            {sortedData?.map((item) => (
+            {sortedData?.map((item: TextAdvCashType) => (
               <>
-                {/* @ts-ignore */}
-                <tr key={item.id}>
-                  {/* @ts-ignore */}
+                <tr key={item._id}>
                   <td>{item.textadvid}</td>
-                  {/* @ts-ignore */}
                   <td>{item.advname}</td>
-                  {/* @ts-ignore */}
                   <td>{item.body}</td>
                   <td>
-                    {/* @ts-ignore */}
                     <Link href={`/admin/textadv/${item._id}`}>
                       <Button
                         color="btn-warning"
@@ -65,7 +59,6 @@ const AdminTextAdvPage: React.FC = () => {
                     </Link>
                   </td>
                   <td>
-                    {/* @ts-ignore */}
                     <DeleteBlock path="textadv" id={item._id} />
                   </td>
                 </tr>

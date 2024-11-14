@@ -8,9 +8,7 @@ import NewsHead from "./components/NewsHead";
 import PostSeclton from "./PostSkelton";
 
 const Post: React.FC = () => {
-  //@ts-ignore
   const post = useSinglePost();
-  //@ts-ignore
 
   if (!post) {
     return <PostSeclton />;

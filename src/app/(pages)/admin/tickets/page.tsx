@@ -3,8 +3,9 @@ import { TicketCard } from "@/components";
 import { TICKETS_API_URL } from "@/etc/config/apiConstants";
 import { TICKETS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { TicketsCashType } from "@/types/CashTypes";
 import { checkMaster } from "@/util/Util";
-import React from 'react'
+import React from "react";
 
 const AdminTicketsPage: React.FC = () => {
   const { data: tickets } = useFetch(TICKETS_QUERY_KEY, TICKETS_API_URL);
@@ -12,8 +13,7 @@ const AdminTicketsPage: React.FC = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {/* @ts-ignore */}
-        {tickets?.map((ticket) => (
+        {tickets?.map((ticket: TicketsCashType) => (
           <TicketCard ticket={ticket} master={master} />
         ))}
       </div>

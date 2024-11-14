@@ -1,13 +1,17 @@
 import { Button } from "@/components";
+import { PostsCashType } from "@/types/CashTypes";
 import Image from "next/image";
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
 
-//@ts-ignore
-const ItemsTable = ({ post, baseURL }) => {
+interface Props {
+  post: PostsCashType;
+  baseURL: string;
+}
+const ItemsTable = ({ post, baseURL }: Props) => {
   return (
-    <tr key={post.id}>
+    <tr key={post._id}>
       <td>
         <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap">
           <div className="avatar">

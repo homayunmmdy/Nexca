@@ -3,6 +3,7 @@ import { Spinner } from "@/components";
 import { CONTACTS_API_URL } from "@/etc/config/apiConstants";
 import { CONTACTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { ContactsCashType } from "@/types/CashTypes";
 import { DeleteBlock } from "../components/elements";
 
 const ContactsPage = () => {
@@ -26,9 +27,8 @@ const ContactsPage = () => {
                 <th>delete</th>
               </tr>
             </thead>
-            {/* @ts-ignore */}
-            {contactData?.map((data) => (
-              <tbody key={data.id}>
+            {contactData?.map((data: ContactsCashType) => (
+              <tbody key={data._id}>
                 <tr>
                   <td>{data.name}</td>
                   <td>{data.email}</td>

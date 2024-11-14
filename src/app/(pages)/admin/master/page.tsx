@@ -20,8 +20,7 @@ const MasterEditorPage: React.FC = () => {
   const handleLogin = () => {
     const KEY = process.env.NEXT_PUBLIC_MASTER_EDITOR_KEY;
     if (password == `${KEY}`) {
-      //@ts-ignore
-      localStorage.setItem(MASTER_KEY, true);
+      localStorage.setItem(MASTER_KEY, "" + true);
       router.push("/admin");
       toast.success("you're welcome");
     } else {
@@ -54,11 +53,9 @@ const MasterEditorPage: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <Button
-              onClick={handleLogin}
-              type="submit"
-              color="btn-primary"
-            >Submit</Button>
+            <Button onClick={handleLogin} type="submit" color="btn-primary">
+              Submit
+            </Button>
           </div>
         </div>
       </div>
