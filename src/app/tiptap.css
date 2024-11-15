@@ -60,6 +60,10 @@ element to not have effect in other part of applications */
   text-decoration: underline;
 }
 
+#tiptap-style hr {
+  margin-block: 10px;
+}
+
 #tiptap-style pre {
   background: #2e2b29;
   border-radius: 0.5rem;

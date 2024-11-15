@@ -3,6 +3,7 @@ import { Button } from "@/components";
 import CharacterCount from "@tiptap/extension-character-count";
 import CodeBlock from "@tiptap/extension-code-block";
 import Highlight from "@tiptap/extension-highlight";
+import HorizontalRule from "@tiptap/extension-horizontal-rule";
 import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Underline from "@tiptap/extension-underline";
@@ -18,6 +19,7 @@ import {
   MdFormatUnderlined,
   MdLinkOff,
   MdOutlineFormatBold,
+  MdOutlineHorizontalRule,
   MdOutlineImage,
   MdStrikethroughS,
 } from "react-icons/md";
@@ -35,6 +37,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
       StarterKit,
       Underline,
       CodeBlock,
+      HorizontalRule,
       Image,
       Highlight.configure({ multicolor: true }),
       CharacterCount.configure({
@@ -226,6 +229,13 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
         </Button>
         <Button type="button" color="btn-ghost" onClick={addImage}>
           <MdOutlineImage size={20} />
+        </Button>
+        <Button
+          type="button"
+          color="btn-ghost"
+          onClick={() => editor.chain().focus().setHorizontalRule().run()}
+        >
+          <MdOutlineHorizontalRule size={20} />
         </Button>
       </div>
       <EditorContent editor={editor} className="prose max-w-none" />
