@@ -4,7 +4,7 @@ import {
   MainSec,
   PostsSec,
   SingleCardSec,
-  SwiperSec,
+  SliderSec,
   VerticalPostsSec,
 } from "@/etc/components/sections";
 import React from "react";
@@ -27,7 +27,7 @@ const DemoPage: React.FC = () => {
       </div>
       <div className="bg-indigo-600 p-3 sm:p-4 md:p-6 lg:p-9">
         <div className="mt-5' mx-auto w-[94%] md:w-[92%]">
-          <SwiperSec />
+          <SliderSec />
         </div>
       </div>
       <div className="mx-auto w-[94%] pt-2 md:w-[92%]">

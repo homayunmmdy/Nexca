@@ -1,17 +1,18 @@
-"use client"
-import "swiper/css";
-import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "./styles.css";
+"use client";
+import { Titr } from "@/components";
 import { SWIPER_SEC } from "@/etc/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
+import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
+import "swiper/css";
+import "swiper/css/navigation";
 import { A11y, Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Posts4x4Skeleton } from "../skelton";
 import PostCard from "./PostCard";
-import { Titr } from "@/components";
+import "./styles.css";
 
-export default () => {
+const Slider = () => {
   const { data, loading } = useGetSection(SWIPER_SEC, -8, 5);
 
   if (loading) {
@@ -20,7 +21,12 @@ export default () => {
 
   return (
     <>
-     <Titr borderColor="white" style="text-white" title="Swiper Posts" item="text-left" />
+      <Titr
+        borderColor="white"
+        style="text-white"
+        title="Swiper Posts"
+        item="text-left"
+      />
       <Swiper
         spaceBetween={25}
         modules={[Autoplay, Navigation, A11y]}
@@ -52,3 +58,9 @@ export default () => {
     </>
   );
 };
+
+export default () => (
+  <ErrorBoundaryProvider>
+    <Slider />
+  </ErrorBoundaryProvider>
+);

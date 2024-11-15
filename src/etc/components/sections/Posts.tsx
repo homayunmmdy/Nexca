@@ -6,6 +6,7 @@ import { PostsCashType } from "@/types/CashTypes";
 import { PostsSecSkeleton } from "../skelton";
 import PostCard from "./PostCard";
 import React from 'react'
+import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 
 const Posts: React.FC = () => {
   const { data, loading } = useGetSection(POSTS_QUERY_KEY, -6, 2);
@@ -18,7 +19,7 @@ const Posts: React.FC = () => {
     <>
       <div className="mx-auto pb-6">
         <Titr title="Posts" item="text-left" />
-        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {data?.map((post: PostsCashType) => (
             <PostCard key={post._id} post={post} />
           ))}
@@ -28,4 +29,8 @@ const Posts: React.FC = () => {
   );
 };
 
-export default Posts;
+export default () => (
+  <ErrorBoundaryProvider>
+    <Posts />
+  </ErrorBoundaryProvider>
+);

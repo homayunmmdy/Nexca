@@ -6,6 +6,7 @@ import Titr from "../../../components/Titr";
 import { PostsSkeleton } from "../skelton";
 import PostCard from "./PostCard";
 import React from 'react'
+import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 
 const MorePosts: React.FC = () => {
   const { data, loading } = useGetSection(MORE_POSTS_QUERY_KEY, -3, 5);
@@ -18,7 +19,7 @@ const MorePosts: React.FC = () => {
     <>
       <div className="mx-auto pb-6">
         <Titr title="More Posts" item="text-left" />
-        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {data?.map((post: PostsCashType) => (
             <PostCard key={post._id} post={post} />
           ))}
@@ -28,4 +29,8 @@ const MorePosts: React.FC = () => {
   );
 };
 
-export default MorePosts;
+export default () => (
+  <ErrorBoundaryProvider>
+    <MorePosts />
+  </ErrorBoundaryProvider>
+);

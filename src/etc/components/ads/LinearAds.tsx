@@ -1,5 +1,7 @@
 "use client";
 import Titr from "@/components/Titr";
+import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
+import { ALL_TEXTADV_QUERY_KEY } from "@/etc/config/Constants";
 import { TextAdvCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import { useQuery } from "@tanstack/react-query";
@@ -8,13 +10,11 @@ import Link from "next/link";
 import React from "react";
 import { FaCircleDot } from "react-icons/fa6";
 import LinearAdsLoading from "./LinearAdsLoading";
-import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
-import { ALL_TEXTADV_QUERY_KEY } from "@/etc/config/Constants";
 
 const LinearAds: React.FC = () => {
   const {
     data: mainData,
-  isLoading,
+    isLoading,
     error,
   } = useQuery({
     queryKey: [ALL_TEXTADV_QUERY_KEY],
@@ -64,12 +64,8 @@ const LinearAds: React.FC = () => {
   );
 };
 
-const LinearAdsWithErrorBoundary = () => {
-  return (
-    <ErrorBoundaryProvider>
-      <LinearAds />
-    </ErrorBoundaryProvider>
-  );
-};
-
-export default LinearAdsWithErrorBoundary;
+export default () => (
+  <ErrorBoundaryProvider>
+    <LinearAds />
+  </ErrorBoundaryProvider>
+);

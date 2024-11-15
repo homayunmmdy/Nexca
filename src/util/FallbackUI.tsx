@@ -30,11 +30,11 @@ export const FallbackUI: React.FC<FallbackProps> = ({
   const canRetry = retryCount < MAX_RETRY_COUNT;
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center text-center">
+    <div className="flex flex-col items-center justify-center p-3 text-center">
       <h2 className="mb-4 text-lg font-semibold text-red-600">
         Oops! Something went wrong.
       </h2>
-      <p className="mb-4 text-sm text-gray-600">{error.message}</p>
+      <p className="mb-4 text-sm">{error.message}</p>
       {canRetry && (
         <>
           <Button
@@ -47,7 +47,7 @@ export const FallbackUI: React.FC<FallbackProps> = ({
           >
             <IoReloadSharp />
           </Button>
-          <p className="mt-4 text-xs text-gray-500">
+          <p className="mt-4 text-xs">
             Retrying automatically in {MAX_RETRY_COUNT} seconds... ({retryCount}
             /{MAX_RETRY_COUNT})
           </p>
