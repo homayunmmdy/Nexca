@@ -4,10 +4,10 @@ import SiteConfig from "@/config/stie";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FaGithub } from "react-icons/fa";
 import HamburgerIcon from "./HamburgerIcon";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
+import GitHubBtn from "./GitHubBtn";
 
 const Header = () => {
   const pathname = usePathname();
@@ -30,17 +30,7 @@ const Header = () => {
           </div>
           <div className="navbar-end gap-3">
             <ThemeToggle />
-            <Link
-              href={SiteConfig.github}
-              title="GitHub"
-              rel="nofollow"
-              aria-label="GitHub"
-              target="_blank"
-            >
-              <Button color="btn-neutral">
-                <FaGithub color="white" size={20} /> GitHub
-              </Button>
-            </Link>
+            <GitHubBtn link={SiteConfig.github}/>
           </div>
         </div>
       </header>
