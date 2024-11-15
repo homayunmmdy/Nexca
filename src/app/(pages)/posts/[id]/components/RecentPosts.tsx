@@ -4,8 +4,8 @@ import useGetLatestPosts from "@/hooks/useGetLatestPosts";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React, { useState } from "react";
-import RecentPost from "./RecentPost";
 import RecentPostSkeleton from "./RecentPostSkeleton";
+import PostCard from "@/components/sections/PostCard";
 
 const RecentPosts: React.FC = () => {
   const [recentSize] = useState(-3);
@@ -23,7 +23,7 @@ const RecentPosts: React.FC = () => {
         {posts && (
           <div className="grid grid-cols-1 items-start gap-x-3 gap-y-5">
             {posts?.map((Post: PostsCashType) => (
-              <RecentPost post={Post} />
+              <PostCard post={Post} />
             ))}
           </div>
         )}
