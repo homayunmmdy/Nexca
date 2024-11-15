@@ -3,8 +3,7 @@ import { Button, Input } from "@/components";
 import { MASTER_KEY } from "@/etc/config/Constants";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const MasterEditorPage: React.FC = () => {
   const [password, setPassword] = useState("");
@@ -13,6 +12,7 @@ const MasterEditorPage: React.FC = () => {
   useEffect(() => {
     const isMasterEditor = localStorage.getItem(MASTER_KEY);
     if (isMasterEditor) {
+      toast.success("you're welcome");
       router.push("/admin");
     }
   }, []);
@@ -20,16 +20,16 @@ const MasterEditorPage: React.FC = () => {
   const handleLogin = () => {
     const KEY = process.env.NEXT_PUBLIC_MASTER_EDITOR_KEY;
     if (password == `${KEY}`) {
+      toast.success("you're welcome");
       localStorage.setItem(MASTER_KEY, "" + true);
       router.push("/admin");
-      toast.success("you're welcome");
     } else {
       toast.error("Invalid key");
     }
   };
   return (
     <>
-      <ToastContainer />
+      <Toaster />
       <div className="container mx-auto max-w-xl p-6">
         <div className="rounded-lg border-2 border-indigo-400 p-6 shadow-xl">
           <h1 className="mb-4 text-2xl font-semibold">

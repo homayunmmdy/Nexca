@@ -4,10 +4,10 @@ import { AUTH_KEY } from "@/etc/config/Constants";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import Toast from "./components/Toast";
 import React from 'react'
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -16,6 +16,7 @@ const Login: React.FC = () => {
   useEffect(() => {
     const isAuthenticated = localStorage.getItem(AUTH_KEY);
     if (isAuthenticated) {
+      toast.success("you're welcome");
       router.push("/admin");
     }
   }, []);
@@ -23,16 +24,16 @@ const Login: React.FC = () => {
     const PASSWORD = process.env.NEXT_PUBLIC_PASSWORD;
     const USERNAME = process.env.NEXT_PUBLIC_USERNAME;
     if (username == `${USERNAME}` && password == `${PASSWORD}`) {
+      toast.success("you're welcome");
       localStorage.setItem(AUTH_KEY, "" + true);
       router.push("/admin");
-      toast.success("you're welcome");
     } else {
       toast.error("Invalid username or password");
     }
   };
   return (
     <>
-      <ToastContainer />
+      <Toaster />
       <Toast />
       <div className="font-poppins flex items-center justify-center">
         <div className="flex h-screen w-screen items-center justify-center dark:bg-gray-900">
