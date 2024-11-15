@@ -1,5 +1,5 @@
 import { ReactQueryProvider } from "@/components";
-import SiteConfig from "@/etc/config/stie";
+import SiteConfig from "@/config/stie";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Footer, Header } from "./(etc)/components";
@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <ReactQueryProvider>
       <html lang="en" data-theme="light">
-        <body className={inter.className} >
+        <body className={inter.className}>
           <Header />
           <main className="mt-[120px]">{children}</main>
           <Footer />

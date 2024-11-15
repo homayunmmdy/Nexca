@@ -1,12 +1,12 @@
 "use client";
 import { Input, Spinner } from "@/components";
-import { PUBLICARIONS_API_URL } from "@/etc/config/apiConstants";
-import { ALL_PUBLICATIONS_QUERY_KEY } from "@/etc/config/Constants";
+import { PUBLICARIONS_API_URL } from "@/config/apiConstants";
+import { ALL_PUBLICATIONS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { PostsCashType, PublicationsCashType } from "@/types/CashTypes";
 import { SetStateAction, useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import { Pagination, ItemsTable } from "../components/elements";
-import { PostsCashType, PublicationsCashType } from "@/types/CashTypes";
+import { ItemsTable, Pagination } from "../components/elements";
 
 const Publications = () => {
   const data = useFetch(ALL_PUBLICATIONS_QUERY_KEY, PUBLICARIONS_API_URL);
@@ -27,9 +27,12 @@ const Publications = () => {
   );
 
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-  const paginate = (pageNumber: SetStateAction<number>) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: SetStateAction<number>) =>
+    setCurrentPage(pageNumber);
 
-  const handleSearch = (event: { target: { value: SetStateAction<string>; }; }) => {
+  const handleSearch = (event: {
+    target: { value: SetStateAction<string> };
+  }) => {
     setSearchQuery(event.target.value);
     setCurrentPage(1);
   };
@@ -70,7 +73,7 @@ const Publications = () => {
                 </thead>
                 <tbody>
                   {currentPosts.map((book: PostsCashType) => (
-                    <ItemsTable post={book} baseURL="publications"/>
+                    <ItemsTable post={book} baseURL="publications" />
                   ))}
                 </tbody>
               </table>

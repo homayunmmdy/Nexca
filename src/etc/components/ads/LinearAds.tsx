@@ -1,7 +1,7 @@
 "use client";
 import Titr from "@/components/Titr";
-import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
-import { ALL_TEXTADV_QUERY_KEY } from "@/etc/config/Constants";
+import { TEXTADV_API_URL } from "@/config/apiConstants";
+import { ALL_TEXTADV_QUERY_KEY } from "@/config/Constants";
 import { TextAdvCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import { useQuery } from "@tanstack/react-query";

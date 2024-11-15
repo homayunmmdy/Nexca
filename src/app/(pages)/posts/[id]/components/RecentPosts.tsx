@@ -1,11 +1,11 @@
 "use client";
-import { LATEST_POSTS_KEY } from "@/etc/config/Constants";
+import { LATEST_POSTS_KEY } from "@/config/Constants";
 import useGetLatestPosts from "@/hooks/useGetLatestPosts";
 import { PostsCashType } from "@/types/CashTypes";
+import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React, { useState } from "react";
 import RecentPost from "./RecentPost";
 import RecentPostSkeleton from "./RecentPostSkeleton";
-import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 
 const RecentPosts: React.FC = () => {
   const [recentSize] = useState(-3);

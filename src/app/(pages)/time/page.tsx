@@ -1,25 +1,30 @@
 "use client";
 import { Button } from "@/components";
-import { TIMELINE_API_URL } from "@/etc/config/apiConstants";
-import { TIMELINE_KEY } from "@/etc/config/Constants";
+import { TIMELINE_API_URL } from "@/config/apiConstants";
+import { TIMELINE_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { TimeLIneCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import React from "react";
 import { FaEdit } from "react-icons/fa";
 import { DeleteBlock } from "../admin/components/elements";
-import { TimeLIneCashType } from "@/types/CashTypes";
 
 const TimeLinePage: React.FC = () => {
   const { data } = useFetch(TIMELINE_KEY, TIMELINE_API_URL);
 
-  const sortedByTime = data?.sort((a: { createdAt: string | number | Date; }, b: { createdAt: string | number | Date; }) => {
-    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-  });
+  const sortedByTime = data?.sort(
+    (
+      a: { createdAt: string | number | Date },
+      b: { createdAt: string | number | Date }
+    ) => {
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    }
+  );
 
   return (
     <>
       <ul className="timeline timeline-vertical timeline-snap-icon p-6 max-md:timeline-compact">
-        {sortedByTime?.map((item : TimeLIneCashType, index: number) => (
+        {sortedByTime?.map((item: TimeLIneCashType, index: number) => (
           <li key={item._id}>
             <div className="timeline-middle">
               <svg
@@ -55,10 +60,9 @@ const TimeLinePage: React.FC = () => {
                   href={`/admin/time/${item._id}`}
                   style={{ display: "contents" }}
                 >
-                  <Button
-                    color="btn-warning"
-                    type="button"
-                  ><FaEdit /></Button>
+                  <Button color="btn-warning" type="button">
+                    <FaEdit />
+                  </Button>
                 </Link>
                 <DeleteBlock path="time" id={item._id} />
               </span>

@@ -1,14 +1,14 @@
 "use client";
 import Titr from "@/components/Titr";
-import { SINGLE_POST_QUERY_KEY } from "@/etc/config/Constants";
+import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
+import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import Button from "../../../components/Button";
 import { SingleCardSkeleton } from "../skelton";
-import React from 'react'
-import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 
 const SingleCard: React.FC = () => {
   const { data, loading } = useGetSection(SINGLE_POST_QUERY_KEY, -1, 3);
@@ -32,7 +32,7 @@ const SingleCard: React.FC = () => {
         >
           <figure>
             <Image
-              src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl }
+              src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
               alt={post.title.slice(0, 70)}
               width={928}
               height={548}
@@ -42,7 +42,7 @@ const SingleCard: React.FC = () => {
             <h2 className="card-title">{post.title.slice(0, 70)}</h2>
             <p>{post.description.slice(0, 150)}</p>
             <div className="card-actions justify-end">
-              <Button color="btn-primary" >Read Now</Button>
+              <Button color="btn-primary">Read Now</Button>
             </div>
           </div>
         </Link>

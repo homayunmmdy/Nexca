@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components";
-import { POST_API_URL } from "@/etc/config/apiConstants";
-import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
+import { POST_API_URL } from "@/config/apiConstants";
+import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import { useState } from "react";

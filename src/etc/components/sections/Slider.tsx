@@ -1,6 +1,6 @@
 "use client";
 import { Titr } from "@/components";
-import { SWIPER_SEC } from "@/etc/config/Constants";
+import { SWIPER_SEC } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";

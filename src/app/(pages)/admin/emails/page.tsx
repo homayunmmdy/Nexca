@@ -1,7 +1,7 @@
 "use client";
 import { Spinner } from "@/components";
-import { EMAIL_API_URL } from "@/etc/config/apiConstants";
-import { EMAIL_QUERY_KEY } from "@/etc/config/Constants";
+import { EMAIL_API_URL } from "@/config/apiConstants";
+import { EMAIL_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { EmailCashType } from "@/types/CashTypes";
 import { DeleteBlock } from "../components/elements";

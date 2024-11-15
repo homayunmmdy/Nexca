@@ -1,5 +1,5 @@
 import { FullHoverAnimation } from "@/components";
-import { features } from "@/etc/config/data";
+import { features } from "@/config/data";
 import React from "react";
 import Feature from "./Feature";
 

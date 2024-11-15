@@ -1,7 +1,7 @@
 "use client";
 import { Spinner } from "@/components";
-import { CONTACTS_API_URL } from "@/etc/config/apiConstants";
-import { CONTACTS_QUERY_KEY } from "@/etc/config/Constants";
+import { CONTACTS_API_URL } from "@/config/apiConstants";
+import { CONTACTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { ContactsCashType } from "@/types/CashTypes";
 import { DeleteBlock } from "../components/elements";

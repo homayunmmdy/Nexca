@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@/components";
-import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
+import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { TextAdvCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";

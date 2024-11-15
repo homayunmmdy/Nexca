@@ -1,14 +1,14 @@
 "use client";
 import { Input, Textarea } from "@/components";
-import { TICKETS_API_URL } from "@/etc/config/apiConstants";
+import { TICKETS_API_URL } from "@/config/apiConstants";
+import { TicketsCashType } from "@/types/CashTypes";
 import { checkMaster } from "@/util/Util";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { Sidebar } from "../sections";
-import { TicketsCashType } from "@/types/CashTypes";
 
-const EditTicketForm = ({ ticket }: {ticket : TicketsCashType}) => {
+const EditTicketForm = ({ ticket }: { ticket: TicketsCashType }) => {
   const EDITMODE = ticket._id !== "new";
   const router = useRouter();
   const startingTicketData = {

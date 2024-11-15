@@ -4,7 +4,7 @@ import {
   POST_API_URL,
   SECTIONS_API_URL,
   SERVICES_API_URL,
-} from "@/etc/config/apiConstants";
+} from "@/config/apiConstants";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";

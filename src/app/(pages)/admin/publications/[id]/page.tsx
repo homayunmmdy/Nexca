@@ -1,14 +1,18 @@
-import { PUBLICARIONS_API_URL } from "@/etc/config/apiConstants";
+import { PUBLICARIONS_API_URL } from "@/config/apiConstants";
+import { SinglePagepParamsType } from "@/types/entities";
 import { getById } from "@/util/ServerUtil";
 import { EditPublicationForm } from "../../components";
-import { SinglePagepParamsType } from "@/types/entities";
 
 let updatesectionData;
-const EditSectionPage = async ({ params }: {params : SinglePagepParamsType}) => {
+const EditSectionPage = async ({
+  params,
+}: {
+  params: SinglePagepParamsType;
+}) => {
   const EDITMODE = params.id === "new" ? false : true;
 
   if (EDITMODE) {
-    updatesectionData = await getById(PUBLICARIONS_API_URL,params.id);
+    updatesectionData = await getById(PUBLICARIONS_API_URL, params.id);
     updatesectionData = updatesectionData.document || {};
   } else {
     updatesectionData = {

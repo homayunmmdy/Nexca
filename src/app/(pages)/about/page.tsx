@@ -1,4 +1,4 @@
-import SiteConfig from "@/etc/config/stie";
+import SiteConfig from "@/config/stie";
 import Link from "next/link";
 
 export default function About() {

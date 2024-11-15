@@ -1,4 +1,4 @@
-import SiteConfig from "@/etc/config/stie";
+import SiteConfig from "@/config/stie";
 
 export default function sitemap() {
   return [

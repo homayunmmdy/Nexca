@@ -1,12 +1,12 @@
 "use client";
 import { Input } from "@/components";
-import { SECTIONS_API_URL } from "@/etc/config/apiConstants";
+import { SECTIONS_API_URL } from "@/config/apiConstants";
 import { SectionCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const EditSectionForm = ({ data }: {data : SectionCashType}) => {
+const EditSectionForm = ({ data }: { data: SectionCashType }) => {
   const EDITMODE = data._id !== "new";
   const router = useRouter();
 

@@ -1,6 +1,6 @@
 "use client";
 import { Button, Input, Textarea } from "@/components";
-import { PUBLICARIONS_API_URL } from "@/etc/config/apiConstants";
+import { PUBLICARIONS_API_URL } from "@/config/apiConstants";
 import { CategoryType, PublicationsCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";

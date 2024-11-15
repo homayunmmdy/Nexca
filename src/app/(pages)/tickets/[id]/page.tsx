@@ -1,4 +1,4 @@
-import { TICKETS_API_URL } from "@/etc/config/apiConstants";
+import { TICKETS_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
 import { getById } from "@/util/ServerUtil";
 import { EditTicketForm } from "../../admin/components";

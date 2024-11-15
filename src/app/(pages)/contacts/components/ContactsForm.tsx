@@ -1,6 +1,6 @@
 "use client";
 import { Button, Input, Textarea } from "@/components";
-import { CONTACTS_API_URL } from "@/etc/config/apiConstants";
+import { CONTACTS_API_URL } from "@/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

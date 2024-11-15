@@ -1,4 +1,4 @@
-import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
+import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
 import { getById } from "@/util/ServerUtil";
 import { EditTextAdvForm } from "../../components";

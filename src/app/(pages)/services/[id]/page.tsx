@@ -1,20 +1,22 @@
 "use client";
+import { POST_API_URL } from "@/config/apiConstants";
+import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import PostCard from "@/etc/components/sections/PostCard";
 import { PostsSkeleton } from "@/etc/components/skelton";
-import { POST_API_URL } from "@/etc/config/apiConstants";
-import { ALL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { PostsCashType } from "@/types/CashTypes";
 import { getParameterId } from "@/util/Util";
 import React from "react";
 import ServicesNav from "../../../(etc)/demo/components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
-import { PostsCashType } from "@/types/CashTypes";
 
 const ServicesPage: React.FC = () => {
   const id = getParameterId(10);
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
 
-  const filteredData = posts?.filter((item : PostsCashType) => item.services == id);
+  const filteredData = posts?.filter(
+    (item: PostsCashType) => item.services == id
+  );
   if (loading) {
     return (
       <>

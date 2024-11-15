@@ -1,12 +1,12 @@
 "use client";
 import Titr from "@/components/Titr";
-import { VERTICAL_POSTS_QUERY_KEY } from "@/etc/config/Constants";
+import { VERTICAL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
+import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
+import React from "react";
 import { VerticalSkeleton } from "../skelton";
 import VerticalPost from "./VerticalPost";
-import React from 'react'
-import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 
 const VerticalPosts: React.FC = () => {
   const { data, loading } = useGetSection(VERTICAL_POSTS_QUERY_KEY, -4, 4);
@@ -34,4 +34,3 @@ export default () => (
     <VerticalPosts />
   </ErrorBoundaryProvider>
 );
-

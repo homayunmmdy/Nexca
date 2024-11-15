@@ -1,4 +1,4 @@
-import SiteConfig from "@/etc/config/stie";
+import SiteConfig from "@/config/stie";
 import { FaPhone } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 

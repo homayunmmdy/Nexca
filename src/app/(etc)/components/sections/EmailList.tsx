@@ -1,6 +1,6 @@
 "use client";
 import { Button, Input } from "@/components";
-import { EMAIL_API_URL } from "@/etc/config/apiConstants";
+import { EMAIL_API_URL } from "@/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";

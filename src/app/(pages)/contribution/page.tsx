@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import { Spinner } from "@/components";
-import { CONTRIBUTION_KEY } from "@/etc/config/Constants";
-import { CONTRIBUTION_API_URL } from "@/etc/config/apiConstants";
+import { CONTRIBUTION_KEY } from "@/config/Constants";
+import { CONTRIBUTION_API_URL } from "@/config/apiConstants";
 import useFetch from "@/hooks/useFetch";
 import ContributionGraph from "./components/ContributionGraph";
 

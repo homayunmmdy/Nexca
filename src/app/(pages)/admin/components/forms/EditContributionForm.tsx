@@ -1,6 +1,6 @@
 "use client";
 import { Input, Textarea } from "@/components";
-import { CONTRIBUTION_API_URL } from "@/etc/config/apiConstants";
+import { CONTRIBUTION_API_URL } from "@/config/apiConstants";
 import { ContributeCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";

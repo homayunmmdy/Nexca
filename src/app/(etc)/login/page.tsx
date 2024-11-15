@@ -1,13 +1,11 @@
 "use client";
 import { Button, Input } from "@/components";
-import { AUTH_KEY } from "@/etc/config/Constants";
+import { AUTH_KEY } from "@/config/Constants";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import Toast from "./components/Toast";
-import React from 'react'
-import toast, { Toaster } from 'react-hot-toast';
-
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");

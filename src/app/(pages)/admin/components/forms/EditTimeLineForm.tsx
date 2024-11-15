@@ -1,6 +1,6 @@
 "use client";
 import { Input } from "@/components";
-import { TIMELINE_API_URL } from "@/etc/config/apiConstants";
+import { TIMELINE_API_URL } from "@/config/apiConstants";
 import { TimeLIneCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";

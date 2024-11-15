@@ -1,12 +1,12 @@
 "use client";
 import Titr from "@/components/Titr";
-import { POSTS_QUERY_KEY } from "@/etc/config/Constants";
+import { POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
+import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
+import React from "react";
 import { PostsSecSkeleton } from "../skelton";
 import PostCard from "./PostCard";
-import React from 'react'
-import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 
 const Posts: React.FC = () => {
   const { data, loading } = useGetSection(POSTS_QUERY_KEY, -6, 2);

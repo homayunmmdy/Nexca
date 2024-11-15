@@ -1,6 +1,6 @@
 "use client";
 import { Button, Input } from "@/components";
-import { MASTER_KEY } from "@/etc/config/Constants";
+import { MASTER_KEY } from "@/config/Constants";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";

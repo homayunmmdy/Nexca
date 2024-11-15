@@ -1,13 +1,13 @@
 "use client";
 import { Button, Spinner } from "@/components";
-import { TEXTADV_API_URL } from "@/etc/config/apiConstants";
-import { ALL_TEXTADV_QUERY_KEY } from "@/etc/config/Constants";
+import { TEXTADV_API_URL } from "@/config/apiConstants";
+import { ALL_TEXTADV_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { TextAdvCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import React from "react";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from "../components/elements";
-import { TextAdvCashType } from "@/types/CashTypes";
 
 const AdminTextAdvPage: React.FC = () => {
   const { data: sections, loading } = useFetch(
@@ -27,10 +27,9 @@ const AdminTextAdvPage: React.FC = () => {
       <div className="overflow-x-auto">
         <div className="flex w-full justify-center">
           <Link href={`/admin/textadv/new`}>
-            <Button
-              color="btn-primary"
-              style="btn-outline m-3"
-            >New textadv</Button>
+            <Button color="btn-primary" style="btn-outline m-3">
+              New textadv
+            </Button>
           </Link>
         </div>
         <table className="table table-zebra my-2">
@@ -52,10 +51,9 @@ const AdminTextAdvPage: React.FC = () => {
                   <td>{item.body}</td>
                   <td>
                     <Link href={`/admin/textadv/${item._id}`}>
-                      <Button
-                        color="btn-warning"
-                        style="me-2 mb-2"
-                      ><CiEdit size={25} /></Button>
+                      <Button color="btn-warning" style="me-2 mb-2">
+                        <CiEdit size={25} />
+                      </Button>
                     </Link>
                   </td>
                   <td>

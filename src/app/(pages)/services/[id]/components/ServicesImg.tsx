@@ -1,6 +1,6 @@
 "use client";
-import { SERVICES_API_URL } from "@/etc/config/apiConstants";
-import { SERVICES_IMG_KEY } from "@/etc/config/Constants";
+import { SERVICES_API_URL } from "@/config/apiConstants";
+import { SERVICES_IMG_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { ServicesCashType } from "@/types/CashTypes";
 import { getParameterId } from "@/util/Util";

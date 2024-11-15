@@ -1,7 +1,7 @@
 "use client";
 import { TicketCard } from "@/components";
-import { TICKETS_API_URL } from "@/etc/config/apiConstants";
-import { TICKETS_QUERY_KEY } from "@/etc/config/Constants";
+import { TICKETS_API_URL } from "@/config/apiConstants";
+import { TICKETS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { TicketsCashType } from "@/types/CashTypes";
 import { checkMaster } from "@/util/Util";

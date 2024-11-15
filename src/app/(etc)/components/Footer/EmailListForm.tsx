@@ -1,6 +1,6 @@
 "use client";
 import { Button, Input } from "@/components";
-import { EMAIL_API_URL } from "@/etc/config/apiConstants";
+import { EMAIL_API_URL } from "@/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -28,12 +28,8 @@ const EmailListForm = () => {
         name="email"
         value={formData.email}
       />
-      <Button
-        style="rounded-full"
-        color="btn-primary"
-        type="submit"
-      >
-       <GrFormNextLink size={24} /> Subscribe
+      <Button style="rounded-full" color="btn-primary" type="submit">
+        <GrFormNextLink size={24} /> Subscribe
       </Button>
     </form>
   );

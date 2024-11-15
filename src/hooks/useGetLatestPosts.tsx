@@ -1,7 +1,7 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { POST_API_URL } from "../etc/config/apiConstants";
+import { POST_API_URL } from "../config/apiConstants";
 
 const useGetLatestPosts = (recentSize: number, queryKey: string) => {
   const { data: mainData, isLoading: loading } = useQuery({

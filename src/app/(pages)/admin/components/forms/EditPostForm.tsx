@@ -4,18 +4,18 @@ import {
   POST_API_URL,
   SECTIONS_API_URL,
   SERVICES_API_URL,
-} from "@/etc/config/apiConstants";
-import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/etc/config/Constants";
+} from "@/config/apiConstants";
+import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { PostsCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CategoryList, SelectField } from "../elements";
 import TiptapEditor from "../TiptapEditor";
-import { PostsCashType } from "@/types/CashTypes";
 
-const EditPostForm = ({ post }: {post : PostsCashType}) => {
+const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
   const router = useRouter();
   const startingTicketData = {
@@ -157,4 +157,3 @@ const EditPostForm = ({ post }: {post : PostsCashType}) => {
 };
 
 export default EditPostForm;
-

@@ -1,13 +1,13 @@
 "use client";
 import { Input, Textarea } from "@/components";
-import { SERVICES_API_URL } from "@/etc/config/apiConstants";
+import { SERVICES_API_URL } from "@/config/apiConstants";
 import { ServicesCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const EditServicesForm = ({ data }: {data : ServicesCashType}) => {
+const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
   const EDITMODE = data._id !== "new";
   const router = useRouter();
 
@@ -38,7 +38,9 @@ const EditServicesForm = ({ data }: {data : ServicesCashType}) => {
           </h3>
           <div>
             <Image
-              src={!formData.imgurl ? "/static/Image/logo.jpg" : formData.imgurl}
+              src={
+                !formData.imgurl ? "/static/Image/logo.jpg" : formData.imgurl
+              }
               title={formData.name}
               alt={formData.name}
               height={390.938}
