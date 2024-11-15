@@ -1,7 +1,7 @@
+import { PostsCashType } from "@/types/CashTypes";
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react'
-import { PostsCashType } from '../../../types/CashTypes';
 
 const PostCard = ({ post }: {post : PostsCashType}) => {
     return (

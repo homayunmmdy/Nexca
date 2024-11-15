@@ -1,10 +1,10 @@
-import { MorePostsSec } from "@/etc/components/sections";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import Link from "next/link";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
 import "@/app/tiptap.css";
+import { MorePostsSec } from "@/components/sections";
 
 const NewsBody = ({ post }: { post: any }) => {
   const text = `${post?.title}. ${post?.body}`;

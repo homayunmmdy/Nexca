@@ -1,6 +1,6 @@
+import { PostsCashType } from "@/types/CashTypes";
 import Image from "next/image";
 import Link from "next/link";
-import { PostsCashType } from '../../../types/CashTypes';
 
 const MainItem = ({ post }: {post : PostsCashType}) => {
   return (

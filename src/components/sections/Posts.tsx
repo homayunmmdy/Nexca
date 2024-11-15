@@ -5,8 +5,8 @@ import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React from "react";
-import { PostsSecSkeleton } from "../../../components/skelton";
 import PostCard from "./PostCard";
+import { PostsSecSkeleton } from "../skelton";
 
 const Posts: React.FC = () => {
   const { data, loading } = useGetSection(POSTS_QUERY_KEY, -6, 2);

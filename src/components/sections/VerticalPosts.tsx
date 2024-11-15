@@ -5,8 +5,8 @@ import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React from "react";
-import { VerticalSkeleton } from "../../../components/skelton";
 import VerticalPost from "./VerticalPost";
+import { VerticalSkeleton } from "../skelton";
 
 const VerticalPosts: React.FC = () => {
   const { data, loading } = useGetSection(VERTICAL_POSTS_QUERY_KEY, -4, 4);

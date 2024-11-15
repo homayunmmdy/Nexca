@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Companies,
   EmailList,
@@ -6,7 +5,8 @@ import {
   Features,
   Hero,
   PriceList,
-} from "@/app/(etc)/components/sections";
+} from "@/app/components/sections";
+import React from "react";
 
 const Home: React.FC = () => {
   return (

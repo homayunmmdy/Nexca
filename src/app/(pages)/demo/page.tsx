@@ -6,7 +6,7 @@ import {
   SingleCardSec,
   SliderSec,
   VerticalPostsSec,
-} from "@/etc/components/sections";
+} from "@/components/sections";
 import React from "react";
 import ServicesNav from "./components/ServicesNav";
 
