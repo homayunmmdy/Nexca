@@ -17,7 +17,7 @@ const SelectField = ({
   value,
   onChange,
   options,
-  className = "select select-primary w-full",
+  className = "select select-primary mb-2 w-full",
 }: SelectFieldProps) => {
   return (
     <div>
