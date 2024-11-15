@@ -4,6 +4,7 @@ import useGetLatestPosts from "@/hooks/useGetLatestPosts";
 import { PostsCashType } from "@/types/CashTypes";
 import React, { useState } from "react";
 import RecentPost from "./RecentPost";
+import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 
 const RecentPosts: React.FC = () => {
   const [recentSize] = useState(-4);
@@ -21,4 +22,8 @@ const RecentPosts: React.FC = () => {
   );
 };
 
-export default RecentPosts;
+export default () => (
+  <ErrorBoundaryProvider>
+    <RecentPosts />
+  </ErrorBoundaryProvider>
+);

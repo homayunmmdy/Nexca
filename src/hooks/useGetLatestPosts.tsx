@@ -7,6 +7,7 @@ const useGetLatestPosts = (recentSize: number, queryKey: string) => {
   const { data: mainData, isLoading: loading } = useQuery({
     queryKey: [queryKey],
     queryFn: () => axios.get(POST_API_URL).then((res) => res.data),
+    retry: false,
   });
 
   const posts = mainData?.data.slice(recentSize);
