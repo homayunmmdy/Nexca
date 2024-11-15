@@ -5,7 +5,7 @@ import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React from "react";
 import Titr from "../../../components/Titr";
-import { PostsSkeleton } from "../skelton";
+import { PostsSkeleton } from "../../../components/skelton";
 import PostCard from "./PostCard";
 
 const MorePosts: React.FC = () => {

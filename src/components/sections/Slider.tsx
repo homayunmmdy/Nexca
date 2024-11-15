@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { A11y, Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Posts4x4Skeleton } from "../skelton";
+import { Posts4x4Skeleton } from "../../../components/skelton";
 import PostCard from "./PostCard";
 import "./styles.css";
 

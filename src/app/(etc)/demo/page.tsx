@@ -1,4 +1,4 @@
-import { LinearAds } from "@/etc/components/ads";
+import { LinearAds } from "@/components/ads";
 import {
   CodingTabs,
   MainSec,

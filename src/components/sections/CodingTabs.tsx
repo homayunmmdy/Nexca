@@ -5,7 +5,7 @@ import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import { useState } from "react";
-import { Posts4x4Skeleton } from "../skelton";
+import { Posts4x4Skeleton } from "../../../components/skelton";
 import PostCard from "./PostCard";
 
 const CodingTabs = () => {

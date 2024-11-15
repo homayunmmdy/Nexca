@@ -4,7 +4,7 @@ import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React from "react";
-import { MainSecSkeleton } from "../skelton";
+import { MainSecSkeleton } from "../../../components/skelton";
 import MainItem from "./MainItem";
 
 const Main: React.FC = () => {

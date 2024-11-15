@@ -1,8 +1,8 @@
 "use client";
+import { PostsSkeleton } from "@/components/skelton";
 import { POST_API_URL } from "@/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import PostCard from "@/etc/components/sections/PostCard";
-import { PostsSkeleton } from "@/etc/components/skelton";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import { getParameterId } from "@/util/Util";

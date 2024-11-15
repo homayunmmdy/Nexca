@@ -5,7 +5,7 @@ import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React from "react";
-import { VerticalSkeleton } from "../skelton";
+import { VerticalSkeleton } from "../../../components/skelton";
 import VerticalPost from "./VerticalPost";
 
 const VerticalPosts: React.FC = () => {

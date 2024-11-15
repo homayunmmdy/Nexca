@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Button from "../../../components/Button";
-import { SingleCardSkeleton } from "../skelton";
+import { SingleCardSkeleton } from "../../../components/skelton";
 
 const SingleCard: React.FC = () => {
   const { data, loading } = useGetSection(SINGLE_POST_QUERY_KEY, -1, 3);

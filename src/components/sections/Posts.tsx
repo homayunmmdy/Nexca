@@ -5,7 +5,7 @@ import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React from "react";
-import { PostsSecSkeleton } from "../skelton";
+import { PostsSecSkeleton } from "../../../components/skelton";
 import PostCard from "./PostCard";
 
 const Posts: React.FC = () => {
