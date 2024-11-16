@@ -7,6 +7,7 @@ import { PostsCashType } from "@/types/CashTypes";
 import { SetStateAction, useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { ItemsTable, Pagination } from "../components/elements";
+import ErrorText from "../components/elements/ErrorText";
 
 const Posts = () => {
   const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
@@ -64,7 +65,7 @@ const Posts = () => {
               color="#4F46E5"
             />
           }
-          style="my-2"
+          style="my-2 w-full"
           color="input-primary"
         />
         {currentPosts.length > 0 ? (
@@ -93,7 +94,7 @@ const Posts = () => {
             </div>
           </div>
         ) : (
-          <p className="font-bold text-red-600">No posts found.</p>
+          <ErrorText>No posts found.</ErrorText>
         )}
       </div>
     </div>

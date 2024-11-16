@@ -5,6 +5,7 @@ import { EMAIL_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { EmailCashType } from "@/types/CashTypes";
 import { DeleteBlock } from "../components/elements";
+import ErrorText from "../components/elements/ErrorText";
 
 const EmailsPage = () => {
   const { data: emailData, loading } = useFetch(EMAIL_QUERY_KEY, EMAIL_API_URL);
@@ -12,29 +13,30 @@ const EmailsPage = () => {
     return <Spinner />;
   }
   return (
-    <div className="p-5">
-      <div>
-        <div className="overflow-x-auto">
+    <div className="overflow-x-auto p-5">
+       {emailData?.length === 0 ? (
+          <ErrorText>There are currently no emails listed.</ErrorText>
+        ) : (
           <table className="table table-xs">
-            <thead>
+          <thead>
+            <tr>
+              <th>email</th>
+              <th>delete</th>
+            </tr>
+          </thead>
+          {emailData?.map((data: EmailCashType) => (
+            <tbody key={data._id}>
               <tr>
-                <th>email</th>
-                <th>delete</th>
+                <td>{data.email}</td>
+                <td>
+                  <DeleteBlock path="emails" id={data._id} />
+                </td>
               </tr>
-            </thead>
-            {emailData?.map((data: EmailCashType) => (
-              <tbody key={data._id}>
-                <tr>
-                  <td>{data.email}</td>
-                  <td>
-                    <DeleteBlock path="emails" id={data._id} />
-                  </td>
-                </tr>
-              </tbody>
-            ))}
-          </table>
-        </div>
-      </div>
+            </tbody>
+          ))}
+        </table>
+        )}
+     
     </div>
   );
 };

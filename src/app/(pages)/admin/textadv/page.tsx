@@ -8,6 +8,7 @@ import Link from "next/link";
 import React from "react";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from "../components/elements";
+import ErrorText from "../components/elements/ErrorText";
 
 const AdminTextAdvPage: React.FC = () => {
   const { data: sections, loading } = useFetch(
@@ -32,38 +33,42 @@ const AdminTextAdvPage: React.FC = () => {
             </Button>
           </Link>
         </div>
-        <table className="table table-zebra my-2">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Name</th>
-              <th className="hidden lg:block">Description</th>
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {sortedData?.map((item: TextAdvCashType) => (
-              <>
-                <tr key={item._id}>
-                  <td>{item.textadvid}</td>
-                  <td>{item.advname}</td>
-                  <td>{item.body}</td>
-                  <td>
-                    <Link href={`/admin/textadv/${item._id}`}>
-                      <Button color="btn-warning" style="me-2 mb-2">
-                        <CiEdit size={25} />
-                      </Button>
-                    </Link>
-                  </td>
-                  <td>
-                    <DeleteBlock path="textadv" id={item._id} />
-                  </td>
-                </tr>
-              </>
-            ))}
-          </tbody>
-        </table>
+        {sortedData?.length === 0 ? (
+          <ErrorText>There are currently no text adv created.</ErrorText>
+        ) : (
+          <table className="table table-zebra my-2">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th className="hidden lg:block">Description</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedData?.map((item: TextAdvCashType) => (
+                <>
+                  <tr key={item._id}>
+                    <td>{item.textadvid}</td>
+                    <td>{item.advname}</td>
+                    <td>{item.body}</td>
+                    <td>
+                      <Link href={`/admin/textadv/${item._id}`}>
+                        <Button color="btn-warning" style="me-2 mb-2">
+                          <CiEdit size={25} />
+                        </Button>
+                      </Link>
+                    </td>
+                    <td>
+                      <DeleteBlock path="textadv" id={item._id} />
+                    </td>
+                  </tr>
+                </>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </>
   );
