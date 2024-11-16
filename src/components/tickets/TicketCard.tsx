@@ -39,9 +39,12 @@ const TicketCard = ({ ticket, master }: Props) => {
         ) : null}
       </div>
       <div>
-        <h4 className="mb-1 font-bold">{ticket.title}</h4>
+        <h4 className="mb-1 line-clamp-2 font-bold">
+          {ticket.title}
+          {ticket.title.split(" ").length > 10 ? "..." : ""}
+        </h4>
         <hr className="bg-page mb-2 h-px border-0"></hr>
-        <p className="whitespace-pre-wrap">{ticket.description}</p>
+        <p className="line-clamp-3 whitespace-pre-wrap">{ticket.description}</p>
         <div className="flex-grow"></div>
         <div className="mt-2 flex">
           <div className="flex flex-col">
