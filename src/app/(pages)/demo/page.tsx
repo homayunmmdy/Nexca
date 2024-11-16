@@ -7,8 +7,30 @@ import {
   SliderSec,
   VerticalPostsSec,
 } from "@/components/sections";
+import SiteConfig from "@/config/stie";
+import { Metadata } from "next";
 import React from "react";
 import ServicesNav from "./components/ServicesNav";
+
+export const metadata: Metadata = {
+  title: `demo page | ${SiteConfig.title}`,
+  description:
+    "Here you find the latest posts about varities topics like football coding news and life and more",
+  keywords: "posts,football,news,life,coding,interview_question,QA",
+  alternates: {
+    canonical: `${SiteConfig.siteURL}/demo`,
+  },
+  openGraph: {
+    title: `demo page | ${SiteConfig.title}`,
+    description:
+      "Here you find the latest posts about varities topics like football coding news and life and more",
+  },
+  twitter: {
+    card: "summary_large_image",
+    description:
+      "Here you find the latest posts about varities topics like football coding news and life and more",
+  },
+};
 
 const DemoPage: React.FC = () => {
   return (
