@@ -6,7 +6,7 @@ import useFetch from "@/hooks/useFetch";
 import { TicketsCashType } from "@/types/CashTypes";
 import { checkMaster } from "@/util/Util";
 import React from "react";
-import TicketsSkeleton from "./ticketsSkeleton";
+import TicketsSkeleton from "./TicketsSkeleton";
 
 const AdminTicketsPage: React.FC = () => {
   const { data: tickets, loading } = useFetch(
