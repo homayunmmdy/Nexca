@@ -11,6 +11,7 @@ import SiteConfig from "@/config/stie";
 import { Metadata } from "next";
 import React from "react";
 import ServicesNav from "./components/ServicesNav";
+import Banner from "./components/Banner";
 
 export const metadata: Metadata = {
   title: `demo page | ${SiteConfig.title}`,
@@ -38,6 +39,7 @@ const DemoPage: React.FC = () => {
       <ServicesNav />
       <div className="mx-auto w-[94%] pt-2 md:w-[92%]">
         <MainSec />
+        <Banner />
         <div className="grid grid-cols-12 md:gap-9">
           <div className="col-span-12 md:col-span-9">
             <PostsSec />
