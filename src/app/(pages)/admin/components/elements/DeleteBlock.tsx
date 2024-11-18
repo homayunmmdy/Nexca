@@ -4,6 +4,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components";
 import React from 'react'
+import { IoMdClose } from "react-icons/io";
 
 interface Props {
   path: string;
@@ -54,7 +55,7 @@ const DeleteBlock: React.FC<Props> = ({ path, id }: Props) => {
           <div className="mx-auto w-full max-w-sm rounded-lg shadow-md">
             <div className="flex items-center justify-between border-b p-5">
               <h5 className="text-xl font-medium">Delete</h5>
-              <Button  color="btn-error" type="button" onClick={() => setIsConfirmOpen(false)}>"&times;"</Button>
+              <Button  color="btn-error" type="button" onClick={() => setIsConfirmOpen(false)}><IoMdClose /></Button>
             </div>
             <div className="p-3">
               Are you sure you want to delete this item?
