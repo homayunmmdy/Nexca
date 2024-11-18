@@ -29,7 +29,7 @@ interface TiptapEditorProps {
   content: string;
   onChange: (content: string) => void;
 }
-const limit = 999;
+const limit = 9999;
 
 const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
   const editor = useEditor({
