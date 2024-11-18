@@ -9,6 +9,7 @@ import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
+import { checkMaster } from "@/util/Util";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -18,6 +19,8 @@ import TiptapEditor from "../TiptapEditor";
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
   const router = useRouter();
+  let master = checkMaster();
+
   const startingTicketData = {
     title: EDITMODE ? post.title : "",
     description: EDITMODE ? post.description : "",
@@ -26,6 +29,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
     services: EDITMODE ? post.services : "1",
     imgurl: EDITMODE ? post.imgurl : "",
     categories: EDITMODE ? post.categories ?? [] : [],
+    masterEditor: master ? true : false,
   };
 
   const [formData, setFormData] = useState(startingTicketData);
@@ -125,7 +129,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
                 />
               ))}
             </div>
-          ): null}
+          ) : null}
 
           <Input
             type="submit"

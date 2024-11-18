@@ -18,6 +18,7 @@ export type PostsCashType = {
   services: string;
   section: string;
   categories?: CategoryType[];
+  masterEditor? : boolean;
 } & BaseType;
 
 export type LearnCashType = {

@@ -1,15 +1,15 @@
+import "@/app/tiptap.css";
+import NexcaMark from "@/components/NexcaMark";
+import { MorePostsSec } from "@/components/sections";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import Link from "next/link";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
-import "@/app/tiptap.css";
-import { MorePostsSec } from "@/components/sections";
 
 const NewsBody = ({ post }: { post: any }) => {
-  const text = `${post?.title}. ${post?.body}`;
+  const text = `${post?.title}. ${post?.description}`;
   const PostBody = DOMPurify.sanitize(post.body);
-
   return (
     <>
       <Image
@@ -24,6 +24,7 @@ const NewsBody = ({ post }: { post: any }) => {
       <div className="flex items-center justify-between gap-3 px-3">
         {/* <p className="text-center">{readingTimeEstimate.text}</p> */}
         <ReadPost text={text} />
+        <NexcaMark master={post.masterEditor} />
         <Link href="/demo" className="btn btn-outline btn-primary rounded-full">
           Back Home
         </Link>
