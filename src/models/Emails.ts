@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 
 const EmailsSchema = new Schema(
   {
-    emails: String,
+    email: String,
   },
   {
     timestamps: true,
