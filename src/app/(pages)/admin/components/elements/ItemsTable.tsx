@@ -43,7 +43,7 @@ const ItemsTable = ({ post, baseURL }: Props) => {
         </Link>
       </td>
       <th>
-        <DeleteBlock path={baseURL} id={post._id} />
+        <DeleteBlock path={baseURL} id={post._id} masterEditor={post.masterEditor} />
       </th>
     </tr>
   );
