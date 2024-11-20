@@ -11,7 +11,7 @@ import SiteConfig from "@/config/stie";
 import { Metadata } from "next";
 import React from "react";
 import ServicesNav from "./components/ServicesNav";
-import Banner from "./components/Banner";
+import { Banner } from "@/components";
 
 export const metadata: Metadata = {
   title: `demo page | ${SiteConfig.title}`,

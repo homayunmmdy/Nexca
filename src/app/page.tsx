@@ -1,11 +1,12 @@
 import {
+  Banner,
   Companies,
   EmailList,
   FAQs,
   Features,
   Hero,
   PriceList,
-} from "@/app/components/sections";
+} from "@/components";
 import React from "react";
 
 const Home: React.FC = () => {
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
       <Features />
       <Companies />
       <FAQs />
+      <Banner />
       <PriceList />
       <EmailList />
     </>
