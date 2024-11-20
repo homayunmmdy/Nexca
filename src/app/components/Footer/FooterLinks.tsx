@@ -18,7 +18,7 @@ const FooterLinks = () => {
           Quick Links
         </p>
         <div className="flex gap-6 max-xl:justify-center xl:gap-12">
-          <ul className="grid grid-cols-[1fr] gap-6 transition-all duration-500 sm:grid-cols-[1fr_1fr]">
+          <ul className="grid grid-cols-[1fr_1fr] gap-6 transition-all duration-500">
             {FooterLinkData?.map((link: FooterLinkType) => (
               <li key={link.id}>
                 <FooterLink link={link} />

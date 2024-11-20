@@ -4,22 +4,33 @@ import { POST_API_URL } from "@/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
-import { SetStateAction, useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { ItemsTable, Pagination } from "../components/elements";
 import ErrorText from "../components/elements/ErrorText";
 
 const Posts = () => {
   const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const [posts, setPosts] = useState(data?.data || []);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
-  const [searchQuery, setSearchQuery] = useState("");
+
+  // Get initial search query from URL
+  const initialSearchQuery = searchParams.get("query") || "";
+  const [searchQuery, setSearchQuery] = useState(initialSearchQuery);
 
   useEffect(() => {
     setPosts(data?.data || []);
   }, [data]);
+
+  // Update the URL when the search query changes
+  useEffect(() => {
+    router.push(`?query=${encodeURIComponent(searchQuery)}`);
+  }, [searchQuery, router]);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -36,12 +47,9 @@ const Posts = () => {
   );
 
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-  const paginate = (pageNumber: SetStateAction<number>) =>
-    setCurrentPage(pageNumber);
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
-  const handleSearch = (event: {
-    target: { value: SetStateAction<string> };
-  }) => {
+  const handleSearch = (event: { target: { value: string } }) => {
     setSearchQuery(event.target.value);
     setCurrentPage(1);
   };
