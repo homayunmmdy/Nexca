@@ -34,3 +34,10 @@ export type MenuTypes = {
     link: string;
   }[];
 };
+
+export type FooterLinkType = {
+  id: number;
+  title: string;
+  href: string;
+  icon: JSX.Element;
+};
