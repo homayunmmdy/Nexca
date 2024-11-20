@@ -50,7 +50,7 @@ const TicketCard = ({ ticket, master }: Props) => {
           <div className="flex flex-col">
             <p className="my-1 text-xs">
               <FormatTime
-                timestamp={Number(ticket.createdAt)}
+                timestamp={ticket.createdAt}
                 options={options as Intl.DateTimeFormatOptions}
               />
             </p>
