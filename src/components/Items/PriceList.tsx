@@ -4,34 +4,34 @@ import React from "react";
 const PriceList: React.FC = () => {
   return (
     <>
-      <div className="flex  items-center justify-center ">
+      <div className="flex items-center justify-center">
         <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
-          <div className="mx-auto mb-8 max-w-screen-md  lg:mb-12 text-center">
-            <h2 className="mb-10 text-4xl font-bold tracking-tight ">
+          <div className="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
+            <h2 className="mb-10 text-4xl font-bold tracking-tight">
               Pay once, use forever
             </h2>
           </div>
-          <div className="space-y-8  lg:grid md:grid-cols-3 lg:space-y-0 lg:gap-10">
-            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl border border-gray-200 bg-white p-6 text-black xl:p-8">
-              <h3 className="text-lg font-normal ">Basic</h3>
-              <div className="my-8 flex items-baseline justify-center ">
-                <span className="mr-2 text-5xl font-extrabold">$9</span>
+          <div className="space-y-8 md:grid-cols-3 lg:grid lg:gap-10 lg:space-y-0">
+            <div className="mx-auto flex max-w-lg flex-col items-start space-y-8 rounded-3xl border border-gray-200 bg-white p-6 text-black xl:p-8">
+              <h3 className="text-lg font-normal">Basic</h3>
+              <div className="my-8 flex items-baseline justify-center">
+                <span className="mr-2 text-5xl font-extrabold">$0</span>
                 <span>/month</span>
               </div>
 
               <p className="font-light text-black sm:text-sm">
                 Best option for personal use & for your next project.
               </p>
-              <Link href="/admin" className="cursor-pointer bg-gray-900 w-full rounded-md  p-3 text-center text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
+              <Link href="/admin" className="w-full cursor-pointer rounded-md bg-gray-900 p-3 text-center text-sm font-semibold text-white shadow-sm hover:-translate-y-1">
                 Get started
               </Link>
               <ul
                 role="list"
-                className="mb-8 space-y-4 text-left text-black  text-sm"
+                className="mb-8 space-y-4 text-left text-sm text-black"
               >
-                <li className="flex items-center space-x-3 ">
+                <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +76,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,26 +106,26 @@ const PriceList: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl  bg-[#D8FA6D] p-6 text-black xl:p-8">
-              <h3 className="text-lg font-normal ">Essential</h3>
-              <div className="my-8 flex items-baseline justify-center ">
-                <span className="mr-2 text-5xl font-extrabold">$19</span>
+            <div className="mx-auto flex max-w-lg flex-col items-start space-y-8 rounded-3xl bg-[#D8FA6D] p-6 text-black xl:p-8">
+              <h3 className="text-lg font-normal">Essential</h3>
+              <div className="my-8 flex items-baseline justify-center">
+                <span className="mr-2 text-5xl font-extrabold">$0</span>
                 <span className="text-black">/month</span>
               </div>
 
               <p className="font-light text-black sm:text-sm">
                 Best option for personal use & for your next project.
               </p>
-              <Link href="/admin" className="cursor-pointer bg-gray-900 w-full rounded-md  p-3 text-center text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
+              <Link href="/admin" className="w-full cursor-pointer rounded-md bg-gray-900 p-3 text-center text-sm font-semibold text-white shadow-sm hover:-translate-y-1">
                 Get started
               </Link>
               <ul
                 role="list"
-                className="mb-8 space-y-4 text-left text-black  text-sm"
+                className="mb-8 space-y-4 text-left text-sm text-black"
               >
-                <li className="flex items-center space-x-3 ">
+                <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +170,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +185,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -200,26 +200,26 @@ const PriceList: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="mx-auto flex max-w-lg space-y-8 items-start flex-col rounded-3xl  bg-[#DCA6F3] p-6 text-center text-black xl:p-8">
-              <h3 className="text-lg font-normal ">Growth</h3>
-              <div className="my-8 flex items-baseline justify-center ">
-                <span className="mr-2 text-5xl font-extrabold">$29</span>
+            <div className="mx-auto flex max-w-lg flex-col items-start space-y-8 rounded-3xl bg-[#DCA6F3] p-6 text-center text-black xl:p-8">
+              <h3 className="text-lg font-normal">Growth</h3>
+              <div className="my-8 flex items-baseline justify-center">
+                <span className="mr-2 text-5xl font-extrabold">$0</span>
                 <span className="text-black">/month</span>
               </div>
 
               <p className="font-light text-black sm:text-sm">
                 Best option for personal use & for your next project.
               </p>
-              <Link href="/admin" className="cursor-pointer bg-gray-900 w-full rounded-md  p-3  text-sm font-semibold text-white shadow-sm  hover:-translate-y-1">
+              <Link href="/admin" className="w-full cursor-pointer rounded-md bg-gray-900 p-3 text-sm font-semibold text-white shadow-sm hover:-translate-y-1">
                 Get started
               </Link>
               <ul
                 role="list"
-                className="mb-8 space-y-4 text-left text-black  text-sm"
+                className="mb-8 space-y-4 text-left text-sm text-black"
               >
-                <li className="flex items-center space-x-3 ">
+                <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +234,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +249,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -264,7 +264,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -279,7 +279,7 @@ const PriceList: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
-                    className="h-5 w-5 flex-shrink-0 bg-gray-900 rounded-full p-0.5 text-white"
+                    className="h-5 w-5 flex-shrink-0 rounded-full bg-gray-900 p-0.5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

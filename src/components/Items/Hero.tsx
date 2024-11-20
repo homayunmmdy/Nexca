@@ -1,6 +1,7 @@
 "use client";
 import AdminImage from "@/../public/static/Image/admin.webp";
 import { Button, FullHoverAnimation } from "@/components";
+import SiteConfig from "@/config/stie";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -90,18 +91,16 @@ const Hero: React.FC = () => {
               animate="visible"
               className="relative mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:w-1/2 lg:max-w-none lg:flex-1 lg:items-start lg:py-7 lg:text-left xl:py-8"
             >
-              <motion.h1
+              <motion.h2
                 variants={contentVariants}
                 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl xl:text-6xl"
               >
                 Build Your
                 <FullHoverAnimation text="Own Blog Website" link="demo" />
                 Right Now
-              </motion.h1>
+              </motion.h2>
               <motion.p variants={contentVariants} className="mt-8">
-                Create your blog website in less than a day with Nexca. Our
-                powerful admin panel lets you manage your content effortlessly,
-                no coding required.
+                {SiteConfig.slogan}
               </motion.p>
               <motion.div
                 variants={contentVariants}

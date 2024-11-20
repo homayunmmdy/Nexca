@@ -9,6 +9,8 @@ const SiteConfig = {
   siteURL: `${API_URL}`,
   lang: "en",
   dir: "ltr",
+  slogan:
+    "Nexca is your go-to platform for creating powerful admin panels. Manage data, share thoughts, and connect with your audience easily, whether you're an agency or an individual looking to build your brand.",
   // media
   email: "homayoun763@gmail.com",
   github: "https://github.com/homayunmmdy/Nexca",
@@ -45,15 +47,14 @@ const SiteConfig = {
 export default SiteConfig;
 
 import { CgFeed } from "react-icons/cg";
+import { FaTimeline } from "react-icons/fa6";
 import { GiTicket } from "react-icons/gi";
-import { LuBookCopy, LuBookPlus } from "react-icons/lu";
 import { MdOutlineMail, MdOutlinePostAdd } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { RiAdvertisementLine } from "react-icons/ri";
-import { SiCloudflarepages, SiTutanota } from "react-icons/si";
+import { SiCloudflarepages } from "react-icons/si";
 import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
-import { FaTimeline } from "react-icons/fa6";
 import { VscGraphScatter } from "react-icons/vsc";
 
 export const adminPages = [
@@ -66,7 +67,11 @@ export const adminPages = [
   // { name: "New book", href: "/admin/publications/new", icon: LuBookPlus},
   // { name: "books", href: "/admin/publications", icon: LuBookCopy},
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
-  { name: "Contributions", href: "/admin/contribution/new", icon: VscGraphScatter },
+  {
+    name: "Contributions",
+    href: "/admin/contribution/new",
+    icon: VscGraphScatter,
+  },
   // { name: "Learn", href: "/admin/learn/new", icon: SiTutanota },
   { name: "TimeLine", href: "/admin/time/new", icon: FaTimeline },
   { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
