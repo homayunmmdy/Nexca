@@ -13,7 +13,7 @@ const Banner = () => {
         </span>
       </p>
 
-      <h3 className="font-display mx-auto max-w-4xl text-5xl font-medium tracking-tight sm:text-7xl">
+      <div className="font-display mx-auto max-w-4xl text-5xl font-medium tracking-tight sm:text-7xl">
         <span className="inline-block">
           Your
           <span className="relative whitespace-nowrap px-4 text-blue-700">
@@ -29,7 +29,7 @@ const Banner = () => {
           </span>
         </span>
         <span className="inline-block">Admin panel</span>
-      </h3>
+      </div>
 
       <p className="mx-auto mt-9 inline-block max-w-2xl text-lg tracking-tight sm:mt-6">
         Explore the Nexca ecosystem and discover tools to elevate your workflow

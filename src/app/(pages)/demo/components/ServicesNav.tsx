@@ -17,21 +17,21 @@ const ServicesNav: React.FC = () => {
   if (loading) {
     return (
       <>
-        <h1 className="my-3 text-center text-3xl md:my-4 md:text-4xl lg:my-5 lg:text-5xl xl:my-6 xl:text-6xl">
+        <h2 className="my-3 text-center text-3xl md:my-4 md:text-4xl lg:my-5 lg:text-5xl xl:my-6 xl:text-6xl">
           {pathname.includes("services") ? "Services" : "Home"}
-        </h1>
+        </h2>
         <div className="skeleton mx-auto h-16 w-[94%] md:w-[92%]"></div>
       </>
     );
   }
   return (
     <>
-      <h1 className="my-3 text-center text-3xl md:my-4 md:text-4xl lg:my-5 lg:text-5xl xl:my-6 xl:text-6xl">
+      <span className="my-3 block text-center text-3xl md:my-4 md:text-4xl lg:my-5 lg:text-5xl xl:my-6 xl:text-6xl">
         {pathname.includes("services") ? "Services" : "Home"}
-      </h1>
+      </span>
       <div className="navbar mx-auto w-[94%] border-b-2 border-t-2 border-gray-500 p-0 md:w-[92%]">
         <div className="navbar-start w-full">
-          <div className="navbar-center flex w-full flex-wrap justify-center py-2 sm:justify-normal">
+          <nav className="navbar-center flex w-full flex-wrap justify-center py-2 sm:justify-normal">
             <ul className="menu menu-horizontal items-center justify-center p-0 sm:items-stretch sm:justify-normal">
               {services?.map((item: ServicesCashType) => {
                 const href = `/services/${item.secid}`;
@@ -56,7 +56,7 @@ const ServicesNav: React.FC = () => {
                 );
               })}
             </ul>
-          </div>
+          </nav>
         </div>
       </div>
     </>

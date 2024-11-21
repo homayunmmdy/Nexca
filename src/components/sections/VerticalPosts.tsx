@@ -17,14 +17,14 @@ const VerticalPosts: React.FC = () => {
 
   return (
     <>
-      <div className="mx-auto py-6">
+      <article className="mx-auto py-6">
         <Titr title="Vertical Posts" item="text-left" />
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
           {data?.map((post: PostsCashType) => (
             <VerticalPost key={post._id} post={post} />
           ))}
         </div>
-      </div>
+      </article>
     </>
   );
 };

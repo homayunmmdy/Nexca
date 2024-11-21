@@ -17,14 +17,14 @@ const Posts: React.FC = () => {
 
   return (
     <>
-      <div className="mx-auto pb-6">
+      <article className="mx-auto pb-6">
         <Titr title="Posts" item="text-left" />
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {data?.map((post: PostsCashType) => (
             <PostCard key={post._id} post={post} />
           ))}
         </div>
-      </div>
+      </article>
     </>
   );
 };

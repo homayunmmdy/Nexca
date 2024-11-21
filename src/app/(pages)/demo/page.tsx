@@ -1,3 +1,4 @@
+import { Banner } from "@/components";
 import { LinearAds } from "@/components/ads";
 import {
   CodingTabs,
@@ -11,7 +12,6 @@ import SiteConfig from "@/config/stie";
 import { Metadata } from "next";
 import React from "react";
 import ServicesNav from "./components/ServicesNav";
-import { Banner } from "@/components";
 
 export const metadata: Metadata = {
   title: `demo page | ${SiteConfig.title}`,
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
 const DemoPage: React.FC = () => {
   return (
     <>
+      <h1 className="hidden">{`demo page | ${SiteConfig.title}`}</h1>
       <ServicesNav />
       <div className="mx-auto w-[94%] pt-2 md:w-[92%]">
         <MainSec />

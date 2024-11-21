@@ -17,7 +17,7 @@ const SingleCard: React.FC = () => {
   }
 
   return (
-    <>
+    <article>
       <Titr
         title="Single Posts"
         item="text-center"
@@ -38,7 +38,7 @@ const SingleCard: React.FC = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">{post.title.slice(0, 70)}</h2>
+            <h3 className="card-title">{post.title.slice(0, 70)}</h3>
             <p>{post.description.slice(0, 150)}</p>
             <div className="card-actions justify-end">
               <Button color="btn-primary">Read Now</Button>
@@ -46,7 +46,7 @@ const SingleCard: React.FC = () => {
           </div>
         </Link>
       ))}
-    </>
+    </article>
   );
 };
 
