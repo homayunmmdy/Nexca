@@ -41,3 +41,11 @@ export type FooterLinkType = {
   href: string;
   icon: JSX.Element;
 };
+
+export type PriceItemType = {
+  id: number;
+  titr: string;
+  special: boolean;
+  description: string;
+  features: { id: number; name: string; mark: boolean }[];
+};

@@ -41,11 +41,14 @@ const DeleteBlock: React.FC<Props> = ({ path, id, masterEditor }: Props) => {
         });
         setIsConfirmOpen(false);
         if (res.ok) {
+          toast.success('Item Deleted successfully')
           router.refresh();
         } else {
+          toast.error("Something went wrong try one more time please");
           console.error("Error deleting item:", res.statusText);
         }
       } catch (error) {
+        toast.error("Something went wrong try one more time please");
         console.error("Error deleting item:", error);
       }
     }
