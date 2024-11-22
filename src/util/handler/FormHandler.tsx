@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
+import toast from "react-hot-toast";
 
 class FormHandler {
   private loading: boolean = false;
@@ -55,15 +56,22 @@ class FormHandler {
     categoryInput: string,
     setCategoryInput: Dispatch<SetStateAction<string>>
   ) => {
+    if (!categoryInput.trim()) {
+      toast.error("name for the category is required");
+      return;
+    }
+
     const newCategory = {
       id: Date.now(),
       name: categoryInput,
     };
+
     this.setForm((prevState: { categories: any }) => ({
       ...prevState,
       categories: [...prevState.categories, newCategory],
     }));
     setCategoryInput(""); // Clear the input field
+    toast.success("Category added successfully");
   };
 
   CategoryChanges = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
