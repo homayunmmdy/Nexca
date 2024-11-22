@@ -13,7 +13,7 @@ import { checkMaster } from "@/util/Util";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { CategoryList, SelectField } from "../elements";
+import { CategoryList, SelectField, SelectFiledSkeleton } from "../elements";
 import TiptapEditor from "../TiptapEditor";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
@@ -38,8 +38,14 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
     handler.submit(e, formData, post._id);
 
-  const { data: services } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
-  const { data: sections } = useFetch(SECTIONS_QUERY_KEY, SECTIONS_API_URL);
+  const { data: services, loading: serviceLoading } = useFetch(
+    SERVICES_QUERY_KEY,
+    SERVICES_API_URL
+  );
+  const { data: sections, loading: sectionLoading } = useFetch(
+    SECTIONS_QUERY_KEY,
+    SECTIONS_API_URL
+  );
 
   return (
     <div className="flex flex-col justify-center">
@@ -55,7 +61,9 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
         className="mb-3 flex w-full flex-col gap-3 md:flex-row"
       >
         <div className="w-full md:w-1/2">
-          {services && (
+          {serviceLoading ? (
+            <SelectFiledSkeleton label="Services" />
+          ) : (
             <SelectField
               id="services"
               name="services"
@@ -65,7 +73,9 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               options={services}
             />
           )}
-          {sections && (
+          {sectionLoading ? (
+            <SelectFiledSkeleton label="Section" />
+          ) : (
             <SelectField
               id="section"
               name="section"
