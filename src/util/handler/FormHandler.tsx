@@ -43,13 +43,18 @@ class FormHandler {
       body: JSON.stringify({ formData }),
     });
 
-    if (!res.ok) {
+    if (res.ok) {
       this.loading = false;
+      toast.success(
+        EDITMODE ? "Item updated successfully" : "Item added successfully"
+      );
+      this.router.refresh();
+      this.router.push("/admin");
+    } else {
+      this.loading = false;
+      toast.error("Something went wrong");
       throw new Error(`Failed to ${EDITMODE ? "update" : "create"} ticket`);
     }
-
-    this.router.refresh();
-    this.router.push("/admin");
   }
 
   addCategory = (
