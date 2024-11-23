@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
 import toast from "react-hot-toast";
-import ConfettiExplosion from 'react-confetti-explosion';
 
 class FormHandler {
   private loading: boolean = false;
@@ -49,7 +48,6 @@ class FormHandler {
       toast.success(
         EDITMODE ? "Item updated successfully" : "Item added successfully"
       );
-      <ConfettiExplosion />
       this.router.refresh();
       this.router.push("/admin");
     } else {

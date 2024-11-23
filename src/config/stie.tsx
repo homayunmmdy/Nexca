@@ -72,7 +72,6 @@ export const adminPages = [
     href: "/admin/contribution/new",
     icon: VscGraphScatter,
   },
-  // { name: "Learn", href: "/admin/learn/new", icon: SiTutanota },
   { name: "TimeLine", href: "/admin/time/new", icon: FaTimeline },
   { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
   { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },

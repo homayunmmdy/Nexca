@@ -21,12 +21,6 @@ export type PostsCashType = {
   masterEditor? : boolean;
 } & BaseType;
 
-export type LearnCashType = {
-  title: string;
-  imgurl: string;
-  description: string;
-} & BaseType;
-
 export type TimeLIneCashType = {
   title: string;
   date: string;
