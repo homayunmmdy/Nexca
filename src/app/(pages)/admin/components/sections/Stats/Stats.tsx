@@ -15,10 +15,12 @@ import { RxSection } from "react-icons/rx";
 import Stat from "./Stat";
 
 const Stats = () => {
-  const [posts, setPosts] = useState([]);
-  const [sections, setSections] = useState([]);
-  const [contacts, setContacts] = useState([]);
-  const [service, setService] = useState([]);
+  const [data, setData] = useState({
+    posts: [],
+    sections: [],
+    contacts: [],
+    services: [],
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +29,7 @@ const Stats = () => {
           postsResponse,
           sectionsResponse,
           contactsResponse,
-          serviceResponse,
+          servicesResponse,
         ] = await Promise.all([
           axios.get(`${POST_API_URL}`),
           axios.get(`${SECTIONS_API_URL}`),
@@ -35,10 +37,12 @@ const Stats = () => {
           axios.get(`${SERVICES_API_URL}`),
         ]);
 
-        setPosts(postsResponse.data.data);
-        setSections(sectionsResponse.data.data);
-        setContacts(contactsResponse.data.data);
-        setService(serviceResponse.data.data);
+        setData({
+          posts: postsResponse.data.data,
+          sections: sectionsResponse.data.data,
+          contacts: contactsResponse.data.data,
+          services: servicesResponse.data.data,
+        });
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -48,28 +52,32 @@ const Stats = () => {
   }, []);
 
   return (
-    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
       <Link href="/admin/posts">
-        <Stat title="Available Posts" number={posts.length} icon={<CgFeed />} />
+        <Stat
+          title="Available Posts"
+          number={data.posts.length}
+          icon={<CgFeed />}
+        />
       </Link>
       <Link href="/admin/sections">
         <Stat
           title="Available Sections"
-          number={sections.length}
+          number={data.sections.length}
           icon={<RxSection />}
         />
       </Link>
       <Link href="/admin/services">
         <Stat
           title="Available Services"
-          number={service.length}
+          number={data.services.length}
           icon={<FiServer />}
         />
       </Link>
       <Link href="/admin/contacts">
         <Stat
           title="Messages"
-          number={contacts.length}
+          number={data.contacts.length}
           icon={<LuMessagesSquare />}
         />
       </Link>
