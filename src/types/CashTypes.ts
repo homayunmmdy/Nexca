@@ -27,18 +27,6 @@ export type TimeLIneCashType = {
   description: string;
 } & Omit<BaseType, "body">;
 
-export type PublicationsCashType = {
-  title: string;
-  imgurl: string;
-  description: string;
-  author: string;
-  page_amount: number;
-  publisher: string;
-  publication_date?: string;
-  pdf_link?: string;
-  categories?: CategoryType[];
-} & BaseType;
-
 export type ServicesCashType = {
   name: string;
   secid: number;

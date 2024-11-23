@@ -5,7 +5,6 @@ export const TOTAL_VIEW = "total_view";
 
 // query keys
 export const ALL_POSTS_QUERY_KEY = "all_posts";
-export const ALL_PUBLICATIONS_QUERY_KEY = "all_publications";
 export const ALL_TEXTADV_QUERY_KEY = "all_textadv";
 export const SERVICES_QUERY_KEY = "services";
 export const SECTIONS_QUERY_KEY = "sections";

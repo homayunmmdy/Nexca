@@ -64,8 +64,6 @@ export const adminPages = [
   { name: "Text Adv", href: "/admin/textadv", icon: RiAdvertisementLine },
   { name: "Services", href: "/admin/services", icon: SiCloudflarepages },
   { name: "Sections", href: "/admin/sections", icon: TbNewSection },
-  // { name: "New book", href: "/admin/publications/new", icon: LuBookPlus},
-  // { name: "books", href: "/admin/publications", icon: LuBookCopy},
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
   {
     name: "Contributions",
