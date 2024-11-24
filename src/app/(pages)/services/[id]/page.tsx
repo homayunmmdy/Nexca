@@ -5,19 +5,31 @@ import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import { getParameterId } from "@/util/Util";
-import React from "react";
+import React, { useEffect } from "react";
 import ServicesNav from "../../demo/components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
 import PostCard from "@/components/sections/PostCard";
+import { useRouter } from 'next/navigation';
 
 const ServicesPage: React.FC = () => {
+  const router = useRouter();
   const id = getParameterId(10);
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
 
- 
-  
+  useEffect(() => {
+    // Check if posts are loaded and if the service ID exists
+    if (!loading && posts) {
+      const serviceExists = posts.some((item: PostsCashType) => item.services === id);
+      
+      if (!serviceExists) {
+        // Redirect to 404 page if service doesn't exist
+        router.replace('/404', undefined, { shallow: true });
+      }
+    }
+  }, [posts, loading, id, router]);
+
   const filteredData = posts?.filter(
-    (item: PostsCashType) => item.services == id
+    (item: PostsCashType) => item.services === id
   );
 
   const sortedByTime = filteredData?.sort(
@@ -28,6 +40,7 @@ const ServicesPage: React.FC = () => {
       return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
     }
   );
+
   if (loading) {
     return (
       <>
@@ -38,6 +51,12 @@ const ServicesPage: React.FC = () => {
       </>
     );
   }
+
+  // Return null if no matching service (while redirect is happening)
+  if (!loading && (!filteredData || filteredData.length === 0)) {
+    return null;
+  }
+
   return (
     <>
       <ServicesNav />
