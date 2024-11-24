@@ -27,7 +27,16 @@ const Posts = () => {
     setPosts(data?.data || []);
   }, [data]);
 
-  // Update the URL when the search query changes
+  // Update the URL when the search query changes with debounce
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      router.push(`?query=${encodeURIComponent(searchQuery)}`);
+    }, 400); // debounce delay of 400ms
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [searchQuery, router]);
   useEffect(() => {
     router.push(`?query=${encodeURIComponent(searchQuery)}`);
   }, [searchQuery, router]);
