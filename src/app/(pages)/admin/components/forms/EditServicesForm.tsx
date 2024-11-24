@@ -1,11 +1,14 @@
 "use client";
 import { Input, Textarea } from "@/components";
 import { SERVICES_API_URL } from "@/config/apiConstants";
+import { SERVICES_QUERY_KEY } from "@/config/Constants";
+import useFetch from "@/hooks/useFetch";
 import { ServicesCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
   const EDITMODE = data._id !== "new";
@@ -19,9 +22,22 @@ const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
   };
 
   const [formData, setFormData] = useState(startingData);
+  const { data: services } = useFetch(
+    SERVICES_QUERY_KEY,
+    SERVICES_API_URL
+  );
+ 
   const handler = new FormHandler(setFormData, SERVICES_API_URL, router);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    handler.submit(e, formData, data._id);
+    services.map((service : ServicesCashType) => {
+      if (service.secid === formData.secid) {
+        toast.error('Service id already exist try another');
+        e.preventDefault();
+      } else {
+        handler.submit(e, formData, data._id);
+      }
+    });
+    
   return (
     <>
       <div className="flex justify-center">
