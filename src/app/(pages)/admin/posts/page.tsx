@@ -21,7 +21,7 @@ const Posts = () => {
 
   // Get initial search query from URL
   const initialSearchQuery = searchParams.get("query") || "";
-  const [searchQuery, setSearchQuery] = useState(initialSearchQuery);
+  const [searchQuery, setSearchQuery] = useState(() => initialSearchQuery);
 
   useEffect(() => {
     setPosts(data?.data || []);
