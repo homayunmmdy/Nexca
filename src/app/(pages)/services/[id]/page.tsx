@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import ServicesNav from "../../demo/components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
+import NotFound from "../../[...not_found]/not-found";
 
 const ServicesPage: React.FC = () => {
   const id = getParameterId(10);
@@ -32,7 +33,7 @@ const ServicesPage: React.FC = () => {
   );
 
   if (!filteredData || filteredData.length == 0) {
-    router.replace("/404");
+    return NotFound();
   }
 
   const sortedByTime = filteredData.sort(
