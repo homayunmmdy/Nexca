@@ -1,15 +1,28 @@
 import { Dispatch, SetStateAction } from "react";
 import toast from "react-hot-toast";
 
+/**
+ * A class that handles form operations and interactions.
+ */
 class FormHandler {
   private loading: boolean = false;
 
+  /**
+   * Constructs a new FormHandler.
+   * @para m setForm - Functionto update form state.
+   * @param API_URL - The API endpoint URL.
+   * @param router - Router object for navigation.
+   */
   constructor(
     private setForm: any,
     private API_URL: string,
     private router: any
   ) {}
 
+  /**
+   * Handles change events for form inputs.
+   * @param e - The change event.
+   */
   trakeChange = (e: React.ChangeEvent<any>) => {
     const { name, value } = e.target;
     this.setForm((prevState: any) => ({
@@ -18,6 +31,10 @@ class FormHandler {
     }));
   };
 
+  /**
+   * Handles changes to the body content.
+   * @param content - The new content value.
+   */
   trakeBodyChanges = (content: string) => {
     this.setForm((prevState: any) => ({
       ...prevState,
@@ -25,6 +42,12 @@ class FormHandler {
     }));
   };
 
+  /**
+   * Submits the form data via an API call.
+   * @param e - The form event.
+   * @param formData - Data to be submitted.
+   * @param id - Optional ID to determine edit mode.
+   */
   async submit(
     e: React.FormEvent<HTMLFormElement>,
     formData: any,
@@ -57,6 +80,11 @@ class FormHandler {
     }
   }
 
+  /**
+   * Adds a new category to the form.
+   * @param categoryInput - The category name input.
+   * @param setCategoryInput - Function to reset category input.
+   */
   addCategory = (
     categoryInput: string,
     setCategoryInput: Dispatch<SetStateAction<string>>
@@ -79,6 +107,11 @@ class FormHandler {
     toast.success("Category added successfully");
   };
 
+  /**
+   * Handles changes to a specific category.
+   * @param e - The change event.
+   * @param id - The ID of the category being changed.
+   */
   CategoryChanges = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
     const { value } = e.target;
     this.setForm((prevState: { categories: any[] }) => ({
@@ -89,6 +122,10 @@ class FormHandler {
     }));
   };
 
+  /**
+   * Removes a category from the form.
+   * @param id - The ID of the category to be removed.
+   */
   removeCategory = (id: number) => {
     this.setForm((prevState: { categories: any[] }) => ({
       ...prevState,
@@ -98,9 +135,14 @@ class FormHandler {
     }));
   };
 
+  /**
+   * Getter for the loading state.
+   * @returns {boolean} - The current loading state.
+   */
   get isLoading(): boolean {
     return this.loading;
   }
 }
 
 export default FormHandler;
+

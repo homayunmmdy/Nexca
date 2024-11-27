@@ -1,6 +1,22 @@
+/**
+ * @class RequestHandler
+ * @description A class that handles all the server side CRUD operations
+ * @template T
+ * @param {Model<T>} Model - The mongoose model
+ * @param {T[]} Cache - The cache array
+ * @example
+ * const requestHandler = new RequestHandler(UserModel, UserCache);
+ */
 import { Model } from "mongoose";
 import { NextResponse } from "next/server";
 
+/**
+ * @class RequestHandler
+ * @description A class that handles all the server side CRUD operations
+ * @template T
+ * @property {Model<T>} Model - The mongoose model
+ * @property {T[]} Cache - The cache array
+ */
 class RequestHandler<
   T extends {
     _id: string;
@@ -9,11 +25,21 @@ class RequestHandler<
   private Model: Model<T>;
   private Cache: T[];
 
+  /**
+   * @constructor
+   * @param {Model<T>} Model - The mongoose model
+   * @param {T[]} Cache - The cache array
+   */
   constructor(Model: Model<T>, Cache: T[]) {
     this.Model = Model;
     this.Cache = Cache;
   }
 
+  /**
+   * @function GetAll
+   * @description Get all the data from the database
+   * @returns {NextResponse} - The response with the data or error
+   */
   async GetAll() {
     try {
       if (process.env.NEXT_PUBLIC_STATUS === "dev") {
@@ -29,6 +55,13 @@ class RequestHandler<
       return this.ErrorResponse(error);
     }
   }
+  /**
+   * @function Post
+   * @description Create a new data in the database
+   * @param {Request} req - The request object
+   * @param {string} successMessage - The success message to return
+   * @returns {NextResponse} - The response with the data or error
+   */
   async Post(req: Request, successMessage: string) {
     try {
       const body = await req.json();
@@ -43,6 +76,12 @@ class RequestHandler<
       return this.ErrorResponse(error);
     }
   }
+  /**
+   * @function Get
+   * @description Get a single data from the database
+   * @param {string} id - The id of the data
+   * @returns {NextResponse} - The response with the data or error
+   */
   async Get(id: string) {
     try {
       if (process.env.NEXT_PUBLIC_STATUS === "dev") {
@@ -63,6 +102,14 @@ class RequestHandler<
     }
   }
 
+  /**
+   * @function PUT
+   * @description Update a single data in the database
+   * @param {string} id - The id of the data
+   * @param {Request} req - The request object
+   * @param {string} successMessage - The success message to return
+   * @returns {NextResponse} - The response with the data or error
+   */
   async PUT(id: string, req: Request, successMessage: string) {
     try {
       const body = await req.json();
@@ -82,6 +129,13 @@ class RequestHandler<
     }
   }
 
+  /**
+   * @function DELETE
+   * @description Delete a single data from the database
+   * @param {string} id - The id of the data
+   * @param {string} successMessage - The success message to return
+   * @returns {NextResponse} - The response with the data or error
+   */
   async DELETE(id: string, successMessage: string) {
     try {
       const deleteDocument = await this.Model.findByIdAndDelete(id);
@@ -98,9 +152,17 @@ class RequestHandler<
     }
   }
 
+  /**
+   * @function ErrorResponse
+   * @description A utility function to return an error response
+   * @param {Error} err - The error object
+   * @returns {NextResponse} - The response with the error
+   */
   ErrorResponse(err: any) {
     return NextResponse.json({ message: "Error", err }, { status: 500 });
   }
 }
 
 export default RequestHandler;
+
+
