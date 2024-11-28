@@ -13,43 +13,10 @@ import { FiServer } from "react-icons/fi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { RxSection } from "react-icons/rx";
 import Stat from "./Stat";
+import useGetStats from "@/hooks/useGetStats";
 
 const Stats = () => {
-  const [data, setData] = useState({
-    posts: [],
-    sections: [],
-    contacts: [],
-    services: [],
-  });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [
-          postsResponse,
-          sectionsResponse,
-          contactsResponse,
-          servicesResponse,
-        ] = await Promise.all([
-          axios.get(`${POST_API_URL}`),
-          axios.get(`${SECTIONS_API_URL}`),
-          axios.get(`${CONTACTS_API_URL}`),
-          axios.get(`${SERVICES_API_URL}`),
-        ]);
-
-        setData({
-          posts: postsResponse.data.data,
-          sections: sectionsResponse.data.data,
-          contacts: contactsResponse.data.data,
-          services: servicesResponse.data.data,
-        });
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const data = useGetStats();
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

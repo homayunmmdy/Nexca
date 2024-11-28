@@ -6,6 +6,7 @@ import {
   Features,
   Hero,
   PriceList,
+  StatcsSect,
 } from "@/components";
 import SiteConfig from "@/config/stie";
 import React from "react";
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
       <Hero />
       <Features />
       <Companies />
+      <StatcsSect />
       <FAQs />
       <Banner />
       <PriceList />
