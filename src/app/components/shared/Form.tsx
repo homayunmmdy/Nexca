@@ -1,15 +1,21 @@
 "use client";
 import { Button, Input, Textarea } from "@/components";
 import { CONTACTS_API_URL } from "@/config/apiConstants";
+import { FormData } from "@/types/entities";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaRegMessage, FaUser } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 
-const ContactsForm = () => {
+interface Props {
+  buttonText: string;
+  formHandler?: (content: FormData) => void;
+}
+
+export const Form = ({ buttonText, formHandler }: Props) => {
   const router = useRouter();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
@@ -17,8 +23,14 @@ const ContactsForm = () => {
 
   const handler = new FormHandler(setFormData, CONTACTS_API_URL, router);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    handler.submit(e, formData);
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    if (!!formHandler) {
+      formHandler(formData);
+    } else {
+      handler.submit(e, formData);
+    }
+  }
+
   return (
     <>
       {handler.isLoading && (
@@ -66,12 +78,10 @@ const ContactsForm = () => {
         </div>
         <div>
           <Button type="submit" color="btn-primary" style="p-3 w-full">
-            send
+            {buttonText}
           </Button>
         </div>
       </form>
     </>
   );
 };
-
-export default ContactsForm;
