@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
-import { ContactsForm } from "@/app/components/shared/ContactsForm";
+import { Form } from "@/app/components/shared/Form";
 import { FormData } from "@/types/entities";
 
 const NewsBody = ({ post }: { post: any }) => {
@@ -42,7 +42,7 @@ const NewsBody = ({ post }: { post: any }) => {
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
       <RenderTags post={post} />
-      <ContactsForm formHandler={getFormData} buttonText="Comment" />
+      <Form formHandler={getFormData} buttonText="Comment" />
       <MorePostsSec />
     </>
   );

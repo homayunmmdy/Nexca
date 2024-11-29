@@ -3,7 +3,7 @@ import React from "react";
 import ContactsBg from "./components/ContactsBg";
 
 import ContactsInfo from "./components/ContactsInfo";
-import { ContactsForm } from "@/app/components/shared/ContactsForm";
+import { Form } from "@/app/components/shared/Form";
 
 const ContactsPage: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const ContactsPage: React.FC = () => {
           <div className="mx-4 flex flex-wrap justify-center lg:justify-between">
             <div className="order-2 w-full px-4 lg:order-1 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg p-8 shadow-2xl sm:p-12">
-                <ContactsForm buttonText="send" />
+                <Form buttonText="send" />
                 <ContactsBg />
               </div>
             </div>

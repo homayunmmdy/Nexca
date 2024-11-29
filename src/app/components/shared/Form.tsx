@@ -13,7 +13,7 @@ interface Props {
   formHandler?: (content: FormData) => void;
 }
 
-export const ContactsForm = ({ buttonText, formHandler }: Props) => {
+export const Form = ({ buttonText, formHandler }: Props) => {
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: "",
