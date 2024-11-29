@@ -6,10 +6,17 @@ import Image from "next/image";
 import Link from "next/link";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
+import { ContactsForm } from "@/app/components/shared/ContactsForm";
+import { FormData } from "@/types/entities";
 
 const NewsBody = ({ post }: { post: any }) => {
   const text = `${post?.title}. ${post?.description}`;
   const PostBody = DOMPurify.sanitize(post.body);
+
+  function getFormData({ name, message, email }: FormData): void {
+    console.log(name + " " + email + " " + message);
+  }
+
   return (
     <>
       <Image
@@ -35,6 +42,7 @@ const NewsBody = ({ post }: { post: any }) => {
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
       <RenderTags post={post} />
+      <ContactsForm formHandler={getFormData} buttonText="Comment" />
       <MorePostsSec />
     </>
   );
