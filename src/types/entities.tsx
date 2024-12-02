@@ -8,6 +8,7 @@ export type TitrType = {
   borderColor?: string;
   item: "text-center" | "text-left" | "text-right" | string;
   style?: string;
+  resetStyle? : boolean;
 };
 
 export type FeaturesType = {
