@@ -1,7 +1,5 @@
 "use client";
 import { Button, Input, Textarea } from "@/components";
-import { CONTACTS_API_URL } from "@/config/apiConstants";
-import { FormData } from "@/types/entities";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -10,33 +8,25 @@ import { TfiEmail } from "react-icons/tfi";
 
 interface Props {
   buttonText: string;
-  formHandler?: (content: FormData) => void;
+  initalData: any;
+  API: string;
 }
 
-export const Form = ({ buttonText, formHandler }: Props) => {
+export const Form = ({ buttonText, initalData, API }: Props) => {
   const router = useRouter();
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initalData);
 
-  const handler = new FormHandler(setFormData, CONTACTS_API_URL, router);
+  const handler = new FormHandler(setFormData, API, router);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    if (!!formHandler) {
-      formHandler(formData);
-    } else {
-      handler.submit(e, formData);
-    }
-  }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData);
 
   return (
     <>
       {handler.isLoading && (
         <span className="loading loading-ring loading-lg absolute"></span>
       )}
-      <form onSubmit={handleSubmit}>
+      <form className="rounded-xl bg-gray-100 p-5" onSubmit={handleSubmit}>
         <div className="mb-6">
           <Input
             type="text"
