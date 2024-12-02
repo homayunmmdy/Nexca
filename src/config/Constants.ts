@@ -15,6 +15,7 @@ export const TICKETS_QUERY_KEY = "tickets";
 export const SERVICES_IMG_KEY = "services_img";
 export const TIMELINE_KEY = "timeLine";
 export const CONTRIBUTION_KEY = "contribution";
+export const COMMENTS_KEY = "comments";
 
 //sections query key
 export const POSTS_QUERY_KEY = "posts";
