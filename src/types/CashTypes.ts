@@ -19,7 +19,7 @@ export type PostsCashType = {
   section: string;
   categories?: CategoryType[];
   masterEditor?: boolean;
-  comments? : CommentsDataType[];
+  comments?: CommentsDataType[];
 } & BaseType;
 
 export type TimeLIneCashType = {
@@ -79,4 +79,11 @@ export type ContributeCashType = {
   description: string;
   link: string;
   date: string;
+} & Omit<BaseType, "body">;
+
+export type CommentsCashType = {
+  postId: string;
+  username: string;
+  email: string;
+  message: string;
 } & Omit<BaseType, "body">;
