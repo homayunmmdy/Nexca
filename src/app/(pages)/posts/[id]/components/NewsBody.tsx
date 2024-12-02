@@ -14,8 +14,8 @@ const NewsBody = ({ post }: { post: any }) => {
   const PostBody = DOMPurify.sanitize(post.body);
 
   const initalData = {
-    postId: post.id,
-    username: "",
+    postId: post._id,
+    name: "",
     email: "",
     message: "",
   };

@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 const CommentsSchema = new Schema(
   {
     postId: String,
-    username: String,
+    name: String,
     email: String,
     message: String,
   },

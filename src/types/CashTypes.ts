@@ -83,7 +83,7 @@ export type ContributeCashType = {
 
 export type CommentsCashType = {
   postId: string;
-  username: string;
+  name: string;
   email: string;
   message: string;
 } & Omit<BaseType, "body">;
