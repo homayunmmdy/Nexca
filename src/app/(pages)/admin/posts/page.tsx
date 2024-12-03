@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { ItemsTable, Pagination } from "../components/elements";
 import ErrorText from "../components/elements/ErrorText";
+import { checkMaster } from "@/util/Util";
 
 const Posts = () => {
   const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
@@ -51,11 +52,15 @@ const Posts = () => {
       return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
     }
   );
-  const filteredPosts = sortedByTime.filter((post: PostsCashType) =>
-    post.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+ const isMaster = checkMaster(); // Determines if the user is a masterEditor
 
-  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+const filteredPosts = sortedByTime.filter(
+  (post: PostsCashType) =>
+    (isMaster || !post.masterEditor) && // Include posts with masterEditor if user is master, otherwise exclude
+    post.title.toLowerCase().includes(searchQuery.toLowerCase())
+);
+
+const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   const handleSearch = (event: { target: { value: string } }) => {
