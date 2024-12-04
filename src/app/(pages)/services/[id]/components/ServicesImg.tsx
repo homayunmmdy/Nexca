@@ -17,13 +17,13 @@ const ServicesImg: React.FC = () => {
   );
 
   if (loading) {
-    return <div className="hero skeleton mb-5 min-h-screen rounded-xl"></div>;
+    return <div className="hero skeleton mb-5 rounded-xl"></div>;
   }
   return (
     <>
       {filteredData?.map((service: ServicesCashType) => (
         <div
-          className="hero mb-5 aspect-video rounded-xl bg-indigo-600 md:min-h-screen"
+          className="hero mb-5 aspect-video rounded-xl bg-indigo-600"
           key={service._id}
           style={{
             backgroundImage: `url(${

@@ -46,7 +46,7 @@ const DemoPage: React.FC = () => {
             <PostsSec />
           </div>
           <div className="col-span-12 md:col-span-3">
-            <LinearAds />
+            <LinearAds id={1}/>
           </div>
         </div>
       </div>

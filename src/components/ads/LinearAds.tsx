@@ -11,7 +11,7 @@ import React from "react";
 import { FaCircleDot } from "react-icons/fa6";
 import LinearAdsLoading from "./LinearAdsLoading";
 
-const LinearAds: React.FC = () => {
+const LinearAds = ({id} : {id : number}) => {
   const {
     data: mainData,
     isLoading,
@@ -31,7 +31,7 @@ const LinearAds: React.FC = () => {
   }
 
   const filteredData = mainData?.data?.filter(
-    (item: TextAdvCashType) => item.textadvid == 1
+    (item: TextAdvCashType) => item.textadvid == id
   );
   const ads = filteredData?.slice(-12);
 
@@ -66,8 +66,8 @@ const LinearAds: React.FC = () => {
   );
 };
 
-export default () => (
+export default ({id} : {id : number}) => (
   <ErrorBoundaryProvider>
-    <LinearAds />
+    <LinearAds id={id}/>
   </ErrorBoundaryProvider>
 );
