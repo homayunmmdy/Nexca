@@ -35,21 +35,24 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
           <h3 className="text-center text-2xl font-semibold">
             {EDITMODE ? "Edit TextAdv" : "New TextAdv"}
           </h3>
-          <Input
-            id="textadvid"
-            type="number"
-            name="textadvid"
-            label="textadvid"
-            color="input-primary"
-            value={formData.textadvid}
-            onChange={handler.trakeChange}
-            required
-          />
+          <div>
+            <label className="mb-2" htmlFor="textadvid">Section for ads</label>
+            <select
+              id="textadvid"
+              name="textadvid"
+              value={formData.textadvid}
+              onChange={handler.trakeChange}
+              className="select select-primary w-full"
+              required
+            >
+              <option value="1">Demo - next to posts</option>
+            </select>
+          </div>
           <Input
             type="text"
             id="advname"
             name="advname"
-            label="advname"
+            label="Adv Name"
             color="input-primary"
             value={formData.advname}
             onChange={handler.trakeChange}
@@ -59,7 +62,7 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
             type="text"
             id="body"
             name="body"
-            label="body"
+            label="body of Adv"
             color="input-primary"
             value={formData.body}
             onChange={handler.trakeChange}
@@ -78,7 +81,7 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
           <Input
             type="submit"
             style="btn btn-active btn-primary"
-            value={EDITMODE ? "Save" : "Post"}
+            value={EDITMODE ? "Save" : "Add"}
           />
         </form>
       </div>
