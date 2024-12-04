@@ -15,13 +15,13 @@ const ReadPost = ({ text }: { text: string }) => {
     <>
       {!isSpeaking ? (
         <Button
-          style="text-white rounded-full"
+          className="rounded-full text-white"
           onClick={isSpeaking ? handleStopReading : handleReadText}
           color="btn-primary"
         ><FaPlay /></Button>
       ) : (
         <Button
-          style="text-white rounded-full"
+          className="rounded-full text-white"
           onClick={isSpeaking ? handleStopReading : handleReadText}
           color="btn-primary"
         ><FaStop /></Button>

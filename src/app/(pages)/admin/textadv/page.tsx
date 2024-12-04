@@ -28,7 +28,7 @@ const AdminTextAdvPage: React.FC = () => {
       <div className="overflow-x-auto">
         <div className="flex w-full justify-center">
           <Link href={`/admin/textadv/new`}>
-            <Button color="btn-primary" style="btn-outline m-3">
+            <Button color="btn-primary" className="btn-outline m-3">
               New textadv
             </Button>
           </Link>
@@ -55,7 +55,7 @@ const AdminTextAdvPage: React.FC = () => {
                     <td>{item.body}</td>
                     <td>
                       <Link href={`/admin/textadv/${item._id}`}>
-                        <Button color="btn-warning" style="me-2 mb-2">
+                        <Button color="btn-warning" className="mb-2 me-2">
                           <CiEdit size={25} />
                         </Button>
                       </Link>

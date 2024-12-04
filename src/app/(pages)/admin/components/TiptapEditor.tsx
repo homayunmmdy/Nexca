@@ -105,7 +105,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
-          style={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
+          className={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
         >
           H1
         </Button>
@@ -115,7 +115,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
-          style={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
+          className={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
         >
           H2
         </Button>
@@ -126,7 +126,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 3 }).run()
           }
-          style={editor.isActive("heading", { level: 3 }) ? "is-active" : ""}
+          className={editor.isActive("heading", { level: 3 }) ? "is-active" : ""}
         >
           H3
         </Button>
@@ -135,7 +135,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() => editor.chain().focus().toggleBold().run()}
           type="button"
           color="btn-ghost"
-          style={editor.isActive("bold") ? "is-active" : ""}
+          className={editor.isActive("bold") ? "is-active" : ""}
         >
           <MdOutlineFormatBold size={20} />
         </Button>
@@ -144,7 +144,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() => editor.chain().focus().toggleStrike().run()}
           type="button"
           color="btn-ghost"
-          style={editor.isActive("strike") ? "is-active" : ""}
+          className={editor.isActive("strike") ? "is-active" : ""}
         >
           <MdStrikethroughS size={20} />
         </Button>
@@ -153,7 +153,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
-          style={editor.isActive("blockquote") ? "is-active" : ""}
+          className={editor.isActive("blockquote") ? "is-active" : ""}
         >
           <MdFormatQuote size={20} />
         </Button>
@@ -163,7 +163,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
               type="button"
               color="btn-ghost"
               onClick={setLink}
-              style={editor.isActive("link") ? "is-active" : ""}
+              className={editor.isActive("link") ? "is-active" : ""}
             >
               <IoMdLink size={20} />
             </Button>
@@ -181,7 +181,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleUnderline().run()}
-          style={editor.isActive("underline") ? "is-active" : ""}
+          className={editor.isActive("underline") ? "is-active" : ""}
         >
           <MdFormatUnderlined size={20} />
         </Button>
@@ -190,7 +190,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() => editor.chain().focus().toggleItalic().run()}
           type="button"
           color="btn-ghost"
-          style={editor.isActive("italic") ? "is-active" : ""}
+          className={editor.isActive("italic") ? "is-active" : ""}
         >
           <MdFormatItalic size={20} />
         </Button>
@@ -198,7 +198,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
-          style={editor.isActive("orderedList") ? "is-active" : ""}
+          className={editor.isActive("orderedList") ? "is-active" : ""}
         >
           <GrOrderedList size={20} />
         </Button>
@@ -207,7 +207,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleBulletList().run()}
-          style={editor.isActive("bulletList") ? "is-active" : ""}
+          className={editor.isActive("bulletList") ? "is-active" : ""}
         >
           <MdFormatListBulleted size={20} />
         </Button>
@@ -215,7 +215,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleHighlight().run()}
-          style={editor.isActive("highlight") ? "is-active" : ""}
+          className={editor.isActive("highlight") ? "is-active" : ""}
         >
           <PiHighlighterFill size={20} />
         </Button>
@@ -223,7 +223,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           type="button"
           color="btn-ghost"
           onClick={() => editor.chain().focus().toggleCodeBlock().run()}
-          style={editor.isActive("codeBlock") ? "is-active" : ""}
+          className={editor.isActive("codeBlock") ? "is-active" : ""}
         >
           <IoMdCode size={20} />
         </Button>

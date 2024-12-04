@@ -28,7 +28,7 @@ const EmailListForm = () => {
         name="email"
         value={formData.email}
       />
-      <Button style="rounded-full" color="btn-primary" type="submit">
+      <Button className="rounded-full" color="btn-primary" type="submit">
         <GrFormNextLink size={24} /> Subscribe
       </Button>
     </form>

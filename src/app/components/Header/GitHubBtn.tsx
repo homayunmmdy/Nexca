@@ -11,10 +11,10 @@ const GitHubBtn = ({ link }: { link: string }) => {
       target="_blank"
     >
       <Button
-        style="focus-visible:ring-ring group relative flex h-9 w-full max-w-52 items-center justify-center gap-1 overflow-hidden whitespace-pre rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow transition-all duration-300 ease-out hover:bg-black/90 hover:ring-2 hover:ring-black hover:ring-offset-2 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:flex"
+        className="focus-visible:ring-ring group relative flex h-9 w-full max-w-52 items-center justify-center gap-1 overflow-hidden whitespace-pre rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow transition-all duration-300 ease-out hover:bg-black/90 hover:ring-2 hover:ring-black hover:ring-offset-2 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 md:flex"
         type="button"
         removeDefaultStyle={true}
-        color={null}
+        color='btn-null'
       >
         <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
         <div className="flex items-center">

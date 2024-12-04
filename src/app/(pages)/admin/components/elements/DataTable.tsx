@@ -20,7 +20,7 @@ const DataTable = ({ data, path, editor }: Props) => {
           <Link href={`/admin/${path}/new`}>
             <Button
               color="btn-primary"
-              style="btn-outline m-3"
+              className="btn-outline m-3"
             >{`New ${path}`}</Button>
           </Link>
         </div>
@@ -44,7 +44,7 @@ const DataTable = ({ data, path, editor }: Props) => {
                 <td>{item.name}</td>
                 <td>
                   <Link href={`/admin/${path}/${item._id}`}>
-                    <Button color="btn-warning" style="me-2 mb-2">
+                    <Button color="btn-warning" className="mb-2 me-2">
                       <CiEdit size={25} />
                     </Button>
                   </Link>

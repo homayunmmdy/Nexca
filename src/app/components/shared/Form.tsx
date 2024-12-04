@@ -69,7 +69,7 @@ export const Form = ({ buttonText, initalData, API }: Props) => {
           />
         </div>
         <div>
-          <Button type="submit" color="btn-primary" style="p-3 w-full">
+          <Button type="submit" color="btn-primary" className="w-full p-3">
             {buttonText}
           </Button>
         </div>

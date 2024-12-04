@@ -26,7 +26,7 @@ const Sidebar: React.FC = () => {
             </span>
           </Link>
           <Button
-            style="lg:hidden"
+            className="lg:hidden"
             color="btn-primary"
             ariaLabel="close and open menu"
           >

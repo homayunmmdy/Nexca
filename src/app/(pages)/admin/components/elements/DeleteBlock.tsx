@@ -59,7 +59,7 @@ const DeleteBlock: React.FC<Props> = ({ path, id, masterEditor }: Props) => {
       <Toaster />
       <Button
         color="btn-error"
-        style="me-2 mb-2"
+        className="mb-2 me-2"
         type="button"
         onClick={() => setIsConfirmOpen(true)}
       >
@@ -86,7 +86,7 @@ const DeleteBlock: React.FC<Props> = ({ path, id, masterEditor }: Props) => {
               <Button
                 type="button"
                 color="btn-primary"
-                style="mr-2"
+                className="mr-2"
                 onClick={() => setIsConfirmOpen(false)}
               >
                 Cancel

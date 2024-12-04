@@ -105,7 +105,7 @@ const Login: React.FC = () => {
                   <Button
                     type="submit"
                     color="btn-primary"
-                    style="mt-6 w-full text-white"
+                    className="mt-6 w-full text-white"
                   >
                     LOG IN
                   </Button>

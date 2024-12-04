@@ -1,4 +1,4 @@
-import { InputHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, InputHTMLAttributes } from "react";
 import { AllowedColors, AllowedInputType } from "./AllowedOptions";
 
 type BaseType = {
@@ -11,12 +11,10 @@ type BaseType = {
 export type ButtonType = {
   color: `btn-${AllowedColors}` | null;
   children: React.ReactNode;
-  type?: "submit" | "reset" | "button" | undefined;
-  disabled?: boolean;
-  onClick?: () => void;
+  ariaLabel?: string;
   onClickEvent?: (e: any) => void;
   removeDefaultStyle?: boolean;
-} & Omit<BaseType, "required">;
+}& ButtonHTMLAttributes<HTMLButtonElement> ;
 
 export type InputType = {
   color?: `input-${AllowedColors}` ;

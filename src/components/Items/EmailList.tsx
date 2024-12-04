@@ -48,7 +48,7 @@ const EmailList: React.FC = () => {
                   color="input-primary"
                   onChange={handler.trakeChange}
                 />
-                <Button type="submit" style="mt-5 sm:mt-0 " color="btn-primary">
+                <Button type="submit" className="mt-5 sm:mt-0" color="btn-primary">
                   Subscribe
                 </Button>
               </div>

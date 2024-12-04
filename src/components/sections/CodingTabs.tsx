@@ -36,7 +36,7 @@ const CodingTabs = () => {
           <Button
             color="btn-primary"
             onClick={() => setActiveTab(id as typeof activeTab)}
-            style={activeTab !== id ? "btn-outline" : ""}
+            className={activeTab !== id ? "btn-outline" : ""}
           >
             {title}
           </Button>

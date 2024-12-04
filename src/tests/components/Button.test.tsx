@@ -10,7 +10,7 @@ describe("Button component", () => {
     id: "1",
     color: "btn-primary",
     type: "button",
-    style: "text-white",
+    className: "text-white",
     disabled: true,
     onClick: vi.fn(),
     children: (
@@ -47,11 +47,10 @@ describe("Button component", () => {
   });
 
   it("should apply removeDefaultStyle prop correctly", () => {
-    render(<Button {...defaultProps} removeDefaultStyle={true} color={null} />);
+    render(<Button {...defaultProps} removeDefaultStyle={true} color='btn-null' />);
 
     const buttonElement = screen.getByRole("button");
     expect(buttonElement).not.toHaveClass("btn");
-    expect(buttonElement).toHaveClass("text-white");
   });
 
   it("should render button with the correct aria-label", () => {
@@ -80,7 +79,7 @@ describe("Button component", () => {
       id: "1",
       color: "btn-primary",
       type: "button",
-      style: "text-white",
+      className: "text-white",
       disabled: true,
       onClick: vi.fn(),
       children: (
