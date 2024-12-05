@@ -6,10 +6,10 @@ import { MorePostsSec } from "@/components/sections";
 import { COMMENTS_API_URL } from "@/config/apiConstants";
 import { COMMENTS_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
+import { CommentsCashType } from "@/types/CashTypes";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import Link from "next/link";
-import { CommentsCashType } from "@/types/CashTypes";
 import Comment from "./Comment";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
@@ -50,13 +50,19 @@ const NewsBody = ({ post }: { post: any }) => {
         id="tiptap-style"
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
+      {post.categories.length > 0 && (
+        <div className="my-3 flex items-center gap-3">
+          <span className="font-bold">Categories:</span>
+          <RenderTags post={post} />
+        </div>
+      )}
       <Form
         buttonText="Comment"
         initalData={initalData}
         API={COMMENTS_API_URL}
       />
       {comments?.length > 0 && (
-        <div className="mt-3 rounded-xl bg-indigo-600 p-5 pt-10">
+        <div className="my-5 rounded-xl bg-indigo-600 p-5 pt-10">
           <Titr
             resetStyle={true}
             style="bg-green-400 text-center p-5 flex justify-center items-center rounded-xl mb-5 font-bold text-xl text-white"
@@ -69,7 +75,6 @@ const NewsBody = ({ post }: { post: any }) => {
           ))}
         </div>
       )}
-      <RenderTags post={post} />
       <MorePostsSec />
     </>
   );
