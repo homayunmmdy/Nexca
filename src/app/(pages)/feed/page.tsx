@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { Spinner } from "@/components";
 
 // Define the structure of a single post
 interface Post {
@@ -22,7 +23,7 @@ interface PaginatedPosts {
   };
 }
 
-// Function to fetch posts from the backend with pagination
+// fetch posts from the backend with pagination
 const fetchPosts = async ({ pageParam = 1 }: { pageParam?: number }): Promise<PaginatedPosts> => {
   const res = await fetch(`/api/posts?page=${pageParam}&limit=5`);
 
@@ -83,7 +84,7 @@ const Feed: React.FC = () => {
   if (isLoading)
     return (
       <div className="flex items-center justify-center h-screen">
-        <p className="text-lg font-medium text-gray-700">Loading posts...</p>
+        <Spinner />;
       </div>
     );
 
@@ -123,9 +124,7 @@ const Feed: React.FC = () => {
       <div ref={observerRef} className="h-10"></div>
       {isFetchingNextPage && (
         <div className="flex justify-center mt-4">
-          <p className="text-sm font-medium text-gray-500 animate-pulse">
-            Loading more posts...
-          </p>
+          <Spinner />;
         </div>
       )}
     </div>
