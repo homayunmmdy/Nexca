@@ -2,19 +2,13 @@
 import React, { useEffect, useRef } from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { Spinner } from "@/components";
+import PostCard from "@/components/sections/PostCard";
+import { PostsCashType } from "@/types/CashTypes";
 
-// Define the structure of a single post
-interface Post {
-  _id: string;
-  title: string;
-  body: string;
-  createdAt: string;
-  updatedAt: string;
-}
 
 // Define the structure of the paginated response
 interface PaginatedPosts {
-  data: Post[];
+  data: PostsCashType[];
   meta: {
     total: number;
     page: number;
@@ -25,7 +19,7 @@ interface PaginatedPosts {
 
 // fetch posts from the backend with pagination
 const fetchPosts = async ({ pageParam = 1 }: { pageParam?: number }): Promise<PaginatedPosts> => {
-  const res = await fetch(`/api/posts?page=${pageParam}&limit=5`);
+  const res = await fetch(`/api/posts?page=${pageParam}&limit=10`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch posts");
@@ -84,7 +78,7 @@ const Feed: React.FC = () => {
   if (isLoading)
     return (
       <div className="flex items-center justify-center h-screen">
-        <Spinner />;
+        <Spinner />
       </div>
     );
 
@@ -98,24 +92,18 @@ const Feed: React.FC = () => {
     );
 
   return (
-    <div className="feed-container mx-auto max-w-4xl p-4">
+    <div className="mx-auto p-4 md:p-10">
       <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Feed</h1>
       {data?.pages[0]?.data.length === 0 ? (
         <div className="flex flex-col items-center justify-center">
           <p className="text-lg font-medium text-gray-600">No posts available!</p>
         </div>
       ) : (
-        <div className="posts space-y-4">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
           {data?.pages.map((page, i) => (
             <React.Fragment key={i}>
-              {page.data.map((post: Post) => (
-                <div
-                  key={post._id}
-                  className="post-card border border-gray-300 rounded-lg p-4 shadow-md bg-white"
-                >
-                  <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
-                  <p className="text-gray-600">{post.body}</p>
-                </div>
+              {page.data.map((post: PostsCashType) => (
+                <PostCard key={post._id} post={post} />
               ))}
             </React.Fragment>
           ))}
@@ -124,7 +112,7 @@ const Feed: React.FC = () => {
       <div ref={observerRef} className="h-10"></div>
       {isFetchingNextPage && (
         <div className="flex justify-center mt-4">
-          <Spinner />;
+          <Spinner />
         </div>
       )}
     </div>
