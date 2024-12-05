@@ -22,7 +22,7 @@ const Button: React.FC<ButtonType> = ({
       id={id}
       value={value}
       form={form}
-      className={removeDefaultStyle ? '' : `btn ${color === 'btn-null' ? '' : color} ${className}`}
+      className={removeDefaultStyle ? ` ${className}` : `btn ${color === 'btn-null' ? '' : color} ${className}`}
       aria-label={ariaLabel}
     >
       {children}

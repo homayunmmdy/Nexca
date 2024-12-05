@@ -47,10 +47,11 @@ describe("Button component", () => {
   });
 
   it("should apply removeDefaultStyle prop correctly", () => {
-    render(<Button {...defaultProps} removeDefaultStyle={true} color='btn-null' />);
+    render(<Button {...defaultProps} removeDefaultStyle={true} color='btn-null' className='text-white'/>);
 
     const buttonElement = screen.getByRole("button");
     expect(buttonElement).not.toHaveClass("btn");
+    expect(buttonElement).toHaveClass("text-white");
   });
 
   it("should render button with the correct aria-label", () => {
