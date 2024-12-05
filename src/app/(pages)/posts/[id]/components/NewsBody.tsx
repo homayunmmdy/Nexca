@@ -9,7 +9,7 @@ import useFetch from "@/hooks/useFetch";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import Link from "next/link";
-import { CommentsCashType } from "../../../../../types/CashTypes";
+import { CommentsCashType } from "@/types/CashTypes";
 import Comment from "./Comment";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";

@@ -11,14 +11,6 @@ const postSchema = new Schema(
     services: String,
     body: String,
     categories: [{ id: Number, name: String }],
-    comments: [
-      {
-        id: Number,
-        name: String,
-        email: String,
-        message: String,
-      },
-    ],
     masterEditor: Boolean,
   },
   {

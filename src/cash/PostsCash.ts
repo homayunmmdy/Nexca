@@ -23,20 +23,6 @@ const PostsCash: PostsCashType[] = [
       },
     ],
     masterEditor: true,
-    comments: [
-      {
-        id: 128283284,
-        name: "Alex",
-        email : "Alex@email.com",
-        message : "Hello from alex"
-      },
-      {
-        id: 128283285,
-        name: "John",
-        email : "John@email.com",
-        message : "Hello from John"
-      },
-    ],
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,

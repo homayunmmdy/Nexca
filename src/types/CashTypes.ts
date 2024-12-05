@@ -19,7 +19,6 @@ export type PostsCashType = {
   section: string;
   categories?: CategoryType[];
   masterEditor?: boolean;
-  comments?: CommentsDataType[];
 } & BaseType;
 
 export type TimeLIneCashType = {
@@ -39,13 +38,6 @@ export type SectionCashType = {
   name: string;
   secid: number;
 } & Omit<BaseType, "body">;
-
-export type CommentsDataType = {
-  id: number;
-  name: string;
-  email: string;
-  message: string;
-};
 
 export type ContactsCashType = {
   name: string;
