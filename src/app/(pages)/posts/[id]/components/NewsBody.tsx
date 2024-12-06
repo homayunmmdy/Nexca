@@ -71,7 +71,7 @@ const NewsBody = ({ post }: { post: any }) => {
           />
 
           {comments?.map((comment: CommentsCashType) => (
-            <Comment comment={comment} />
+            <Comment comment={comment} key={comment._id} />
           ))}
         </div>
       )}
