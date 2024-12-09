@@ -13,6 +13,7 @@ import Link from "next/link";
 import Comment from "./Comment";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
+import SharePost from "./SharePost";
 
 const NewsBody = ({ post }: { post: any }) => {
   const text = `${post?.title}. ${post?.description}`;
@@ -50,7 +51,8 @@ const NewsBody = ({ post }: { post: any }) => {
         id="tiptap-style"
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
-      {post.categories.length > 0 && (
+      <SharePost POSTURL={`/posts/${post._id}`}/>
+      {post.categories?.length > 0 && (
         <div className="my-3 flex items-center gap-3">
           <span className="font-bold">Categories:</span>
           <RenderTags post={post} />
