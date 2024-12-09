@@ -16,8 +16,6 @@ export const Form = ({ buttonText, initalData, API }: Props) => {
   const router = useRouter();
   const [formData, setFormData] = useState(initalData);
 
-  console.log(formData)
-
   const handler = new FormHandler(setFormData, API, router);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>

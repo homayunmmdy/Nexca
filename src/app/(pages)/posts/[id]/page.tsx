@@ -6,6 +6,7 @@ import React from "react";
 import NewsBody from "./components/NewsBody";
 import NewsHead from "./components/NewsHead";
 import PostSeclton from "./PostSkelton";
+import PostMeta from "./components/PostMeta";
 
 type PostsCashType = {
   _id: string;
@@ -26,6 +27,7 @@ const Post: React.FC = () => {
 
   return (
     <>
+    <PostMeta post={post}/>
       <div className="flex flex-col">
         <NewsHead title={post.title} createdAt={post.createdAt} />
         <div className="py-8">
@@ -44,4 +46,3 @@ const Post: React.FC = () => {
 };
 
 export default Post;
-
