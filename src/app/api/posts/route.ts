@@ -21,9 +21,9 @@ export async function GET(req: Request): Promise<Response> {
   const skip = (page - 1) * limit;
 
   const handler = new RequestHandler<PostsCashType>(PostModel, PostsCash);
-
+  
   // Handle case for all posts (no pagination)
-  if (!page || !limit) {
+  if (!url.searchParams.has("page") || !url.searchParams.has("limit")) {
     return handler.GetAll(); // Return all posts
   }
 
