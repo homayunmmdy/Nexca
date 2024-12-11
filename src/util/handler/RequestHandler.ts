@@ -20,6 +20,7 @@ import { NextResponse } from "next/server";
 class RequestHandler<
   T extends {
     _id: string;
+    createdAt: string;
   }
 > {
   private Model: Model<T>;
@@ -34,6 +35,44 @@ class RequestHandler<
     this.Model = Model;
     this.Cache = Cache;
   }
+
+    /**
+   * @function FindPaginated
+   * @description Retrieve paginated data from the database or cache
+   * @param {number} skip - The number of documents to skip
+   * @param {number} limit - The number of documents to retrieve
+   * @returns {Promise<{ data: T[], total: number }>} - The paginated data and total count
+   */
+    async FindPaginated(skip: number, limit: number) {
+      try {
+        console.log(`Fetching paginated data - skip: ${skip}, limit: ${limit}`);
+        if (process.env.NEXT_PUBLIC_STATUS === "dev") {
+          // In dev mode, simulate pagination using the cache
+          const total = this.Cache.length;
+          
+           // Add sorting by createdAt in descending order
+          const data = this.Cache
+          .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()) // Sort descending
+          .slice(skip, skip + limit);
+
+          return { data, total };
+        } else {
+          // In production, use the database
+          const data = await this.Model.find()
+          .sort({ createdAt: -1 }) // Sort by createdAt in descending order
+          .skip(skip)
+          .limit(limit)
+          .exec();
+
+          const total = await this.Model.countDocuments();
+          return { data, total };
+        }
+      } catch (error) {
+        console.error(error);
+        throw new Error("Error fetching paginated data");
+      }
+    }
+  
 
   /**
    * @function GetAll
