@@ -1,5 +1,5 @@
 "use client";
-import { Input } from "@/components";
+import { Button, Input } from "@/components";
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { TextAdvCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
@@ -79,11 +79,9 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
             onChange={handler.trakeChange}
             required
           />
-          <Input
-            type="submit"
-            style="btn btn-active btn-primary"
-            value={EDITMODE ? "Save" : "Add"}
-          />
+          <Button type="submit" color="btn-primary">
+            {EDITMODE ? "Save" : "create"}
+          </Button>
         </form>
       </FormLayout>
     </>

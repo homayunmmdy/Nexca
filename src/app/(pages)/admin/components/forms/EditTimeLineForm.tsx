@@ -1,5 +1,5 @@
 "use client";
-import { Input } from "@/components";
+import { Button, Input } from "@/components";
 import { TIMELINE_API_URL } from "@/config/apiConstants";
 import { TimeLIneCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
@@ -23,11 +23,11 @@ const EditTimeLineForm = ({ data }: { data: TimeLIneCashType }) => {
 
   return (
     <>
-    <FormLayout
+      <FormLayout
         title={EDITMODE ? "Edit TimeLine" : "New TimeLine"}
         isLoading={handler.isLoading}
       >
-         <form
+        <form
           onSubmit={handleSubmit}
           method="post"
           className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
@@ -61,11 +61,9 @@ const EditTimeLineForm = ({ data }: { data: TimeLIneCashType }) => {
             onChange={handler.trakeChange}
             required
           />
-          <Input
-            type="submit"
-            style="btn btn-active btn-primary"
-            value={EDITMODE ? "Save" : "Post"}
-          />
+          <Button type="submit" color="btn-primary">
+            {EDITMODE ? "Save" : "create"}
+          </Button>
         </form>
       </FormLayout>
     </>

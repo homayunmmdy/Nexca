@@ -1,5 +1,5 @@
 "use client";
-import { Input, Textarea } from "@/components";
+import { Button, Input, Textarea } from "@/components";
 import { CONTRIBUTION_API_URL } from "@/config/apiConstants";
 import { ContributeCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
@@ -74,11 +74,9 @@ const EditContributionForm = ({
           style="w-full"
           required
         />
-        <Input
-          type="submit"
-          style="btn btn-active btn-primary"
-          value={EDITMODE ? "Save" : "Post"}
-        />
+        <Button type="submit" color="btn-primary">
+          {EDITMODE ? "Save" : "create"}
+        </Button>
       </form>
     </FormLayout>
   );

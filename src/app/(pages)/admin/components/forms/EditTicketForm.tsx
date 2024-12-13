@@ -1,5 +1,5 @@
 "use client";
-import { Input, Textarea } from "@/components";
+import { Button, Input, Textarea } from "@/components";
 import { TICKETS_API_URL } from "@/config/apiConstants";
 import { TicketsCashType } from "@/types/CashTypes";
 import { checkMaster } from "@/util/Util";
@@ -197,12 +197,13 @@ const EditTicketForm = ({ ticket }: { ticket: TicketsCashType }) => {
                     <option value="done">Done</option>
                   </select>
                 </div>
-                <Input
+                <Button
                   type="submit"
-                  style="btn w-full  btn-primary mb-5"
-                  removeDefaultStyle={true}
-                  value={EDITMODE ? "Update Ticket" : "Create Ticket"}
-                />
+                  color="btn-primary"
+                  className="mb-5 w-full"
+                >
+                  {EDITMODE ? "Update Ticket" : "Create Ticket"}
+                </Button>
               </form>
             </FormLayout>
           </main>
@@ -254,12 +255,9 @@ const EditTicketForm = ({ ticket }: { ticket: TicketsCashType }) => {
                 style="w-full"
               />
             </div>
-            <Input
-              type="submit"
-              style="btn w-full  btn-primary mb-5"
-              value={EDITMODE ? "Update Ticket" : "Create Ticket"}
-              removeDefaultStyle={true}
-            />
+            <Button type="submit" color="btn-primary" className="mb-5 w-full">
+              {EDITMODE ? "Update Ticket" : "Create Ticket"}
+            </Button>
           </form>
         </FormLayout>
       )}

@@ -148,11 +148,14 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             value={formData.source}
             onChange={handler.trakeChange}
           />
-          <Input
+          <Button
             type="submit"
-            style="btn btn-active btn-primary w-full hidden md:block mt-3"
-            value={EDITMODE ? "Save" : "Post"}
-          />
+            color="btn-primary"
+            aria-label={EDITMODE ? "Save" : "Post"}
+            className="btn-active mt-3 hidden w-full md:block"
+          >
+            {EDITMODE ? "Save" : "Post"}
+          </Button>
         </div>
         <div className="w-full md:w-1/2">
           <ImagePreview
@@ -169,11 +172,14 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               onChange={handler.trakeBodyChanges}
             />
           </div>
-          <Input
+          <Button
             type="submit"
-            style="btn btn-active btn-primary w-full block md:hidden mt-3"
-            value={EDITMODE ? "Save" : "Post"}
-          />
+            color="btn-primary"
+            aria-label={EDITMODE ? "Save" : "Post"}
+            className="btn-active mt-3 block w-full md:hidden"
+          >
+            {EDITMODE ? "Save" : "Post"}
+          </Button>
         </div>
       </form>
     </FormLayout>

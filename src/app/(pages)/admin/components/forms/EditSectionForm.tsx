@@ -1,5 +1,5 @@
 "use client";
-import { Input } from "@/components";
+import { Button, Input } from "@/components";
 import { SECTIONS_API_URL } from "@/config/apiConstants";
 import { SectionCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
@@ -51,11 +51,9 @@ const EditSectionForm = ({ data }: { data: SectionCashType }) => {
             onChange={handler.trakeChange}
             required
           />
-          <Input
-            type="submit"
-            style="btn btn-active btn-primary"
-            value={EDITMODE ? "Save" : "Post"}
-          />
+          <Button type="submit" color="btn-primary">
+          {EDITMODE ? "Save" : "create"}
+        </Button>
         </form>
       </FormLayout>
     </>
