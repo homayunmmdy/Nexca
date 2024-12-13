@@ -10,10 +10,10 @@ import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { checkMaster } from "@/util/Util";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CategoryList, SelectField, SelectFiledSkeleton } from "../elements";
+import { ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
@@ -159,22 +159,9 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <Image
-            src={!formData.imgurl ? "/static/Image/logo.jpg" : formData.imgurl}
+          <ImagePreview
+            imgurl={formData.imgurl}
             title={formData.title}
-            alt={formData.title}
-            height={390.938}
-            width={695}
-            className="mb-2 aspect-video w-full rounded-xl border border-indigo-500"
-          />
-          <Input
-            id="imgurl"
-            type="text"
-            name="imgurl"
-            label="Image Link"
-            color="input-primary"
-            style="w-full"
-            value={formData.imgurl}
             onChange={handler.trakeChange}
           />
           <div id="tiptap-style">

@@ -9,6 +9,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { ImagePreview } from "../shared";
 
 const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
   const EDITMODE = data._id !== "new";
@@ -52,25 +53,9 @@ const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
           <h3 className="text-center text-2xl font-semibold">
             {EDITMODE ? "Edit Services" : "New Services"}
           </h3>
-          <div>
-            <Image
-              src={
-                !formData.imgurl ? "/static/Image/logo.jpg" : formData.imgurl
-              }
-              title={formData.name}
-              alt={formData.name}
-              height={390.938}
-              width={695}
-              className="aspect-video w-full rounded-xl border border-indigo-500"
-            />
-          </div>
-          <Input
-            id="imgurl"
-            type="text"
-            name="imgurl"
-            label="Image Link"
-            color="input-primary"
-            value={formData.imgurl}
+          <ImagePreview
+            imgurl={formData.imgurl}
+            title={formData.name}
             onChange={handler.trakeChange}
           />
           <Input
