@@ -1,45 +1,43 @@
 "use client";
 import APIClient from "@/util/apiClient";
 import { getParameterId } from "@/util/Util";
-import { useEffect, useState } from "react";
 import { POST_API_URL } from "../config/apiConstants";
+import { useQuery } from "@tanstack/react-query";
 
 /**
- * Custom hook to fetch a single post by its ID from the API
- * 
+ * Custom hook to fetch a single post by its ID using React Query
+ *
  * @description
- * This hook extracts a post ID from the URL parameters, 
- * fetches the corresponding post data from the API, 
- * and manages the post state.
- * 
- * @returns {Object|undefined} The fetched post data or undefined if not loaded
- * 
+ * This hook extracts a post ID from the URL parameters and fetches the 
+ * corresponding post data from the API, leveraging React Query for 
+ * state management.
+ *
+ * @returns {Object} The result object from useQuery containing data, isLoading, and isError
+ *
  * @example
- * // In a component
- * const post = useSinglePost();
- * 
- * @throws {Error} Logs any errors that occur during post fetching
+ * const { data: post, isLoading, isError } = useSinglePost();
  */
 
 const useSinglePost = () => {
   const id = getParameterId(7);
-  const [post, setPost] = useState();
   const apiClient = new APIClient(POST_API_URL);
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      try {
-        const postData = await apiClient.get(`/${id}`);
-        setPost(postData);
-      } catch (error) {
-        console.error("Error fetching post:", error);
-      }
-    };
+  const fetchPost = async () => {
+    const postData = await apiClient.get(`/${id}`);
+    return postData;
+  };
 
-    fetchPost();
-  }, [id]);
+  const { data, isLoading, isError } = useQuery(
+    ["SinglePost", id], 
+    fetchPost,
+    {
+      enabled: !!id, // Fetch only if the ID exists
+      retry: 2, // Retry twice in case of failure
+      staleTime: 5 * 60 * 1000, // Cache data for 5 minutes
+    }
+  );
 
-  return post;
+  return { data, isLoading, isError };
 };
 
 export default useSinglePost;
