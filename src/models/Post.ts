@@ -12,6 +12,7 @@ const postSchema = new Schema(
     body: String,
     categories: [{ id: Number, name: String }],
     masterEditor: Boolean,
+    source: String,
   },
   {
     timestamps: true,

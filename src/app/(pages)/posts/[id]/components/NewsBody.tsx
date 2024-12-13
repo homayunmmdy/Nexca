@@ -51,6 +51,7 @@ const NewsBody = ({ post }: { post: any }) => {
         id="tiptap-style"
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
+      {post.source && <p>source : <span className="font-bold">{post.source}</span></p>}
       <SharePost POSTURL={`/posts/${post._id}`}/>
       {post.categories?.length > 0 && (
         <div className="my-3 flex items-center gap-3">

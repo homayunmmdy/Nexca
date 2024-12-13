@@ -30,6 +30,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
     imgurl: EDITMODE ? post.imgurl : "",
     categories: EDITMODE ? post.categories ?? [] : [],
     masterEditor: master ? true : false,
+    source: EDITMODE ? post.source : "",
   };
 
   const [formData, setFormData] = useState(startingTicketData);
@@ -140,7 +141,17 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               ))}
             </div>
           ) : null}
-
+          <Input
+            type="text"
+            id="source"
+            name="source"
+            label="source"
+            style="w-full mb-2"
+            color="input-primary"
+            value={formData.source}
+            onChange={handler.trakeChange}
+            required
+          />
           <Input
             type="submit"
             style="btn btn-active btn-primary w-full hidden md:block mt-3"
