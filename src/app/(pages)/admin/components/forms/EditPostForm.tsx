@@ -49,7 +49,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
   );
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center" id="edit_post_form">
       {handler.isLoading && (
         <span className="loading loading-ring loading-lg absolute"></span>
       )}

@@ -238,7 +238,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           <MdOutlineHorizontalRule size={20} />
         </Button>
       </div>
-      <EditorContent editor={editor} className="prose max-w-none" />
+      <EditorContent editor={editor} className="prose max-w-none" id="news_body"/>
 
       <div
         className={`character-count${
