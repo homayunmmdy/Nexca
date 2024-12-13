@@ -3,10 +3,11 @@ import RecentPosts from "@/app/(pages)/posts/[id]/components/RecentPosts";
 import "@/app/tiptap.css";
 import useSinglePost from "@/hooks/useSinglePost";
 import React from "react";
+import NotFound from "../../[...not_found]/not-found";
 import NewsBody from "./components/NewsBody";
 import NewsHead from "./components/NewsHead";
-import PostSeclton from "./PostSkelton";
 import PostMeta from "./components/PostMeta";
+import PostSeclton from "./PostSkelton";
 
 type PostsCashType = {
   _id: string;
@@ -25,9 +26,13 @@ const Post: React.FC = () => {
     return <PostSeclton />;
   }
 
+  if (!post._id) {
+    return NotFound();
+  }
+
   return (
     <>
-    <PostMeta post={post}/>
+      <PostMeta post={post} />
       <div className="flex flex-col">
         <NewsHead title={post.title} createdAt={post.createdAt} />
         <div className="py-8">
