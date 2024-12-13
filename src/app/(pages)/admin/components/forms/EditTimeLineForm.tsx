@@ -5,6 +5,7 @@ import { TimeLIneCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { FormLayout } from "../shared";
 
 const EditTimeLineForm = ({ data }: { data: TimeLIneCashType }) => {
   const EDITMODE = data._id !== "new";
@@ -22,18 +23,15 @@ const EditTimeLineForm = ({ data }: { data: TimeLIneCashType }) => {
 
   return (
     <>
-      <div className="flex justify-center">
-        {handler.isLoading && (
-          <span className="loading loading-ring loading-lg absolute"></span>
-        )}
-        <form
+    <FormLayout
+        title={EDITMODE ? "Edit TimeLine" : "New TimeLine"}
+        isLoading={handler.isLoading}
+      >
+         <form
           onSubmit={handleSubmit}
           method="post"
           className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
         >
-          <h3 className="text-center text-2xl font-semibold">
-            {EDITMODE ? "Edit TimeLine" : "New TimeLine"}
-          </h3>
           <Input
             id="title"
             type="text"
@@ -69,7 +67,7 @@ const EditTimeLineForm = ({ data }: { data: TimeLIneCashType }) => {
             value={EDITMODE ? "Save" : "Post"}
           />
         </form>
-      </div>
+      </FormLayout>
     </>
   );
 };

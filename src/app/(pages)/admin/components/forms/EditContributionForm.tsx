@@ -5,6 +5,7 @@ import { ContributeCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { FormLayout } from "../shared";
 
 const EditContributionForm = ({
   contribute,
@@ -26,19 +27,15 @@ const EditContributionForm = ({
     handler.submit(e, formData, contribute._id);
 
   return (
-    <div className="flex justify-center">
-      {handler.isLoading && (
-        <span className="loading loading-ring loading-lg absolute"></span>
-      )}
+    <FormLayout
+      title={EDITMODE ? "Edit Contribution" : "New Contribution"}
+      isLoading={handler.isLoading}
+    >
       <form
         onSubmit={handleSubmit}
         method="post"
-        className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
+        className="mb-3 flex w-full flex-col justify-center gap-3 md:w-1/2"
       >
-        <h3 className="text-center text-2xl font-semibold">
-          {EDITMODE ? "Edit Contribution" : "New Contribution"}
-        </h3>
-
         <Input
           type="text"
           id="title"
@@ -83,7 +80,7 @@ const EditContributionForm = ({
           value={EDITMODE ? "Save" : "Post"}
         />
       </form>
-    </div>
+    </FormLayout>
   );
 };
 

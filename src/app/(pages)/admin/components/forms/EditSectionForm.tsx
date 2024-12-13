@@ -5,6 +5,7 @@ import { SectionCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { FormLayout } from "../shared";
 
 const EditSectionForm = ({ data }: { data: SectionCashType }) => {
   const EDITMODE = data._id !== "new";
@@ -22,18 +23,15 @@ const EditSectionForm = ({ data }: { data: SectionCashType }) => {
 
   return (
     <>
-      <div className="flex justify-center">
-        {handler.isLoading && (
-          <span className="loading loading-ring loading-lg absolute"></span>
-        )}
+      <FormLayout
+        title={EDITMODE ? "Edit Section" : "New Section"}
+        isLoading={handler.isLoading}
+      >
         <form
           onSubmit={handleSubmit}
           method="post"
           className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
         >
-          <h3 className="text-center text-2xl font-semibold">
-            {EDITMODE ? "Edit Section" : "New Section"}
-          </h3>
           <Input
             id="name"
             type="text"
@@ -59,7 +57,7 @@ const EditSectionForm = ({ data }: { data: SectionCashType }) => {
             value={EDITMODE ? "Save" : "Post"}
           />
         </form>
-      </div>
+      </FormLayout>
     </>
   );
 };

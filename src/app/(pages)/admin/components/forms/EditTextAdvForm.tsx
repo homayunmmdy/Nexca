@@ -5,6 +5,7 @@ import { TextAdvCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { FormLayout } from "../shared";
 
 const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
   const EDITMODE = data._id !== "new";
@@ -23,20 +24,19 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
 
   return (
     <>
-      <div className="flex justify-center">
-        {handler.isLoading && (
-          <span className="loading loading-ring loading-lg absolute"></span>
-        )}
+      <FormLayout
+        title={EDITMODE ? "Edit TextAdv" : "New TextAdv"}
+        isLoading={handler.isLoading}
+      >
         <form
           onSubmit={handleSubmit}
           method="post"
           className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
         >
-          <h3 className="text-center text-2xl font-semibold">
-            {EDITMODE ? "Edit TextAdv" : "New TextAdv"}
-          </h3>
           <div>
-            <label className="mb-2" htmlFor="textadvid">Section for ads</label>
+            <label className="mb-2" htmlFor="textadvid">
+              Section for ads
+            </label>
             <select
               id="textadvid"
               name="textadvid"
@@ -85,7 +85,7 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
             value={EDITMODE ? "Save" : "Add"}
           />
         </form>
-      </div>
+      </FormLayout>
     </>
   );
 };

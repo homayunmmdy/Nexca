@@ -13,7 +13,7 @@ import { checkMaster } from "@/util/Util";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CategoryList, SelectField, SelectFiledSkeleton } from "../elements";
-import { ImagePreview } from "../shared";
+import { FormLayout, ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
@@ -49,13 +49,10 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
   );
 
   return (
-    <div className="flex flex-col justify-center" id="edit_post_form">
-      {handler.isLoading && (
-        <span className="loading loading-ring loading-lg absolute"></span>
-      )}
-      <h3 className="mb-4 text-center text-2xl font-semibold">
-        {EDITMODE ? "Edit Post" : "New Post"}
-      </h3>
+    <FormLayout
+      title={EDITMODE ? "Edit Post" : "New Post"}
+      isLoading={handler.isLoading}
+    >
       <form
         onSubmit={handleSubmit}
         method="post"
@@ -150,7 +147,6 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             color="input-primary"
             value={formData.source}
             onChange={handler.trakeChange}
-            required
           />
           <Input
             type="submit"
@@ -180,7 +176,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
           />
         </div>
       </form>
-    </div>
+    </FormLayout>
   );
 };
 
