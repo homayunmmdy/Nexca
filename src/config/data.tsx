@@ -1,3 +1,4 @@
+import React from 'react'
 import { FeaturesType, FooterLinkType, PriceItemType } from "@/types/entities";
 import { AiFillHome } from "react-icons/ai";
 import { BiBookContent } from "react-icons/bi";
