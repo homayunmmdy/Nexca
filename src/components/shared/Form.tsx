@@ -12,7 +12,7 @@ interface Props {
   API: string;
 }
 
-export const Form = ({ buttonText, initalData, API }: Props) => {
+const Form = ({ buttonText, initalData, API }: Props) => {
   const router = useRouter();
   const [formData, setFormData] = useState(initalData);
 
@@ -75,3 +75,5 @@ export const Form = ({ buttonText, initalData, API }: Props) => {
     </>
   );
 };
+
+export default Form;

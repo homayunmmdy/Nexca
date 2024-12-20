@@ -1,13 +1,8 @@
-import { ReactQueryProvider } from "@/components";
-import SiteConfig from "@/config/stie";
-import type { Metadata } from "next";
+import { Footer, Header, ReactQueryProvider } from "@/components";
 import { Inter } from "next/font/google";
-import { Footer, Header } from "./components";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-
-
 
 export default function RootLayout({
   children,

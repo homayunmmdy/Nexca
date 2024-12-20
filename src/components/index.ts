@@ -9,6 +9,10 @@ export { default as ThemeToggle } from "./ThemeToggle";
 export { default as TicketCard } from "./tickets/TicketCard";
 export { default as Titr } from "./Titr";
 
+export { default as Footer } from "./Footer/Footer";
+export { default as Header } from "./Header/Header";
+export { default as Form } from "./shared/Form";
+
 // Items
 export { default as Banner } from "./Items/Banner";
 export { default as Companies } from "./Items/Companies";

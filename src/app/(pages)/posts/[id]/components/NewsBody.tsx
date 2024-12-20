@@ -1,6 +1,5 @@
-import { Form } from "@/app/components/shared/Form";
 import "@/app/tiptap.css";
-import { Titr } from "@/components";
+import { Form, Titr } from "@/components";
 import NexcaMark from "@/components/NexcaMark";
 import { MorePostsSec } from "@/components/sections";
 import { COMMENTS_API_URL } from "@/config/apiConstants";
@@ -51,8 +50,12 @@ const NewsBody = ({ post }: { post: any }) => {
         id="tiptap-style"
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
-      {post.source && <p>source : <span className="font-bold">{post.source}</span></p>}
-      <SharePost POSTURL={`/posts/${post._id}`}/>
+      {post.source && (
+        <p>
+          source : <span className="font-bold">{post.source}</span>
+        </p>
+      )}
+      <SharePost POSTURL={`/posts/${post._id}`} />
       {post.categories?.length > 0 && (
         <div className="my-3 flex items-center gap-3">
           <span className="font-bold">Categories:</span>

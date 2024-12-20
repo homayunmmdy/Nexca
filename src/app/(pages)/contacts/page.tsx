@@ -1,9 +1,9 @@
 "use client";
+import { Form } from "@/components";
+import { CONTACTS_API_URL } from "@/config/apiConstants";
 import React from "react";
 import ContactsBg from "./components/ContactsBg";
-import { Form } from "@/app/components/shared/Form";
 import ContactsInfo from "./components/ContactsInfo";
-import { CONTACTS_API_URL } from "@/config/apiConstants";
 
 const ContactsPage: React.FC = () => {
   const initalData = { name: "", email: "", message: "" };
@@ -14,7 +14,11 @@ const ContactsPage: React.FC = () => {
           <div className="mx-4 flex flex-wrap justify-center lg:justify-between">
             <div className="order-2 w-full px-4 lg:order-1 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg p-8 shadow-2xl sm:p-12">
-                <Form buttonText="send" initalData={initalData} API={CONTACTS_API_URL} />
+                <Form
+                  buttonText="send"
+                  initalData={initalData}
+                  API={CONTACTS_API_URL}
+                />
                 <ContactsBg />
               </div>
             </div>
