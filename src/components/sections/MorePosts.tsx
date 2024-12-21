@@ -18,7 +18,7 @@ const MorePosts: React.FC = () => {
   return (
     <>
       <div className="mx-auto rounded-xl bg-indigo-600 p-5">
-        <Titr resetStyle={true} style="bg-green-400 text-center p-5 flex justify-center items-center rounded-xl mb-5 font-bold text-xl text-white" title="More Posts" item="text-left" />
+        <Titr resetStyle={true} style="bg-[#FFBB00] text-center p-5 flex justify-center items-center rounded-xl mb-5 font-bold text-xl text-black" title="More Posts" item="text-left" />
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {data?.map((post: PostsCashType) => (
             <PostCard key={post._id} post={post} />

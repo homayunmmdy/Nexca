@@ -48,6 +48,7 @@ const ServicesPage: React.FC = () => {
 
   return (
     <>
+    <title>Explore our posts in each services | Nexca | The Ultimate Admin Panel</title>
       <ServicesNav />
       <div className="mx-auto p-4 md:p-10">
         <div className="grid grid-cols-12 md:gap-9">

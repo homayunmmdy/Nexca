@@ -10,16 +10,16 @@ const PostCard = ({ post }: { post: PostsCashType }) => {
           <figure className="px-5 pt-5">
             <Image
               src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
-              alt={post.title.slice(0, 70)}
+              alt=""
               width={662.172}
               height={372.469}
               className="aspect-video rounded-xl bg-gray-600 object-cover"
             />
           </figure>
           <section className="card-body items-center p-5 text-center">
-            <h3 className="card-title">
+            <h2 className="card-title">
               {post.title.slice(0, 70).slice(0, 100)}
-            </h3>
+            </h2>
             <p>{post.description.slice(0, 60)}</p>
           </section>
         </Link>

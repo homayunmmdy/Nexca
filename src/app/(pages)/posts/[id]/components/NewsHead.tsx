@@ -11,7 +11,7 @@ const NewsHead = ({ title, createdAt }: Props) => {
   };
   return (
     <>
-      <div className="bg-indigo-500">
+      <div className="bg-indigo-700">
         <div className="mx-auto w-[94%] px-4 py-8 md:w-[92%]">
           <h1 className="text-center text-4xl font-extrabold text-white">
             {title}
