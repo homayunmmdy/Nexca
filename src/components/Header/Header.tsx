@@ -1,13 +1,13 @@
 "use client";
-import { Button, LogoSec, ThemeToggle } from "@/components";
+import { ThemeToggle } from "@/components";
 import SiteConfig from "@/config/stie";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import GitHubBtn from "./GitHubBtn";
 import HamburgerIcon from "./HamburgerIcon";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
-import GitHubBtn from "./GitHubBtn";
+import SearchInput from "./SearchInput";
 
 const Header = () => {
   const pathname = usePathname();
@@ -19,18 +19,23 @@ const Header = () => {
   };
   return (
     <>
-      <header className="navbar fixed left-0 right-0 top-0 z-[50] mx-auto my-2 w-[94%] rounded-xl border-2 border-indigo-400 bg-base-100 shadow-xl transition-all hover:border-indigo-700 md:w-[92%]">
-        <div className="navbar">
-          <div className="navbar-start">
+      <header className="navbar fixed left-0 right-0 top-0 z-[50] border-b-2 border-indigo-400 bg-base-100 shadow-xl transition-all hover:border-indigo-700">
+        <div className="navbar mx-auto w-[94%] md:w-[92%]">
+          <div className="navbar-start lg:w-[30%]">
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
-            <LogoSec siteName={SiteConfig.name} LogoOnlyInDesktop={true} />
+            <div className="flex items-center gap-2">
+              <h1 className="text-xl font-bold text-indigo-700 md:text-2xl lg:text-3xl">
+                {SiteConfig.name}
+              </h1>
+              <SearchInput className="hidden lg:block" />
+            </div>
           </div>
-          <div className="navbar-center hidden lg:flex">
+          <div className="navbar-center hidden lg:flex lg:w-[50%] lg:justify-end">
             <HeaderMenu pathname={pathname} nav={nav} />
           </div>
-          <div className="navbar-end gap-3">
+          <div className="navbar-end gap-3 lg:w-[20%]">
             <ThemeToggle />
-            <GitHubBtn link={SiteConfig.github}/>
+            <GitHubBtn link={SiteConfig.github} />
           </div>
         </div>
       </header>
