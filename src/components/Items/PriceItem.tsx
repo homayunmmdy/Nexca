@@ -8,7 +8,7 @@ const PriceItem = ({ item }: { item: PriceItemType }) => {
     <div
       className={`mx-auto flex max-w-lg flex-col items-start space-y-8 rounded-3xl border ${
         item.special ? "border-indigo-700 border-2 shadow-xl" : "border-gray-200"
-      }  p-6 text-black xl:p-8`}
+      }  p-6  xl:p-8`}
     >
       <h3 className="text-lg font-normal">{item.titr}</h3>
       <div className="my-8 flex items-baseline justify-center">
@@ -16,14 +16,14 @@ const PriceItem = ({ item }: { item: PriceItemType }) => {
         <span>/month</span>
       </div>
 
-      <p className="font-light text-black sm:text-sm">{item.description}</p>
+      <p className="font-light sm:text-sm">{item.description}</p>
       <Link
         href="/admin"
         className="w-full cursor-pointer rounded-md bg-gray-900 p-3 text-center text-sm font-semibold text-white shadow-sm hover:-translate-y-1"
       >
         Get started
       </Link>
-      <ul role="list" className="mb-8 space-y-4 text-left text-sm text-black">
+      <ul role="list" className="mb-8 space-y-4 text-left text-sm">
         {item.features.map((feature) => (
           <li key={feature.id} className="flex items-center space-x-3">
             {feature.mark ? (
