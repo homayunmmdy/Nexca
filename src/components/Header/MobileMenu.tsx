@@ -16,6 +16,7 @@ const MobileMenu = ({ pathname, nav }: MenuTypes) => {
               {pathname === item.link ? (
                 <Link
                   href={item.link}
+                  title={item.link}
                   className="block w-full rounded-xl bg-indigo-700 p-2 text-center text-white hover:bg-indigo-700"
                 >
                   {item.name}
@@ -24,6 +25,7 @@ const MobileMenu = ({ pathname, nav }: MenuTypes) => {
                 <Link
                   className="block w-full rounded-xl border-2 border-indigo-700 p-2 text-center"
                   href={item.link}
+                  title={item.link}
                 >
                   {item.name}
                 </Link>

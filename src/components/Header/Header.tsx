@@ -1,6 +1,7 @@
 "use client";
 import { ThemeToggle } from "@/components";
 import SiteConfig from "@/config/stie";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import GitHubBtn from "./GitHubBtn";
@@ -25,7 +26,9 @@ const Header = () => {
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
             <div className="flex items-center gap-2">
               <h1 className="text-xl font-bold text-indigo-700 md:text-2xl lg:text-3xl">
-                {SiteConfig.name}
+                <Link href="/" title={SiteConfig.name}>
+                  {SiteConfig.name}
+                </Link>
               </h1>
               <SearchInput className="hidden lg:block" />
             </div>
