@@ -10,7 +10,7 @@ const FooterLinks = () => {
     <>
       <div className="col-span-full block text-center min-[500px]:col-span-6 md:col-span-4 xl:col-span-3 xl:py-16 xl:pl-5 xl:text-left">
         <p className="mb-9 text-lg font-bold">Get In Touch</p>
-        <ul className="gap-6transition-all grid gap-4 duration-500">
+        <ul className="grid justify-center gap-6 transition-all duration-500">
           <li>
             <Link
               className="flex items-center gap-2 hover:text-indigo-700"
