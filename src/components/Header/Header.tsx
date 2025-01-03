@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <>
       <header className="navbar fixed left-0 right-0 top-0 z-[50] border-b-2 border-indigo-400 bg-base-100 shadow-xl transition-all hover:border-indigo-700">
-        <div className="navbar mx-auto w-[94%] md:w-[92%]">
+        <div className="navbar mx-auto max-w-7xl">
           <div className="navbar-start lg:w-[30%]">
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
             <div className="flex items-center gap-2">
