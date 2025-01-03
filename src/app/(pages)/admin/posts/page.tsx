@@ -1,15 +1,15 @@
 "use client";
-import { Input, Spinner } from "@/components";
-import { POST_API_URL } from "@/config/apiConstants";
-import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
+import { Button, Input, Spinner } from "@/components";
+import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/config/apiConstants";
+import { ALL_POSTS_QUERY_KEY, SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
-import { PostsCashType } from "@/types/CashTypes";
+import { PostsCashType, SectionCashType, ServicesCashType } from "@/types/CashTypes";
+import { checkMaster } from "@/util/Util";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FiSearch, FiFilter } from "react-icons/fi";
+import { FiFilter, FiSearch } from "react-icons/fi";
 import { ItemsTable, Pagination } from "../components/elements";
 import ErrorText from "../components/elements/ErrorText";
-import { checkMaster } from "@/util/Util";
 
 const Posts = () => {
   const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
@@ -31,8 +31,17 @@ const Posts = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   // Extract unique services and sections from posts
-  const services = Array.from(new Set(posts.map((post: PostsCashType) => post.services).filter(Boolean)));
-  const sections = Array.from(new Set(posts.map((post: PostsCashType) => post.section).filter(Boolean)));
+  const { data: services, loading: serviceLoading } = useFetch(
+    SERVICES_QUERY_KEY,
+    SERVICES_API_URL
+  );
+  // const sections = Array.from(
+  //   new Set(posts.map((post: PostsCashType) => post.section).filter(Boolean))
+  // );
+  const { data: sections, loading: sectionLoading } = useFetch(
+    SECTIONS_QUERY_KEY,
+    SECTIONS_API_URL
+  );
 
   useEffect(() => {
     setPosts(data?.data || []);
@@ -45,7 +54,7 @@ const Posts = () => {
       if (searchQuery) params.set("query", searchQuery);
       if (selectedService) params.set("service", selectedService);
       if (selectedSection) params.set("section", selectedSection);
-      
+
       router.push(`?${params.toString()}`);
     }, 400);
 
@@ -57,16 +66,23 @@ const Posts = () => {
   const isMaster = checkMaster();
 
   const filteredPosts = posts
-    .sort((a: { createdAt: string }, b: { createdAt: string }) => 
-      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    .sort(
+      (a: { createdAt: string }, b: { createdAt: string }) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     )
     .filter((post: PostsCashType) => {
-      const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesService = !selectedService || post.services === selectedService;
-      const matchesSection = !selectedSection || post.section === selectedSection;
+      const matchesSearch = post.title
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+      const matchesService =
+        !selectedService || post.services === selectedService;
+      const matchesSection =
+        !selectedSection || post.section === selectedSection;
       const matchesMasterEditor = isMaster || !post.masterEditor;
 
-      return matchesSearch && matchesService && matchesSection && matchesMasterEditor;
+      return (
+        matchesSearch && matchesService && matchesSection && matchesMasterEditor
+      );
     });
 
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
@@ -108,65 +124,69 @@ const Posts = () => {
               placeholder="Search posts"
               value={searchQuery}
               onChange={handleSearch}
-              icon={<FiSearch size={24} className="h-4 w-4 opacity-70" color="#4F46E5" />}
+              icon={
+                <FiSearch
+                  size={24}
+                  className="h-4 w-4 opacity-70"
+                  color="#4F46E5"
+                />
+              }
               style="w-full"
               color="input-primary"
             />
           </div>
-          <button
+          <Button
+            color="btn-primary"
             onClick={() => setIsFilterOpen(!isFilterOpen)}
-            className="flex items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            className="btn-outline"
           >
             <FiFilter className="h-4 w-4" />
             Filters
-          </button>
+          </Button>
         </div>
 
         {isFilterOpen && (
-          <div className="rounded-md border border-gray-200 bg-white p-4 shadow-sm">
+          <div className="rounded-md border border-indigo-600 p-4 shadow-sm">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
+                <label className="mb-1 block text-sm font-medium">
                   Service
                 </label>
                 <select
                   value={selectedService}
                   onChange={handleServiceChange}
-                  className="w-full rounded-md border border-gray-300 px-3 py-2"
+                  className="select select-primary mb-2 w-full"
                 >
                   <option value="">All Services</option>
-                  {services.map((service) => (
-                    <option key={service} value={service}>
-                      {service}
+                  {services.map((service: ServicesCashType) => (
+                    <option key={service._id} value={service.secid}>
+                      {service.name}
                     </option>
                   ))}
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
+                <label className="mb-1 block text-sm font-medium">
                   Section
                 </label>
                 <select
                   value={selectedSection}
                   onChange={handleSectionChange}
-                  className="w-full rounded-md border border-gray-300 px-3 py-2"
+                  className="select select-primary mb-2 w-full"
                 >
                   <option value="">All Sections</option>
-                  {sections.map((section) => (
-                    <option key={section} value={section}>
-                      {section}
+                  {sections.map((section: SectionCashType) => (
+                    <option key={section.__v} value={section.secid}>
+                      {section.name}
                     </option>
                   ))}
                 </select>
               </div>
             </div>
             <div className="mt-4 flex justify-end">
-              <button
-                onClick={clearFilters}
-                className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
+              <Button onClick={clearFilters} color="btn-primary">
                 Clear Filters
-              </button>
+              </Button>
             </div>
           </div>
         )}
