@@ -1,6 +1,7 @@
 import { SharePostType, SocialMediaType } from "@/types/entities";
 import Link from "next/link";
-import { FaLinkedinIn } from "react-icons/fa6";
+import { FaMediumM, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const SharePost = ({ POSTURL, title, description }: SharePostType) => {
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -16,12 +17,36 @@ const SharePost = ({ POSTURL, title, description }: SharePostType) => {
       icon: <FaLinkedinIn size={20} />,
       link: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
     },
+    {
+      id: 2,
+      name: "Medium",
+      icon: <FaMediumM size={20} />,
+      link: `https://medium.com/new-story?url=${encodedUrl}`,
+    },
+    {
+      id: 3,
+      name: "X",
+      icon: <FaXTwitter size={20} />,
+      link: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    },
+    {
+      id: 4,
+      name: "Telegram",
+      icon: <FaTelegramPlane size={20} />,
+      link: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
+    },
+    {
+      id: 5,
+      name: "Whatsapp",
+      icon: <FaWhatsapp size={20} />,
+      link: `https://api.whatsapp.com/send?text=${encodedTitle} ${encodedUrl}`,
+    },
   ];
   return (
     <>
       <div className="my-3 flex items-center gap-1">
         <span className="pr-2 font-bold">Share :</span>
-        <ul>
+        <ul className="flex items-center gap-2">
           {socialMedia.map((media: SocialMediaType) => (
             <li className="flex items-center gap-2" key={media.id}>
               <Link
