@@ -55,7 +55,7 @@ const NewsBody = ({ post }: { post: any }) => {
           source : <span className="font-bold">{post.source}</span>
         </p>
       )}
-      <SharePost POSTURL={`/posts/${post._id}`} />
+      <SharePost title={post.title} description={post.description} POSTURL={`/posts/${post._id}`} />
       {post.categories?.length > 0 && (
         <div className="my-3 flex items-center gap-3">
           <span className="font-bold">Categories:</span>

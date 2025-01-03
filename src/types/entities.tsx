@@ -56,3 +56,15 @@ export type PriceItemType = {
   description: string;
   features: { id: number; name: string; mark: boolean }[];
 };
+
+export type SharePostType = {
+  POSTURL: string;
+  title: string;
+  description: string;
+}
+export type SocialMediaType = {
+  id: number;
+  name: string;
+  icon: JSX.Element;
+  link: string;
+}
