@@ -1,26 +1,19 @@
 import { CONTRIBUTION_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
-import { getById } from "@/util/ServerUtil";
 import { EditContributionForm } from "../../components";
+import { FetchDataForEditPage } from "../../components/util/Util";
 
-let updateTicketData;
-const SingleContributionPage = async ({
+const EditAdminContribution = async ({
   params,
 }: {
   params: SinglePagepParamsType;
 }) => {
-  const EDITMODE = params.id === "new" ? false : true;
+  const updateData = await FetchDataForEditPage(
+    CONTRIBUTION_API_URL,
+    params.id
+  );
 
-  if (EDITMODE) {
-    updateTicketData = await getById(CONTRIBUTION_API_URL, params.id);
-    updateTicketData = updateTicketData.document || {};
-  } else {
-    updateTicketData = {
-      _id: "new",
-    };
-  }
-
-  return <EditContributionForm contribute={updateTicketData} />;
+  return <EditContributionForm contribute={updateData} />;
 };
 
-export default SingleContributionPage;
+export default EditAdminContribution;

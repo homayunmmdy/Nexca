@@ -3,14 +3,14 @@ import { SinglePagepParamsType } from "@/types/entities";
 import { EditPostForm } from "../../components";
 import { FetchDataForEditPage } from "../../components/util/Util";
 
-const SinglePostsPage = async ({
+const EditAdminPosts = async ({
   params,
 }: {
   params: SinglePagepParamsType;
 }) => {
-  const updatePostData = await FetchDataForEditPage(POST_API_URL, params.id);
+  const updateData = await FetchDataForEditPage(POST_API_URL, params.id);
 
-  return <EditPostForm post={updatePostData} />;
+  return <EditPostForm post={updateData} />;
 };
 
-export default SinglePostsPage;
+export default EditAdminPosts;

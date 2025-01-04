@@ -1,22 +1,12 @@
 import { TICKETS_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
-import { getById } from "@/util/ServerUtil";
 import { EditTicketForm } from "../../admin/components";
+import { FetchDataForEditPage } from "../../admin/components/util/Util";
 
-let updateTicketData;
 const TicketPage = async ({ params }: { params: SinglePagepParamsType }) => {
-  const EDITMODE = params.id === "new" ? false : true;
+  const updateData = await FetchDataForEditPage(TICKETS_API_URL, params.id);
 
-  if (EDITMODE) {
-    updateTicketData = await getById(TICKETS_API_URL, params.id);
-    updateTicketData = updateTicketData.document || {};
-  } else {
-    updateTicketData = {
-      _id: "new",
-    };
-  }
-
-  return <EditTicketForm ticket={updateTicketData} />;
+  return <EditTicketForm ticket={updateData} />;
 };
 
 export default TicketPage;

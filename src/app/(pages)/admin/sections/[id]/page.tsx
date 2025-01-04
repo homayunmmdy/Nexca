@@ -1,25 +1,16 @@
 import { SECTIONS_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
-import { getById } from "@/util/ServerUtil";
 import { EditSectionForm } from "../../components";
+import { FetchDataForEditPage } from "../../components/util/Util";
 
-let updatesectionData;
-const EditSectionPage = async ({
+const EditAdminSections = async ({
   params,
 }: {
   params: SinglePagepParamsType;
 }) => {
-  const EDITMODE = params.id === "new" ? false : true;
+  const updateData = await FetchDataForEditPage(SECTIONS_API_URL, params.id);
 
-  if (EDITMODE) {
-    updatesectionData = await getById(SECTIONS_API_URL, params.id);
-    updatesectionData = updatesectionData.document || {};
-  } else {
-    updatesectionData = {
-      _id: "new",
-    };
-  }
-  return <EditSectionForm data={updatesectionData} />;
+  return <EditSectionForm data={updateData} />;
 };
 
-export default EditSectionPage;
+export default EditAdminSections;

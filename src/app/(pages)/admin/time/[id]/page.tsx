@@ -1,25 +1,16 @@
 import { TIMELINE_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
-import { getById } from "@/util/ServerUtil";
 import { EditTimeLineForm } from "../../components";
+import { FetchDataForEditPage } from "../../components/util/Util";
 
-let updateservicesData;
-const EditServicesPage = async ({
+const EditAdmniTime = async ({
   params,
 }: {
   params: SinglePagepParamsType;
 }) => {
-  const EDITMODE = params.id === "new" ? false : true;
+  const updateData = await FetchDataForEditPage(TIMELINE_API_URL, params.id);
 
-  if (EDITMODE) {
-    updateservicesData = await getById(TIMELINE_API_URL, params.id);
-    updateservicesData = updateservicesData.document || {};
-  } else {
-    updateservicesData = {
-      _id: "new",
-    };
-  }
-  return <EditTimeLineForm data={updateservicesData} />;
+  return <EditTimeLineForm data={updateData} />;
 };
 
-export default EditServicesPage;
+export default EditAdmniTime;

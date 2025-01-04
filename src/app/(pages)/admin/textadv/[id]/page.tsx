@@ -1,25 +1,16 @@
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
-import { getById } from "@/util/ServerUtil";
 import { EditTextAdvForm } from "../../components";
+import { FetchDataForEditPage } from "../../components/util/Util";
 
-let updatetextadvData;
-const EditSectionPage = async ({
+const EditAdminTextAdv = async ({
   params,
 }: {
   params: SinglePagepParamsType;
 }) => {
-  const EDITMODE = params.id === "new" ? false : true;
+  const updateData = await FetchDataForEditPage(TEXTADV_API_URL, params.id);
 
-  if (EDITMODE) {
-    updatetextadvData = await getById(TEXTADV_API_URL, params.id);
-    updatetextadvData = updatetextadvData.document || {};
-  } else {
-    updatetextadvData = {
-      _id: "new",
-    };
-  }
-  return <EditTextAdvForm data={updatetextadvData} />;
+  return <EditTextAdvForm data={updateData} />;
 };
 
-export default EditSectionPage;
+export default EditAdminTextAdv;
