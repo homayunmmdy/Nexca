@@ -10,7 +10,7 @@ const SiteConfig = {
   lang: "en",
   dir: "ltr",
   slogan:
-    "Nexca is your go-to platform for creating powerful admin panels. Manage data, share thoughts, and connect with your audience easily, whether you're an agency or an individual looking to build your brand.",
+    "Experience the power of an open-source CMS built with Next.js. Effortlessly manage content, streamline workflows, and connect with your audience—perfect for agencies, bloggers, and creators.",
   // media
   email: "homayoun763@gmail.com",
   github: "https://github.com/homayunmmdy/Nexca",
