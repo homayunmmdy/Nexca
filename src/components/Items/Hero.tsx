@@ -95,8 +95,8 @@ const Hero: React.FC = () => {
                 variants={contentVariants}
                 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl xl:text-6xl"
               >
-                Build Your
-                <FullHoverAnimation text="Own Blog Website" link="demo" />
+                Explore the
+                <FullHoverAnimation text="Web Demo" link="demo" />
                 Right Now
               </motion.h2>
               <motion.p variants={contentVariants} className="mt-8">
