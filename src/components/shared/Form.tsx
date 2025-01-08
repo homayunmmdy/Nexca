@@ -1,18 +1,28 @@
 "use client";
 import { Button, Input, Textarea } from "@/components";
+import { ShareFormType } from "@/types/entities";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaRegMessage, FaUser } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 
-interface Props {
-  buttonText: string;
-  initalData: any;
-  API: string;
-}
+/**
+ * @typedef {Object} Props - The properties passed to the Form component.
+ * @property {string} buttonText - The text to display on the submit button.
+ * @property {Object} initalData - The initial data for the form fields.
+ * @property {string} API - The API endpoint to submit the form data to.
+ */
 
-const Form = ({ buttonText, initalData, API }: Props) => {
+/**
+ * A reusable form component that handles input fields for name, email, and message.
+ * It uses a custom FormHandler to manage form state and submission.
+ *
+ * @param {Props} props - The properties passed to the Form component.
+ * @returns {JSX.Element} - The rendered form component.
+ */
+
+const Form = ({ buttonText, initalData, API }: ShareFormType) => {
   const router = useRouter();
   const [formData, setFormData] = useState(initalData);
 

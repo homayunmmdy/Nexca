@@ -8,7 +8,7 @@ export type TitrType = {
   borderColor?: string;
   item: "text-center" | "text-left" | "text-right" | string;
   style?: string;
-  resetStyle? : boolean;
+  resetStyle?: boolean;
 };
 
 export type FeaturesType = {
@@ -61,17 +61,23 @@ export type SharePostType = {
   POSTURL: string;
   title: string;
   description: string;
-}
+};
 export type SocialMediaType = {
   id: number;
   name: string;
   icon: JSX.Element;
   link: string;
-}
+};
 
 export type FallbackProps = {
   error: Error;
   resetErrorBoundary: () => void;
   retryCount: number;
   setRetryCount: React.Dispatch<React.SetStateAction<number>>;
+};
+
+export type ShareFormType = {
+  buttonText: string;
+  initalData: any;
+  API: string;
 };
