@@ -1,5 +1,25 @@
 import { TextAdvCashType } from "@/types/CashTypes";
 
+/**
+ * @typedef {Object} TextAdvCashType
+ * @property {string} _id - The unique identifier for the text advertisement.
+ * @property {number} textadvid - The unique identifier for the text advertisement (numeric).
+ * @property {string} advname - The name of the advertisement.
+ * @property {string} body - The content of the advertisement.
+ * @property {string} link - The URL link associated with the advertisement.
+ * @property {string} createdAt - The timestamp when the advertisement was created.
+ * @property {string} updatedAt - The timestamp when the advertisement was last updated.
+ * @property {number} __v - The version key for the advertisement (used by MongoDB).
+ */
+
+/**
+ * A mock array of text advertisements for development purposes.
+ * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to "dev".
+ * Otherwise, the data should be fetched from the database.
+ *
+ * @type {TextAdvCashType[]}
+ */
+
 const TextAdvCash: TextAdvCashType[] = [
     {
       _id: "664dab349ddca5e2184ff317",

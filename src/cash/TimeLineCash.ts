@@ -1,5 +1,24 @@
 import { TimeLIneCashType } from "@/types/CashTypes";
 
+/**
+ * @typedef {Object} TimeLIneCashType
+ * @property {string} _id - The unique identifier for the timeline entry.
+ * @property {string} title - The title of the timeline entry.
+ * @property {string} date - The date associated with the timeline entry.
+ * @property {string} description - A detailed description of the timeline entry.
+ * @property {string} createdAt - The timestamp when the timeline entry was created.
+ * @property {string} updatedAt - The timestamp when the timeline entry was last updated.
+ * @property {number} __v - The version key for the timeline entry (used by MongoDB).
+ */
+
+/**
+ * A mock array of timeline entries for development purposes.
+ * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to "dev".
+ * Otherwise, the data should be fetched from the database.
+ *
+ * @type {TimeLIneCashType[]}
+ */
+
 const TimeLineCash: TimeLIneCashType[] = [
   {
     _id: "664db351473932f6a08928dd",

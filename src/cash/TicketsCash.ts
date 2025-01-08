@@ -1,5 +1,29 @@
 import { TicketsCashType } from "@/types/CashTypes";
 
+/**
+ * @typedef {Object} TicketsCashType
+ * @property {string} _id - The unique identifier for the ticket.
+ * @property {string} title - The title of the ticket.
+ * @property {string} description - A detailed description of the ticket.
+ * @property {string} body - The full content or details of the ticket.
+ * @property {number} priority - The priority level of the ticket (e.g., 1 for the lowest and  5 for high priority).
+ * @property {number} progress - The progress of the ticket (e.g., 0 for not started).
+ * @property {string} status - The current status of the ticket (e.g., "not started").
+ * @property {string} startTime - The timestamp when the ticket was started.
+ * @property {string} endTime - The timestamp when the ticket is expected to end.
+ * @property {string} createdAt - The timestamp when the ticket was created.
+ * @property {string} updatedAt - The timestamp when the ticket was last updated.
+ * @property {number} __v - The version key for the ticket (used by MongoDB).
+ */
+
+/**
+ * A mock array of tickets for development purposes.
+ * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to "dev".
+ * Otherwise, the data should be fetched from the database.
+ *
+ * @type {TicketsCashType[]}
+ */
+
 const TicketsCash: TicketsCashType[] = [
   {
     _id: "664db351473932f6a08928dd",
