@@ -1,12 +1,12 @@
 import { SectionCashType } from "@/types/CashTypes";
-import SectionData from "../../cash/SectionData";
+import SectionCash from "../../cash/SectionCash";
 
-describe("SectionData", () => {
+describe("Section Cash", () => {
   it("should have the correct structure", () => {
-    expect(Array.isArray(SectionData)).toBe(true);
-    expect(SectionData.length).toBeGreaterThan(0);
+    expect(Array.isArray(SectionCash)).toBe(true);
+    expect(SectionCash.length).toBeGreaterThan(0);
 
-    SectionData.forEach((service: SectionCashType) => {
+    SectionCash.forEach((service: SectionCashType) => {
       expect(service).toHaveProperty("_id");
       expect(service).toHaveProperty("name");
       expect(service).toHaveProperty("secid");
@@ -17,20 +17,20 @@ describe("SectionData", () => {
   });
 
   it("should not have non-empty values", () => {
-    SectionData.forEach((service: SectionCashType) => {
+    SectionCash.forEach((service: SectionCashType) => {
       expect(service.name.trim()).not.toBe("");
     });
   });
 
   it("should have show valid data string for date", () => {
-    SectionData.forEach((services: SectionCashType) => {
+    SectionCash.forEach((services: SectionCashType) => {
       expect(isNaN(Date.parse(services.createdAt))).toBeFalsy();
       expect(isNaN(Date.parse(services.updatedAt))).toBeFalsy();
     });
   });
 
   it("should have unique _id value", () => {
-    const idSet = new Set(SectionData.map((i) => i._id));
-    expect(idSet.size).toBe(SectionData.length);
+    const idSet = new Set(SectionCash.map((i) => i._id));
+    expect(idSet.size).toBe(SectionCash.length);
   });
 });

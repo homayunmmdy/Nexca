@@ -1,5 +1,25 @@
 import { ServicesCashType } from "@/types/CashTypes";
 
+/**
+ * @typedef {Object} ServicesCashType
+ * @property {string} _id - The unique identifier for the service.
+ * @property {string} name - The name of the service.
+ * @property {number} secid - The unique identifier for the section associated with the service (numeric).
+ * @property {string} imgurl - The URL of the image associated with the service.
+ * @property {string} description - A detailed description of the service.
+ * @property {string} createdAt - The timestamp when the service was created.
+ * @property {string} updatedAt - The timestamp when the service was last updated.
+ * @property {number} __v - The version key for the service (used by MongoDB).
+ */
+
+/**
+ * A mock array of services for development purposes.
+ * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to "dev".
+ * Otherwise, the data should be fetched from the database.
+ *
+ * @type {ServicesCashType[]}
+ */
+
 const ServicesCash: ServicesCashType[] = [
   {
     _id: "664dab349ddca5e2184ff317",

@@ -1,5 +1,36 @@
 import { PostsCashType } from "@/types/CashTypes";
 
+/**
+ * @typedef {Object} Category
+ * @property {number} id - The unique identifier for the category.
+ * @property {string} name - The name of the category.
+ */
+
+/**
+ * @typedef {Object} PostsCashType
+ * @property {string} _id - The unique identifier for the post.
+ * @property {string} title - The title of the post.
+ * @property {string} imgurl - The URL of the image associated with the post.
+ * @property {string} description - A detailed description of the post.
+ * @property {string} services - The number of services associated with the post.
+ * @property {string} section - The section to which the post belongs.
+ * @property {string} body - The HTML content of the post.
+ * @property {Category[]} categories - An array of categories associated with the post.
+ * @property {boolean} masterEditor - Indicates whether the post was created by a master editor.
+ * @property {string} source - The source of the post (e.g., "mangnitify").
+ * @property {string} createdAt - The timestamp when the post was created.
+ * @property {string} updatedAt - The timestamp when the post was last updated.
+ * @property {number} __v - The version key for the post (used by MongoDB).
+ */
+
+/**
+ * A mock array of posts for development purposes.
+ * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to "dev".
+ * Otherwise, the data should be fetched from the database.
+ *
+ * @type {PostsCashType[]}
+ */
+
 const PostsCash: PostsCashType[] = [
   {
     _id: "664db351473932f6a08928dd",
