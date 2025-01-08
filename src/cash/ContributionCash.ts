@@ -1,5 +1,25 @@
 import { ContributeCashType } from "@/types/CashTypes";
 
+/**
+ * @typedef {Object} ContributeCashType
+ * @property {string} _id - The unique identifier for the contribution.
+ * @property {string} title - The title of the contribution.
+ * @property {string} description - A detailed description of the contribution.
+ * @property {string} link - An optional link associated with the contribution.
+ * @property {string} date - The date associated with the contribution.
+ * @property {string} createdAt - The timestamp when the contribution was created.
+ * @property {string} updatedAt - The timestamp when the contribution was last updated.
+ * @property {number} __v - The version key for the contribution (used by MongoDB).
+ */
+
+/**
+ * A mock array of cash contributions for development purposes.
+ * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to "dev".
+ * Otherwise, the data should be fetched from the database.
+ *
+ * @type {ContributeCashType[]}
+ */
+
 const ContributionCash: ContributeCashType[] = [
   {
     _id: "664db351373934f6a08928dd",

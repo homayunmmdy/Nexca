@@ -8,13 +8,13 @@ import { DeleteBlock } from "../components/elements";
 import ErrorText from "../components/elements/ErrorText";
 
 const EmailsPage = () => {
-  const { data: emailData, loading } = useFetch(EMAIL_QUERY_KEY, EMAIL_API_URL);
+  const { data: emails, loading } = useFetch(EMAIL_QUERY_KEY, EMAIL_API_URL);
   if (loading) {
     return <Spinner />;
   }
   return (
     <div className="overflow-x-auto p-5">
-       {emailData?.length === 0 ? (
+       {emails?.length === 0 ? (
           <ErrorText>There are currently no emails listed.</ErrorText>
         ) : (
           <table className="table table-xs">
@@ -24,7 +24,7 @@ const EmailsPage = () => {
               <th>delete</th>
             </tr>
           </thead>
-          {emailData?.map((data: EmailCashType) => (
+          {emails?.map((data: EmailCashType) => (
             <tbody key={data._id}>
               <tr>
                 <td>{data.email}</td>

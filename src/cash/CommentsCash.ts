@@ -1,5 +1,25 @@
 import { CommentsCashType } from "@/types/CashTypes";
 
+/**
+ * @typedef {Object} Comment
+ * @property {string} _id - The unique identifier for the comment.
+ * @property {string} postId - The unique identifier of the post this comment belongs to.
+ * @property {string} name - The name of the commenter.
+ * @property {string} email - The email of the commenter.
+ * @property {string} message - The content of the comment.
+ * @property {string} createdAt - The timestamp when the comment was created.
+ * @property {string} updatedAt - The timestamp when the comment was last updated.
+ * @property {number} __v - The version key for the comment (used by MongoDB).
+ */
+
+/**
+ * A mock array of comments for development purposes.
+ * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to "dev".
+ * Otherwise, the data should be fetched from the database.
+ *
+ * @type {Comment[]}
+ */
+
 const CommentsCash: CommentsCashType[] = [
   {
     _id: "6641b06d0caf3407cd78b61e",
@@ -36,7 +56,8 @@ const CommentsCash: CommentsCashType[] = [
     postId: "664db351373934f6a08928dd",
     name: "max",
     email: "max@gmail.com",
-    message: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptate",
+    message:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptate",
     createdAt: "2024-05-21T11:50:48.482Z",
     updatedAt: "2024-05-21T11:50:48.482Z",
     __v: 0,

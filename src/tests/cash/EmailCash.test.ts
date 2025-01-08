@@ -1,12 +1,12 @@
 import { EmailCashType } from "@/types/CashTypes";
-import EmailData from "../../cash/EmailData";
+import EmailCash from "../../cash/EmailCash";
 
-describe("EmailData", () => {
+describe("Email Cash", () => {
   it("should have the correct structure", () => {
-    expect(Array.isArray(EmailData)).toBe(true);
-    expect(EmailData.length).toBeGreaterThan(0);
+    expect(Array.isArray(EmailCash)).toBe(true);
+    expect(EmailCash.length).toBeGreaterThan(0);
 
-    EmailData.forEach((email: EmailCashType) => {
+    EmailCash.forEach((email: EmailCashType) => {
       expect(email).toHaveProperty("_id");
       expect(email).toHaveProperty("email");
       expect(email).toHaveProperty("createdAt");
@@ -17,20 +17,20 @@ describe("EmailData", () => {
 
   it("should have valid email addresses", () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    EmailData.forEach((email: EmailCashType) => {
+    EmailCash.forEach((email: EmailCashType) => {
       expect(email.email).toMatch(emailRegex);
     });
   });
 
   it("should have valid date string for createdAt and updateAt", () => {
-    EmailData.forEach((email: EmailCashType) => {
+    EmailCash.forEach((email: EmailCashType) => {
       expect(isNaN(Date.parse(email.createdAt))).toBeFalsy();
       expect(isNaN(Date.parse(email.updatedAt))).toBeFalsy();
     });
   });
 
   it("should have unique _id value", () => {
-    const idSet = new Set(EmailData.map((i) => i._id));
-    expect(idSet.size).toBe(EmailData.length);
+    const idSet = new Set(EmailCash.map((i) => i._id));
+    expect(idSet.size).toBe(EmailCash.length);
   });
 });
