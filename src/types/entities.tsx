@@ -68,3 +68,10 @@ export type SocialMediaType = {
   icon: JSX.Element;
   link: string;
 }
+
+export type FallbackProps = {
+  error: Error;
+  resetErrorBoundary: () => void;
+  retryCount: number;
+  setRetryCount: React.Dispatch<React.SetStateAction<number>>;
+};
