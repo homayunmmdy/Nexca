@@ -1,7 +1,6 @@
 import mongoose, { Schema } from "mongoose";
-import { defaultSchemaOptions } from "./schemaOptions";
-mongoose.connect(process.env.MONGODB_URI as string);
-mongoose.Promise = global.Promise;
+import { defaultSchemaOptions } from "./schemaOptions"; // Importing default schema options 
+import './ConnetDB'; // Ensure the database connection is established
 
 const EmailsSchema = new Schema(
   {

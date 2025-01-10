@@ -1,14 +1,6 @@
-/**
- * @file Module for defining and exporting the Post model using Mongoose.
- * @module models/Comments
- */
-
 import mongoose, { Schema } from "mongoose";
-import { defaultSchemaOptions } from "./schemaOptions";
-// Connect to MongoDB using the URI from environment variables
-mongoose.connect(process.env.MONGODB_URI as string);
-// Use global Promise for Mongoose promises
-mongoose.Promise = global.Promise;
+import { defaultSchemaOptions } from "./schemaOptions"; // Importing default schema options 
+import './ConnetDB'; // Ensure the database connection is established
 
 /**
  * Schema definition for the Post model.
