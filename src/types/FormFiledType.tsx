@@ -12,7 +12,6 @@ export type ButtonType = {
   color: `btn-${AllowedColors}` | null;
   children: React.ReactNode;
   ariaLabel?: string;
-  onClickEvent?: (e: any) => void;
   removeDefaultStyle?: boolean;
 }& ButtonHTMLAttributes<HTMLButtonElement> ;
 
