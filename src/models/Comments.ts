@@ -4,6 +4,7 @@
  */
 
 import mongoose, { Schema } from "mongoose";
+import { defaultSchemaOptions } from "./schemaOptions";
 // Connect to MongoDB using the URI from environment variables
 mongoose.connect(process.env.MONGODB_URI as string);
 // Use global Promise for Mongoose promises
@@ -28,9 +29,7 @@ const CommentsSchema = new Schema(
     email: String,
     message: String,
   },
-  {
-    timestamps: true,
-  }
+  defaultSchemaOptions
 );
 
 /**

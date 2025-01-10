@@ -1,4 +1,5 @@
 import mongoose, { Schema } from "mongoose";
+import { defaultSchemaOptions } from "./schemaOptions";
 mongoose.connect(process.env.MONGODB_URI as string);
 mongoose.Promise = global.Promise;
 
@@ -9,9 +10,7 @@ const TextAdvSchema = new Schema(
     body: String,
     link: String,
   },
-  {
-    timestamps: true,
-  }
+  defaultSchemaOptions
 );
 
 const TextAdv =

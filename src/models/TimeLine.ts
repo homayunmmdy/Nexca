@@ -1,4 +1,5 @@
 import mongoose, { Schema } from "mongoose";
+import { defaultSchemaOptions } from "./schemaOptions";
 mongoose.connect(process.env.MONGODB_URI as string);
 mongoose.Promise = global.Promise;
 
@@ -8,9 +9,7 @@ const TimeLineSchema = new Schema(
     date: String,
     description: String,
   },
-  {
-    timestamps: true,
-  }
+  defaultSchemaOptions
 );
 
 const TimeLine =

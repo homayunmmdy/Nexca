@@ -1,4 +1,5 @@
 import mongoose, { Schema } from "mongoose";
+import { defaultSchemaOptions } from "./schemaOptions";
 mongoose.connect(process.env.MONGODB_URI as string);
 mongoose.Promise = global.Promise;
 
@@ -13,9 +14,7 @@ const sectionSchema = new Schema(
       type: Number,
     },
   },
-  {
-    timestamps: true,
-  }
+  defaultSchemaOptions
 );
 
 const Section =

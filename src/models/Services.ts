@@ -1,4 +1,5 @@
 import mongoose, { Schema } from "mongoose";
+import { defaultSchemaOptions } from "./schemaOptions";
 mongoose.connect(process.env.MONGODB_URI as string);
 mongoose.Promise = global.Promise;
 
@@ -15,9 +16,7 @@ const servicesSchema = new Schema(
     imgurl: String,
     description: String,
   },
-  {
-    timestamps: true,
-  }
+  defaultSchemaOptions
 );
 
 const Services =

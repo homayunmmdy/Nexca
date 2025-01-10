@@ -4,6 +4,7 @@
  */
 
 import mongoose, { Schema } from "mongoose";
+import { defaultSchemaOptions } from "./schemaOptions";
 // Connect to MongoDB using the URI from environment variables
 mongoose.connect(process.env.MONGODB_URI as string);
 // Use global Promise for Mongoose promises
@@ -38,9 +39,7 @@ const postSchema = new Schema(
     masterEditor: Boolean,
     source: String,
   },
-  {
-    timestamps: true, // Automatically add `createdAt` and `updatedAt` fields
-  }
+  defaultSchemaOptions
 );
 
 /**
