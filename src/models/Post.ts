@@ -1,14 +1,6 @@
-/**
- * @file Module for defining and exporting the Post model using Mongoose.
- * @module models/Post
- */
-
 import mongoose, { Schema } from "mongoose";
-import { defaultSchemaOptions } from "./schemaOptions";
-// Connect to MongoDB using the URI from environment variables
-mongoose.connect(process.env.MONGODB_URI as string);
-// Use global Promise for Mongoose promises
-mongoose.Promise = global.Promise;
+import { defaultSchemaOptions } from "./schemaOptions"; // Importing default schema options 
+import './ConnetDB'; // Ensure the database connection is established
 
 /**
  * Schema definition for the Post model.
@@ -39,12 +31,13 @@ const postSchema = new Schema(
     masterEditor: Boolean,
     source: String,
   },
-  defaultSchemaOptions
+  defaultSchemaOptions // Apply default schema options (e.g., timestamps)
 );
 
 /**
  * Post model representing a post in the database.
  * If the model already exists, it reuses it; otherwise, it creates a new one.
+ * This check prevents OverwriteModelError when the model is imported multiple times.
  * @type {mongoose.Model}
  */
 const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
