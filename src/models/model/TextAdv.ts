@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
-import { defaultSchemaOptions } from "./schemaOptions"; // Importing default schema options 
-import './ConnetDB'; // Ensure the database connection is established
+import "../ConnetDB"; // Ensure the database connection is established
+import { defaultSchemaOptions } from "../schemaOptions"; // Importing default schema options
 
 const TextAdvSchema = new Schema(
   {
