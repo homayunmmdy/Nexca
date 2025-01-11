@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-import { adminPages } from "@/config/site";
+import { adminPages } from "@/config/adminPage";
 import { LogoutButton } from "../../elements";
 
 const NavLink: React.FC = () => {
