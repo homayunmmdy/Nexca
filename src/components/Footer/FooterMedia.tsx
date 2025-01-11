@@ -1,9 +1,10 @@
+import React from 'react'
 import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaDev } from "react-icons/fa6";
 import { LuGithub } from "react-icons/lu";
 
-const FooterMedia = () => {
+const FooterMedia: React.FC = () => {
   return (
     <>
       <div className="flex gap-3 sm:justify-center">
