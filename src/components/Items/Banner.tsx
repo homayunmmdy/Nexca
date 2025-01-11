@@ -1,5 +1,5 @@
 import { Button } from "@/components";
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/config/site";
 import Link from "next/link";
 import { IoArrowUpCircleSharp } from "react-icons/io5";
 
@@ -41,7 +41,7 @@ const Banner = () => {
         <Link href="/services/8">
           <Button
             removeDefaultStyle={true}
-            color='btn-null'
+            color="btn-null"
             className="group relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-indigo-500 px-3 py-1 text-lg shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-indigo-500 before:transition-all before:duration-700 hover:text-gray-50 before:hover:left-0 before:hover:w-full before:hover:scale-150 before:hover:duration-700 lg:font-semibold"
           >
             <IoArrowUpCircleSharp

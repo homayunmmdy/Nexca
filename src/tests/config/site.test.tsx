@@ -8,7 +8,7 @@ import { SiCloudflarepages } from "react-icons/si";
 import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
 import { VscGraphScatter } from "react-icons/vsc";
-import SiteConfig, { adminPages } from "../../config/stie";
+import SiteConfig, { adminPages } from "../../config/site";
 
 describe("SiteConfig", () => {
   const originalEnv = process.env;

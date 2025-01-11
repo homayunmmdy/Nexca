@@ -1,5 +1,5 @@
 import { LogoSec } from "@/components";
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/config/site";
 import CopyRight from "./CopyRight";
 import EmailListForm from "./EmailListForm";
 import FooterLinks from "./FooterLinks";

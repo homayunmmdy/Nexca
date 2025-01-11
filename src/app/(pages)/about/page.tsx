@@ -1,6 +1,6 @@
 "use client";
 import useViewCount from "@/app/store/useViewCount";
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/config/site";
 import Link from "next/link";
 import { useEffect } from "react";
 
@@ -10,7 +10,6 @@ export default function About() {
   useEffect(() => {
     incrementPageView();
   }, [incrementPageView]);
-
 
   return (
     <div className="min-h-screen">

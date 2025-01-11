@@ -1,7 +1,14 @@
-/* All the style of this only for tiptap rich text editor and if you wants 
-to modifiy or add new remember to user #tiptap-style before you select 
-element to not have effect in other part of applications */
+/*
+ * Styles for the TipTap rich text editor.
+ * 
+ * All styles in this file are scoped to the `#tiptap-style` selector to ensure
+ * they only affect the TipTap editor and do not interfere with other parts of the application.
+ * 
+ * If you need to modify or add new styles, always prefix your selectors with `#tiptap-style`
+ * to maintain this scoping.
+ */
 
+/* Heading styles for the editor */
 #tiptap-style h1 {
   font-size: 2.125rem;
   font-weight: bold;
@@ -15,14 +22,17 @@ element to not have effect in other part of applications */
   font-weight: bold;
 }
 
+/* Ordered list styles */
 #tiptap-style ol li {
   list-style: decimal;
 }
 
+/* Unordered list styles */
 #tiptap-style ul li {
   list-style: disc;
 }
 
+/* Blockquote styles */
 #tiptap-style blockquote {
   font-size: 1.4em;
   margin: 5px auto;
@@ -35,9 +45,10 @@ element to not have effect in other part of applications */
   position: relative;
 }
 
+/* Blockquote opening quotation mark */
 #tiptap-style blockquote::before {
   font-family: Arial;
-  content: "\201C";
+  content: "\201C"; /* Unicode for opening quotation mark */
   color: #4a00ff;
   font-size: 2em;
   position: absolute;
@@ -47,34 +58,40 @@ element to not have effect in other part of applications */
   margin-top: 10px;
 }
 
+/* Blockquote closing quotation mark (empty for now) */
 #tiptap-style blockquote::after {
   content: "";
 }
 
+/* Padding for the ProseMirror editor container */
 #tiptap-style .ProseMirror {
   padding: 30px;
 }
 
+/* Link styles */
 #tiptap-style a {
   color: blue;
   text-decoration: underline;
 }
 
+/* Horizontal rule styles */
 #tiptap-style hr {
   margin-block: 10px;
 }
 
+/* Code block styles */
 #tiptap-style pre {
   background: #2e2b29;
   border-radius: 0.5rem;
   color: white;
   margin: 1.5rem 0;
   padding: 0.75rem 1rem;
-  white-space: pre-wrap; 
-  word-wrap: break-word; 
-  overflow-x: auto; 
+  white-space: pre-wrap; /* Preserve whitespace but wrap text */
+  word-wrap: break-word; /* Break long words */
+  overflow-x: auto; /* Add horizontal scroll if needed */
 }
 
+/* Character count styles */
 #tiptap-style .character-count,
 #tiptap-style .character-countcharacter-count--warning {
   align-items: center;
@@ -85,37 +102,41 @@ element to not have effect in other part of applications */
   margin: 1.5rem;
 }
 
+/* Character count icon color */
 #tiptap-style .character-count svg {
   color: #4338ca;
 }
 
+/* Warning state for character count */
 #tiptap-style .character-countcharacter-count--warning,
 #tiptap-style .character-countcharacter-count--warning svg {
   color: red;
 }
 
+/* Styles for the news body in the edit post form */
 #edit_post_form #news_body {
   max-height: 450px;
   overflow: auto;
 }
 
+/* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
+/* Scrollbar track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
  
-/* Handle */
+/* Scrollbar handle */
 ::-webkit-scrollbar-thumb {
   background: blue; 
   border-radius: 10px;
 }
 
-/* Handle on hover */
+/* Scrollbar handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #3F00E7; 
 }

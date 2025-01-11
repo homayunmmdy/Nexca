@@ -1,4 +1,4 @@
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/config/site";
 import React from "react";
 
 const PrivicyPolicyPage: React.FC = () => {

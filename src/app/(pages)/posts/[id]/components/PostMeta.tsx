@@ -1,4 +1,4 @@
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/config/site";
 import { CategoryType } from "@/types/CashTypes";
 import FormatTime from "../../components/FormatTime";
 

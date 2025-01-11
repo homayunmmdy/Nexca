@@ -1,6 +1,6 @@
 "use client";
 import { ThemeToggle } from "@/components";
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/config/site";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";

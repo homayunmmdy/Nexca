@@ -8,20 +8,21 @@ import {
   PriceList,
   StatcsSect,
 } from "@/components";
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
 
+/**
+ * Metadata configuration for the landing page.
+ * This includes SEO-friendly tags for search engines and social media platforms.
+ */
 export const metadata: Metadata = {
   title: SiteConfig.title.slice(0, 60),
   description: SiteConfig.description,
   keywords: SiteConfig.keywords,
-  publisher: SiteConfig.name,
   authors: SiteConfig.authors,
   robots: SiteConfig.robots,
-  verification: {
-    google: "gTVvXWgVqXKU6AfSRkuQa4O39VGzRS9zcA4y9eT3uUo",
-  },
+
   alternates: {
     canonical: SiteConfig.siteURL,
   },
@@ -49,9 +50,20 @@ export const metadata: Metadata = {
     },
   },
 };
-const Home: React.FC = () => {
+
+/**
+ * LandingPage Component
+ *
+ * This is the main landing page of the website. It includes various sections such as Hero, Features, Companies, etc.
+ * The page is designed to be SEO-friendly and optimized for user engagement.
+ *
+ * @returns {React.FC} - Returns a React Functional Component representing the landing page.
+ */
+
+const LandingPage: React.FC = () => {
   return (
     <>
+      {/* Hidden h1 tag for SEO purposes to include the title in the DOM */}
       <h1 className="hidden">{SiteConfig.title}</h1>
       <Hero />
       <Features />
@@ -65,4 +77,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default LandingPage;

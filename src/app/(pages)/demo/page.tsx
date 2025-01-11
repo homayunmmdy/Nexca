@@ -8,7 +8,7 @@ import {
   SliderSec,
   VerticalPostsSec,
 } from "@/components/sections";
-import SiteConfig from "@/config/stie";
+import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
 import ServicesNav from "./components/ServicesNav";
@@ -46,7 +46,7 @@ const DemoPage: React.FC = () => {
             <PostsSec />
           </div>
           <div className="col-span-12 md:col-span-3">
-            <LinearAds id={1}/>
+            <LinearAds id={1} />
           </div>
         </div>
       </div>
