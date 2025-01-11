@@ -4,7 +4,7 @@ import mongoose from "mongoose";
  * The MongoDB connection URI retrieved from the environment variables.
  * @type {string}
  */
-const MONGODB_URI = process.env.MONGODB_URI as string;
+const MONGODB_URI = process.env.MONDOGDB as string;
 
 // Check if the MONGODB_URI environment variable is defined
 if (!MONGODB_URI) {
