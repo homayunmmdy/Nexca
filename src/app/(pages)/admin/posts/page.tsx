@@ -206,7 +206,7 @@ const Posts = () => {
                 </thead>
                 <tbody>
                   {currentPosts.map((post: PostsCashType) => (
-                    <ItemsTable post={post} baseURL="posts" />
+                    <ItemsTable post={post} baseURL="posts" key={post._id} />
                   ))}
                 </tbody>
               </table>

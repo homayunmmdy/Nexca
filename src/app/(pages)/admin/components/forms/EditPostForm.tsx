@@ -131,6 +131,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               <h4>Categories</h4>
               {formData.categories.map((category) => (
                 <CategoryList
+                  key={category.id}
                   category={category}
                   onChange={handler.trakeChange}
                   onRemove={handler.removeCategory}

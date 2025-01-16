@@ -4,19 +4,19 @@ import React from "react";
 const PrivicyPolicyPage: React.FC = () => {
   return (
     <>
-      <div className="w-[94%] md:w-[92%] mx-auto">
-        <h1 className="font-bold text-2xl">Privacy Policy</h1>
+      <div className="mx-auto w-[94%] md:w-[92%]">
+        <h1 className="text-2xl font-bold">Privacy Policy</h1>
         <div className="py-8">
           <p className="mb-4">
             This privacy policy sets out how our website uses and protects any
             information that you give us when you use this website.
           </p>
 
-          <h2 className="text-2xl font-bold mb-2">Information We Collect</h2>
+          <h2 className="mb-2 text-2xl font-bold">Information We Collect</h2>
 
           <p className="mb-4">We may collect the following information:</p>
 
-          <ul className="list-disc list-inside mb-4">
+          <ul className="mb-4 list-inside list-disc">
             <li>Your name and contact information</li>
             <li>Demographic information</li>
             <li>
@@ -24,7 +24,7 @@ const PrivicyPolicyPage: React.FC = () => {
             </li>
           </ul>
 
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="mb-2 text-2xl font-bold">
             How We Use the Information
           </h2>
 
@@ -33,7 +33,7 @@ const PrivicyPolicyPage: React.FC = () => {
             with a better service, and in particular for the following reasons:
           </p>
 
-          <ul className="list-disc list-inside mb-4">
+          <ul className="mb-4 list-inside list-disc">
             <li>Internal record keeping</li>
             <li>Improving our products and services</li>
             <li>
@@ -48,7 +48,7 @@ const PrivicyPolicyPage: React.FC = () => {
             </li>
           </ul>
 
-          <h2 className="text-2xl font-bold mb-2">Security</h2>
+          <h2 className="mb-2 text-2xl font-bold">Security</h2>
 
           <p className="mb-4">
             We are committed to ensuring that your information is secure. In
@@ -57,11 +57,11 @@ const PrivicyPolicyPage: React.FC = () => {
             safeguard and secure the information we collect online.
           </p>
 
-          <h2 className="text-2xl font-bold mb-2">Cookies</h2>
+          <h2 className="mb-2 text-2xl font-bold">Cookies</h2>
 
           <p className="mb-4">
             A cookie is a small file that asks permission to be placed on your
-            computer's hard drive. Once you agree, the file is added, and the
+            computer&apos;s hard drive. Once you agree, the file is added, and the
             cookie helps analyze web traffic or lets you know when you visit a
             particular site. Cookies allow web applications to respond to you as
             an individual. The web application can tailor its operations to your
@@ -77,7 +77,7 @@ const PrivicyPolicyPage: React.FC = () => {
             us.
           </p>
 
-          <h2 className="text-2xl font-bold mb-2">Links to Other Websites</h2>
+          <h2 className="mb-2 text-2xl font-bold">Links to Other Websites</h2>
 
           <p className="mb-4">
             Our website may contain links to other websites of interest.
@@ -90,7 +90,7 @@ const PrivicyPolicyPage: React.FC = () => {
             website in question.
           </p>
 
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="mb-2 text-2xl font-bold">
             Controlling Your Personal Information
           </h2>
 
@@ -99,7 +99,7 @@ const PrivicyPolicyPage: React.FC = () => {
             information in the following ways:
           </p>
 
-          <ul className="list-disc list-inside mb-4">
+          <ul className="mb-4 list-inside list-disc">
             <li>
               If you have previously agreed to us using your personal
               information for direct marketing purposes, you may change your

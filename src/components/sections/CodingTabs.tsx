@@ -35,6 +35,7 @@ const CodingTabs = () => {
         {tabs.map(({ id, title }) => (
           <Button
             color="btn-primary"
+            key={id}
             onClick={() => setActiveTab(id as typeof activeTab)}
             className={activeTab !== id ? "btn-outline" : ""}
           >
@@ -46,7 +47,7 @@ const CodingTabs = () => {
       {/* Posts Grid */}
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {filteredPosts.map((post: PostsCashType) => (
-          <PostCard post={post} />
+          <PostCard post={post} key={post._id}/>
         ))}
       </div>
     </>

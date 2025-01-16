@@ -68,7 +68,7 @@ export default function About() {
         </p>
         <h2 className="mt-8 text-2xl font-semibold">Contact Us</h2>
         <p className="mt-4 text-lg">
-          Got questions? We're here to help! Reach out to us anytime for support
+          Got questions? We&apos;re here to help! Reach out to us anytime for support
           and inquiries.{" "}
           <Link
             className="text-indigo-700 underline"

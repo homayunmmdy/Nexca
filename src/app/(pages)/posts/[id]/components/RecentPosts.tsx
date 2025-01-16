@@ -23,7 +23,7 @@ const RecentPosts: React.FC = () => {
         {posts && (
           <div className="grid grid-cols-1 items-start gap-x-3 gap-y-5">
             {posts?.map((Post: PostsCashType) => (
-              <PostCard post={Post} />
+              <PostCard post={Post} key={Post._id}/>
             ))}
           </div>
         )}

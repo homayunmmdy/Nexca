@@ -50,8 +50,8 @@ const Slider = () => {
           navigation
         >
           {data?.map((post: PostsCashType) => (
-            <SwiperSlide>
-              <PostCard key={post._id} post={post} />
+            <SwiperSlide key={post._id}>
+              <PostCard post={post} />
             </SwiperSlide>
           ))}
         </Swiper>
