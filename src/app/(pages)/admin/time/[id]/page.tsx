@@ -1,7 +1,7 @@
 import { TIMELINE_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
 import { EditTimeLineForm } from "../../components";
-import { FetchDataForEditPage } from "../../components/util/Util";
+import { FetchDataForEditPage } from "@/util/ServerUtil";
 
 const EditAdmniTime = async ({
   params,

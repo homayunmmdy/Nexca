@@ -1,7 +1,7 @@
 import { CONTRIBUTION_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
 import { EditContributionForm } from "../../components";
-import { FetchDataForEditPage } from "../../components/util/Util";
+import { FetchDataForEditPage } from "@/util/ServerUtil";
 
 const EditAdminContribution = async ({
   params,

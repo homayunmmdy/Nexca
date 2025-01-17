@@ -1,7 +1,7 @@
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
 import { EditTextAdvForm } from "../../components";
-import { FetchDataForEditPage } from "../../components/util/Util";
+import { FetchDataForEditPage } from "@/util/ServerUtil";
 
 const EditAdminTextAdv = async ({
   params,

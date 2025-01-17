@@ -1,7 +1,7 @@
 import { SECTIONS_API_URL } from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
 import { EditSectionForm } from "../../components";
-import { FetchDataForEditPage } from "../../components/util/Util";
+import { FetchDataForEditPage } from "@/util/ServerUtil";
 
 const EditAdminSections = async ({
   params,
