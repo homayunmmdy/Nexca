@@ -1,19 +1,17 @@
 import { CgFeed } from "react-icons/cg";
-import { FaTimeline } from "react-icons/fa6";
-import { GiTicket } from "react-icons/gi";
 import { MdOutlineMail, MdOutlinePostAdd } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { RiAdvertisementLine } from "react-icons/ri";
 import { SiCloudflarepages } from "react-icons/si";
 import { TbNewSection } from "react-icons/tb";
 import { TiHome } from "react-icons/ti";
-import { VscGraphScatter } from "react-icons/vsc";
 import { adminPages } from "../../config/adminPage";
 
 describe("adminPages", () => {
+  const AmountAdminPages = 8
     describe("Structure and Content", () => {
       it("should have correct number of admin pages", () => {
-        expect(adminPages).toHaveLength(11);
+        expect(adminPages).toHaveLength(AmountAdminPages);
       });
   
       it("should have valid structure for each admin page", () => {
@@ -35,9 +33,6 @@ describe("adminPages", () => {
           SiCloudflarepages,
           TbNewSection,
           MdOutlineMail,
-          VscGraphScatter,
-          FaTimeline,
-          GiTicket,
           PiPhoneCallFill,
         ];
   

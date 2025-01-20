@@ -17,12 +17,5 @@ export const adminPages = [
   { name: "Services", href: "/admin/services", icon: SiCloudflarepages },
   { name: "Sections", href: "/admin/sections", icon: TbNewSection },
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
-  {
-    name: "Contributions",
-    href: "/admin/contribution/new",
-    icon: VscGraphScatter,
-  },
-  { name: "TimeLine", href: "/admin/time/new", icon: FaTimeline },
-  { name: "Tickets", href: "/admin/tickets", icon: GiTicket },
   { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },
 ];
