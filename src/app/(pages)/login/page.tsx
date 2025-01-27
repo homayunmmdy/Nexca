@@ -58,18 +58,18 @@ const Login: React.FC = () => {
       <Toaster />
       <Toast />
       <div className="font-poppins flex items-center justify-center">
-        <div className="flex h-screen w-screen items-center justify-center dark:bg-gray-900">
+        <div className="flex h-screen w-screen items-center justify-center">
           <div className="grid gap-8 p-2">
             <div className="m-2 rounded-[26px] bg-gradient-to-r from-blue-500 to-purple-500">
-              <div className="m-2 rounded-[20px] border-[20px] border-transparent bg-white shadow-lg sm:p-2 md:p-6 dark:bg-gray-900">
-                <h1 className="cursor-default py-4 text-center text-5xl font-bold dark:text-gray-400">
+              <div className="m-2 rounded-[20px] border-[20px] border-transparent shadow-lg sm:p-2 md:p-6">
+                <h1 className="cursor-default py-4 text-center text-5xl font-bold">
                   Log in
                 </h1>
                 <form onSubmit={handleLogin} className="space-y-4">
                   <div className="flex flex-col gap-2">
                     <label
                       htmlFor="username"
-                      className="mb-2 text-lg dark:text-gray-400"
+                      className="mb-2 text-lg"
                     >
                       Username
                     </label>
@@ -87,7 +87,7 @@ const Login: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     <label
                       htmlFor="password"
-                      className="mb-2 text-lg dark:text-gray-400"
+                      className="mb-2 text-lg"
                     >
                       Password
                     </label>
@@ -110,15 +110,15 @@ const Login: React.FC = () => {
                     LOG IN
                   </Button>
                 </form>
-                <div className="mt-4 flex flex-col items-center text-center text-sm text-gray-500">
+                <div className="mt-4 flex flex-col items-center text-center text-sm">
                   <p className="cursor-default">
                     By signing in, you agree to our{" "}
                     <Link
-                      className="group text-blue-400 transition-all duration-100 ease-in-out"
+                      className="group font-bold text-white transition-all duration-100 ease-in-out"
                       href="/privacy_policy"
                       title="Privacy Policy"
                     >
-                      <span className="cursor-pointer bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-left-bottom bg-no-repeat px-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
+                      <span className="cursor-pointer bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-left-bottom bg-no-repeat px-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                         Privacy Policy
                       </span>
                     </Link>
