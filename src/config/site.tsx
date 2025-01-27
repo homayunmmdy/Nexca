@@ -43,9 +43,9 @@ const SiteConfig = {
     },
     {
       id: 5,
-      name: "Contacts",
-      link: "/contacts",
-    },
+      name: "Feed",
+      link: "/feed",
+    }
   ],
 };
 
