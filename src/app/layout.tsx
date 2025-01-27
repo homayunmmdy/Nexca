@@ -1,4 +1,5 @@
 import { Footer, Header, ReactQueryProvider } from "@/components";
+import ThemeProvider from "@/components/ThemeProvider";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -17,13 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <ReactQueryProvider>
-      <html lang="en" data-theme="light">
-        <body className={inter.className}>
-          <Header />
-          <main className="mt-[120px]">{children}</main>
-          <Footer />
-        </body>
-      </html>
+      <ThemeProvider>
+        <html lang="en" data-theme="light">
+          <body className={inter.className}>
+            <Header />
+            <main className="mt-[120px]">{children}</main>
+            <Footer />
+          </body>
+        </html>
+      </ThemeProvider>
     </ReactQueryProvider>
   );
 }
