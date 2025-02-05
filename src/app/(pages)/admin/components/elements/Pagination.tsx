@@ -22,9 +22,9 @@ const Pagination = ({
         {pageNumbers.map((number) => (
           <li
             key={number}
-            className={`mx-1 px-3 py-1 border ${
+            className={`mx-1 px-3 py-1 border text-indigo-600 ${
               currentPage === number ? "bg-indigo-600 text-white" : ""
-            } rounded-xl border-indigo-600 border-1rounded cursor-pointer`}
+            } rounded-xl border-indigo-600  border-1 cursor-pointer`}
             onClick={() => paginate(number)}
           >
             {number}

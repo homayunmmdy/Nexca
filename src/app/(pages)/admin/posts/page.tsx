@@ -192,7 +192,7 @@ const Posts = () => {
         )}
 
         {currentPosts.length > 0 ? (
-          <div className="shadow-3xl shadow-shadow-500 dark:!bg-navy-800 relative flex h-full w-full flex-col rounded-[20px] bg-clip-border p-4 dark:text-white dark:shadow-none">
+          <div className="shadow-3xl shadow-shadow-500 relative flex h-full w-full flex-col rounded-[20px] bg-clip-border p-4">
             <div className="overflow-x-auto">
               <table className="table">
                 <thead>

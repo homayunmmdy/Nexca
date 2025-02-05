@@ -28,11 +28,9 @@ const ItemsTable = ({ post, baseURL }: Props) => {
               />
             </Link>
           </div>
-          <div>
-            <div className="font-normal md:font-bold">
+            <p className="font-normal md:font-bold">
               {post.title.slice(0, 60)}
-            </div>
-          </div>
+            </p>
         </div>
       </td>
       <td>
