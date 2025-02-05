@@ -25,7 +25,7 @@ const PostCategories = () => {
   const [formData, setFormData] = useState(startingTicketData);
   const handler = new FormHandler(setFormData, POST_API_URL, router);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    handler.submit(e, formData, post._id);
+    handler.submit(e, formData, post._id,`/admin/posts/${post.id}/categories`);
   if (isLoading) {
     return <Spinner />;
   }
