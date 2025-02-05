@@ -4,20 +4,21 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 import { adminPages, EditPostPages } from "@/config/adminPage";
-import { TiHome } from "react-icons/ti";
-import { LogoutButton } from "../../elements";
 import { getIdOfPost } from "@/util/Util";
+import { FaHome } from "react-icons/fa";
+import { LogoutButton } from "../../elements";
 
 const NavLink: React.FC = () => {
   const pathname = usePathname();
   const isNewPostRoute = pathname === "/admin/posts/new";
 
-  const isPostRoute = pathname?.startsWith("/admin/posts/") &&
-  !isNewPostRoute &&
-  (pathname.split("/").length === 4 || pathname.split("/").length === 5);
+  const isPostRoute =
+    pathname?.startsWith("/admin/posts/") &&
+    !isNewPostRoute &&
+    (pathname.split("/").length === 4 || pathname.split("/").length === 5);
 
   const data = isPostRoute ? EditPostPages : adminPages;
-  const postId = getIdOfPost()
+  const postId = getIdOfPost();
 
   return (
     <>
@@ -29,7 +30,7 @@ const NavLink: React.FC = () => {
               href="/admin"
             >
               <div className="shadow-soft-2xl ml-2 flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-700 bg-center stroke-0 text-center xl:p-2.5">
-                <TiHome size={24} color="#FFF" />
+                <FaHome size={24} color="#FFF" />
               </div>
               <span className="ease-soft pointer-events-none ml-1 opacity-100 duration-300">
                 admin
