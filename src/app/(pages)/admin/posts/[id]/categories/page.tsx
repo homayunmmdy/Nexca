@@ -1,7 +1,8 @@
 "use client";
-import { Spinner } from "@/components";
+import { Button, Spinner } from "@/components";
 import { POST_API_URL } from "@/config/apiConstants";
 import useSinglePost from "@/hooks/useSinglePost";
+import { CategoryType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { checkMaster, getIdOfPost } from "@/util/Util";
 import { useRouter } from "next/navigation";
@@ -9,7 +10,6 @@ import { useState } from "react";
 import { CategoryList } from "../../../components/elements";
 import ErrorText from "../../../components/elements/ErrorText";
 import CategoriesForm from "../../../components/forms/CategoriesForm";
-import { CategoryType } from "@/types/CashTypes";
 
 const PostCategories = () => {
   const postId = getIdOfPost();
@@ -24,17 +24,31 @@ const PostCategories = () => {
 
   const [formData, setFormData] = useState(startingTicketData);
   const handler = new FormHandler(setFormData, POST_API_URL, router);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
+    handler.submit(e, formData, post._id);
   if (isLoading) {
     return <Spinner />;
   }
 
   return (
     <>
-      <CategoriesForm handler={handler} />
+      <form method="post" onSubmit={handleSubmit}>
+        <CategoriesForm handler={handler} />
+        <div className="flex w-full justify-center">
+          <Button
+            type="submit"
+            color="btn-primary"
+            aria-label={"Save"}
+            className="btn-active mt-3"
+          >
+            Save the changes
+          </Button>
+        </div>
+      </form>
       {formData.categories.length > 0 ? (
         <div className="mt-2 flex flex-col gap-2">
           <h4>Categories</h4>
-          {formData.categories.map((category : CategoryType) => (
+          {formData.categories.map((category: CategoryType) => (
             <CategoryList
               key={category.id}
               category={category}

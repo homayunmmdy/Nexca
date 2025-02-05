@@ -35,7 +35,6 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
   };
 
   const [formData, setFormData] = useState(startingTicketData);
-  const [categoryInput, setCategoryInput] = useState("");
   const handler = new FormHandler(setFormData, POST_API_URL, router);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
     handler.submit(e, formData, post._id);
@@ -106,10 +105,10 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             onChange={handler.trakeChange}
           />
           {/* Add New Category */}
-          <CategoriesForm handler={handler} />
 
+          {!EDITMODE && <CategoriesForm handler={handler} />}
           {/* Categories List */}
-          {formData.categories.length > 0 ? (
+          {!EDITMODE && formData.categories.length > 0 ? (
             <div className="flex flex-col gap-2">
               <h4>Categories</h4>
               {formData.categories.map((category) => (
