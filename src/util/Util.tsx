@@ -7,6 +7,13 @@ export const getParameterId = (sliceCharacter: number) => {
   return pathname.slice(sliceCharacter);
 };
 
+export const getIdOfPost = () => {
+  const pathname = usePathname();
+  const parts = pathname.split("/");
+  const postId = parts[parts.indexOf("posts") + 1];
+  return postId
+}
+
 export const checkMaster = (): boolean => {
   let master: boolean;
   const isMaster =

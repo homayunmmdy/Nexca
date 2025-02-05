@@ -6,6 +6,7 @@ import React from "react";
 import { adminPages, EditPostPages } from "@/config/adminPage";
 import { TiHome } from "react-icons/ti";
 import { LogoutButton } from "../../elements";
+import { getIdOfPost } from "@/util/Util";
 
 const NavLink: React.FC = () => {
   const pathname = usePathname();
@@ -16,8 +17,7 @@ const NavLink: React.FC = () => {
   (pathname.split("/").length === 4 || pathname.split("/").length === 5);
 
   const data = isPostRoute ? EditPostPages : adminPages;
-  const parts = pathname.split("/");
-  const postId = parts[parts.indexOf("posts") + 1];
+  const postId = getIdOfPost()
 
   return (
     <>
