@@ -21,5 +21,5 @@ export const adminPages = [
 ];
 
 export const EditPostPages = [
-  { name: "Admin", href: "/admin", icon: TiHome },
+  { name: "Comments", href: "comments", icon: TiHome },
 ]
