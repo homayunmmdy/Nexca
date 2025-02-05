@@ -9,7 +9,12 @@ import { LogoutButton } from "../../elements";
 
 const NavLink: React.FC = () => {
   const pathname = usePathname();
-  const isPostRoute = pathname?.startsWith("/admin/posts/");
+  const isNewPostRoute = pathname === "/admin/posts/new";
+
+  const isPostRoute = pathname?.startsWith("/admin/posts/") &&
+  !isNewPostRoute &&
+  (pathname.split("/").length === 4 || pathname.split("/").length === 5);
+
   const data = isPostRoute ? EditPostPages : adminPages;
   const parts = pathname.split("/");
   const postId = parts[parts.indexOf("posts") + 1];
