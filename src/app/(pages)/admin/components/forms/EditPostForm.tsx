@@ -106,7 +106,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             onChange={handler.trakeChange}
           />
           {/* Add New Category */}
-          <CategoriesForm handler={handler}/>
+          <CategoriesForm handler={handler} />
 
           {/* Categories List */}
           {formData.categories.length > 0 ? (
