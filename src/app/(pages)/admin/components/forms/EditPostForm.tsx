@@ -15,6 +15,7 @@ import { useState } from "react";
 import { CategoryList, SelectField, SelectFiledSkeleton } from "../elements";
 import { FormLayout, ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
+import CategoriesForm from "./CategoriesForm";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -105,25 +106,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             onChange={handler.trakeChange}
           />
           {/* Add New Category */}
-          <div className="mt-2 flex w-full gap-2">
-            <Input
-              type="text"
-              value={categoryInput}
-              color="input-primary"
-              onChange={(e) => setCategoryInput(e.target.value)}
-              placeholder="New Category"
-              style="w-full"
-            />
-            <Button
-              type="button"
-              onClick={() =>
-                handler.addCategory(categoryInput, setCategoryInput)
-              }
-              color="btn-primary"
-            >
-              Add Category
-            </Button>
-          </div>
+          <CategoriesForm handler={handler}/>
 
           {/* Categories List */}
           {formData.categories.length > 0 ? (
