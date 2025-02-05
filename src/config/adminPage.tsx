@@ -19,3 +19,7 @@ export const adminPages = [
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
   { name: "Contacts", href: "/admin/contacts", icon: PiPhoneCallFill },
 ];
+
+export const EditPostPages = [
+  { name: "Admin", href: "/admin", icon: TiHome },
+]

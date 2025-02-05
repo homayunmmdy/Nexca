@@ -1,19 +1,11 @@
 "use client";
-import {
-  CONTACTS_API_URL,
-  POST_API_URL,
-  SECTIONS_API_URL,
-  SERVICES_API_URL,
-} from "@/config/apiConstants";
-import axios from "axios";
+import useGetStats from "@/hooks/useGetStats";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { CgFeed } from "react-icons/cg";
 import { FiServer } from "react-icons/fi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { RxSection } from "react-icons/rx";
 import Stat from "./Stat";
-import useGetStats from "@/hooks/useGetStats";
 
 const Stats = () => {
   const data = useGetStats();

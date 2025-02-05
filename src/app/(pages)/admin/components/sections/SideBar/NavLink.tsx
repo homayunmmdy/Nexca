@@ -3,16 +3,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-import { adminPages } from "@/config/adminPage";
+import { adminPages, EditPostPages } from "@/config/adminPage";
 import { LogoutButton } from "../../elements";
 
 const NavLink: React.FC = () => {
   const pathname = usePathname();
+  const isPostRoute = pathname?.startsWith("/admin/posts/");
+  const data = isPostRoute ? EditPostPages : adminPages
+  
   return (
     <>
       <div className="block h-full w-auto grow basis-full items-center overflow-auto">
         <ul className="mb-0 flex flex-col gap-2 pl-0">
-          {adminPages.map((link, index) => {
+          {data.map((link, index) => {
             const LinkIcon = link.icon;
             return (
               <li className="mt-0.5 w-full" key={index}>
