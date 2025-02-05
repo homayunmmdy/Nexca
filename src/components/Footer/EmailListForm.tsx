@@ -33,7 +33,7 @@ const EmailListForm = () => {
 
     try {
       // If validation passes, proceed with form submission
-      await handler.submit(e, formData);
+      await handler.submit(e, formData, undefined,'/');
 
       // Clear the input field after successful submission
       setFormData({ email: "" });

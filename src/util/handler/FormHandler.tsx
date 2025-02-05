@@ -47,11 +47,13 @@ class FormHandler {
    * @param e - The form event.
    * @param formData - Data to be submitted.
    * @param id - Optional ID to determine edit mode.
+   * @param route - where redirect user after submit form.
    */
   async submit(
     e: React.FormEvent<HTMLFormElement>,
     formData: any,
-    id?: string
+    id?: string,
+    route? : string
   ) {
     e.preventDefault();
     const EDITMODE = !id ? false : id !== "new";
@@ -72,7 +74,7 @@ class FormHandler {
         EDITMODE ? "Item updated successfully" : "Item added successfully"
       );
       this.router.refresh();
-      this.router.push("/admin");
+      this.router.push(route ?? 'admin');
     } else {
       this.loading = false;
       toast.error("Something went wrong");

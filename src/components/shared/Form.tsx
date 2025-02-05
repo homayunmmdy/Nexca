@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaRegMessage, FaUser } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
+import { usePathname } from "next/navigation";
 
 /**
  * @typedef {Object} Props - The properties passed to the Form component.
@@ -24,12 +25,13 @@ import { TfiEmail } from "react-icons/tfi";
 
 const Form = ({ buttonText, initalData, API }: ShareFormType) => {
   const router = useRouter();
+  const pathname = usePathname();
   const [formData, setFormData] = useState(initalData);
 
   const handler = new FormHandler(setFormData, API, router);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    handler.submit(e, formData);
+    handler.submit(e, formData,undefined,pathname);
 
   return (
     <>
