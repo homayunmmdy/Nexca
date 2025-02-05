@@ -45,7 +45,6 @@ class RequestHandler<
    */
     async FindPaginated(skip: number, limit: number) {
       try {
-        console.log(`Fetching paginated data - skip: ${skip}, limit: ${limit}`);
         if (process.env.NEXT_PUBLIC_STATUS === "dev") {
           // In dev mode, simulate pagination using the cache
           const total = this.Cache.length;

@@ -11,7 +11,6 @@ const PostCommentsPage = () => {
   const { data } = useFetch(COMMENTS_KEY, COMMENTS_API_URL);
   const postId = getIdOfPost();
   const comments = data?.filter((item: any) => item.postId == postId);
-
   return (
     <div>
       {comments?.length > 0 ? comments?.map((comment: CommentsCashType) => (
