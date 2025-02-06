@@ -58,7 +58,6 @@ const DemoPage: React.FC = () => {
       <div className="mx-auto w-[94%] pt-2 md:w-[92%]">
         <SingleCardSec />
         <VerticalPostsSec />
-        <CodingTabs />
       </div>
     </>
   );

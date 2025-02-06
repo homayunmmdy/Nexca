@@ -7,7 +7,6 @@ import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import { getParameterId } from "@/util/Util";
-import { useRouter } from "next/navigation";
 import React from "react";
 import NotFound from "../../[...not_found]/not-found";
 import ServicesNav from "../../demo/components/ServicesNav";
@@ -16,7 +15,6 @@ import ServicesImg from "./components/ServicesImg";
 const ServicesPage: React.FC = () => {
   const id = getParameterId(10);
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
-  const router = useRouter();
 
   if (loading) {
     return (

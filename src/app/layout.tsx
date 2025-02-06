@@ -1,10 +1,10 @@
 import { Footer, Header, ReactQueryProvider } from "@/components";
 import ThemeProvider from "@/components/ThemeProvider";
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const libre_Franklin = Libre_Franklin({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   verification: {
@@ -20,7 +20,7 @@ export default function RootLayout({
     <ReactQueryProvider>
       <ThemeProvider>
         <html lang="en" data-theme="light">
-          <body className={inter.className}>
+          <body className={libre_Franklin.className}>
             <Header />
             <main className="mt-[120px]">{children}</main>
             <Footer />
