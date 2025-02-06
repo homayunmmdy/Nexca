@@ -38,7 +38,7 @@ const Form = ({ buttonText, initalData, API }: ShareFormType) => {
       {handler.isLoading && (
         <span className="loading loading-ring loading-lg absolute"></span>
       )}
-      <form className="rounded-xl bg-gray-100 p-5" onSubmit={handleSubmit}>
+      <form className="rounded-xl bg-base-300 p-5" onSubmit={handleSubmit}>
         <div className="mb-6">
           <Input
             type="text"

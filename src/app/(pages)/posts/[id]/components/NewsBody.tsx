@@ -62,11 +62,13 @@ const NewsBody = ({ post }: { post: any }) => {
           <RenderTags post={post} />
         </div>
       )}
+      <div className="mb-3">
       <Form
         buttonText="Comment"
         initalData={initalData}
         API={COMMENTS_API_URL}
       />
+      </div>
       {comments?.length > 0 && (
         <div className="my-5 rounded-xl bg-indigo-600 p-5 pt-10">
           <Titr

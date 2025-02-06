@@ -15,7 +15,7 @@ const Comment = ({ comment }: { comment: Props }) => {
 
   return (
     <>
-      <section className="my-5 rounded-xl bg-gray-100 p-6">
+      <section className="my-5 rounded-xl bg-base-200 p-6">
         <header className="flex gap-4">
           <span className="font-bold">{comment.name}</span>
           <span>{comment.email}</span>
@@ -24,7 +24,7 @@ const Comment = ({ comment }: { comment: Props }) => {
           <FaRegComment
             color="#6366F1"
             size={32}
-            className="rounded-full bg-white p-2"
+            className="rounded-full p-2"
           />{" "}
           {comment.message}
           {master && <DeleteBlock path="comments" id={comment._id} />}
