@@ -70,27 +70,15 @@ export const FooterLinkData: FooterLinkType[] = [
   },
   {
     id: 5,
-    title: "Contributions",
-    href: "/contribution",
-    icon: <VscGraphScatter />,
-  },
-  {
-    id: 6,
     title: "About",
     href: "/about",
     icon: <SiAboutdotme />,
   },
   {
-    id: 7,
+    id: 6,
     title: "Contacts",
     href: "/contacts",
     icon: <PiPhoneCallFill />,
-  },
-  {
-    id: 8,
-    title: "Time",
-    href: "/time",
-    icon: <FaTimeline />,
   },
 ];
 

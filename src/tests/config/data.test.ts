@@ -67,10 +67,8 @@ describe("Footer Link Data", () => {
       "/FAQs",
       "/privacy_policy",
       "/tickets/new",
-      "/contribution",
       "/about",
       "/contacts",
-      "/time",
     ];
     const actualRoutes = FooterLinkData.map((link) => link.href);
     expect(actualRoutes).toEqual(expectedRoutes);
