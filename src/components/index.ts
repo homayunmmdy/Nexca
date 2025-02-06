@@ -14,6 +14,7 @@ export { default as Form } from "./shared/Form";
 
 // Items
 export { default as Banner } from "./Items/Banner";
+export { default as BannerTitle } from "./Items/BannerTitle";
 export { default as Companies } from "./Items/Companies";
 export { default as EmailList } from "./Items/EmailList";
 export { default as FAQs } from "./Items/FAQs";
