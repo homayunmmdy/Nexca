@@ -106,6 +106,30 @@ describe("FormHandler", () => {
       expect(routerMock.push).toHaveBeenCalledWith("/admin");
     });
 
+    it("should handle form submission with custom route", async () => {
+      const event = {
+        preventDefault: vi.fn(),
+      } as unknown as React.FormEvent<HTMLFormElement>;
+      const formData = { name: "Test Item" };
+      const customRoute = "/custom-route";
+
+      global.fetch = vi.fn().mockResolvedValueOnce({
+        ok: true,
+      });
+
+      await formHandler.submit(event, formData, undefined, customRoute);
+
+      expect(event.preventDefault).toHaveBeenCalled();
+      expect(global.fetch).toHaveBeenCalledWith("https://api.example.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formData }),
+      });
+      expect(toast.success).toHaveBeenCalledWith("Item added successfully");
+      expect(routerMock.refresh).toHaveBeenCalled();
+      expect(routerMock.push).toHaveBeenCalledWith(customRoute);
+    });
+
     it("should handle form submission failure", async () => {
       const event = {
         preventDefault: vi.fn(),

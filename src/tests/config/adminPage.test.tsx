@@ -1,12 +1,14 @@
 import { CgFeed } from "react-icons/cg";
-import { MdOutlineMail, MdOutlinePostAdd } from "react-icons/md";
-import { PiPhoneCallFill } from "react-icons/pi";
-import { RiAdvertisementLine } from "react-icons/ri";
-import { SiCloudflarepages } from "react-icons/si";
-import { TbNewSection } from "react-icons/tb";
-import { TiHome } from "react-icons/ti";
+import { MdOutlineMail } from "react-icons/md";
 import { adminPages } from "../../config/adminPage";
-
+import {
+  FaAdversal,
+  FaHome,
+  FaPager,
+  FaPhoneAlt,
+  FaRegEdit,
+  FaSitemap,
+} from "react-icons/fa";
 describe("adminPages", () => {
   const AmountAdminPages = 8
     describe("Structure and Content", () => {
@@ -26,14 +28,14 @@ describe("adminPages", () => {
   
       it("should have proper icon components", () => {
         const iconComponents = [
-          TiHome,
+          FaHome,
           CgFeed,
-          MdOutlinePostAdd,
-          RiAdvertisementLine,
-          SiCloudflarepages,
-          TbNewSection,
+          FaRegEdit,
+          FaAdversal,
+          FaSitemap,
+          FaPager,
           MdOutlineMail,
-          PiPhoneCallFill,
+          FaPhoneAlt,
         ];
   
         adminPages.forEach((page) => {

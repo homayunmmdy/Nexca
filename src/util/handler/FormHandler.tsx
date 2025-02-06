@@ -74,7 +74,7 @@ class FormHandler {
         EDITMODE ? "Item updated successfully" : "Item added successfully"
       );
       this.router.refresh();
-      this.router.push(route ?? 'admin');
+      this.router.push(route ?? '/admin');
     } else {
       this.loading = false;
       toast.error("Something went wrong");
