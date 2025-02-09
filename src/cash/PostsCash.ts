@@ -54,6 +54,7 @@ const PostsCash: PostsCashType[] = [
       },
     ],
     masterEditor: true,
+    author: 'masterEditor',
     source : 'mangnitify',
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",

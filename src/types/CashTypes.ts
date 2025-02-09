@@ -20,6 +20,8 @@ export type PostsCashType = {
   categories?: CategoryType[];
   masterEditor?: boolean;
   source?: string;
+  author?: string;
+
 } & BaseType;
 
 export type TimeLIneCashType = {

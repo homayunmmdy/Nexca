@@ -67,6 +67,10 @@ const postSchema = new Schema(
       type: String,
       trim: true,
     },
+    author: {
+      type: String,
+      trim: true,
+    },
   },
   defaultSchemaOptions // Apply default schema options (e.g., timestamps)
 );

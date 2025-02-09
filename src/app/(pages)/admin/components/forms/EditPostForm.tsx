@@ -32,6 +32,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
     categories: EDITMODE ? post.categories ?? [] : [],
     masterEditor: master ? true : false,
     source: EDITMODE ? post.source : "",
+    author: master ? "masterEditor" : EDITMODE ? post.author : "",
   };
 
   const [formData, setFormData] = useState(startingTicketData);
@@ -131,6 +132,18 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             value={formData.source}
             onChange={handler.trakeChange}
           />
+          {!master && (
+            <Input
+              type="text"
+              id="author"
+              name="author"
+              label="author"
+              style="w-full mb-2"
+              color="input-primary"
+              value={formData.author}
+              onChange={handler.trakeChange}
+            />
+          )}
           <Button
             type="submit"
             color="btn-primary"
