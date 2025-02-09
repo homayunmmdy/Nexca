@@ -5,7 +5,7 @@ describe("SiteConfig", () => {
 
   beforeEach(() => {
     process.env = { ...originalEnv };
-    process.env.API_URL = "https://nexca.vercel.app/";
+    process.env.API_URL = "https://nexca.vercel.app";
   });
 
   afterEach(() => {
