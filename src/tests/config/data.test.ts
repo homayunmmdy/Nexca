@@ -38,7 +38,7 @@ describe("Features Data", () => {
 describe("Footer Link Data", () => {
   it("should have the correct structure and length", () => {
     expect(Array.isArray(FooterLinkData)).toBe(true);
-    expect(FooterLinkData).toBeGreaterThan(1);
+    expect(FooterLinkData).toHaveLength(5);
   });
 
   it("should have valid properties for each footer link", () => {
@@ -66,7 +66,6 @@ describe("Footer Link Data", () => {
       "/",
       "/FAQs",
       "/privacy_policy",
-      "/tickets/new",
       "/about",
       "/contacts",
     ];

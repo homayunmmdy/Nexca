@@ -64,12 +64,6 @@ export const FooterLinkData: FooterLinkType[] = [
   },
   {
     id: 4,
-    title: "New Ticket",
-    href: "/tickets/new",
-    icon: <GiTicket />,
-  },
-  {
-    id: 5,
     title: "About",
     href: "/about",
     icon: <SiAboutdotme />,
