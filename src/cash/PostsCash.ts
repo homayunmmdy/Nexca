@@ -78,6 +78,7 @@ const PostsCash: PostsCashType[] = [
     ],
     masterEditor: false,
     source : 'dailygalaxy',
+    author : 'John Smith',
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,

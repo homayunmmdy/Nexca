@@ -50,11 +50,19 @@ const NewsBody = ({ post }: { post: any }) => {
         id="tiptap-style"
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        
+      {post.author && (
+        <p>
+          author : <span className="font-bold">{post.author}</span>
+        </p>
+      )}
       {post.source && (
         <p>
           source : <span className="font-bold">{post.source}</span>
         </p>
       )}
+      </div>
       <SharePost title={post.title} description={post.description} POSTURL={`/posts/${post._id}`} />
       {post.categories?.length > 0 && (
         <div className="my-3 flex items-center gap-3">
