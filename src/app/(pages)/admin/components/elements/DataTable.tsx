@@ -1,8 +1,7 @@
-import { Button } from "@/components";
+import { Button, ErrorText } from "@/components";
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from ".";
-import ErrorText from "./ErrorText";
 
 interface Props {
   data: any;

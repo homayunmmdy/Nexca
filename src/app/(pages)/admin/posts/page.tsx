@@ -1,15 +1,26 @@
 "use client";
-import { Button, Input, Spinner } from "@/components";
-import { POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/config/apiConstants";
-import { ALL_POSTS_QUERY_KEY, SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
+import { Button, ErrorText, Input, Spinner } from "@/components";
+import {
+  POST_API_URL,
+  SECTIONS_API_URL,
+  SERVICES_API_URL,
+} from "@/config/apiConstants";
+import {
+  ALL_POSTS_QUERY_KEY,
+  SECTIONS_QUERY_KEY,
+  SERVICES_QUERY_KEY,
+} from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
-import { PostsCashType, SectionCashType, ServicesCashType } from "@/types/CashTypes";
+import {
+  PostsCashType,
+  SectionCashType,
+  ServicesCashType,
+} from "@/types/CashTypes";
 import { checkMaster } from "@/util/Util";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FiFilter, FiSearch } from "react-icons/fi";
 import { ItemsTable, Pagination } from "../components/elements";
-import ErrorText from "../components/elements/ErrorText";
 
 const Posts = () => {
   const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);

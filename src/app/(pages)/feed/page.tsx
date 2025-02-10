@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { Spinner } from "@/components";
+import { ErrorText, Spinner } from "@/components";
 import PostCard from "@/components/sections/PostCard";
 import { PostsCashType } from "@/types/CashTypes";
-
+import { useInfiniteQuery } from "@tanstack/react-query";
+import React, { useEffect, useRef } from "react";
 
 // Define the structure of the paginated response
 interface PaginatedPosts {
@@ -18,7 +17,11 @@ interface PaginatedPosts {
 }
 
 // fetch posts from the backend with pagination
-const fetchPosts = async ({ pageParam = 1 }: { pageParam?: number }): Promise<PaginatedPosts> => {
+const fetchPosts = async ({
+  pageParam = 1,
+}: {
+  pageParam?: number;
+}): Promise<PaginatedPosts> => {
   const res = await fetch(`/api/posts?page=${pageParam}&limit=10`);
 
   if (!res.ok) {
@@ -77,26 +80,25 @@ const Feed: React.FC = () => {
 
   if (isLoading)
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex h-screen items-center justify-center">
         <Spinner />
       </div>
     );
 
   if (error)
     return (
-      <div className="flex items-center justify-center h-screen">
-        <p className="text-lg font-medium text-red-600">
-          Error loading posts. Please try again later.
-        </p>
+      <div className="flex h-screen items-center justify-center">
+        <ErrorText>Error loading posts. Please try again later.</ErrorText>
       </div>
     );
 
   return (
     <div className="mx-auto p-4 md:p-10">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Feed</h1>
       {data?.pages[0]?.data.length === 0 ? (
         <div className="flex flex-col items-center justify-center">
-          <p className="text-lg font-medium text-gray-600">No posts available!</p>
+          <p className="text-lg font-medium text-gray-600">
+            No posts available!
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
@@ -111,7 +113,7 @@ const Feed: React.FC = () => {
       )}
       <div ref={observerRef} className="h-10"></div>
       {isFetchingNextPage && (
-        <div className="flex justify-center mt-4">
+        <div className="mt-4 flex justify-center">
           <Spinner />
         </div>
       )}

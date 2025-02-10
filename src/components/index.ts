@@ -21,3 +21,7 @@ export { default as Features } from "./Items/Features";
 export { default as Hero } from "./Items/Hero";
 export { default as PriceList } from "./Items/PriceList";
 export { default as StatcsSect } from "./Items/Stats";
+
+
+// Admin Compoentns
+export { default as ErrorText } from "./admin/ErrorText";

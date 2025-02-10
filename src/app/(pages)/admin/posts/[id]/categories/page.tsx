@@ -1,5 +1,5 @@
 "use client";
-import { Button, Spinner } from "@/components";
+import { Button, ErrorText, Spinner } from "@/components";
 import { POST_API_URL } from "@/config/apiConstants";
 import useSinglePost from "@/hooks/useSinglePost";
 import { CategoryType } from "@/types/CashTypes";
@@ -8,7 +8,6 @@ import { checkMaster, getIdOfPost } from "@/util/Util";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CategoryList } from "../../../components/elements";
-import ErrorText from "../../../components/elements/ErrorText";
 import CategoriesForm from "../../../components/forms/CategoriesForm";
 
 const PostCategories = () => {
@@ -25,7 +24,7 @@ const PostCategories = () => {
   const [formData, setFormData] = useState(startingTicketData);
   const handler = new FormHandler(setFormData, POST_API_URL, router);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    handler.submit(e, formData, post._id,`/admin/posts/${post.id}/categories`);
+    handler.submit(e, formData, post._id, `/admin/posts/${post.id}/categories`);
   if (isLoading) {
     return <Spinner />;
   }

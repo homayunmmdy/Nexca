@@ -1,5 +1,5 @@
 "use client";
-import { Button, Spinner } from "@/components";
+import { Button, ErrorText, Spinner } from "@/components";
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { ALL_TEXTADV_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
@@ -8,7 +8,6 @@ import Link from "next/link";
 import React from "react";
 import { CiEdit } from "react-icons/ci";
 import { DeleteBlock } from "../components/elements";
-import ErrorText from "../components/elements/ErrorText";
 
 const AdminTextAdvPage: React.FC = () => {
   const { data: sections, loading } = useFetch(

@@ -10,6 +10,6 @@ import React from "react";
  * @returns {React.ReactElement} - A React element representing the loading spinner.
  */
 
-const Loading: React.FC = () => <Spinner />;
+const Loading: React.FC = () => <div className="p-5"><Spinner /></div>;
 
 export default Loading;

@@ -1,11 +1,10 @@
 "use client";
-import { Spinner } from "@/components";
+import { ErrorText, Spinner } from "@/components";
 import { CONTACTS_API_URL } from "@/config/apiConstants";
 import { CONTACTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { ContactsCashType } from "@/types/CashTypes";
 import { DeleteBlock } from "../components/elements";
-import ErrorText from "../components/elements/ErrorText";
 
 const ContactsPage = () => {
   const { data: contactData, loading } = useFetch(
