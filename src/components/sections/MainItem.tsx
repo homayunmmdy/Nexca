@@ -23,13 +23,14 @@ const MainItem = ({ post }: { post: PostsCashType }) => {
           </Link>
         </div>
         <header>
-          <h2 className="mt-4 text-lg font-semibold leading-snug tracking-tight">
+          <h2 className="mb-2 mt-4 text-lg font-semibold leading-snug tracking-tight">
             <Link href={`/posts/${post._id}`} title={post.title.slice(0, 60)}>
-              <span className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
-                {post.title.slice(0, 60)}
+              <span className="line-clamp-2 bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+                {post.title}
               </span>
             </Link>
           </h2>
+          <p className="line-clamp-3 hidden md:[display:-webkit-box]">{post.description.slice(0, 230)}</p>
         </header>
       </div>
     </article>

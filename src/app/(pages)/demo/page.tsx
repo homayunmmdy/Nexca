@@ -12,6 +12,7 @@ import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
 import ServicesNav from "./components/ServicesNav";
+import NextMain from "@/components/sections/NextMain";
 
 export const metadata: Metadata = {
   title: `demo page | ${SiteConfig.title}`,
@@ -39,7 +40,10 @@ const DemoPage: React.FC = () => {
       <h1 className="hidden">{`demo page | ${SiteConfig.title}`}</h1>
       <ServicesNav />
       <div className="mx-auto w-[94%] pt-2 md:w-[92%]">
-        <MainSec />
+         <div className="grid grid-cols-12 md:gap-9">
+          <MainSec />
+          <NextMain/>
+         </div>
         <Banner />
         <div className="grid grid-cols-12 md:gap-9">
           <div className="col-span-12 md:col-span-9">

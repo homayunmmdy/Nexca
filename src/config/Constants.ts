@@ -21,6 +21,7 @@ export const COMMENTS_KEY = "comments";
 export const POSTS_QUERY_KEY = "posts";
 export const MORE_POSTS_QUERY_KEY = "more_posts";
 export const MAIN_POSTS_QUERY_KEY = "main_posts";
+export const NEXT_MAIN_QUERY_KEY = "next_main";
 export const SINGLE_POST_QUERY_KEY = "single_post";
 export const VERTICAL_POSTS_QUERY_KEY = "vertical_posts";
 export const SWIPER_SEC = "swiper_sec";

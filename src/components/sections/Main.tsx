@@ -8,7 +8,7 @@ import MainItem from "./MainItem";
 import { MainSecSkeleton } from "../skelton";
 
 const Main: React.FC = () => {
-  const { data, loading } = useGetSection(MAIN_POSTS_QUERY_KEY, -2, 1);
+  const { data, loading } = useGetSection(MAIN_POSTS_QUERY_KEY, -1, 1);
 
   if (loading) {
     return <MainSecSkeleton />;
@@ -16,11 +16,9 @@ const Main: React.FC = () => {
 
   return (
     <>
-      <div className="grid grid-cols-12 md:gap-9">
-        {data?.map((item: PostsCashType) => (
-          <MainItem post={item} key={item._id} />
-        ))}
-      </div>
+      {data?.map((item: PostsCashType) => (
+        <MainItem post={item} key={item._id} />
+      ))}
     </>
   );
 };
