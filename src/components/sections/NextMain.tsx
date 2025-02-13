@@ -5,12 +5,14 @@ import { PostsCashType } from "@/types/CashTypes";
 import Link from "next/link";
 
 const NextMain = () => {
-  const { data, loading } = useGetSection(NEXT_MAIN_QUERY_KEY, -3, 1);
+  const { data, loading } = useGetSection(NEXT_MAIN_QUERY_KEY, -4, 1);
 
+  // here is show the latest Item in MainPost and the rest 3 in this place
+  const customizedData = data?.slice(0, -1).slice(-4);
   return (
     <div className="col-span-12 md:col-span-6">
       <div className="flex flex-col gap-3">
-        {data?.map((post: PostsCashType) => (
+        {customizedData?.map((post: PostsCashType) => (
           <Link href={`/posts/${post._id}`} title={post.title.slice(0,120)} className="group card card-side bg-base-100 p-2 shadow-xl" key={post._id}>
             <figure className="mr-2 w-2/5">
               <img
