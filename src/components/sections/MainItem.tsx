@@ -25,7 +25,7 @@ const MainItem = ({ post }: { post: PostsCashType }) => {
         <header>
           <h2 className="mb-2 mt-4 text-lg font-semibold leading-snug tracking-tight">
             <Link href={`/posts/${post._id}`} title={post.title.slice(0, 60)}>
-              <span className="line-clamp-2 bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+              <span className="line-clamp-2 duration-500 group-hover:text-indigo-700">
                 {post.title}
               </span>
             </Link>
