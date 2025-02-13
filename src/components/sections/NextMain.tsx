@@ -3,10 +3,16 @@ import { NEXT_MAIN_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import Link from "next/link";
+import { NextMainSkeleton } from "../skelton";
 
 const NextMain = () => {
   const { data, loading } = useGetSection(NEXT_MAIN_QUERY_KEY, -4, 1);
 
+  
+  if (loading) {
+    return <NextMainSkeleton />;
+  }
+  
   // here is show the latest Item in MainPost and the rest 3 in this place
   const customizedData = data?.slice(0, -1).slice(-4);
   return (
