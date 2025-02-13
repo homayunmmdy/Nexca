@@ -11,9 +11,10 @@ import {
 } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { adminPages, EditPostPages } from "../../config/adminPage";
+import { FaQuestion } from "react-icons/fa6";
 
 describe("adminPages", () => {
-  const AmountAdminPages = 8;
+  const AmountAdminPages =9;
   describe("Structure and Content", () => {
     it("should have correct number of admin pages", () => {
       expect(adminPages).toHaveLength(AmountAdminPages);
@@ -39,6 +40,7 @@ describe("adminPages", () => {
         FaPager,
         MdOutlineMail,
         FaPhoneAlt,
+        FaQuestion,
       ];
 
       adminPages.forEach((page) => {

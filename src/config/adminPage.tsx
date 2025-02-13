@@ -9,6 +9,7 @@ import {
   FaSitemap,
   FaTags,
 } from "react-icons/fa";
+import { FaQuestion } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
 
 export const adminPages = [
@@ -20,6 +21,7 @@ export const adminPages = [
   { name: "Services", href: "/admin/services", icon: FaPager },
   { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
   { name: "Contacts", href: "/admin/contacts", icon: FaPhoneAlt },
+  { name: "Help", href: "/admin/help", icon: FaQuestion },
 ];
 
 export const EditPostPages = [
