@@ -32,7 +32,7 @@ export default function HelpPage() {
             <p className="mb-4 text-gray-600">
               Comprehensive guides to help you get the most out of {SiteConfig.name}'s features.
             </p>
-            <Link href="/help/guides" className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800">
+            <Link href="#" className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800">
               Browse guides <FiArrowRight className="ml-2" />
             </Link>
           </div>
@@ -47,7 +47,7 @@ export default function HelpPage() {
             <p className="mb-4 text-gray-600">
               Quick answers to the most common questions about using the platform.
             </p>
-            <Link href="/help/faqs" className="inline-flex items-center font-medium text-purple-600 hover:text-purple-800">
+            <Link href="#" className="inline-flex items-center font-medium text-purple-600 hover:text-purple-800">
               View FAQs <FiArrowRight className="ml-2" />
             </Link>
           </div>
@@ -62,7 +62,7 @@ export default function HelpPage() {
             <p className="mb-4 text-gray-600">
               Need personalized help? Reach out to our dedicated support team.
             </p>
-            <Link href="#contact" className="inline-flex items-center font-medium text-green-600 hover:text-green-800">
+            <Link href="/contacts" className="inline-flex items-center font-medium text-green-600 hover:text-green-800">
               Contact us <FiArrowRight className="ml-2" />
             </Link>
           </div>
@@ -157,7 +157,7 @@ export default function HelpPage() {
           </h2>
           
           <div className="grid gap-4 md:grid-cols-2">
-            <Link href="/help/getting-started" className="flex items-center rounded-lg border border-gray-200 p-4 transition-colors hover:bg-gray-50">
+            <Link href="#" className="flex items-center rounded-lg border border-gray-200 p-4 transition-colors hover:bg-gray-50">
               <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
                 <span className="font-medium">1</span>
               </div>
@@ -177,7 +177,7 @@ export default function HelpPage() {
               </div>
             </Link>
             
-            <Link href="/help/content" className="flex items-center rounded-lg border border-gray-200 p-4 transition-colors hover:bg-gray-50">
+            <Link href="#" className="flex items-center rounded-lg border border-gray-200 p-4 transition-colors hover:bg-gray-50">
               <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-green-100 text-green-600">
                 <span className="font-medium">3</span>
               </div>
@@ -187,7 +187,7 @@ export default function HelpPage() {
               </div>
             </Link>
             
-            <Link href="/help/users" className="flex items-center rounded-lg border border-gray-200 p-4 transition-colors hover:bg-gray-50">
+            <Link href="#" className="flex items-center rounded-lg border border-gray-200 p-4 transition-colors hover:bg-gray-50">
               <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 text-red-600">
                 <span className="font-medium">4</span>
               </div>
