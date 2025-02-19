@@ -1,3 +1,5 @@
+import { IconType } from "react-icons/lib";
+
 export type FullHoverAnimationType = {
   text: string;
   link?: string;
@@ -81,3 +83,9 @@ export type ShareFormType = {
   initalData: any;
   API: string;
 };
+
+export type adminPagesType = {
+  name: string,
+  href : string,
+  icon: IconType;
+}

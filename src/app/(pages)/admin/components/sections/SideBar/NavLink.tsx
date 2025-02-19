@@ -3,10 +3,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-import { adminPages, EditPostPages } from "@/config/adminPage";
+import { adminPages, EditPostPages, HelpPages } from "@/config/adminPage";
 import { getIdOfPost } from "@/util/Util";
 import { FaHome } from "react-icons/fa";
 import { LogoutButton } from "../../elements";
+import { adminPagesType } from "@/types/entities";
 
 const NavLink: React.FC = () => {
   const pathname = usePathname();
@@ -16,8 +17,16 @@ const NavLink: React.FC = () => {
     pathname?.startsWith("/admin/posts/") &&
     !isNewPostRoute &&
     (pathname.split("/").length === 4 || pathname.split("/").length === 5);
+  const isHelpRoute = pathname?.startsWith("/admin/help");
 
-  const data = isPostRoute ? EditPostPages : adminPages;
+  let data: adminPagesType[];
+  if (isPostRoute) {
+    data = EditPostPages;
+  } else if (isHelpRoute) {
+    data = HelpPages;
+  } else {
+    data = adminPages;
+  }
   const postId = getIdOfPost();
 
   return (

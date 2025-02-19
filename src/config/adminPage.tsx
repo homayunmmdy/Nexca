@@ -29,3 +29,10 @@ export const EditPostPages = [
   { name: "Comments", href: "comments", icon: FaComment },
   { name: "Categories", href: "categories", icon: FaTags },
 ];
+
+
+export const HelpPages = [
+  { name: "Admin", href: "/admin", icon: FaHome },
+  { name: "Help", href: "/admin/help", icon: FaQuestion },
+  { name: "Services", href: "/admin/help/services", icon: FaPager },
+]
