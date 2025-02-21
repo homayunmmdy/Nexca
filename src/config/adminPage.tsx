@@ -35,4 +35,5 @@ export const HelpPages = [
   { name: "Admin", href: "/admin", icon: FaHome },
   { name: "Help", href: "/admin/help", icon: FaQuestion },
   { name: "Services", href: "/admin/help/services", icon: FaPager },
+  { name: "Sections", href: "/admin/help/sections", icon: FaPager },
 ]
