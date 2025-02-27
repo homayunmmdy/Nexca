@@ -9,7 +9,7 @@ import {
   FaComment,
   FaTags,
 } from "react-icons/fa";
-import { MdOutlineMail } from "react-icons/md";
+import { MdOutlineMail,MdLiveTv } from "react-icons/md";
 import { adminPages, EditPostPages } from "../../config/adminPage";
 import { FaQuestion } from "react-icons/fa6";
 
@@ -73,7 +73,7 @@ describe("adminPages", () => {
     });
   });
   describe("EditPostPages", () => {
-    const AmountEditPostPages = 3;
+    const AmountEditPostPages = 4;
   
     describe("Structure and Content", () => {
       it("should have correct number of edit post pages", () => {
@@ -91,7 +91,7 @@ describe("adminPages", () => {
       });
   
       it("should have proper icon components", () => {
-        const iconComponents = [FaRegEdit, FaComment, FaTags];
+        const iconComponents = [MdLiveTv,FaRegEdit, FaComment, FaTags];
   
         EditPostPages.forEach((page) => {
           expect(iconComponents).toContain(page.icon);

@@ -10,7 +10,7 @@ import {
   FaTags,
 } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa6";
-import { MdOutlineMail } from "react-icons/md";
+import { MdLiveTv, MdOutlineMail } from "react-icons/md";
 
 export const adminPages = [
   { name: "Admin", href: "/admin", icon: FaHome },
@@ -25,6 +25,7 @@ export const adminPages = [
 ];
 
 export const EditPostPages = [
+  { name: "See Live", href: "live", icon: MdLiveTv  },
   { name: "Edit Post", href: "", icon: FaRegEdit },
   { name: "Comments", href: "comments", icon: FaComment },
   { name: "Categories", href: "categories", icon: FaTags },
