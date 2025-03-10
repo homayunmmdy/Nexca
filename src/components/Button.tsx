@@ -4,26 +4,29 @@ import { ButtonType } from "@/types/FormFiledType";
 const Button: React.FC<ButtonType> = ({
   id,
   children,
-  color,
+  color = "btn-primary",
   className,
   onClick,
-  disabled,
-  type,
+  disabled = false,
+  type = "button",
   ariaLabel,
   value,
   form,
-  removeDefaultStyle,
-}: ButtonType) => {
+  removeDefaultStyle = false,
+  ...rest
+}) => {
+
   return (
     <button
+      id={id}
+      type={type}
       onClick={onClick}
       disabled={disabled}
-      type={type}
-      id={id}
       value={value}
       form={form}
-      className={removeDefaultStyle ? ` ${className}` : `btn ${color === 'btn-null' ? '' : color} ${className}`}
       aria-label={ariaLabel}
+      className={removeDefaultStyle ? ` ${className}` : `btn ${color === 'btn-null' ? '' : color} ${className}`}
+      {...rest}
     >
       {children}
     </button>

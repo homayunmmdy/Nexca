@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, InputHTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
 import { AllowedColors, AllowedInputType } from "./AllowedOptions";
 
 type BaseType = {
@@ -9,11 +9,11 @@ type BaseType = {
 };
 
 export type ButtonType = {
-  color: `btn-${AllowedColors}` | null;
+  color?: `btn-${AllowedColors}` | null;
   children: React.ReactNode;
   ariaLabel?: string;
   removeDefaultStyle?: boolean;
-}& ButtonHTMLAttributes<HTMLButtonElement> ;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type InputType = {
   color?: `input-${AllowedColors}` ;
