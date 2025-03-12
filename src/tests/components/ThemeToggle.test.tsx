@@ -1,15 +1,15 @@
 import React from 'react'
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import ThemeToggle from "../../components/ThemeToggle";
+import ThemeToggle from "../../components/molecules/ThemeToggle";
 
 describe("ThemeToggle", () => {
   const componentsHelper = () => {
     render(<ThemeToggle />);
 
     return {
-      lightIcon: screen.getByTestId('light'),
-      darkIcon: screen.getByTestId('dark'),
+      lightIcon: screen.getByTestId("light"),
+      darkIcon: screen.getByTestId("dark"),
       user: userEvent.setup(),
       checkbox: screen.getByRole("checkbox"),
     };

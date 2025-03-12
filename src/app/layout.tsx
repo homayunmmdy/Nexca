@@ -1,4 +1,5 @@
-import { Footer, Header, ReactQueryProvider } from "@/components";
+import { ReactQueryProvider } from "@/components";
+import { Footer, Header } from "@/components/organisms";
 import ThemeProvider from "@/components/ThemeProvider";
 import { Metadata } from "next";
 import { Libre_Franklin } from "next/font/google";

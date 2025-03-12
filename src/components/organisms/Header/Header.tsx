@@ -1,13 +1,17 @@
 "use client";
-import { ThemeToggle } from "@/components";
+import {
+  GitHubBtn,
+  HamburgerIcon,
+  SearchInput,
+  ThemeToggle,
+} from "@/components/molecules";
 import SiteConfig from "@/config/site";
-import { motion, useReducedMotion } from "framer-motion"; // Import Framer Motion
+import { motion, useReducedMotion } from "framer-motion"; 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
-import { GitHubBtn, HamburgerIcon, SearchInput } from "../molecules";
 
 const Header = () => {
   const pathname = usePathname();
@@ -43,8 +47,8 @@ const Header = () => {
             <div className="flex items-center gap-2">
               <motion.h1
                 className="text-xl font-bold text-indigo-700 md:text-2xl lg:text-3xl"
-                whileHover={{ scale: 1.05 }} // Add hover animation
-                whileTap={{ scale: 0.95 }} // Add tap animation
+                whileHover={{ scale: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
               >
                 <Link href="/" title={SiteConfig.name}>
                   {SiteConfig.name}

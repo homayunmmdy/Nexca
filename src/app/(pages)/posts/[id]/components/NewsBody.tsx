@@ -1,6 +1,6 @@
 import "@/app/tiptap.css";
 import { Form, Titr } from "@/components";
-import NexcaMark from "@/components/NexcaMark";
+import NexcaMark from "@/components/molecules/NexcaMark";
 import { MorePostsSec } from "@/components/sections";
 import { COMMENTS_API_URL } from "@/config/apiConstants";
 import { COMMENTS_KEY } from "@/config/Constants";
@@ -51,19 +51,22 @@ const NewsBody = ({ post }: { post: any }) => {
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
       <div className="flex flex-wrap items-center justify-between gap-3">
-        
-      {post.author && (
-        <p>
-          author : <span className="font-bold">{post.author}</span>
-        </p>
-      )}
-      {post.source && (
-        <p>
-          source : <span className="font-bold">{post.source}</span>
-        </p>
-      )}
+        {post.author && (
+          <p>
+            author : <span className="font-bold">{post.author}</span>
+          </p>
+        )}
+        {post.source && (
+          <p>
+            source : <span className="font-bold">{post.source}</span>
+          </p>
+        )}
       </div>
-      <SharePost title={post.title} description={post.description} POSTURL={`/posts/${post._id}`} />
+      <SharePost
+        title={post.title}
+        description={post.description}
+        POSTURL={`/posts/${post._id}`}
+      />
       {post.categories?.length > 0 && (
         <div className="my-3 flex items-center gap-3">
           <span className="font-bold">Categories:</span>
@@ -71,11 +74,11 @@ const NewsBody = ({ post }: { post: any }) => {
         </div>
       )}
       <div className="mb-3">
-      <Form
-        buttonText="Comment"
-        initalData={initalData}
-        API={COMMENTS_API_URL}
-      />
+        <Form
+          buttonText="Comment"
+          initalData={initalData}
+          API={COMMENTS_API_URL}
+        />
       </div>
       {comments?.length > 0 && (
         <div className="my-5 rounded-xl bg-indigo-600 p-5 pt-10">

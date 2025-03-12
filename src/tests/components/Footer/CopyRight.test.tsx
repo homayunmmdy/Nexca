@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from "@testing-library/react";
-import CopyRight from "../../../components/Footer/CopyRight";
+import CopyRight from "../../../components/organisms/Footer/CopyRight";
 
 describe("CopyRight Component", () => {
   const componentsHelper = (name: string) => {

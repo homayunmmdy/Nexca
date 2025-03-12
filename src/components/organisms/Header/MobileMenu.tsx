@@ -1,6 +1,6 @@
+import { SearchInput } from "@/components/molecules";
 import { MenuTypes } from "@/types/entities";
 import Link from "next/link";
-import { SearchInput } from "../molecules";
 
 const MobileMenu = ({ pathname, nav }: MenuTypes) => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import NexcaMark from "../../components/NexcaMark";
+import NexcaMark from "../../components/molecules/NexcaMark";
 
 describe("NexcaMark Component", () => {
   const componentsHeleper = (statue: boolean) => {
@@ -9,7 +9,7 @@ describe("NexcaMark Component", () => {
 
     return {
       link: screen.queryByRole("link"),
-      icon: screen.queryByTestId("Icon")
+      icon: screen.queryByTestId("Icon"),
     };
   };
   it("should render the Link with PiSealCheckFill icon when master is true", () => {

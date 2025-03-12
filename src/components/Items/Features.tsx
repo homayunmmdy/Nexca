@@ -1,5 +1,5 @@
 'use client'
-import { FullHoverAnimation } from "@/components";
+import { FullHoverAnimation } from "@/components/molecules";
 import { features } from "@/config/data";
 import React from "react";
 import Feature from "./Feature";
