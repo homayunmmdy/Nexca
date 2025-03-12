@@ -1,8 +1,8 @@
 import { ErrorText } from "@/components";
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
-import { DeleteBlock } from ".";
 import { Button } from "@/components/atoms";
+import { DeleteBtn } from "@/components/molecules";
 
 interface Props {
   data: any;
@@ -51,7 +51,7 @@ const DataTable = ({ data, path, editor }: Props) => {
                 </td>
                 {editor ? (
                   <td>
-                    <DeleteBlock path={path} id={item._id} />
+                    <DeleteBtn path={path} id={item._id} />
                   </td>
                 ) : null}
               </tr>

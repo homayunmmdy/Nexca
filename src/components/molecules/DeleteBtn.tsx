@@ -14,7 +14,7 @@ interface Props {
   disable? : boolean
 }
 
-const DeleteBlock: React.FC<Props> = ({ path, id, masterEditor ,disable}: Props) => {
+const DeleteBtn: React.FC<Props> = ({ path, id, masterEditor ,disable}: Props) => {
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const router = useRouter();
 
@@ -104,4 +104,4 @@ const DeleteBlock: React.FC<Props> = ({ path, id, masterEditor ,disable}: Props)
   );
 };
 
-export default DeleteBlock;
+export default DeleteBtn;

@@ -1,6 +1,7 @@
 "use client";
 import { ErrorText, Spinner } from "@/components";
 import { Button } from "@/components/atoms";
+import { DeleteBtn } from "@/components/molecules";
 import { POST_API_URL, SERVICES_API_URL } from "@/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
@@ -8,7 +9,6 @@ import { PostsCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import React from "react";
 import { CiEdit } from "react-icons/ci";
-import { DeleteBlock } from "../components/elements";
 
 const Services: React.FC = () => {
   const { data, loading } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
@@ -72,7 +72,7 @@ const Services: React.FC = () => {
                   {editor ? (
                     <td>
                       <div className="group relative h-12 w-12">
-                        <DeleteBlock
+                        <DeleteBtn
                           path="services"
                           disable={postCounts?.[item.secid] > 0 ? true : false}
                           id={item._id}

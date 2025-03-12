@@ -1,5 +1,5 @@
 "use client";
-import { DeleteBlock } from "@/app/(pages)/admin/components/elements";
+import { DeleteBtn } from "@/components/molecules";
 import { checkMaster } from "@/util/Util";
 import { FaRegComment } from "react-icons/fa6";
 
@@ -27,7 +27,7 @@ const Comment = ({ comment }: { comment: Props }) => {
             className="rounded-full p-2"
           />{" "}
           {comment.message}
-          {master && <DeleteBlock path="comments" id={comment._id} />}
+          {master && <DeleteBtn path="comments" id={comment._id} />}
         </p>
       </section>
     </>

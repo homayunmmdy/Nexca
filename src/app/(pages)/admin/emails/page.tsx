@@ -1,10 +1,10 @@
 "use client";
 import { ErrorText, Spinner } from "@/components";
+import { DeleteBtn } from "@/components/molecules";
 import { EMAIL_API_URL } from "@/config/apiConstants";
 import { EMAIL_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { EmailCashType } from "@/types/CashTypes";
-import { DeleteBlock } from "../components/elements";
 
 const EmailsPage = () => {
   const { data: emails, loading } = useFetch(EMAIL_QUERY_KEY, EMAIL_API_URL);
@@ -28,7 +28,7 @@ const EmailsPage = () => {
               <tr>
                 <td>{data.email}</td>
                 <td>
-                  <DeleteBlock path="emails" id={data._id} />
+                  <DeleteBtn path="emails" id={data._id} />
                 </td>
               </tr>
             </tbody>

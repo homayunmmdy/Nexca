@@ -1,9 +1,9 @@
 import { Button } from "@/components/atoms";
+import { DeleteBtn } from "@/components/molecules";
 import { PostsCashType } from "@/types/CashTypes";
 import Image from "next/image";
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
-import { DeleteBlock } from ".";
 
 interface Props {
   post: PostsCashType;
@@ -41,7 +41,7 @@ const ItemsTable = ({ post, baseURL }: Props) => {
         </Link>
       </td>
       <th>
-        <DeleteBlock path={baseURL} id={post._id} masterEditor={post.masterEditor} />
+        <DeleteBtn path={baseURL} id={post._id} masterEditor={post.masterEditor} />
       </th>
     </tr>
   );

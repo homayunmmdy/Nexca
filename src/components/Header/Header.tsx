@@ -1,15 +1,13 @@
 "use client";
 import { ThemeToggle } from "@/components";
 import SiteConfig from "@/config/site";
+import { motion, useReducedMotion } from "framer-motion"; // Import Framer Motion
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import GitHubBtn from "./GitHubBtn";
-import HamburgerIcon from "./HamburgerIcon";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
-import SearchInput from "./SearchInput";
-import { motion, useReducedMotion } from "framer-motion"; // Import Framer Motion
+import { GitHubBtn, HamburgerIcon, SearchInput } from "../molecules";
 
 const Header = () => {
   const pathname = usePathname();
@@ -24,7 +22,10 @@ const Header = () => {
 
   // Animation variants for the header
   const headerVariants = {
-    hidden: { opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : -20 },
+    hidden: {
+      opacity: shouldReduceMotion ? 1 : 0,
+      y: shouldReduceMotion ? 0 : -20,
+    },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 

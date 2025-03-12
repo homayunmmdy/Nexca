@@ -1,6 +1,7 @@
 "use client";
 import { ErrorText, Spinner } from "@/components";
 import { Button} from "@/components/atoms";
+import { DeleteBtn } from "@/components/molecules";
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { ALL_TEXTADV_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
@@ -8,7 +9,6 @@ import { TextAdvCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import React from "react";
 import { CiEdit } from "react-icons/ci";
-import { DeleteBlock } from "../components/elements";
 
 const AdminTextAdvPage: React.FC = () => {
   const { data: sections, loading } = useFetch(
@@ -61,7 +61,7 @@ const AdminTextAdvPage: React.FC = () => {
                       </Link>
                     </td>
                     <td>
-                      <DeleteBlock path="textadv" id={item._id} />
+                      <DeleteBtn path="textadv" id={item._id} />
                     </td>
                   </tr>
                 </>
