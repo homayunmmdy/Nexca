@@ -10,7 +10,7 @@ const HamburgerIcon = ({ isOpen, toggleMenu }: Props) => {
       <Button
         color="btn-ghost"
         className="lg:hidden"
-        ariaLabel="close and open menu"
+        aria-label="close and open menu"
       >
         <svg
           onClick={toggleMenu}

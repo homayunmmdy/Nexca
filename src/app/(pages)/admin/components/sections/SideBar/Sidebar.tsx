@@ -28,7 +28,7 @@ const Sidebar: React.FC = () => {
           <Button
             className="lg:hidden"
             color="btn-primary"
-            ariaLabel="close and open menu"
+            aria-label="close and open menu"
           >
             <svg
               onClick={toggleMenu}

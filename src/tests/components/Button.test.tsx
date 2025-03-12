@@ -18,7 +18,7 @@ describe("Button component", () => {
         <Fa0 /> Click Here
       </>
     ),
-    ariaLabel: "Click Button",
+    "aria-label": "Click Button",
   };
 
   it("should render button with default attributes", () => {
@@ -95,7 +95,7 @@ describe("Button component", () => {
           <Fa0 /> Click Here
         </>
       ),
-      ariaLabel: "Click Button",
+      "aria-label": "Click Button",
     };
     render(<Button {...defaultProps} />);
 

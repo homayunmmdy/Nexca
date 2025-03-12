@@ -1,17 +1,14 @@
-import { InputHTMLAttributes } from "react";
 import { AllowedColors, AllowedInputType } from "./AllowedOptions";
 
 type BaseType = {
   id?: string;
   style?: string;
-  ariaLabel?: string;
   required?: boolean;
 };
 
 export type ButtonType = {
   color?: `btn-${AllowedColors}` | null;
   children: React.ReactNode;
-  ariaLabel?: string;
   removeDefaultStyle?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -25,7 +22,7 @@ export type InputType = {
   checked?:boolean;
   icon?: JSX.Element;
   removeDefaultStyle?:boolean;
-} & BaseType & InputHTMLAttributes<HTMLInputElement>;
+} & BaseType & React.InputHTMLAttributes<HTMLInputElement>;
 
 export type TextareaType = {
   name?: string;
@@ -36,4 +33,4 @@ export type TextareaType = {
   onChange?: (e: any) => void;
   label?: string;
   icon?: JSX.Element;
-} & BaseType;
+} & BaseType & React.TextareaHTMLAttributes<HTMLTextAreaElement>;

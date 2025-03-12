@@ -66,7 +66,7 @@ describe("textarea Compoennets", () => {
     const defaultProps: TextareaType = {
       id: "1",
       style: "custom-style",
-      ariaLabel: "textarea label",
+      "aria-label": "textarea label",
       name: "sample name",
       rows: 2,
       value: "john",

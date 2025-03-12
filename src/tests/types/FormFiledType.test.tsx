@@ -5,15 +5,14 @@ describe("FormFiled Types", () => {
   describe("Button Type", () => {
     it("should allow valid button properties", () => {
       const validButton: ButtonType = {
-        title: "Click Me",
+        children: "Click Me",
         color: "btn-primary",
         type: "submit",
         disabled: false,
         onClick: () => {},
         id: "test-button",
-        style: "custome-style",
-        ariaLabel: "Test Button",
-        icon: <span>1</span>,
+        className: "custome-style",
+        "aria-label": "Test Button",
       };
 
       expect(validButton).toBeDefined();
@@ -41,7 +40,7 @@ describe("FormFiled Types", () => {
             label: 'Text Input',
             id : 'test-input',
             style: "custome-style",
-            ariaLabel: 'Test Input'
+            "aria-label": 'Test Input'
         };
 
         expect(validInput).toBeDefined()
@@ -69,7 +68,7 @@ describe("FormFiled Types", () => {
                 required: false,
                 id : 'test-testarea',
                 style : 'custome-style',
-                ariaLabel: 'Test Textarea'
+                "aria-label": 'Test Textarea'
             };
 
             expect(validTextarea).toBeDefined()

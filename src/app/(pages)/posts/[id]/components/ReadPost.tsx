@@ -18,14 +18,14 @@ const ReadPost = ({ text }: { text: string }) => {
           className="rounded-full text-white"
           onClick={isSpeaking ? handleStopReading : handleReadText}
           color="btn-primary"
-          ariaLabel="reading post button"
+          aria-label="reading post button"
         ><FaPlay /></Button>
       ) : (
         <Button
           className="rounded-full text-white"
           onClick={isSpeaking ? handleStopReading : handleReadText}
           color="btn-primary"
-          ariaLabel="stop reading post button"
+          aria-label="stop reading post button"
         ><FaStop /></Button>
       )}
     </>
