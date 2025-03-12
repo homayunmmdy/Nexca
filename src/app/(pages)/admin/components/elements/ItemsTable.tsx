@@ -1,4 +1,4 @@
-import { Button } from "@/components";
+import { Button } from "@/components/atoms";
 import { PostsCashType } from "@/types/CashTypes";
 import Image from "next/image";
 import Link from "next/link";

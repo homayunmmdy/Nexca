@@ -1,5 +1,6 @@
 "use client";
-import { Button, ErrorText, Spinner } from "@/components";
+import { ErrorText, Spinner } from "@/components";
+import { Button} from "@/components/atoms";
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { ALL_TEXTADV_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";

@@ -1,9 +1,7 @@
-export { default as Button } from "./Button";
+
 export { default as FullHoverAnimation } from "./FullHoverAnimation";
-export { default as Input } from "./Input";
 export { default as ReactQueryProvider } from "./ReactQueryProvider";
 export { default as Spinner } from "./Spinner";
-export { default as Textarea } from "./Textarea";
 export { default as ThemeToggle } from "./ThemeToggle";
 export { default as Titr } from "./Titr";
 
@@ -21,7 +19,6 @@ export { default as Features } from "./Items/Features";
 export { default as Hero } from "./Items/Hero";
 export { default as PriceList } from "./Items/PriceList";
 export { default as StatcsSect } from "./Items/Stats";
-
 
 // Admin Compoentns
 export { default as ErrorText } from "./admin/ErrorText";

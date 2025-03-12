@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input, Textarea } from "@/components";
+import { Button, Input, Textarea } from "@/components/atoms";
 import {
   POST_API_URL,
   SECTIONS_API_URL,

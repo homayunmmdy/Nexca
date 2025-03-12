@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components";
+import { Button } from "@/components/atoms";
 import { AUTH_KEY } from "@/config/Constants";
 import useCheckLogin from "@/hooks/useCheckLogin";
 import { useRouter } from "next/navigation";

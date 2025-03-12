@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "@/components";
+import { Button } from "@/components/atoms";
 import useReadText from "@/hooks/useReadText";
 import { useEffect } from "react";
 import { FaPlay, FaStop } from "react-icons/fa";

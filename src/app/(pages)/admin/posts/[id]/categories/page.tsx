@@ -1,5 +1,6 @@
 "use client";
-import { Button, ErrorText, Spinner } from "@/components";
+import {  ErrorText, Spinner } from "@/components";
+import { Button} from "@/components/atoms";
 import { POST_API_URL } from "@/config/apiConstants";
 import useSinglePost from "@/hooks/useSinglePost";
 import { CategoryType } from "@/types/CashTypes";

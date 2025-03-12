@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components";
+import { Button } from "@/components/atoms";
 import { FallbackProps } from "@/types/entities";
 import { useEffect } from "react";
 import { IoReloadSharp } from "react-icons/io5";

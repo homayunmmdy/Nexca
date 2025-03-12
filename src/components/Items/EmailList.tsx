@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input } from "@/components";
+import { Button, Input } from "@/components/atoms";
 import { EMAIL_API_URL } from "@/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
@@ -48,7 +48,11 @@ const EmailList: React.FC = () => {
                   color="input-primary"
                   onChange={handler.trakeChange}
                 />
-                <Button type="submit" className="mt-5 sm:mt-0" color="btn-primary">
+                <Button
+                  type="submit"
+                  className="mt-5 sm:mt-0"
+                  color="btn-primary"
+                >
                   Subscribe
                 </Button>
               </div>

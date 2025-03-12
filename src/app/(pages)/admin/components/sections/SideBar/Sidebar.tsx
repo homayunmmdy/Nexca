@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components";
+import { Button } from "@/components/atoms";
 import SiteConfig from "@/config/site";
 import Link from "next/link";
 import React, { useState } from "react";

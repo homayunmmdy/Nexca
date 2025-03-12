@@ -1,4 +1,4 @@
-import { Input } from "@/components";
+import { Input } from "@/components/atoms";
 import Image from "next/image";
 
 const ImagePreview = ({

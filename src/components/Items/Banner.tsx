@@ -1,7 +1,5 @@
-import { BannerTitle, Button } from "@/components";
+import { BannerTitle } from "@/components";
 import SiteConfig from "@/config/site";
-import Link from "next/link";
-import { IoArrowUpCircleSharp } from "react-icons/io5";
 
 const Banner = () => {
   return (

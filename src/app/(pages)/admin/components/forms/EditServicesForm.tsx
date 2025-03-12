@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input, Textarea } from "@/components";
+import { Button, Input, Textarea } from "@/components/atoms";
 import { SERVICES_API_URL } from "@/config/apiConstants";
 import { SERVICES_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";

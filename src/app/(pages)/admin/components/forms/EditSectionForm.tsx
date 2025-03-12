@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input } from "@/components";
+import { Button, Input } from "@/components/atoms";
 import { SECTIONS_API_URL } from "@/config/apiConstants";
 import { SectionCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";

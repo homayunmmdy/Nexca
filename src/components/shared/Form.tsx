@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input, Textarea } from "@/components";
+import { Button, Input, Textarea } from "@/components/atoms";
 import { ShareFormType } from "@/types/entities";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Input } from "@/components";
+import { Button, Input } from "@/components/atoms";
 import FormHandler from "@/util/handler/FormHandler";
 import { useState } from "react";
 

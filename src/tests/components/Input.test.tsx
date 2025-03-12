@@ -1,8 +1,8 @@
+import React from 'react'
 import { InputType } from "@/types/FormFiledType";
 import { render, screen } from "@testing-library/react";
 import { FaUser } from "react-icons/fa";
-import Input from "../../components/Input";
-import React from 'react'
+import Input from "../../components/atoms/Input";
 
 describe("Input Compoennets", () => {
   it("should render the input with default value", () => {

@@ -1,5 +1,6 @@
 "use client";
-import { Button, ErrorText, Input, Spinner } from "@/components";
+import {  ErrorText,  Spinner } from "@/components";
+import { Button,  Input } from "@/components/atoms";
 import {
   POST_API_URL,
   SECTIONS_API_URL,

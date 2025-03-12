@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Input } from "@/components";
+import { Button, Input } from "@/components/atoms";
 import { AUTH_KEY } from "@/config/Constants";
 import Link from "next/link";
 import { useRouter } from "next/navigation";

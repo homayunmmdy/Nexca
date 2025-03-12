@@ -2,7 +2,7 @@ import React from 'react'
 import { TextareaType } from "@/types/FormFiledType";
 import { render, screen } from "@testing-library/react";
 import { FaUser } from "react-icons/fa";
-import Textarea from "../../components/Textarea";
+import Textarea from "../../components/atoms/Textarea";
 
 describe("textarea Compoennets", () => {
   it("should render the textarea with default value", () => {

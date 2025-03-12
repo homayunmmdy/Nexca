@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input } from "@/components";
+import { Button, Input } from "@/components/atoms";
 import { MASTER_KEY } from "@/config/Constants";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";

@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input } from "@/components";
+import { Button, Input } from "@/components/atoms";
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { TextAdvCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";

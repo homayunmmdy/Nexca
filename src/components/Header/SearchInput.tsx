@@ -1,7 +1,7 @@
 "use client";
 import { FormEvent, useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import Input from "../Input";
+import Input from "../atoms/Input";
 
 const SearchInput = ({className}: {className? : string | undefined}) => {
   const [query, setQuery] = useState("");

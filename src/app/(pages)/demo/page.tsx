@@ -1,7 +1,6 @@
 import { Banner } from "@/components";
 import { LinearAds } from "@/components/ads";
 import {
-  CodingTabs,
   MainSec,
   PostsSec,
   SingleCardSec,

@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components";
+import { Button } from "@/components/atoms";
 import { POST_API_URL } from "@/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";

@@ -3,7 +3,7 @@ import { ButtonType } from "@/types/FormFiledType";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Fa0 } from "react-icons/fa6";
-import Button from "../../components/Button";
+import Button from "../../components/atoms/Button";
 
 describe("Button component", () => {
   const defaultProps: ButtonType = {
@@ -47,7 +47,14 @@ describe("Button component", () => {
   });
 
   it("should apply removeDefaultStyle prop correctly", () => {
-    render(<Button {...defaultProps} removeDefaultStyle={true} color='btn-null' className='text-white'/>);
+    render(
+      <Button
+        {...defaultProps}
+        removeDefaultStyle={true}
+        color="btn-null"
+        className="text-white"
+      />
+    );
 
     const buttonElement = screen.getByRole("button");
     expect(buttonElement).not.toHaveClass("btn");

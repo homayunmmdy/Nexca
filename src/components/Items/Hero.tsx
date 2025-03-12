@@ -1,7 +1,8 @@
 
 "use client";
 import AdminImage from "@/../public/static/Image/admin.webp";
-import { Button, FullHoverAnimation } from "@/components";
+import { Button } from "@/components/atoms";
+import {  FullHoverAnimation } from "@/components";
 import SiteConfig from "@/config/site";
 import { motion } from "framer-motion";
 import Image from "next/image";

@@ -1,5 +1,5 @@
 import "@/app/tiptap.css";
-import { Button } from "@/components";
+import { Button } from "@/components/atoms";
 import CharacterCount from "@tiptap/extension-character-count";
 import CodeBlock from "@tiptap/extension-code-block";
 import Highlight from "@tiptap/extension-highlight";

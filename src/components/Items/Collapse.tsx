@@ -1,4 +1,4 @@
-import { Input } from "@/components";
+import { Input } from "@/components/atoms";
 import { CollapseType } from "@/types/entities";
 import React from "react";
 
@@ -9,7 +9,7 @@ interface Props {
 const Collapse: React.FC<Props> = ({ data }: Props) => {
   return (
     <>
-      <div key={data.id} className="collapse collapse-arrow join-item border">
+      <div key={data.id} className="collapse join-item collapse-arrow border">
         <Input
           id={`nexca-question-${data.id}`}
           type="radio"
@@ -18,7 +18,7 @@ const Collapse: React.FC<Props> = ({ data }: Props) => {
         />
         <label
           htmlFor={`nexca-question-${data.id}`}
-          className="collapse-title text-xl font-bold "
+          className="collapse-title text-xl font-bold"
         >
           {data.label}
         </label>

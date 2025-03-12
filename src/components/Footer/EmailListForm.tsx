@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input } from "@/components";
+import { Button, Input } from "@/components/atoms";
 import { EMAIL_API_URL } from "@/config/apiConstants";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
