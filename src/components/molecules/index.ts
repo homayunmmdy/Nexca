@@ -8,3 +8,4 @@ export { default as DeleteBtn } from "./DeleteBtn";
 export { default as FullHoverAnimation } from "./FullHoverAnimation";
 export { default as ThemeToggle } from "./ThemeToggle";
 export { default as NexcaMark } from "./NexcaMark";
+export { default as PWAInstallPopup } from "./PWAInstallPopup";

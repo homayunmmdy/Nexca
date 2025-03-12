@@ -4,7 +4,7 @@ import ThemeProvider from "@/components/ThemeProvider";
 import { Metadata } from "next";
 import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
-import PWAInstallPopup from "@/components/PWAInstallPopup";
+import { PWAInstallPopup } from "@/components/molecules";
 
 const libre_Franklin = Libre_Franklin({ subsets: ["latin"] });
 
