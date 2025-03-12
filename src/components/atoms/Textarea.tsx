@@ -26,7 +26,7 @@ const Textarea: React.FC<TextareaType> = ({
           <textarea
             value={value}
             rows={rows}
-            className={style}
+            className={`textarea textarea-ghost ${style}`}
             placeholder={placeholder}
             onChange={onChange}
             name={name}
