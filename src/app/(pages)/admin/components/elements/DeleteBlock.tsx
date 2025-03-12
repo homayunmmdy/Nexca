@@ -11,9 +11,10 @@ interface Props {
   path: string;
   id: string | number;
   masterEditor?: boolean;
+  disable? : boolean
 }
 
-const DeleteBlock: React.FC<Props> = ({ path, id, masterEditor }: Props) => {
+const DeleteBlock: React.FC<Props> = ({ path, id, masterEditor ,disable}: Props) => {
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const router = useRouter();
 
@@ -61,6 +62,7 @@ const DeleteBlock: React.FC<Props> = ({ path, id, masterEditor }: Props) => {
         color="btn-error"
         className="mb-2 me-2"
         type="button"
+        disabled={disable}
         onClick={() => setIsConfirmOpen(true)}
       >
         <MdDeleteOutline />

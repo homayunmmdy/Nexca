@@ -16,7 +16,6 @@ const Services: React.FC = () => {
     SERVICES_API_URL
   );
   const { data: posts, loading : loadingPost } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
-  console.log(posts)
   if (loading && loadingPost) {
     return <Spinner />;
   }
@@ -73,7 +72,7 @@ const Services: React.FC = () => {
                 </td>
                 {editor ? (
                   <td>
-                    <DeleteBlock path="services" id={item._id} />
+                    <DeleteBlock path="services" disable={postCounts?.[item.secid] > 0 ? true : false} id={item._id} />
                   </td>
                 ) : null}
               </tr>
