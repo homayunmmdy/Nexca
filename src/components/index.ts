@@ -1,4 +1,4 @@
-export { default as ReactQueryProvider } from "./ReactQueryProvider";
+export { default as ReactQueryProvider } from "../providers/ReactQueryProvider";
 export { default as Spinner } from "./Spinner";
 export { default as Titr } from "./Titr";
 

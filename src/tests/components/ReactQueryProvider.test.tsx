@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from "@testing-library/react";
-import ReactQueryProvider from "../../components/ReactQueryProvider";
+import ReactQueryProvider from "../../providers/ReactQueryProvider";
 
 describe("ReactQueryProvider", () => {
   it("renders children and provides QueryClientProvider context", () => {

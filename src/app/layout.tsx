@@ -1,10 +1,9 @@
-import { ReactQueryProvider } from "@/components";
+import { PWAInstallPopup } from "@/components/molecules";
 import { Footer, Header } from "@/components/organisms";
-import ThemeProvider from "@/components/ThemeProvider";
 import { Metadata } from "next";
 import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
-import { PWAInstallPopup } from "@/components/molecules";
+import MainProvider from "@/providers/MainProvider";
 
 const libre_Franklin = Libre_Franklin({ subsets: ["latin"] });
 
@@ -19,8 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReactQueryProvider>
-      <ThemeProvider>
+    <MainProvider>
         <html lang="en" data-theme="light">
           <body className={libre_Franklin.className}>
             <Header />
@@ -29,7 +27,6 @@ export default function RootLayout({
             <Footer />
           </body>
         </html>
-      </ThemeProvider>
-    </ReactQueryProvider>
+    </MainProvider>
   );
 }
