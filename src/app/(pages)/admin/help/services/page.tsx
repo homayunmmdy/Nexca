@@ -97,7 +97,7 @@ const ServicesHelpAdminPage: React.FC = () => {
                     <li><span className="font-medium">Service ID:</span> A unique identifier for your service</li>
                     <li><span className="font-medium">Image:</span> Upload a visual representation</li>
                     <li><span className="font-medium">Service Name:</span> A descriptive title</li>
-                    <li><span className="font-medium">Description:</span> Details about the service's purpose</li>
+                    <li><span className="font-medium">Description:</span> Details about the service&apos;s purpose</li>
                   </ul>
                 </div>
               </li>
@@ -159,7 +159,7 @@ const ServicesHelpAdminPage: React.FC = () => {
         <div className="rounded-lg bg-linear-to-r from-purple-600 to-indigo-600 p-8 text-center text-white shadow-lg">
           <h2 className="mb-4 text-2xl font-bold">Ready to Organize Your Content?</h2>
           <p className="mb-6 text-lg">
-            Start creating your first service today and experience how Nexca's powerful organization tools can transform your content management.
+            Start creating your first service today and experience how Nexca&apos;s powerful organization tools can transform your content management.
           </p>
           <Link
             href={`https://nexca.vercel.app/${RouteConfig.admin.services.new}`}
