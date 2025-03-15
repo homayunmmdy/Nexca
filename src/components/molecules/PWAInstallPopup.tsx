@@ -97,7 +97,7 @@ const PWAInstallPopup = () => {
                 />
               </svg>
               <span className="text-gray-700">
-                Works offline when you're not connected
+                Works offline when you&apos;re not connected
               </span>
             </li>
             <li className="flex items-start">

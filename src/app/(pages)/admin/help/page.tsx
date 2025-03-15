@@ -30,7 +30,7 @@ export default function HelpPage() {
               <h3 className="ml-4 text-lg font-semibold text-gray-800">User Guides</h3>
             </div>
             <p className="mb-4 text-gray-600">
-              Comprehensive guides to help you get the most out of {SiteConfig.name}'s features.
+              Comprehensive guides to help you get the most out of {SiteConfig.name}&apos;s features.
             </p>
             <Link href="#" className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800">
               Browse guides <FiArrowRight className="ml-2" />
@@ -79,7 +79,7 @@ export default function HelpPage() {
           </p>
           <div className="rounded border-l-4 border-indigo-500 bg-gray-50 p-4">
             <p className="text-gray-700">
-              <span className="font-medium">Pro tip:</span> Start with the "Quick Start Guide" in the sidebar for a comprehensive overview of the platform's core functionality.
+              <span className="font-medium">Pro tip:</span> Start with the &quot;Quick Start Guide&quot; in the sidebar for a comprehensive overview of the platform&apos;s core functionality.
             </p>
           </div>
         </section>
@@ -145,7 +145,7 @@ export default function HelpPage() {
           <div className="mt-8 rounded border-l-4 border-amber-400 bg-amber-50 p-4">
             <h4 className="mb-2 font-medium text-amber-800">Before Contacting Support</h4>
             <p className="text-amber-700">
-              Please ensure you've reviewed the relevant help sections and FAQs first. This helps us provide faster and more efficient support for complex issues.
+              Please ensure you&apos;ve reviewed the relevant help sections and FAQs first. This helps us provide faster and more efficient support for complex issues.
             </p>
           </div>
         </section>
