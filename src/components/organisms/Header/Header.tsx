@@ -2,7 +2,7 @@
 import {
   GitHubBtn,
   HamburgerIcon,
-  SearchInput,
+  GlobalSearchInput,
   ThemeToggle,
 } from "@/components/molecules";
 import SiteConfig from "@/config/site";
@@ -54,7 +54,7 @@ const Header = () => {
                   {SiteConfig.name}
                 </Link>
               </motion.h1>
-              <SearchInput className="hidden lg:block" />
+              <GlobalSearchInput className="hidden lg:block" />
             </div>
           </div>
           <div className="navbar-center hidden lg:flex lg:w-[50%] lg:justify-end">

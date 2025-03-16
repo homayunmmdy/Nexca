@@ -1,4 +1,4 @@
-import { SearchInput } from "@/components/molecules";
+import { GlobalSearchInput } from "@/components/molecules";
 import { MenuTypes } from "@/types/entities";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ const MobileMenu = ({ pathname, nav }: MenuTypes) => {
           className="flex items-center gap-3"
           key={`mobile_menu_item_starter`}
         >
-          <SearchInput className="block w-full lg:hidden" />
+          <GlobalSearchInput className="block w-full lg:hidden" />
         </li>
 
         {nav?.map((item) => {
