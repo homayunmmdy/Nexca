@@ -1,5 +1,5 @@
 "use client";
-import { ErrorText, Spinner } from "@/components";
+import { ErrorText, Spinner } from "@/components/atoms";
 import PostCard from "@/components/sections/PostCard";
 import { PostsCashType } from "@/types/CashTypes";
 import { useInfiniteQuery } from "@tanstack/react-query";

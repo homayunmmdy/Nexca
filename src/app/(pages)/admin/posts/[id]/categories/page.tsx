@@ -1,5 +1,5 @@
 "use client";
-import {  ErrorText, Spinner } from "@/components";
+import {  ErrorText, Spinner } from "@/components/atoms";
 import { Button} from "@/components/atoms";
 import { POST_API_URL } from "@/config/apiConstants";
 import useSinglePost from "@/hooks/useSinglePost";

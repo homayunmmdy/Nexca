@@ -1,6 +1,6 @@
 "use client";
 
-import { ErrorText } from "@/components";
+import { ErrorText } from "@/components/atoms";
 import { useEffect, useState } from "react";
 
 export default function OnlineStatusProvider({ children }: { children: React.ReactNode }) {

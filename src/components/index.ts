@@ -1,5 +1,4 @@
 export { default as ReactQueryProvider } from "../providers/ReactQueryProvider";
-export { default as Spinner } from "./Spinner";
 export { default as Titr } from "./Titr";
 
 export { default as Form } from "./shared/Form";
@@ -14,6 +13,3 @@ export { default as Features } from "./Items/Features";
 export { default as Hero } from "./Items/Hero";
 export { default as PriceList } from "./Items/PriceList";
 export { default as StatcsSect } from "./Items/Stats";
-
-// Admin Compoentns
-export { default as ErrorText } from "./admin/ErrorText";

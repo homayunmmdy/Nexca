@@ -1,5 +1,5 @@
 "use client";
-import { ErrorText, Spinner } from "@/components";
+import { ErrorText, Spinner } from "@/components/atoms";
 import { DeleteBtn } from "@/components/molecules";
 import { EMAIL_API_URL } from "@/config/apiConstants";
 import { EMAIL_QUERY_KEY } from "@/config/Constants";

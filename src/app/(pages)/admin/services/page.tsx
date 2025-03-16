@@ -1,5 +1,5 @@
 "use client";
-import { ErrorText, Spinner } from "@/components";
+import { ErrorText, Spinner } from "@/components/atoms";
 import { Button } from "@/components/atoms";
 import { DeleteBtn } from "@/components/molecules";
 import { POST_API_URL, SERVICES_API_URL } from "@/config/apiConstants";

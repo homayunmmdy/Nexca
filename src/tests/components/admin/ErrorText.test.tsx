@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ErrorText from "../../../components/admin/ErrorText"; 
+import ErrorText from "../../../components/atoms/ErrorText";
 
 describe("ErrorText Component", () => {
   it("renders the children correctly", () => {
@@ -8,11 +8,10 @@ describe("ErrorText Component", () => {
     render(<ErrorText>{testMessage}</ErrorText>);
 
     // Check if the text is rendered
-        const errorTextElement = screen.getByText(testMessage);
+    const errorTextElement = screen.getByText(testMessage);
 
     expect(errorTextElement).toBeInTheDocument();
-    expect(errorTextElement).toHaveTextContent(/error/i)
-
+    expect(errorTextElement).toHaveTextContent(/error/i);
   });
 
   it("should apply the red color to text", () => {
@@ -20,7 +19,7 @@ describe("ErrorText Component", () => {
     render(<ErrorText>{testMessage}</ErrorText>);
 
     const errorTextElement = screen.getByText(testMessage);
-    expect(errorTextElement).toHaveClass('text-red-600')
+    expect(errorTextElement).toHaveClass("text-red-600");
   });
 
   it("renders as a <p> element", () => {

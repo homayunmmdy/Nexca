@@ -1,5 +1,5 @@
 "use client";
-import { Spinner } from "@/components";
+import { Spinner } from "@/components/atoms";
 import { SECTIONS_API_URL } from "@/config/apiConstants";
 import { SECTIONS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";

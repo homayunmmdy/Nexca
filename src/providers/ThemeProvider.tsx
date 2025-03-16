@@ -1,7 +1,7 @@
-"use client"; // Mark this as a Client Component
+"use client"; 
 
+import { ErrorText } from "@/components/atoms";
 import { useEffect, useState } from "react";
-import ErrorText from "../components/admin/ErrorText";
 
 export default function ThemeProvider({
   children,

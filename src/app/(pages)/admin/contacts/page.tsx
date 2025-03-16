@@ -1,10 +1,10 @@
 "use client";
-import { ErrorText, Spinner } from "@/components";
+import { ErrorText, Spinner } from "@/components/atoms";
+import { DeleteBtn } from "@/components/molecules";
 import { CONTACTS_API_URL } from "@/config/apiConstants";
 import { CONTACTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { ContactsCashType } from "@/types/CashTypes";
-import { DeleteBtn } from "@/components/molecules";
 
 const ContactsPage = () => {
   const { data: contactData, loading } = useFetch(

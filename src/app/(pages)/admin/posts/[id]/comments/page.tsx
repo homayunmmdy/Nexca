@@ -1,6 +1,6 @@
 "use client";
 import Comment from "@/app/(pages)/posts/[id]/components/Comment";
-import { ErrorText } from "@/components";
+import { ErrorText } from "@/components/atoms";
 import { COMMENTS_API_URL } from "@/config/apiConstants";
 import { COMMENTS_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";

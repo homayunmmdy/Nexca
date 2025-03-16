@@ -1,4 +1,4 @@
-import { ErrorText } from "@/components";
+import { ErrorText } from "@/components/atoms";
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
 import { Button } from "@/components/atoms";
