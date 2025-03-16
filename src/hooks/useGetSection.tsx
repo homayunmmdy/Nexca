@@ -30,7 +30,9 @@ const useGetSection = (queryKey: string, lengthItem: number, secId: number) => {
   } = useQuery({
     queryKey: [queryKey],
     queryFn: () => axios.get(POST_API_URL).then((res) => res.data),
-    retry: false,
+    staleTime: 1000 * 60 * 5, // Cache for 5 minutes
+    refetchOnWindowFocus: false, // Avoid unnecessary refetches
+    retry: false, // Disable retries on failure 
   });
 
   const filteredData = mainData?.data?.filter(
