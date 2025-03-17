@@ -23,8 +23,6 @@ const PostsTable = ({
           <thead>
             <tr>
               <th>Title</th>
-              <th>Service</th>
-              <th>Section</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
