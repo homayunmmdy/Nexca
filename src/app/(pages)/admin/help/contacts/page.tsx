@@ -10,7 +10,7 @@ import {
 
 export default function AdminContactsPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen">
       <Head>
         <title>Nexca Contacts - Communication System</title>
         <meta
@@ -26,12 +26,12 @@ export default function AdminContactsPage() {
           <h1 className="relative mb-6 text-3xl font-bold sm:text-4xl">
             <span className="absolute -left-3 top-1/2 hidden h-8 w-1 -translate-y-1/2 transform rounded-full bg-indigo-700 sm:block" />
             Streamlining Communication
-            <span className="mt-1 block text-xl font-normal text-gray-500 sm:text-2xl">
+            <span className="mt-1 block text-xl font-normal sm:text-2xl">
               Nexca's Contact and Admin Feedback System
             </span>
           </h1>
 
-          <p className="text-lg leading-relaxed text-gray-700">
+          <p className="text-lg leading-relaxed">
             Nexca offers a seamless way for users to share ideas, messages, and
             feedback while providing administrators with an efficient system to
             manage and respond to these inputs.
@@ -40,18 +40,18 @@ export default function AdminContactsPage() {
 
         {/* How It Works */}
         <div className="mb-16">
-          <h2 className="mb-8 text-2xl font-bold text-gray-900">
+          <h2 className="mb-8 text-2xl font-bold">
             How It Works
           </h2>
 
-          <div className="mb-8 rounded-xl border border-gray-100 bg-gray-50 p-6">
+          <div className="mb-8 rounded-xl border border-indigo-700 bg-base-200 p-6">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <div className="flex flex-col items-center text-center">
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-indigo-700">
                   <span className="text-lg font-bold">1</span>
                 </div>
                 <h3 className="font-medium">User Submits Feedback</h3>
-                <p className="mt-1 text-sm text-gray-500">
+                <p className="mt-1 text-sm">
                   Via the intuitive contact form
                 </p>
               </div>
@@ -60,7 +60,7 @@ export default function AdminContactsPage() {
                   <span className="text-lg font-bold">2</span>
                 </div>
                 <h3 className="font-medium">Admin Reviews</h3>
-                <p className="mt-1 text-sm text-gray-500">
+                <p className="mt-1 text-sm">
                   Through the centralized dashboard
                 </p>
               </div>
@@ -69,20 +69,20 @@ export default function AdminContactsPage() {
                   <span className="text-lg font-bold">3</span>
                 </div>
                 <h3 className="font-medium">Implementation</h3>
-                <p className="mt-1 text-sm text-gray-500">
+                <p className="mt-1 text-sm">
                   Feedback drives platform improvements
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="flex rounded-lg border border-indigo-100 bg-indigo-50 p-4">
+          <div className="flex rounded-lg border border-indigo-700 bg-base-200 p-4">
             <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-700 p-2">
               <FiInfo className="text-white" />
             </div>
             <div className="ml-4">
               <h3 className="font-medium text-indigo-700">Did you know?</h3>
-              <p className="mt-1 text-sm text-gray-600">
+              <p className="mt-1 text-sm">
                 Nexca's approach sets a new standard for user engagement and
                 platform improvement.
               </p>
@@ -92,11 +92,11 @@ export default function AdminContactsPage() {
 
         {/* User-Friendly Contact Page */}
         <div className="mb-16">
-          <h2 className="mb-4 text-2xl font-bold text-gray-900">
+          <h2 className="mb-4 text-2xl font-bold">
             User-Friendly Contact Page
           </h2>
 
-          <div className="mb-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+          <div className="mb-8 overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-sm">
             <p className="p-6">
               Nexca's contact page, available at
               <a
@@ -109,7 +109,7 @@ export default function AdminContactsPage() {
             </p>
           </div>
 
-          <p className="text-gray-700">
+          <p className="">
             The simple and intuitive form ensures that messages, whether ideas,
             questions, or feedback, are delivered effortlessly. This feature
             helps businesses prioritize user engagement and build stronger
@@ -117,26 +117,26 @@ export default function AdminContactsPage() {
           </p>
 
           <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-            <div className="rounded-lg border border-gray-100 bg-gray-50 p-4">
+            <div className="rounded-lg border border-base-200 bg-base-200 p-4">
               <div className="mb-2 flex items-center">
                 <FiMessageSquare className="mr-2 text-indigo-700" />
-                <h3 className="font-medium text-gray-900">
+                <h3 className="font-medium">
                   Effortless Submission
                 </h3>
               </div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm">
                 Minimalist design focuses on quick and easy feedback submission
                 without unnecessary friction.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-100 bg-gray-50 p-4">
+            <div className="rounded-lg border border-base-200 bg-base-200 p-4">
               <div className="mb-2 flex items-center">
                 <FiCheckCircle className="mr-2 text-indigo-700" />
-                <h3 className="font-medium text-gray-900">
+                <h3 className="font-medium">
                   Real-time Validation
                 </h3>
               </div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm">
                 Form fields validate in real-time to ensure complete and
                 accurate information.
               </p>
@@ -146,7 +146,7 @@ export default function AdminContactsPage() {
 
         {/* Admin Dashboard */}
         <div className="mb-16">
-          <h2 className="mb-4 text-2xl font-bold text-gray-900">
+          <h2 className="mb-4 text-2xl font-bold">
             Admin Dashboard for Feedback Management
           </h2>
 
@@ -164,32 +164,32 @@ export default function AdminContactsPage() {
           </p>
 
           <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-sm">
               <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700">
                 <FiClipboard size={16} />
               </div>
-              <h3 className="font-medium text-gray-900">Organize</h3>
-              <p className="mt-1 text-sm text-gray-600">
+              <h3 className="font-medium">Organize</h3>
+              <p className="mt-1 text-sm">
                 Sort and categorize feedback by type, priority, and status
               </p>
             </div>
 
-            <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-sm">
               <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700">
                 <FiMessageCircle size={16} />
               </div>
-              <h3 className="font-medium text-gray-900">Respond</h3>
-              <p className="mt-1 text-sm text-gray-600">
+              <h3 className="font-medium">Respond</h3>
+              <p className="mt-1 text-sm">
                 Reply directly to users from within the dashboard
               </p>
             </div>
 
-            <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-sm">
               <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700">
                 <FiTrendingUp size={16} />
               </div>
-              <h3 className="font-medium text-gray-900">Track</h3>
-              <p className="mt-1 text-sm text-gray-600">
+              <h3 className="font-medium">Track</h3>
+              <p className="mt-1 text-sm">
                 Monitor feedback trends and implementation status
               </p>
             </div>
@@ -205,14 +205,14 @@ export default function AdminContactsPage() {
 
         {/* Why It Matters */}
         <div className="mb-16">
-          <h2 className="mb-4 text-2xl font-bold text-gray-900">
+          <h2 className="mb-4 text-2xl font-bold">
             Why It Matters
           </h2>
 
           <div className="mb-8">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div className="overflow-hidden rounded-xl border border-indigo-100 bg-gradient-to-br from-indigo-50 to-white p-6 shadow-sm">
-                <h3 className="mb-3 text-lg font-semibold text-indigo-800">
+              <div className="overflow-hidden rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm">
+                <h3 className="mb-3 text-lg font-semibold">
                   For Businesses
                 </h3>
                 <ul className="space-y-3">
@@ -235,8 +235,8 @@ export default function AdminContactsPage() {
                 </ul>
               </div>
 
-              <div className="overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-6 shadow-sm">
-                <h3 className="mb-3 text-lg font-semibold text-gray-800">
+              <div className="overflow-hidden rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm">
+                <h3 className="mb-3 text-lg font-semibold">
                   For Users
                 </h3>
                 <ul className="space-y-3">
