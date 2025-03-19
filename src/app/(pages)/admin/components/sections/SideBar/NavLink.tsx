@@ -1,6 +1,11 @@
 import { Button } from "@/components/atoms";
 import { LogoutButton } from "@/components/molecules";
-import { adminPages, EditPostPages, HelpPages } from "@/config/adminPage";
+import {
+  adminPages,
+  EditPostPages,
+  HelpPages,
+  SettingsPages,
+} from "@/config/adminPage";
 import { adminPagesType } from "@/types/entities";
 import { getIdOfPost } from "@/util/Util";
 import Link from "next/link";
@@ -17,10 +22,13 @@ const NavLink: React.FC = () => {
     !isNewPostRoute &&
     (pathname.split("/").length === 4 || pathname.split("/").length === 5);
   const isHelpRoute = pathname?.startsWith("/admin/help");
+  const isSettingRoute = pathname?.startsWith("/admin/setting");
 
   let data: adminPagesType[];
   if (isPostRoute) {
     data = EditPostPages;
+  } else if (isSettingRoute) {
+    data = SettingsPages;
   } else if (isHelpRoute) {
     data = HelpPages;
   } else {

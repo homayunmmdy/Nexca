@@ -10,6 +10,7 @@ import {
   FaTags,
 } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa6";
+import { IoMdSettings } from "react-icons/io";
 import { MdLiveTv, MdOutlineMail } from "react-icons/md";
 
 export const adminPages = [
@@ -39,4 +40,8 @@ export const HelpPages = [
   { name: "Sections", href: "/admin/help/sections", icon: FaSitemap },
   { name: "Services", href: "/admin/help/services", icon: FaPager },
   { name: "Contacts", href: "/admin/help/contacts", icon: FaPhoneAlt },
+]
+
+export const SettingsPages = [
+  { name: "Admin Setting", href: "/admin/settings", icon: IoMdSettings },
 ]
