@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/atoms";
+import { Button, LogoName } from "@/components/atoms";
 import SiteConfig from "@/config/site";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -17,14 +17,11 @@ const Sidebar: React.FC = () => {
       <div className="h-full w-full p-4">
         <div className="flex items-center justify-between">
           <Link
-            className="space-nowrap m-0 block px-4 py-3 text-lg md:text-xl lg:text-2xl"
+            className="space-nowrap m-0 flex items-center gap-2 px-4 py-3 text-lg md:text-xl lg:text-2xl"
             href="/admin"
           >
             Admin
-            <span className="text-lg font-bold text-indigo-700 md:text-xl lg:text-2xl">
-              {" "}
-              {SiteConfig.name}
-            </span>
+            <LogoName />
           </Link>
           <Link href="/admin/settings" title="setting">
             <Button>

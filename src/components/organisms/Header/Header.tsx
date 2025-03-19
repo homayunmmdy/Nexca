@@ -12,6 +12,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
+import { LogoName } from "@/components/atoms";
 
 const Header = () => {
   const pathname = usePathname();
@@ -45,15 +46,7 @@ const Header = () => {
           <div className="navbar-start lg:w-[30%]">
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
             <div className="flex items-center gap-2">
-              <motion.h1
-                className="text-xl font-bold text-indigo-700 md:text-2xl lg:text-3xl"
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }} 
-              >
-                <Link href="/" title={SiteConfig.name}>
-                  {SiteConfig.name}
-                </Link>
-              </motion.h1>
+              <LogoName />
               <GlobalSearchInput className="hidden lg:block" />
             </div>
           </div>
