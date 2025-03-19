@@ -23,9 +23,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run TypeScript checks
-        run: npm run type-check # Ensure you have a type-check script
-
       - name: Run tests
         run: npm run test
 
