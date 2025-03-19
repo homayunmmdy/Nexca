@@ -1,6 +1,7 @@
 "use client";
 import { Button, Input } from "@/components/atoms";
 import { MASTER_KEY } from "@/config/Constants";
+import RouteConfig from "@/config/RouteConfig";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -13,7 +14,7 @@ const MasterEditorPage: React.FC = () => {
     const isMasterEditor = localStorage.getItem(MASTER_KEY);
     if (isMasterEditor) {
       toast.success("you're welcome");
-      router.push("/admin");
+      router.push(RouteConfig.admin.base);
     }
   }, []);
 
@@ -22,7 +23,7 @@ const MasterEditorPage: React.FC = () => {
     if (password == `${KEY}`) {
       toast.success("you're welcome");
       localStorage.setItem(MASTER_KEY, "" + true);
-      router.push("/admin");
+      router.push(RouteConfig.admin.base);
     } else {
       toast.error("Invalid key");
     }

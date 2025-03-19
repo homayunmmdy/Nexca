@@ -1,3 +1,4 @@
+import RouteConfig from "@/config/RouteConfig";
 import { PriceItemType } from "@/types/entities";
 import Link from "next/link";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
@@ -18,7 +19,7 @@ const PriceItem = ({ item }: { item: PriceItemType }) => {
 
       <p className="font-light sm:text-sm">{item.description}</p>
       <Link
-        href="/admin"
+        href={RouteConfig.admin.base}
         className="w-full cursor-pointer rounded-md bg-gray-900 p-3 text-center text-sm font-semibold text-white shadow-sm hover:-translate-y-1"
       >
         Get started

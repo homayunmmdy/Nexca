@@ -2,6 +2,7 @@ import React from 'react';
 import SiteConfig from '@/config/site';
 import Link from 'next/link';
 import { FiMail, FiMessageCircle, FiBookOpen, FiHelpCircle, FiArrowRight } from 'react-icons/fi';
+import RouteConfig from '@/config/RouteConfig';
 
 export default function HelpPage() {
   return (
@@ -62,7 +63,7 @@ export default function HelpPage() {
             <p className="mb-4">
               Need personalized help? Reach out to our dedicated support team.
             </p>
-            <Link href="/admin/help/contacts" className="inline-flex items-center font-medium text-green-600 hover:text-green-800">
+            <Link href={RouteConfig.admin.help.contacts} className="inline-flex items-center font-medium text-green-600 hover:text-green-800">
               Contact us <FiArrowRight className="ml-2" />
             </Link>
           </div>

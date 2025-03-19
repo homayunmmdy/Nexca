@@ -1,3 +1,5 @@
+import RouteConfig from '@/config/RouteConfig';
+import Link from 'next/link';
 import React from 'react';
 
 const SectionsHelpAdminPage: React.FC = () => {
@@ -125,9 +127,9 @@ const SectionsHelpAdminPage: React.FC = () => {
               <h2 className="font-semibld mb-2 text-xl text-indigo-700">Need More Help?</h2>
               <p className="">
                 Visit the Nexca admin panel at{" "}
-                <a href="https://nexca.vercel.app/admin/sections" className="text-indigo-700 hover:underline">
-                  https://nexca.vercel.app/admin/sections
-                </a>
+                <Link href={`https://nexca.vercel.app/${RouteConfig.admin.sections.base}`} className="text-indigo-700 hover:underline">
+                  https://nexca.vercel.app{RouteConfig.admin.sections.base}
+                </Link>
                 {" "}or reach out to your Master Editor.
               </p>
             </div>

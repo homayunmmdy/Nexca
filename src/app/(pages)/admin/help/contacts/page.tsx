@@ -1,4 +1,6 @@
+import RouteConfig from "@/config/RouteConfig";
 import Head from "next/head";
+import Link from "next/link";
 import {
   FiCheckCircle,
   FiClipboard,
@@ -153,12 +155,12 @@ export default function AdminContactsPage() {
           <p className="mb-6">
             Administrators can access all user messages through the admin portal
             at
-            <a
-              href="https://nexca.vercel.app/admin/contacts"
+            <Link
+              href={`https://nexca.vercel.app${RouteConfig.admin.contacts}`}
               className="mx-1 font-medium text-indigo-700 hover:underline"
             >
-              nexca.vercel.app/admin/contacts
-            </a>
+              nexca.vercel.app{RouteConfig.admin.contacts}
+            </Link>
             . This centralized dashboard makes it easy to browse, categorize,
             and respond to feedback.
           </p>

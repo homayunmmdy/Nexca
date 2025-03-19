@@ -3,6 +3,7 @@
 import AdminImage from "@/../public/static/Image/admin.webp";
 import { Button } from "@/components/atoms";
 import {  FullHoverAnimation } from "@/components/molecules";
+import RouteConfig from "@/config/RouteConfig";
 import SiteConfig from "@/config/site";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -92,7 +93,7 @@ const Hero: React.FC = () => {
               variants={contentVariants}
               className="mt-8 flex items-center justify-center gap-3"
             >
-              <Link href="/admin">
+              <Link href={RouteConfig.admin.base}>
                 <Button
                   removeDefaultStyle={true}
                   color="btn-null"

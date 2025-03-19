@@ -1,4 +1,6 @@
+import RouteConfig from "@/config/RouteConfig";
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 import { FiEdit, FiExternalLink, FiPlus, FiTrash2 } from "react-icons/fi";
 
@@ -50,15 +52,15 @@ const TextAdvHelpPage: React.FC = () => {
                   To get started, navigate to the TextAdv section by visiting
                   the following link:
                 </p>
-                <a
-                  href="https://nexca.vercel.app/admin/textadv"
+                <Link
+                  href={`https://nexca.vercel.app${RouteConfig.admin.textadv.base}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center font-medium text-indigo-800 transition-colors hover:text-indigo-600"
                 >
-                  <span>https://nexca.vercel.app/admin/textadv</span>
+                  <span>https://nexca.vercel.app{RouteConfig.admin.textadv.base}</span>
                   <FiExternalLink className="ml-2" />
-                </a>
+                </Link>
                 <p className="mt-4">
                   This page serves as the central hub for all your text-based
                   advertisements. Here, you'll find a list of all existing ads
@@ -104,15 +106,15 @@ const TextAdvHelpPage: React.FC = () => {
                   To create a new text-based ad, head over to the following
                   link:
                 </p>
-                <a
-                  href="https://nexca.vercel.app/admin/textadv/new"
+                <Link
+                  href={`https://nexca.vercel.app${RouteConfig.admin.textadv.new}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center font-medium text-indigo-800 transition-colors hover:text-indigo-600"
                 >
-                  <span>https://nexca.vercel.app/admin/textadv/new</span>
+                  <span>https://nexca.vercel.app{RouteConfig.admin.textadv.new}</span>
                   <FiExternalLink className="ml-2" />
-                </a>
+                </Link>
                 <p className="mt-4">
                   This page is where the magic happens. Here's a step-by-step
                   breakdown of the fields you'll need to fill out to create a
@@ -270,14 +272,14 @@ const TextAdvHelpPage: React.FC = () => {
                       <p className="font-medium">
                         Manage Existing Ads
                       </p>
-                      <a
-                        href="https://nexca.vercel.app/admin/textadv"
+                      <Link
+                        href={`https://nexca.vercel.app${RouteConfig.admin.textadv.base}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover: mt-1 inline-block text-sm text-indigo-100 transition-colors"
                       >
-                        https://nexca.vercel.app/admin/textadv
-                      </a>
+                        https://nexca.vercel.app{RouteConfig.admin.textadv.base}
+                      </Link>
                     </div>
                   </div>
                   <div className="flex items-start rounded-lg bg-white/10 p-4 backdrop-blur-sm">
@@ -286,14 +288,14 @@ const TextAdvHelpPage: React.FC = () => {
                     </div>
                     <div className="ml-4">
                       <p className="font-medium">Create a New Ad</p>
-                      <a
-                        href="https://nexca.vercel.app/admin/textadv/new"
+                      <Link
+                        href={`https://nexca.vercel.app${RouteConfig.admin.textadv.new}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover: mt-1 inline-block text-sm text-indigo-100 transition-colors"
                       >
-                        https://nexca.vercel.app/admin/textadv/new
-                      </a>
+                        https://nexca.vercel.app{RouteConfig.admin.textadv.new}
+                      </Link>
                     </div>
                   </div>
                 </div>

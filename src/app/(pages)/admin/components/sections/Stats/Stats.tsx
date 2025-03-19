@@ -1,4 +1,5 @@
 "use client";
+import RouteConfig from "@/config/RouteConfig";
 import useGetStats from "@/hooks/useGetStats";
 import Link from "next/link";
 import { CgFeed } from "react-icons/cg";
@@ -12,28 +13,28 @@ const Stats = () => {
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      <Link href="/admin/posts">
+      <Link href={RouteConfig.admin.posts.base}>
         <Stat
           title="Available Posts"
           number={data.posts.length}
           icon={<CgFeed />}
         />
       </Link>
-      <Link href="/admin/sections">
+      <Link href={RouteConfig.admin.sections.base}>
         <Stat
           title="Available Sections"
           number={data.sections.length}
           icon={<RxSection />}
         />
       </Link>
-      <Link href="/admin/services">
+      <Link href={RouteConfig.admin.services.base}>
         <Stat
           title="Available Services"
           number={data.services.length}
           icon={<FiServer />}
         />
       </Link>
-      <Link href="/admin/contacts">
+      <Link href={RouteConfig.admin.contacts}>
         <Stat
           title="Messages"
           number={data.contacts.length}

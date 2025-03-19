@@ -1,8 +1,8 @@
-import { ErrorText } from "@/components/atoms";
+import { Button, ErrorText } from "@/components/atoms";
+import { DeleteBtn } from "@/components/molecules";
+import RouteConfig from "@/config/RouteConfig";
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
-import { Button } from "@/components/atoms";
-import { DeleteBtn } from "@/components/molecules";
 
 interface Props {
   data: any;
@@ -17,7 +17,7 @@ const DataTable = ({ data, path, editor }: Props) => {
     <div className="overflow-x-auto">
       {editor ? (
         <div className="flex w-full justify-center">
-          <Link href={`/admin/${path}/new`}>
+          <Link href={`/${RouteConfig.admin}/${path}/new`}>
             <Button
               color="btn-primary"
               className="btn-outline m-3"
@@ -43,7 +43,7 @@ const DataTable = ({ data, path, editor }: Props) => {
                 <td>{item.secid}</td>
                 <td>{item.name}</td>
                 <td>
-                  <Link href={`/admin/${path}/${item._id}`}>
+                  <Link href={`/${RouteConfig.admin}/${path}/${item._id}`}>
                     <Button color="btn-warning" className="mb-2 me-2">
                       <CiEdit size={25} />
                     </Button>

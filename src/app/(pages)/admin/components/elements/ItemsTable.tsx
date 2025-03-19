@@ -1,5 +1,6 @@
 import { Button } from "@/components/atoms";
 import { DeleteBtn } from "@/components/molecules";
+import RouteConfig from "@/config/RouteConfig";
 import { PostsCashType } from "@/types/CashTypes";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,20 +29,22 @@ const ItemsTable = ({ post, baseURL }: Props) => {
               />
             </Link>
           </div>
-            <p className="font-normal md:font-bold">
-              {post.title.slice(0, 60)}
-            </p>
+          <p className="font-normal md:font-bold">{post.title.slice(0, 60)}</p>
         </div>
       </td>
       <td>
-        <Link href={`/admin/${baseURL}/${post._id}`}>
+        <Link href={`/${RouteConfig.admin}/${baseURL}/${post._id}`}>
           <Button color="btn-warning" className="mb-2 me-2">
             <CiEdit size={25} />
           </Button>
         </Link>
       </td>
       <th>
-        <DeleteBtn path={baseURL} id={post._id} masterEditor={post.masterEditor} />
+        <DeleteBtn
+          path={baseURL}
+          id={post._id}
+          masterEditor={post.masterEditor}
+        />
       </th>
     </tr>
   );
