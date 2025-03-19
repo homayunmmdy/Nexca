@@ -1,3 +1,5 @@
+import RouteConfig from '@/config/RouteConfig';
+import Link from 'next/link';
 import React from 'react';
 import { FiLayers, FiLink, FiList, FiPlus } from 'react-icons/fi';
 
@@ -159,12 +161,12 @@ const ServicesHelpAdminPage: React.FC = () => {
           <p className="mb-6 text-lg">
             Start creating your first service today and experience how Nexca's powerful organization tools can transform your content management.
           </p>
-          <a
-            href="https://nexca.vercel.app/admin/services/new"
+          <Link
+            href={`https://nexca.vercel.app/${RouteConfig.admin.services.new}`}
             className="inline-block rounded-lg bg-white px-6 py-3 font-medium text-indigo-700 shadow transition-colors hover:bg-gray-100"
           >
             Create Your First Service
-          </a>
+          </Link>
         </div>
       </div>
     </div>

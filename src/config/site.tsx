@@ -1,3 +1,5 @@
+import RouteConfig from "./RouteConfig";
+
 const API_URL = process.env.API_URL || 'https://nexca.vercel.app';
 const SiteConfig = {
   name: "Nexca",
@@ -29,7 +31,7 @@ const SiteConfig = {
     {
       id: 2,
       name: " Admin",
-      link: "/admin",
+      link: RouteConfig.admin.base,
     },
     {
       id: 3,

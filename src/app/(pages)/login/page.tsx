@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import Toast from "./components/Toast";
+import RouteConfig from "@/config/RouteConfig";
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -21,7 +22,7 @@ const Login: React.FC = () => {
     const isAuthenticated = localStorage.getItem(AUTH_KEY);
     if (isAuthenticated) {
       toast.success("You're already logged in.");
-      router.push("/admin");
+      router.push(RouteConfig.admin.base);
       didNavigateRef.current = true;
     }
 
@@ -47,7 +48,7 @@ const Login: React.FC = () => {
     if (username === USERNAME && password === PASSWORD) {
       toast.success("Welcome back!");
       localStorage.setItem(AUTH_KEY, JSON.stringify(true));
-      router.push("/admin");
+      router.push(RouteConfig.admin.base);
     } else {
       toast.error("Invalid username or password");
     }

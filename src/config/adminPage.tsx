@@ -12,36 +12,36 @@ import {
 import { FaQuestion } from "react-icons/fa6";
 import { IoMdSettings } from "react-icons/io";
 import { MdLiveTv, MdOutlineMail } from "react-icons/md";
+import RouteConfig from "./RouteConfig";
 
 export const adminPages = [
-  { name: "Admin", href: "/admin", icon: FaHome },
-  { name: "Posts", href: "/admin/posts", icon: CgFeed },
-  { name: "New Post", href: "/admin/posts/new", icon: FaRegEdit },
-  { name: "Text Adv", href: "/admin/textadv", icon: FaAdversal },
-  { name: "Sections", href: "/admin/sections", icon: FaSitemap },
-  { name: "Services", href: "/admin/services", icon: FaPager },
-  { name: "Emails", href: "/admin/emails", icon: MdOutlineMail },
-  { name: "Contacts", href: "/admin/contacts", icon: FaPhoneAlt },
-  { name: "Help", href: "/admin/help", icon: FaQuestion },
+  { name: "Admin", href: RouteConfig.admin.base, icon: FaHome },
+  { name: "Posts", href: RouteConfig.admin.posts.base, icon: CgFeed },
+  { name: "New Post", href: RouteConfig.admin.posts.new, icon: FaRegEdit },
+  { name: "Text Adv", href: RouteConfig.admin.textadv.base, icon: FaAdversal },
+  { name: "Sections", href: RouteConfig.admin.sections.base, icon: FaSitemap },
+  { name: "Services", href: RouteConfig.admin.services.base, icon: FaPager },
+  { name: "Emails", href: RouteConfig.admin.emails, icon: MdOutlineMail },
+  { name: "Contacts", href: RouteConfig.admin.contacts, icon: FaPhoneAlt },
+  { name: "Help", href: RouteConfig.admin.help.base, icon: FaQuestion },
 ];
 
 export const EditPostPages = [
-  { name: "See Live", href: "live", icon: MdLiveTv  },
+  { name: "See Live", href: "live", icon: MdLiveTv },
   { name: "Edit Post", href: "", icon: FaRegEdit },
   { name: "Comments", href: "comments", icon: FaComment },
   { name: "Categories", href: "categories", icon: FaTags },
 ];
 
-
 export const HelpPages = [
-  { name: "Admin", href: "/admin", icon: FaHome },
-  { name: "Help", href: "/admin/help", icon: FaQuestion },
-  { name: "Text Adv", href: "/admin/help/textadv", icon: FaAdversal },
-  { name: "Sections", href: "/admin/help/sections", icon: FaSitemap },
-  { name: "Services", href: "/admin/help/services", icon: FaPager },
-  { name: "Contacts", href: "/admin/help/contacts", icon: FaPhoneAlt },
-]
+  { name: "Admin", href: RouteConfig.admin.base, icon: FaHome },
+  { name: "Help", href: RouteConfig.admin.help.base, icon: FaQuestion },
+  { name: "Text Adv", href: RouteConfig.admin.help.textadv, icon: FaAdversal },
+  { name: "Sections", href: RouteConfig.admin.help.sections, icon: FaSitemap },
+  { name: "Services", href: RouteConfig.admin.help.services, icon: FaPager },
+  { name: "Contacts", href: RouteConfig.admin.help.contacts, icon: FaPhoneAlt },
+];
 
 export const SettingsPages = [
-  { name: "Admin Setting", href: "/admin/settings", icon: IoMdSettings },
-]
+  { name: "Admin Setting", href: RouteConfig.admin.settings.base, icon: IoMdSettings },
+];

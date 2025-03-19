@@ -1,6 +1,6 @@
 "use client";
 import { Button, LogoName } from "@/components/atoms";
-import SiteConfig from "@/config/site";
+import RouteConfig from "@/config/RouteConfig";
 import Link from "next/link";
 import React, { useState } from "react";
 import { IoMdSettings } from "react-icons/io";
@@ -18,12 +18,12 @@ const Sidebar: React.FC = () => {
         <div className="flex items-center justify-between">
           <Link
             className="space-nowrap m-0 flex items-center gap-2 px-4 py-3 text-lg md:text-xl lg:text-2xl"
-            href="/admin"
+            href={RouteConfig.admin.base}
           >
             Admin
             <LogoName />
           </Link>
-          <Link href="/admin/settings" title="setting">
+          <Link href={RouteConfig.admin.settings.base} title="setting">
             <Button>
               <IoMdSettings />
             </Button>

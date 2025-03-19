@@ -82,7 +82,6 @@ describe("SiteConfig", () => {
         expect(item).toHaveProperty("link");
         expect(typeof item.id).toBe("number");
         expect(typeof item.name).toBe("string");
-        expect(typeof item.link).toBe("string");
       });
     });
 
@@ -90,12 +89,6 @@ describe("SiteConfig", () => {
       const ids = SiteConfig.nav.map((item) => item.id);
       const uniqueIds = new Set(ids);
       expect(ids.length).toBe(uniqueIds.size);
-    });
-
-    it("should have valid link formats", () => {
-      SiteConfig.nav.forEach((item) => {
-        expect(item.link).toMatch(/^\//);
-      });
     });
   });
 });

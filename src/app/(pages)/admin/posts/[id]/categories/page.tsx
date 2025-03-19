@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CategoryList } from "../../../components/elements";
 import CategoriesForm from "../../../components/forms/CategoriesForm";
+import RouteConfig from "@/config/RouteConfig";
 
 const PostCategories = () => {
   const postId = getIdOfPost();
@@ -25,7 +26,7 @@ const PostCategories = () => {
   const [formData, setFormData] = useState(startingTicketData);
   const handler = new FormHandler(setFormData, POST_API_URL, router);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    handler.submit(e, formData, post._id, `/admin/posts/${post.id}/categories`);
+    handler.submit(e, formData, post._id, `${RouteConfig.admin.posts.base}/${post.id}/categories`);
   if (isLoading) {
     return <Spinner />;
   }

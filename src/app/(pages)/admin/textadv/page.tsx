@@ -4,6 +4,7 @@ import { Button} from "@/components/atoms";
 import { DeleteBtn } from "@/components/molecules";
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { ALL_TEXTADV_QUERY_KEY } from "@/config/Constants";
+import RouteConfig from "@/config/RouteConfig";
 import useFetch from "@/hooks/useFetch";
 import { TextAdvCashType } from "@/types/CashTypes";
 import Link from "next/link";
@@ -27,7 +28,7 @@ const AdminTextAdvPage: React.FC = () => {
     <>
       <div className="overflow-x-auto">
         <div className="flex w-full justify-center">
-          <Link href={`/admin/textadv/new`}>
+          <Link href={RouteConfig.admin.textadv.new}>
             <Button color="btn-primary" className="btn-outline m-3">
               New textadv
             </Button>
@@ -54,7 +55,7 @@ const AdminTextAdvPage: React.FC = () => {
                     <td>{item.advname}</td>
                     <td>{item.body}</td>
                     <td>
-                      <Link href={`/admin/textadv/${item._id}`}>
+                      <Link href={`${RouteConfig.admin.textadv.base}/${item._id}`}>
                         <Button color="btn-warning" className="mb-2 me-2">
                           <CiEdit size={25} />
                         </Button>

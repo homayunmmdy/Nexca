@@ -6,6 +6,7 @@ import {
   HelpPages,
   SettingsPages,
 } from "@/config/adminPage";
+import RouteConfig from "@/config/RouteConfig";
 import { adminPagesType } from "@/types/entities";
 import { getIdOfPost } from "@/util/Util";
 import Link from "next/link";
@@ -15,14 +16,14 @@ import { FaHome } from "react-icons/fa";
 
 const NavLink: React.FC = () => {
   const pathname = usePathname();
-  const isNewPostRoute = pathname === "/admin/posts/new";
+  const isNewPostRoute = pathname === RouteConfig.admin.posts.new;
 
   const isPostRoute =
-    pathname?.startsWith("/admin/posts/") &&
+    pathname?.startsWith(RouteConfig.admin.posts.base) &&
     !isNewPostRoute &&
     (pathname.split("/").length === 4 || pathname.split("/").length === 5);
-  const isHelpRoute = pathname?.startsWith("/admin/help");
-  const isSettingRoute = pathname?.startsWith("/admin/setting");
+  const isHelpRoute = pathname?.startsWith(RouteConfig.admin.help.base);
+  const isSettingRoute = pathname?.startsWith(RouteConfig.admin.settings.base);
 
   let data: adminPagesType[];
   if (isPostRoute) {
@@ -43,7 +44,7 @@ const NavLink: React.FC = () => {
           {isPostRoute && (
             <Link
               className="py-2.7 ease-nav-brand my-0 flex items-center whitespace-nowrap rounded-xl p-1 px-4 text-sm transition-colors hover:bg-indigo-500 hover:text-white"
-              href="/admin"
+              href={RouteConfig.admin.base}
             >
               <div className="shadow-soft-2xl ml-2 flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-700 bg-center stroke-0 text-center xl:p-2.5">
                 <FaHome size={24} color="#FFF" />
@@ -57,7 +58,7 @@ const NavLink: React.FC = () => {
           {data?.map((link, index) => {
             const LinkIcon = link.icon;
             const href = isPostRoute
-              ? `/admin/posts/${postId}/${link.href}`
+              ? `${RouteConfig.admin.posts.base}/${postId}/${link.href}`
               : link.href;
             return (
               <li className="mt-0.5 w-full" key={index}>
@@ -93,7 +94,7 @@ const NavLink: React.FC = () => {
         <div className="my-4 max-w-full">
           <LogoutButton />
         </div>
-        <Link href="/admin/master" className="my-4 max-w-full">
+        <Link href={RouteConfig.admin.master} className="my-4 max-w-full">
           <Button
             type="button"
             color="btn-null"
