@@ -33,7 +33,7 @@ const ItemsTable = ({ post, baseURL }: Props) => {
         </div>
       </td>
       <td>
-        <Link href={`/${RouteConfig.admin}/${baseURL}/${post._id}`}>
+        <Link href={`/${RouteConfig.admin.base}/${baseURL}/${post._id}`}>
           <Button color="btn-warning" className="mb-2 me-2">
             <CiEdit size={25} />
           </Button>

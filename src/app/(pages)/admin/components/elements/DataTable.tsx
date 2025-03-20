@@ -17,7 +17,7 @@ const DataTable = ({ data, path, editor }: Props) => {
     <div className="overflow-x-auto">
       {editor ? (
         <div className="flex w-full justify-center">
-          <Link href={`/${RouteConfig.admin}/${path}/new`}>
+          <Link href={`/${RouteConfig.admin.base}/${path}/new`}>
             <Button
               color="btn-primary"
               className="btn-outline m-3"
@@ -43,7 +43,7 @@ const DataTable = ({ data, path, editor }: Props) => {
                 <td>{item.secid}</td>
                 <td>{item.name}</td>
                 <td>
-                  <Link href={`/${RouteConfig.admin}/${path}/${item._id}`}>
+                  <Link href={`/${RouteConfig.admin.base}/${path}/${item._id}`}>
                     <Button color="btn-warning" className="mb-2 me-2">
                       <CiEdit size={25} />
                     </Button>
