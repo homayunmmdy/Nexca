@@ -33,4 +33,4 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           npm install -g vercel
-          vercel --token=${{ secrets.VERCEL_TOKEN }} --prod
+          vercel --token=${{ secrets.VERCEL_TOKEN }} --prod --yes
