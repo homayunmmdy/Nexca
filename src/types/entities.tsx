@@ -88,4 +88,5 @@ export type adminPagesType = {
   name: string,
   href : string,
   icon: IconType;
+  activate: boolean;
 }

@@ -9,12 +9,13 @@ import {
   FaComment,
   FaTags,
 } from "react-icons/fa";
-import { MdOutlineMail,MdLiveTv } from "react-icons/md";
+import { MdOutlineMail, MdLiveTv } from "react-icons/md";
 import { adminPages, EditPostPages } from "../../config/adminPage";
 import { FaQuestion } from "react-icons/fa6";
 
 describe("adminPages", () => {
-  const AmountAdminPages =9;
+  const AmountAdminPages = 9;
+
   describe("Structure and Content", () => {
     it("should have correct number of admin pages", () => {
       expect(adminPages).toHaveLength(AmountAdminPages);
@@ -25,8 +26,10 @@ describe("adminPages", () => {
         expect(page).toHaveProperty("name");
         expect(page).toHaveProperty("href");
         expect(page).toHaveProperty("icon");
+        expect(page).toHaveProperty("activate"); // Check for the activate property
         expect(typeof page.name).toBe("string");
         expect(typeof page.href).toBe("string");
+        expect(typeof page.activate).toBe("boolean"); // Check that activate is a boolean
       });
     });
 
@@ -72,30 +75,33 @@ describe("adminPages", () => {
       });
     });
   });
-  describe("EditPostPages", () => {
-    const AmountEditPostPages = 4;
-  
-    describe("Structure and Content", () => {
-      it("should have correct number of edit post pages", () => {
-        expect(EditPostPages).toHaveLength(AmountEditPostPages);
+});
+
+describe("EditPostPages", () => {
+  const AmountEditPostPages = 4;
+
+  describe("Structure and Content", () => {
+    it("should have correct number of edit post pages", () => {
+      expect(EditPostPages).toHaveLength(AmountEditPostPages);
+    });
+
+    it("should have valid structure for each edit post page", () => {
+      EditPostPages.forEach((page) => {
+        expect(page).toHaveProperty("name");
+        expect(page).toHaveProperty("href");
+        expect(page).toHaveProperty("icon");
+        expect(page).toHaveProperty("activate"); // Check for the activate property
+        expect(typeof page.name).toBe("string");
+        expect(typeof page.href).toBe("string");
+        expect(typeof page.activate).toBe("boolean"); // Check that activate is a boolean
       });
-  
-      it("should have valid structure for each edit post page", () => {
-        EditPostPages.forEach((page) => {
-          expect(page).toHaveProperty("name");
-          expect(page).toHaveProperty("href");
-          expect(page).toHaveProperty("icon");
-          expect(typeof page.name).toBe("string");
-          expect(typeof page.href).toBe("string");
-        });
-      });
-  
-      it("should have proper icon components", () => {
-        const iconComponents = [MdLiveTv,FaRegEdit, FaComment, FaTags];
-  
-        EditPostPages.forEach((page) => {
-          expect(iconComponents).toContain(page.icon);
-        });
+    });
+
+    it("should have proper icon components", () => {
+      const iconComponents = [MdLiveTv, FaRegEdit, FaComment, FaTags];
+
+      EditPostPages.forEach((page) => {
+        expect(iconComponents).toContain(page.icon);
       });
     });
   });

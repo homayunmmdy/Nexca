@@ -35,6 +35,8 @@ const NavLink: React.FC = () => {
   } else {
     data = adminPages;
   }
+  // Filter the data array to include only the links where activate is true
+  const filteredData = data.filter((link) => link.activate);
   const postId = getIdOfPost();
 
   return (
@@ -55,7 +57,7 @@ const NavLink: React.FC = () => {
             </Link>
           )}
 
-          {data?.map((link, index) => {
+          {filteredData?.map((link, index) => {
             const LinkIcon = link.icon;
             const href = isPostRoute
               ? `${RouteConfig.admin.posts.base}/${postId}/${link.href}`
