@@ -36,6 +36,7 @@ const Form = ({ buttonText, initalData, API }: ShareFormType) => {
       await handler.submit(e, formData, undefined, pathname);
       // Reset the form data after successful submission
       setFormData(initalData);
+      router.refresh()
     } catch (error) {
       console.error("Form submission failed:", error);
     }
