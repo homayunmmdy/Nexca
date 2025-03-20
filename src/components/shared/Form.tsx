@@ -30,8 +30,16 @@ const Form = ({ buttonText, initalData, API }: ShareFormType) => {
 
   const handler = new FormHandler(setFormData, API, router);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    handler.submit(e, formData,undefined,pathname);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await handler.submit(e, formData, undefined, pathname);
+      // Reset the form data after successful submission
+      setFormData(initalData);
+    } catch (error) {
+      console.error("Form submission failed:", error);
+    }
+  };
 
   return (
     <>
