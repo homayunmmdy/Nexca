@@ -59,7 +59,7 @@ const Sidebar: React.FC = () => {
             </svg>
           </Button>
         </div>
-        <hr className="mb-2 mt-0 h-px bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
+        <hr className="mb-2 mt-0 h-px bg-transparent bg-linear-to-r from-transparent via-black/40 to-transparent" />
         {isOpen && <NavLink />}
       </div>
     </>

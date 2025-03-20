@@ -23,7 +23,7 @@ const ServicesHelpAdminPage: React.FC = () => {
           <p className="mb-6">
             <span className="font-medium">Nexca Services</span> are a core feature of the Nexca CMS that allow you to categorize and organize your content in meaningful ways. Think of a service as a grouping mechanism for posts, letting you define clear relationships between content and its associated categories.
           </p>
-          <div className="rounded border-l-4 border-indigo-500 bg-base-300 p-4">
+          <div className="rounded-sm border-l-4 border-indigo-500 bg-base-300 p-4">
             <p className="text-indigo-700">
               Services are particularly useful for projects with diverse content types or multiple categories, helping your users navigate through related content more intuitively.
             </p>
@@ -83,14 +83,14 @@ const ServicesHelpAdminPage: React.FC = () => {
             <h3 className="mb-4 text-xl font-medium">Creating a Service</h3>
             <ol className="space-y-4">
               <li className="flex">
-                <span className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-100 font-bold text-purple-800">1</span>
+                <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-100 font-bold text-purple-800">1</span>
                 <div>
                   <p className="font-medium">Navigate to the Admin Panel</p>
                   <p className="mt-1">Go to the Nexca Admin Services Page from your dashboard.</p>
                 </div>
               </li>
               <li className="flex">
-                <span className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-100 font-bold text-purple-800">2</span>
+                <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-100 font-bold text-purple-800">2</span>
                 <div>
                   <p className="font-medium">Fill in the Required Details</p>
                   <ul className="ml-6 mt-2 list-disc space-y-1">
@@ -102,7 +102,7 @@ const ServicesHelpAdminPage: React.FC = () => {
                 </div>
               </li>
               <li className="flex">
-                <span className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-purple-100 font-bold text-purple-800">3</span>
+                <span className="mr-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-100 font-bold text-purple-800">3</span>
                 <div>
                   <p className="font-medium">Submit the Form</p>
                   <p className="mt-1">After ensuring the ID is unique, save your new service.</p>
@@ -116,7 +116,7 @@ const ServicesHelpAdminPage: React.FC = () => {
             <p className="mb-4">
               During post creation, you can assign your content to one or more services. This creates a logical relationship that helps organize your content effectively.
             </p>
-            <div className="rounded border-l-4 border-yellow-400 bg-yellow-50 p-4">
+            <div className="rounded-sm border-l-4 border-yellow-400 bg-yellow-50 p-4">
               <p className="text-yellow-800">
                 <span className="font-medium">Pro Tip:</span> Associating posts with relevant services not only organizes your content but also improves content discovery for your users.
               </p>
@@ -132,7 +132,7 @@ const ServicesHelpAdminPage: React.FC = () => {
                 </svg>
                 <p>
                   <span className="font-medium">Service-Specific Page:</span> Access all posts related to a service at
-                  <code className="mx-1 rounded bg-base-300 px-2 py-1 text-sm">https://nexca.vercel.app/services/[id-of-your-service]</code>
+                  <code className="mx-1 rounded-sm bg-base-300 px-2 py-1 text-sm">https://nexca.vercel.app/services/[id-of-your-service]</code>
                 </p>
               </li>
               <li className="flex items-start">
@@ -156,14 +156,14 @@ const ServicesHelpAdminPage: React.FC = () => {
         </div>
        
         {/* Final CTA */}
-        <div className="rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 p-8 text-center text-white shadow-lg">
+        <div className="rounded-lg bg-linear-to-r from-purple-600 to-indigo-600 p-8 text-center text-white shadow-lg">
           <h2 className="mb-4 text-2xl font-bold">Ready to Organize Your Content?</h2>
           <p className="mb-6 text-lg">
             Start creating your first service today and experience how Nexca's powerful organization tools can transform your content management.
           </p>
           <Link
             href={`https://nexca.vercel.app/${RouteConfig.admin.services.new}`}
-            className="inline-block rounded-lg bg-white px-6 py-3 font-medium text-indigo-700 shadow transition-colors hover:bg-gray-100"
+            className="inline-block rounded-lg bg-white px-6 py-3 font-medium text-indigo-700 shadow-sm transition-colors hover:bg-gray-100"
           >
             Create Your First Service
           </Link>

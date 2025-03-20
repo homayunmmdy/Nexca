@@ -24,7 +24,7 @@ const EmailList: React.FC = () => {
         <span className="loading loading-ring loading-lg absolute"></span>
       )}
       <div className="mx-auto my-5 max-w-7xl px-4">
-        <div className="mx-auto flex w-full flex-wrap items-center rounded border border-gray-200 p-5 text-left md:p-8 lg:flex-nowrap">
+        <div className="mx-auto flex w-full flex-wrap items-center rounded-sm border border-gray-200 p-5 text-left md:p-8 lg:flex-nowrap">
           <div className="mb-5 w-full flex-1 md:mb-0 md:w-1/2 md:pr-5 lg:pr-10">
             <h3 className="mb-2 text-2xl font-bold">Subscribe to EmailList</h3>
             <p>

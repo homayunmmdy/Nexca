@@ -35,8 +35,8 @@ const PriceList: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
-        <div className="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
+      <div className="mx-auto max-w-(--breakpoint-xl) px-4 py-8 lg:px-6 lg:py-16">
+        <div className="mx-auto mb-8 max-w-(--breakpoint-md) text-center lg:mb-12">
           <motion.h2
             ref={titleRef}
             initial={{ opacity: 0, y: 30 }}

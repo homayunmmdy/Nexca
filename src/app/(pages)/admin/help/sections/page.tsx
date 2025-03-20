@@ -33,7 +33,7 @@ const SectionsHelpAdminPage: React.FC = () => {
             </div>
             
             <div className="grid gap-8 md:grid-cols-2">
-              <div className="rounded-lg border border-base-200 bg-base-200 p-6 shadow">
+              <div className="rounded-lg border border-base-200 bg-base-200 p-6 shadow-sm">
                 <h3 className="mb-3 text-xl font-semibold">Customizing Section Names</h3>
                 <p >
                   Nexca allows admins to <span className="font-medium">rename sections</span> to better suit their needs. 
@@ -41,7 +41,7 @@ const SectionsHelpAdminPage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="rounded-lg border border-base-200 bg-base-200 p-6 shadow">
+              <div className="rounded-lg border border-base-200 bg-base-200 p-6 shadow-sm">
                 <h3 className="mb-3 text-xl font-semibold">Section Limitations</h3>
                 <p >
                   Creating new sections requires the <span className="font-medium">Master Editor</span> role,
@@ -107,7 +107,7 @@ const SectionsHelpAdminPage: React.FC = () => {
                   }
                 ].map((practice, index) => (
                   <li key={index} className="flex">
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-500 text-base-200">
                         {index + 1}
                       </div>

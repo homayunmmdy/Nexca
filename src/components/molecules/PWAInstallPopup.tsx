@@ -53,12 +53,12 @@ const PWAInstallPopup = () => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs">
       <div className="relative mx-4 max-w-md overflow-hidden rounded-xl bg-white shadow-2xl">
         {/* Header with gradient background */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+        <div className="bg-linear-to-r from-blue-600 to-purple-600 p-6 text-white">
           <div className="mb-1 flex items-center">
-            <div className="mr-3 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+            <div className="mr-3 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-xs">
               <svg
                 className="h-6 w-6 text-white"
                 fill="none"

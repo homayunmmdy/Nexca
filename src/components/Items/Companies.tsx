@@ -92,7 +92,7 @@ const Companies: React.FC = () => {
             <motion.div
               key={index}
               variants={item}
-              className="relative overflow-hidden rounded-lg border select-none hover:shadow hover:shadow-indigo-800 p-2"
+              className="relative overflow-hidden rounded-lg border select-none hover:shadow-sm hover:shadow-indigo-800 p-2"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

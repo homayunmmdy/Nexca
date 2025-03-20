@@ -6,7 +6,7 @@ const Stats = () => {
   const data = useGetStats();
   return (
     <div className="pt-12 sm:pt-20">
-    <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-(--breakpoint-xl) px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-3xl font-extrabold leading-9 sm:text-4xl sm:leading-10">
           See What we have
@@ -19,7 +19,7 @@ const Stats = () => {
     <div className="mt-10 pb-12 sm:pb-16">
       <div className="relative">
         <div className="absolute inset-0 h-1/2"></div>
-        <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-(--breakpoint-xl) px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <dl className="rounded-lg shadow-lg sm:grid sm:grid-cols-3">
               <div

@@ -45,7 +45,7 @@ const LinearAds = ({id} : {id : number}) => {
               key={adv._id}
               className="group flex cursor-pointer items-start gap-2 rounded-xl border-2 border-dotted border-gray-400 p-2 hover:border-solid hover:border-gray-900"
             >
-              <div className="h-7 w-7 flex-shrink-0">
+              <div className="h-7 w-7 shrink-0">
                 <FaCircleDot
                   className="h-full w-full text-indigo-700"
                   size={28}

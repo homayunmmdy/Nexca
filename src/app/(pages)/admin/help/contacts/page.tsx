@@ -79,7 +79,7 @@ export default function AdminContactsPage() {
           </div>
 
           <div className="flex rounded-lg border border-indigo-700 bg-base-200 p-4">
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-700 p-2">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-700 p-2">
               <FiInfo className="text-white" />
             </div>
             <div className="ml-4">
@@ -98,7 +98,7 @@ export default function AdminContactsPage() {
             User-Friendly Contact Page
           </h2>
 
-          <div className="mb-8 overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-sm">
+          <div className="mb-8 overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-xs">
             <p className="p-6">
               Nexca's contact page, available at
               <a
@@ -166,7 +166,7 @@ export default function AdminContactsPage() {
           </p>
 
           <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-sm">
+            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-xs">
               <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700">
                 <FiClipboard size={16} />
               </div>
@@ -176,7 +176,7 @@ export default function AdminContactsPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-sm">
+            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-xs">
               <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700">
                 <FiMessageCircle size={16} />
               </div>
@@ -186,7 +186,7 @@ export default function AdminContactsPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-sm">
+            <div className="rounded-lg border border-base-200 bg-base-200 p-4 shadow-xs">
               <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700">
                 <FiTrendingUp size={16} />
               </div>
@@ -213,7 +213,7 @@ export default function AdminContactsPage() {
 
           <div className="mb-8">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div className="overflow-hidden rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm">
+              <div className="overflow-hidden rounded-xl border border-base-200 bg-base-200 p-6 shadow-xs">
                 <h3 className="mb-3 text-lg font-semibold">
                   For Businesses
                 </h3>
@@ -237,7 +237,7 @@ export default function AdminContactsPage() {
                 </ul>
               </div>
 
-              <div className="overflow-hidden rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm">
+              <div className="overflow-hidden rounded-xl border border-base-200 bg-base-200 p-6 shadow-xs">
                 <h3 className="mb-3 text-lg font-semibold">
                   For Users
                 </h3>

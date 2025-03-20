@@ -23,7 +23,7 @@ export default function HelpPage() {
 
         {/* Quick Navigation Cards */}
         <div className="mb-16 grid gap-6 md:grid-cols-3">
-          <div className="rounded-xl border border-indigo-700 p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+          <div className="rounded-xl border border-indigo-700 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
             <div className="mb-4 flex items-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-base-200 text-blue-600">
                 <FiBookOpen className="h-6 w-6" />
@@ -38,7 +38,7 @@ export default function HelpPage() {
             </Link>
           </div>
 
-          <div className="rounded-xl border border-indigo-700 p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+          <div className="rounded-xl border border-indigo-700 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
             <div className="mb-4 flex items-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-base-200 text-purple-600">
                 <FiHelpCircle className="h-6 w-6" />
@@ -53,7 +53,7 @@ export default function HelpPage() {
             </Link>
           </div>
 
-          <div className="rounded-xl border border-indigo-700 p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+          <div className="rounded-xl border border-indigo-700 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
             <div className="mb-4 flex items-center">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-base-200 text-green-600">
                 <FiMessageCircle className="h-6 w-6" />
@@ -70,7 +70,7 @@ export default function HelpPage() {
         </div>
 
         {/* Introduction Section */}
-        <section className="mb-16 rounded-xl border border-indigo-700 p-8 shadow-sm">
+        <section className="mb-16 rounded-xl border border-indigo-700 p-8 shadow-xs">
           <h2 className="mb-6 flex items-center text-2xl font-bold">
             <span className="mr-3 flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-indigo-700">1</span>
             Getting Started with {SiteConfig.name}
@@ -78,7 +78,7 @@ export default function HelpPage() {
           <p className="mb-6 leading-relaxed">
             New to {SiteConfig.name}? Our platform is designed to make content management simple and intuitive. Choose each section in the sidebar to learn more about specific features and how to use {SiteConfig.name} effectively.
           </p>
-          <div className="rounded border-l-4 border-indigo-500 p-4">
+          <div className="rounded-sm border-l-4 border-indigo-500 p-4">
             <p>
               <span className="font-medium">Pro tip:</span> Start with the "Quick Start Guide" in the sidebar for a comprehensive overview of the platform's core functionality.
             </p>
@@ -86,7 +86,7 @@ export default function HelpPage() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="mb-16 rounded-xl border border-gray-100 p-8 shadow-sm">
+        <section id="contact" className="mb-16 rounded-xl border border-gray-100 p-8 shadow-xs">
           <h2 className="mb-6 text-2xl font-bold">
             Contact Our Support Team
           </h2>
@@ -143,7 +143,7 @@ export default function HelpPage() {
             </div>
           </div>
           
-          <div className="mt-8 rounded border-l-4 border-amber-400 bg-amber-50 p-4">
+          <div className="mt-8 rounded-sm border-l-4 border-amber-400 bg-amber-50 p-4">
             <h4 className="mb-2 font-medium text-amber-800">Before Contacting Support</h4>
             <p className="text-amber-700">
               Please ensure you've reviewed the relevant help sections and FAQs first. This helps us provide faster and more efficient support for complex issues.
@@ -152,7 +152,7 @@ export default function HelpPage() {
         </section>
 
         {/* Help Topics */}
-        <section className="rounded-xl border border-gray-100 p-8 shadow-sm">
+        <section className="rounded-xl border border-gray-100 p-8 shadow-xs">
           <h2 className="mb-6 text-2xl font-bold">
             Popular Help Topics
           </h2>

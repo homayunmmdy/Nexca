@@ -61,7 +61,7 @@ const Login: React.FC = () => {
       <div className="font-poppins flex items-center justify-center">
         <div className="flex h-screen w-screen items-center justify-center">
           <div className="grid gap-8 p-2">
-            <div className="m-2 rounded-[26px] bg-gradient-to-r from-blue-500 to-purple-500">
+            <div className="m-2 rounded-[26px] bg-linear-to-r from-blue-500 to-purple-500">
               <div className="m-2 rounded-[20px] border-[20px] border-transparent shadow-lg sm:p-2 md:p-6">
                 <h1 className="cursor-default py-4 text-center text-5xl font-bold">
                   Log in
@@ -119,7 +119,7 @@ const Login: React.FC = () => {
                       href="/privacy_policy"
                       title="Privacy Policy"
                     >
-                      <span className="cursor-pointer bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-left-bottom bg-no-repeat px-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
+                      <span className="cursor-pointer bg-linear-to-r from-white to-white bg-[length:0%_2px] bg-left-bottom bg-no-repeat px-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                         Privacy Policy
                       </span>
                     </Link>

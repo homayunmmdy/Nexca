@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <>
       <motion.header
-        className="navbar fixed left-0 right-0 top-0 z-[50] border-b-2 border-indigo-400 bg-base-100 shadow-xl transition-all hover:border-indigo-700"
+        className="navbar fixed left-0 right-0 top-0 z-50 border-b-2 border-indigo-400 bg-base-100 shadow-xl transition-all hover:border-indigo-700"
         initial="hidden"
         animate="visible"
         variants={headerVariants}

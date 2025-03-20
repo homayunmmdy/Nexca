@@ -18,9 +18,9 @@ const TextAdvHelpPage: React.FC = () => {
       </Head>
 
       <main className="mx-auto">
-        <div className="overflow-hidden rounded-2xl border-2 border-indigo-700 shadow-xl backdrop-blur-sm backdrop-filter">
+        <div className="overflow-hidden rounded-2xl border-2 border-indigo-700 shadow-xl backdrop-blur-xs backdrop-filter">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-800 to-indigo-600 opacity-90"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-indigo-800 to-indigo-600 opacity-90"></div>
             <div className="relative px-6 py-8 sm:px-10">
               <h1 className="text-3xl font-bold sm:text-4xl">
                 Exploring the TextAdv Section in Nexca
@@ -47,7 +47,7 @@ const TextAdvHelpPage: React.FC = () => {
               <h2 className="mb-6 mt-12 text-2xl font-bold">
                 Accessing the TextAdv Section
               </h2>
-              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
                 <p className="mb-4">
                   To get started, navigate to the TextAdv section by visiting
                   the following link:
@@ -71,7 +71,7 @@ const TextAdvHelpPage: React.FC = () => {
               <h2 className="mb-6 mt-12 text-2xl font-bold">
                 Editing and Deleting Ads
               </h2>
-              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
                 <div className="flex flex-col md:flex-row md:items-center md:space-x-6">
                   <div className="mb-6 md:mb-0 md:w-1/3">
                     <div className="flex items-center justify-center rounded-lg border border-base-300 bg-base-300 p-4">
@@ -101,7 +101,7 @@ const TextAdvHelpPage: React.FC = () => {
               <h2 className="mb-6 mt-12 text-2xl font-bold">
                 Creating a New Advertisement
               </h2>
-              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
                 <p className="mb-4">
                   To create a new text-based ad, head over to the following
                   link:
@@ -123,7 +123,7 @@ const TextAdvHelpPage: React.FC = () => {
               </div>
 
               <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <div className="relative overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-sm transition-shadow duration-300 hover:shadow-md">
+                <div className="relative overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-xs transition-shadow duration-300 hover:shadow-md">
                   <div className="absolute left-0 top-0 h-full w-1 bg-indigo-800"></div>
                   <div className="p-6 pl-8">
                     <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-800 font-semibold">
@@ -142,7 +142,7 @@ const TextAdvHelpPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-sm transition-shadow duration-300 hover:shadow-md">
+                <div className="relative overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-xs transition-shadow duration-300 hover:shadow-md">
                   <div className="absolute left-0 top-0 h-full w-1 bg-indigo-800"></div>
                   <div className="p-6 pl-8">
                     <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-800 font-semibold">
@@ -162,7 +162,7 @@ const TextAdvHelpPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-sm transition-shadow duration-300 hover:shadow-md">
+                <div className="relative overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-xs transition-shadow duration-300 hover:shadow-md">
                   <div className="absolute left-0 top-0 h-full w-1 bg-indigo-800"></div>
                   <div className="p-6 pl-8">
                     <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-800 font-semibold">
@@ -180,7 +180,7 @@ const TextAdvHelpPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-sm transition-shadow duration-300 hover:shadow-md">
+                <div className="relative overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-xs transition-shadow duration-300 hover:shadow-md">
                   <div className="absolute left-0 top-0 h-full w-1 bg-indigo-800"></div>
                   <div className="p-6 pl-8">
                     <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-800 font-semibold">
@@ -203,7 +203,7 @@ const TextAdvHelpPage: React.FC = () => {
               <h2 className="mb-6 mt-12 text-2xl font-bold">
                 Why Use the TextAdv Section?
               </h2>
-              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
                 <div className="flex flex-col lg:flex-row lg:space-x-6">
                   <div className="mb-6 lg:mb-0 lg:w-1/4">
                     <div className="flex h-full items-center justify-center rounded-xl bg-indigo-800 p-4">
@@ -247,7 +247,7 @@ const TextAdvHelpPage: React.FC = () => {
               <h2 className="mb-6 mt-12 text-2xl font-bold">
                 Conclusion
               </h2>
-              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-sm transition-shadow duration-300 hover:shadow-md">
+              <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
                 <p >
                   Whether you're a seasoned marketer or new to managing
                   advertisements, the TextAdv section in Nexca simplifies the
@@ -259,13 +259,13 @@ const TextAdvHelpPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-12 rounded-xl bg-gradient-to-r from-indigo-800 to-indigo-700 p-8 shadow-lg">
+              <div className="mt-12 rounded-xl bg-linear-to-r from-indigo-800 to-indigo-700 p-8 shadow-lg">
                 <h3 className="mb-6 text-xl font-medium">
                   Links to Get Started:
                 </h3>
                 <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0">
-                  <div className="flex items-start rounded-lg bg-white/10 p-4 backdrop-blur-sm">
-                    <div className="flex-shrink-0">
+                  <div className="flex items-start rounded-lg bg-white/10 p-4 backdrop-blur-xs">
+                    <div className="shrink-0">
                       <FiEdit className="h-6 w-6" />
                     </div>
                     <div className="ml-4">
@@ -282,8 +282,8 @@ const TextAdvHelpPage: React.FC = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="flex items-start rounded-lg bg-white/10 p-4 backdrop-blur-sm">
-                    <div className="flex-shrink-0">
+                  <div className="flex items-start rounded-lg bg-white/10 p-4 backdrop-blur-xs">
+                    <div className="shrink-0">
                       <FiPlus className="h-6 w-6" />
                     </div>
                     <div className="ml-4">

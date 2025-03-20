@@ -21,7 +21,7 @@ const FilterPanel = ({
   onClearFilters,
 }: FilterPanelProps) => {
   return (
-    <div className="rounded-md border border-indigo-600 p-4 shadow-sm">
+    <div className="rounded-md border border-indigo-600 p-4 shadow-xs">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>
           <label className="mb-1 block text-sm font-medium">Service</label>

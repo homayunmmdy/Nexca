@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
             variants={decorativeVariants}
             initial="hidden"
             animate="visible"
-            className="absolute -top-5 aspect-square w-4/12 rounded-full bg-gradient-to-tr from-blue-600 to-green-400 opacity-40 blur-xl lg:left-0 lg:w-2/12"
+            className="absolute -top-5 aspect-square w-4/12 rounded-full bg-linear-to-tr from-blue-600 to-green-400 opacity-40 blur-xl lg:left-0 lg:w-2/12"
             style={{ willChange: "opacity, transform" }}
           />
 
@@ -97,7 +97,7 @@ const Hero: React.FC = () => {
                 <Button
                   removeDefaultStyle={true}
                   color="btn-null"
-                  className="group relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-indigo-500 px-3 py-1 text-lg shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-indigo-500 before:transition-all before:duration-700 hover:text-gray-50 before:hover:left-0 before:hover:w-full before:hover:scale-150 before:hover:duration-700 lg:font-semibold"
+                  className="group relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-indigo-500 px-3 py-1 text-lg shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-indigo-500 before:transition-all before:duration-700 hover:text-gray-50 hover:before:left-0 hover:before:w-full hover:before:scale-150 hover:before:duration-700 lg:font-semibold"
                 >
                   <IoArrowUpCircleSharp
                     size={40}

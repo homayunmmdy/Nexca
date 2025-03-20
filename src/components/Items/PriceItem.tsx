@@ -20,7 +20,7 @@ const PriceItem = ({ item }: { item: PriceItemType }) => {
       <p className="font-light sm:text-sm">{item.description}</p>
       <Link
         href={RouteConfig.admin.base}
-        className="w-full cursor-pointer rounded-md bg-gray-900 p-3 text-center text-sm font-semibold text-white shadow-sm hover:-translate-y-1"
+        className="w-full cursor-pointer rounded-md bg-gray-900 p-3 text-center text-sm font-semibold text-white shadow-xs hover:-translate-y-1"
       >
         Get started
       </Link>
