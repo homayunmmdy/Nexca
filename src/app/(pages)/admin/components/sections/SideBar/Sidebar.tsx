@@ -3,8 +3,8 @@ import { Button, LogoName } from "@/components/atoms";
 import RouteConfig from "@/config/RouteConfig";
 import Link from "next/link";
 import React, { useState } from "react";
-import { IoMdSettings } from "react-icons/io";
 import NavLink from "./NavLink";
+import { HomeSettingBtn } from "@/components/molecules";
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -23,11 +23,7 @@ const Sidebar: React.FC = () => {
             Admin
             <LogoName />
           </Link>
-          <Link href={RouteConfig.admin.settings.base} title="setting">
-            <Button>
-              <IoMdSettings />
-            </Button>
-          </Link>
+          <HomeSettingBtn />
           <Button
             className="lg:hidden"
             color="btn-primary"
