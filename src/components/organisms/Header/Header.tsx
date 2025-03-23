@@ -1,18 +1,17 @@
 "use client";
+import { LogoName } from "@/components/atoms";
 import {
   GitHubBtn,
-  HamburgerIcon,
   GlobalSearchInput,
+  HamburgerIcon,
   ThemeToggle,
 } from "@/components/molecules";
 import SiteConfig from "@/config/site";
-import { motion, useReducedMotion } from "framer-motion"; 
-import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
-import { LogoName } from "@/components/atoms";
 
 const Header = () => {
   const pathname = usePathname();
@@ -25,21 +24,23 @@ const Header = () => {
 
   const shouldReduceMotion = useReducedMotion();
 
+  // Check if the environment is production
+  const isDev = process.env.NEXT_PUBLIC_STATUS === "dev";
   // Animation variants for the header
-  const headerVariants = {
-    hidden: {
-      opacity: shouldReduceMotion ? 1 : 0,
-      y: shouldReduceMotion ? 0 : -20,
-    },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+
+  const headerVariants = isDev
+    ? undefined
+    : {
+        hidden: { opacity: 0, y: -20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+      };
 
   return (
     <>
       <motion.header
         className="navbar fixed left-0 right-0 top-0 z-50 border-b-2 border-indigo-400 bg-base-100 shadow-xl transition-all hover:border-indigo-700"
-        initial="hidden"
-        animate="visible"
+        initial={isDev ? false : "hidden"}
+        animate={isDev ? false : "visible"}
         variants={headerVariants}
       >
         <div className="navbar mx-auto max-w-7xl">
