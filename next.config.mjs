@@ -1,10 +1,8 @@
 import nextPwa from "next-pwa";
 
-const nextConfig = nextPwa({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-})({
+const isDev = process.env.NEXT_PUBLIC_STATUS === "dev";
+
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -21,6 +19,11 @@ const nextConfig = nextPwa({
       },
     ],
   },
-});
+};
 
-export default nextConfig;
+// Apply nextPwa only in production
+export default isDev ? nextConfig : nextPwa({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+})(nextConfig);
