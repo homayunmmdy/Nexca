@@ -7,6 +7,7 @@
  * @example
  * const requestHandler = new RequestHandler(UserModel, UserCache);
  */
+import { DEV_MODE } from "@/config/Constants";
 import { Model } from "mongoose";
 import { NextResponse } from "next/server";
 
@@ -45,8 +46,8 @@ class RequestHandler<
    */
     async FindPaginated(skip: number, limit: number) {
       try {
-        if (process.env.NEXT_PUBLIC_STATUS === "dev") {
-          // In dev mode, simulate pagination using the cache
+        if (process.env.NEXT_PUBLIC_STATUS === DEV_MODE) {
+          // In DEV_MODE, simulate pagination using the cache
           const total = this.Cache.length;
           
            // Add sorting by createdAt in descending order
@@ -80,7 +81,7 @@ class RequestHandler<
    */
   async GetAll() {
     try {
-      if (process.env.NEXT_PUBLIC_STATUS === "dev") {
+      if (process.env.NEXT_PUBLIC_STATUS === DEV_MODE) {
         return NextResponse.json<T[]>({ data: this.Cache } as any, {
           status: 200,
         });
@@ -122,7 +123,7 @@ class RequestHandler<
    */
   async Get(id: string) {
     try {
-      if (process.env.NEXT_PUBLIC_STATUS === "dev") {
+      if (process.env.NEXT_PUBLIC_STATUS === DEV_MODE) {
         const document = this.Cache.find((doc) => doc._id === id);
         if (document) {
           return NextResponse.json<T>({ document } as any, { status: 200 });

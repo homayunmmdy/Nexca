@@ -25,7 +25,7 @@ import { PostsCashType } from "@/types/CashTypes";
 
 /**
  * A mock array of posts for development purposes.
- * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to "dev".
+ * This will only be used if the environment variable `NEXT_PUBLIC_STATUS` is set to DEV_MODE.
  * Otherwise, the data should be fetched from the database.
  *
  * @type {PostsCashType[]}

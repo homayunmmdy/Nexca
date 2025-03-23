@@ -12,6 +12,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
+import { DEV_MODE } from "@/config/Constants";
 
 const Header = () => {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ const Header = () => {
   const shouldReduceMotion = useReducedMotion();
 
   // Check if the environment is production
-  const isDev = process.env.NEXT_PUBLIC_STATUS === "dev";
+  const isDev = process.env.NEXT_PUBLIC_STATUS === DEV_MODE;
   // Animation variants for the header
 
   const headerVariants = isDev
