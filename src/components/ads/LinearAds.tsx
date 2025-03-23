@@ -1,5 +1,4 @@
 "use client";
-import Titr from "@/components/Titr";
 import { TEXTADV_API_URL } from "@/config/apiConstants";
 import { ALL_TEXTADV_QUERY_KEY } from "@/config/Constants";
 import { TextAdvCashType } from "@/types/CashTypes";
@@ -7,11 +6,11 @@ import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import Link from "next/link";
-import React from "react";
 import { FaCircleDot } from "react-icons/fa6";
+import { SectionsTitr } from "../atoms";
 import LinearAdsLoading from "./LinearAdsLoading";
 
-const LinearAds = ({id} : {id : number}) => {
+const LinearAds = ({ id }: { id: number }) => {
   const {
     data: mainData,
     isLoading,
@@ -38,7 +37,7 @@ const LinearAds = ({id} : {id : number}) => {
   return (
     <>
       <article>
-        <Titr title="Ads Demo Page" item="text-center" />
+        <SectionsTitr>Ads Demo Page</SectionsTitr>
         <ul className="mb-3 flex flex-col gap-4">
           {ads.map((adv: TextAdvCashType) => (
             <li
@@ -66,8 +65,8 @@ const LinearAds = ({id} : {id : number}) => {
   );
 };
 
-export default ({id} : {id : number}) => (
+export default ({ id }: { id: number }) => (
   <ErrorBoundaryProvider>
-    <LinearAds id={id}/>
+    <LinearAds id={id} />
   </ErrorBoundaryProvider>
 );

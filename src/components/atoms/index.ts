@@ -7,3 +7,4 @@ export { default as Input } from "./Input";
 export { default as ErrorText } from "./ErrorText";
 export { default as Spinner } from "./Spinner";
 export { default as LogoName } from "./LogoName";
+export { default as SectionsTitr } from "./SectionsTitr";

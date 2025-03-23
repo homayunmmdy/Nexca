@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/atoms";
+import { Button, SectionsTitr } from "@/components/atoms";
 import Titr from "@/components/Titr";
 import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
@@ -18,11 +18,9 @@ const SingleCard: React.FC = () => {
 
   return (
     <article>
-      <Titr
-        title="Single Posts"
-        item="text-center"
-        style="mb-4 text-xl md:text-2xl lg:text-3xl"
-      />
+      <SectionsTitr>
+      Single Posts
+      </SectionsTitr>
       {data?.map((post: PostsCashType) => (
         <Link
           href={`/posts/${post._id}`}

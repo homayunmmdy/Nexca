@@ -7,6 +7,7 @@ import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React from "react";
 import PostCard from "./PostCard";
 import { PostsSecSkeleton } from "../skelton";
+import { SectionsTitr } from "../atoms";
 
 const Posts: React.FC = () => {
   const { data, loading } = useGetSection(POSTS_QUERY_KEY, -6, 2);
@@ -18,7 +19,9 @@ const Posts: React.FC = () => {
   return (
     <>
       <article className="mx-auto pb-6">
-        <Titr title="Posts" item="text-left" />
+        <SectionsTitr>
+          Posts
+        </SectionsTitr>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {data?.map((post: PostsCashType) => (
             <PostCard key={post._id} post={post} />
