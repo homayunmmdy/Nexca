@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Posts4x4Skeleton } from "../skelton";
 import PostCard from "./PostCard";
 import "./styles.css";
+import { SectionsTitr } from "../atoms";
 
 const Slider = () => {
   const { data, loading } = useGetSection(SWIPER_SEC, -8, 5);
@@ -22,12 +23,9 @@ const Slider = () => {
   return (
     <>
       <article>
-        <Titr
-          borderColor="white"
-          style="text-white"
-          title="Swiper Posts"
-          item="text-left"
-        />
+      <SectionsTitr
+      bg="bg-[#FFBB00]"
+      >Ads Demo Page</SectionsTitr>
         <Swiper
           spaceBetween={25}
           modules={[Autoplay, Navigation, A11y]}

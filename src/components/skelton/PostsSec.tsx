@@ -1,11 +1,11 @@
 import React from "react";
-import Titr from "@/components/Titr";
+import { SectionsTitr } from "../atoms";
 
 const PostsSec: React.FC = () => {
   return (
     <>
       <div className=" mx-auto pb-6">
-        <Titr title="Posts" item="text-left" />
+        <SectionsTitr>Posts</SectionsTitr>
         <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-5">
           <div className="flex w-full flex-col gap-4">
             <div className="skeleton h-32 w-full"></div>

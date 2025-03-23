@@ -35,8 +35,7 @@ const LinearAds = ({ id }: { id: number }) => {
   const ads = filteredData?.slice(-12);
 
   return (
-    <>
-      <article>
+      <>
         <SectionsTitr>Ads Demo Page</SectionsTitr>
         <ul className="mb-3 flex flex-col gap-4">
           {ads.map((adv: TextAdvCashType) => (
@@ -60,7 +59,6 @@ const LinearAds = ({ id }: { id: number }) => {
             </li>
           ))}
         </ul>
-      </article>
     </>
   );
 };

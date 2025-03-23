@@ -1,10 +1,10 @@
-import Titr from "@/components/Titr";
-import React from 'react'
+import React from "react";
+import { SectionsTitr } from "../atoms";
 
 const LinearAdsLoading: React.FC = () => {
   return (
     <>
-      <Titr title="Ads Demo Page" item="text-center" />
+      <SectionsTitr>Ads Demo Page</SectionsTitr>
       <div className="flex flex-col gap-4 mb-3">
         <div className="skeleton w-full h-11"></div>
         <div className="skeleton w-full h-11"></div>

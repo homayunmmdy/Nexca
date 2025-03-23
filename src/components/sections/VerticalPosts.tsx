@@ -22,7 +22,7 @@ const VerticalPosts: React.FC = () => {
         <SectionsTitr>
         Vertical Posts
         </SectionsTitr>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 ">
           {data?.map((post: PostsCashType) => (
             <VerticalPost key={post._id} post={post} />
           ))}
