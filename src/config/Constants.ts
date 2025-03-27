@@ -28,3 +28,7 @@ export const SWIPER_SEC = "swiper_sec";
 
 // Mode keys
 export const DEV_MODE = "dev"
+
+// Themes
+export const DARKTHEME = 'dark'
+export const LIGHTTHEME = 'light'

@@ -2,12 +2,18 @@
 
 import React, { useEffect, useState } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
+import { DARKTHEME, LIGHTTHEME } from "../../config/Constants";
 
 const ThemeToggle: React.FC = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<typeof LIGHTTHEME | typeof DARKTHEME>(
+    DARKTHEME
+  );
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    const savedTheme = localStorage.getItem("theme") as
+      | typeof LIGHTTHEME
+      | typeof DARKTHEME
+      | null;
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.setAttribute("data-theme", savedTheme);
@@ -15,7 +21,7 @@ const ThemeToggle: React.FC = () => {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === DARKTHEME ? LIGHTTHEME : DARKTHEME;
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
@@ -26,19 +32,19 @@ const ThemeToggle: React.FC = () => {
       <input
         type="checkbox"
         className="theme-controller"
-        checked={theme === "dark"}
+        checked={theme === DARKTHEME}
         onChange={toggleTheme}
       />
       <IoSunnyOutline
-        aria-label="light Mode themeToggle icon"
-        title="light Mode"
-        data-testid="light"
+        aria-label={`${LIGHTTHEME} Mode themeToggle icon`}
+        title={`${LIGHTTHEME} Mode`}
+        data-testid={LIGHTTHEME}
         className="swap-off h-10 w-10 fill-current"
       />
       <IoMoonOutline
-        aria-label="dark Mode themeToggle"
-        title="dark Mode"
-        data-testid="dark"
+        aria-label={`${DARKTHEME} Mode themeToggle`}
+        title={`${DARKTHEME} Mode`}
+        data-testid={DARKTHEME}
         className="swap-on h-10 w-10 fill-current"
       />
     </label>
