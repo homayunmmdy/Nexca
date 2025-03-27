@@ -6,18 +6,35 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ThemeFiled, ThemeIcon } from "../atoms";
 
+type ThemeSetting = {
+  name: string;
+  activate: boolean;
+};
+
 const ThemeBtn = () => {
   const [theme, setTheme] = useState<string>(DARKTHEME);
+  const [activeThemes, setActiveThemes] = useState<ThemeSetting[]>(ThemesConfig);
 
   useEffect(() => {
+    // Load theme preference
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.setAttribute("data-theme", savedTheme);
     }
+
+    // Load theme settings
+    const savedSettings = localStorage.getItem("themeSettings");
+    if (savedSettings) {
+      setActiveThemes(JSON.parse(savedSettings));
+    } else {
+      // Use default config if no settings saved
+      setActiveThemes(ThemesConfig);
+    }
   }, []);
+
   return (
-    <div className="dropdown ">
+    <div className="dropdown">
       <div tabIndex={0} role="button" className="btn m-1">
         <ThemeIcon themeColor={theme} />
         <svg
@@ -34,14 +51,17 @@ const ThemeBtn = () => {
         tabIndex={0}
         className="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl"
       >
-        {ThemesConfig.filter((item) => item.activate).map((item, index) => (
-          <ThemeFiled
-            state={theme}
-            key={index}
-            setState={setTheme}
-            Theme={item.name}
-          />
-        ))}
+        {activeThemes
+          .filter((item) => item.activate)
+          .map((item, index) => (
+            <li key={index}>
+              <ThemeFiled
+                state={theme}
+                setState={setTheme}
+                Theme={item.name}
+              />
+            </li>
+          ))}
         <li>
           <Link
             href={RouteConfig.admin.settings.themes}
