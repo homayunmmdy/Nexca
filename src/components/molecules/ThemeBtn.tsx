@@ -1,15 +1,10 @@
 "use client";
-import {
-  CUPCAKETHEME,
-  DARKTHEME,
-  FORESTTHEME,
-  LIGHTTHEME,
-  LUXURYTHEME,
-} from "@/config/Constants";
+import { DARKTHEME } from "@/config/Constants";
+import RouteConfig from "@/config/RouteConfig";
+import { ThemesConfig } from "@/config/themes";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ThemeFiled, ThemeIcon } from "../atoms";
-import Link from "next/link";
-import RouteConfig from "@/config/RouteConfig";
 
 const ThemeBtn = () => {
   const [theme, setTheme] = useState<string>(DARKTHEME);
@@ -39,14 +34,17 @@ const ThemeBtn = () => {
         tabIndex={0}
         className="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl"
       >
-        <ThemeFiled state={theme} setState={setTheme} Theme={LIGHTTHEME} />
-        <ThemeFiled state={theme} setState={setTheme} Theme={DARKTHEME} />
-        <ThemeFiled state={theme} setState={setTheme} Theme={CUPCAKETHEME} />
-        <ThemeFiled state={theme} setState={setTheme} Theme={FORESTTHEME} />
-        <ThemeFiled state={theme} setState={setTheme} Theme={LUXURYTHEME} />
+        {ThemesConfig.map((item, index) => (
+          <ThemeFiled state={theme} key={index} setState={setTheme} Theme={item.name} />
+        ))}
         <li>
-          <Link href={RouteConfig.admin.settings.themes} title="Add more theme!">
-            <div className="grow text-center text-sm font-bold hover:text-indigo-700 py-2">Add more theme!</div>
+          <Link
+            href={RouteConfig.admin.settings.themes}
+            title="Add more theme!"
+          >
+            <div className="grow text-center text-sm font-bold hover:text-indigo-700 py-2">
+              Add more theme!
+            </div>
           </Link>
         </li>
       </ul>
