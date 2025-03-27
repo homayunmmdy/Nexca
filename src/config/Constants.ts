@@ -32,3 +32,6 @@ export const DEV_MODE = "dev"
 // Themes
 export const DARKTHEME = 'dark'
 export const LIGHTTHEME = 'light'
+export const CUPCAKETHEME = "cupcake";
+export const FORESTTHEME = "forest";
+export const LUXURYTHEME = "luxury";

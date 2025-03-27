@@ -1,5 +1,5 @@
 "use client";
-import { DARKTHEME, LIGHTTHEME } from "@/config/Constants";
+import { CUPCAKETHEME, DARKTHEME, FORESTTHEME, LIGHTTHEME, LUXURYTHEME } from "@/config/Constants";
 import { useEffect, useState } from "react";
 import { ThemeFiled, ThemeIcon } from "../atoms";
 
@@ -33,6 +33,9 @@ const ThemeBtn = () => {
       >
         <ThemeFiled state={theme} setState={setTheme} Theme={LIGHTTHEME} />
         <ThemeFiled state={theme} setState={setTheme} Theme={DARKTHEME} />
+        <ThemeFiled state={theme} setState={setTheme} Theme={CUPCAKETHEME} />
+        <ThemeFiled state={theme} setState={setTheme} Theme={FORESTTHEME} />
+        <ThemeFiled state={theme} setState={setTheme} Theme={LUXURYTHEME} />
       </ul>
     </div>
   );
