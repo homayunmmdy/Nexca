@@ -1,7 +1,7 @@
 "use client";
 import { DARKTHEME, LIGHTTHEME } from "@/config/Constants";
 import { useEffect, useState } from "react";
-import { Button } from "../atoms";
+import { Button, ThemeIcon } from "../atoms";
 
 const ThemeBtn = () => {
   const [theme, setTheme] = useState<typeof LIGHTTHEME | typeof DARKTHEME>(
@@ -27,12 +27,7 @@ const ThemeBtn = () => {
   return (
     <div className="dropdown ">
       <div tabIndex={0} role="button" className="btn m-1">
-        <div className="bg-base-100 border-base-content/10 grid shrink-0 grid-cols-2 gap-0.5 rounded-md border p-1">
-          <div className="bg-base-content size-1 rounded-full"></div>{" "}
-          <div className="bg-primary size-1 rounded-full"></div>{" "}
-          <div className="bg-secondary size-1 rounded-full"></div>{" "}
-          <div className="bg-accent size-1 rounded-full"></div>
-        </div>
+        <ThemeIcon themeColor={theme}/>
         <svg
           width="12px"
           height="12px"
@@ -53,15 +48,7 @@ const ThemeBtn = () => {
             className="gap-3 px-2 flex theme-controller w-full  btn-sm btn-block "
             onClick={() => toggleTheme(LIGHTTHEME)}
           >
-            <div
-              data-theme={LIGHTTHEME}
-              className="bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm"
-            >
-              <div className="bg-base-content size-1 rounded-full"></div>{" "}
-              <div className="bg-primary size-1 rounded-full"></div>{" "}
-              <div className="bg-secondary size-1 rounded-full"></div>{" "}
-              <div className="bg-accent size-1 rounded-full"></div>
-            </div>{" "}
+            <ThemeIcon themeColor={LIGHTTHEME}/>
             <div className="w-32 truncate text-justify">{LIGHTTHEME}</div>{" "}
             {theme === LIGHTTHEME ? (
               <svg
@@ -74,7 +61,9 @@ const ThemeBtn = () => {
               >
                 <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
               </svg>
-            ): <div className="h-3 w-3 shrink-0"></div>}
+            ) : (
+              <div className="h-3 w-3 shrink-0"></div>
+            )}
           </Button>
         </li>
         <li>
@@ -83,29 +72,22 @@ const ThemeBtn = () => {
             className="gap-3 px-2 flex theme-controller w-full  btn-sm btn-block "
             onClick={() => toggleTheme(DARKTHEME)}
           >
-            <div
-              data-theme={DARKTHEME}
-              className="bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm"
-            >
-              <div className="bg-base-content size-1 rounded-full"></div>{" "}
-              <div className="bg-primary size-1 rounded-full"></div>{" "}
-              <div className="bg-secondary size-1 rounded-full"></div>{" "}
-              <div className="bg-accent size-1 rounded-full"></div>
-            </div>{" "}
+            <ThemeIcon themeColor={DARKTHEME}/>
             <div className="w-32 truncate text-justify">{DARKTHEME}</div>{" "}
             {theme === DARKTHEME ? (
               <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="h-3 w-3 shrink-0"
-            >
-              <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
-            </svg>
-            ): <div className="h-3 w-3 shrink-0"></div>}
-            
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-3 w-3 shrink-0"
+              >
+                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
+              </svg>
+            ) : (
+              <div className="h-3 w-3 shrink-0"></div>
+            )}
           </Button>
         </li>
       </ul>
