@@ -10,5 +10,5 @@ export { default as SearchBar } from "./SearchBar";
 export { default as HamburgerIcon } from "./HamburgerIcon";
 export { default as NexcaMark } from "./NexcaMark";
 export { default as PWAInstallPopup } from "./PWAInstallPopup";
-export { default as ThemeToggle } from "./ThemeToggle";
+export { default as ThemeBtn } from "./ThemeBtn";
 export { default as HomeSettingBtn } from "./HomeSettingBtn";

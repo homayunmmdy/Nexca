@@ -4,7 +4,7 @@ import {
   GitHubBtn,
   GlobalSearchInput,
   HamburgerIcon,
-  ThemeToggle,
+  ThemeBtn,
 } from "@/components/molecules";
 import SiteConfig from "@/config/site";
 import { motion, useReducedMotion } from "framer-motion";
@@ -56,7 +56,7 @@ const Header = () => {
             <HeaderMenu pathname={pathname} nav={nav} />
           </div>
           <div className="navbar-end gap-3 lg:w-[20%]">
-            <ThemeToggle />
+            <ThemeBtn />
             <GitHubBtn link={SiteConfig.github} />
           </div>
         </div>
