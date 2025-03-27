@@ -1,7 +1,15 @@
 "use client";
-import { CUPCAKETHEME, DARKTHEME, FORESTTHEME, LIGHTTHEME, LUXURYTHEME } from "@/config/Constants";
+import {
+  CUPCAKETHEME,
+  DARKTHEME,
+  FORESTTHEME,
+  LIGHTTHEME,
+  LUXURYTHEME,
+} from "@/config/Constants";
 import { useEffect, useState } from "react";
 import { ThemeFiled, ThemeIcon } from "../atoms";
+import Link from "next/link";
+import RouteConfig from "@/config/RouteConfig";
 
 const ThemeBtn = () => {
   const [theme, setTheme] = useState<string>(DARKTHEME);
@@ -36,6 +44,11 @@ const ThemeBtn = () => {
         <ThemeFiled state={theme} setState={setTheme} Theme={CUPCAKETHEME} />
         <ThemeFiled state={theme} setState={setTheme} Theme={FORESTTHEME} />
         <ThemeFiled state={theme} setState={setTheme} Theme={LUXURYTHEME} />
+        <li>
+          <Link href={RouteConfig.admin.settings.themes} title="Add more theme!">
+            <div className="grow text-center text-sm font-bold hover:text-indigo-700 py-2">Add more theme!</div>
+          </Link>
+        </li>
       </ul>
     </div>
   );

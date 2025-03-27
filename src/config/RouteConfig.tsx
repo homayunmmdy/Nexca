@@ -24,7 +24,8 @@ const RouteConfig = {
         new : "/admin/services/new"
     },
     settings: {
-        base : "/admin/settings"
+        base : "/admin/settings",
+        themes : "/admin/settings/themes"
     },
     textadv: {
         base : "/admin/textadv",

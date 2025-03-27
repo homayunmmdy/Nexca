@@ -10,7 +10,7 @@ import {
   FaTags,
 } from "react-icons/fa";
 import { FaQuestion } from "react-icons/fa6";
-import { IoMdSettings } from "react-icons/io";
+import { IoIosColorPalette, IoMdSettings } from "react-icons/io";
 import { MdLiveTv, MdOutlineMail } from "react-icons/md";
 import RouteConfig from "./RouteConfig";
 
@@ -44,4 +44,5 @@ export const HelpPages = [
 
 export const SettingsPages = [
   { name: "Admin Setting", href: RouteConfig.admin.settings.base, icon: IoMdSettings ,activate : true },
+  { name: "Themes", href: RouteConfig.admin.settings.themes, icon: IoIosColorPalette  ,activate : true },
 ];
