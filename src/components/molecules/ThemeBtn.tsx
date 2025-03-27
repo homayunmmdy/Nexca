@@ -1,33 +1,22 @@
 "use client";
 import { DARKTHEME, LIGHTTHEME } from "@/config/Constants";
 import { useEffect, useState } from "react";
-import { Button, ThemeIcon } from "../atoms";
+import { ThemeFiled, ThemeIcon } from "../atoms";
 
 const ThemeBtn = () => {
-  const [theme, setTheme] = useState<typeof LIGHTTHEME | typeof DARKTHEME>(
-    DARKTHEME
-  );
+  const [theme, setTheme] = useState<string>(DARKTHEME);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as
-      | typeof LIGHTTHEME
-      | typeof DARKTHEME
-      | null;
+    const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.setAttribute("data-theme", savedTheme);
     }
   }, []);
-
-  const toggleTheme = (newTheme: typeof LIGHTTHEME | typeof DARKTHEME) => {
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
   return (
     <div className="dropdown ">
       <div tabIndex={0} role="button" className="btn m-1">
-        <ThemeIcon themeColor={theme}/>
+        <ThemeIcon themeColor={theme} />
         <svg
           width="12px"
           height="12px"
@@ -42,54 +31,8 @@ const ThemeBtn = () => {
         tabIndex={0}
         className="dropdown-content bg-base-300 rounded-box z-1 w-52 p-2 shadow-2xl"
       >
-        <li>
-          <Button
-            color="btn-ghost"
-            className="gap-3 px-2 flex theme-controller w-full  btn-sm btn-block "
-            onClick={() => toggleTheme(LIGHTTHEME)}
-          >
-            <ThemeIcon themeColor={LIGHTTHEME}/>
-            <div className="w-32 truncate text-justify">{LIGHTTHEME}</div>{" "}
-            {theme === LIGHTTHEME ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-3 w-3 shrink-0"
-              >
-                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
-              </svg>
-            ) : (
-              <div className="h-3 w-3 shrink-0"></div>
-            )}
-          </Button>
-        </li>
-        <li>
-          <Button
-            color="btn-ghost"
-            className="gap-3 px-2 flex theme-controller w-full  btn-sm btn-block "
-            onClick={() => toggleTheme(DARKTHEME)}
-          >
-            <ThemeIcon themeColor={DARKTHEME}/>
-            <div className="w-32 truncate text-justify">{DARKTHEME}</div>{" "}
-            {theme === DARKTHEME ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-3 w-3 shrink-0"
-              >
-                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"></path>
-              </svg>
-            ) : (
-              <div className="h-3 w-3 shrink-0"></div>
-            )}
-          </Button>
-        </li>
+        <ThemeFiled state={theme} setState={setTheme} Theme={LIGHTTHEME} />
+        <ThemeFiled state={theme} setState={setTheme} Theme={DARKTHEME} />
       </ul>
     </div>
   );

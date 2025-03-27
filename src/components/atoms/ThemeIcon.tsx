@@ -1,4 +1,4 @@
-const ThemeIcon = ({themeColor} : {themeColor : string}) => {
+const ThemeIcon = ({ themeColor }: { themeColor: string }) => {
   return (
     <div
       data-theme={themeColor}
