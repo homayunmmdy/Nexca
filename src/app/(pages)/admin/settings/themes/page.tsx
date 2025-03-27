@@ -3,6 +3,7 @@ import { Button, ThemeFiled } from "@/components/atoms";
 import { DARKTHEME } from "@/config/Constants";
 import { ThemesConfig } from "@/config/themes";
 import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 // Define a type for your theme settings
 type ThemeSetting = {
@@ -32,6 +33,19 @@ const ThemeSettingPage = () => {
 
   // Handle theme activation toggle
   const toggleThemeActivation = (themeName: string) => {
+    // Check if the theme being toggled is currently active
+    const currentTheme = themeSettings.find(t => t.name === themeName);
+    const isDeactivating = currentTheme?.activate;
+    
+    // Count how many themes are currently active
+    const activeThemeCount = themeSettings.filter(t => t.activate).length;
+    
+    // Prevent deactivating if this is the last active theme
+    if (isDeactivating && activeThemeCount <= 1) {
+      toast.error("You can't remove all the themes");
+      return;
+    }
+
     const updatedSettings = themeSettings.map((setting) =>
       setting.name === themeName
         ? { ...setting, activate: !setting.activate }
@@ -44,6 +58,7 @@ const ThemeSettingPage = () => {
 
   return (
     <div className="space-y-4">
+      <Toaster />
       <ul
         tabIndex={0}
         className="grid w-full p-2 grid-cols-2 md:grid-cols-3 md:gap-3 xl:grid-cols-4 xl:gap-4"
