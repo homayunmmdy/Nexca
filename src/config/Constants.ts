@@ -27,15 +27,18 @@ export const VERTICAL_POSTS_QUERY_KEY = "vertical_posts";
 export const SWIPER_SEC = "swiper_sec";
 
 // Mode keys
-export const DEV_MODE = "dev"
+export const DEV_MODE = "dev";
 
 // Themes
-export const DARKTHEME = 'dark'
-export const LIGHTTHEME = 'light'
+export const DARKTHEME = "dark";
+export const LIGHTTHEME = "light";
 export const CUPCAKETHEME = "cupcake";
 export const BUMBLEBEETHEME = "bumblebee";
 export const EMERALADTHEME = "emerald";
 export const CORPORATETHEME = "corporate";
 export const SYTHWAVETHEME = "synthwave";
+export const VALENTINETHEME = "valentine";
 export const FORESTTHEME = "forest";
 export const LUXURYTHEME = "luxury";
+export const COFFETHEME = "coffee";
+export const CARAMELLATTETHEME = "caramellatte";
