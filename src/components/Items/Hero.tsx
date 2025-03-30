@@ -2,7 +2,7 @@
 "use client";
 import AdminImage from "@/../public/static/Image/admin.webp";
 import { Button } from "@/components/atoms";
-import {  FullHoverAnimation } from "@/components/molecules";
+import {  CTABtn, FullHoverAnimation } from "@/components/molecules";
 import RouteConfig from "@/config/RouteConfig";
 import SiteConfig from "@/config/site";
 import { motion } from "framer-motion";
@@ -93,19 +93,9 @@ const Hero: React.FC = () => {
               variants={contentVariants}
               className="mt-8 flex items-center justify-center gap-3"
             >
-              <Link href={RouteConfig.admin.base}>
-                <Button
-                  removeDefaultStyle={true}
-                  color="btn-null"
-                  className="group relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 border-indigo-500 px-3 py-1 text-lg shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-indigo-500 before:transition-all before:duration-700 hover:text-gray-50 hover:before:left-0 hover:before:w-full hover:before:scale-150 hover:before:duration-700 lg:font-semibold"
-                >
-                  <IoArrowUpCircleSharp
-                    size={40}
-                    className="rotate-45 justify-end rounded-full p-1 duration-300 ease-linear group-hover:rotate-90 group-hover:border-none"
-                  />{" "}
-                  Admin Demo
-                </Button>
-              </Link>
+              <CTABtn href={RouteConfig.admin.base}>
+              Admin Demo
+              </CTABtn>
             </motion.div>
           </motion.div>
 

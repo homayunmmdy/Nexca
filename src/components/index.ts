@@ -11,5 +11,6 @@ export { default as EmailList } from "./Items/EmailList";
 export { default as FAQs } from "./Items/FAQs";
 export { default as Features } from "./Items/Features";
 export { default as Hero } from "./Items/Hero";
+export { default as DocsHero } from "./Items/DocsHero";
 export { default as PriceList } from "./Items/PriceList";
 export { default as StatcsSect } from "./Items/Stats";

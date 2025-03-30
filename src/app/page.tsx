@@ -1,6 +1,7 @@
 import {
   Banner,
   Companies,
+  DocsHero,
   EmailList,
   FAQs,
   Features,
@@ -67,6 +68,7 @@ const LandingPage: React.FC = () => {
       <h1 className="hidden">{SiteConfig.title}</h1>
       <Hero />
       <Features />
+      <DocsHero />
       <Companies />
       <StatcsSect />
       <FAQs />
