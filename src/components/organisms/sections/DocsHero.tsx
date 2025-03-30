@@ -1,5 +1,5 @@
 import { SlDocs } from "react-icons/sl";
-import { CTABtn } from "../molecules";
+import { CTABtn } from "../../molecules";
 
 const DocsHero = () => {
   return (
@@ -8,7 +8,7 @@ const DocsHero = () => {
         <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
           <a href="/" className="mb-6 sm:mx-auto">
             <div className="flex items-center justify-center w-12 h-12 rounded-full bg-base-200">
-              <SlDocs /> 
+              <SlDocs />
             </div>
           </a>
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">

@@ -7,8 +7,8 @@ import {
   Features,
   Hero,
   PriceList,
-  StatcsSect,
-} from "@/components";
+  StatsSection,
+} from "@/components/organisms";
 import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
@@ -70,7 +70,7 @@ const LandingPage: React.FC = () => {
       <Features />
       <DocsHero />
       <Companies />
-      <StatcsSect />
+      <StatsSection />
       <FAQs />
       <Banner />
       <PriceList />

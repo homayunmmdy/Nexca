@@ -1,4 +1,4 @@
-import { Banner } from "@/components";
+import { Banner } from "@/components/organisms";
 import { LinearAds } from "@/components/ads";
 import {
   MainSec,

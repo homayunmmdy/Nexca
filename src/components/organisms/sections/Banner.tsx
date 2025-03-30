@@ -1,5 +1,5 @@
-import { BannerTitle } from "@/components";
 import SiteConfig from "@/config/site";
+import BannerTitle from "./BannerTitle";
 
 const Banner = () => {
   return (

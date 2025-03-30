@@ -1,9 +1,9 @@
-'use client'
+"use client";
 import { FullHoverAnimation } from "@/components/molecules";
 import { features } from "@/config/data";
+import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 import Feature from "./Feature";
-import { motion, useReducedMotion } from "framer-motion";
 
 const Features: React.FC = () => {
   const shouldReduceMotion = useReducedMotion(); // Respect user's motion preferences

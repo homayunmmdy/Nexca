@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { PriceItemDate } from "@/config/data";
 import { motion, useInView } from "framer-motion";
 import React from "react";

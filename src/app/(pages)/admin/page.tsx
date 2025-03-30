@@ -1,5 +1,5 @@
 "use client";
-import { BannerTitle } from "@/components";
+import { BannerTitle } from "@/components/organisms";
 import useCheckLogin from "@/hooks/useCheckLogin";
 import { Stats } from "./components/sections";
 import RecentPosts from "./components/sections/RecentPosts";

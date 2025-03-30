@@ -4,13 +4,5 @@ export { default as Titr } from "./Titr";
 export { default as Form } from "./shared/Form";
 
 // Items
-export { default as Banner } from "./Items/Banner";
-export { default as BannerTitle } from "./Items/BannerTitle";
-export { default as Companies } from "./Items/Companies";
-export { default as EmailList } from "./Items/EmailList";
-export { default as FAQs } from "./Items/FAQs";
-export { default as Features } from "./Items/Features";
-export { default as Hero } from "./Items/Hero";
-export { default as DocsHero } from "./Items/DocsHero";
-export { default as PriceList } from "./Items/PriceList";
-export { default as StatcsSect } from "./Items/Stats";
+
+export { default as StatcsSect } from "./organisms/sections/StatsSection";

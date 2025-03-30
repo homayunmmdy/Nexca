@@ -2,7 +2,7 @@
 import useGetStats from "@/hooks/useGetStats";
 
 
-const Stats = () => {
+const StatsSection = () => {
   const data = useGetStats();
   return (
     <div className="pt-12 sm:pt-20">
@@ -61,4 +61,4 @@ const Stats = () => {
   );
 };
 
-export default Stats;
+export default StatsSection;
