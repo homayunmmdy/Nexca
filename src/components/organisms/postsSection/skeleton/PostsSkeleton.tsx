@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Posts: React.FC = () => {
+const PostsSkeleton: React.FC = () => {
   return (
     <>
       <div className=" mx-auto py-6">
@@ -35,4 +35,4 @@ const Posts: React.FC = () => {
   );
 };
 
-export default Posts;
+export default PostsSkeleton;

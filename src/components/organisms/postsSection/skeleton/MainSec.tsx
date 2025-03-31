@@ -1,5 +1,5 @@
 import React from "react";
-const MainSec: React.FC = () => {
+const MainSecSkeleton: React.FC = () => {
   return (
     <div className="col-span-12 md:col-span-6">
       <div data-testid="gridItem" className="group">
@@ -18,4 +18,4 @@ const MainSec: React.FC = () => {
   );
 };
 
-export default MainSec;
+export default MainSecSkeleton;

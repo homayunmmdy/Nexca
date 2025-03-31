@@ -1,7 +1,7 @@
 import React from "react";
-import { SectionsTitr } from "../atoms";
+import { SectionsTitr } from "../../../atoms";
 
-const PostsSec: React.FC = () => {
+const PostsSecSkeleton: React.FC = () => {
   return (
     <>
       <div className=" mx-auto pb-6">
@@ -49,4 +49,4 @@ const PostsSec: React.FC = () => {
   );
 };
 
-export default PostsSec;
+export default PostsSecSkeleton;

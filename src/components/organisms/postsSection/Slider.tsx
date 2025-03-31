@@ -1,5 +1,4 @@
 "use client";
-import { Titr } from "@/components";
 import { SWIPER_SEC } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
@@ -8,10 +7,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { A11y, Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Posts4x4Skeleton } from "../skelton";
 import PostCard from "./PostCard";
 import "./styles.css";
-import { SectionsTitr } from "../atoms";
+import { SectionsTitr } from "@/components/atoms";
+import Posts4x4Skeleton from "./skeleton/Posts4x4Skeleton";
 
 const Slider = () => {
   const { data, loading } = useGetSection(SWIPER_SEC, -8, 5);
@@ -21,11 +20,9 @@ const Slider = () => {
   }
 
   return (
-    <>
-      <article>
-      <SectionsTitr
-      bg="bg-[#FFBB00]"
-      >Ads Demo Page</SectionsTitr>
+    <div className="bg-indigo-600 p-3 sm:p-4 md:p-6 lg:p-9">
+      <div className="mt-5' mx-auto w-[94%] md:w-[92%]">
+        <SectionsTitr bg="bg-[#FFBB00]">Ads Demo Page</SectionsTitr>
         <Swiper
           spaceBetween={25}
           modules={[Autoplay, Navigation, A11y]}
@@ -53,8 +50,8 @@ const Slider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </article>
-    </>
+      </div>
+    </div>
   );
 };
 

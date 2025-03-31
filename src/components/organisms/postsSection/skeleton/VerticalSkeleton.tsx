@@ -1,6 +1,6 @@
-import { SectionsTitr } from "../atoms";
+import { SectionsTitr } from "@/components/atoms";
 
-const Vertical = () => {
+const VerticalSkeleton = () => {
   return (
     <div className=" mx-auto py-6">
       <SectionsTitr>Vertical Posts</SectionsTitr>
@@ -14,4 +14,4 @@ const Vertical = () => {
   );
 };
 
-export default Vertical;
+export default VerticalSkeleton;

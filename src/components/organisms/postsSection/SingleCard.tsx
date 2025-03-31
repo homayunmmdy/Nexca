@@ -1,6 +1,6 @@
 "use client";
 import { Button, SectionsTitr } from "@/components/atoms";
-import Titr from "@/components/Titr";
+import SingleCardSkeleton  from "./skeleton/SingleCardSkeleton";
 import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
@@ -8,7 +8,6 @@ import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { SingleCardSkeleton } from "../skelton";
 const SingleCard: React.FC = () => {
   const { data, loading } = useGetSection(SINGLE_POST_QUERY_KEY, -1, 3);
 
@@ -18,9 +17,7 @@ const SingleCard: React.FC = () => {
 
   return (
     <article>
-      <SectionsTitr>
-      Single Posts
-      </SectionsTitr>
+      <SectionsTitr>Single Posts</SectionsTitr>
       {data?.map((post: PostsCashType) => (
         <Link
           href={`/posts/${post._id}`}

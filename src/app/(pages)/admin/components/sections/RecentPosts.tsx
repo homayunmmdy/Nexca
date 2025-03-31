@@ -1,5 +1,5 @@
 "use client";
-import PostCard from "@/components/sections/PostCard";
+import PostCard from "@/components/organisms/postsSection/PostCard";
 import { LATEST_POSTS_KEY } from "@/config/Constants";
 import useGetLatestPosts from "@/hooks/useGetLatestPosts";
 import { PostsCashType } from "@/types/CashTypes";
@@ -13,7 +13,7 @@ const RecentPosts: React.FC = () => {
     <>
       <div className="grid h-full grid-cols-1 items-start gap-x-6 gap-y-10 py-8 md:grid-cols-2 xl:grid-cols-4">
         {posts?.map((post: PostsCashType) => (
-            <PostCard post={post} key={post._id}/>
+          <PostCard post={post} key={post._id} />
         ))}
       </div>
     </>

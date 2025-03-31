@@ -1,6 +1,6 @@
 "use client";
 import { ErrorText, Spinner } from "@/components/atoms";
-import PostCard from "@/components/sections/PostCard";
+import PostCard from "@/components/organisms/postsSection/PostCard";
 import { PostsCashType } from "@/types/CashTypes";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import React, { useEffect, useRef } from "react";

@@ -1,6 +1,6 @@
+import { SectionsTitr } from "@/components/atoms";
 import React from "react";
-import { SectionsTitr } from "../atoms";
-const SingleCard: React.FC = () => {
+const SingleCardSkeleton: React.FC = () => {
   return (
     <>
       <SectionsTitr>Ads Demo Page</SectionsTitr>
@@ -16,4 +16,4 @@ const SingleCard: React.FC = () => {
   );
 };
 
-export default SingleCard;
+export default SingleCardSkeleton;

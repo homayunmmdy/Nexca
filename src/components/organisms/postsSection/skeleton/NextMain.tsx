@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NextMain = () => {
+const NextMainSkeleton = () => {
   return (
     <div className="col-span-12 md:col-span-6">
         <div className='flex flex-col gap-3'>
@@ -12,4 +12,4 @@ const NextMain = () => {
   )
 }
 
-export default NextMain
+export default NextMainSkeleton

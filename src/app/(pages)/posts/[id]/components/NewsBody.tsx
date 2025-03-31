@@ -1,7 +1,7 @@
 import "@/app/tiptap.css";
 import { Form, Titr } from "@/components";
 import NexcaMark from "@/components/molecules/NexcaMark";
-import { MorePostsSec } from "@/components/sections";
+import { MorePostsSec } from "@/components/organisms";
 import { COMMENTS_API_URL } from "@/config/apiConstants";
 import { COMMENTS_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";

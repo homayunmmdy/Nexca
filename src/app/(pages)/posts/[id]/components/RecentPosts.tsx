@@ -1,11 +1,11 @@
 "use client";
+import PostCard from "@/components/organisms/postsSection/PostCard";
 import { LATEST_POSTS_KEY } from "@/config/Constants";
 import useGetLatestPosts from "@/hooks/useGetLatestPosts";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React, { useState } from "react";
 import RecentPostSkeleton from "./RecentPostSkeleton";
-import PostCard from "@/components/sections/PostCard";
 
 const RecentPosts: React.FC = () => {
   const [recentSize] = useState(-3);
@@ -23,7 +23,7 @@ const RecentPosts: React.FC = () => {
         {posts && (
           <div className="grid grid-cols-1 items-start gap-x-3 gap-y-5">
             {posts?.map((Post: PostsCashType) => (
-              <PostCard post={Post} key={Post._id}/>
+              <PostCard post={Post} key={Post._id} />
             ))}
           </div>
         )}

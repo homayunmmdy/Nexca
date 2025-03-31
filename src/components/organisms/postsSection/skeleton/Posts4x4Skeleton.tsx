@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Posts4x4: React.FC = () => {
+const Posts4x4Skeleton: React.FC = () => {
   return (
     <div className="mx-auto py-6">
     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
@@ -33,4 +33,4 @@ const Posts4x4: React.FC = () => {
   )
 }
 
-export default Posts4x4
+export default Posts4x4Skeleton

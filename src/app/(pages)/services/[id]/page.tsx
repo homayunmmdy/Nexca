@@ -1,7 +1,6 @@
 "use client";
 import { LinearAds } from "@/components/ads";
-import PostCard from "@/components/sections/PostCard";
-import { PostsSkeleton } from "@/components/skelton";
+import PostCard from "@/components/organisms/postsSection/PostCard";
 import { POST_API_URL } from "@/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
@@ -11,6 +10,7 @@ import React from "react";
 import NotFound from "../../[...not_found]/not-found";
 import ServicesNav from "../../demo/components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
+import PostsSkeleton from "@/components/organisms/postsSection/skeleton/PostsSkeleton";
 
 const ServicesPage: React.FC = () => {
   const id = getParameterId(10);
@@ -46,7 +46,9 @@ const ServicesPage: React.FC = () => {
 
   return (
     <>
-    <title>Explore our posts in each services | Nexca | The Ultimate Admin Panel</title>
+      <title>
+        Explore our posts in each services | Nexca | The Ultimate Admin Panel
+      </title>
       <ServicesNav />
       <div className="mx-auto p-4 md:p-10">
         <div className="grid grid-cols-12 md:gap-9">

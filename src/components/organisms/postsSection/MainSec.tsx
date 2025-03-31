@@ -5,9 +5,9 @@ import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
 import React from "react";
 import MainItem from "./MainItem";
-import { MainSecSkeleton } from "../skelton";
+import MainSecSkeleton from "./skeleton/MainSec";
 
-const Main: React.FC = () => {
+const MainSec: React.FC = () => {
   const { data, loading } = useGetSection(MAIN_POSTS_QUERY_KEY, -1, 1);
 
   if (loading) {
@@ -25,6 +25,6 @@ const Main: React.FC = () => {
 
 export default () => (
   <ErrorBoundaryProvider>
-    <Main />
+    <MainSec />
   </ErrorBoundaryProvider>
 );
