@@ -14,15 +14,12 @@ export type ButtonType = {
 
 export type InputType = {
   color?: `input-${AllowedColors}` ;
-  type: AllowedInputType;
-  placeholder?: string;
-  onChange?: (e: any) => void;
   defaultChecked?: boolean;
   label?: string;
+  style?: string;
   checked?:boolean;
   icon?: JSX.Element;
-  removeDefaultStyle?:boolean;
-} & BaseType & React.InputHTMLAttributes<HTMLInputElement>;
+} &  React.InputHTMLAttributes<HTMLInputElement>;
 
 export type TextareaType = {
   name?: string;

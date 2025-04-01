@@ -1,5 +1,6 @@
 import { Input } from "@/components/atoms";
 import Image from "next/image";
+import { FaLink } from "react-icons/fa";
 
 const ImagePreview = ({
   imgurl,
@@ -21,11 +22,12 @@ const ImagePreview = ({
     />
     <Input
       id="imgurl"
-      type="text"
+      type="url"
       name="imgurl"
-      label="Image Link"
       color="input-primary"
-      style="w-full"
+      style="w-full mb-2"
+      placeholder="Enter url of image here"
+      icon={<FaLink />}
       value={imgurl}
       onChange={onChange}
     />

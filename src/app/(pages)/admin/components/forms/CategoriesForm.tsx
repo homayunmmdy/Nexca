@@ -14,7 +14,7 @@ const CategoriesForm = ({handler}: {handler : FormHandler}) => {
         color="input-primary"
         onChange={(e) => setCategoryInput(e.target.value)}
         placeholder="New Category"
-        style="w-full"
+        className="w-full"
       />
       <Button
         type="button"

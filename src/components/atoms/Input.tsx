@@ -1,81 +1,55 @@
-import React from "react";
 import { InputType } from "@/types/FormFiledType";
+import React from "react";
 
 const Input: React.FC<InputType> = ({
   id,
   style,
-  value,
-  placeholder,
   name,
   color,
-  type,
-  onChange,
-  required,
+
   icon,
   label,
   defaultChecked,
   checked,
-  removeDefaultStyle,
-  min ,
-  max,
+  className,
   ...rest
 }: InputType) => {
-  const classes = removeDefaultStyle ? style :`input input-bordered ${icon ? "" : style} ${color}`;
   return (
     <>
       {icon ? (
         <label
           data-testid="label"
-          className={`${classes} flex items-center gap-2`}
+          className={`${style} ${color} flex input input-bordered items-center gap-2`}
         >
           {icon}
           <input
-            type={type}
-            value={value}
-            placeholder={placeholder}
-            onChange={onChange}
             name={name}
             id={id}
-            required={required}
-            className={style}
+            className={className}
             checked={checked}
-            min={min}
-            max={max}
             defaultChecked={defaultChecked}
             {...rest}
           />
         </label>
       ) : label ? (
         <>
-          <label data-testid="label" htmlFor={id}>{label}</label>
+          <label className={style} data-testid="label" htmlFor={id}>
+            {label}
+          </label>
           <input
-            type={type}
-            value={value}
-            className={classes}
-            placeholder={placeholder}
-            onChange={onChange}
+            className={`input input-bordered ${className} ${color}`}
             name={name}
             id={id}
-            min={min}
-            max={max}
             checked={checked}
-            required={required}
             {...rest}
           />
         </>
       ) : (
         <input
-          type={type}
-          value={value}
-          className={classes}
-          placeholder={placeholder}
-          onChange={onChange}
+          className={`input input-bordered ${className} ${color}`}
           name={name}
           id={id}
-          min={min}
-          max={max}
           checked={checked}
-          required={required}
           {...rest}
         />
       )}

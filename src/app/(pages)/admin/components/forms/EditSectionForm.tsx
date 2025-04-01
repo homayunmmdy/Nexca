@@ -38,6 +38,7 @@ const EditSectionForm = ({ data }: { data: SectionCashType }) => {
             name="name"
             label="Name"
             color="input-primary"
+            className="w-full"
             value={formData.name}
             onChange={handler.trakeChange}
           />
@@ -47,6 +48,7 @@ const EditSectionForm = ({ data }: { data: SectionCashType }) => {
             name="secid"
             label="secid"
             color="input-primary"
+            className="w-full"
             value={formData.secid}
             onChange={handler.trakeChange}
             required

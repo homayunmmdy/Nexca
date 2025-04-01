@@ -90,7 +90,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             id="title"
             name="title"
             label="Title"
-            style="w-full mb-2"
+            className="w-full mb-2"
             color="input-primary"
             value={formData.title}
             onChange={handler.trakeChange}
@@ -127,7 +127,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             id="source"
             name="source"
             label="source"
-            style="w-full mb-2"
+            className="w-full mb-2"
             color="input-primary"
             value={formData.source}
             onChange={handler.trakeChange}
@@ -138,7 +138,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               id="author"
               name="author"
               label="author"
-              style="w-full mb-2"
+              className="w-full mb-2"
               color="input-primary"
               value={formData.author}
               onChange={handler.trakeChange}

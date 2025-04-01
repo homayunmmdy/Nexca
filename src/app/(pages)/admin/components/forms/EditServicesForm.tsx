@@ -57,6 +57,7 @@ const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
             name="name"
             label="Name"
             color="input-primary"
+            className="w-full"
             value={formData.name}
             onChange={handler.trakeChange}
           />
@@ -65,6 +66,7 @@ const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
             type="number"
             name="secid"
             label="secid"
+            className="w-full"
             value={formData.secid}
             color="input-primary"
             onChange={handler.trakeChange}

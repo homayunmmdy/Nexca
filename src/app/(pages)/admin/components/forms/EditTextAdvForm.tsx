@@ -55,6 +55,7 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
             name="advname"
             label="Adv Name"
             color="input-primary"
+            className="w-full"
             value={formData.advname}
             onChange={handler.trakeChange}
             required
@@ -65,6 +66,7 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
             name="body"
             label="body of Adv"
             color="input-primary"
+            className="w-full"
             value={formData.body}
             onChange={handler.trakeChange}
             required
@@ -73,7 +75,8 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
             id="link"
             type="text"
             name="link"
-            label="link"
+            label="link of adv"
+            className="w-full"
             value={formData.link}
             color="input-primary"
             onChange={handler.trakeChange}
