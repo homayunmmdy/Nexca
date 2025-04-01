@@ -83,6 +83,7 @@ const Form = ({ buttonText, initalData, API }: ShareFormType) => {
             color="textarea-primary"
             onChange={handler.trakeChange}
             required={true}
+            className="w-full"
             style="w-full"
             icon={<FaRegMessage />}
           />

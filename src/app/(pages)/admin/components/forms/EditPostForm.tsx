@@ -99,7 +99,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
           <Textarea
             id="description"
             name="description"
-            style="w-full mb-2"
+            className="w-full mb-2"
             color="textarea-primary"
             label="description"
             value={formData.description}

@@ -4,60 +4,42 @@ import React from "react";
 const Textarea: React.FC<TextareaType> = ({
   id,
   style,
-  value,
-  placeholder,
-  name,
-  rows,
   color,
-  onChange,
-  required,
   label,
   icon,
+  className,
+  ...rest
 }: TextareaType) => {
-  const classes = `textarea textarea-bordered ${icon ? "" : style} ${color}`;
   return (
     <>
       {icon ? (
         <label
           data-testid="label"
-          className={`${classes} flex items-center gap-2`}
+          className={`${style} ${color} textarea textarea-bordered flex items-center gap-2`}
         >
           {icon}
           <textarea
-            value={value}
-            rows={rows}
-            className={`textarea textarea-ghost ${style}`}
-            placeholder={placeholder}
-            onChange={onChange}
-            name={name}
+            className={className}
             id={id}
-            required={required}
+            {...rest}
           />
         </label>
       ) : label ? (
         <>
-          <label htmlFor={id}>{label}</label>
+          <label className={style} htmlFor={id}>
+            {label}
+          </label>
           <textarea
-            value={value}
-            rows={rows}
-            className={classes}
-            placeholder={placeholder}
-            onChange={onChange}
-            name={name}
+            className={`textarea textarea-bordered ${className} ${color}`}
             id={id}
-            required={required}
+            {...rest}
           />
         </>
       ) : (
         <textarea
-          value={value}
-          rows={rows}
-          className={classes}
-          placeholder={placeholder}
-          onChange={onChange}
-          name={name}
+          className={`textarea textarea-bordered ${className} ${color}`}
           id={id}
-          required={required}
+          {...rest}
         />
       )}
     </>

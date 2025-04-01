@@ -6,7 +6,6 @@ const Input: React.FC<InputType> = ({
   style,
   name,
   color,
-
   icon,
   label,
   defaultChecked,

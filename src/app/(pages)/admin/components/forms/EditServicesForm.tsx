@@ -77,6 +77,7 @@ const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
             name="description"
             label="description"
             color="textarea-primary"
+            className="w-full"
             value={formData.description}
             onChange={handler.trakeChange}
           />
