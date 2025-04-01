@@ -1,13 +1,14 @@
 "use client";
 import { Button, SectionsTitr } from "@/components/atoms";
-import SingleCardSkeleton  from "./skeleton/SingleCardSkeleton";
 import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import ErrorBoundaryProvider from "@/util/ErrorBoundaryProvider";
+import { postLinkGenerator } from "@/util/ServerUtil";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import SingleCardSkeleton from "./skeleton/SingleCardSkeleton";
 const SingleCard: React.FC = () => {
   const { data, loading } = useGetSection(SINGLE_POST_QUERY_KEY, -1, 3);
 
@@ -18,29 +19,36 @@ const SingleCard: React.FC = () => {
   return (
     <article>
       <SectionsTitr>Single Posts</SectionsTitr>
-      {data?.map((post: PostsCashType) => (
-        <Link
-          href={`/posts/${post._id}`}
-          key={post._id}
-          className="card my-5 bg-base-100 shadow-xl lg:card-side"
-        >
-          <figure>
-            <Image
-              src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
-              alt={post.title.slice(0, 70)}
-              width={928}
-              height={548}
-            />
-          </figure>
-          <div className="card-body">
-            <h3 className="card-title">{post.title.slice(0, 70)}</h3>
-            <p>{post.description.slice(0, 150)}</p>
-            <div className="card-actions justify-end">
-              <Button color="btn-primary">Read Now</Button>
+      {data?.map((post: PostsCashType) => {
+        const postLink = postLinkGenerator(post._id, post.title);
+        return (
+          <Link
+            href={postLink}
+            key={post._id}
+            className="card my-5 bg-base-100 shadow-xl lg:card-side"
+          >
+            <figure>
+              <Image
+                src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
+                alt={post.title.slice(0, 70)}
+                width={928}
+                height={548}
+              />
+            </figure>
+            <div className="card-body">
+              <h3 className="card-title">{post.title.slice(0, 70)}</h3>
+              <p>{post.description.slice(0, 150)}</p>
+              <Link
+                href={postLink}
+                title={post.title.slice(0, 70)}
+                className="card-actions justify-end"
+              >
+                <Button color="btn-primary">Read Now</Button>
+              </Link>
             </div>
-          </div>
-        </Link>
-      ))}
+          </Link>
+        );
+      })}
     </article>
   );
 };

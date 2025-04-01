@@ -1,13 +1,15 @@
 import { PostsCashType } from "@/types/CashTypes";
+import { postLinkGenerator } from "@/util/ServerUtil";
 import Link from "next/link";
 import React from 'react'
 
 const VerticalPost = ({ post }: {post : PostsCashType}) => {
+  const postLink = postLinkGenerator(post._id, post.title);
   return (
     <>
       <Link
         key={post._id}
-        href={`/posts/${post._id}`}
+        href={postLink}
         className="group relative flex h-[450px] w-full items-end justify-start overflow-hidden rounded-md bg-indigo-600 bg-cover bg-center text-left transition-all hover:hover:scale-105"
         style={{ backgroundImage: `url(${!post.imgurl? "/static/Image/logo.jpg" : post.imgurl})` }}
       >

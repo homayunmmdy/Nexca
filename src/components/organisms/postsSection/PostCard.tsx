@@ -1,12 +1,14 @@
 import { PostsCashType } from "@/types/CashTypes";
+import { postLinkGenerator } from "@/util/ServerUtil";
 import Image from "next/image";
 import Link from "next/link";
 
 const PostCard = ({ post }: { post: PostsCashType }) => {
+  const postLink = postLinkGenerator(post._id, post.title);
   return (
     <>
       <article className="card h-full rounded-xl bg-base-100 shadow-xl transition-transform duration-500 ease-in-out md:hover:scale-105">
-        <Link href={`/posts/${post._id}`}>
+        <Link href={postLink}>
           <figure className="px-5 pt-5">
             <Image
               src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
