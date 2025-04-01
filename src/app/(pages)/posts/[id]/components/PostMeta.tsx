@@ -2,12 +2,12 @@ import SiteConfig from "@/config/site";
 import { CategoryType } from "@/types/CashTypes";
 import FormatTime from "../../components/FormatTime";
 
-const PostMeta = ({ post }: { post: any }) => {
+const PostMeta = ({ post,slug }: { post: any,slug : string | string[]}) => {
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   const title = post.title.slice(0, 60);
   const description = post.description.slice(0, 150);
-  const url = `${API_URL}/posts/${post._id}`;
+  const url = `${API_URL}/posts/${post._id}/${slug}`;
   const lang = "en";
   const categories = post.categories?.map(
     (category: CategoryType) => category.name

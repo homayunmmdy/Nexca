@@ -18,23 +18,19 @@ import { POST_API_URL } from "../config/apiConstants";
  * const { data: post, isLoading, isError } = useSinglePost();
  */
 
-const useSinglePost = ( postId?: string ) => {
-  const id = postId ?? getParameterId(7);
-
+const useSinglePost = (postId?: string| string[]) => {
   const apiClient = new APIClient(POST_API_URL);
 
   const fetchPost = async () => {
-    const postData = await apiClient.get(`/${id}`);
-    return postData;
+    if (!postId) throw new Error("Post ID is required");
+    return apiClient.get(`/${postId}`);
   };
 
-  const { data, isLoading, isError } = useQuery(["SinglePost", id], fetchPost, {
-    enabled: !!id, // Fetch only if the ID exists
-    retry: 2, // Retry twice in case of failure
-    staleTime: 5 * 60 * 1000, // Cache data for 5 minutes
+  return useQuery(["SinglePost", postId], fetchPost, {
+    enabled: !!postId,
+    retry: 2,
+    staleTime: 5 * 60 * 1000,
   });
-
-  return { data, isLoading, isError };
 };
 
 export default useSinglePost;
