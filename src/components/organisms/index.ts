@@ -17,11 +17,12 @@ export { default as Hero } from "./sections/Hero";
 export { default as PriceList } from "./sections/PriceList";
 export { default as StatsSection } from "./sections/StatsSection";
 
-// posts sections 
+// posts sections
+export { default as LatestLinearPost } from "./postsSection/LatestLinearPost";
 export { default as MainPosts } from "./postsSection/MainPosts";
-export { default as SliderSec } from "./postsSection/Slider";
-export { default as SingleCardSec } from "./postsSection/SingleCard";
 export { default as MorePostsSec } from "./postsSection/MorePosts";
+export { default as MostCommentedLinearPost } from "./postsSection/MostCommentedLinearPost";
 export { default as PostsSec } from "./postsSection/Posts";
-
+export { default as SingleCardSec } from "./postsSection/SingleCard";
+export { default as SliderSec } from "./postsSection/Slider";
 export { default as VerticalPostsSec } from "./postsSection/VerticalPosts";

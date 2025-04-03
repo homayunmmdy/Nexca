@@ -636,7 +636,7 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665db3513739s2g6a08928dd",
     title:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "This post has the 4 commetns Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl:
       "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
     description:
