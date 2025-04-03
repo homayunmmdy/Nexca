@@ -4,6 +4,7 @@ import { Button, SectionsTitr } from "@/components/atoms";
 import Link from "next/link";
 import { FaCircleDot } from "react-icons/fa6";
 import LatestLinearPost from "./LatestLinearPost";
+import MostCommentedLinearPost from "./MostCommentedLinearPost";
 
 const MostTab = () => {
   const [activeTab, setActiveTab] = useState<'latest' | 'most'>('latest');
@@ -30,21 +31,7 @@ const MostTab = () => {
       )}
       
       {activeTab === 'most' && (
-        <ul className="mb-3 flex flex-col gap-4">
-          {[...Array(3)].map((_, index) => (
-            <li
-              key={index}
-              className="group flex cursor-pointer items-start gap-2 rounded-xl border-2 border-dotted border-gray-400 p-2 hover:border-solid hover:border-gray-900"
-            >
-              <div className="h-7 w-7 shrink-0">
-                <FaCircleDot className="h-full w-full text-indigo-700" size={28} color="#4338CA" />
-              </div>
-              <Link className="line-clamp-2 font-semibold group-hover:text-indigo-600" href="/">
-                Most commented {index + 1}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <MostCommentedLinearPost />
       )}
     </section>
   );
