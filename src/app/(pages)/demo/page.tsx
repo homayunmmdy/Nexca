@@ -7,6 +7,7 @@ import {
   SliderSec,
   VerticalPostsSec,
 } from "@/components/organisms";
+import MostTab from "@/components/organisms/sections/MostTab";
 import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
@@ -51,7 +52,14 @@ const DemoPage: React.FC = () => {
       </div>
       <SliderSec />
       <div className="mx-auto w-[94%] pt-2 md:w-[92%]">
-        <SingleCardSec />
+        <div className="grid grid-cols-12 md:gap-9">
+          <div className="col-span-12 md:col-span-3">
+            <MostTab />
+          </div>
+          <div className="col-span-12 md:col-span-9">
+            <SingleCardSec />
+          </div>
+        </div>
         <VerticalPostsSec />
       </div>
     </>
