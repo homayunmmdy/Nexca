@@ -1,15 +1,18 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
 import useGetStats from "@/hooks/useGetStats";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { useCountUp } from "use-count-up";
 
 const StatItem = ({ label, count }: { label: string; count: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const { value } = useCountUp({ isCounting: isInView, end: count, duration: 1.5 });
+  const { value } = useCountUp({
+    isCounting: isInView,
+    end: count,
+    duration: 1.5,
+  });
 
   return (
     <motion.div
@@ -19,7 +22,9 @@ const StatItem = ({ label, count }: { label: string; count: number }) => {
       transition={{ duration: 0.6 }}
       className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0"
     >
-      <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">{label}</dt>
+      <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">
+        {label}
+      </dt>
       <dd className="order-1 text-5xl font-extrabold leading-none text-indigo-600">
         {value}
       </dd>
@@ -44,7 +49,8 @@ const StatsSection = () => {
             See What we have
           </h2>
           <p className="mt-3 text-xl leading-7 text-gray-600 sm:mt-4">
-            Here are list of the available posts, sections and services in our website
+            Here are list of the available posts, sections and services in our
+            website
           </p>
         </motion.div>
       </div>
