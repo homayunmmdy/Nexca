@@ -10,3 +10,4 @@ export { default as Spinner } from "./Spinner";
 export { default as Textarea } from "./Textarea";
 export { default as ThemeIcon } from "./ThemeIcon";
 export { default as ThemeFiled } from "./ThemeFiled";
+export { default as Container } from "./Container";
