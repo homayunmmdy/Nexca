@@ -5,6 +5,7 @@ import {
   PostsSec,
   SingleCardSec,
   SliderSec,
+  SportSec,
   VerticalPostsSec,
 } from "@/components/organisms";
 import MostTab from "@/components/organisms/sections/MostTab";
@@ -61,6 +62,7 @@ const DemoPage: React.FC = () => {
           </div>
         </div>
         <VerticalPostsSec />
+        <SportSec />
       </div>
     </>
   );
