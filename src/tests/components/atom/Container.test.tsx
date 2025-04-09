@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, RenderResult, screen} from '@testing-library/react';
 import Container from "../../../components/atoms/Container";
 
 

@@ -29,8 +29,12 @@ const VerticalPosts: React.FC = () => {
   );
 };
 
-export default () => (
-  <ErrorBoundaryProvider>
-    <VerticalPosts />
-  </ErrorBoundaryProvider>
+const WrappedVerticalPosts = () => (
+    <ErrorBoundaryProvider>
+        <VerticalPosts />
+    </ErrorBoundaryProvider>
 );
+
+WrappedVerticalPosts.displayName = "WrappedVerticalPosts";
+
+export default WrappedVerticalPosts;
