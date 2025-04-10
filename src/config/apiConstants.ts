@@ -5,6 +5,6 @@ export const CONTACTS_API_URL = "/api/contacts";
 export const EMAIL_API_URL = "/api/emails";
 export const TEXTADV_API_URL = "/api/textadv";
 export const TICKETS_API_URL = "/api/tickets";
-export const TIMELINE_API_URL = "/api/time";
+export const RELEASE_API_URL = "/api/release";
 export const CONTRIBUTION_API_URL = '/api/contribution'
 export const COMMENTS_API_URL = '/api/comments'

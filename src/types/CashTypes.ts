@@ -24,10 +24,11 @@ export type PostsCashType = {
 
 } & BaseType;
 
-export type TimeLIneCashType = {
+export type ReleaseCashType = {
   title: string;
   date: string;
   description: string;
+  link? : string
 } & Omit<BaseType, "body">;
 
 export type ServicesCashType = {
