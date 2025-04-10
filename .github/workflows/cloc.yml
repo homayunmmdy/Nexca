@@ -22,7 +22,7 @@ jobs:
         run: cloc . --exclude-dir=.git,node_modules,.next,dist,build > cloc-output.txt
 
       - name: Upload cloc report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: cloc-report
           path: cloc-output.txt
