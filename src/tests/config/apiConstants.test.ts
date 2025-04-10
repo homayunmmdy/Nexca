@@ -6,7 +6,7 @@ import {
     EMAIL_API_URL,
     TEXTADV_API_URL,
     TICKETS_API_URL,
-    TIMELINE_API_URL,
+    RELEASE_API_URL,
     CONTRIBUTION_API_URL,
     COMMENTS_API_URL
   } from '../../config/apiConstants' 
@@ -21,7 +21,7 @@ import {
         EMAIL_API_URL,
         TEXTADV_API_URL,
         TICKETS_API_URL,
-        TIMELINE_API_URL,
+        RELEASE_API_URL,
         CONTRIBUTION_API_URL,
         COMMENTS_API_URL
       }
@@ -70,8 +70,8 @@ import {
         expect(TICKETS_API_URL).toBe('/api/tickets')
       })
   
-      it('should have correct TIMELINE_API_URL', () => {
-        expect(TIMELINE_API_URL).toBe('/api/time')
+      it('should have correct RELEASE_API_URL', () => {
+        expect(RELEASE_API_URL).toBe('/api/release')
       })
   
       it('should have correct CONTRIBUTION_API_URL', () => {
@@ -93,7 +93,7 @@ import {
           EMAIL_API_URL,
           TEXTADV_API_URL,
           TICKETS_API_URL,
-          TIMELINE_API_URL,
+          RELEASE_API_URL,
           CONTRIBUTION_API_URL,
           COMMENTS_API_URL
         ]
