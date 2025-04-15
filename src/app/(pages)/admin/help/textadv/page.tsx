@@ -13,7 +13,7 @@ const TextAdvHelpPage: React.FC = () => {
         </title>
         <meta
           name="description"
-          content="Learn how to create, edit, and delete text-based ads in Nexca's TextAdv section with this comprehensive guide."
+          content="Learn how to create, edit, and delete text-based ads in Nexca is TextAdv section with this comprehensive guide."
         />
       </Head>
 
@@ -39,7 +39,7 @@ const TextAdvHelpPage: React.FC = () => {
                 <span className="font-semibold">TextAdv</span> for creating,
                 editing, and deleting text-based ads. This feature is designed
                 to provide administrators with a seamless experience in managing
-                advertisements that appear on the website. Whether you're
+                advertisements that appear on the website. Whether you&apos;re
                 looking to create a new ad, edit an existing one, or remove
                 outdated content, the TextAdv section has you covered.
               </p>
@@ -63,7 +63,7 @@ const TextAdvHelpPage: React.FC = () => {
                 </Link>
                 <p className="mt-4">
                   This page serves as the central hub for all your text-based
-                  advertisements. Here, you'll find a list of all existing ads
+                  advertisements. Here, you&apos;ll find a list of all existing ads
                   on the website, allowing you to easily review and manage them.
                 </p>
               </div>
@@ -87,7 +87,7 @@ const TextAdvHelpPage: React.FC = () => {
                   </div>
                   <div className="md:w-2/3">
                     <p>
-                      Once you're on the TextAdv page, you'll notice that each
+                      Once you&apos;re on the TextAdv page, you&apos;ll notice that each
                       ad comes with options to edit or delete it. This
                       functionality ensures that you can keep your
                       advertisements up-to-date and relevant. If an ad is no
@@ -116,8 +116,8 @@ const TextAdvHelpPage: React.FC = () => {
                   <FiExternalLink className="ml-2" />
                 </Link>
                 <p className="mt-4">
-                  This page is where the magic happens. Here's a step-by-step
-                  breakdown of the fields you'll need to fill out to create a
+                  This page is where the magic happens. Here&apos;s a step-by-step
+                  breakdown of the fields you&apos;ll need to fill out to create a
                   new ad:
                 </p>
               </div>
@@ -152,10 +152,10 @@ const TextAdvHelpPage: React.FC = () => {
                       Ad Name
                     </h3>
                     <p className="mt-2">
-                      Next, you'll need to provide an{" "}
-                      <span className="font-medium">Ad Name</span>. It's
+                      Next, you&apos;ll need to provide an{" "}
+                      <span className="font-medium">Ad Name</span>. It&apos;s
                       important to note that this name is not visible to users;
-                      it's solely for administrative purposes. Use a clear and
+                      it&apos;s solely for administrative purposes. Use a clear and
                       descriptive name to make it easier to identify and manage
                       the ad later.
                     </p>
@@ -174,7 +174,7 @@ const TextAdvHelpPage: React.FC = () => {
                     <p className="mt-2">
                       This is where you input the actual content of your
                       advertisement. The text you enter here will be displayed
-                      to users, so make sure it's engaging, concise, and aligned
+                      to users, so make sure it&apos;s engaging, concise, and aligned
                       with your marketing goals.
                     </p>
                   </div>
@@ -190,7 +190,7 @@ const TextAdvHelpPage: React.FC = () => {
                       Link for the Ad
                     </h3>
                     <p className="mt-2">
-                      Finally, you'll need to add a{" "}
+                      Finally, you&apos;ll need to add a{" "}
                       <span className="font-medium">link</span> that users will
                       be directed to when they click on the ad. This could be a
                       product page, a promotional offer, or any other relevant
@@ -249,7 +249,7 @@ const TextAdvHelpPage: React.FC = () => {
               </h2>
               <div className="rounded-xl border border-base-200 bg-base-200 p-6 shadow-xs transition-shadow duration-300 hover:shadow-md">
                 <p >
-                  Whether you're a seasoned marketer or new to managing
+                  Whether you&apos;re a seasoned marketer or new to managing
                   advertisements, the TextAdv section in Nexca simplifies the
                   process of handling text-based ads. From creating new ads to
                   editing or deleting existing ones, this feature provides all

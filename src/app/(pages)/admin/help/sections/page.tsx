@@ -27,8 +27,8 @@ const SectionsHelpAdminPage: React.FC = () => {
                 This ensures that your content is organized and reaches the intended audience.
               </p>
               <p className="mt-4">
-                For example, if you're creating a post about a new product launch, you might choose 
-                a section like "Announcements" or "Product Updates."
+                For example, if you&apos;re creating a post about a new product launch, you might choose
+                a section like &quot;Announcements&quot; or &quot;Product Updates.&quot;
               </p>
             </div>
             
@@ -56,7 +56,7 @@ const SectionsHelpAdminPage: React.FC = () => {
             
             <div className="space-y-6">
               <div className="rounded-lg border-l-4 border-amber-500 bg-base-200 p-6">
-                <h3 className="mb-2 text-lg font-semibold text-amber-800">Why Can't I Create a New Section?</h3>
+                <h3 className="mb-2 text-lg font-semibold text-amber-800">Why Can&apos;t I Create a New Section?</h3>
                 <p className="">Only the Master Editor can create new sections because each section must first be coded and styled.</p>
                 <ul className="ml-6 mt-3 list-disc space-y-1">
                   <li>Ensures consistency across the platform</li>
@@ -66,18 +66,18 @@ const SectionsHelpAdminPage: React.FC = () => {
               </div>
               
               <div className="rounded-lg border-l-4 border-rose-500 bg-base-200 p-6">
-                <h3 className="mb-2 text-lg font-semibold text-rose-800">Why Can't I Change a Section's ID?</h3>
+                <h3 className="mb-2 text-lg font-semibold text-rose-800">Why Can&apos;t I Change a Section&apos;s ID?</h3>
                 <p className="">
                   Section IDs are unique identifiers that link sections to their corresponding code. 
-                  Changing a section's ID can cause <span className="font-medium">sync issues</span>, resulting in lost posts.
+                  Changing a section&apos;s ID can cause <span className="font-medium">sync issues</span>, resulting in lost posts.
                 </p>
               </div>
               
               <div className="rounded-lg border-l-4 border-emerald-500 bg-base-200 p-6">
-                <h3 className="mb-2 text-lg font-semibold text-emerald-800">Why Can't I See Some Sections in the Admin Panel?</h3>
+                <h3 className="mb-2 text-lg font-semibold text-emerald-800">Why Can&apos;t I See Some Sections in the Admin Panel?</h3>
                 <p className="">
                   Some sections are <span className="font-medium">automatically generated</span> based on content in other sections.
-                  For example, "Next Main" might pull content from the "Main" section without requiring manual intervention.
+                  For example, &quot;Next Main&quot; might pull content from the &quot;Main&quot; section without requiring manual intervention.
                 </p>
               </div>
             </div>

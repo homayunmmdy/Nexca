@@ -17,7 +17,7 @@ export default function AdminContactsPage() {
         <title>Nexca Contacts - Communication System</title>
         <meta
           name="description"
-          content="Nexca's contact and admin feedback system Contacts"
+          content="Nexca is contact and admin feedback system Contacts"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -29,7 +29,7 @@ export default function AdminContactsPage() {
             <span className="absolute -left-3 top-1/2 hidden h-8 w-1 -translate-y-1/2 transform rounded-full bg-indigo-700 sm:block" />
             Streamlining Communication
             <span className="mt-1 block text-xl font-normal sm:text-2xl">
-              Nexca's Contact and Admin Feedback System
+              Nexca&apos;s Contact and Admin Feedback System
             </span>
           </h1>
 
@@ -85,7 +85,7 @@ export default function AdminContactsPage() {
             <div className="ml-4">
               <h3 className="font-medium text-indigo-700">Did you know?</h3>
               <p className="mt-1 text-sm">
-                Nexca's approach sets a new standard for user engagement and
+                Nexca&apos;s approach sets a new standard for user engagement and
                 platform improvement.
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function AdminContactsPage() {
 
           <div className="mb-8 overflow-hidden rounded-xl border border-base-200 bg-base-200 shadow-xs">
             <p className="p-6">
-              Nexca's contact page, available at
+              Nexca&apos;s contact page, available at
               <a
                 href="https://nexca.vercel.app/contacts"
                 className="mx-1 font-medium text-indigo-700 hover:underline"
@@ -268,7 +268,7 @@ export default function AdminContactsPage() {
               Setting New Standards
             </h3>
             <p className="opacity-90">
-              Nexca's approach sets a new standard for user engagement and
+              Nexca&apos;s approach sets a new standard for user engagement and
               platform improvement. By creating this seamless feedback loop,
               Nexca ensures continuous evolution based on real user needs rather
               than assumptions.
