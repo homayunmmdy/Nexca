@@ -17,7 +17,7 @@ const DataTable = ({ data, path, editor }: Props) => {
     <div className="overflow-x-auto">
       {editor ? (
         <div className="flex w-full justify-center">
-          <Link href={`/${RouteConfig.admin.base}/${path}/new`}>
+          <Link href={`${process.env.NEXT_PUBLIC_API_URL}${RouteConfig.admin.base}/${path}/new`}>
             <Button
               color="btn-primary"
               className="btn-outline m-3"
