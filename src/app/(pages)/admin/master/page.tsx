@@ -16,7 +16,7 @@ const MasterEditorPage: React.FC = () => {
       toast.success("you're welcome");
       router.push(RouteConfig.admin.base);
     }
-  }, []);
+  }, [router]);
 
   const handleLogin = () => {
     const KEY = process.env.NEXT_PUBLIC_MASTER_EDITOR_KEY;
