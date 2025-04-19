@@ -3,11 +3,11 @@ import { SERVICES_API_URL } from "@/config/apiConstants";
 import { SERVICES_IMG_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { ServicesCashType } from "@/types/CashTypes";
-import { getParameterId } from "@/util/Util";
+import { GetParameterId } from "@/util/Util";
 import React from "react";
 
 const ServicesImg: React.FC = () => {
-  const id = getParameterId(10);
+  const id = GetParameterId(10);
   const { data: services, loading } = useFetch(
     SERVICES_IMG_KEY,
     SERVICES_API_URL

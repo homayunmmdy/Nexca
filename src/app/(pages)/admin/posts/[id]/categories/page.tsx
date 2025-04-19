@@ -5,7 +5,7 @@ import { POST_API_URL } from "@/config/apiConstants";
 import useSinglePost from "@/hooks/useSinglePost";
 import { CategoryType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
-import { checkMaster, getIdOfPost } from "@/util/Util";
+import { checkMaster, GetIdOfPost } from "@/util/Util";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CategoryList } from "../../../components/elements";
@@ -13,7 +13,7 @@ import CategoriesForm from "../../../components/forms/CategoriesForm";
 import RouteConfig from "@/config/RouteConfig";
 
 const PostCategories = () => {
-  const postId = getIdOfPost();
+  const postId = GetIdOfPost();
   const { data: post, isLoading } = useSinglePost(postId);
   let master = checkMaster();
   const router = useRouter();

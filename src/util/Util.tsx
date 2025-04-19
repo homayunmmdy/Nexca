@@ -2,12 +2,12 @@
 import { MASTER_KEY } from "@/config/Constants";
 import { usePathname } from "next/navigation";
 
-export const getParameterId = (sliceCharacter: number) => {
+export const GetParameterId = (sliceCharacter: number) => {
   const pathname = usePathname();
   return pathname.slice(sliceCharacter);
 };
 
-export const getIdOfPost = () => {
+export const GetIdOfPost = () => {
   const pathname = usePathname();
   const parts = pathname.split("/");
   const postId = parts[parts.indexOf("posts") + 1];

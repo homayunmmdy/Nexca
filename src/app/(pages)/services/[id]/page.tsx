@@ -5,7 +5,7 @@ import { POST_API_URL } from "@/config/apiConstants";
 import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
-import { getParameterId } from "@/util/Util";
+import { GetParameterId } from "@/util/Util";
 import React from "react";
 import NotFound from "../../[...not_found]/not-found";
 import ServicesNav from "../../demo/components/ServicesNav";
@@ -13,7 +13,7 @@ import ServicesImg from "./components/ServicesImg";
 import PostsSkeleton from "@/components/organisms/postsSection/skeleton/PostsSkeleton";
 
 const ServicesPage: React.FC = () => {
-  const id = getParameterId(10);
+  const id = GetParameterId(10);
   const { data: posts, loading } = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
 
   if (loading) {

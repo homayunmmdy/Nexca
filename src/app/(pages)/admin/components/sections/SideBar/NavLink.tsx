@@ -9,7 +9,7 @@ import {
 } from "@/config/adminPage";
 import RouteConfig from "@/config/RouteConfig";
 import { adminPagesType } from "@/types/entities";
-import { getIdOfPost } from "@/util/Util";
+import { GetIdOfPost } from "@/util/Util";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -62,7 +62,7 @@ const NavLink: React.FC = () => {
     };
   });
 
-  const postId = getIdOfPost();
+  const postId = GetIdOfPost();
 
   return (
     <>

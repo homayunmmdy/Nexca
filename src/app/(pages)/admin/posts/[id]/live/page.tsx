@@ -1,9 +1,9 @@
 'use client'
 import SiteConfig from "@/config/site";
-import { getIdOfPost } from "@/util/Util";
+import { GetIdOfPost } from "@/util/Util";
 
 const EditLivePage = () => {
-  const postId = getIdOfPost();
+  const postId = GetIdOfPost();
   console.log(postId)
   return (
     <iframe

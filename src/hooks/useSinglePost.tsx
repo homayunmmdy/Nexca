@@ -1,6 +1,5 @@
 "use client";
 import APIClient from "@/util/apiClient";
-import { getParameterId } from "@/util/Util";
 import { useQuery } from "@tanstack/react-query";
 import { POST_API_URL } from "../config/apiConstants";
 
