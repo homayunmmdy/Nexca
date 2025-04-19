@@ -32,8 +32,12 @@ const RecentPosts: React.FC = () => {
   );
 };
 
-export default () => (
-  <ErrorBoundaryProvider>
-    <RecentPosts />
-  </ErrorBoundaryProvider>
+const WrappedRecentPosts = () => (
+    <ErrorBoundaryProvider>
+        <RecentPosts />
+    </ErrorBoundaryProvider>
 );
+
+WrappedRecentPosts.displayName = "WrappedRecentPosts";
+
+export default WrappedRecentPosts

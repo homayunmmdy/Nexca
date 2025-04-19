@@ -11,7 +11,7 @@ const LatestLinearPost = () => {
   return (
     <ul className="mb-3 flex flex-col gap-4">
       {posts?.map((post: PostsCashType) => {
-        return <LinearPosts post={post} />;
+        return <LinearPosts post={post} key={post._id}/>;
       })}
     </ul>
   );

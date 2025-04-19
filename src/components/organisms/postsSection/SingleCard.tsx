@@ -53,8 +53,12 @@ const SingleCard: React.FC = () => {
   );
 };
 
-export default () => (
-  <ErrorBoundaryProvider>
-    <SingleCard />
-  </ErrorBoundaryProvider>
+const WrappedSingleCard = () => (
+    <ErrorBoundaryProvider>
+        <SingleCard />
+    </ErrorBoundaryProvider>
 );
+
+WrappedSingleCard.displayName = "WrappedSingleCard";
+
+export default WrappedSingleCard

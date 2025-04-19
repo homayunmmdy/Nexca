@@ -71,11 +71,13 @@ const Sport = () => {
                     {nextMain?.map((item: PostsCashType) => {
                         const postLink = postLinkGenerator(item._id, item.title);
                         return (
-                            <Link href={postLink} title={item.title.slice(0, 60)}
+                            <Link href={postLink} key={item._id} title={item.title.slice(0, 60)}
                                   className="relative group transition-all hover:scale-[102%] overflow-hidden rounded-xl shadow-lg h-[242px] block">
                                 <div className="h-full">
                                     <div className="relative h-full">
-                                        <img
+                                        <Image
+                                            width={450}
+                                            height={242}
                                             src={!item.imgurl ? "/static/Image/logo.jpg" : item.imgurl}
                                             alt={item.title.slice(0, 60)}
                                             className="w-full h-full object-cover absolute inset-0"

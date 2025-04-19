@@ -23,8 +23,12 @@ const MainSec: React.FC = () => {
   );
 };
 
-export default () => (
-  <ErrorBoundaryProvider>
-    <MainSec />
-  </ErrorBoundaryProvider>
+const WrappedMainSec = () => (
+    <ErrorBoundaryProvider>
+      <MainSec />
+    </ErrorBoundaryProvider>
 );
+
+WrappedMainSec.displayName = "WrappedMainSec";
+
+export default WrappedMainSec

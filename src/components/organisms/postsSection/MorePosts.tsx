@@ -34,8 +34,12 @@ const MorePosts: React.FC = () => {
   );
 };
 
-export default () => (
-  <ErrorBoundaryProvider>
-    <MorePosts />
-  </ErrorBoundaryProvider>
+const WrappedMorePosts = () => (
+    <ErrorBoundaryProvider>
+        <MorePosts />
+    </ErrorBoundaryProvider>
 );
+
+WrappedMorePosts.displayName = "WrappedMorePosts";
+
+export default WrappedMorePosts

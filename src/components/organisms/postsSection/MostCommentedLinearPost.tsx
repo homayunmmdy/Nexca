@@ -53,7 +53,7 @@ const MostCommentedLinearPost = () => {
   return (
     <ul className="mb-3 flex flex-col gap-4">
       {mostCommentedPosts.map((post: any) => {
-        return <LinearPosts post={post} />;
+        return <LinearPosts post={post} key={post._id}/>;
       })}
     </ul>
   );

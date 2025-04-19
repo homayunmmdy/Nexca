@@ -9,6 +9,7 @@ import Link from "next/link";
 import { FaCircleDot } from "react-icons/fa6";
 import { SectionsTitr } from "../atoms";
 import LinearAdsLoading from "./LinearAdsLoading";
+import React from "react";
 
 const LinearAds = ({ id }: { id: number }) => {
   const {
@@ -63,8 +64,12 @@ const LinearAds = ({ id }: { id: number }) => {
   );
 };
 
-export default ({ id }: { id: number }) => (
-  <ErrorBoundaryProvider>
-    <LinearAds id={id} />
-  </ErrorBoundaryProvider>
+const WrappedLinearAds = ({ id }: { id: number }) => (
+    <ErrorBoundaryProvider>
+      <LinearAds id={id} />
+    </ErrorBoundaryProvider>
 );
+
+WrappedLinearAds.displayName = "WrappedLinearAds";
+
+export default WrappedLinearAds
