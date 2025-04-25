@@ -27,3 +27,4 @@ export { default as SingleCardSec } from "./postsSection/SingleCard";
 export { default as SliderSec } from "./postsSection/Slider";
 export { default as VerticalPostsSec } from "./postsSection/VerticalPosts";
 export { default as SportSec } from "./postsSection/Sport";
+export { default as TeletypeSec } from "./postsSection/Teletype";

@@ -5,7 +5,7 @@ import {
     PostsSec,
     SingleCardSec,
     SliderSec,
-    SportSec,
+    SportSec, TeletypeSec,
     VerticalPostsSec,
 } from "@/components/organisms";
 import MostTab from "@/components/organisms/sections/MostTab";
@@ -39,6 +39,7 @@ const DemoPage: React.FC = () => {
     return (
         <>
             <h1 className="hidden">{`demo page | ${SiteConfig.title}`}</h1>
+            <TeletypeSec />
             <ServicesNav/>
             <Container>
                 <MainPosts/>
