@@ -1,5 +1,5 @@
 "use client";
-import { LogoName } from "@/components/atoms";
+import {Container, LogoName} from "@/components/atoms";
 import {
   GitHubBtn,
   GlobalSearchInput,
@@ -44,7 +44,7 @@ const Header = () => {
         animate={isDev ? false : "visible"}
         variants={headerVariants}
       >
-        <div className="navbar mx-auto max-w-7xl">
+        <Container className="navbar">
           <div className="navbar-start lg:w-[30%]">
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
             <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ const Header = () => {
             <ThemeBtn />
             <GitHubBtn link={SiteConfig.github} />
           </div>
-        </div>
+        </Container>
       </motion.header>
       {isOpen && <MobileMenu pathname={pathname} nav={nav} />}
     </>

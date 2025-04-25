@@ -1,5 +1,5 @@
 "use client";
-import {ErrorText, Spinner} from "@/components/atoms";
+import {Container, ErrorText, Spinner} from "@/components/atoms";
 import PostCard from "@/components/organisms/postsSection/PostCard";
 import {PostsCashType} from "@/types/CashTypes";
 import {useInfiniteQuery} from "@tanstack/react-query";
@@ -43,6 +43,7 @@ const Feed: React.FC = () => {
         isLoading,
     } = useInfiniteQuery<PaginatedPosts>({
         queryKey: ["posts"],
+        // @ts-ignore
         queryFn: fetchPosts,
         getNextPageParam: (lastPage) => {
             // Determine the next page
@@ -96,8 +97,9 @@ const Feed: React.FC = () => {
         );
 
     return (
-        <div className="mx-auto p-4 md:p-10">
-            {data?.pages[0]?.data.length === 0 ? (
+        <Container>
+            {/*@ts-ignore*/}
+            {data?.pages[0]?.data?.length === 0 ? (
                 <div className="flex flex-col items-center justify-center">
                     <p className="text-lg font-medium text-gray-600">
                         No posts available!
@@ -107,7 +109,8 @@ const Feed: React.FC = () => {
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
                     {data?.pages.map((page, i) => (
                         <React.Fragment key={i}>
-                            {page.data.map((post: PostsCashType) => (
+                            {/*@ts-ignore*/}
+                            {page.data?.map((post: PostsCashType) => (
                                 <PostCard key={post._id} post={post}/>
                             ))}
                         </React.Fragment>
@@ -120,7 +123,7 @@ const Feed: React.FC = () => {
                     <Spinner/>
                 </div>
             )}
-        </div>
+        </Container>
     );
 };
 

@@ -4,13 +4,13 @@ import CopyRight from "./CopyRight";
 import EmailListForm from "./EmailListForm";
 import FooterLinks from "./FooterLinks";
 import FooterMedia from "./FooterMedia";
-import { LogoName } from "@/components/atoms";
+import {Container, LogoName} from "@/components/atoms";
 
 const Footer = () => {
   return (
     <>
       <footer className="w-full border-t-2 border-indigo-600">
-        <div className="mx-auto w-[94%] md:w-[92%]">
+        <Container>
           <div className="grid grid-cols-12 gap-x-5 gap-y-8 py-10">
             <div className="relative col-span-full flex h-96 flex-col items-center justify-center gap-12 rounded-2xl border-2 border-indigo-600 bg-base-100 p-6 shadow-xl xl:col-span-3 xl:w-72">
              <LogoName />
@@ -25,7 +25,7 @@ const Footer = () => {
               <EmailListForm />
             </div>
           </div>
-        </div>
+        </Container>
         <CopyRight siteName={SiteConfig.name} />
       </footer>
     </>

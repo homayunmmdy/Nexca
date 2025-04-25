@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import useGetSection from "@/hooks/useGetSection";
 import {TELETYPE_QUERY_KEY} from "@/config/Constants";
 import {PostsCashType} from "@/types/CashTypes";
+import {Container} from "@/components/atoms";
 
 export default function Teletype() {
     const {data} = useGetSection(TELETYPE_QUERY_KEY, -1, 7);
@@ -11,7 +12,7 @@ export default function Teletype() {
     const [postIndex, setPostIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
 
-    const titles = data?.map((post: PostsCashType) => post.title.slice(0, 90)) || [];
+    const titles = data?.map((post: PostsCashType) => post.title.slice(0, 85)) || [];
 
     useEffect(() => {
         if (titles.length === 0) return;
@@ -35,7 +36,7 @@ export default function Teletype() {
     return (
         <div
             className="sticky top-[85px] mt-[-42px] z-10 w-full hidden lg:block backdrop-blur-md bg-white/30 dark:bg-black/30 shadow-md">
-            <div className="max-w-6xl mx-auto px-3 sm:px-4">
+            <Container className="px-3 sm:px-4">
                 <div className="flex items-center justify-between h-12">
                     <div className="flex-1">
                         <h1
@@ -58,7 +59,7 @@ export default function Teletype() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
     );
 }
