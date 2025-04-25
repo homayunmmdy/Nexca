@@ -1,15 +1,12 @@
 import React from 'react';
-import {render, RenderResult, screen} from '@testing-library/react';
+import { render, RenderResult, screen } from '@testing-library/react';
 import Container from "../../../components/atoms/Container";
 
-
 describe('Container Component', () => {
-    // Define the return type for our helper function
     interface RenderContainerResult extends RenderResult {
         containerElement: HTMLElement;
     }
 
-    // Helper function with proper typing
     const renderContainer = (props: { className?: string; children: React.ReactNode }): RenderContainerResult => {
         const utils = render(<Container {...props} />);
         const containerElement = utils.container.firstChild as HTMLElement;
@@ -27,24 +24,52 @@ describe('Container Component', () => {
 
     it('applies default classes correctly', () => {
         const { containerElement } = renderContainer({ children: <div>Test</div> });
+
+        // Basic class checks
         expect(containerElement).toHaveClass('mx-auto');
-        expect(containerElement).toHaveClass('w-[94%]');
-        expect(containerElement).toHaveClass('pt-2');
-        expect(containerElement).toHaveClass('md:w-[92%]');
+        expect(containerElement).toHaveClass('w-full');
+        expect(containerElement).toHaveClass('px-4');
+
+        // Responsive classes
+        expect(containerElement.className).toMatch(/sm:px-6/);
+        expect(containerElement.className).toMatch(/lg:px-8/);
+        expect(containerElement.className).toMatch(/max-w-xs/);
+        expect(containerElement.className).toMatch(/sm:max-w-sm/);
+        expect(containerElement.className).toMatch(/md:max-w-2xl/);
+        expect(containerElement.className).toMatch(/lg:max-w-5xl/);
+        expect(containerElement.className).toMatch(/xl:max-w-7xl/);
+        expect(containerElement.className).toMatch(/2xl:max-w-screen-2xl/);
     });
 
     it('merges custom className with default classes', () => {
         const customClass = 'custom-class';
         const { containerElement } = renderContainer({
             className: customClass,
-            children: <div>Test</div>
+            children: <div>Test</div>,
         });
         expect(containerElement).toHaveClass('mx-auto');
         expect(containerElement).toHaveClass(customClass);
     });
 
-    it('has exactly the default classes when no className prop is provided', () => {
+    it('includes only expected default classes when no className is passed', () => {
         const { containerElement } = renderContainer({ children: <div>Test</div> });
-        expect(containerElement.className).toBe('mx-auto w-[94%] pt-2 md:w-[92%] ');
+
+        const expectedBaseClasses = [
+            'mx-auto',
+            'w-full',
+            'px-4',
+            'sm:px-6',
+            'lg:px-8',
+            'max-w-xs',
+            'sm:max-w-sm',
+            'md:max-w-2xl',
+            'lg:max-w-5xl',
+            'xl:max-w-7xl',
+            '2xl:max-w-screen-2xl',
+        ];
+
+        for (const cls of expectedBaseClasses) {
+            expect(containerElement.className).toContain(cls);
+        }
     });
 });

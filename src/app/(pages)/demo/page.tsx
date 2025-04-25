@@ -39,9 +39,10 @@ const DemoPage: React.FC = () => {
     return (
         <>
             <h1 className="hidden">{`demo page | ${SiteConfig.title}`}</h1>
-            <TeletypeSec />
-            <ServicesNav/>
+
             <Container>
+                <TeletypeSec />
+                <ServicesNav/>
                 <MainPosts/>
                 <Banner/>
                 <div className="grid grid-cols-12 md:gap-9">
