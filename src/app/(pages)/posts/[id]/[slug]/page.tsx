@@ -9,6 +9,8 @@ import NewsBody from "../components/NewsBody";
 import NewsHead from "../components/NewsHead";
 import PostMeta from "../components/PostMeta";
 import PostSeclton from "../PostSkelton";
+import {Container} from "@/components/atoms";
+import {MainHead} from "@/components/molecules";
 
 const slugify = (title: string) =>
   title.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
@@ -40,16 +42,16 @@ const Post: React.FC = () => {
     <>
       <PostMeta post={post} slug={slug}/>
       <div className="flex flex-col">
-        <NewsHead title={post.title} createdAt={post.createdAt} />
+        <MainHead title={post.title} description={post.description} createdAt={post.createdAt} />
         <div className="py-8">
-          <div className="mx-auto flex w-[94%] flex-col gap-8 md:w-[92%] md:flex-row">
+          <Container className=" flex flex-col gap-8  md:flex-row">
             <div className="w-full md:w-3/4">
               <NewsBody post={post} />
             </div>
             <div className="w-full py-3 md:w-1/4">
               <RecentPosts />
             </div>
-          </div>
+          </Container>
         </div>
       </div>
     </>

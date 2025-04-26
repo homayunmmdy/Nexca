@@ -17,7 +17,7 @@ import { POST_API_URL } from "../config/apiConstants";
  * const { data: post, isLoading, isError } = useSinglePost();
  */
 
-const useSinglePost = (postId?: string| string[]) => {
+const useSinglePost = (postId?: string| string[]): object => {
   const apiClient = new APIClient(POST_API_URL);
 
   const fetchPost = async () => {
@@ -25,7 +25,9 @@ const useSinglePost = (postId?: string| string[]) => {
     return apiClient.get(`/${postId}`);
   };
 
-  return useQuery(["SinglePost", postId], fetchPost, {
+  return useQuery({
+    queryKey: ["SinglePost", postId],
+    queryFn: fetchPost,
     enabled: !!postId,
     retry: 2,
     staleTime: 5 * 60 * 1000,

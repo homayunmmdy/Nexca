@@ -4,22 +4,12 @@ import Link from "next/link";
 import { FaRocket, FaHandshake, FaCode, FaEnvelope } from "react-icons/fa";
 import { SiNextdotjs, SiReact, SiMongodb, SiTailwindcss, SiVercel } from "react-icons/si";
 import {Button, Container} from "@/components/atoms";
+import {MainHead} from "@/components/molecules";
 
 export default function About() {
   return (
       <>
-        {/* Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-indigo-800 to-purple-900">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent opacity-40"></div>
-          <Container className="relative py-24 sm:py-32">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              About <span className="bg-gradient-to-r from-indigo-400 to-purple-300 bg-clip-text text-transparent">{SiteConfig.name}</span>
-            </h1>
-            <p className="mt-6 max-w-3xl text-xl text-indigo-100">
-              Elevating your digital presence with elegant solutions and seamless experiences.
-            </p>
-          </Container>
-        </div>
+        <MainHead title="About Nexca" description="Elevating your digital presence with elegant solutions and seamless experiences." />
 
         {/* Content Sections */}
         <Container className="py-16">
