@@ -1,3 +1,4 @@
+
 import SiteConfig from "@/config/site";
 import Link from "next/link";
 import { FaRocket, FaHandshake, FaCode, FaEnvelope } from "react-icons/fa";
@@ -53,7 +54,7 @@ export default function About() {
                 At {SiteConfig.name}, we believe that digital sophistication should be accessible to all.
                 Our mission is to democratize web publishing by providing powerful tools that require no
                 coding knowledge, while delivering results that exude professionalism and refinement.
-                We're committed to empowering creators with technology that works as seamlessly as it looks.
+                We&apos;re committed to empowering creators with technology that works as seamlessly as it looks.
               </p>
             </div>
           </div>
@@ -118,7 +119,7 @@ export default function About() {
               <h2 className="text-3xl font-bold ">Strategic Alliances</h2>
             </div>
             <p className="text-lg mb-8">
-              We've forged strategic partnerships with industry innovators to deliver a platform that stands at the forefront of web technology.
+              We&apos;ve forged strategic partnerships with industry innovators to deliver a platform that stands at the forefront of web technology.
               These collaborations allow us to offer you tools and services that are not just current, but visionary.
             </p>
 
@@ -142,7 +143,7 @@ export default function About() {
             <p className="text-lg  mb-6">
               Our dedicated team of specialists is ready to assist you on your digital journey.
               Whether you have inquiries about our platform or need personalized support,
-              we're committed to providing timely and thoughtful assistance.
+              we&apos;re committed to providing timely and thoughtful assistance.
             </p>
             <Link
                 href="/contacts"
