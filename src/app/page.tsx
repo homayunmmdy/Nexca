@@ -1,6 +1,6 @@
 import {
   Banner,
-  Companies,
+  Companies, CTASec,
   DocsHero,
   EmailList,
   FAQs,
@@ -69,6 +69,7 @@ const LandingPage: React.FC = () => {
       <Hero />
       <Features />
       <DocsHero />
+      <CTASec />
       <Companies />
       <StatsSection />
       <FAQs />
