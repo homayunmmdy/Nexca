@@ -17,7 +17,7 @@ import { POST_API_URL } from "../config/apiConstants";
  * const { data: post, isLoading, isError } = useSinglePost();
  */
 
-const useSinglePost = (postId?: string| string[]): object => {
+const useSinglePost = (postId?: string| string[]) => {
   const apiClient = new APIClient(POST_API_URL);
 
   const fetchPost = async () => {

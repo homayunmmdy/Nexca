@@ -1,4 +1,5 @@
 import { AllowedColors } from "./AllowedOptions";
+import {JSX} from "react";
 
 export type ButtonType = {
   color?: `btn-${AllowedColors}` | null;

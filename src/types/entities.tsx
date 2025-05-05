@@ -1,4 +1,5 @@
 import { IconType } from "react-icons/lib";
+import {JSX} from "react";
 
 export type FullHoverAnimationType = {
   text: string;

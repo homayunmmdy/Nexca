@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef } from "react";
+import React, {JSX, useRef} from "react";
 import { useInView } from "framer-motion";
 import { useCountUp } from "use-count-up";
 
