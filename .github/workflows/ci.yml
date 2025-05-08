@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm' # Caches node_modules
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
@@ -28,9 +28,3 @@ jobs:
 
       - name: Build the project
         run: npm run build
-
-      - name: Deploy to Vercel
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          npm install -g vercel
-          vercel --token=${{ secrets.VERCEL_TOKEN }} --prod --yes
