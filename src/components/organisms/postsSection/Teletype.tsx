@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useState} from "react";
+import {useEffect, useState, useMemo} from "react";
 import useGetSection from "@/hooks/useGetSection";
 import {TELETYPE_QUERY_KEY} from "@/config/Constants";
 import {PostsCashType} from "@/types/CashTypes";
@@ -12,7 +12,9 @@ export default function Teletype() {
     const [postIndex, setPostIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
 
-    const titles = data?.map((post: PostsCashType) => post.title.slice(0, 85)) || [];
+    const titles = useMemo(() => {
+        return data?.map((post: PostsCashType) => post.title.slice(0, 85)) || [];
+    }, [data]);
 
     useEffect(() => {
         if (titles.length === 0) return;
