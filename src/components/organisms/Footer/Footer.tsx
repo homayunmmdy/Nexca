@@ -1,5 +1,4 @@
 import SiteConfig from "@/config/site";
-import Link from "next/link";
 import CopyRight from "./CopyRight";
 import EmailListForm from "./EmailListForm";
 import FooterLinks from "./FooterLinks";
