@@ -1,25 +1,41 @@
 import React from "react";
 import EmailListForm from "@/components/organisms/Footer/EmailListForm";
+import {Container} from "@/components/atoms";
 
 const EmailList: React.FC = () => {
     return (
-        <div className="mx-auto my-5 max-w-7xl px-4">
+        <Container className='mb-5'>
             <div
-                className="mx-auto flex w-full flex-wrap items-center rounded-sm border border-gray-200 p-5 text-left md:p-8 lg:flex-nowrap">
-                <div className="mb-5 w-full flex-1 md:mb-0 md:w-1/2 md:pr-5 lg:pr-10">
-                    <h3 className="mb-2 text-2xl font-bold">Subscribe to EmailList</h3>
-                    <p>
-                        Provide your email to get email notification when we launch new
-                        products or publish new articles
-                    </p>
+                className="relative isolate overflow-hidden bg-base-200 px-3 py-10 shadow-2xl rounded-2xl sm:rounded-3xl sm:px-12 xl:py-24">
+
+                <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight sm:text-4xl">Subscribe to
+                    EmailList
+                </h2>
+
+                <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 ">
+                    Provide your email to get email notification when we launch new products or publish new articles
+                </p>
+                <div className='flex justify-center items-center my-3'>
+                    <EmailListForm/>
                 </div>
-                <div className="flex-0 w-full px-1 md:w-auto lg:w-1/2">
-                    <div className='w-[360px]'>
-                        <EmailListForm/>
-                    </div>
-                </div>
+                <svg viewBox="0 0 1024 1024"
+                     className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
+                     aria-hidden="true">
+                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                            fill-opacity="0.7">
+                    </circle>
+                    <defs>
+                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641" cx="0" cy="0" r="1"
+                                        gradientUnits="userSpaceOnUse"
+                                        gradientTransform="translate(512 512) rotate(90) scale(512)">
+                            <stop stop-color="#7775D6"></stop>
+                            <stop offset="1" stop-color="#7ED321" stop-opacity="0"></stop>
+                        </radialGradient>
+                    </defs>
+                </svg>
+
             </div>
-        </div>
+        </Container>
     );
 };
 
