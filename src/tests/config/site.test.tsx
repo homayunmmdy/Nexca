@@ -61,8 +61,8 @@ describe("SiteConfig", () => {
 
     it("should have correct SEO settings", () => {
       expect(SiteConfig.robots).toBe("index , follow");
-      expect(SiteConfig.author).toBe("Magnitify Team");
-      expect(SiteConfig.authorID).toBe("magnitify_Team");
+      expect(SiteConfig.author).toBe("Nexca Team");
+      expect(SiteConfig.authorID).toBe("Nexca_Team");
     });
 
     it("should have valid siteURL", () => {
