@@ -12,9 +12,10 @@ import {
 import { MdOutlineMail, MdLiveTv } from "react-icons/md";
 import { adminPages, EditPostPages } from "../../config/adminPage";
 import { FaQuestion } from "react-icons/fa6";
+import {SiRelay} from "react-icons/si";
 
 describe("adminPages", () => {
-  const AmountAdminPages = 9;
+  const AmountAdminPages = 10;
 
   describe("Structure and Content", () => {
     it("should have correct number of admin pages", () => {
@@ -43,6 +44,7 @@ describe("adminPages", () => {
         FaPager,
         MdOutlineMail,
         FaPhoneAlt,
+        SiRelay,
         FaQuestion,
       ];
 

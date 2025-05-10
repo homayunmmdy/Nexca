@@ -19,8 +19,8 @@ const SiteConfig = {
   phoneNumber: "0922 4003 487",
   linkedin: "https://www.linkedin.com/in/homayunmmdy/",
   robots: "index , follow",
-  author: "Magnitify Team",
-  authorID: "magnitify_Team",
+  author: "Nexca Team",
+  authorID: "Nexca_Team",
   // Navbar
   nav: [
     {

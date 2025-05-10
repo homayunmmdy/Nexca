@@ -13,6 +13,7 @@ import { FaQuestion } from "react-icons/fa6";
 import { IoIosColorPalette, IoMdSettings } from "react-icons/io";
 import { MdLiveTv, MdOutlineMail } from "react-icons/md";
 import RouteConfig from "./RouteConfig";
+import {SiRelay} from "react-icons/si";
 
 export const adminPages = [
   { name: "Admin", href: RouteConfig.admin.base, icon: FaHome,activate : true },
@@ -23,6 +24,7 @@ export const adminPages = [
   { name: "Services", href: RouteConfig.admin.services.base, icon: FaPager ,activate : true },
   { name: "Emails", href: RouteConfig.admin.emails, icon: MdOutlineMail ,activate : true },
   { name: "Contacts", href: RouteConfig.admin.contacts, icon: FaPhoneAlt ,activate : true },
+  { name: "Release", href: RouteConfig.admin.release.base, icon: SiRelay  ,activate : false },
   { name: "Help", href: RouteConfig.admin.help.base, icon: FaQuestion ,activate : true },
 ];
 
