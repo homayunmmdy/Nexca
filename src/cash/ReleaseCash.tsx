@@ -24,6 +24,7 @@ const TimeLineCash: ReleaseCashType[] = [
         _id: "664db351473932f6a08928dd",
         title: "Apple Watch",
         date: "2005-05-22T08:56:49.785Z",
+        link:'https://applewatch.org',
         description:
             "The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness tracking, health-oriented capabilities, and wireless telecommunication, and integrates with  iOS and other Apple products and services",
 

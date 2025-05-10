@@ -8,7 +8,7 @@ import { GiTicket } from "react-icons/gi";
 import { LiaQuestionSolid } from "react-icons/lia";
 import { MdPrivacyTip } from "react-icons/md";
 import { PiPhoneCallFill } from "react-icons/pi";
-import { SiAboutdotme } from "react-icons/si";
+import {SiAboutdotme, SiRelay} from "react-icons/si";
 import { SlEnergy } from "react-icons/sl";
 import { VscFeedback, VscGraphScatter } from "react-icons/vsc";
 
@@ -69,10 +69,16 @@ export const FooterLinkData: FooterLinkType[] = [
     icon: <SiAboutdotme />,
   },
   {
-    id: 6,
+    id: 5,
     title: "Contacts",
     href: "/contacts",
     icon: <PiPhoneCallFill />,
+  },
+  {
+    id: 6,
+    title: "Release",
+    href: "/release",
+    icon: <SiRelay />,
   },
 ];
 

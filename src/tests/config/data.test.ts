@@ -38,7 +38,7 @@ describe("Features Data", () => {
 describe("Footer Link Data", () => {
   it("should have the correct structure and length", () => {
     expect(Array.isArray(FooterLinkData)).toBe(true);
-    expect(FooterLinkData).toHaveLength(5);
+    expect(FooterLinkData).toHaveLength(6);
   });
 
   it("should have valid properties for each footer link", () => {
@@ -68,6 +68,7 @@ describe("Footer Link Data", () => {
       "/privacy_policy",
       "/about",
       "/contacts",
+      "/release",
     ];
     const actualRoutes = FooterLinkData.map((link) => link.href);
     expect(actualRoutes).toEqual(expectedRoutes);

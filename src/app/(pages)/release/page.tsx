@@ -1,16 +1,17 @@
 "use client";
-import { RELEASE_API_URL } from "@/config/apiConstants";
-import { TIMELINE_KEY } from "@/config/Constants";
+import {RELEASE_API_URL} from "@/config/apiConstants";
+import {TIMELINE_KEY} from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import Link from "next/link";
 import React from "react";
-import { FaEdit } from "react-icons/fa";
+import {FaEdit} from "react-icons/fa";
 import {DeleteBtn} from "@/components/molecules";
 import {ReleaseCashType} from "@/types/CashTypes";
 import {Button} from "@/components/atoms";
+import RouteConfig from "@/config/RouteConfig";
 
 const ReleasePage: React.FC = () => {
-    const { data } = useFetch(TIMELINE_KEY, RELEASE_API_URL);
+    const {data} = useFetch(TIMELINE_KEY, RELEASE_API_URL);
 
     const sortedByTime = data?.sort(
         (
@@ -47,8 +48,8 @@ const ReleasePage: React.FC = () => {
                                     : "timeline-end md:text-start"
                             } mb-10 `}
                         >
-                            {/* <time className="font-mono italic">1984</time> */}
-                            <div className="text-lg font-black">{item.title} </div>
+                            <Link href={item?.link || '#'} title={item.title}
+                                  className="text-lg font-black">{item.title} </Link>
                             <p>{item.description}</p>
 
                             <span
@@ -57,17 +58,17 @@ const ReleasePage: React.FC = () => {
                                 } `}
                             >
                 <Link
-                    href={`/admin/release/${item._id}`}
-                    style={{ display: "contents" }}
+                    href={`${RouteConfig.admin.release.base}/${item._id}`}
+                    style={{display: "contents"}}
                 >
                   <Button color="btn-warning" type="button">
-                    <FaEdit />
+                    <FaEdit/>
                   </Button>
                 </Link>
-                <DeleteBtn path="release" id={item._id} />
+                <DeleteBtn path="release" id={item._id}/>
               </span>
                         </div>
-                        <hr />
+                        <hr/>
                     </li>
                 ))}
             </ul>
