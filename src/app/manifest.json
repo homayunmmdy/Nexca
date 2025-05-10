@@ -1,7 +1,7 @@
 {
   "name": "Nexca , The Ultimate Admin Panel for Agencies and Individuals",
   "short_name": "Nexca",
-  "description": "Nexca offers a robust admin panel for agencies and individuals, enabling seamless data management, content sharing, and audience engagement.",
+  "description": "Your Lovely Admin Panel",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fff",
@@ -11,6 +11,18 @@
       "src": "/favicon.ico",
       "sizes": "any",
       "type": "image/x-icon"
+    },
+    {
+      "src": "/static/Image/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/Image/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
