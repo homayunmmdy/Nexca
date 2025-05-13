@@ -1,4 +1,4 @@
-import {RELEASE_API_URL, TEXTADV_API_URL} from "@/config/apiConstants";
+import {RELEASE_API_URL} from "@/config/apiConstants";
 import { SinglePagepParamsType } from "@/types/entities";
 import { FetchDataForEditPage } from "@/util/ServerUtil";
 import {EditReleaseForm} from "@/app/(pages)/admin/components";

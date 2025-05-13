@@ -26,8 +26,8 @@ export type PostsCashType = {
 
 export type ReleaseCashType = {
   title: string;
-  date: string;
-  description: string;
+  date?: string;
+  description?: string;
   link? : string
 } & Omit<BaseType, "body">;
 

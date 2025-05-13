@@ -54,7 +54,6 @@ const EditReleaseForm = ({ data }: { data: ReleaseCashType }) => {
               className="w-full"
               value={formData.date}
               onChange={handler.trakeChange}
-              required
           />
           <Input
             type="text"
@@ -65,11 +64,10 @@ const EditReleaseForm = ({ data }: { data: ReleaseCashType }) => {
             className="w-full"
             value={formData.description}
             onChange={handler.trakeChange}
-            required
           />
           <Input
             id="link"
-            type="text"
+            type="url"
             name="link"
             placeholder='Enter Relase Link here'
             style="w-full"
@@ -77,7 +75,6 @@ const EditReleaseForm = ({ data }: { data: ReleaseCashType }) => {
             icon={<FaLink />}
             color="input-primary"
             onChange={handler.trakeChange}
-            required
           />
           <Button type="submit" color="btn-primary">
             {EDITMODE ? "Save" : "create"}

@@ -73,7 +73,7 @@ const EditTextAdvForm = ({ data }: { data: TextAdvCashType }) => {
           />
           <Input
             id="link"
-            type="text"
+            type="url"
             name="link"
             label="link of adv"
             className="w-full"
