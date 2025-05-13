@@ -10,6 +10,7 @@ import {ReleaseCashType} from "@/types/CashTypes";
 import Link from "next/link";
 import React from "react";
 import { CiEdit } from "react-icons/ci";
+import {checkMaster} from "@/util/Util";
 
 const AdminReleasePage: React.FC = () => {
     const { data: sections, loading } = useFetch(
@@ -24,16 +25,19 @@ const AdminReleasePage: React.FC = () => {
         ? [...sections].sort((a, b) => a.createdAt - b.createdAt)
         : [];
 
+    let masterEditor = checkMaster();
     return (
         <>
             <div className="overflow-x-auto">
-                <div className="flex w-full justify-center">
-                    <Link href={RouteConfig.admin.release.new}>
-                        <Button color="btn-primary" className="btn-outline m-3">
-                            New release
-                        </Button>
-                    </Link>
-                </div>
+                {masterEditor ? (
+                    <div className="flex w-full justify-center">
+                        <Link href={RouteConfig.admin.release.new}>
+                            <Button color="btn-primary" className="btn-outline m-3">
+                                New release
+                            </Button>
+                        </Link>
+                    </div>
+                ): null}
                 {sortedData?.length === 0 ? (
                     <ErrorText>There are currently no text adv created.</ErrorText>
                 ) : (
@@ -42,8 +46,8 @@ const AdminReleasePage: React.FC = () => {
                         <tr>
                             <th>Title</th>
                             <th className="hidden lg:block">Description</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            {masterEditor ? <th>Edit</th>: null}
+                            {masterEditor ? <th>Delete</th>: null}
                         </tr>
                         </thead>
                         <tbody>
@@ -53,16 +57,20 @@ const AdminReleasePage: React.FC = () => {
                                     <td>{item.title}</td>
                                     <td className="hidden lg:block">{item.description}</td>
                                     <td>{item.date}</td>
-                                    <td>
-                                        <Link href={`${RouteConfig.admin.release.base}/${item._id}`}>
-                                            <Button color="btn-warning" className="mb-2 me-2">
-                                                <CiEdit size={25} />
-                                            </Button>
-                                        </Link>
-                                    </td>
-                                    <td>
-                                        <DeleteBtn path="release" id={item._id} />
-                                    </td>
+                                    {masterEditor ? (
+                                        <>
+                                            <td>
+                                                <Link href={`${RouteConfig.admin.release.base}/${item._id}`}>
+                                                    <Button color="btn-warning" className="mb-2 me-2">
+                                                        <CiEdit size={25} />
+                                                    </Button>
+                                                </Link>
+                                            </td>
+                                            <td>
+                                                <DeleteBtn path="release" id={item._id} />
+                                            </td>
+                                        </>
+                                    ):null}
                                 </tr>
                             </>
                         ))}
