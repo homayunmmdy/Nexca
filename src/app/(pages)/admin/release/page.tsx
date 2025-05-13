@@ -46,6 +46,7 @@ const AdminReleasePage: React.FC = () => {
                         <tr>
                             <th>Title</th>
                             <th className="hidden lg:block">Description</th>
+                            <th>Date</th>
                             {masterEditor ? <th>Edit</th>: null}
                             {masterEditor ? <th>Delete</th>: null}
                         </tr>
