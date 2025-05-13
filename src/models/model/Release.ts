@@ -7,7 +7,7 @@ const ReleasesSchema = new Schema(
         title: String,
         description: String,
         date: Date,
-        link: String
+        link: String,
     },
     defaultSchemaOptions
 );
