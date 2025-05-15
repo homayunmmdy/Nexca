@@ -12,6 +12,9 @@ const sectionSchema = new Schema(
     secid: {
       type: Number,
     },
+    activate: {
+        type: Boolean,
+    }
   },
   defaultSchemaOptions
 );

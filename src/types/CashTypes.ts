@@ -41,6 +41,7 @@ export type ServicesCashType = {
 export type SectionCashType = {
   name: string;
   secid: number;
+  activate:Boolean;
 } & Omit<BaseType, "body">;
 
 export type ContactsCashType = {
