@@ -2,6 +2,7 @@
 export const AUTH_KEY = "authenticated";
 export const MASTER_KEY = "masterEditor";
 export const TOTAL_VIEW = "total_view";
+export const SECTIONS_CONFIG = 'sectionsConfig'
 
 // query keys
 export const ALL_POSTS_QUERY_KEY = "all_posts";

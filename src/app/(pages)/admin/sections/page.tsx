@@ -1,7 +1,7 @@
 "use client";
 import {Button, ErrorText, Spinner} from "@/components/atoms";
 import { SECTIONS_API_URL } from "@/config/apiConstants";
-import { SECTIONS_QUERY_KEY } from "@/config/Constants";
+import {SECTIONS_CONFIG, SECTIONS_QUERY_KEY} from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { checkMaster } from "@/util/Util";
 import React, { useState, useEffect } from "react";
@@ -20,7 +20,7 @@ const AdminSectionPage: React.FC = () => {
 
 useEffect(() => {
     // Load configuration from localStorage if it exists
-    const storedConfig = localStorage.getItem('section');
+    const storedConfig = localStorage.getItem(SECTIONS_CONFIG);
     if (storedConfig) {
       setSection(JSON.parse(storedConfig));
     }
@@ -31,7 +31,7 @@ useEffect(() => {
       section.id === id ? { ...section, activate: !section.activate } : section
     );
     setSection(updatedConfig);
-    localStorage.setItem('section', JSON.stringify(updatedConfig));
+    localStorage.setItem(SECTIONS_CONFIG, JSON.stringify(updatedConfig));
   };
 
   if (loading) {

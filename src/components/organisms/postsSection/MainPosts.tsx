@@ -1,3 +1,4 @@
+'use client'
 import MainSec from "./MainSec";
 import NextMain from "./NextMain";
 
