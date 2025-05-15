@@ -6,7 +6,6 @@ import React, { useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import NotFound from "../../../[...not_found]/not-found";
 import NewsBody from "../components/NewsBody";
-import NewsHead from "../components/NewsHead";
 import PostMeta from "../components/PostMeta";
 import PostSeclton from "../PostSkelton";
 import {Container} from "@/components/atoms";

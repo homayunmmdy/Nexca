@@ -20,10 +20,10 @@ function MainHead({title, description, createdAt}: Props) {
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent opacity-40"></div>
             <Container className="relative py-8">
                 <div
-                    className="text-4xl font-bold tracking-tight mb-4 pb-[6px] text-white sm:text-5xl md:text-6xl line-clamp-1 md:line-clamp-2">
+                    className="text-4xl text-center font-bold tracking-tight mb-4 pb-[6px] text-white sm:text-5xl md:text-6xl line-clamp-1 md:line-clamp-2">
                     {title}
                 </div>
-                <p className="bg-gradient-to-r from-indigo-400 to-purple-300 bg-clip-text text-transparent line-clamp-2 md:line-clamp-3">{description}</p>
+                <p className="bg-gradient-to-r from-indigo-400 to-purple-300 bg-clip-text text-transparent line-clamp-2 text-center md:line-clamp-3">{description}</p>
                 {createdAt && (
                     <p className="my-3 text-center text-lg text-white">
                         <FormatTime timestamp={createdAt} options={options as Intl.DateTimeFormatOptions}/>
