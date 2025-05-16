@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef } from 'react';
+import {Button} from "@/components/atoms";
 
 type TranscriptionResult = {
     text: string;
@@ -78,22 +79,22 @@ export default function SpeechToText() {
     return (
         <div className="space-y-4">
             <div className="flex gap-4">
-                <button
+                <Button
                     onClick={isRecording ? stopRecording : startRecording}
                     disabled={isLoading}
-                    className={`px-4 py-2 rounded ${isRecording ? 'bg-red-500' : 'bg-blue-500'} text-white`}
+                    color={isRecording ? 'btn-error' : 'btn-primary'}
                 >
                     {isRecording ? 'Stop Recording' : 'Start Recording'}
-                </button>
+                </Button>
 
                 {audioBlob && (
-                    <button
+                    <Button
                         onClick={uploadAudio}
                         disabled={isLoading}
-                        className="px-4 py-2 bg-green-500 text-white rounded"
+                        color='btn-success'
                     >
                         {isLoading ? 'Transcribing...' : 'Transcribe'}
-                    </button>
+                    </Button>
                 )}
             </div>
 
