@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef, useEffect, FormEvent } from 'react';
+import {Button, ChatMessage, Input} from "@/components/atoms";
 
 type Message = {
   role: 'user' | 'assistant';
@@ -77,15 +78,9 @@ export default function ChatInterface() {
                         key={i}
                         className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
-                        <div
-                            className={`max-w-xs md:max-w-md lg:max-w-lg rounded-lg px-4 py-2 ${
-                                msg.role === 'user'
-                                    ? 'bg-blue-500 text-white'
-                                    : 'bg-gray-200 text-gray-800'
-                            }`}
-                        >
+                        <ChatMessage chatDirection={msg.role === 'user' ? 'chat-end' : 'chat-start'} color={msg.role === 'user' ? null : 'chat-bubble-primary'}>
                             {msg.content}
-                        </div>
+                        </ChatMessage>
                     </div>
                 ))}
                 {isLoading && (
@@ -104,21 +99,20 @@ export default function ChatInterface() {
 
             <form onSubmit={handleSubmit} className="p-4 border-t">
                 <div className="flex space-x-2">
-                    <input
+                    <Input
                         type="text"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         placeholder="Type your message..."
-                        className="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        color='input-primary'
+                        className='w-full'
                         disabled={isLoading}
                     />
-                    <button
-                        type="submit"
-                        disabled={isLoading || !input.trim()}
-                        className="bg-blue-500 text-white rounded-lg px-4 py-2 hover:bg-blue-600 disabled:bg-blue-300 disabled:cursor-not-allowed"
-                    >
+                    <Button
+                        type='submit'
+                        disabled={isLoading || !input.trim()}>
                         Send
-                    </button>
+                    </Button>
                 </div>
             </form>
         </div>
