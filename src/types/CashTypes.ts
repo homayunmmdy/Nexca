@@ -71,6 +71,14 @@ export type TextAdvCashType = {
   link: string;
 } & BaseType;
 
+export type ImgAdvCashType = {
+  advId: number;
+  advName: string;
+  imgURL: string;
+  imgAlt?: string;
+  link: string;
+} & BaseType;
+
 export type ContributeCashType = {
   title: string;
   description: string;
