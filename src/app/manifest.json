@@ -1,28 +1,21 @@
 {
   "name": "Nexca , The Ultimate Admin Panel for Agencies and Individuals",
   "short_name": "Nexca",
-  "description": "Your Lovely Admin Panel",
+  "description": "Nexca Your Lovely Admin Panel",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#4338CA",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "any",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/static/Image/logo.png",
+      "src": "/static/Image/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
-      "src": "/static/Image/logo.png",
+      "src": "/static/Image/icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }
