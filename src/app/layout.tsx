@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   verification: {
     google: "gTVvXWgVqXKU6AfSRkuQa4O39VGzRS9zcA4y9eT3uUo",
   },
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/static/Image/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/static/Image/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  themeColor: "#4338CA",
 };
 export default function RootLayout({
   children,
