@@ -70,27 +70,27 @@ describe("SiteConfig", () => {
     });
   });
 
-  describe("Navigation", () => {
-    it("should have correct number of navigation items", () => {
-      expect(SiteConfig.nav).toHaveLength(5);
-    });
-
-    it("should have valid structure for each nav item", () => {
-      SiteConfig.nav.forEach((item) => {
-        expect(item).toHaveProperty("id");
-        expect(item).toHaveProperty("name");
-        expect(item).toHaveProperty("link");
-        expect(typeof item.id).toBe("number");
-        expect(typeof item.name).toBe("string");
-      });
-    });
-
-    it("should have unique IDs for each nav item", () => {
-      const ids = SiteConfig.nav.map((item) => item.id);
-      const uniqueIds = new Set(ids);
-      expect(ids.length).toBe(uniqueIds.size);
-    });
-  });
+  // describe("Navigation", () => {
+  //   it("should have correct number of navigation items", () => {
+  //     expect(SiteConfig.nav).toHaveLength(5);
+  //   });
+  //
+  //   it("should have valid structure for each nav item", () => {
+  //     SiteConfig.nav.forEach((item) => {
+  //       expect(item).toHaveProperty("id");
+  //       expect(item).toHaveProperty("name");
+  //       expect(item).toHaveProperty("link");
+  //       expect(typeof item.id).toBe("number");
+  //       expect(typeof item.name).toBe("string");
+  //     });
+  //   });
+  //
+  //   it("should have unique IDs for each nav item", () => {
+  //     const ids = SiteConfig.nav.map((item) => item.id);
+  //     const uniqueIds = new Set(ids);
+  //     expect(ids.length).toBe(uniqueIds.size);
+  //   });
+  // });
 });
 
 

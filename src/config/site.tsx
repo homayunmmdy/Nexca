@@ -21,34 +21,6 @@ const SiteConfig = {
   robots: "index , follow",
   author: "Nexca Team",
   authorID: "Nexca_Team",
-  // Navbar
-  nav: [
-    {
-      id: 1,
-      name: "Home",
-      link: "/",
-    },
-    {
-      id: 2,
-      name: " Admin",
-      link: RouteConfig.admin.base,
-    },
-    {
-      id: 3,
-      name: " Demo",
-      link: "/demo",
-    },
-    {
-      id: 4,
-      name: "Services",
-      link: "/services/3",
-    },
-    {
-      id: 5,
-      name: "Feed",
-      link: "/feed",
-    }
-  ],
 };
 
 export default SiteConfig;

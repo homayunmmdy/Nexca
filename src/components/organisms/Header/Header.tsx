@@ -13,10 +13,11 @@ import { useState } from "react";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
 import { DEV_MODE } from "@/config/Constants";
+import HeaderMenuConfig from "@/config/HeaderMenuConfig";
 
 const Header = () => {
   const pathname = usePathname();
-  const nav = SiteConfig.nav;
+  const navBar = HeaderMenuConfig();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -53,7 +54,7 @@ const Header = () => {
             </div>
           </div>
           <div className="navbar-center hidden lg:flex lg:w-[50%] lg:justify-end">
-            <HeaderMenu pathname={pathname} nav={nav} />
+            <HeaderMenu pathname={pathname} nav={navBar} />
           </div>
           <div className="navbar-end gap-3 lg:w-[20%]">
             <ThemeBtn />
@@ -61,7 +62,7 @@ const Header = () => {
           </div>
         </Container>
       </motion.header>
-      {isOpen && <MobileMenu pathname={pathname} nav={nav} />}
+      {isOpen && <MobileMenu pathname={pathname} nav={navBar} />}
     </>
   );
 };

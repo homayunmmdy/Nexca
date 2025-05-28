@@ -36,14 +36,12 @@ export type FormData = {
 export type SinglePagepParamsType = {
   id: string;
 };
-export type MenuTypes = {
-  pathname: string;
-  nav: {
-    id: number;
-    name: string;
-    link: string;
-  }[];
-};
+
+export type HeaderMenuConfigType = {
+  id:number;
+  name : string;
+  link : string
+}
 
 export type FooterLinkType = {
   id: number;

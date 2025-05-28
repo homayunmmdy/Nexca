@@ -1,10 +1,10 @@
-import { MenuTypes } from "@/types/entities";
+import {HeaderMenuConfigType} from "@/types/entities";
 import Link from "next/link";
 
-const HeaderMenu = ({ pathname, nav }: MenuTypes) => {
+const HeaderMenu = ({ pathname, nav }: { pathname: string , nav : HeaderMenuConfigType[] }) => {
   return (
     <ul className="menu menu-horizontal px-1">
-      {nav?.map((item) => {
+      {nav?.map((item: HeaderMenuConfigType) => {
         return (
           <li key={`dektop_menu_item_${item.id}`} className="mx-1">
             {pathname == item.link ? (
