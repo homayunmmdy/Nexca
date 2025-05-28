@@ -33,7 +33,7 @@ describe('Container Component', () => {
         // Responsive classes
         expect(containerElement.className).toMatch(/sm:px-6/);
         expect(containerElement.className).toMatch(/lg:px-8/);
-        expect(containerElement.className).toMatch(/sm:max-w-sm/);
+        expect(containerElement.className).toMatch(/sm:max-w-xl/);
         expect(containerElement.className).toMatch(/md:max-w-2xl/);
         expect(containerElement.className).toMatch(/lg:max-w-5xl/);
         expect(containerElement.className).toMatch(/xl:max-w-7xl/);
@@ -59,7 +59,7 @@ describe('Container Component', () => {
             'px-4',
             'sm:px-6',
             'lg:px-8',
-            'sm:max-w-sm',
+            'sm:max-w-xl',
             'md:max-w-2xl',
             'lg:max-w-5xl',
             'xl:max-w-7xl',

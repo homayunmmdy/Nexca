@@ -1,15 +1,12 @@
 
 "use client";
 import AdminImage from "@/../public/static/Image/admin.webp";
-import { Button } from "@/components/atoms";
 import {  CTABtn, FullHoverAnimation } from "@/components/molecules";
 import RouteConfig from "@/config/RouteConfig";
 import SiteConfig from "@/config/site";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { IoArrowUpCircleSharp } from "react-icons/io5";
 
 const Hero: React.FC = () => {
   // Simplified animation variants for content
@@ -80,13 +77,13 @@ const Hero: React.FC = () => {
           >
             <motion.h2
               variants={contentVariants}
-              className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl xl:text-6xl"
+              className="font-bold leading-tight text-5xl md:text-6xl xl:text-7xl"
             >
               Explore the
               <FullHoverAnimation text="Web Demo" link="demo" />
               Right Now
             </motion.h2>
-            <motion.p variants={contentVariants} className="mt-8">
+            <motion.p variants={contentVariants} className="mt-8 md:text-xl">
               {SiteConfig.slogan}
             </motion.p>
             <motion.div
