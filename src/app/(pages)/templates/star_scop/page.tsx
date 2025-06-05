@@ -19,6 +19,7 @@ import {
     FaEye
 } from 'react-icons/fa';
 import {IoIosTrendingUp} from "react-icons/io";
+import Image from "next/image";
 
 const StarScope = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -221,8 +222,13 @@ const StarScope = () => {
                 transition={{ duration: 1 }}
             >
                 <div className="absolute inset-0">
-                    <img
+                    <Image
                         src={heroNews.image}
+                        width={1520}
+                        height={511}
+                        fetchPriority="high"
+                        loading="eager"
+                        priority
                         alt="Hero"
                         className="w-full h-full object-cover"
                     />
@@ -295,9 +301,11 @@ const StarScope = () => {
                                 whileHover={{ y: -5 }}
                             >
                                 <div className="relative overflow-hidden">
-                                    <img
+                                    <Image
                                         src={article.image}
                                         alt={article.title}
+                                        width={405}
+                                        height={192}
                                         className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
                                     <div className="absolute top-4 left-4">
@@ -376,9 +384,11 @@ const StarScope = () => {
                                 whileHover={{ scale: 1.02 }}
                             >
                                 <div className={`relative ${index === 0 ? 'h-96 lg:h-full' : 'h-64'}`}>
-                                    <img
+                                    <Image
                                         src={article.image}
                                         alt={article.title}
+                                        width={842}
+                                        height={544}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />

@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import {IoIosClose, IoIosGlobe, IoIosSearch, IoIosTrendingUp, IoMdMenu} from "react-icons/io";
 import {FaArrowRight, FaEye, FaFacebookF, FaInstagram, FaLinkedinIn, FaRegClock, FaUser} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
+import Image from "next/image";
 
 
 const TheChronicle = () => {
@@ -305,9 +306,14 @@ const TheChronicle = () => {
                             variants={itemVariants}
                         >
                             <div className="relative overflow-hidden shadow-2xl">
-                                <img
+                                <Image
                                     src={featuredNews.image}
                                     alt={featuredNews.title}
+                                    width={616}
+                                    height={500}
+                                    fetchPriority="high"
+                                    loading="eager"
+                                    priority
                                     className="w-full h-96 lg:h-[500px] object-cover"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
@@ -359,9 +365,12 @@ const TheChronicle = () => {
                             >
                                 <div className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                                     <div className="relative overflow-hidden">
-                                        <img
+                                        <Image
                                             src={article.image}
                                             alt={article.title}
+                                            width={384}
+                                            height={192}
+                                            loading='lazy'
                                             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700"
                                         />
                                         <div className="absolute top-3 left-3">

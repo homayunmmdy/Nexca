@@ -15,6 +15,7 @@ import {
     FiRefreshCw,
     FiArrowRight
 } from 'react-icons/fi';
+import Image from "next/image";
 
 // Mock data
 const featuredProducts = [
@@ -112,9 +113,11 @@ const ProductCard: React.FC<{ product: any; index: number }> = ({ product, index
             className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden"
         >
             <div className="relative overflow-hidden">
-                <img
+                <Image
                     src={product.image}
                     alt={product.name}
+                    width={384}
+                    height={256}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4 flex gap-2">
@@ -377,9 +380,11 @@ export default function EcommerceTemplate() {
                                             transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                                             className="bg-white rounded-2xl p-3 shadow-lg"
                                         >
-                                            <img
+                                            <Image
                                                 src={product.image}
                                                 alt={product.name}
+                                                width={138}
+                                                height={80}
                                                 className="w-full h-20 object-cover rounded-lg mb-2"
                                             />
                                             <p className="text-xs font-medium text-gray-900 line-clamp-2">
@@ -433,7 +438,7 @@ export default function EcommerceTemplate() {
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">Shop by Category</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Browse through our carefully curated categories to find exactly what you're looking for
+                            Browse through our carefully curated categories to find exactly what you&apos;re looking for
                         </p>
                     </motion.div>
 
@@ -486,7 +491,7 @@ export default function EcommerceTemplate() {
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">Most Popular</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Discover what everyone's talking about - our best-selling items
+                            Discover what everyone&apos;s talking about - our best-selling items
                         </p>
                     </motion.div>
 

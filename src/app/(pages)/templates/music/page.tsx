@@ -16,6 +16,7 @@ import {
     FaVolumeUp
 } from "react-icons/fa";
 import {IoIosFlash} from "react-icons/io";
+import Image from "next/image";
 
 export default function MusicHomepage() {
     const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -337,10 +338,15 @@ const containerVariants = {
                             className="relative"
                         >
                             <div className="relative w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
-                                <img
+                                <Image
                                     src="https://picsum.photos/600/400?random=hero"
                                     alt="Music Hero"
                                     className="w-full h-full object-cover"
+                                    width={584}
+                                    height={384}
+                                    fetchPriority="high"
+                                    loading="eager"
+                                    priority
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                                 <div className="absolute bottom-6 left-6 right-6">

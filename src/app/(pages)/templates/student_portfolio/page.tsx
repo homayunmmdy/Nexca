@@ -17,6 +17,7 @@ import {
     FaDownload,
     FaExternalLinkAlt
 } from 'react-icons/fa';
+import Image from "next/image";
 
 const Portfolio = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -156,11 +157,11 @@ const Portfolio = () => {
                                 C
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-                                Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Cass</span>
+                                Hi, I&apos;m <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Cass</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
                                 Computer Science student passionate about AI, web development, and creating innovative solutions
-                                that make a difference in people's lives.
+                                that make a difference in people&apos;s lives.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all flex items-center gap-2">
@@ -241,9 +242,11 @@ const Portfolio = () => {
                         {projects.map((project, index) => (
                             <div key={project.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all group">
                                 <div className="relative">
-                                    <img
+                                    <Image
                                         src={project.image}
                                         alt={project.title}
+                                        width={715}
+                                        height={192}
                                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                     <div className="absolute top-4 left-4">
@@ -353,7 +356,7 @@ const Portfolio = () => {
             {/* Contact Section */}
             <section id="contact" className="py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold text-white mb-4">Let's Connect</h2>
+                    <h2 className="text-4xl font-bold text-white mb-4">Let&apos;s Connect</h2>
                     <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
                         Always open to discussing new opportunities, collaborations, or just chatting about technology and innovation.
                     </p>

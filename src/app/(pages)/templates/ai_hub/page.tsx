@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     FiMenu,
     FiX,
@@ -19,7 +19,8 @@ import {
     FiDatabase,
     FiSmartphone
 } from 'react-icons/fi';
-import { motion, AnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
+import Image from "next/image";
 
 const AINewsHub = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -117,15 +118,15 @@ const AINewsHub = () => {
     ];
 
     const categories = [
-        { id: 'all', name: 'All News', icon: FiGlobe },
-        { id: 'breaking', name: 'Breaking', icon: FiZap },
-        { id: 'research', name: 'Research', icon: FiDatabase },
-        { id: 'enterprise', name: 'Enterprise', icon: FiCpu },
-        { id: 'healthcare', name: 'Healthcare', icon: FiSmartphone }
+        {id: 'all', name: 'All News', icon: FiGlobe},
+        {id: 'breaking', name: 'Breaking', icon: FiZap},
+        {id: 'research', name: 'Research', icon: FiDatabase},
+        {id: 'enterprise', name: 'Enterprise', icon: FiCpu},
+        {id: 'healthcare', name: 'Healthcare', icon: FiSmartphone}
     ];
 
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: {opacity: 0},
         visible: {
             opacity: 1,
             transition: {
@@ -135,7 +136,7 @@ const AINewsHub = () => {
     };
 
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+        hidden: {y: 20, opacity: 0},
         visible: {
             y: 0,
             opacity: 1,
@@ -155,7 +156,7 @@ const AINewsHub = () => {
                         <div className="flex items-center space-x-4">
                             <motion.div
                                 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-                                whileHover={{ scale: 1.05 }}
+                                whileHover={{scale: 1.05}}
                             >
                                 AI News Hub
                             </motion.div>
@@ -165,14 +166,18 @@ const AINewsHub = () => {
                         <div className="hidden md:flex items-center space-x-8">
                             <div className="flex items-center space-x-6">
                                 <a href="#" className="text-slate-700 hover:text-blue-600 transition-colors">Latest</a>
-                                <a href="#" className="text-slate-700 hover:text-blue-600 transition-colors">Trending</a>
-                                <a href="#" className="text-slate-700 hover:text-blue-600 transition-colors">Research</a>
-                                <a href="#" className="text-slate-700 hover:text-blue-600 transition-colors">Enterprise</a>
+                                <a href="#"
+                                   className="text-slate-700 hover:text-blue-600 transition-colors">Trending</a>
+                                <a href="#"
+                                   className="text-slate-700 hover:text-blue-600 transition-colors">Research</a>
+                                <a href="#"
+                                   className="text-slate-700 hover:text-blue-600 transition-colors">Enterprise</a>
                             </div>
 
                             <div className="flex items-center space-x-4">
                                 <div className="relative">
-                                    <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" />
+                                    <FiSearch
+                                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"/>
                                     <input
                                         type="text"
                                         placeholder="Search AI news..."
@@ -183,10 +188,10 @@ const AINewsHub = () => {
                                 </div>
                                 <motion.button
                                     className="p-2 text-slate-600 hover:text-blue-600 transition-colors"
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{scale: 1.1}}
+                                    whileTap={{scale: 0.95}}
                                 >
-                                    <FiBell size={20} />
+                                    <FiBell size={20}/>
                                 </motion.button>
                             </div>
                         </div>
@@ -196,7 +201,7 @@ const AINewsHub = () => {
                             className="md:hidden p-2"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
-                            {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+                            {isMenuOpen ? <FiX size={24}/> : <FiMenu size={24}/>}
                         </button>
                     </div>
                 </div>
@@ -205,14 +210,15 @@ const AINewsHub = () => {
                 <AnimatePresence>
                     {isMenuOpen && (
                         <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
+                            initial={{opacity: 0, height: 0}}
+                            animate={{opacity: 1, height: 'auto'}}
+                            exit={{opacity: 0, height: 0}}
                             className="md:hidden bg-white border-t border-slate-200"
                         >
                             <div className="px-4 py-4 space-y-4">
                                 <div className="relative">
-                                    <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" />
+                                    <FiSearch
+                                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"/>
                                     <input
                                         type="text"
                                         placeholder="Search AI news..."
@@ -220,10 +226,14 @@ const AINewsHub = () => {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <a href="#" className="block text-slate-700 hover:text-blue-600 transition-colors">Latest</a>
-                                    <a href="#" className="block text-slate-700 hover:text-blue-600 transition-colors">Trending</a>
-                                    <a href="#" className="block text-slate-700 hover:text-blue-600 transition-colors">Research</a>
-                                    <a href="#" className="block text-slate-700 hover:text-blue-600 transition-colors">Enterprise</a>
+                                    <a href="#"
+                                       className="block text-slate-700 hover:text-blue-600 transition-colors">Latest</a>
+                                    <a href="#"
+                                       className="block text-slate-700 hover:text-blue-600 transition-colors">Trending</a>
+                                    <a href="#"
+                                       className="block text-slate-700 hover:text-blue-600 transition-colors">Research</a>
+                                    <a href="#"
+                                       className="block text-slate-700 hover:text-blue-600 transition-colors">Enterprise</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -246,7 +256,8 @@ const AINewsHub = () => {
             </span>
                     </h1>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                        Your premier destination for artificial intelligence breakthroughs, industry insights, and cutting-edge research updates.
+                        Your premier destination for artificial intelligence breakthroughs, industry insights, and
+                        cutting-edge research updates.
                     </p>
                 </motion.div>
 
@@ -257,9 +268,14 @@ const AINewsHub = () => {
                 >
                     <div className="md:flex">
                         <div className="md:w-1/2">
-                            <img
+                            <Image
                                 src={featuredNews.image}
                                 alt={featuredNews.title}
+                                width={608}
+                                height={396}
+                                loading='eager'
+                                fetchPriority='high'
+                                priority
                                 className="w-full h-64 md:h-full object-cover"
                             />
                         </div>
@@ -270,11 +286,11 @@ const AINewsHub = () => {
                 </span>
                                 <div className="flex items-center text-slate-500 text-sm space-x-4">
                   <span className="flex items-center">
-                    <FiClock className="mr-1" size={14} />
+                    <FiClock className="mr-1" size={14}/>
                       {featuredNews.readTime}
                   </span>
                                     <span className="flex items-center">
-                    <FiEye className="mr-1" size={14} />
+                    <FiEye className="mr-1" size={14}/>
                                         {featuredNews.views}
                   </span>
                                 </div>
@@ -290,7 +306,8 @@ const AINewsHub = () => {
 
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center space-x-3">
-                                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                                    <div
+                                        className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
                                         {featuredNews.author.charAt(0)}
                                     </div>
                                     <div>
@@ -301,11 +318,11 @@ const AINewsHub = () => {
 
                                 <motion.button
                                     className="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{scale: 1.05}}
+                                    whileTap={{scale: 0.95}}
                                 >
                                     <span>Read More</span>
-                                    <FiArrowRight size={16} />
+                                    <FiArrowRight size={16}/>
                                 </motion.button>
                             </div>
                         </div>
@@ -327,10 +344,10 @@ const AINewsHub = () => {
                                         ? 'bg-blue-600 text-white shadow-lg'
                                         : 'bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-600 shadow-md'
                                 }`}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
+                                whileHover={{scale: 1.05}}
+                                whileTap={{scale: 0.95}}
                             >
-                                <IconComponent size={16} />
+                                <IconComponent size={16}/>
                                 <span>{category.name}</span>
                             </motion.button>
                         );
@@ -349,12 +366,12 @@ const AINewsHub = () => {
                         >
                             <motion.div variants={itemVariants} className="flex items-center justify-between mb-8">
                                 <h2 className="text-3xl font-bold text-slate-900 flex items-center">
-                                    <FiTrendingUp className="mr-3 text-blue-600" />
+                                    <FiTrendingUp className="mr-3 text-blue-600"/>
                                     Latest News
                                 </h2>
                                 <button className="text-blue-600 hover:text-blue-700 flex items-center font-medium">
                                     View All
-                                    <FiChevronRight className="ml-1" size={16} />
+                                    <FiChevronRight className="ml-1" size={16}/>
                                 </button>
                             </motion.div>
 
@@ -367,9 +384,12 @@ const AINewsHub = () => {
                                     >
                                         <div className="md:flex">
                                             <div className="md:w-1/3">
-                                                <img
+                                                <Image
                                                     src={article.image}
                                                     alt={article.title}
+                                                    width={266}
+                                                    height={255}
+                                                    loading='lazy'
                                                     className="w-full h-48 md:h-full object-cover"
                                                 />
                                             </div>
@@ -380,11 +400,11 @@ const AINewsHub = () => {
                           </span>
                                                     <div className="flex items-center text-slate-500 text-sm space-x-4">
                             <span className="flex items-center">
-                              <FiClock className="mr-1" size={12} />
+                              <FiClock className="mr-1" size={12}/>
                                 {article.readTime}
                             </span>
                                                         <span className="flex items-center">
-                              <FiEye className="mr-1" size={12} />
+                              <FiEye className="mr-1" size={12}/>
                                                             {article.views}
                             </span>
                                                     </div>
@@ -400,7 +420,8 @@ const AINewsHub = () => {
 
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center space-x-3">
-                                                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">
+                                                        <div
+                                                            className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">
                                                             {article.author.charAt(0)}
                                                         </div>
                                                         <div>
@@ -412,17 +433,17 @@ const AINewsHub = () => {
                                                     <div className="flex items-center space-x-2">
                                                         <motion.button
                                                             className="p-2 text-slate-400 hover:text-red-500 transition-colors"
-                                                            whileHover={{ scale: 1.1 }}
-                                                            whileTap={{ scale: 0.95 }}
+                                                            whileHover={{scale: 1.1}}
+                                                            whileTap={{scale: 0.95}}
                                                         >
-                                                            <FiBookmark size={16} />
+                                                            <FiBookmark size={16}/>
                                                         </motion.button>
                                                         <motion.button
                                                             className="p-2 text-slate-400 hover:text-blue-500 transition-colors"
-                                                            whileHover={{ scale: 1.1 }}
-                                                            whileTap={{ scale: 0.95 }}
+                                                            whileHover={{scale: 1.1}}
+                                                            whileTap={{scale: 0.95}}
                                                         >
-                                                            <FiShare2 size={16} />
+                                                            <FiShare2 size={16}/>
                                                         </motion.button>
                                                     </div>
                                                 </div>
@@ -443,8 +464,9 @@ const AINewsHub = () => {
                             variants={containerVariants}
                             className="bg-white rounded-xl shadow-md p-6"
                         >
-                            <motion.h3 variants={itemVariants} className="text-xl font-bold text-slate-900 mb-6 flex items-center">
-                                <FiTrendingUp className="mr-2 text-orange-500" />
+                            <motion.h3 variants={itemVariants}
+                                       className="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                                <FiTrendingUp className="mr-2 text-orange-500"/>
                                 Most Popular
                             </motion.h3>
 
@@ -461,11 +483,11 @@ const AINewsHub = () => {
                                         <div className="flex items-center justify-between text-sm text-slate-500">
                                             <div className="flex items-center space-x-3">
                         <span className="flex items-center">
-                          <FiEye className="mr-1" size={12} />
+                          <FiEye className="mr-1" size={12}/>
                             {article.views}
                         </span>
                                                 <span className="flex items-center">
-                          <FiClock className="mr-1" size={12} />
+                          <FiClock className="mr-1" size={12}/>
                                                     {article.readTime}
                         </span>
                                             </div>
@@ -497,8 +519,8 @@ const AINewsHub = () => {
                                 />
                                 <motion.button
                                     className="w-full bg-white text-blue-600 font-semibold py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
+                                    whileHover={{scale: 1.02}}
+                                    whileTap={{scale: 0.98}}
                                 >
                                     Subscribe Now
                                 </motion.button>
@@ -515,14 +537,15 @@ const AINewsHub = () => {
                         <div className="md:col-span-2">
                             <div className="text-2xl font-bold mb-4">AI News Hub</div>
                             <p className="text-slate-400 mb-4 max-w-md">
-                                Your trusted source for artificial intelligence news, research breakthroughs, and industry insights. Stay informed about the future of technology.
+                                Your trusted source for artificial intelligence news, research breakthroughs, and
+                                industry insights. Stay informed about the future of technology.
                             </p>
                             <div className="flex space-x-4">
                                 <button className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
-                                    <FiGlobe size={20} />
+                                    <FiGlobe size={20}/>
                                 </button>
                                 <button className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
-                                    <FiUser size={20} />
+                                    <FiUser size={20}/>
                                 </button>
                             </div>
                         </div>

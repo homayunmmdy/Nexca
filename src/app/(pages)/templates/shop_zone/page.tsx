@@ -14,6 +14,7 @@ import {
     FiShield,
     FiRefreshCw
 } from 'react-icons/fi';
+import Image from "next/image";
 
 // Animation variants
 const fadeInUp = {
@@ -156,7 +157,7 @@ const HeroSection = () => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
         }, 5000);
         return () => clearInterval(timer);
-    }, []);
+    });
 
     return (
         <section className="relative h-96 md:h-[500px] overflow-hidden bg-gradient-to-r from-blue-600 to-purple-700">
@@ -240,9 +241,11 @@ const ProductCard = ({ product, index }) => {
             {...scaleOnHover}
         >
             <div className="relative">
-                <img
+                <Image
                     src={product.image}
                     alt={product.name}
+                    width={294}
+                    height={395}
                     className="w-full h-48 object-cover"
                 />
                 {product.discount && (

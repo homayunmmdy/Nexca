@@ -17,6 +17,7 @@ import {
     FiDollarSign,
     FiGlobe, FiBarChart
 } from 'react-icons/fi';
+import Image from "next/image";
 
 const BankNewsPage = () => {
     const [activeCategory, setActiveCategory] = useState('all');
@@ -276,9 +277,14 @@ const BankNewsPage = () => {
                         <motion.section variants={itemVariants}>
                             <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                                 <div className="relative h-64 sm:h-80">
-                                    <img
+                                    <Image
                                         src={heroNews.image}
                                         alt={heroNews.title}
+                                        width={800}
+                                        height={320}
+                                        fetchPriority="high"
+                                        loading="eager"
+                                        priority
                                         className="w-full h-full object-cover"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
@@ -329,9 +335,12 @@ const BankNewsPage = () => {
                                         whileHover={{ y: -5 }}
                                     >
                                         <div className="relative h-48 overflow-hidden">
-                                            <img
+                                            <Image
                                                 src={article.image}
                                                 alt={article.title}
+                                                width={250}
+                                                height={192}
+                                                loading='lazy'
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                             />
                                             <div className="absolute top-3 left-3">
