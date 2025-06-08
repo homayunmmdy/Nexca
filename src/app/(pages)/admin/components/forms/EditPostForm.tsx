@@ -16,6 +16,7 @@ import { CategoryList, SelectField, SelectFiledSkeleton } from "../elements";
 import { FormLayout, ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
 import CategoriesForm from "./CategoriesForm";
+import SpeechToText from "@/components/organisms/SpeechToText";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -132,18 +133,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             value={formData.source}
             onChange={handler.trakeChange}
           />
-          {!master && (
-            <Input
-              type="text"
-              id="author"
-              name="author"
-              label="author"
-              className="w-full mb-2"
-              color="input-primary"
-              value={formData.author}
-              onChange={handler.trakeChange}
-            />
-          )}
+          <SpeechToText />
           <Button
             type="submit"
             color="btn-primary"
@@ -168,6 +158,18 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               onChange={handler.trakeBodyChanges}
             />
           </div>
+                    {!master && (
+            <Input
+              type="text"
+              id="author"
+              name="author"
+              label="author"
+              className="w-full mb-2"
+              color="input-primary"
+              value={formData.author}
+              onChange={handler.trakeChange}
+            />
+          )}
           <Button
             type="submit"
             color="btn-primary"
