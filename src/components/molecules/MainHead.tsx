@@ -9,11 +9,6 @@ interface Props {
 }
 
 function MainHead({title, description, createdAt}: Props) {
-    const options = {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-    };
     return (
         <div
             className="relative mt-[-30px] overflow-hidden bg-gradient-to-r from-indigo-900 via-indigo-800 to-purple-900">
@@ -26,7 +21,7 @@ function MainHead({title, description, createdAt}: Props) {
                 <p className="bg-gradient-to-r from-indigo-400 to-purple-300 bg-clip-text text-transparent line-clamp-2 text-center md:line-clamp-3">{description}</p>
                 {createdAt && (
                     <p className="my-3 text-center text-lg text-white">
-                        <FormatTime timestamp={createdAt} options={options as Intl.DateTimeFormatOptions}/>
+                        <FormatTime timestamp={createdAt} />
                     </p>
                 )}
             </Container>

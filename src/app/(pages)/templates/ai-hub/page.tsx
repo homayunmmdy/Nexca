@@ -21,6 +21,7 @@ import {
 } from 'react-icons/fi';
 import {motion, AnimatePresence} from 'framer-motion';
 import Image from "next/image";
+import MainSec from "@/app/(pages)/templates/ai-hub/components/MainSec";
 
 const AINewsHub = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -262,72 +263,7 @@ const AINewsHub = () => {
                 </motion.div>
 
                 {/* Featured Article */}
-                <motion.div
-                    variants={itemVariants}
-                    className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-                >
-                    <div className="md:flex">
-                        <div className="md:w-1/2">
-                            <Image
-                                src={featuredNews.image}
-                                alt={featuredNews.title}
-                                width={608}
-                                height={396}
-                                loading='eager'
-                                fetchPriority='high'
-                                priority
-                                className="w-full h-64 md:h-full object-cover"
-                            />
-                        </div>
-                        <div className="md:w-1/2 p-8">
-                            <div className="flex items-center space-x-4 mb-4">
-                <span className="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
-                  {featuredNews.category}
-                </span>
-                                <div className="flex items-center text-slate-500 text-sm space-x-4">
-                  <span className="flex items-center">
-                    <FiClock className="mr-1" size={14}/>
-                      {featuredNews.readTime}
-                  </span>
-                                    <span className="flex items-center">
-                    <FiEye className="mr-1" size={14}/>
-                                        {featuredNews.views}
-                  </span>
-                                </div>
-                            </div>
-
-                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight">
-                                {featuredNews.title}
-                            </h2>
-
-                            <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-                                {featuredNews.excerpt}
-                            </p>
-
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center space-x-3">
-                                    <div
-                                        className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
-                                        {featuredNews.author.charAt(0)}
-                                    </div>
-                                    <div>
-                                        <p className="font-medium text-slate-900">{featuredNews.author}</p>
-                                        <p className="text-sm text-slate-500">{featuredNews.publishedAt}</p>
-                                    </div>
-                                </div>
-
-                                <motion.button
-                                    className="flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
-                                    whileHover={{scale: 1.05}}
-                                    whileTap={{scale: 0.95}}
-                                >
-                                    <span>Read More</span>
-                                    <FiArrowRight size={16}/>
-                                </motion.button>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
+                <MainSec />
             </motion.section>
 
             {/* Category Filter */}

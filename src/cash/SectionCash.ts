@@ -81,7 +81,16 @@ const SectionCash: SectionCashType[] = [
     "createdAt": "2025-04-26T06:46:34.899Z",
     "updatedAt": "2025-04-26T06:46:34.899Z",
     "__v": 0
-  }
+  },
+  {
+    "_id": "680c414abb3a7c0dd8780ebc",
+    "name": "ai-hub - main section",
+    "secid": 8,
+    "activate": true,
+    "createdAt": "2025-04-26T06:46:34.899Z",
+    "updatedAt": "2025-04-26T06:46:34.899Z",
+    "__v": 0
+  },
 ];
 
 export default SectionCash;

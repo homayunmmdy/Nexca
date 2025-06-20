@@ -30,6 +30,9 @@ export const SWIPER_SEC = "swiper_sec";
 export const MAIN_SPORT_QUERY_KEY = "main_sport";
 export const TELETYPE_QUERY_KEY = "teletype"
 
+// ai hub - templates query key
+export const AIHUB_MAIN_QUERY_KEY = "aihub_main"
+
 // Mode keys
 export const DEV_MODE = "dev";
 
