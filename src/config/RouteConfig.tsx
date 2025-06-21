@@ -35,6 +35,13 @@ const RouteConfig = {
             base: "/admin/textadv",
             new: "/admin/textadv/new",
         },
+        adv: {
+            base: "/admin/adv",
+            img: {
+                base : "/admin/adv/img",
+                new: "/admin/adv/img/new"
+            }
+        }
     },
 };
 

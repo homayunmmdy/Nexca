@@ -7,6 +7,7 @@ export const SECTIONS_CONFIG = 'sectionsConfig'
 // query keys
 export const ALL_POSTS_QUERY_KEY = "all_posts";
 export const ALL_TEXTADV_QUERY_KEY = "all_textadv";
+export const ALL_IMG_ADV_QUERY_KEY = "all_imgadv";
 export const ALL_RELEASE_QUERY_KEY = "all_release";
 export const SERVICES_QUERY_KEY = "services";
 export const SECTIONS_QUERY_KEY = "sections";

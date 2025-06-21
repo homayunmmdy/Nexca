@@ -3,6 +3,7 @@ import {
   FaAdversal,
   FaComment,
   FaHome,
+  FaImage,
   FaPager,
   FaPhoneAlt,
   FaRegEdit,
@@ -12,14 +13,15 @@ import {
 import { FaQuestion } from "react-icons/fa6";
 import { IoIosColorPalette, IoMdSettings } from "react-icons/io";
 import { MdLiveTv, MdOutlineMail } from "react-icons/md";
+import { SiRelay } from "react-icons/si";
 import RouteConfig from "./RouteConfig";
-import {SiRelay} from "react-icons/si";
 
 export const adminPages = [
   { name: "Admin", href: RouteConfig.admin.base, icon: FaHome,activate : true },
   { name: "Posts", href: RouteConfig.admin.posts.base, icon: CgFeed ,activate : true },
   { name: "New Post", href: RouteConfig.admin.posts.new, icon: FaRegEdit ,activate : true },
   { name: "Text Adv", href: RouteConfig.admin.textadv.base, icon: FaAdversal ,activate : true },
+  { name: "Img Adv", href: RouteConfig.admin.adv.img.base, icon: FaImage ,activate : false },
   { name: "Sections", href: RouteConfig.admin.sections.base, icon: FaSitemap ,activate : true },
   { name: "Services", href: RouteConfig.admin.services.base, icon: FaPager ,activate : true },
   { name: "Emails", href: RouteConfig.admin.emails, icon: MdOutlineMail ,activate : true },

@@ -7,7 +7,7 @@ import {
   FaRegEdit,
   FaSitemap,
   FaComment,
-  FaTags,
+  FaTags, FaImage,
 } from "react-icons/fa";
 import { MdOutlineMail, MdLiveTv } from "react-icons/md";
 import { adminPages, EditPostPages } from "../../config/adminPage";
@@ -15,7 +15,7 @@ import { FaQuestion } from "react-icons/fa6";
 import {SiRelay} from "react-icons/si";
 
 describe("adminPages", () => {
-  const AmountAdminPages = 10;
+  const AmountAdminPages = 11;
 
   describe("Structure and Content", () => {
     it("should have correct number of admin pages", () => {
@@ -39,6 +39,7 @@ describe("adminPages", () => {
         FaHome,
         CgFeed,
         FaRegEdit,
+        FaImage,
         FaAdversal,
         FaSitemap,
         FaPager,
