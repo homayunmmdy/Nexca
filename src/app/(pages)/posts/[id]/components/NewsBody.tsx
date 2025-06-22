@@ -35,7 +35,9 @@ const NewsBody = ({ post }: { post: any }) => {
         alt={post.title}
         width={662.172}
         height={372.469}
-        loading="lazy"
+        loading="eager"
+        fetchPriority='high'
+        priority
       />
       <div className="flex items-center justify-between gap-3 px-3">
         {/* <p className="text-center">{readingTimeEstimate.text}</p> */}

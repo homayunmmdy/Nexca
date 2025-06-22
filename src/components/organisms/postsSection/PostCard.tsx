@@ -15,6 +15,7 @@ const PostCard = ({ post }: { post: any }) => {
               alt=""
               width={662.172}
               height={372.469}
+              loading='lazy'
               className="aspect-video rounded-xl bg-gray-600 object-cover"
             />
           </figure>
