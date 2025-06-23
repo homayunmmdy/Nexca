@@ -37,96 +37,7 @@ const scaleOnHover = {
     transition: { type: "spring", stiffness: 300, damping: 25 }
 };
 
-// Header Component
-const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    return (
-        <motion.header
-            className="bg-gray-900 text-white sticky top-0 z-50"
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-            {/* Top bar */}
-            <div className="bg-gray-800 text-sm py-2">
-                <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-                    <span>Free shipping on orders over $35</span>
-                    <div className="flex gap-4">
-                        <span>Customer Service</span>
-                        <span>Track Orders</span>
-                    </div>
-                </div>
-            </div>
-
-            {/* Main header */}
-            <div className="max-w-7xl mx-auto px-4 py-3">
-                <div className="flex items-center justify-between">
-                    {/* Logo */}
-                    <motion.div
-                        className="text-2xl font-bold text-orange-400"
-                        whileHover={{ scale: 1.05 }}
-                    >
-                        ShopZone
-                    </motion.div>
-
-                    {/* Search bar */}
-                    <div className="flex-1 max-w-2xl mx-8">
-                        <div className="relative">
-                            <input
-                                type="text"
-                                placeholder="Search products..."
-                                className="w-full py-2.5 px-4 pr-12 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
-                            />
-                            <motion.button
-                                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-orange-400 p-2 rounded-md"
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                            >
-                                <FiSearch className="text-white" />
-                            </motion.button>
-                        </div>
-                    </div>
-
-                    {/* Navigation icons */}
-                    <div className="flex items-center gap-6">
-                        <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
-                            <FiHeart size={24} />
-                        </motion.div>
-                        <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
-                            <FiUser size={24} />
-                        </motion.div>
-                        <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer relative">
-                            <FiShoppingCart size={24} />
-                            <span className="absolute -top-2 -right-2 bg-orange-400 text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                3
-              </span>
-                        </motion.div>
-                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
-                            <FiMenu size={24} />
-                        </button>
-                    </div>
-                </div>
-
-                {/* Categories */}
-                <nav className="mt-4 hidden md:block">
-                    <ul className="flex gap-8 text-sm">
-                        {['Electronics', 'Fashion', 'Home & Garden', 'Sports', 'Books', 'Health', 'Automotive'].map((category, index) => (
-                            <motion.li
-                                key={category}
-                                whileHover={{ y: -2 }}
-                                transition={{ type: "spring", stiffness: 300 }}
-                                className="cursor-pointer hover:text-orange-400 transition-colors"
-                            >
-                                {category}
-                            </motion.li>
-                        ))}
-                    </ul>
-                </nav>
-            </div>
-        </motion.header>
-    );
-};
 
 // Hero Section
 const HeroSection = () => {
@@ -384,54 +295,7 @@ const FeaturesSection = () => {
     );
 };
 
-// Footer Component
-const Footer = () => {
-    return (
-        <footer className="bg-gray-900 text-white py-12">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div>
-                        <h3 className="text-xl font-bold text-orange-400 mb-4">ShopZone</h3>
-                        <p className="text-gray-400">Your trusted online shopping destination with millions of products and great deals.</p>
-                    </div>
 
-                    <div>
-                        <h4 className="font-semibold mb-4">Customer Service</h4>
-                        <ul className="space-y-2 text-gray-400">
-                            <li>Contact Us</li>
-                            <li>FAQ</li>
-                            <li>Shipping Info</li>
-                            <li>Returns</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="font-semibold mb-4">Quick Links</h4>
-                        <ul className="space-y-2 text-gray-400">
-                            <li>About Us</li>
-                            <li>Careers</li>
-                            <li>Press</li>
-                            <li>Affiliate Program</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 className="font-semibold mb-4">Follow Us</h4>
-                        <div className="flex gap-4">
-                            <div className="w-8 h-8 bg-blue-600 rounded"></div>
-                            <div className="w-8 h-8 bg-pink-600 rounded"></div>
-                            <div className="w-8 h-8 bg-blue-400 rounded"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                    <p>&copy; 2024 ShopZone. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    );
-};
 
 // Main App Component
 const AmazonTemplate = () => {
@@ -555,7 +419,6 @@ const AmazonTemplate = () => {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            <Header />
             <HeroSection />
             <ProductSection
                 title="Latest Arrivals"
@@ -573,7 +436,6 @@ const AmazonTemplate = () => {
                 products={electronicsProducts}
                 viewAllLink="/electronics"
             />
-            <Footer />
         </div>
     );
 };

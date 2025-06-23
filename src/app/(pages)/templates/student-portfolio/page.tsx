@@ -120,29 +120,7 @@ const Portfolio = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-            {/* Navigation */}
-            <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-                <div className="max-w-6xl mx-auto px-6 py-4">
-                    <div className="flex justify-between items-center">
-                        <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                            Cass
-                        </div>
-                        <div className="hidden md:flex space-x-8">
-                            {['About', 'Projects', 'Skills', 'Contact'].map((item) => (
-                                <a
-                                    key={item}
-                                    href={`#${item.toLowerCase()}`}
-                                    className={`text-gray-600 hover:text-blue-600 transition-colors font-medium ${
-                                        activeSection === item.toLowerCase() ? 'text-blue-600' : ''
-                                    }`}
-                                >
-                                    {item}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </nav>
+         
 
             {/* Hero Section */}
             <section id="hero" className="pt-20 pb-12 px-6">
@@ -371,31 +349,7 @@ const Portfolio = () => {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12 px-6">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center">
-                        <div className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            Cass
-                        </div>
-                        <p className="text-gray-400 mb-6">Building the future, one line of code at a time.</p>
-                        <div className="flex justify-center space-x-6 mb-6">
-                            {[FaGithub, FaLinkedin, FaTwitter, FaEnvelope].map((Icon, index) => (
-                                <a
-                                    key={index}
-                                    href="#"
-                                    className="text-gray-400 hover:text-white text-xl transition-colors transform hover:scale-125"
-                                >
-                                    <Icon />
-                                </a>
-                            ))}
-                        </div>
-                        <p className="text-gray-500 text-sm">
-                            © 2024 Cass. Designed and built with passion.
-                        </p>
-                    </div>
-                </div>
-            </footer>
+       
         </div>
     );
 };

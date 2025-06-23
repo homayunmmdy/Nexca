@@ -150,97 +150,6 @@ const AINewsHub = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-            {/* Navigation */}
-            <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-16">
-                        <div className="flex items-center space-x-4">
-                            <motion.div
-                                className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-                                whileHover={{scale: 1.05}}
-                            >
-                                AI News Hub
-                            </motion.div>
-                        </div>
-
-                        {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center space-x-8">
-                            <div className="flex items-center space-x-6">
-                                <a href="#" className="text-slate-700 hover:text-blue-600 transition-colors">Latest</a>
-                                <a href="#"
-                                   className="text-slate-700 hover:text-blue-600 transition-colors">Trending</a>
-                                <a href="#"
-                                   className="text-slate-700 hover:text-blue-600 transition-colors">Research</a>
-                                <a href="#"
-                                   className="text-slate-700 hover:text-blue-600 transition-colors">Enterprise</a>
-                            </div>
-
-                            <div className="flex items-center space-x-4">
-                                <div className="relative">
-                                    <FiSearch
-                                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"/>
-                                    <input
-                                        type="text"
-                                        placeholder="Search AI news..."
-                                        className="pl-10 pr-4 py-2 bg-slate-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
-                                        value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                    />
-                                </div>
-                                <motion.button
-                                    className="p-2 text-slate-600 hover:text-blue-600 transition-colors"
-                                    whileHover={{scale: 1.1}}
-                                    whileTap={{scale: 0.95}}
-                                >
-                                    <FiBell size={20}/>
-                                </motion.button>
-                            </div>
-                        </div>
-
-                        {/* Mobile menu button */}
-                        <button
-                            className="md:hidden p-2"
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        >
-                            {isMenuOpen ? <FiX size={24}/> : <FiMenu size={24}/>}
-                        </button>
-                    </div>
-                </div>
-
-                {/* Mobile Navigation */}
-                <AnimatePresence>
-                    {isMenuOpen && (
-                        <motion.div
-                            initial={{opacity: 0, height: 0}}
-                            animate={{opacity: 1, height: 'auto'}}
-                            exit={{opacity: 0, height: 0}}
-                            className="md:hidden bg-white border-t border-slate-200"
-                        >
-                            <div className="px-4 py-4 space-y-4">
-                                <div className="relative">
-                                    <FiSearch
-                                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"/>
-                                    <input
-                                        type="text"
-                                        placeholder="Search AI news..."
-                                        className="w-full pl-10 pr-4 py-2 bg-slate-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <a href="#"
-                                       className="block text-slate-700 hover:text-blue-600 transition-colors">Latest</a>
-                                    <a href="#"
-                                       className="block text-slate-700 hover:text-blue-600 transition-colors">Trending</a>
-                                    <a href="#"
-                                       className="block text-slate-700 hover:text-blue-600 transition-colors">Research</a>
-                                    <a href="#"
-                                       className="block text-slate-700 hover:text-blue-600 transition-colors">Enterprise</a>
-                                </div>
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </nav>
 
             {/* Hero Section */}
             <motion.section
@@ -291,7 +200,7 @@ const AINewsHub = () => {
                 </div>
             </section>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {/* Latest News */}
                     <div className="lg:col-span-2">
@@ -466,52 +375,6 @@ const AINewsHub = () => {
                 </div>
             </div>
 
-            {/* Footer */}
-            <footer className="bg-slate-900 text-white mt-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div className="md:col-span-2">
-                            <div className="text-2xl font-bold mb-4">AI News Hub</div>
-                            <p className="text-slate-400 mb-4 max-w-md">
-                                Your trusted source for artificial intelligence news, research breakthroughs, and
-                                industry insights. Stay informed about the future of technology.
-                            </p>
-                            <div className="flex space-x-4">
-                                <button className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
-                                    <FiGlobe size={20}/>
-                                </button>
-                                <button className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
-                                    <FiUser size={20}/>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 className="font-semibold mb-4">Categories</h4>
-                            <ul className="space-y-2 text-slate-400">
-                                <li><a href="#" className="hover:text-white transition-colors">Breaking News</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Research</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Enterprise</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Healthcare</a></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 className="font-semibold mb-4">Company</h4>
-                            <ul className="space-y-2 text-slate-400">
-                                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-                        <p>&copy; 2025 AI News Hub. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
         </div>
     );
 };

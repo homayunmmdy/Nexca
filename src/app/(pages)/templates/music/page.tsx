@@ -251,35 +251,7 @@ const containerVariants = {
     };
     return (
         <motion.div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-            {/* Navigation */}
-            <motion.nav
-                initial={{ y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }} className="backdrop-blur-md bg-white/10 border-b border-white/20 sticky top-0 z-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center py-4">
-                        <div className="flex items-center space-x-2">
-                            <FaMusic className="h-8 w-8 text-pink-400" />
-                            <span className="text-2xl font-bold text-white">SoundWave</span>
-                        </div>
-                        <div className="hidden md:flex space-x-8">
-                            <a href="#" className="text-white/80 hover:text-white transition-colors">Home</a>
-                            <a href="#music" className="text-white/80 hover:text-white transition-colors">Music</a>
-                            <a href="#artists" className="text-white/80 hover:text-white transition-colors">Artists</a>
-                            <a href="#genres" className="text-white/80 hover:text-white transition-colors">Genres</a>
-                            <a href="#podcasts" className="text-white/80 hover:text-white transition-colors">Podcasts</a>
-                            <a href="#events" className="text-white/80 hover:text-white transition-colors">Events</a>
-                        </div>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
-                        >
-                            Sign Up
-                        </motion.button>
-                    </div>
-                </div>
-            </motion.nav>
+           
 
             {/* Hero Section */}
             <section className="relative py-20 overflow-hidden">
@@ -931,56 +903,7 @@ const containerVariants = {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="bg-black/40 backdrop-blur-md border-t border-white/10 py-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-4 gap-8">
-                        <div>
-                            <div className="flex items-center space-x-2 mb-4">
-                                <FaMusic className="h-8 w-8 text-pink-400" />
-                                <span className="text-2xl font-bold text-white">SoundWave</span>
-                            </div>
-                            <p className="text-white/60">
-                                Your ultimate destination for discovering and streaming music.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 className="text-white font-semibold mb-4">Music</h4>
-                            <div className="space-y-2 text-white/60">
-                                <a href="#" className="block hover:text-white transition-colors">Top Charts</a>
-                                <a href="#" className="block hover:text-white transition-colors">New Releases</a>
-                                <a href="#" className="block hover:text-white transition-colors">Genres</a>
-                                <a href="#" className="block hover:text-white transition-colors">Playlists</a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 className="text-white font-semibold mb-4">Artists</h4>
-                            <div className="space-y-2 text-white/60">
-                                <a href="#" className="block hover:text-white transition-colors">Featured Artists</a>
-                                <a href="#" className="block hover:text-white transition-colors">Emerging Talent</a>
-                                <a href="#" className="block hover:text-white transition-colors">Artist Spotlights</a>
-                                <a href="#" className="block hover:text-white transition-colors">Collaborations</a>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 className="text-white font-semibold mb-4">Support</h4>
-                            <div className="space-y-2 text-white/60">
-                                <a href="#" className="block hover:text-white transition-colors">Help Center</a>
-                                <a href="#" className="block hover:text-white transition-colors">Contact Us</a>
-                                <a href="#" className="block hover:text-white transition-colors">Privacy Policy</a>
-                                <a href="#" className="block hover:text-white transition-colors">Terms of Service</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/50">
-                        <p>&copy; 2025 SoundWave. All rights reserved. Made with ❤️ for music lovers.</p>
-                    </div>
-                </div>
-            </footer>
+ 
         </motion.div>
     );
 }

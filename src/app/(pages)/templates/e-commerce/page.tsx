@@ -226,100 +226,7 @@ export default function EcommerceTemplate() {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Navigation */}
-            <motion.nav
-                initial={{ y: -100 }}
-                animate={{ y: 0 }}
-                className="bg-white shadow-sm sticky top-0 z-50"
-            >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-16">
-                        <div className="flex items-center">
-                            <motion.div
-                                whileHover={{ scale: 1.05 }}
-                                className="flex-shrink-0 flex items-center"
-                            >
-                                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                                    <span className="text-white font-bold text-lg">S</span>
-                                </div>
-                                <span className="ml-2 text-xl font-bold text-gray-900">StyleHub</span>
-                            </motion.div>
-                        </div>
-
-                        {/* Desktop Menu */}
-                        <div className="hidden md:block">
-                            <div className="ml-10 flex items-baseline space-x-4">
-                                {['Home', 'Shop', 'Categories', 'About', 'Contact'].map((item) => (
-                                    <motion.a
-                                        key={item}
-                                        whileHover={{ scale: 1.05 }}
-                                        href="#"
-                                        className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                                    >
-                                        {item}
-                                    </motion.a>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="flex items-center space-x-4">
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
-                            >
-                                <FiSearch className="w-5 h-5" />
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
-                            >
-                                <FiUser className="w-5 h-5" />
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="p-2 text-gray-600 hover:text-blue-600 transition-colors relative"
-                            >
-                                <FiShoppingCart className="w-5 h-5" />
-                                <span className="absolute -top-1 -right-1 bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-                  3
-                </span>
-                            </motion.button>
-
-                            <button
-                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="md:hidden p-2 text-gray-600"
-                            >
-                                {isMobileMenuOpen ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Mobile Menu */}
-                <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{
-                        opacity: isMobileMenuOpen ? 1 : 0,
-                        height: isMobileMenuOpen ? 'auto' : 0
-                    }}
-                    className="md:hidden bg-white border-t overflow-hidden"
-                >
-                    <div className="px-2 pt-2 pb-3 space-y-1">
-                        {['Home', 'Shop', 'Categories', 'About', 'Contact'].map((item) => (
-                            <a
-                                key={item}
-                                href="#"
-                                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                            >
-                                {item}
-                            </a>
-                        ))}
-                    </div>
-                </motion.div>
-            </motion.nav>
+           
 
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 overflow-hidden">
@@ -533,56 +440,7 @@ export default function EcommerceTemplate() {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div>
-                            <div className="flex items-center mb-4">
-                                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                                    <span className="text-white font-bold text-lg">S</span>
-                                </div>
-                                <span className="ml-2 text-xl font-bold">StyleHub</span>
-                            </div>
-                            <p className="text-gray-400 mb-4">
-                                Your premier destination for quality products and exceptional service.
-                            </p>
-                        </div>
-
-                        {[
-                            {
-                                title: "Shop",
-                                links: ["All Products", "Categories", "New Arrivals", "Sale Items"]
-                            },
-                            {
-                                title: "Support",
-                                links: ["Help Center", "Contact Us", "Shipping Info", "Returns"]
-                            },
-                            {
-                                title: "Company",
-                                links: ["About Us", "Careers", "Press", "Privacy Policy"]
-                            }
-                        ].map((section) => (
-                            <div key={section.title}>
-                                <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
-                                <ul className="space-y-2">
-                                    {section.links.map((link) => (
-                                        <li key={link}>
-                                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                                {link}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                        <p>&copy; 2024 StyleHub. All rights reserved.</p>
-                    </div>
-                </div>
-            </footer>
+      
         </div>
     );
 }

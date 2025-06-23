@@ -8,11 +8,7 @@ import Image from "next/image";
 
 
 const TheChronicle = () => {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [email, setEmail] = useState('');
-    const { scrollY } = useScroll();
-    const headerOpacity = useTransform(scrollY, [0, 100], [1, 0.95]);
-    const headerScale = useTransform(scrollY, [0, 100], [1, 0.98]);
 
     // Real news content
     const featuredNews = {
@@ -154,90 +150,6 @@ const TheChronicle = () => {
 
     return (
         <div className="min-h-screen bg-slate-50">
-            {/* Header */}
-            <motion.header
-                className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-sm border-b border-slate-200/50"
-                style={{ opacity: headerOpacity, scale: headerScale }}
-            >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-16">
-                        {/* Logo */}
-                        <motion.div
-                            className="flex-shrink-0"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <div className="flex items-center space-x-2">
-                                <div className="w-8 h-8 bg-gradient-to-r from-slate-900 to-slate-700 rounded-sm flex items-center justify-center">
-                                    <span className="text-white font-bold text-sm">C</span>
-                                </div>
-                                <h1 className="text-2xl font-serif font-bold text-slate-900">
-                                    The Chronicle
-                                </h1>
-                            </div>
-                        </motion.div>
-
-                        {/* Desktop Navigation */}
-                        <nav className="hidden md:flex space-x-8">
-                            {['World', 'Business', 'Technology', 'Politics', 'Opinion', 'Culture'].map((item, index) => (
-                                <motion.a
-                                    key={item}
-                                    href="#"
-                                    className="text-slate-700 hover:text-slate-900 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group"
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    whileHover={{ scale: 1.05 }}
-                                >
-                                    {item}
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-slate-900 group-hover:w-full transition-all duration-300"></span>
-                                </motion.a>
-                            ))}
-                        </nav>
-
-                        {/* Search and Mobile Menu */}
-                        <div className="flex items-center space-x-4">
-                            <motion.button
-                                className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-all duration-200"
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <IoIosSearch  className="h-5 w-5" />
-                            </motion.button>
-
-                            <button
-                                className="md:hidden p-2 text-slate-600 hover:text-slate-900"
-                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            >
-                                {mobileMenuOpen ? <IoIosClose   className="h-6 w-6" /> : <IoMdMenu  className="h-6 w-6" />}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Mobile Menu */}
-                {mobileMenuOpen && (
-                    <motion.div
-                        className="md:hidden bg-white/95 backdrop-blur-lg border-t border-slate-200"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                    >
-                        <div className="px-2 pt-2 pb-3 space-y-1">
-                            {['World', 'Business', 'Technology', 'Politics', 'Opinion', 'Culture'].map((item) => (
-                                <a
-                                    key={item}
-                                    href="#"
-                                    className="block px-3 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-md font-medium"
-                                >
-                                    {item}
-                                </a>
-                            ))}
-                        </div>
-                    </motion.div>
-                )}
-            </motion.header>
 
             {/* Breaking News Ticker */}
             <motion.div
@@ -528,85 +440,6 @@ const TheChronicle = () => {
                 </div>
             </motion.section>
 
-            {/* Footer */}
-            <footer className="bg-slate-900 text-white py-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-4 gap-8 mb-8">
-                        <div>
-                            <div className="flex items-center space-x-2 mb-4">
-                                <div className="w-8 h-8 bg-white flex items-center justify-center">
-                                    <span className="text-slate-900 font-bold text-sm">C</span>
-                                </div>
-                                <h3 className="text-2xl font-serif font-bold">The Chronicle</h3>
-                            </div>
-                            <p className="text-slate-400 mb-4 text-sm">
-                                Independent journalism since 1985. Committed to truth, transparency, and serving the public interest through comprehensive global coverage.
-                            </p>
-                            <div className="flex space-x-4">
-                                {[FaFacebookF , FaXTwitter , FaInstagram , FaLinkedinIn ].map((Icon, index) => (
-                                    <motion.a
-                                        key={index}
-                                        href="#"
-                                        className="p-2 bg-slate-800 hover:bg-slate-700 transition-colors duration-200"
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.95 }}
-                                    >
-                                        <Icon className="h-5 w-5" />
-                                    </motion.a>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 className="text-lg font-semibold mb-4">Sections</h4>
-                            <ul className="space-y-2 text-slate-400 text-sm">
-                                {['World News', 'Politics', 'Business', 'Technology', 'Science', 'Culture'].map((link) => (
-                                    <li key={link}>
-                                        <a href="#" className="hover:text-white transition-colors duration-200">
-                                            {link}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 className="text-lg font-semibold mb-4">Company</h4>
-                            <ul className="space-y-2 text-slate-400 text-sm">
-                                {['About Us', 'Editorial Standards', 'Careers', 'Press Releases', 'Contact Us', 'Advertise'].map((link) => (
-                                    <li key={link}>
-                                        <a href="#" className="hover:text-white transition-colors duration-200">
-                                            {link}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4 className="text-lg font-semibold mb-4">Legal</h4>
-                            <ul className="space-y-2 text-slate-400 text-sm">
-                                {['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Subscription Terms', 'Corrections Policy'].map((link) => (
-                                    <li key={link}>
-                                        <a href="#" className="hover:text-white transition-colors duration-200">
-                                            {link}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm">
-                        <p className="text-slate-400">
-                            © 2025 The Chronicle Media Group. All rights reserved.
-                        </p>
-                        <p className="text-slate-400 mt-2 sm:mt-0">
-                            Winner of 12 Pulitzer Prizes for Excellence in Journalism
-                        </p>
-                    </div>
-                </div>
-            </footer>
         </div>
     );
 };
