@@ -30,7 +30,7 @@ function MainSec() {
                 return (
                     <motion.div
                         variants={itemVariants}
-                        className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+                        className="bg-base-200 group rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                     >
                         <Link href={postLink} className="md:flex">
                             <div className="md:w-1/2">
@@ -46,18 +46,18 @@ function MainSec() {
                                 />
                             </div>
                             <div className="md:w-1/2 p-8">
-                                <Link href={postLink} title={item.title} className="text-2xl line-clamp-2 lg:line-clamp-3 md:text-3xl font-bold text-slate-900 mb-4 leading-tight">
+                                <Link href={postLink} title={item.title} className="group-hover:text-blue-600 text-2xl line-clamp-2 lg:line-clamp-3 md:text-3xl font-bold  mb-4 leading-tight">
                                     {item.title}
                                 </Link>
 
-                                <p className="text-slate-600 line-clamp-3 lg:line-clamp-5 text-lg mb-6 leading-relaxed">
+                                <p className=" line-clamp-3 lg:line-clamp-5 text-lg mb-6 leading-relaxed">
                                     {item.description}
                                 </p>
 
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center space-x-3 justify-center">
-                                            <p className="font-medium text-slate-900">{item.author}</p>
-                                            <p className="text-sm text-slate-500"><FormatTime
+                                            <p className="font-medium ">{item.author}</p>
+                                            <p className="text-sm "><FormatTime
                                                 timestamp={item.createdAt}/></p>
                                     </div>
                                 </div>

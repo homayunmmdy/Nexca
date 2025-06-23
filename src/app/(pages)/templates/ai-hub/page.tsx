@@ -24,9 +24,7 @@ import Image from "next/image";
 import MainSec from "@/app/(pages)/templates/ai-hub/components/MainSec";
 
 const AINewsHub = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeCategory, setActiveCategory] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
 
     // Sample news data
     const featuredNews = {
@@ -149,7 +147,7 @@ const AINewsHub = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <div >
 
             {/* Hero Section */}
             <motion.section
@@ -159,13 +157,13 @@ const AINewsHub = () => {
                 variants={containerVariants}
             >
                 <motion.div variants={itemVariants} className="text-center mb-12">
-                    <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4">
+                    <h1 className="text-4xl md:text-6xl font-bold  mb-4">
                         Stay Ahead with{' '}
                         <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               AI News
             </span>
                     </h1>
-                    <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                    <p className="text-xl  max-w-3xl mx-auto">
                         Your premier destination for artificial intelligence breakthroughs, industry insights, and
                         cutting-edge research updates.
                     </p>
@@ -187,7 +185,7 @@ const AINewsHub = () => {
                                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all ${
                                     activeCategory === category.id
                                         ? 'bg-blue-600 text-white shadow-lg'
-                                        : 'bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-600 shadow-md'
+                                        : 'bg-base-200  hover:bg-blue-50 hover:text-blue-600 shadow-md'
                                 }`}
                                 whileHover={{scale: 1.05}}
                                 whileTap={{scale: 0.95}}
@@ -210,7 +208,7 @@ const AINewsHub = () => {
                             variants={containerVariants}
                         >
                             <motion.div variants={itemVariants} className="flex items-center justify-between mb-8">
-                                <h2 className="text-3xl font-bold text-slate-900 flex items-center">
+                                <h2 className="text-3xl font-bold  flex items-center">
                                     <FiTrendingUp className="mr-3 text-blue-600"/>
                                     Latest News
                                 </h2>
@@ -221,11 +219,11 @@ const AINewsHub = () => {
                             </motion.div>
 
                             <div className="space-y-6">
-                                {latestNews.map((article, index) => (
+                                {latestNews.map((article) => (
                                     <motion.article
                                         key={article.id}
                                         variants={itemVariants}
-                                        className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+                                        className="bg-base-200 group rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
                                     >
                                         <div className="md:flex">
                                             <div className="md:w-1/3">
@@ -240,10 +238,10 @@ const AINewsHub = () => {
                                             </div>
                                             <div className="md:w-2/3 p-6">
                                                 <div className="flex items-center space-x-4 mb-3">
-                          <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                          <span className="bg-base-300 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
                             {article.category}
                           </span>
-                                                    <div className="flex items-center text-slate-500 text-sm space-x-4">
+                                                    <div className="flex items-center text-sm space-x-4">
                             <span className="flex items-center">
                               <FiClock className="mr-1" size={12}/>
                                 {article.readTime}
@@ -255,11 +253,11 @@ const AINewsHub = () => {
                                                     </div>
                                                 </div>
 
-                                                <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2 hover:text-blue-600 transition-colors cursor-pointer">
+                                                <h3 className="text-xl font-bold  mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors cursor-pointer">
                                                     {article.title}
                                                 </h3>
 
-                                                <p className="text-slate-600 mb-4 line-clamp-2">
+                                                <p className=" mb-4 line-clamp-2">
                                                     {article.excerpt}
                                                 </p>
 
@@ -270,8 +268,8 @@ const AINewsHub = () => {
                                                             {article.author.charAt(0)}
                                                         </div>
                                                         <div>
-                                                            <p className="font-medium text-slate-900 text-sm">{article.author}</p>
-                                                            <p className="text-xs text-slate-500">{article.publishedAt}</p>
+                                                            <p className="font-medium  text-sm">{article.author}</p>
+                                                            <p className="text-xs text-base-100">{article.publishedAt}</p>
                                                         </div>
                                                     </div>
 
@@ -307,10 +305,10 @@ const AINewsHub = () => {
                             initial="hidden"
                             animate="visible"
                             variants={containerVariants}
-                            className="bg-white rounded-xl shadow-md p-6"
+                            className="bg-base-200 rounded-xl shadow-md p-6"
                         >
                             <motion.h3 variants={itemVariants}
-                                       className="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                                       className="text-xl font-bold  mb-6 flex items-center">
                                 <FiTrendingUp className="mr-2 text-orange-500"/>
                                 Most Popular
                             </motion.h3>
@@ -320,12 +318,12 @@ const AINewsHub = () => {
                                     <motion.div
                                         key={article.id}
                                         variants={itemVariants}
-                                        className="pb-4 border-b border-slate-100 last:border-b-0 last:pb-0 hover:bg-slate-50 p-3 rounded-lg transition-colors cursor-pointer"
+                                        className="pb-4 border-b border-base-300 last:border-b-0 last:pb-0 hover:bg-base-300 p-3 rounded-lg transition-colors cursor-pointer"
                                     >
-                                        <h4 className="font-semibold text-slate-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+                                        <h4 className="font-semibold  mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
                                             {article.title}
                                         </h4>
-                                        <div className="flex items-center justify-between text-sm text-slate-500">
+                                        <div className="flex items-center justify-between text-sm ">
                                             <div className="flex items-center space-x-3">
                         <span className="flex items-center">
                           <FiEye className="mr-1" size={12}/>
@@ -360,7 +358,7 @@ const AINewsHub = () => {
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="w-full px-4 py-2 rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
+                                    className="w-full px-4 bg-white py-2 rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
                                 />
                                 <motion.button
                                     className="w-full bg-white text-blue-600 font-semibold py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
