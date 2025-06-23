@@ -104,7 +104,6 @@ const EditAdvImgForm = ({ data }: { data: ImgAdvCashType }) => {
               value={formData.imgAlt}
               color="input-primary"
               onChange={handler.trakeChange}
-              required
             />
             <Button type="submit" color="btn-primary" className="w-full block md:hidden" >
               {EDITMODE ? "Save" : "create"}
