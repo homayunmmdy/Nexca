@@ -17,10 +17,10 @@ function TemplatePage() {
 const templates = [
     {
         id: 1,
-        title : '90min',
-        description : 'Sport Page Template',
+        title : 'default',
+        description : 'Common Template for list of the templates',
         imgurl : '/static/Image/logo.jpg',
-        link : '/templates/90min'
+        link : '/demo'
     },
     {
         id: 2,

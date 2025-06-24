@@ -1,5 +1,6 @@
 "use client";
 import { Button, Input, Textarea } from "@/components/atoms";
+import SpeechToText from "@/components/organisms/SpeechToText";
 import {
   POST_API_URL,
   SECTIONS_API_URL,
@@ -16,7 +17,7 @@ import { CategoryList, SelectField, SelectFiledSkeleton } from "../elements";
 import { FormLayout, ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
 import CategoriesForm from "./CategoriesForm";
-import SpeechToText from "@/components/organisms/SpeechToText";
+import { templatesData } from "@/config/tempaltes";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -27,6 +28,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
     title: EDITMODE ? post.title : "",
     description: EDITMODE ? post.description : "",
     body: EDITMODE ? post.body : "",
+    templates: EDITMODE ? post.templates : "1",
     section: EDITMODE ? post.section : "1",
     services: EDITMODE ? post.services : "1",
     imgurl: EDITMODE ? post.imgurl : "",
@@ -61,30 +63,44 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
         className="mb-3 flex w-full flex-col gap-3 md:flex-row"
       >
         <div className="w-full md:w-1/2">
-          {serviceLoading ? (
-            <SelectFiledSkeleton label="Services" />
-          ) : (
-            <SelectField
-              id="services"
-              name="services"
-              label="Services"
-              value={formData.services}
-              onChange={handler.trakeChange}
-              options={services}
-            />
-          )}
-          {sectionLoading ? (
-            <SelectFiledSkeleton label="Section" />
-          ) : (
-            <SelectField
-              id="section"
-              name="section"
-              label="Section"
-              value={formData.section}
-              onChange={handler.trakeChange}
-              options={sections}
-            />
-          )}
+          <SelectField
+            id="templates"
+            name="templates"
+            label="templates"
+            value={formData.templates}
+            onChange={handler.trakeChange}
+            options={templatesData}
+          />
+          <div className="flex gap-3 flex-wrap sm:flex-nowrap">
+            <div className="w-full">
+              {serviceLoading ? (
+                <SelectFiledSkeleton label="Services" />
+              ) : (
+                <SelectField
+                  id="services"
+                  name="services"
+                  label="Services"
+                  value={formData.services}
+                  onChange={handler.trakeChange}
+                  options={services}
+                />
+              )}
+            </div>
+            <div className="w-full">
+              {sectionLoading ? (
+                <SelectFiledSkeleton label="Section" />
+              ) : (
+                <SelectField
+                  id="section"
+                  name="section"
+                  label="Section"
+                  value={formData.section}
+                  onChange={handler.trakeChange}
+                  options={sections}
+                />
+              )}
+            </div>
+          </div>
 
           <Input
             type="text"
@@ -158,7 +174,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               onChange={handler.trakeBodyChanges}
             />
           </div>
-                    {!master && (
+          {!master && (
             <Input
               type="text"
               id="author"

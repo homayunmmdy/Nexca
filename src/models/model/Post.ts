@@ -35,6 +35,10 @@ const postSchema = new Schema(
       type: String,
       trim: true,
     },
+    templates: {
+      type: String,
+      trim: true,
+    },
     section: {
       type: String,
       trim: true,
