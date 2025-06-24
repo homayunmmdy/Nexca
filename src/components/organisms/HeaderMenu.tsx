@@ -1,5 +1,6 @@
 import { HeaderMenuConfigType } from "@/types/entities";
 import Link from "next/link";
+import HeaderServices from "./HeaderServices";
 
 const HeaderMenu = ({
   pathname,
@@ -12,7 +13,10 @@ const HeaderMenu = ({
     <ul className="menu menu-horizontal p-0">
       {nav?.map((item: HeaderMenuConfigType) => {
         return (
-          <li key={`desktop_menu_item_${item.id}`} className="mx-1 group static px-1 py-2">
+          <li
+            key={`desktop_menu_item_${item.id}`}
+            className="mx-1 group static px-1 py-2"
+          >
             {pathname == item.link ? (
               <Link
                 href={item.link}
@@ -44,6 +48,7 @@ const HeaderMenu = ({
           </li>
         );
       })}
+      <HeaderServices />
     </ul>
   );
 };
