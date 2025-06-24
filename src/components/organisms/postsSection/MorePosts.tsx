@@ -1,5 +1,5 @@
 "use client";
-import Titr from "@/components/Titr";
+import Titr from "@/components/atoms/Titr";
 import { MORE_POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
@@ -35,11 +35,11 @@ const MorePosts: React.FC = () => {
 };
 
 const WrappedMorePosts = () => (
-    <ErrorBoundaryProvider>
-        <MorePosts />
-    </ErrorBoundaryProvider>
+  <ErrorBoundaryProvider>
+    <MorePosts />
+  </ErrorBoundaryProvider>
 );
 
 WrappedMorePosts.displayName = "WrappedMorePosts";
 
-export default WrappedMorePosts
+export default WrappedMorePosts;
