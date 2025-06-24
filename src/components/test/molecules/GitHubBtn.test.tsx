@@ -25,6 +25,12 @@ describe('Github button', () => {
         expect(Btn).toHaveAttribute('type', 'button');
         expect(screen.getByTestId('btnIcon')).toBeInTheDocument();
         expect(BtnText).toHaveTextContent('GitHub')
-
     });
+
+    it('should return the right link when user set link' ,() => {
+        render(<GitHubBtn link="https://google.com"/>);
+        const BtnLink = screen.getByTestId('btnLink');
+
+        expect(BtnLink).toHaveAttribute('href', 'https://google.com');
+    })
 })

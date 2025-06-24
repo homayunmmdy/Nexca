@@ -1,5 +1,5 @@
 "use client";
-import SiteConfig from "@/config/site";
+import SiteConfig from "../../config/site";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
