@@ -58,7 +58,7 @@ const Header = () => {
           </div>
           <div className="navbar-end gap-3 lg:w-[20%]">
             <ThemeBtn />
-            <GitHubBtn link={SiteConfig.github} />
+            <GitHubBtn/>
           </div>
         </Container>
       </motion.header>

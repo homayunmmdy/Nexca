@@ -1,7 +1,8 @@
 import { Button } from "@/components/atoms";
+import SiteConfig from "@/config/site";
 import Link from "next/link";
 
-const GitHubBtn = ({ link }: { link: string }) => {
+const GitHubBtn = ({ link = SiteConfig.github }: { link?: string }) => {
   return (
     <Link
       href={link}
