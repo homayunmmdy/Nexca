@@ -6,7 +6,8 @@ import { ServicesCashType } from "@/types/CashTypes";
 import Link from "next/link";
 
 function HeaderServices() {
-  const { data } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
+  const { data, loading } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
+
   return (
     <li
       key={`desktop_menu_item_services`}
@@ -16,13 +17,27 @@ function HeaderServices() {
         Services
       </p>
       <ul className="absolute top-12 right-0 hidden group-hover:flex bg-base-300 rounded-xl p-2.5 w-full gap-2.5 flex-wrap">
-        {data?.map((nav: ServicesCashType) => (
-          <li key={nav._id}>
-            <Link href={`/services/${nav._id}`} title={nav.name}>
-              {nav.name}
-            </Link>
-          </li>
-        ))}
+        {loading ? (
+          <>
+            <div className="skeleton h-8 w-20"></div>
+            <div className="skeleton h-8 w-20"></div>
+            <div className="skeleton h-8 w-20"></div>
+            <div className="skeleton h-8 w-20"></div>
+          </>
+        ) : (
+          data?.map((nav: ServicesCashType) => (
+            <li key={nav._id}>
+              <Link href={`/services/${nav._id}`} title={nav.name}>
+                {nav.name}
+              </Link>
+            </li>
+          ))
+        )}
+        <li key="news service">
+          <Link href="/admin/services/new" title="Create New Service">
+            Create New Service
+          </Link>
+        </li>
       </ul>
     </li>
   );
