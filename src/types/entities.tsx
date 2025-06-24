@@ -1,5 +1,5 @@
+import { JSX } from "react";
 import { IconType } from "react-icons/lib";
-import {JSX} from "react";
 
 export type FullHoverAnimationType = {
   text: string;
@@ -37,11 +37,18 @@ export type SinglePagepParamsType = {
   id: string;
 };
 
+type HeaderChildrenType = {
+  id: number;
+  name: string;
+  href: string;
+};
+
 export type HeaderMenuConfigType = {
-  id:number;
-  name : string;
-  link : string
-}
+  id: number;
+  name: string;
+  link: string;
+  children?: HeaderChildrenType[];
+};
 
 export type FooterLinkType = {
   id: number;
@@ -84,8 +91,8 @@ export type ShareFormType = {
 };
 
 export type adminPagesType = {
-  name: string,
-  href : string,
+  name: string;
+  href: string;
   icon: IconType;
   activate: boolean;
-}
+};

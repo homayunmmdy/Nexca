@@ -53,7 +53,7 @@ const Header = () => {
               <GlobalSearchInput className="hidden lg:block" />
             </div>
           </div>
-          <div className="navbar-center hidden lg:flex lg:w-[50%] lg:justify-end">
+          <div className="navbar-center relative hidden lg:flex lg:w-[50%] lg:justify-start">
             <HeaderMenu pathname={pathname} nav={navBar} />
           </div>
           <div className="navbar-end gap-3 lg:w-[20%]">

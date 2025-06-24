@@ -1,12 +1,18 @@
-import {HeaderMenuConfigType} from "@/types/entities";
+import { HeaderMenuConfigType } from "@/types/entities";
 import Link from "next/link";
 
-const HeaderMenu = ({ pathname, nav }: { pathname: string , nav : HeaderMenuConfigType[] }) => {
+const HeaderMenu = ({
+  pathname,
+  nav,
+}: {
+  pathname: string;
+  nav: HeaderMenuConfigType[];
+}) => {
   return (
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal p-0">
       {nav?.map((item: HeaderMenuConfigType) => {
         return (
-          <li key={`dektop_menu_item_${item.id}`} className="mx-1">
+          <li key={`desktop_menu_item_${item.id}`} className="mx-1 group static px-1 py-2">
             {pathname == item.link ? (
               <Link
                 href={item.link}
@@ -23,6 +29,17 @@ const HeaderMenu = ({ pathname, nav }: { pathname: string , nav : HeaderMenuConf
               >
                 {item.name}
               </Link>
+            )}
+            {item.children && (
+              <ul className="absolute top-12 right-0 hidden group-hover:flex bg-base-300 rounded-xl p-2.5 w-full gap-2.5 flex-wrap">
+                {item.children.map((nav) => (
+                  <li key={nav.id}>
+                    <Link href={nav.href} title={nav.name}>
+                      {nav.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             )}
           </li>
         );

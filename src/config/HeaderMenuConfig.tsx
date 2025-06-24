@@ -1,28 +1,74 @@
 import RouteConfig from "@/config/RouteConfig";
-import {HeaderMenuConfigType} from "@/types/entities";
+import { HeaderMenuConfigType } from "@/types/entities";
 
-
-const HeaderMenuConfig = () : HeaderMenuConfigType[]=> [
-    {
+const HeaderMenuConfig = (): HeaderMenuConfigType[] => [
+  {
+    id: 1,
+    name: "Home",
+    link: "/",
+  },
+  {
+    id: 2,
+    name: " Admin",
+    link: RouteConfig.admin.base,
+  },
+  {
+    id: 3,
+    name: "Templates",
+    link: "/templates",
+    children: [
+      {
         id: 1,
-        name: "Home",
-        link: "/",
-    },
-    {
+        name: "default",
+        href: "/templates/default",
+      },
+      {
         id: 2,
-        name: " Admin",
-        link: RouteConfig.admin.base,
-    },
-    {
+        name: "AI Hub",
+        href: "/templates/ai-hub",
+      },
+      {
         id: 3,
-        name: "Templates",
-        link: "/templates",
-    },
-    {
+        name: "Bank News",
+        href: "/templates/bank-news",
+      },
+      {
+        id: 4,
+        name: "Chronicle",
+        href: "/templates/chronicle",
+      },
+      {
         id: 5,
-        name: "Feed",
-        link: "/feed",
-    }
-]
+        name: "E-Commerce",
+        href: "/templates/e-commerce",
+      },
+      {
+        id: 6,
+        name: "Music",
+        href: "/templates/music",
+      },
+      {
+        id: 7,
+        name: "Shop Zone",
+        href: "/templates/shop-zone",
+      },
+      {
+        id: 8,
+        name: "Star Scope",
+        href: "/templates/star-scope",
+      },
+      {
+        id: 9,
+        name: "Student Portfolio",
+        href: "/templates/student-portfolio",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "Feed",
+    link: "/feed",
+  },
+];
 
 export default HeaderMenuConfig;
