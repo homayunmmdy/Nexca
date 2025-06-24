@@ -14,7 +14,7 @@ export default function sitemap() {
       url: SiteConfig.siteURL, // Homepage URL
     },
     {
-      url: `${SiteConfig.siteURL}/demo`, // URL for the demo page
+      url: `${SiteConfig.siteURL}/templates`, // URL for the templates page
     },
     {
       url: `${SiteConfig.siteURL}/services/1`, // URL for a specific service page

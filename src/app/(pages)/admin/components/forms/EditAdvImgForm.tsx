@@ -48,7 +48,7 @@ const EditAdvImgForm = ({ data }: { data: ImgAdvCashType }) => {
                 className="select select-primary w-full mb-2"
                 required
               >
-                <option value="1">Demo - next to posts</option>
+                <option value="1">Default Template - next to posts</option>
                 <option value="2">Service - next to main img</option>
               </select>
             </div>

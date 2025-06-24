@@ -15,13 +15,8 @@ const HeaderMenuConfig = () : HeaderMenuConfigType[]=> [
     },
     {
         id: 3,
-        name: " Demo",
-        link: "/demo",
-    },
-    {
-        id: 4,
-        name: "Services",
-        link: "/services/3",
+        name: "Templates",
+        link: "/templates",
     },
     {
         id: 5,

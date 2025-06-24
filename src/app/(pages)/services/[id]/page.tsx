@@ -8,7 +8,7 @@ import {PostsCashType} from "@/types/CashTypes";
 import {GetParameterId} from "@/util/Util";
 import React from "react";
 import NotFound from "../../[...not_found]/not-found";
-import ServicesNav from "../../demo/components/ServicesNav";
+import ServicesNav from "./components/ServicesNav";
 import ServicesImg from "./components/ServicesImg";
 import PostsSkeleton from "@/components/organisms/postsSection/skeleton/PostsSkeleton";
 import {Container} from "@/components/atoms";

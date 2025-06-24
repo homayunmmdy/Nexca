@@ -3,7 +3,7 @@ import React from "react";
 const SingleCardSkeleton: React.FC = () => {
   return (
     <>
-      <SectionsTitr>Ads Demo Page</SectionsTitr>
+      <SectionsTitr>Ads Default Template</SectionsTitr>
       <div className="card lg:card-side bg-base-100 shadow-xl my-5">
         <div className="skeleton h-80 w-2/4"></div>
         <div className="card-body">

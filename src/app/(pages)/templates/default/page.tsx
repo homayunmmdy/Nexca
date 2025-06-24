@@ -9,30 +9,29 @@ import {
     VerticalPostsSec,
 } from "@/components/organisms";
 import MostTab from "@/components/organisms/sections/MostTab";
-import SiteConfig from "@/config/site";
+import SiteConfig from "@/config/site"; 
 import {Metadata} from "next";
 import React from "react";
-import ServicesNav from "./components/ServicesNav";
 import {Container} from "@/components/atoms";
 import {SectionController} from "@/util/controller/sectionsController";
 
 export const metadata: Metadata = {
-    title: `demo page | ${SiteConfig.title}`,
+    title: `Default Templates page | ${SiteConfig.title}`,
     description:
         "Here you find the latest posts about varities topics like football coding news and life and more",
     keywords: "posts,football,news,life,coding,interview_question,QA",
     alternates: {
-        canonical: `${SiteConfig.siteURL}/demo`,
+        canonical: `${SiteConfig.siteURL}/templates/default`,
     },
     openGraph: {
-        title: `demo page | ${SiteConfig.title}`,
+        title: `Default Templates page | ${SiteConfig.title}`,
         description:
             "Here you find the latest posts about varities topics like football coding news and life and more",
     },
     twitter: {
         card: "summary_large_image",
         description:
-            "Here you find the latest posts about varities topics like football coding news and life and more",
+            "Here you find the latest posts about varities default topics like football coding news and life and more",
     },
 };
 
@@ -41,11 +40,10 @@ const DemoPage: React.FC = () => {
         <>
             <h1 className="hidden">{`demo page | ${SiteConfig.title}`}</h1>
 
-            <Container>
+            <Container className="mt-30">
                 <SectionController sectionId={7}>
                 <TeletypeSec />
                 </SectionController>
-                <ServicesNav/>
                 <SectionController sectionId={1}>
                     <MainPosts/>
                 </SectionController>

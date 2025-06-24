@@ -37,7 +37,7 @@ const LinearAds = ({ id }: { id: number }) => {
 
   return (
       <>
-        <SectionsTitr>Ads Demo Page</SectionsTitr>
+        <SectionsTitr>Ads Default Template</SectionsTitr>
         <ul className="mb-3 flex flex-col gap-4">
           {ads.map((adv: TextAdvCashType) => (
             <li

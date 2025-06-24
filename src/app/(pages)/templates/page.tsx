@@ -20,7 +20,7 @@ const templates = [
         title : 'default',
         description : 'Common Template for list of the templates',
         imgurl : '/static/Image/logo.jpg',
-        link : '/demo'
+        link : '/templates/default'
     },
     {
         id: 2,

@@ -43,9 +43,6 @@ const NewsBody = ({ post }: { post: any }) => {
         {/* <p className="text-center">{readingTimeEstimate.text}</p> */}
         <ReadPost text={text} />
         <NexcaMark master={post.masterEditor} />
-        <Link href="/demo" className="btn btn-outline btn-primary rounded-full">
-          Back Home
-        </Link>
       </div>
       <div
         className="prose mb-3 max-w-none text-lg leading-9"
