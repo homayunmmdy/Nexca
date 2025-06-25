@@ -9,8 +9,8 @@ interface Props {
 
 function ChatMessage({children, color, chatDirection = 'chat-start'}: Props) {
     return (
-        <div className={`chat ${chatDirection}`}>
-            <div className={`chat-bubble ${color}`}>{children}</div>
+        <div className={`chat ${chatDirection}`} data-testid="chat">
+            <div className={`chat-bubble ${color}`} data-testid="chat-bubble">{children}</div>
         </div>
     );
 }
