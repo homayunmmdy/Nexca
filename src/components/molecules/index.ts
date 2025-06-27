@@ -14,4 +14,6 @@ export { default as PWAInstallPopup } from "./PWAInstallPopup";
 export { default as SearchBar } from "./SearchBar";
 export { default as ThemeBtn } from "./ThemeBtn";
 export { default as MainHead } from "./MainHead";
+export { default as ThemeFiled } from "./ThemeFiled";
+
 

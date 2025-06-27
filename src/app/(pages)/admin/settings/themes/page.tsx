@@ -1,5 +1,6 @@
 "use client";
-import { Button, ThemeFiled } from "@/components/atoms";
+import { Button } from "@/components/atoms";
+import { ThemeFiled } from "@/components/molecules";
 import { DARKTHEME } from "@/config/Constants";
 import { ThemesConfig } from "@/config/themes";
 import { useEffect, useState } from "react";
