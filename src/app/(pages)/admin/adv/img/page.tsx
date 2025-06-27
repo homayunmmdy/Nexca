@@ -9,6 +9,7 @@ import { Spinner, Button, ErrorText } from "@/components/atoms";
 import { DeleteBtn } from "@/components/molecules";
 import RouteConfig from "@/config/RouteConfig";
 import { ImgAdvCashType } from "@/types/CashTypes";
+import Image from "next/image";
 
 const AdminImgAdvPage: React.FC = () => {
     const { data: sections, loading } = useFetch(
@@ -53,7 +54,7 @@ const AdminImgAdvPage: React.FC = () => {
                                 <tr key={item._id}>
                                     <td>{item.advId}</td>
                                     <td>{item.advName}</td>
-                                    <td><img src={item.imgURL} alt={item.imgAlt || item.advName} width={56} height={56} className="rounded w-14 h-14"/></td>
+                                    <td><Image src={item.imgURL} alt={item.imgAlt || item.advName} width={56} height={56} className="rounded w-14 h-14"/></td>
                                     <td className="hidden lg:block">{item.body}</td>
                                     <td>
                                         <Link href={`${RouteConfig.admin.adv.img.base}/${item._id}`}>

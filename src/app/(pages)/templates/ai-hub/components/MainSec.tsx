@@ -30,6 +30,7 @@ function MainSec() {
                 return (
                     <motion.div
                         variants={itemVariants}
+                        key={item._id}
                         className="bg-base-200 group rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                     >
                         <Link href={postLink} className="md:flex">
