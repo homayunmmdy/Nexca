@@ -1,5 +1,6 @@
 import "@/app/tiptap.css";
-import { Form, Titr } from "@/components";
+import { Form } from "@/components";
+import { SectionsTitle } from "@/components/atoms";
 import NexcaMark from "@/components/molecules/NexcaMark";
 import { MorePostsSec } from "@/components/organisms";
 import { COMMENTS_API_URL } from "@/config/apiConstants";
@@ -8,7 +9,6 @@ import useFetch from "@/hooks/useFetch";
 import { CommentsCashType } from "@/types/CashTypes";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
-import Link from "next/link";
 import Comment from "./Comment";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
@@ -36,7 +36,7 @@ const NewsBody = ({ post }: { post: any }) => {
         width={662.172}
         height={372.469}
         loading="eager"
-        fetchPriority='high'
+        fetchPriority="high"
         priority
       />
       <div className="flex items-center justify-between gap-3 px-3">
@@ -81,12 +81,13 @@ const NewsBody = ({ post }: { post: any }) => {
       </div>
       {comments?.length > 0 && (
         <div className="my-5 rounded-xl bg-indigo-600 p-5 pt-10">
-          <Titr
-            resetStyle={true}
-            style="bg-green-400 text-center p-5 flex justify-center items-center rounded-xl mb-5 font-bold text-xl text-white"
-            title="Your comments"
-            item="text-left"
-          />
+          <SectionsTitle
+            bg="bg-green-400"
+            line={false}
+            className="w-full text-center p-5 font-bold text-xl !text-indigo-800"
+          >
+            Comments
+          </SectionsTitle>
 
           {comments?.map((comment: CommentsCashType) => (
             <Comment comment={comment} key={comment._id} />

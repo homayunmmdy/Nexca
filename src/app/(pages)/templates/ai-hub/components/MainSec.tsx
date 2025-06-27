@@ -10,7 +10,7 @@ import {postLinkGenerator} from "@/util/ServerUtil";
 import Link from "next/link";
 
 function MainSec() {
-    const {data} = useGetSection(AIHUB_MAIN_QUERY_KEY, -1, 8);
+    const {data} = useGetSection(AIHUB_MAIN_QUERY_KEY, -1, 9);
     const itemVariants = {
         hidden: {y: 20, opacity: 0},
         visible: {

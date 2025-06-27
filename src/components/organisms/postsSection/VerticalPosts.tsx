@@ -1,5 +1,5 @@
 "use client";
-import { SectionsTitr } from "@/components/atoms";
+import { SectionsTitle } from "@/components/atoms";
 import { VERTICAL_POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
@@ -18,7 +18,7 @@ const VerticalPosts: React.FC = () => {
   return (
     <>
       <article className="mx-auto py-6">
-        <SectionsTitr>Vertical Posts</SectionsTitr>
+        <SectionsTitle>Vertical Posts</SectionsTitle>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 ">
           {data?.map((post: PostsCashType) => (
             <VerticalPost key={post._id} post={post} />
@@ -30,9 +30,9 @@ const VerticalPosts: React.FC = () => {
 };
 
 const WrappedVerticalPosts = () => (
-    <ErrorBoundaryProvider>
-        <VerticalPosts />
-    </ErrorBoundaryProvider>
+  <ErrorBoundaryProvider>
+    <VerticalPosts />
+  </ErrorBoundaryProvider>
 );
 
 WrappedVerticalPosts.displayName = "WrappedVerticalPosts";

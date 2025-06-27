@@ -1,5 +1,5 @@
 "use client";
-import { Button, SectionsTitr } from "@/components/atoms";
+import { Button, SectionsTitle } from "@/components/atoms";
 import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
@@ -18,7 +18,7 @@ const SingleCard: React.FC = () => {
 
   return (
     <article>
-      <SectionsTitr>Single Posts</SectionsTitr>
+      <SectionsTitle>Single Posts</SectionsTitle>
       {data?.map((post: PostsCashType) => {
         const postLink = postLinkGenerator(post._id, post.title);
         return (
@@ -54,11 +54,11 @@ const SingleCard: React.FC = () => {
 };
 
 const WrappedSingleCard = () => (
-    <ErrorBoundaryProvider>
-        <SingleCard />
-    </ErrorBoundaryProvider>
+  <ErrorBoundaryProvider>
+    <SingleCard />
+  </ErrorBoundaryProvider>
 );
 
 WrappedSingleCard.displayName = "WrappedSingleCard";
 
-export default WrappedSingleCard
+export default WrappedSingleCard;

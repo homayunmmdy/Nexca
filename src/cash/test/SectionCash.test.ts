@@ -8,6 +8,7 @@ describe("Section Cash", () => {
 
     SectionCash.forEach((service: SectionCashType) => {
       expect(service).toHaveProperty("_id");
+      expect(service).toHaveProperty("templates");
       expect(service).toHaveProperty("name");
       expect(service).toHaveProperty("secid");
       expect(service).toHaveProperty("createdAt");

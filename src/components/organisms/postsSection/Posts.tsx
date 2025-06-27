@@ -1,5 +1,5 @@
 "use client";
-import { SectionsTitr } from "@/components/atoms";
+import { SectionsTitle } from "@/components/atoms";
 import { POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
@@ -18,7 +18,7 @@ const Posts: React.FC = () => {
   return (
     <>
       <article className="mx-auto pb-6">
-        <SectionsTitr>Posts</SectionsTitr>
+        <SectionsTitle>Posts</SectionsTitle>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {data?.map((post: PostsCashType) => (
             <PostCard key={post._id} post={post} />
@@ -30,11 +30,11 @@ const Posts: React.FC = () => {
 };
 
 const WrappedPosts = () => (
-    <ErrorBoundaryProvider>
-        <Posts />
-    </ErrorBoundaryProvider>
+  <ErrorBoundaryProvider>
+    <Posts />
+  </ErrorBoundaryProvider>
 );
 
 WrappedPosts.displayName = "WrappedPosts";
 
-export default WrappedPosts
+export default WrappedPosts;

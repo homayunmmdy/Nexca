@@ -1,5 +1,5 @@
 "use client";
-import Titr from "@/components/atoms/Titr";
+import { SectionsTitle } from "@/components/atoms";
 import { MORE_POSTS_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
@@ -9,7 +9,7 @@ import PostCard from "./PostCard";
 import PostsSkeleton from "./skeleton/PostsSkeleton";
 
 const MorePosts: React.FC = () => {
-  const { data, loading } = useGetSection(MORE_POSTS_QUERY_KEY, -3, 5);
+  const { data, loading } = useGetSection(MORE_POSTS_QUERY_KEY, -3, 8);
 
   if (loading) {
     return <PostsSkeleton />;
@@ -18,12 +18,7 @@ const MorePosts: React.FC = () => {
   return (
     <>
       <div className="mx-auto rounded-xl bg-indigo-600 p-5">
-        <Titr
-          resetStyle={true}
-          style="bg-[#FFBB00] text-center p-5 flex justify-center items-center rounded-xl mb-5 font-bold text-xl text-black"
-          title="More Posts"
-          item="text-left"
-        />
+        <SectionsTitle bg="bg-[#FFBB00]" line={false} className="w-full text-center p-5 font-bold text-xl !text-indigo-800" >More Posts</SectionsTitle>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {data?.map((post: PostsCashType) => (
             <PostCard key={post._id} post={post} />
