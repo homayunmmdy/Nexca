@@ -40,6 +40,7 @@ export type ServicesCashType = {
 } & Omit<BaseType, "body">;
 
 export type SectionCashType = {
+  templates : string;
   name: string;
   secid: number;
   activate:Boolean;

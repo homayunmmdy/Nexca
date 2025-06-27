@@ -1,10 +1,12 @@
 "use client";
 import { Button, Input } from "@/components/atoms";
 import { SECTIONS_API_URL } from "@/config/apiConstants";
+import { templatesData } from "@/config/tempaltes";
 import { SectionCashType } from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { SelectField } from "../elements";
 import { FormLayout } from "../shared";
 
 const EditSectionForm = ({ data }: { data: SectionCashType }) => {
@@ -12,6 +14,7 @@ const EditSectionForm = ({ data }: { data: SectionCashType }) => {
   const router = useRouter();
 
   const startingData = {
+    templates: EDITMODE ? data.templates : "1",
     name: EDITMODE ? data.name : "",
     secid: EDITMODE ? data.secid : 1,
   };
@@ -32,6 +35,14 @@ const EditSectionForm = ({ data }: { data: SectionCashType }) => {
           method="post"
           className="mb-3 flex w-full flex-col gap-3 md:w-1/2"
         >
+          <SelectField
+            id="templates"
+            name="templates"
+            label="templates"
+            value={formData.templates}
+            onChange={handler.trakeChange}
+            options={templatesData}
+          />
           <Input
             id="name"
             type="text"
@@ -54,8 +65,8 @@ const EditSectionForm = ({ data }: { data: SectionCashType }) => {
             required
           />
           <Button type="submit" color="btn-primary">
-          {EDITMODE ? "Save" : "create"}
-        </Button>
+            {EDITMODE ? "Save" : "create"}
+          </Button>
         </form>
       </FormLayout>
     </>

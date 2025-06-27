@@ -12,9 +12,13 @@ const sectionSchema = new Schema(
     secid: {
       type: Number,
     },
+    templates: {
+      type: String,
+      trim: true,
+    },
     activate: {
-        type: Boolean,
-    }
+      type: Boolean,
+    },
   },
   defaultSchemaOptions
 );
