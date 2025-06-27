@@ -82,6 +82,14 @@ describe("Button component", () => {
     expect(buttonElement).not.toHaveAttribute("id");
   });
 
+  it("should not show btn color when is set to btn-null", () => {
+    render(<Button {...defaultProps} color="btn-null" />);
+
+    const buttonElement = screen.getByRole("button");
+
+    expect(buttonElement).not.toHaveClass('btn-primary')
+  });
+
   const renderComponents = () => {
     const defaultProps: ButtonType = {
       id: "1",
