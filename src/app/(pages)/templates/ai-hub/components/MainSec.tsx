@@ -1,74 +1,15 @@
-'use client'
-import React from 'react';
+"use client";
+import { AIHUB_MAIN_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
-import {AIHUB_MAIN_QUERY_KEY} from "@/config/Constants";
-import {PostsCashType} from "@/types/CashTypes";
-import Image from "next/image";
-import {motion} from "framer-motion";
-import FormatTime from "@/app/(pages)/posts/components/FormatTime";
-import {postLinkGenerator} from "@/util/ServerUtil";
-import Link from "next/link";
+import { PostsCashType } from "@/types/CashTypes";
+import VerticalPost from "../../(post-sections)/VerticalPost";
 
 function MainSec() {
-    const {data} = useGetSection(AIHUB_MAIN_QUERY_KEY, -1, 9);
-    const itemVariants = {
-        hidden: {y: 20, opacity: 0},
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        }
-    };
-    return (
-        <>
-            {data?.map((item: PostsCashType) => {
-                const postLink = postLinkGenerator(item._id, item.title);
+  const { data } = useGetSection(AIHUB_MAIN_QUERY_KEY, -1, 9);
 
-                return (
-                    <motion.div
-                        variants={itemVariants}
-                        key={item._id}
-                        className="bg-base-200 group rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
-                    >
-                        <Link href={postLink} className="md:flex">
-                            <div className="md:w-1/2">
-                                <Image
-                                    src={item.imgurl}
-                                    alt={item.title}
-                                    width={608}
-                                    height={396}
-                                    loading='eager'
-                                    fetchPriority='high'
-                                    priority
-                                    className="w-full h-64 md:h-full object-cover"
-                                />
-                            </div>
-                            <div className="md:w-1/2 p-8">
-                                <Link href={postLink} title={item.title} className="group-hover:text-blue-600 text-2xl line-clamp-2 lg:line-clamp-3 md:text-3xl font-bold  mb-4 leading-tight">
-                                    {item.title}
-                                </Link>
-
-                                <p className=" line-clamp-3 lg:line-clamp-5 text-lg mb-6 leading-relaxed">
-                                    {item.description}
-                                </p>
-
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center space-x-3 justify-center">
-                                            <p className="font-medium ">{item.author}</p>
-                                            <p className="text-sm "><FormatTime
-                                                timestamp={item.createdAt}/></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </motion.div>
-                )
-            })}
-        </>
-    );
+  return data?.map((item: PostsCashType) => (
+    <VerticalPost data={item} key={item._id} />
+  ));
 }
 
 export default MainSec;
