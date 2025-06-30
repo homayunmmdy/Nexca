@@ -2,7 +2,7 @@
 import { AIHUB_MAIN_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
-import VerticalPost from "../../(components)/VerticalPost";
+import VerticalPost from "../../(components)/VerticalCard";
 
 function MainSec() {
   const { data } = useGetSection(AIHUB_MAIN_QUERY_KEY, -1, 9);

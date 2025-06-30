@@ -16,6 +16,7 @@ import {
   FiZap,
 } from "react-icons/fi";
 import TextHero from "../(components)/TextHero";
+import LatestPosts from "../(components)/LatestPosts";
 
 const AINewsHub = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -293,48 +294,7 @@ const AINewsHub = () => {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Popular Articles */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={containerVariants}
-              className="bg-base-200 rounded-xl shadow-md p-6"
-            >
-              <motion.h3
-                variants={itemVariants}
-                className="text-xl font-bold  mb-6 flex items-center"
-              >
-                <FiTrendingUp className="mr-2 text-orange-500" />
-                Most Popular
-              </motion.h3>
-
-              <div className="space-y-4">
-                {popularNews.map((article, index) => (
-                  <motion.div
-                    key={article.id}
-                    variants={itemVariants}
-                    className="pb-4 border-b border-base-300 last:border-b-0 last:pb-0 hover:bg-base-300 p-3 rounded-lg transition-colors cursor-pointer"
-                  >
-                    <h4 className="font-semibold  mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
-                      {article.title}
-                    </h4>
-                    <div className="flex items-center justify-between text-sm ">
-                      <div className="flex items-center space-x-3">
-                        <span className="flex items-center">
-                          <FiEye className="mr-1" size={12} />
-                          {article.views}
-                        </span>
-                        <span className="flex items-center">
-                          <FiClock className="mr-1" size={12} />
-                          {article.readTime}
-                        </span>
-                      </div>
-                      <span>{article.publishedAt}</span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+            <LatestPosts />
 
             {/* Newsletter Signup */}
             <motion.div

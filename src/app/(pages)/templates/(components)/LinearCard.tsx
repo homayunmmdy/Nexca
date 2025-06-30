@@ -1,0 +1,45 @@
+import { PostsCashType } from "@/types/CashTypes";
+import { motion } from "framer-motion";
+import { FaRegCalendar } from "react-icons/fa";
+import { FiUser } from "react-icons/fi";
+import FormatTime from "../../posts/components/FormatTime";
+
+function LinearCard({ data }: { data: PostsCashType }) {
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+  return (
+    <motion.div
+      variants={itemVariants}
+      className="pb-4 border-b border-base-300 last:border-b-0 last:pb-0 hover:bg-base-300 p-3 rounded-lg transition-colors cursor-pointer"
+    >
+      <h4 className="font-semibold  mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
+        {data.title}
+      </h4>
+      <div className="flex items-center justify-between text-sm ">
+        <div className="flex items-center space-x-3">
+          
+            <span className="flex items-center">
+              <FiUser className="mr-1" size={12} />
+              {data.author ? data.author : 'unknown'}
+            </span>
+          
+        </div>
+        <span className="flex items-center">
+          <FaRegCalendar className="mr-1" size={12} />
+          <FormatTime timestamp={data.createdAt} />
+        </span>
+      </div>
+    </motion.div>
+  );
+}
+
+export default LinearCard;
