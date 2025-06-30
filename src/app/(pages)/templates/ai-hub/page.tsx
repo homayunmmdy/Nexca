@@ -17,6 +17,7 @@ import {
 } from "react-icons/fi";
 import TextHero from "../(components)/TextHero";
 import LatestPosts from "../(components)/LatestPosts";
+import MainSec from "./components/MainSec";
 
 const AINewsHub = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -160,7 +161,7 @@ const AINewsHub = () => {
         description="Your premier destination for artificial intelligence breakthroughs,
           industry insights, and cutting-edge research updates."
       />
-      
+      <MainSec />
             
 
       {/* Category Filter */}

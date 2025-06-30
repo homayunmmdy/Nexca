@@ -557,11 +557,11 @@ const PostsCash: PostsCashType[] = [
     _id: "664db351313932f6a08921dd",
     title:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
-    imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
+    imgurl:
+      "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "1",
-
     services: "1",
     section: "8",
     author: "Homayoun",
@@ -574,62 +574,11 @@ const PostsCash: PostsCashType[] = [
     _id: "665db351373932g6a08928db",
     title:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
-    imgurl:
-      "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
-    templates: "1",
+    imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
-    services: "1",
-    section: "9",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
-    createdAt: "2024-05-22T08:56:49.785Z",
-    updatedAt: "2024-05-22T08:56:49.785Z",
-    __v: 0,
-  },
-  {
-    _id: "665db351373932g6a08a28dd",
-    title:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
-    imgurl:
-      "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
-    templates: "1",
-
-    services: "1",
-    section: "9",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
-    createdAt: "2024-05-22T08:56:49.785Z",
-    updatedAt: "2024-05-22T08:56:49.785Z",
-    __v: 0,
-  },
-  {
-    _id: "665db3513739s2g6a08928dd",
-    title:
-      "This post has the 4 commetns Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
-    imgurl:
-      "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
-    templates: "1",
-
-    services: "1",
-    section: "9",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
-    createdAt: "2024-05-22T08:56:49.785Z",
-    updatedAt: "2024-05-22T08:56:49.785Z",
-    __v: 0,
-  },
-  {
-    _id: "665db351373922g6a08928dd",
-    title:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
-    imgurl:
-      "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
-    templates: "1",
+    templates: "2",
     services: "1",
     section: "9",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",

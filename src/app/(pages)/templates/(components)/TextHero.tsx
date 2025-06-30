@@ -33,7 +33,7 @@ function TextHero({ title, name, description }: Props) {
       animate="visible"
       variants={containerVariants}
     >
-      <motion.div variants={itemVariants} className="text-center mb-12">
+      <motion.div variants={itemVariants} className="text-center ">
         <h1 className="text-4xl md:text-6xl font-bold  mb-4">
           {title}
           {name && (

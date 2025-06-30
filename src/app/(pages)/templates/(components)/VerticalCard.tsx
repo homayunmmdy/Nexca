@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FormatTime from "../../posts/components/FormatTime";
 
-function VerticalPost({ data }: { data: PostsCashType }) {
+function VerticalCard({ data }: { data: PostsCashType }) {
   const dataVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -64,4 +64,4 @@ function VerticalPost({ data }: { data: PostsCashType }) {
   );
 }
 
-export default VerticalPost;
+export default VerticalCard;
