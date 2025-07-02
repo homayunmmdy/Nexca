@@ -84,7 +84,7 @@ useEffect(() => {
                       </Button>
                     </td>
                     <td>
-                      <Link href={`/${RouteConfig.admin.base}/${path}/${item._id}`}>
+                      <Link href={`${process.env.NEXT_PUBLIC_API_URL}${RouteConfig.admin.base}/${path}/${item._id}`}>
                         <Button color="btn-warning" className="mb-2 me-2">
                           <CiEdit size={25} />
                         </Button>

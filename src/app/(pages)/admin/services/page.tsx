@@ -64,7 +64,7 @@ const Services: React.FC = () => {
                   <td>{item.name}</td>
                   <td>{postCounts?.[item.secid] || 0}</td>
                   <td>
-                    <Link href={`${RouteConfig.admin.services.base}/${item._id}`}>
+                    <Link href={`${process.env.NEXT_PUBLIC_API_URL}${RouteConfig.admin.services.base}/${item._id}`}>
                       <Button color="btn-warning" className="mb-2 me-2">
                         <CiEdit size={25} />
                       </Button>
