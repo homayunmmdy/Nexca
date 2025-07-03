@@ -15,28 +15,13 @@ import {
   FiTrendingUp,
   FiZap,
 } from "react-icons/fi";
-import TextHero from "../(components)/TextHero";
 import LatestPosts from "../(components)/LatestPosts";
-import MainSec from "./components/MainSec";
+import TextHero from "../(components)/TextHero";
 import EmailList from "./components/EmailList";
+import MainSec from "./components/MainSec";
 
 const AINewsHub = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-
-  // Sample news data
-  const featuredNews = {
-    title:
-      "OpenAI Announces GPT-5: Revolutionary Breakthrough in Artificial Intelligence",
-    excerpt:
-      "The latest iteration promises unprecedented reasoning capabilities and multimodal understanding that could reshape industries worldwide.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-    category: "Breaking",
-    readTime: "5 min read",
-    author: "Sarah Chen",
-    publishedAt: "2 hours ago",
-    views: "12.3K",
-  };
 
   const latestNews = [
     {
@@ -132,6 +117,12 @@ const AINewsHub = () => {
     { id: "healthcare", name: "Healthcare", icon: FiSmartphone },
   ];
 
+  // Filter news based on active category
+  const filteredNews = latestNews.filter(article => {
+    if (activeCategory === "all") return true;
+    return article.category.toLowerCase() === activeCategory.toLowerCase();
+  });
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -163,7 +154,6 @@ const AINewsHub = () => {
           industry insights, and cutting-edge research updates."
       />
       <MainSec />
-            
 
       {/* Category Filter */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -192,7 +182,7 @@ const AINewsHub = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Latest News */}
+          {/* Latest Posts */}
           <div className="lg:col-span-2">
             <motion.div
               initial="hidden"
@@ -205,16 +195,13 @@ const AINewsHub = () => {
               >
                 <h2 className="text-3xl font-bold  flex items-center">
                   <FiTrendingUp className="mr-3 text-blue-600" />
-                  Latest News
+                  Latest Posts
                 </h2>
-                <button className="text-blue-600 hover:text-blue-700 flex items-center font-medium">
-                  View All
-                  <FiChevronRight className="ml-1" size={16} />
-                </button>
               </motion.div>
 
+              {filteredNews.length > 0 ? (
               <div className="space-y-6">
-                {latestNews.map((article) => (
+                  {filteredNews.map((article) => (
                   <motion.article
                     key={article.id}
                     variants={itemVariants}
@@ -291,6 +278,15 @@ const AINewsHub = () => {
                   </motion.article>
                 ))}
               </div>
+              ) : (
+                <motion.div
+                  variants={itemVariants}
+                  className="bg-base-200 rounded-xl p-8 text-center"
+                >
+                  <h3 className="text-xl font-medium mb-2">No articles found</h3>
+                  <p className="text-base-100">There are no articles in this category yet.</p>
+                </motion.div>
+              )}
             </motion.div>
           </div>
 
