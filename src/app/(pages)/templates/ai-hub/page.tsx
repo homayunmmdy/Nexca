@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import {
   FiBookmark,
-  FiChevronRight,
   FiClock,
   FiCpu,
   FiDatabase,
@@ -16,6 +15,7 @@ import {
   FiZap,
 } from "react-icons/fi";
 import LatestPosts from "../(components)/LatestPosts";
+import TabContent from "../(components)/TabContent";
 import TextHero from "../(components)/TextHero";
 import EmailList from "./components/EmailList";
 import MainSec from "./components/MainSec";
@@ -118,7 +118,7 @@ const AINewsHub = () => {
   ];
 
   // Filter news based on active category
-  const filteredNews = latestNews.filter(article => {
+  const filteredNews = latestNews.filter((article) => {
     if (activeCategory === "all") return true;
     return article.category.toLowerCase() === activeCategory.toLowerCase();
   });
@@ -158,25 +158,13 @@ const AINewsHub = () => {
       {/* Category Filter */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap gap-4 justify-center">
-          {categories.map((category) => {
-            const IconComponent = category.icon;
-            return (
-              <motion.button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all ${
-                  activeCategory === category.id
-                    ? "bg-blue-600 text-white shadow-lg"
-                    : "bg-base-200  hover:bg-blue-50 hover:text-blue-600 shadow-md"
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <IconComponent size={16} />
-                <span>{category.name}</span>
-              </motion.button>
-            );
-          })}
+          {categories.map((category) => (
+            <TabContent
+              category={category}
+              setActiveCategory={setActiveCategory}
+              activeCategory={activeCategory}
+            />
+          ))}
         </div>
       </section>
 
@@ -200,91 +188,97 @@ const AINewsHub = () => {
               </motion.div>
 
               {filteredNews.length > 0 ? (
-              <div className="space-y-6">
+                <div className="space-y-6">
                   {filteredNews.map((article) => (
-                  <motion.article
-                    key={article.id}
-                    variants={itemVariants}
-                    className="bg-base-200 group rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
-                  >
-                    <div className="md:flex">
-                      <div className="md:w-1/3">
-                        <Image
-                          src={article.image}
-                          alt={article.title}
-                          width={266}
-                          height={255}
-                          loading="lazy"
-                          className="w-full h-48 md:h-full object-cover"
-                        />
-                      </div>
-                      <div className="md:w-2/3 p-6">
-                        <div className="flex items-center space-x-4 mb-3">
-                          <span className="bg-base-300 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                            {article.category}
-                          </span>
-                          <div className="flex items-center text-sm space-x-4">
-                            <span className="flex items-center">
-                              <FiClock className="mr-1" size={12} />
-                              {article.readTime}
-                            </span>
-                            <span className="flex items-center">
-                              <FiEye className="mr-1" size={12} />
-                              {article.views}
-                            </span>
-                          </div>
+                    <motion.article
+                      key={article.id}
+                      variants={itemVariants}
+                      className="bg-base-200 group rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+                    >
+                      <div className="md:flex">
+                        <div className="md:w-1/3">
+                          <Image
+                            src={article.image}
+                            alt={article.title}
+                            width={266}
+                            height={255}
+                            loading="lazy"
+                            className="w-full h-48 md:h-full object-cover"
+                          />
                         </div>
-
-                        <h3 className="text-xl font-bold  mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors cursor-pointer">
-                          {article.title}
-                        </h3>
-
-                        <p className=" mb-4 line-clamp-2">{article.excerpt}</p>
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-3">
-                            <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">
-                              {article.author.charAt(0)}
-                            </div>
-                            <div>
-                              <p className="font-medium  text-sm">
-                                {article.author}
-                              </p>
-                              <p className="text-xs text-base-100">
-                                {article.publishedAt}
-                              </p>
+                        <div className="md:w-2/3 p-6">
+                          <div className="flex items-center space-x-4 mb-3">
+                            <span className="bg-base-300 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                              {article.category}
+                            </span>
+                            <div className="flex items-center text-sm space-x-4">
+                              <span className="flex items-center">
+                                <FiClock className="mr-1" size={12} />
+                                {article.readTime}
+                              </span>
+                              <span className="flex items-center">
+                                <FiEye className="mr-1" size={12} />
+                                {article.views}
+                              </span>
                             </div>
                           </div>
 
-                          <div className="flex items-center space-x-2">
-                            <motion.button
-                              className="p-2 text-slate-400 hover:text-red-500 transition-colors"
-                              whileHover={{ scale: 1.1 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <FiBookmark size={16} />
-                            </motion.button>
-                            <motion.button
-                              className="p-2 text-slate-400 hover:text-blue-500 transition-colors"
-                              whileHover={{ scale: 1.1 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <FiShare2 size={16} />
-                            </motion.button>
+                          <h3 className="text-xl font-bold  mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors cursor-pointer">
+                            {article.title}
+                          </h3>
+
+                          <p className=" mb-4 line-clamp-2">
+                            {article.excerpt}
+                          </p>
+
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-3">
+                              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">
+                                {article.author.charAt(0)}
+                              </div>
+                              <div>
+                                <p className="font-medium  text-sm">
+                                  {article.author}
+                                </p>
+                                <p className="text-xs text-base-100">
+                                  {article.publishedAt}
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center space-x-2">
+                              <motion.button
+                                className="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                              >
+                                <FiBookmark size={16} />
+                              </motion.button>
+                              <motion.button
+                                className="p-2 text-slate-400 hover:text-blue-500 transition-colors"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                              >
+                                <FiShare2 size={16} />
+                              </motion.button>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.article>
-                ))}
-              </div>
+                    </motion.article>
+                  ))}
+                </div>
               ) : (
                 <motion.div
                   variants={itemVariants}
                   className="bg-base-200 rounded-xl p-8 text-center"
                 >
-                  <h3 className="text-xl font-medium mb-2">No articles found</h3>
-                  <p className="text-base-100">There are no articles in this category yet.</p>
+                  <h3 className="text-xl font-medium mb-2">
+                    No articles found
+                  </h3>
+                  <p className="text-base-100">
+                    There are no articles in this category yet.
+                  </p>
                 </motion.div>
               )}
             </motion.div>
