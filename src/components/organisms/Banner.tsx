@@ -1,5 +1,5 @@
 import SiteConfig from "@/config/site";
-import BannerTitle from "./BannerTitle";
+import {BannerTitle} from "@/components/molecules";
 
 const Banner = () => {
   return (

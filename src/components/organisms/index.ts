@@ -6,8 +6,7 @@ export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
 
 // sections
-export { default as Banner } from "./sections/Banner";
-export { default as BannerTitle } from "./sections/BannerTitle";
+export { default as Banner } from "./Banner";
 export { default as Companies } from "./sections/Companies";
 export { default as CTASec } from "./sections/CTA";
 export { default as DocsHero } from "./sections/DocsHero";
