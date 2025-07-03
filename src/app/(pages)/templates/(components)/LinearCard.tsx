@@ -1,3 +1,4 @@
+import React from 'react'
 import { PostsCashType } from "@/types/CashTypes";
 import { motion } from "framer-motion";
 import { FaRegCalendar } from "react-icons/fa";
@@ -28,14 +29,16 @@ function LinearCard({ data }: { data: PostsCashType }) {
         <div className="flex items-center space-x-3">
           
             <span className="flex items-center">
-              <FiUser className="mr-1" size={12} />
-              {data.author ? data.author : 'unknown'}
+              <FiUser data-testid="user-icon" className="mr-1" size={12} />
+              <span datatest-id="author-sec">{data.author ? data.author : 'unknown'}</span>
             </span>
           
         </div>
-        <span className="flex items-center">
-          <FaRegCalendar className="mr-1" size={12} />
+        <span className="flex items-center" >
+          <FaRegCalendar data-testid="calender-icon" className="mr-1" size={12} />
+          <span data-testid="formatted-time">
           <FormatTime timestamp={data.createdAt} />
+          </span>
         </span>
       </div>
     </motion.div>
