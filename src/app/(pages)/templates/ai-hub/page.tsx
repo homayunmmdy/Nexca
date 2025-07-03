@@ -5,23 +5,19 @@ import { useState } from "react";
 import {
   FiBookmark,
   FiClock,
-  FiCpu,
-  FiDatabase,
   FiEye,
-  FiGlobe,
   FiShare2,
-  FiSmartphone,
   FiTrendingUp,
-  FiZap,
 } from "react-icons/fi";
 import LatestPosts from "../(components)/LatestPosts";
 import TabContent from "../(components)/TabContent";
 import TextHero from "../(components)/TextHero";
+import { AI_HUB_categories } from "../(static-data)/aiHub";
 import EmailList from "./components/EmailList";
 import MainSec from "./components/MainSec";
 
 const AINewsHub = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("ai");
 
   const latestNews = [
     {
@@ -76,50 +72,24 @@ const AINewsHub = () => {
       publishedAt: "12 hours ago",
       views: "18.9K",
     },
-  ];
-
-  const popularNews = [
-    {
+       {
       id: 5,
-      title: "The Ethics of AI: New Global Governance Framework Proposed",
-      views: "45.3K",
-      readTime: "8 min read",
-      publishedAt: "1 day ago",
+      title: "technology",
+      excerpt:
+        "technology",
+      image:
+        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400&h=250&fit=crop",
+      category: "technology",
+      readTime: "4 min read",
+      author: "Emily Davis",
+      publishedAt: "12 hours ago",
+      views: "18.9K",
     },
-    {
-      id: 6,
-      title: "AI Chips Shortage: Impact on Innovation and Market Dynamics",
-      views: "38.7K",
-      readTime: "5 min read",
-      publishedAt: "2 days ago",
-    },
-    {
-      id: 7,
-      title: "Quantum Computing Meets AI: IBM's Latest Breakthrough",
-      views: "32.1K",
-      readTime: "7 min read",
-      publishedAt: "3 days ago",
-    },
-    {
-      id: 8,
-      title: "AI in Education: Transforming Learning Experiences Globally",
-      views: "29.8K",
-      readTime: "6 min read",
-      publishedAt: "4 days ago",
-    },
-  ];
-
-  const categories = [
-    { id: "all", name: "All News", icon: FiGlobe },
-    { id: "breaking", name: "Breaking", icon: FiZap },
-    { id: "research", name: "Research", icon: FiDatabase },
-    { id: "enterprise", name: "Enterprise", icon: FiCpu },
-    { id: "healthcare", name: "Healthcare", icon: FiSmartphone },
   ];
 
   // Filter news based on active category
   const filteredNews = latestNews.filter((article) => {
-    if (activeCategory === "all") return true;
+    if (activeCategory === "ai") return true;
     return article.category.toLowerCase() === activeCategory.toLowerCase();
   });
 
@@ -158,7 +128,7 @@ const AINewsHub = () => {
       {/* Category Filter */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap gap-4 justify-center">
-          {categories.map((category) => (
+          {AI_HUB_categories.map((category) => (
             <TabContent
               category={category}
               setActiveCategory={setActiveCategory}

@@ -30,7 +30,7 @@ function LinearCard({ data }: { data: PostsCashType }) {
           
             <span className="flex items-center">
               <FiUser data-testid="user-icon" className="mr-1" size={12} />
-              <span datatest-id="author-sec">{data.author ? data.author : 'unknown'}</span>
+              <span data-testid="author-sec">{data.author ? data.author : 'unknown'}</span>
             </span>
           
         </div>

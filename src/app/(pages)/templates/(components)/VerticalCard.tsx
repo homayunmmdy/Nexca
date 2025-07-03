@@ -4,6 +4,8 @@ import { postLinkGenerator } from "@/util/ServerUtil";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { FaRegCalendar } from "react-icons/fa";
+import { FiUser } from "react-icons/fi";
 import FormatTime from "../../posts/components/FormatTime";
 
 function VerticalCard({ data }: { data: PostsCashType }) {
@@ -52,10 +54,22 @@ function VerticalCard({ data }: { data: PostsCashType }) {
 
           <div className="flex datas-center justify-between">
             <div className="flex datas-center space-x-3 justify-center">
-              <p className="font-medium ">{data.author}</p>
-              <p className="text-sm ">
-                <FormatTime timestamp={data.createdAt} />
-              </p>
+              <div className="flex items-center">
+                <FiUser data-testid="user-icon" className="mr-1" size={12} />
+                <p className="font-medium " data-testid="author-sec">
+                  {data.author ? data.author : "unknown"}
+                </p>
+              </div>
+              <div className=" flex items-center">
+                <FaRegCalendar
+                  data-testid="calender-icon"
+                  className="mr-1"
+                  size={12}
+                />
+                <p className="text-sm">
+                  <FormatTime timestamp={data.createdAt} />
+                </p>
+              </div>
             </div>
           </div>
         </div>

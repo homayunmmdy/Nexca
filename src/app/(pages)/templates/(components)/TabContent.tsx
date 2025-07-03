@@ -17,7 +17,7 @@ function TabContent({ category, setActiveCategory, activeCategory }: Props) {
   return (
     <motion.button
       onClick={() => setActiveCategory(category.id)}
-      className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all ${
+      className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all cursor-pointer ${
         activeCategory === category.id
           ? "bg-blue-600 text-white shadow-lg"
           : "bg-base-200  hover:bg-blue-50 hover:text-blue-600 shadow-md"
