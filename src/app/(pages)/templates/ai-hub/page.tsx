@@ -18,6 +18,7 @@ import {
 import TextHero from "../(components)/TextHero";
 import LatestPosts from "../(components)/LatestPosts";
 import MainSec from "./components/MainSec";
+import EmailList from "./components/EmailList";
 
 const AINewsHub = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -297,37 +298,8 @@ const AINewsHub = () => {
           <div className="space-y-8">
             <LatestPosts />
 
-            {/* Newsletter Signup */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={containerVariants}
-              className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl shadow-md p-6 text-white"
-            >
-              <motion.h3
-                variants={itemVariants}
-                className="text-xl font-bold mb-3"
-              >
-                Stay Updated
-              </motion.h3>
-              <motion.p variants={itemVariants} className="text-blue-100 mb-4">
-                Get the latest AI news delivered to your inbox weekly.
-              </motion.p>
-              <motion.div variants={itemVariants} className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 bg-white py-2 rounded-lg text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-                <motion.button
-                  className="w-full bg-white text-blue-600 font-semibold py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Subscribe Now
-                </motion.button>
-              </motion.div>
-            </motion.div>
+            {/* Email List */}
+            <EmailList />
           </div>
         </div>
       </div>
