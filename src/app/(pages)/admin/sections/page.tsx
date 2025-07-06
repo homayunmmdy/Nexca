@@ -61,6 +61,7 @@ useEffect(() => {
               <tr>
                 <th>id</th>
                 <th>Name of Section</th>
+                <th>Template ID</th>
                 <th>activate</th>
                 <th>edit</th>
                 {MasterEditor ? <th>delete</th> : null}
@@ -75,6 +76,7 @@ useEffect(() => {
                   <tr key={item._id}>
                     <td>{item.secid}</td>
                     <td>{item.name}</td>
+                    <td>{item.templates}</td>
                     <td>
                       <Button
                         onClick={() => handleToggle(item.secid)}
