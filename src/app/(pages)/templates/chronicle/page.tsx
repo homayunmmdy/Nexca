@@ -362,21 +362,6 @@ const TheChronicle = () => {
                         </motion.div>
 
                         <motion.div variants={itemVariants}>
-                            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">Browse by Topic</h3>
-                            <div className="space-y-2">
-                                {categories.map((category, index) => (
-                                    <motion.a
-                                        key={category}
-                                        href="#"
-                                        className="block p-4 bg-slate-50 hover:bg-slate-100 transition-colors duration-200 font-medium text-slate-900 border-l-4 border-transparent hover:border-slate-900"
-                                        whileHover={{ x: 4 }}
-                                        transition={{ duration: 0.2 }}
-                                    >
-                                        {category}
-                                    </motion.a>
-                                ))}
-                            </div>
-
                             {/* Newsletter Sidebar */}
                             <div className="mt-8 p-6 bg-slate-900 text-white">
                                 <h4 className="text-xl font-serif font-bold mb-3">Daily Brief</h4>
