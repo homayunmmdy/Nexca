@@ -1,4 +1,6 @@
-export const SectionsConfig = [
+import { SectionsConfigType } from "@/types/configTypes";
+
+export const SectionsConfig : SectionsConfigType[] = [
     { id: 1, activate: true },
     { id: 2, activate: true },
     { id: 3, activate: false },
