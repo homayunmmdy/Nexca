@@ -1,18 +1,22 @@
 "use client";
 import RecentPosts from "@/app/(pages)/posts/[id]/components/RecentPosts";
 import "@/app/tiptap.css";
+import { Container } from "@/components/atoms";
+import { MainHead } from "@/components/molecules";
 import useSinglePost from "@/hooks/useSinglePost";
+import { SectionController } from "@/util/controller/sectionsController";
+import { useParams, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
-import { useRouter, useParams } from "next/navigation";
 import NotFound from "../../../[...not_found]/not-found";
 import NewsBody from "../components/NewsBody";
 import PostMeta from "../components/PostMeta";
 import PostSeclton from "../PostSkelton";
-import {Container} from "@/components/atoms";
-import {MainHead} from "@/components/molecules";
 
 const slugify = (title: string) =>
-  title.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
+  title
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]/g, "");
 
 const Post: React.FC = () => {
   const router = useRouter();
@@ -39,16 +43,22 @@ const Post: React.FC = () => {
 
   return (
     <>
-      <PostMeta post={post} slug={slug}/>
+      <PostMeta post={post} slug={slug} />
       <div className="flex flex-col">
-        <MainHead title={post.title} description={post.description} createdAt={post.createdAt} />
+        <MainHead
+          title={post.title}
+          description={post.description}
+          createdAt={post.createdAt}
+        />
         <div className="py-8">
           <Container className=" flex flex-col gap-8  md:flex-row">
             <div className="w-full md:w-3/4">
               <NewsBody post={post} />
             </div>
             <div className="w-full py-3 md:w-1/4">
-              <RecentPosts />
+              <SectionController sectionId={8}>
+                <RecentPosts />
+              </SectionController>
             </div>
           </Container>
         </div>

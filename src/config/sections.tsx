@@ -5,4 +5,7 @@ export const SectionsConfig = [
     { id: 4, activate: true },
     { id: 5, activate: true },
     { id: 6, activate: false },
+    { id: 7, activate: false },
+    { id: 8, activate: true },
+    { id: 9, activate: true },
 ]
