@@ -1,0 +1,22 @@
+.provinceSec {
+    cursor: pointer;
+}
+
+.provinceSec:hover {
+    transition: color 0.3s ease-in-out;
+    fill: #432dd7;
+}
+
+.provinceSec:hover + .provinceName {
+    transition: color 0.3s ease-in-out;
+    fill: #fff;
+}
+
+.provinceName {
+    fill: #000;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-anchor: middle;
+    font: bold 12px Arial;
+    cursor: pointer;
+    opacity: 1;
+}
