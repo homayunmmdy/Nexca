@@ -8,10 +8,14 @@ const AFMap = () => {
     useEffect(() => {
         if(Map.current) {
             const AllProvinces = Map.current.querySelectorAll('.provinceSec');
+
             const handleClick = (e: Event) => {
                 e.stopPropagation();
                 const clickedProvince = e.target as SVGAElement;
 
+                AllProvinces.forEach((province: any) => {
+                    province.classList.remove('activeProvince')
+                });
                 clickedProvince.classList.add('activeProvince');
             };
 
