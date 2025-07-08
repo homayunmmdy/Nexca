@@ -467,465 +467,211 @@ const AfghanistanMapPage = () => {
                     stroke-width="1"/>
             <text x="376.40000000000003" y="151.6" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,75.28,30.32)" className="sm_label sm_label_AFBAL">
+                  transform="matrix(0.8,0,0,0.8,75.28,30.32)" className="sm_label provinceName sm_label_AFBAL">
                 <tspan dy="5.6000028610229435" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Balkh</tspan>
             </text>
             <text x="380.40000000000003" y="264.8" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,76.08,52.96)" className="sm_label sm_label_AFBAM">
+                  transform="matrix(0.8,0,0,0.8,76.08,52.96)" className="sm_label provinceName sm_label_AFBAM">
                 <tspan dy="5.599990653991711" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Bamyan</tspan>
             </text>
             <text x="206" y="230" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,41.2,46)" className="sm_label sm_label_AFBDG">
+                  transform="matrix(0.8,0,0,0.8,41.2,46)" className="sm_label provinceName sm_label_AFBDG">
                 <tspan dy="5.599993705749512" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Badghis</tspan>
             </text>
             <text x="640.4000000000001" y="123.60000000000001" text-anchor="middle" 
                   stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,128.08,24.72)" className="sm_label sm_label_AFBDS">
+                  transform="matrix(0.8,0,0,0.8,128.08,24.72)" className="sm_label provinceName sm_label_AFBDS">
                 <tspan dy="5.5999952316284265" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Badakhshan</tspan>
             </text>
             <text x="465.6" y="197.60000000000002" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,93.12,39.52)" className="sm_label sm_label_AFBGL">
+                  transform="matrix(0.8,0,0,0.8,93.12,39.52)" className="sm_label provinceName sm_label_AFBGL">
                 <tspan dy="5.600002861022972" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Baghlan</tspan>
             </text>
             <text x="330" y="324" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,66,64.8)" className="sm_label sm_label_AFDAY">
+                  transform="matrix(0.8,0,0,0.8,66,64.8)" className="sm_label provinceName sm_label_AFDAY">
                 <tspan dy="5.599993705749512" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Daykundi</tspan>
             </text>
             <text x="145.6" y="401.20000000000005" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,29.12,80.24)" className="sm_label sm_label_AFFRA">
+                  transform="matrix(0.8,0,0,0.8,29.12,80.24)" className="sm_label provinceName sm_label_AFFRA">
                 <tspan dy="5.599981498718307" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Farah</tspan>
             </text>
             <text x="256.8" y="170.8" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,51.36,34.16)" className="sm_label sm_label_AFFYB">
+                  transform="matrix(0.8,0,0,0.8,51.36,34.16)" className="sm_label provinceName sm_label_AFFYB">
                 <tspan dy="5.599990653991711" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Faryab</tspan>
             </text>
             <text x="406.40000000000003" y="359.6" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,81.28,71.92)" className="sm_label sm_label_AFGHA">
+                  transform="matrix(0.8,0,0,0.8,81.28,71.92)" className="sm_label provinceName sm_label_AFGHA">
                 <tspan dy="5.5999876022339095" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Ghazni</tspan>
             </text>
             <text x="260.40000000000003" y="295.2" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,52.08,59.04)" className="sm_label sm_label_AFGHO">
+                  transform="matrix(0.8,0,0,0.8,52.08,59.04)" className="sm_label provinceName sm_label_AFGHO">
                 <tspan dy="5.59998149871825" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Ghor</tspan>
             </text>
             <text x="212.8" y="464" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,42.56,92.8)" className="sm_label sm_label_AFHEL">
+                  transform="matrix(0.8,0,0,0.8,42.56,92.8)" className="sm_label provinceName sm_label_AFHEL">
                 <tspan dy="5.599993705749512" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Hilmand</tspan>
             </text>
             <text x="137.20000000000002" y="294.8" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,27.44,58.96)" className="sm_label sm_label_AFHER">
+                  transform="matrix(0.8,0,0,0.8,27.44,58.96)" className="sm_label provinceName sm_label_AFHER">
                 <tspan dy="5.600005912780773" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Hirat</tspan>
             </text>
             <text x="306.40000000000003" y="138.8" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,61.28,27.76)" className="sm_label sm_label_AFJOW">
+                  transform="matrix(0.8,0,0,0.8,61.28,27.76)" className="sm_label provinceName sm_label_AFJOW">
                 <tspan dy="5.599998283386242" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Jawzjan</tspan>
             </text>
             <text x="486" y="276" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,97.2,55.2)" className="sm_label sm_label_AFKAB">
+                  transform="matrix(0.8,0,0,0.8,97.2,55.2)" className="sm_label provinceName sm_label_AFKAB">
                 <tspan dy="5.599993705749512" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Kabul</tspan>
             </text>
             <text x="322" y="483.6" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,64.4,96.72)" className="sm_label sm_label_AFKAN">
+                  transform="matrix(0.8,0,0,0.8,64.4,96.72)" className="sm_label provinceName sm_label_AFKAN">
                 <tspan dy="5.5999876022339095" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Kandahar</tspan>
             </text>
             <text x="496.40000000000003" y="252" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,99.28,50.4)" className="sm_label sm_label_AFKAP">
+                  transform="matrix(0.8,0,0,0.8,99.28,50.4)" className="sm_label provinceName sm_label_AFKAP">
                 <tspan dy="5.599993705749512" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Kapisa</tspan>
             </text>
             <text x="450" y="133.6" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,90,26.72)" className="sm_label sm_label_AFKDZ">
+                  transform="matrix(0.8,0,0,0.8,90,26.72)" className="sm_label provinceName sm_label_AFKDZ">
                 <tspan dy="5.599995231628412" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Kunduz</tspan>
             </text>
             <text x="507.6" y="345.6" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,101.52,69.12)" className="sm_label sm_label_AFKHO">
+                  transform="matrix(0.8,0,0,0.8,101.52,69.12)" className="sm_label provinceName sm_label_AFKHO">
                 <tspan dy="5.5999876022339095" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Khost</tspan>
             </text>
             <text x="572.4" y="246.4" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
+
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,114.48,49.28)" className="sm_label sm_label_AFKNR">
+                  transform="matrix(0.8,0,0,0.8,114.48,49.28)" className="sm_label provinceName sm_label_AFKNR">
                 <tspan dy="5.599999809265142" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Kunar</tspan>
             </text>
             <text x="527.2" y="257.6" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,105.44,51.52)" className="sm_label sm_label_AFLAG">
+                  transform="matrix(0.8,0,0,0.8,105.44,51.52)" className="sm_label provinceName sm_label_AFLAG">
                 <tspan dy="5.600002861022972" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Laghman</tspan>
             </text>
             <text x="482" y="308.8" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,96.4,61.76)" className="sm_label sm_label_AFLOG">
+                  transform="matrix(0.8,0,0,0.8,96.4,61.76)" className="sm_label provinceName sm_label_AFLOG">
                 <tspan dy="5.600005912780773" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Logar</tspan>
             </text>
             <text x="532" y="285.6" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,106.4,57.12)" className="sm_label sm_label_AFNAN">
+                  transform="matrix(0.8,0,0,0.8,106.4,57.12)" className="sm_label provinceName sm_label_AFNAN">
                 <tspan dy="5.5999876022339095" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Nangarhar</tspan>
             </text>
             <text x="123.2" y="497.20000000000005" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,24.64,99.44)" className="sm_label sm_label_AFNIM">
+                  transform="matrix(0.8,0,0,0.8,24.64,99.44)" className="sm_label provinceName sm_label_AFNIM">
                 <tspan dy="5.599981498718307" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Nimroz</tspan>
             </text>
             <text x="554.8000000000001" y="217.60000000000002" text-anchor="middle" 
                   stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,110.96,43.52)" className="sm_label sm_label_AFNUR">
+                  transform="matrix(0.8,0,0,0.8,110.96,43.52)" className="sm_label provinceName sm_label_AFNUR">
                 <tspan dy="5.600002861022972" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Nuristan</tspan>
             </text>
             <text x="504.40000000000003" y="216.4" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,100.88,43.28)" className="sm_label sm_label_AFPAN">
+                  transform="matrix(0.8,0,0,0.8,100.88,43.28)" className="sm_label provinceName sm_label_AFPAN">
                 <tspan dy="5.599999809265142" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Panjshayr</tspan>
             </text>
             <text x="461.20000000000005" y="246.4" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,92.24,49.28)" className="sm_label sm_label_AFPAR">
+                  transform="matrix(0.8,0,0,0.8,92.24,49.28)" className="sm_label provinceName sm_label_AFPAR">
                 <tspan dy="5.599999809265142" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Parwan</tspan>
             </text>
             <text x="448.8" y="397.6" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,89.76,79.52)" className="sm_label sm_label_AFPIA">
+                  transform="matrix(0.8,0,0,0.8,89.76,79.52)" className="sm_label provinceName sm_label_AFPIA">
                 <tspan dy="5.5999876022339095" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Paktika</tspan>
             </text>
             <text x="485.6" y="331.20000000000005" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,97.12,66.24)" className="sm_label sm_label_AFPKA">
+                  transform="matrix(0.8,0,0,0.8,97.12,66.24)" className="sm_label provinceName sm_label_AFPKA">
                 <tspan dy="5.599981498718307" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Paktya</tspan>
             </text>
             <text x="399.6" y="184.4" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,79.92,36.88)" className="sm_label sm_label_AFSAM">
+                  transform="matrix(0.8,0,0,0.8,79.92,36.88)" className="sm_label provinceName sm_label_AFSAM">
                 <tspan dy="5.599999809265142" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Samangan</tspan>
             </text>
             <text x="325.6" y="204" text-anchor="middle"  stroke="none" fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,65.12,40.8)" className="sm_label sm_label_AFSAR">
+                  transform="matrix(0.8,0,0,0.8,65.12,40.8)" className="sm_label provinceName sm_label_AFSAR">
                 <tspan dy="5.599993705749512" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Sari Pul</tspan>
             </text>
             <text x="507.20000000000005" y="140" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,101.44,28)" className="sm_label sm_label_AFTAK">
+                  transform="matrix(0.8,0,0,0.8,101.44,28)" className="sm_label provinceName sm_label_AFTAK">
                 <tspan dy="5.600001335144043" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Takhar</tspan>
             </text>
             <text x="319.6" y="380.40000000000003" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,63.92,76.08)" className="sm_label sm_label_AFURU">
+                  transform="matrix(0.8,0,0,0.8,63.92,76.08)" className="sm_label provinceName sm_label_AFURU">
                 <tspan dy="5.599999809265171" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Uruzgan</tspan>
             </text>
             <text x="421.20000000000005" y="293.6" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,84.24,58.72)" className="sm_label sm_label_AFWAR">
+                  transform="matrix(0.8,0,0,0.8,84.24,58.72)" className="sm_label provinceName sm_label_AFWAR">
                 <tspan dy="5.5999876022339095" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Wardak</tspan>
             </text>
             <text x="372.40000000000003" y="410" text-anchor="middle"  stroke="none"
                   fill="#ffffff"
-                  style={{
-                      WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
-                      textAnchor: "middle",        
-                      font: "bold 16px Arial",     
-                      cursor: "pointer",
-                      opacity: 1,
-                      display: "none"
-                  }}
                   stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
-                  transform="matrix(0.8,0,0,0.8,74.48,82)" className="sm_label sm_label_AFZAB">
+                  transform="matrix(0.8,0,0,0.8,74.48,82)" className="sm_label provinceName sm_label_AFZAB">
                 <tspan dy="5.599993705749512" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}>Zabul</tspan>
             </text>
             <circle cx="0" cy="0" r="0" fill="none" stroke="#000" style={{WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"}}
