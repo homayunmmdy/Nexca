@@ -1,5 +1,10 @@
 .provinceSec {
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    stroke-opacity: 1;
+    stroke-linejoin: round;
+    fill-opacity: 1;
 }
 
 .provinceSec:hover {
@@ -7,9 +12,8 @@
     fill: #432dd7;
 }
 
-.provinceSec:hover + .provinceName {
-    transition: color 0.3s ease-in-out;
-    fill: #fff;
+.activeProvince {
+    fill: #432dd7;
 }
 
 .provinceName {
