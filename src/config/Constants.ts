@@ -50,3 +50,6 @@ export const FORESTTHEME = "forest";
 export const LUXURYTHEME = "luxury";
 export const COFFETHEME = "coffee";
 export const CARAMELLATTETHEME = "caramellatte";
+
+// map
+export const AF_MAP_CONTENT = 'AF_map_content'
