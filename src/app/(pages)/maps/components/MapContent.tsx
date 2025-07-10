@@ -33,7 +33,6 @@ const MapContent = ({key,provinceID, countryID = 1}: Props) => {
                         <div className="card-body">
                             <h2 className="card-title line-clamp-2">
                                 {content.title}
-                                <div className="badge badge-secondary">NEW</div>
                             </h2>
                             <p className='line-clamp-3'>{content.description}</p>
                         </div>

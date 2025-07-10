@@ -28,7 +28,7 @@
 .MapSection {
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     border: 1px solid #cad5da;
     border-radius:20px;
     margin-block: 1rem;
