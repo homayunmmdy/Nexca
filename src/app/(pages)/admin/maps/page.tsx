@@ -19,7 +19,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import FilterPanel from "@/app/(pages)/admin/posts/components/FilterPanel";
 import ImgTable from "@/app/(pages)/admin/components/elements/ImgTable";
-import {AF_MAP_DATA} from "@/config/maps";
+import {AF_MAP_DATA, AL_MAP_DATA} from "@/config/maps";
 import {CountriesMapData} from "@/config/countries";
 import Link from "next/link";
 import RouteConfig from "@/config/RouteConfig";
@@ -42,6 +42,18 @@ const Posts = () => {
     const [selectedService, setSelectedService] = useState(initialCountry);
     const [selectedSection, setSelectedSection] = useState(initialProvince);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+    // Get the appropriate province data based on selected country
+    const getProvinceData = () => {
+        switch(selectedService) {
+            case '1': // Afghanistan
+                return AF_MAP_DATA;
+            case '2': // Albania
+                return AL_MAP_DATA;
+            default:
+                return [];
+        }
+    };
 
     useEffect(() => {
         setPosts(data?.data || []);
@@ -93,6 +105,7 @@ const Posts = () => {
 
     const handleServiceChange = (event: { target: { value: string } }) => {
         setSelectedService(event.target.value);
+        setSelectedSection(""); // Reset province when country changes
         setCurrentPage(1);
     };
 
@@ -133,31 +146,32 @@ const Posts = () => {
                     <div className="rounded-md border border-indigo-600 p-4 shadow-xs">
                         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                             <div>
-                                <label className="mb-1 block text-sm font-medium">Service</label>
+                                <label className="mb-1 block text-sm font-medium">Country</label>
                                 <select
                                     value={selectedService}
                                     onChange={handleServiceChange}
                                     className="select select-primary mb-2 w-full"
                                 >
                                     <option value="">All Countries</option>
-                                    {CountriesMapData.map((service) => (
-                                        <option key={service.secid} value={service.secid}>
-                                            {service.name}
+                                    {CountriesMapData.map((country) => (
+                                        <option key={country.secid} value={country.secid}>
+                                            {country.name}
                                         </option>
                                     ))}
                                 </select>
                             </div>
                             <div>
-                                <label className="mb-1 block text-sm font-medium">Section</label>
+                                <label className="mb-1 block text-sm font-medium">Province</label>
                                 <select
                                     value={selectedSection}
                                     onChange={handleSectionChange}
                                     className="select select-primary mb-2 w-full"
+                                    disabled={!selectedService}
                                 >
-                                    <option value="">All Province</option>
-                                    {AF_MAP_DATA.map((section) => (
-                                        <option key={section.secid} value={section.secid}>
-                                            {section.name}
+                                    <option value="">All Provinces</option>
+                                    {getProvinceData().map((province) => (
+                                        <option key={province.secid} value={province.secid}>
+                                            {province.name}
                                         </option>
                                     ))}
                                 </select>

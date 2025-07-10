@@ -136,3 +136,54 @@ export const AF_MAP_DATA = [
         name: 'Zabul'
     }
 ];
+
+export const AL_MAP_DATA = [
+    {
+        secid: '1',
+        name: 'Berat'
+    },
+    {
+        secid: '2',
+        name: 'Dibër'
+    },
+    {
+        secid: '3',
+        name: 'Durrës'
+    },
+    {
+        secid: '4',
+        name: 'Elbasan'
+    },
+    {
+        secid: '5',
+        name: 'Fier'
+    },
+    {
+        secid: '6',
+        name: 'Gjirokastër'
+    },
+    {
+        secid: '7',
+        name: 'Korçë'
+    },
+    {
+        secid: '8',
+        name: 'Kukës'
+    },
+    {
+        secid: '9',
+        name: 'Lezhë'
+    },
+    {
+        secid: '10',
+        name: 'Shkodër'
+    },
+    {
+        secid: '11',
+        name: 'Tirana'
+    },
+    {
+        secid: '12',
+        name: 'Vlorë'
+    }
+];

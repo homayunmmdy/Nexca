@@ -18,7 +18,7 @@ const MapContent = ({key,provinceID, countryID = 1}: Props) => {
         return <Spinner/>
     }
     return (
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid grid-cols-2 gap-4 mt-6'>
             {data.length > 0 ? (
                 data?.map((content: MapsCashType) => (
                     <div key={content._id} className="card bg-base-100 w-full shadow-sm">
