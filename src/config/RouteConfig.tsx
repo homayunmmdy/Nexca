@@ -15,6 +15,10 @@ const RouteConfig = {
             base: "/admin/posts",
             new: "/admin/posts/new",
         },
+        maps: {
+            base: "/admin/maps",
+            new : "/admin/maps/new",
+        },
         sections: {
             base: "/admin/sections",
             new: "/admin/sections/new"

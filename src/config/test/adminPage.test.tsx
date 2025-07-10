@@ -3,7 +3,7 @@ import {
   FaAdversal,
   FaComment,
   FaHome,
-  FaImage,
+  FaImage, FaMap,
   FaPager,
   FaPhoneAlt,
   FaRegEdit,
@@ -16,7 +16,7 @@ import { SiRelay } from "react-icons/si";
 import { adminPages, EditPostPages } from "../adminPage";
 
 describe("adminPages", () => {
-  const AmountAdminPages = 11;
+  const AmountAdminPages = 12;
 
   describe("Structure and Content", () => {
     it("should have correct number of admin pages", () => {
@@ -47,6 +47,7 @@ describe("adminPages", () => {
         MdOutlineMail,
         FaPhoneAlt,
         SiRelay,
+        FaMap,
         FaQuestion,
       ];
 

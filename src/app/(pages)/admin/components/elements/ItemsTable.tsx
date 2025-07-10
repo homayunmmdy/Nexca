@@ -17,7 +17,7 @@ const ItemsTable = ({ post, baseURL }: Props) => {
         <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap">
           <div className="avatar">
             <Link
-              href={`/posts/${post._id}`}
+              href={`/${baseURL}/${post._id}`}
               className="mask mask-squircle h-32 w-32"
             >
               <Image

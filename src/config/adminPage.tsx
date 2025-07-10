@@ -3,7 +3,7 @@ import {
   FaAdversal,
   FaComment,
   FaHome,
-  FaImage,
+  FaImage, FaMap,
   FaPager,
   FaPhoneAlt,
   FaRegEdit,
@@ -27,6 +27,7 @@ export const adminPages = [
   { name: "Emails", href: RouteConfig.admin.emails, icon: MdOutlineMail ,activate : true },
   { name: "Contacts", href: RouteConfig.admin.contacts, icon: FaPhoneAlt ,activate : true },
   { name: "Release", href: RouteConfig.admin.release.base, icon: SiRelay  ,activate : false },
+  { name: "Maps", href: RouteConfig.admin.maps.base, icon: FaMap  ,activate : false },
   { name: "Help", href: RouteConfig.admin.help.base, icon: FaQuestion ,activate : true },
 ];
 

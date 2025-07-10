@@ -6,6 +6,7 @@ export const SECTIONS_CONFIG = 'sectionsConfig'
 
 // query keys
 export const ALL_POSTS_QUERY_KEY = "all_posts";
+export const ALL_MAPS_CONTENT_QUERY_KEY = "all_maps_content";
 export const ALL_TEXTADV_QUERY_KEY = "all_textadv";
 export const ALL_IMG_ADV_QUERY_KEY = "all_imgadv";
 export const ALL_RELEASE_QUERY_KEY = "all_release";
@@ -53,3 +54,7 @@ export const CARAMELLATTETHEME = "caramellatte";
 
 // map
 export const AF_MAP_CONTENT = 'AF_map_content'
+
+// search query
+export const PROVINCE_KEY = "province";
+export const COUNTRY_KEY = "country";
