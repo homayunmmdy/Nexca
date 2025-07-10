@@ -1,18 +1,18 @@
 'use client'
 import React from 'react';
-import {AF_MAP_CONTENT} from "@/config/Constants";
 import useGetMapContent from "@/hooks/useGetMapContent";
 import {ErrorText, Spinner} from "@/components/atoms";
 import {MapsCashType} from "@/types/CashTypes";
 import Image from "next/image";
 
 interface Props {
+    key:string,
     provinceID: number,
     countryID?: number
 }
 
-const AfContent = ({provinceID, countryID = 1}: Props) => {
-    const {data, loading} = useGetMapContent(AF_MAP_CONTENT, -1, countryID, provinceID);
+const MapContent = ({key,provinceID, countryID = 1}: Props) => {
+    const {data, loading} = useGetMapContent(key, -1, countryID, provinceID);
 
     if (loading) {
         return <Spinner/>
@@ -24,8 +24,8 @@ const AfContent = ({provinceID, countryID = 1}: Props) => {
                     <div key={content._id} className="card bg-base-100 w-full shadow-sm">
                         <figure>
                             <Image
-                                width={290}
-                                height={171}
+                                width={662.172}
+                                height={372.469}
                                 src={content.imgurl}
                                 title={content.title}
                                 alt={content.title}/>
@@ -44,4 +44,4 @@ const AfContent = ({provinceID, countryID = 1}: Props) => {
     );
 };
 
-export default AfContent;
+export default MapContent;
