@@ -2,7 +2,11 @@
 import React, {useEffect, useRef} from 'react';
 import "../maps.css";
 
-const AFMap = () => {
+interface AFMapProps {
+    setActiveProvinceId: (id: string) => void;
+}
+
+const AFMap = ({ setActiveProvinceId  }: AFMapProps) => {
     const Map = useRef<any>(null);
 
     useEffect(() => {
@@ -13,7 +17,7 @@ const AFMap = () => {
                 e.stopPropagation();
                 const clickedProvince = e.target as SVGAElement;
                 const provinceID = clickedProvince.id.slice(9)
-                console.log(provinceID);
+                setActiveProvinceId(provinceID);
 
                 AllProvinces.forEach((province: any) => {
                     province.classList.remove('activeProvince')
@@ -33,7 +37,7 @@ const AFMap = () => {
             };
 
         }
-    },[])
+    },[[setActiveProvinceId]])
     return (
         <svg ref={Map} height="609.6" version="1.1" width="800" xmlns="http://www.w3.org/2000/svg"
              style={{

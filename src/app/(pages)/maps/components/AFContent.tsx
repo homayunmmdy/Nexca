@@ -5,8 +5,13 @@ import useGetMapContent from "@/hooks/useGetMapContent";
 import {Spinner} from "@/components/atoms";
 import {MapsCashType} from "@/types/CashTypes";
 
-const AfContent = () => {
-    const {data,loading} = useGetMapContent(AF_MAP_CONTENT, -1, 1, 1);
+interface Props {
+    provinceID : number,
+    countryID?: number
+}
+
+const AfContent = ({provinceID, countryID = 1} : Props) => {
+    const {data,loading} = useGetMapContent(AF_MAP_CONTENT, -1, countryID, provinceID);
 
     if(loading) {
         return <Spinner />
