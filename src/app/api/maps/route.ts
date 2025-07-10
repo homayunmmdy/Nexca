@@ -9,5 +9,5 @@ export async function GET() {
 
 export async function POST(req: Request) {
   const handler = new RequestHandler(MapsModel, MapsCash);
-  return handler.Post(req, "Section Created successfully");
+  return handler.Post(req, "Map Created successfully");
 }

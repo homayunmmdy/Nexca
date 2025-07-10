@@ -17,7 +17,7 @@ export async function PUT(
 ) {
   const { id } = params;
   const handler = new RequestHandler(MapsModel, MapsCash);
-  return handler.PUT(id, req, "Section Update Successfully");
+  return handler.PUT(id, req, "Map Update Successfully");
 }
 
 export async function DELETE(
@@ -26,5 +26,5 @@ export async function DELETE(
 ) {
   const { id } = params;
   const handler = new RequestHandler(MapsModel, MapsCash);
-  return handler.DELETE(id, "Section Deleted successfully");
+  return handler.DELETE(id, "Map Deleted successfully");
 }

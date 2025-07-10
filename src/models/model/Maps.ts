@@ -49,6 +49,6 @@ const mapsSchema = new Schema(
  *
  * @type {mongoose.Model<PostSchema>}
  */
-const Post = mongoose.models.Post || mongoose.model("Post", mapsSchema);
+const Maps = mongoose.models.Maps || mongoose.model("Maps", mapsSchema);
 
-export default Post;
+export default Maps;
