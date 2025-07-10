@@ -1,9 +1,12 @@
 import React from 'react';
+import useMapInteraction from "@/hooks/useMapInteraction";
+import MapProps from "@/types/MapTypes";
 
-const AlMap = () => {
+const AlMap = ({ setActiveProvinceId  }: MapProps) => {
+    const MapRef = useMapInteraction(setActiveProvinceId);
     return (
         <div>
-            <svg height="800" version="1.1" width="800" xmlns="http://www.w3.org/2000/svg"
+            <svg ref={MapRef} height="800" version="1.1" width="800" xmlns="http://www.w3.org/2000/svg"
                  style={{
                      overflow: "hidden",
                      position: "relative",

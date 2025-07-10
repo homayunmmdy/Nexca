@@ -1,45 +1,14 @@
 'use client'
 import React, {useEffect, useRef} from 'react';
 import "../maps.css";
+import useMapInteraction from "@/hooks/useMapInteraction";
+import MapProps from "@/types/MapTypes";
 
-interface AFMapProps {
-    setActiveProvinceId: (id: string) => void;
-}
+const AFMap = ({ setActiveProvinceId  }: MapProps) => {
+    const MapRef = useMapInteraction(setActiveProvinceId);
 
-const AFMap = ({ setActiveProvinceId  }: AFMapProps) => {
-    const Map = useRef<any>(null);
-
-    useEffect(() => {
-        if(Map.current) {
-            const AllProvinces = Map.current.querySelectorAll('.provinceSec');
-
-            const handleClick = (e: Event) => {
-                e.stopPropagation();
-                const clickedProvince = e.target as SVGAElement;
-                const provinceID = clickedProvince.id.slice(9)
-                setActiveProvinceId(provinceID);
-
-                AllProvinces.forEach((province: any) => {
-                    province.classList.remove('activeProvince')
-                });
-                clickedProvince.classList.add('activeProvince');
-            };
-
-            AllProvinces.forEach((province:any) => {
-                province.addEventListener('click', handleClick);
-            });
-
-            // Cleanup event listeners on unmount
-            return () => {
-                AllProvinces.forEach((province:any) => {
-                    province.removeEventListener('click', () => {});
-                });
-            };
-
-        }
-    },[[setActiveProvinceId]])
     return (
-        <svg ref={Map} height="609.6" version="1.1" width="800" xmlns="http://www.w3.org/2000/svg"
+        <svg ref={MapRef} height="609.6" version="1.1" width="800" xmlns="http://www.w3.org/2000/svg"
              style={{
                  overflow: "hidden",
                  position: "relative",
