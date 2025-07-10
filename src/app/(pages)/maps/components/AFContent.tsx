@@ -4,6 +4,7 @@ import {AF_MAP_CONTENT} from "@/config/Constants";
 import useGetMapContent from "@/hooks/useGetMapContent";
 import {Spinner} from "@/components/atoms";
 import {MapsCashType} from "@/types/CashTypes";
+import Image from "next/image";
 
 interface Props {
     provinceID : number,
@@ -21,7 +22,9 @@ const AfContent = ({provinceID, countryID = 1} : Props) => {
             {data?.map((content : MapsCashType) => (
                 <div key={content._id} className="card bg-base-100 w-full shadow-sm">
                     <figure>
-                        <img
+                        <Image
+                            width={290}
+                            height={171}
                             src={content.imgurl}
                             title={content.title}
                             alt={content.title} />

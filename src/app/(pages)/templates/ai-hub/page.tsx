@@ -130,6 +130,7 @@ const AINewsHub = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           {AI_HUB_categories.map((category) => (
             <TabContent
+                key={category.id}
               category={category}
               setActiveCategory={setActiveCategory}
               activeCategory={activeCategory}
