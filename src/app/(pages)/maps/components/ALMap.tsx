@@ -1,11 +1,12 @@
 import React from 'react';
 import useMapInteraction from "@/hooks/useMapInteraction";
 import MapProps from "@/types/MapTypes";
+import MapWrapper from "@/app/(pages)/maps/components/MapWrapper";
 
 const AlMap = ({ setActiveProvinceId  }: MapProps) => {
     const MapRef = useMapInteraction(setActiveProvinceId);
     return (
-        <div className='MapSection'>
+        <MapWrapper >
             <svg ref={MapRef} height="800" version="1.1" width="800" xmlns="http://www.w3.org/2000/svg"
                  style={{
                      overflow: "hidden",
@@ -183,7 +184,7 @@ const AlMap = ({ setActiveProvinceId  }: MapProps) => {
                          stroke-width="1"/>
 
             </svg>
-        </div>
+        </MapWrapper>
     );
 };
 

@@ -25,16 +25,20 @@
     opacity: 1;
 }
 
-.MapSection {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #cad5da;
-    border-radius:20px;
-    margin-block: 1rem;
-    svg {
+.MapSectionContainer {
+    padding-block: 1rem;
+
+    .MapSection {
+        display: block;
         width: 100%;
         height: 100%;
+        border: 1px solid #cad5da;
+        border-radius:20px;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
+
 
