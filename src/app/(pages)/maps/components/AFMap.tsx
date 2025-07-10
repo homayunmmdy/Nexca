@@ -1,6 +1,4 @@
 'use client'
-import React, {useEffect, useRef} from 'react';
-import "../maps.css";
 import useMapInteraction from "@/hooks/useMapInteraction";
 import MapProps from "@/types/MapTypes";
 

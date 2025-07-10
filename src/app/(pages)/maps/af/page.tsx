@@ -1,5 +1,5 @@
 'use client'
-import React, {useState , useEffect} from 'react';
+import React, {useState} from 'react';
 import AFMap from "@/app/(pages)/maps/components/AFMap";
 import MapContent from "@/app/(pages)/maps/components/MapContent";
 import {AF_MAP_CONTENT} from "@/config/Constants";
