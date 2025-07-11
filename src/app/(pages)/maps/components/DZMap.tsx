@@ -564,7 +564,7 @@ const DzMap = ({ setActiveProvinceId  }: MapProps) => {
                       
                       stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
                       transform="matrix(0.8,0,0,0.8,98.96,24.32)" className="sm_label provinceName sm_label_DZ28">
-                    <tspan dy="5.5999952316284265" >M'Sila</tspan>
+                    <tspan dy="5.5999952316284265" >M&apos;Sila</tspan>
                 </text>
                 <text x="348.40000000000003" y="110.4" text-anchor="middle"  stroke="none"
                       fill="#ffffff"
@@ -713,7 +713,7 @@ const DzMap = ({ setActiveProvinceId  }: MapProps) => {
                       
                       stroke-width="0" font-size="16px" font-weight="bold" font-family="Arial" opacity="1"
                       transform="matrix(0.8,0,0,0.8,108.24,34.24)" className="sm_label provinceName sm_label_DZ49">
-                    <tspan dy="5.599996757507341" >El M'Ghair
+                    <tspan dy="5.599996757507341" >El M&apos;Ghair
                     </tspan>
                 </text>
                 <text x="452.40000000000003" y="306" text-anchor="middle"  stroke="none"

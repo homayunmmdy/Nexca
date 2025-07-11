@@ -32,7 +32,7 @@ const useMapInteraction = (setActiveProvinceId: (id: string) => void) => {
             });
         };
 
-    }, [[setActiveProvinceId]])
+    }, [setActiveProvinceId])
 
     return mapRef
 }
