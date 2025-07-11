@@ -10,5 +10,9 @@ export const CountriesMapData = [
     {
         secid : '3',
         name : 'Algeria'
+    },
+    {
+        secid : '4',
+        name : 'Andorra'
     }
 ]

@@ -422,3 +422,34 @@ export const DZ_MAP_DATA = [
         name: 'In Guezzam'
     }
 ];
+
+export const AD_MAP_DATA = [
+    {
+        secid: '1',
+        name: 'Canillo'
+    },
+    {
+        secid: '2',
+        name: 'Encamp'
+    },
+    {
+        secid: '3',
+        name: 'Ordino'
+    },
+    {
+        secid: '4',
+        name: 'La Massana'
+    },
+    {
+        secid: '5',
+        name: 'Andorra la Vella'
+    },
+    {
+        secid: '6',
+        name: 'Sant Julià de Lòria'
+    },
+    {
+        secid: '7',
+        name: 'Escaldes-Engordany'
+    }
+];
