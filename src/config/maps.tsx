@@ -144,35 +144,35 @@ export const AL_MAP_DATA = [
     },
     {
         secid: '2',
-        name: 'Dibër'
-    },
-    {
-        secid: '3',
         name: 'Durrës'
     },
     {
-        secid: '4',
+        secid: '3',
         name: 'Elbasan'
     },
     {
-        secid: '5',
+        secid: '4',
         name: 'Fier'
     },
     {
-        secid: '6',
+        secid: '5',
         name: 'Gjirokastër'
     },
     {
-        secid: '7',
+        secid: '6',
         name: 'Korçë'
     },
     {
-        secid: '8',
+        secid: '7',
         name: 'Kukës'
     },
     {
-        secid: '9',
+        secid: '8',
         name: 'Lezhë'
+    },
+    {
+        secid: '9',
+        name: 'Dibër'
     },
     {
         secid: '10',
