@@ -55,6 +55,7 @@ export const CARAMELLATTETHEME = "caramellatte";
 // map
 export const AF_MAP_CONTENT = 'AF_map_content'
 export const AL_MAP_CONTENT = 'AL_map_content'
+export const DZ_MAP_CONTENT = 'DZ_map_content'
 
 // search query
 export const PROVINCE_KEY = "province";
