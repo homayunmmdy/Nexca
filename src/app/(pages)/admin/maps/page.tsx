@@ -23,6 +23,7 @@ import {AF_MAP_DATA, AL_MAP_DATA} from "@/config/maps";
 import {CountriesMapData} from "@/config/countries";
 import Link from "next/link";
 import RouteConfig from "@/config/RouteConfig";
+import {getProvinceData} from "@/config/getProvinceData";
 
 const Posts = () => {
     const data = useFetch(ALL_MAPS_CONTENT_QUERY_KEY, MAPS_API_URL);
@@ -42,18 +43,6 @@ const Posts = () => {
     const [selectedService, setSelectedService] = useState(initialCountry);
     const [selectedSection, setSelectedSection] = useState(initialProvince);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
-
-    // Get the appropriate province data based on selected country
-    const getProvinceData = () => {
-        switch(selectedService) {
-            case '1': // Afghanistan
-                return AF_MAP_DATA;
-            case '2': // Albania
-                return AL_MAP_DATA;
-            default:
-                return [];
-        }
-    };
 
     useEffect(() => {
         setPosts(data?.data || []);
@@ -169,7 +158,7 @@ const Posts = () => {
                                     disabled={!selectedService}
                                 >
                                     <option value="">All Provinces</option>
-                                    {getProvinceData().map((province) => (
+                                    {getProvinceData(selectedService).map((province) => (
                                         <option key={province.secid} value={province.secid}>
                                             {province.name}
                                         </option>

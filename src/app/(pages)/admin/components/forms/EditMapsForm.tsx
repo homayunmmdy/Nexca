@@ -21,6 +21,7 @@ import CategoriesForm from "./CategoriesForm";
 import { templatesData } from "@/config/tempaltes";
 import {AF_MAP_DATA} from "@/config/maps";
 import {CountriesMapData} from "@/config/countries";
+import {getProvinceData} from "@/config/getProvinceData";
 
 const EditMapsForm = ({ post }: { post: MapsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -58,17 +59,6 @@ const EditMapsForm = ({ post }: { post: MapsCashType }) => {
           <div className="flex gap-3 flex-wrap sm:flex-nowrap">
             <div className="w-full">
               <SelectField
-                  id="province"
-                  name="province"
-                  label="province"
-                  value={formData.province}
-                  onChange={handler.trakeChange}
-                  options={AF_MAP_DATA}
-              />
-
-            </div>
-            <div className="w-full">
-              <SelectField
                   id="country"
                   name="country"
                   label="country"
@@ -77,8 +67,17 @@ const EditMapsForm = ({ post }: { post: MapsCashType }) => {
                   options={CountriesMapData}
               />
             </div>
+            <div className="w-full">
+              <SelectField
+                  id="province"
+                  name="province"
+                  label="province"
+                  value={formData.province}
+                  onChange={handler.trakeChange}
+                  options={getProvinceData(formData.country)}
+              />
+            </div>
           </div>
-
           <Input
             type="text"
             id="title"
