@@ -425,16 +425,12 @@ export const DZ_MAP_DATA = [
 
 export const AD_MAP_DATA = [
     {
-        secid: '1',
+        secid: '2',
         name: 'Canillo'
     },
     {
-        secid: '2',
-        name: 'Encamp'
-    },
-    {
         secid: '3',
-        name: 'Ordino'
+        name: 'Encamp'
     },
     {
         secid: '4',
@@ -442,7 +438,7 @@ export const AD_MAP_DATA = [
     },
     {
         secid: '5',
-        name: 'Andorra la Vella'
+        name: 'Ordino'
     },
     {
         secid: '6',
@@ -450,6 +446,10 @@ export const AD_MAP_DATA = [
     },
     {
         secid: '7',
+        name: 'Andorra la Vella'
+    },
+    {
+        secid: '8',
         name: 'Escaldes-Engordany'
     }
 ];
