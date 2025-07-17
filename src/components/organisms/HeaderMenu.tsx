@@ -1,6 +1,7 @@
 import { HeaderMenuConfigType } from "@/types/entities";
 import Link from "next/link";
 import HeaderServices from "./HeaderServices";
+import HeaderMap from "./HeaderMap";
 
 const HeaderMenu = ({
   pathname,
@@ -49,6 +50,7 @@ const HeaderMenu = ({
         );
       })}
       <HeaderServices />
+      <HeaderMap />
     </ul>
   );
 };

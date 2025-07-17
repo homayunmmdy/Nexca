@@ -1,4 +1,4 @@
-export const CountriesMapData:CountriesMapData[] = [
+export const CountriesMapData:CountriesMapDataType[] = [
     {
         secid : '1',
         name : 'Afghanistan',
@@ -21,7 +21,7 @@ export const CountriesMapData:CountriesMapData[] = [
     }
 ]
 
-type CountriesMapData = {
+export type CountriesMapDataType = {
     secid : string,
     name : string,
     code : string,
