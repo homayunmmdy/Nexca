@@ -1,11 +1,17 @@
 import { GlobalSearchInput } from "@/components/molecules";
-import {HeaderMenuConfigType} from "@/types/entities";
+import { HeaderMenuConfigType } from "@/types/entities";
 import Link from "next/link";
 
-const MobileMenu = ({ pathname, nav }: { pathname: string , nav : HeaderMenuConfigType[] }) => {
+const MobileMenu = ({
+  pathname,
+  nav,
+}: {
+  pathname: string;
+  nav: HeaderMenuConfigType[];
+}) => {
   return (
-    <nav className="fixed left-0 right-0 top-[90px] z-50 mx-auto w-[94%] rounded-xl border-2 border-indigo-700 shadow-xl backdrop-blur-md md:w-[92%]">
-      <ul className="my-3 flex flex-col items-center gap-4 bg-inherit p-2 shadow-sm lg:hidden">
+    <nav className="fixed left-0 bg-base-200 top-[80px] z-50 mx-auto w-[90%] sm:w-[70%] md:w-[60%] h-full border-2 border-indigo-700 lg:hidden">
+      <ul className="my-3 flex flex-col items-center gap-4 bg-inherit p-2  lg:hidden">
         <li
           className="flex items-center gap-3"
           key={`mobile_menu_item_starter`}

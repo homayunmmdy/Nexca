@@ -1,19 +1,18 @@
 "use client";
-import {Container, LogoName} from "@/components/atoms";
+import { Container, LogoName } from "@/components/atoms";
 import {
   GitHubBtn,
   GlobalSearchInput,
   HamburgerIcon,
   ThemeBtn,
 } from "@/components/molecules";
-import SiteConfig from "@/config/site";
+import { DEV_MODE } from "@/config/Constants";
+import HeaderMenuConfig from "@/config/HeaderMenuConfig";
 import { motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import HeaderMenu from "./HeaderMenu";
 import MobileMenu from "./MobileMenu";
-import { DEV_MODE } from "@/config/Constants";
-import HeaderMenuConfig from "@/config/HeaderMenuConfig";
 
 const Header = () => {
   const pathname = usePathname();
@@ -58,11 +57,20 @@ const Header = () => {
           </div>
           <div className="navbar-end gap-3 lg:w-[20%]">
             <ThemeBtn />
-            <GitHubBtn/>
+            <GitHubBtn />
           </div>
         </Container>
       </motion.header>
-      {isOpen && <MobileMenu pathname={pathname} nav={navBar} />}
+      {isOpen && (
+        <>
+          <div
+            className="fixed left-0 right-0 w-full top-0 z-10 lg:hidden backdrop-blur h-full"
+            onClick={() => setIsOpen(false)}
+          >
+          </div>
+          <MobileMenu pathname={pathname} nav={navBar} />
+        </>
+      )}
     </>
   );
 };

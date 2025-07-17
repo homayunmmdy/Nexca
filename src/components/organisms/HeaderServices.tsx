@@ -11,7 +11,7 @@ function HeaderServices() {
   return (
     <li
       key={`desktop_menu_item_services`}
-      className="mx-1 group static px-1 py-2"
+      className="mx-1 group static xl:px-1 py-2"
     >
       <p className="rounded-xl border-2 border-base-100 hover:border-blue-700 hover:bg-base-100 hover:text-indigo-700">
         Services

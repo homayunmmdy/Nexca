@@ -16,7 +16,7 @@ const HeaderMenu = ({
         return (
           <li
             key={`desktop_menu_item_${item.id}`}
-            className="mx-1 group static px-1 py-2"
+            className="mx-1 group static xl:px-1 py-2"
           >
             {pathname == item.link ? (
               <Link
