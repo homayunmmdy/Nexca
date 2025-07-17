@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { GlobalSearchInput } from "@/components/molecules";
 import { HeaderMenuConfigType } from "@/types/entities";
 import Link from "next/link";
@@ -11,9 +11,9 @@ const MobileMenu = ({
   pathname: string;
   nav: HeaderMenuConfigType[];
 }) => {
-   const [activeId, setActiveId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<number | null>(null);
 
-  const toggleItem = (id: string) => {
+  const toggleItem = (id: number) => {
     setActiveId(activeId === id ? null : id);
   };
 
@@ -29,7 +29,11 @@ const MobileMenu = ({
 
         {nav?.map((item) => {
           return (
-            <li key={`mobile_menu_item_${item.id}`} className="mx-1 w-3/4">
+            <li
+              key={`mobile_menu_item_${item.id}`}
+              onClick={() => item.children && toggleItem(item.id)}
+              className="mx-1 w-3/4"
+            >
               {pathname === item.link ? (
                 <Link
                   href={item.link}
@@ -48,14 +52,20 @@ const MobileMenu = ({
                 </Link>
               )}
               {item.children && (
-                <ul className="grid grid-cols-2 gap-4 mt-2 ">
-                    {item.children.map((nav) => (
-                      <li key={nav.id} className="rounded-xl border-2 border-indigo-700 p-2">
-                        <Link href={nav.href} title={nav.name}>
+                <ul
+                  className={`grid grid-cols-2 gap-4 mt-2 transition-all duration-300 ease-in-out overflow-hidden 
+              ${activeId === item.id ? "max-h-screen" : "max-h-0"}`}
+                >
+                  {item.children.map((nav) => (
+                    <li
+                      key={nav.id}
+                      className="rounded-xl border-2 border-indigo-700 p-2"
+                    >
+                      <Link href={nav.href} title={nav.name}>
                         {nav.name}
-                        </Link>
-                      </li>
-                    ))}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               )}
             </li>
