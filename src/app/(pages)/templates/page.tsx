@@ -2,15 +2,43 @@ import React from 'react';
 import PostCard from "@/components/organisms/postsSection/PostCard";
 import {Container} from "@/components/atoms";
 
+const skipLinkStyles = {
+  position: 'absolute',
+  left: '-999px',
+  top: '10px',
+  background: '#fff',
+  color: '#000',
+  padding: '8px 16px',
+  zIndex: 1000,
+  borderRadius: '4px',
+  boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
+};
+const skipLinkFocusStyles = {
+  left: '10px',
+};
+
 function TemplatePage() {
+    const [isSkipFocused, setSkipFocused] = React.useState(false);
     return (
-        <Container>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-x-3 my-5">
-                {templates?.map((template) => (
-                    <PostCard post={template} key={template.id} />
-                ))}
-            </div>
-        </Container>
+        <>
+            <a
+                href="#main"
+                style={isSkipFocused ? { ...skipLinkStyles, ...skipLinkFocusStyles } : skipLinkStyles}
+                tabIndex={0}
+                onFocus={() => setSkipFocused(true)}
+                onBlur={() => setSkipFocused(false)}
+                onMouseDown={() => setSkipFocused(false)}
+            >
+                Skip to Main Content
+            </a>
+            <Container>
+                <div id="main" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start gap-x-3 my-5">
+                    {templates?.map((template) => (
+                        <PostCard post={template} key={template.id} />
+                    ))}
+                </div>
+            </Container>
+        </>
     );
 }
 
