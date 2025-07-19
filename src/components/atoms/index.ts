@@ -11,3 +11,4 @@ export { default as SectionsTitle } from "./SectionsTitle";
 export { default as Spinner } from "./Spinner";
 export { default as Textarea } from "./Textarea";
 export { default as ThemeIcon } from "./ThemeIcon";
+export { default as SkipToMain } from "./SkipToMain";
