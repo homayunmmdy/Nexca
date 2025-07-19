@@ -72,6 +72,8 @@ After approval, your changes will be merged into the main branch. Congrats, you'
 
 ---
 
+> **Note:** Nexca is a practical project and not a commercial product. Contributions are entirely voluntary and unpaid. We're building this together to learn, grow, and create something meaningful for the community.
+
 Happy coding, and thank you for helping Nexca grow! 😊
 
 For more information, check out our [Nexca repository](https://github.com/homayunmmdy/Nexca).
