@@ -308,7 +308,7 @@ const BankNewsPage = () => {
 
             {/* Newsletter Signup */}
             <EmailBox title="Stay Informed" description="Get the latest banking and financial news delivered to your
-                inbox daily." bg="bg-gradient-to-r from-blue-600 to-blue-700" btnColor="btn-outline-ghost"/>
+                inbox daily." bg="bg-gradient-to-r from-blue-600 to-blue-700" ElementColor="ghost"/>
             {/* Market Summary */}
             <motion.section
               className="bg-white rounded-xl p-6 shadow-sm"

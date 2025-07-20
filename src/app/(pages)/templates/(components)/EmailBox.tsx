@@ -7,10 +7,10 @@ interface Props {
     title: string;
     description: string;
     bg?: string,
-    bthColor?: `btn-${AllowedColors}`
+    ElementColor?: AllowedColors
 }
 
-const EmailBox = ({title, description, bg = 'bg-blue-600', btnColor = 'btn-primary'}: Props) => {
+const EmailBox = ({title, description, bg = 'bg-blue-600', ElementColor = 'primary'}: Props) => {
     const containerVariants = {
         hidden: {opacity: 0},
         visible: {
@@ -45,7 +45,7 @@ const EmailBox = ({title, description, bg = 'bg-blue-600', btnColor = 'btn-prima
                 {description}
             </motion.p>
             <motion.div variants={itemVariants} className="space-y-3">
-                <EmailListForm btnColor={btnColor}/>
+                <EmailListForm color={ElementColor}/>
             </motion.div>
         </motion.div>
     );

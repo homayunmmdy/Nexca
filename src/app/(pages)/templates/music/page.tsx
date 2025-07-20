@@ -874,7 +874,7 @@ const containerVariants = {
                             Get the latest music releases, artist news, and exclusive content delivered straight to your inbox.
                         </p>
                         <div className="flex justify-center">
-                            <EmailListForm btnColor="btn-primary"/>
+                            <EmailListForm />
                         </div>
 
 

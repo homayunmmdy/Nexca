@@ -365,7 +365,7 @@ const TheChronicle = () => {
 
                         <motion.div variants={itemVariants}>
                             <EmailBox title="Daily Brief" description="Get our top stories delivered to your inbox every morning at 6 AM."
-                                      bg="bg-slate-900" btnColor="btn-error"/>
+                                      bg="bg-slate-900" ElementColor="error"/>
                         </motion.div>
                     </div>
                 </div>
@@ -386,7 +386,7 @@ const TheChronicle = () => {
                             Join over 250,000 readers who trust The Chronicle for authoritative journalism and insightful analysis
                         </p>
                         <div className="flex flex-col items-center gap-4  mx-auto">
-                            <EmailListForm btnColor="btn-error"/>
+                            <EmailListForm color="error"/>
                         </div>
                         <p className="text-sm text-slate-400 mt-4">
                             Free newsletter • No spam • Unsubscribe anytime

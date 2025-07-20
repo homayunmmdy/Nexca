@@ -260,7 +260,7 @@ const AINewsHub = () => {
                     <div className="space-y-8">
                         <LatestPosts/>
                         <EmailBox bg="bg-gradient-to-br from-blue-600 to-purple-600" title="Stay Updated!"
-                                  description="Get the latest AI news delivered to your inbox weekly." btnColor="btn-"/>
+                                  description="Get the latest AI news delivered to your inbox weekly."/>
                     </div>
                 </div>
             </div>

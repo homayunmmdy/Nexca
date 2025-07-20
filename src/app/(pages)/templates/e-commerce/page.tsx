@@ -424,7 +424,7 @@ export default function EcommerceTemplate() {
                             Get the latest updates on new products, exclusive offers, and style tips
                         </p>
                         <div className="flex flex-col  gap-4 items-center mx-auto">
-                            <EmailListForm btnColor="btn-info"/>
+                            <EmailListForm color="info"/>
                         </div>
                     </motion.div>
                 </div>
