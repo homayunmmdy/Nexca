@@ -22,7 +22,7 @@ export type PostsCashType = {
   masterEditor?: boolean;
   source?: string;
   author?: string;
-
+  imgAlt?: string;
 } & BaseType;
 
 export type MapsCashType = {
