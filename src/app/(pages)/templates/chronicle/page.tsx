@@ -5,6 +5,8 @@ import {IoIosClose, IoIosGlobe, IoIosSearch, IoIosTrendingUp, IoMdMenu} from "re
 import {FaArrowRight, FaEye, FaFacebookF, FaInstagram, FaLinkedinIn, FaRegClock, FaUser} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
 import Image from "next/image";
+import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
+import EmailListForm from "@/components/organisms/EmailListForm";
 
 
 const TheChronicle = () => {
@@ -362,27 +364,8 @@ const TheChronicle = () => {
                         </motion.div>
 
                         <motion.div variants={itemVariants}>
-                            {/* Newsletter Sidebar */}
-                            <div className="mt-8 p-6 bg-slate-900 text-white">
-                                <h4 className="text-xl font-serif font-bold mb-3">Daily Brief</h4>
-                                <p className="text-slate-300 mb-4 text-sm">
-                                    Get our top stories delivered to your inbox every morning at 6 AM.
-                                </p>
-                                <div className="space-y-3">
-                                    <input
-                                        type="email"
-                                        placeholder="Your email address"
-                                        className="w-full px-3 py-2 bg-white text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-slate-400"
-                                    />
-                                    <motion.button
-                                        className="w-full py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium transition-colors duration-200"
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                    >
-                                        Subscribe
-                                    </motion.button>
-                                </div>
-                            </div>
+                            <EmailBox title="Daily Brief" description="Get our top stories delivered to your inbox every morning at 6 AM."
+                                      bg="bg-slate-900" btnColor="btn-error"/>
                         </motion.div>
                     </div>
                 </div>
@@ -402,21 +385,8 @@ const TheChronicle = () => {
                         <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto font-light">
                             Join over 250,000 readers who trust The Chronicle for authoritative journalism and insightful analysis
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-                            <input
-                                type="email"
-                                placeholder="Enter your email address"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className="flex-grow px-4 py-3 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-400"
-                            />
-                            <motion.button
-                                className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-medium transition-colors duration-200 tracking-wider uppercase text-sm"
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                Subscribe
-                            </motion.button>
+                        <div className="flex flex-col items-center gap-4  mx-auto">
+                            <EmailListForm btnColor="btn-error"/>
                         </div>
                         <p className="text-sm text-slate-400 mt-4">
                             Free newsletter • No spam • Unsubscribe anytime

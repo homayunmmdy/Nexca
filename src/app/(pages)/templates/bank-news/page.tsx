@@ -16,6 +16,7 @@ import {
 } from "react-icons/fi";
 import {LatestLinearPost} from "@/components/organisms";
 import LatestPosts from "@/app/(pages)/templates/(components)/LatestPosts";
+import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
 
 const BankNewsPage = () => {
 
@@ -306,32 +307,8 @@ const BankNewsPage = () => {
             <LatestPosts />
 
             {/* Newsletter Signup */}
-            <motion.section
-              className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-6 text-white"
-              variants={itemVariants}
-            >
-              <h3 className="text-lg font-bold mb-2">Stay Informed</h3>
-              <p className="text-blue-100 text-sm mb-4">
-                Get the latest banking and financial news delivered to your
-                inbox daily.
-              </p>
-
-              <div className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-2 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
-                />
-                <motion.button
-                  className="w-full bg-white text-blue-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Subscribe Now
-                </motion.button>
-              </div>
-            </motion.section>
-
+            <EmailBox title="Stay Informed" description="Get the latest banking and financial news delivered to your
+                inbox daily." bg="bg-gradient-to-r from-blue-600 to-blue-700" btnColor="btn-outline-ghost"/>
             {/* Market Summary */}
             <motion.section
               className="bg-white rounded-xl p-6 shadow-sm"
