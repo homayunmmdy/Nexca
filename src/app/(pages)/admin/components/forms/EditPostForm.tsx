@@ -177,9 +177,8 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             value={formData.imgAlt}
             onChange={handler.trakeChange}
             placeholder="Describe the image for accessibility (alt text)"
-            tooltip="Alt text helps screen readers describe images. If left blank, the image will be ignored by screen readers."
           />
-          <div className="text-xs text-warning mb-2">Alt text is important for accessibility. Please provide a meaningful description, or leave blank if the image is decorative.</div>
+          <div className="text-xs text-warning mb-2">Alt text helps screen readers describe images. If left blank, the image will be ignored by screen readers.</div>
           <div id="tiptap-style">
             <label htmlFor="body" className="label">
               Body
