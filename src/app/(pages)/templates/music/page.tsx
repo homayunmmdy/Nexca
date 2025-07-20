@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa";
 import {IoIosFlash} from "react-icons/io";
 import Image from "next/image";
+import EmailListForm from "@/components/organisms/EmailListForm";
 
 export default function MusicHomepage() {
     const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -872,29 +873,10 @@ const containerVariants = {
                         <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
                             Get the latest music releases, artist news, and exclusive content delivered straight to your inbox.
                         </p>
+                        <div className="flex justify-center">
+                            <EmailListForm btnColor="btn-primary"/>
+                        </div>
 
-                        {isSubscribed ? (
-                            <div className="bg-green-500/20 border border-green-400/50 rounded-2xl p-6 max-w-md mx-auto">
-                                <p className="text-green-300 font-semibold">🎉 Successfully subscribed!</p>
-                                <p className="text-green-200 text-sm mt-1">Welcome to the SoundWave family!</p>
-                            </div>
-                        ) : (
-                            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="Enter your email"
-                                    className="flex-1 px-6 py-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-400"
-                                />
-                                <button
-                                    onClick={handleEmailSubmit}
-                                    className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 whitespace-nowrap"
-                                >
-                                    Subscribe
-                                </button>
-                            </div>
-                        )}
 
                         <p className="text-white/50 text-sm mt-6">
                             No spam, unsubscribe anytime. Your privacy is important to us.

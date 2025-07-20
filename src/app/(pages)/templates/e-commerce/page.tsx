@@ -16,6 +16,7 @@ import {
     FiArrowRight
 } from 'react-icons/fi';
 import Image from "next/image";
+import EmailListForm from "@/components/organisms/EmailListForm";
 
 // Mock data
 const featuredProducts = [
@@ -422,19 +423,8 @@ export default function EcommerceTemplate() {
                         <p className="text-xl text-blue-100 mb-8">
                             Get the latest updates on new products, exclusive offers, and style tips
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                            />
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
-                            >
-                                Subscribe
-                            </motion.button>
+                        <div className="flex flex-col  gap-4 items-center mx-auto">
+                            <EmailListForm btnColor="btn-info"/>
                         </div>
                     </motion.div>
                 </div>
