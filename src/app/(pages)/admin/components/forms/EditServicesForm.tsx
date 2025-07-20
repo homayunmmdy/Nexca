@@ -25,15 +25,18 @@ const EditServicesForm = ({ data }: { data: ServicesCashType }) => {
   const { data: services } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
 
   const handler = new FormHandler(setFormData, SERVICES_API_URL, router);
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>
-    services.map((service: ServicesCashType) => {
-      if (service.secid === formData.secid) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!EDITMODE) {
+      // Only check for duplicate secid when creating
+      const duplicate = services?.some((service: ServicesCashType) => service.secid === formData.secid);
+      if (duplicate) {
         toast.error("Service id already exist try another");
-        e.preventDefault();
-      } else {
-        handler.submit(e, formData, data._id);
+        return;
       }
-    });
+    }
+    handler.submit(e, formData, data._id);
+  };
 
   return (
     <>
