@@ -14,6 +14,8 @@ import {
   FiTrendingDown,
   FiTrendingUp,
 } from "react-icons/fi";
+import {LatestLinearPost} from "@/components/organisms";
+import LatestPosts from "@/app/(pages)/templates/(components)/LatestPosts";
 
 const BankNewsPage = () => {
 
@@ -300,45 +302,8 @@ const BankNewsPage = () => {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            {/* Popular Articles */}
-            <motion.section
-              className="bg-white rounded-xl p-6 shadow-sm"
-              variants={itemVariants}
-            >
-              <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                <FiTrendingUp className="w-5 h-5 mr-2 text-red-500" />
-                Most Popular
-              </h3>
-
-              <div className="space-y-4">
-                {popularNews.map((article, index) => (
-                  <motion.div
-                    key={article.id}
-                    className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer group transition-colors"
-                    whileHover={{ x: 5 }}
-                  >
-                    <div className="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-sm font-bold text-gray-600">
-                      {index + 1}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-medium text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                        {article.title}
-                      </h4>
-                      <div className="flex items-center space-x-2 mt-2 text-xs text-gray-500">
-                        <span className="bg-gray-100 px-2 py-1 rounded">
-                          {article.category}
-                        </span>
-                        <span className="flex items-center">
-                          <FiEye className="w-3 h-3 mr-1" />
-                          {article.views}
-                        </span>
-                        <span>{article.time}</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.section>
+            {/* Latest Posts */}
+            <LatestPosts />
 
             {/* Newsletter Signup */}
             <motion.section

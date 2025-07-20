@@ -20,7 +20,8 @@ function LinearCard({ data }: { data: PostsCashType }) {
   return (
     <motion.div
       variants={itemVariants}
-      className="pb-4 border-b border-base-300 last:border-b-0 last:pb-0 hover:bg-base-300 p-3 rounded-lg transition-colors cursor-pointer"
+      whileHover={{ x: 5 }}
+      className="pb-4 group border-b border-base-300 last:border-b-0 last:pb-0 hover:bg-base-300 p-3 rounded-lg transition-colors cursor-pointer"
     >
       <h4 className="font-semibold  mb-2 line-clamp-2 hover:text-blue-600 transition-colors">
         {data.title}
@@ -28,7 +29,7 @@ function LinearCard({ data }: { data: PostsCashType }) {
       <div className="flex items-center justify-between text-sm ">
         <div className="flex items-center space-x-3">
           
-            <span className="flex items-center">
+            <span className="flex items-center bg-base-300 p-2 rounded-xl">
               <FiUser data-testid="user-icon" className="mr-1" size={12} />
               <span data-testid="author-sec">{data.author ? data.author : 'unknown'}</span>
             </span>
