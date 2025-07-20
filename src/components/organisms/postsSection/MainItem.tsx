@@ -16,7 +16,7 @@ const MainItem = ({ post }: { post: PostsCashType }) => {
           >
             <Image
               src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
-              alt={post.title}
+              alt={post.imgAlt || ""}
               title={post.title.slice(0, 60)}
               width={500}
               height={270}

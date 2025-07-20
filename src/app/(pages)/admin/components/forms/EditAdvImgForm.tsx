@@ -104,7 +104,10 @@ const EditAdvImgForm = ({ data }: { data: ImgAdvCashType }) => {
               value={formData.imgAlt}
               color="input-primary"
               onChange={handler.trakeChange}
+              placeholder="Describe the image for accessibility (alt text)"
+              tooltip="Alt text helps screen readers describe images. If left blank, the image will be ignored by screen readers."
             />
+            <div className="text-xs text-warning mb-2">Alt text is important for accessibility. Please provide a meaningful description, or leave blank if the image is decorative.</div>
             <Button type="submit" color="btn-primary" className="w-full block md:hidden" >
               {EDITMODE ? "Save" : "create"}
             </Button>

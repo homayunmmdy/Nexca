@@ -4,17 +4,19 @@ import { FaLink } from "react-icons/fa";
 
 const ImagePreview = ({
   imgurl,
+  alt = "",
   title,
   onChange,
 }: {
   imgurl: string;
+  alt?: string;
   title: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => (
   <>
     <Image
       src={!imgurl ? "/static/Image/logo.jpg" : imgurl}
-      alt={title}
+      alt={typeof alt === "string" ? alt : ""}
       title={title}
       height={390.938}
       width={695}

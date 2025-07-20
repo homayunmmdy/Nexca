@@ -18,6 +18,11 @@ const mapsSchema = new Schema(
             type: String,
             required: true,
         },
+        imgAlt: {
+            type: String,
+            trim: true,
+            default: ""
+        },
         country: {
             type: String,
             trim: true,

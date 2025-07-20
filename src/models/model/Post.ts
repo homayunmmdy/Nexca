@@ -8,6 +8,7 @@ import { defaultSchemaOptions } from "../schemaOptions"; // Importing default sc
  * @typedef {Object} PostSchema
  * @property {string} title - The title of the post. Should be a non-empty string.
  * @property {string} imgurl - The URL of the image associated with the post. Must be a valid URL.
+ * @property {string} imgAlt - The alternative text for the image associated with the post.
  * @property {string} description - A brief description of the post.
  * @property {string} section - The section or category the post belongs to.
  * @property {string} services - The services related to the post.
@@ -30,6 +31,11 @@ const postSchema = new Schema(
     imgurl: {
       type: String,
       required: true,
+    },
+    imgAlt: {
+      type: String,
+      trim: true,
+      default: ""
     },
     description: {
       type: String,

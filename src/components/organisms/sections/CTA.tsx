@@ -12,15 +12,15 @@ function CTA() {
                         <h2 className="text-base font-semibold text-indigo-400 tracking-wide uppercase">Get started
                             now</h2>
                         <div className="inline-flex items-end justify-center w-full text-center mx-auto">
-                            <Image src="/static/Image/user1.jpg" width={48} height={48} alt=''
+                            <Image src="/static/Image/user1.jpg" width={48} height={48} alt="User 1 avatar"
                                  className="absolute transform translate-x-24 ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-white"/>
-                            <Image src="/static/Image/user2.jpg" width={48} height={48} alt=''
+                            <Image src="/static/Image/user2.jpg" width={48} height={48} alt="User 2 avatar"
                                  className="absolute transform -translate-x-24 -ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-white"/>
-                            <Image src="/static/Image/user3.webp" width={48} height={48} alt=''
+                            <Image src="/static/Image/user3.webp" width={48} height={48} alt="User 3 avatar"
                                  className="absolute transform -translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-white"/>
-                            <Image src="/static/Image/user4.webp" width={48} height={48} alt=''
+                            <Image src="/static/Image/user4.webp" width={48} height={48} alt="User 4 avatar"
                                  className="absolute transform translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-white"/>
-                            <Image src="/static/Image/user5.webp" width={48} height={48} alt=''
+                            <Image src="/static/Image/user5.webp" width={48} height={48} alt=""
                                  className="rounded-full w-20 h-20 md:w-24 md:h-24 border-4 border-white relative"/>
                         </div>
                         <p className="mt-1 text-4xl font-extrabold sm:text-5xl sm:tracking-tight lg:text-6xl">Discover

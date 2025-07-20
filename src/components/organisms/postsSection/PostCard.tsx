@@ -12,7 +12,7 @@ const PostCard = ({ post }: { post: any }) => {
           <figure className="px-5 pt-5">
             <Image
               src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
-              alt=""
+              alt={post.imgAlt || ""}
               width={662.172}
               height={372.469}
               loading='lazy'

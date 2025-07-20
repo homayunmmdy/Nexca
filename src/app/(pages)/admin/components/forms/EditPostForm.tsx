@@ -32,6 +32,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
     section: EDITMODE ? post.section : "1",
     services: EDITMODE ? post.services : "1",
     imgurl: EDITMODE ? post.imgurl : "",
+    imgAlt: EDITMODE ? post.imgAlt : "",
     categories: EDITMODE ? post.categories ?? [] : [],
     masterEditor: master ? true : false,
     source: EDITMODE ? post.source : "",
@@ -162,9 +163,23 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
         <div className="w-full md:w-1/2">
           <ImagePreview
             imgurl={formData.imgurl}
+            alt={formData.imgAlt}
             title={formData.title}
             onChange={handler.trakeChange}
           />
+          <Input
+            type="text"
+            id="imgAlt"
+            name="imgAlt"
+            label="Image Alt Text"
+            className="w-full mb-2"
+            color="input-primary"
+            value={formData.imgAlt}
+            onChange={handler.trakeChange}
+            placeholder="Describe the image for accessibility (alt text)"
+            tooltip="Alt text helps screen readers describe images. If left blank, the image will be ignored by screen readers."
+          />
+          <div className="text-xs text-warning mb-2">Alt text is important for accessibility. Please provide a meaningful description, or leave blank if the image is decorative.</div>
           <div id="tiptap-style">
             <label htmlFor="body" className="label">
               Body

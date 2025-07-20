@@ -32,7 +32,7 @@ const NewsBody = ({ post }: { post: any }) => {
         className="aspect-video w-full rounded-3xl py-3"
         src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
         title={post.title}
-        alt={post.title}
+        alt={post.imgAlt || ""}
         width={662.172}
         height={372.469}
         loading="eager"
