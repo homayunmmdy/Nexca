@@ -33,6 +33,7 @@ export type MapsCashType = {
   province: string;
   source?: string;
   author?: string;
+  imgAlt?: string;
 } & BaseType;
 
 export type ReleaseCashType = {
