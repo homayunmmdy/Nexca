@@ -12,6 +12,7 @@ import StarterKit from "@tiptap/starter-kit";
 import React, { useCallback } from "react";
 import { GrOrderedList } from "react-icons/gr";
 import { IoMdCode, IoMdLink } from "react-icons/io";
+import DragHandle from '@tiptap/extension-drag-handle-react'
 import {
   MdFormatItalic,
   MdFormatListBulleted,
@@ -70,6 +71,7 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
 
       return;
     }
+    
 
     // update link
     editor
@@ -92,6 +94,8 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
     ? Math.round((100 / limit) * editor.storage.characterCount.characters())
     : 0;
 
+
+
   if (!editor) {
     return null;
   }
@@ -105,7 +109,9 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
-          className={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
+          className={
+            editor.isActive("heading", { level: 2 }) ? "is-active" : ""
+          }
         >
           H1
         </Button>
@@ -115,7 +121,9 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 2 }).run()
           }
-          className={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
+          className={
+            editor.isActive("heading", { level: 2 }) ? "is-active" : ""
+          }
         >
           H2
         </Button>
@@ -126,7 +134,9 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           onClick={() =>
             editor.chain().focus().toggleHeading({ level: 3 }).run()
           }
-          className={editor.isActive("heading", { level: 3 }) ? "is-active" : ""}
+          className={
+            editor.isActive("heading", { level: 3 }) ? "is-active" : ""
+          }
         >
           H3
         </Button>
@@ -238,7 +248,16 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
           <MdOutlineHorizontalRule size={20} />
         </Button>
       </div>
-      <EditorContent editor={editor} className="prose max-w-none" id="news_body"/>
+      <DragHandle editor={editor}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+        </svg>
+      </DragHandle>
+      <EditorContent
+        editor={editor}
+        className="prose max-w-none"
+        id="news_body"
+      />
 
       <div
         className={`character-count${
