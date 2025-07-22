@@ -794,11 +794,11 @@ export const CountriesMapData:CountriesMapDataType[] = [
     //     name: 'South Sudan',
     //     code: 'SS'
     // },
-    // {
-    //     secid: '160',
-    //     name: 'Eswatini',
-    //     code: 'SZ'
-    // },
+    {
+        secid: '160',
+        name: 'Sweden',
+        code: 'SE'
+    },
     // {
     //     secid: '161',
     //     name: 'Togo',

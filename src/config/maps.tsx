@@ -453,3 +453,90 @@ export const AD_MAP_DATA = [
         name: 'Escaldes-Engordany'
     }
 ];
+
+export const SE_MAP_DATA = [
+    {
+        secid: '1',
+        name: 'Stockholm'
+    },
+    {
+        secid: '2',
+        name: 'Västerbotten'
+    },
+    {
+        secid: '3',
+        name: 'Norrbotten'
+    },
+    {
+        secid: '4',
+        name: 'Uppsala'
+    },
+    {
+        secid: '5',
+        name: 'Södermanland'
+    },
+    {
+        secid: '6',
+        name: 'Östergötland'
+    },
+    {
+        secid: '7',
+        name: 'Jönköping'
+    },
+    {
+        secid: '8',
+        name: 'Kronoberg'
+    },
+    {
+        secid: '9',
+        name: 'Kalmar'
+    },
+    {
+        secid: '10',
+        name: 'Gotland'
+    },
+    {
+        secid: '11',
+        name: 'Blekinge'
+    },
+    {
+        secid: '12',
+        name: 'Skåne'
+    },
+    {
+        secid: '13',
+        name: 'Halland'
+    },
+    {
+        secid: '14',
+        name: 'Västra Götaland'
+    },
+    {
+        secid: '15',
+        name: 'Värmland'
+    },
+    {
+        secid: '16',
+        name: 'Örebro'
+    },
+    {
+        secid: '17',
+        name: 'Västmanland'
+    },
+    {
+        secid: '18',
+        name: 'Dalarna'
+    },
+    {
+        secid: '19',
+        name: 'Gävleborg'
+    },
+    {
+        secid: '20',
+        name: 'Västernorrland'
+    },
+    {
+        secid: '21',
+        name: 'Jämtland'
+    }
+];
