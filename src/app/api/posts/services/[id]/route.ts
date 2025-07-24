@@ -8,5 +8,5 @@ export async function GET(
 ) {
   const { id } = params;
   const handler = new RequestHandler(PostModel, PostsCash);
-  return handler.GetByField("templates", id);
+  return handler.GetByField("services", id);
 }

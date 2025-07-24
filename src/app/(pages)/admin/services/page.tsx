@@ -9,6 +9,7 @@ import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import React from "react";
+import { CgFeed } from "react-icons/cg";
 import { CiEdit } from "react-icons/ci";
 
 const Services: React.FC = () => {
@@ -62,7 +63,7 @@ const Services: React.FC = () => {
                 <tr key={item.id}>
                   <td>{item.secid}</td>
                   <td>{item.name}</td>
-                  <td>{postCounts?.[item.secid] || 0}</td>
+                  <td><Link href={`${process.env.NEXT_PUBLIC_API_URL}${RouteConfig.admin.services.posts}/${item.secid}`}>{postCounts?.[item.secid] || 0}</Link></td>
                   <td>
                     <Link href={`${process.env.NEXT_PUBLIC_API_URL}${RouteConfig.admin.services.base}/${item._id}`}>
                       <Button color="btn-warning" className="mb-2 me-2">

@@ -142,25 +142,26 @@ class RequestHandler<
     }
   }
 
-  /**
-   * @function Get
-   * @description Get a data from posts in database that match the templates id
-   * @param {string} id - The id of the template in the post
-   * @returns {NextResponse} - The response with the data or error
-   */
-  async GetByTemplate(templateId: string) {
+/**
+ * @function GetByField
+ * @description Get documents filtered by a specific field and value
+ * @param {string} field - The field to filter by (e.g., 'templates', 'services', 'section')
+ * @param {string} value - The value to match in the specified field
+ * @returns {NextResponse} - The response with the filtered data or error
+ */
+  async GetByField(field :string,templateId: string) {
     try {
       if (process.env.NEXT_PUBLIC_STATUS === DEV_MODE) {
         // Filter cache by template ID
         const documents = this.Cache.filter(
-          (doc: any) => doc.templates === templateId
+          (doc: any) => doc[field] === templateId
         );
         return NextResponse.json<T[]>({ data: documents } as any, {
           status: 200,
         });
       } else {
         // Query database for posts with matching template ID
-        const documents = await this.Model.find({ templates: templateId });
+        const documents = await this.Model.find({ field: templateId });
         return NextResponse.json<T[]>({ data: documents } as any, {
           status: 200,
         });

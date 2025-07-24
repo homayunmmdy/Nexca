@@ -25,6 +25,7 @@ const RouteConfig = {
         },
         services: {
             base: "/admin/services",
+            posts: "/admin/services/posts",
             new: "/admin/services/new"
         },
         settings: {
