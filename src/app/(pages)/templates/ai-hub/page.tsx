@@ -1,8 +1,12 @@
 "use client";
 import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
+import { ErrorText } from "@/components/atoms";
+import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
+import { POST_API_URL } from "@/config/apiConstants";
+import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiTrendingUp } from "react-icons/fi";
 import LatestPosts from "../(components)/LatestPosts";
 import TabContent from "../(components)/TabContent";
@@ -13,100 +17,17 @@ import MainSec from "./components/MainSec";
 
 const AINewsHub = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
+  const [posts, setPosts] = useState(data?.data || []);
 
-  const latestNews: PostsCashType[] = [
-    {
-      _id: "1",
-      title: "section 10 Microsoft Copilot Integration Reaches 100 Million Users",
-      description:
-        "Enterprise adoption surges as AI-powered productivity tools become mainstream across Fortune 500 companies.",
-      imgurl:
-        "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop",
-      body: "test",
-      categories: [
-        {
-          id: 128283283,
-          name: "category 1",
-        },
-      ],
-      section : "10",
-      templates : '1',
-      services : '1',
-      author: "Alex Thompson",
-       createdAt: "2024-05-22T08:56:49.785Z",
-    updatedAt: "2024-05-22T08:56:49.785Z",
-    __v: 0,
-    },
-    {
-      _id: "2",
-      title: "section 11 Google's Gemini Ultra Beats GPT-4 in Mathematical Reasoning",
-      description:
-        "New benchmarks reveal significant improvements in logical problem-solving and complex mathematical computations.",
-      imgurl:
-        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop",
-      body: "test",
-      section : "11",
-      templates : '1',
-      services : '1',
-      author: "Alex Thompson",
-       createdAt: "2024-05-22T08:56:49.785Z",
-    updatedAt: "2024-05-22T08:56:49.785Z",
-    __v: 0,
-    },
-    {
-      _id: "3",
-      title: "section 12 AI-Powered Drug Discovery Leads to Cancer Breakthrough",
-      description:
-        "Machine learning algorithms identify promising compounds 1000x faster than traditional methods.",
-      body: "test",
-      imgurl:
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
-      section : "12",
-      templates : '1',
-      services : '1',
-      author: "Alex Thompson",
-       createdAt: "2024-05-22T08:56:49.785Z",
-    updatedAt: "2024-05-22T08:56:49.785Z",
-    __v: 0,
-    },
-    {
-      _id: '4',
-      title: "section 13 Tesla's FSD Beta Achieves Human-Level Performance",
-      description:
-        "Latest autonomous driving metrics show AI matching human drivers in complex urban scenarios.",
-      body: "test",
-      imgurl:
-        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400&h=250&fit=crop",
-     section : "13",
-      templates : '1',
-      services : '1',
-      author: "Alex Thompson",
-       createdAt: "2024-05-22T08:56:49.785Z",
-    updatedAt: "2024-05-22T08:56:49.785Z",
-    __v: 0,
-    },
-        {
-      _id: '5',
-      title: "section 14 Tesla's FSD Beta Achieves Human-Level Performance",
-      description:
-        "Latest autonomous driving metrics show AI matching human drivers in complex urban scenarios.",
-      body: "test",
-      imgurl:
-        "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=400&h=250&fit=crop",
-     section : "14",
-      templates : '1',
-      services : '1',
-      author: "Alex Thompson",
-       createdAt: "2024-05-22T08:56:49.785Z",
-    updatedAt: "2024-05-22T08:56:49.785Z",
-    __v: 0,
-    }
-  ];
+  useEffect(() => {
+    setPosts(data?.data || []);
+  }, [data]);
 
   // Filter news based on active category
-  const filteredNews = latestNews.filter((article) => {
+  const filteredNews = posts.filter((item: PostsCashType) => {
     if (activeCategory === "all") return true;
-    return article.section === activeCategory;
+    return item.section === activeCategory;
   });
 
   const containerVariants = {
@@ -174,23 +95,17 @@ const AINewsHub = () => {
                 </h2>
               </motion.div>
 
-              {filteredNews.length > 0 ? (
-                <div className="space-y-6">
-                  {filteredNews.map((article) => (
-                    <VerticalCard data={article} key={article._id} />
-                  ))}
-                </div>
-              ) : (
+              <div className="space-y-6">
+                {filteredNews.map((item: PostsCashType) => (
+                  <VerticalCard data={item} key={item._id} />
+                ))}
+              </div>
+              {filteredNews.length == 0 && (
                 <motion.div
                   variants={itemVariants}
                   className="bg-base-200 rounded-xl p-8 text-center"
                 >
-                  <h3 className="text-xl font-medium mb-2">
-                    No articles found
-                  </h3>
-                  <p className="text-base-100">
-                    There are no articles in this category yet.
-                  </p>
+                  <ErrorText>No post found</ErrorText>
                 </motion.div>
               )}
             </motion.div>
