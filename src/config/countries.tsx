@@ -993,7 +993,12 @@ export const CountriesMapData:CountriesMapDataType[] = [
     //     secid: '199',
     //     name: 'Faroe Islands',
     //     code: 'FO'
-    // }
+    // },
+    {
+        secid: '200',
+        name: 'Greenland',
+        code: 'GL'
+    }
 ]
 
 export type CountriesMapDataType = {

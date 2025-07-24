@@ -607,3 +607,26 @@ export const DE_MAP_DATA = [
         name: 'Thuringia'
     }
 ];
+
+export const GL_MAP_DATA = [
+    {
+        secid: '1',
+        name: 'Avannaata'
+    },
+    {
+        secid: '2',
+        name: 'Kujalleq'
+    },
+    {
+        secid: '3',
+        name: 'Qeqertalik'
+    },
+    {
+        secid: '4',
+        name: 'Qeqqata'
+    },
+    {
+        secid: '5',
+        name: 'Sermersooq'
+    }
+];

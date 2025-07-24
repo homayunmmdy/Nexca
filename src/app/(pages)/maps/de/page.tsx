@@ -4,7 +4,7 @@ import MapContent from "@/app/(pages)/maps/components/MapContent";
 import { DE_MAP_CONTENT} from "@/config/Constants";
 import DEMap from "@/app/(pages)/maps/components/DEMap";
 
-const AlbaniaPage = () => {
+const GermanyPage = () => {
     const [activeProvinceId, setActiveProvinceId] = useState<string | null>('3');
     return (
         <>
@@ -16,4 +16,4 @@ const AlbaniaPage = () => {
     );
 };
 
-export default AlbaniaPage;
+export default GermanyPage;
