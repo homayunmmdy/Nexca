@@ -3,7 +3,7 @@ import {
   AD_MAP_DATA,
   AF_MAP_DATA,
   AL_MAP_DATA, DE_MAP_DATA,
-  DZ_MAP_DATA, GL_MAP_DATA,
+  DZ_MAP_DATA, GL_MAP_DATA, IS_MAP_DATA,
   SE_MAP_DATA,
 } from "@/config/maps";
 
@@ -19,6 +19,8 @@ export const getProvinceData = (selectedService: string) => {
       return AD_MAP_DATA; // Andorra
     case "62":
       return DE_MAP_DATA; // Germany
+    case "73":
+      return IS_MAP_DATA; // Iceland
     case "160":
       return SE_MAP_DATA; // Sweden
     case "200":

@@ -630,3 +630,38 @@ export const GL_MAP_DATA = [
         name: 'Sermersooq'
     }
 ];
+
+export const IS_MAP_DATA = [
+    {
+        secid: '1',
+        name: 'Capital Region'
+    },
+    {
+        secid: '2',
+        name: 'Southern Peninsula'
+    },
+    {
+        secid: '3',
+        name: 'Western Region'
+    },
+    {
+        secid: '4',
+        name: 'Westfjords'
+    },
+    {
+        secid: '5',
+        name: 'Northwestern Region'
+    },
+    {
+        secid: '6',
+        name: 'Northeastern Region'
+    },
+    {
+        secid: '7',
+        name: 'Eastern Region'
+    },
+    {
+        secid: '8',
+        name: 'Southern Region'
+    }
+];

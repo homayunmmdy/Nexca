@@ -359,11 +359,11 @@ export const CountriesMapData:CountriesMapDataType[] = [
     //     name: 'Hungary',
     //     code: 'HU'
     // },
-    // {
-    //     secid: '73',
-    //     name: 'Iceland',
-    //     code: 'IS'
-    // },
+    {
+        secid: '73',
+        name: 'Iceland',
+        code: 'IS'
+    },
     // {
     //     secid: '74',
     //     name: 'India',
