@@ -37,42 +37,43 @@ class RequestHandler<
     this.Cache = Cache;
   }
 
-    /**
+  /**
    * @function FindPaginated
    * @description Retrieve paginated data from the database or cache
    * @param {number} skip - The number of documents to skip
    * @param {number} limit - The number of documents to retrieve
    * @returns {Promise<{ data: T[], total: number }>} - The paginated data and total count
    */
-    async FindPaginated(skip: number, limit: number) {
-      try {
-        if (process.env.NEXT_PUBLIC_STATUS === DEV_MODE) {
-          // In DEV_MODE, simulate pagination using the cache
-          const total = this.Cache.length;
-          
-           // Add sorting by createdAt in descending order
-          const data = this.Cache
-          .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()) // Sort descending
+  async FindPaginated(skip: number, limit: number) {
+    try {
+      if (process.env.NEXT_PUBLIC_STATUS === DEV_MODE) {
+        // In DEV_MODE, simulate pagination using the cache
+        const total = this.Cache.length;
+
+        // Add sorting by createdAt in descending order
+        const data = this.Cache.sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        ) // Sort descending
           .slice(skip, skip + limit);
 
-          return { data, total };
-        } else {
-          // In production, use the database
-          const data = await this.Model.find()
+        return { data, total };
+      } else {
+        // In production, use the database
+        const data = await this.Model.find()
           .sort({ createdAt: -1 }) // Sort by createdAt in descending order
           .skip(skip)
           .limit(limit)
           .exec();
 
-          const total = await this.Model.countDocuments();
-          return { data, total };
-        }
-      } catch (error) {
-        console.error(error);
-        throw new Error("Error fetching paginated data");
+        const total = await this.Model.countDocuments();
+        return { data, total };
       }
+    } catch (error) {
+      console.error(error);
+      throw new Error("Error fetching paginated data");
     }
-  
+  }
 
   /**
    * @function GetAll
@@ -142,6 +143,35 @@ class RequestHandler<
   }
 
   /**
+   * @function Get
+   * @description Get a data from posts in database that match the templates id
+   * @param {string} id - The id of the template in the post
+   * @returns {NextResponse} - The response with the data or error
+   */
+  async GetByTemplate(templateId: string) {
+    try {
+      if (process.env.NEXT_PUBLIC_STATUS === DEV_MODE) {
+        // Filter cache by template ID
+        const documents = this.Cache.filter(
+          (doc: any) => doc.templates === templateId
+        );
+        return NextResponse.json<T[]>({ data: documents } as any, {
+          status: 200,
+        });
+      } else {
+        // Query database for posts with matching template ID
+        const documents = await this.Model.find({ templates: templateId });
+        return NextResponse.json<T[]>({ data: documents } as any, {
+          status: 200,
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      return this.ErrorResponse(error);
+    }
+  }
+
+  /**
    * @function PUT
    * @description Update a single data in the database
    * @param {string} id - The id of the data
@@ -203,5 +233,3 @@ class RequestHandler<
 }
 
 export default RequestHandler;
-
-

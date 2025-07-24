@@ -17,7 +17,7 @@ import MainSec from "./components/MainSec";
 
 const AINewsHub = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-  const data = useFetch(ALL_POSTS_QUERY_KEY, POST_API_URL);
+  const data = useFetch('all templates 2', '/api/posts/templates/2');
   const [posts, setPosts] = useState(data?.data || []);
 
   useEffect(() => {
