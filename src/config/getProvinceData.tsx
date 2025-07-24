@@ -2,7 +2,7 @@
 import {
   AD_MAP_DATA,
   AF_MAP_DATA,
-  AL_MAP_DATA,
+  AL_MAP_DATA, DE_MAP_DATA,
   DZ_MAP_DATA,
   SE_MAP_DATA,
 } from "@/config/maps";
@@ -17,6 +17,8 @@ export const getProvinceData = (selectedService: string) => {
       return DZ_MAP_DATA; // Algeria
     case "4":
       return AD_MAP_DATA; // Andorra
+    case "62":
+      return DE_MAP_DATA; // Germany
     case "160":
       return SE_MAP_DATA; // Sweden
     default:

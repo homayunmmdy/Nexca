@@ -304,11 +304,11 @@ export const CountriesMapData:CountriesMapDataType[] = [
     //     name: 'Georgia',
     //     code: 'GE'
     // },
-    // {
-    //     secid: '62',
-    //     name: 'Germany',
-    //     code: 'DE'
-    // },
+    {
+        secid: '62',
+        name: 'Germany',
+        code: 'DE'
+    },
     // {
     //     secid: '63',
     //     name: 'Ghana',

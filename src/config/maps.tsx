@@ -540,3 +540,70 @@ export const SE_MAP_DATA = [
         name: 'Jämtland'
     }
 ];
+
+export const DE_MAP_DATA = [
+    {
+        secid: '1',
+        name: 'Baden-Württemberg'
+    },
+    {
+        secid: '2',
+        name: 'Bavaria'
+    },
+    {
+        secid: '3',
+        name: 'Berlin'
+    },
+    {
+        secid: '4',
+        name: 'Brandenburg'
+    },
+    {
+        secid: '5',
+        name: 'Bremen'
+    },
+    {
+        secid: '6',
+        name: 'Hamburg'
+    },
+    {
+        secid: '7',
+        name: 'Hesse'
+    },
+    {
+        secid: '8',
+        name: 'Lower Saxony'
+    },
+    {
+        secid: '9',
+        name: 'Mecklenburg-Western Pomerania'
+    },
+    {
+        secid: '10',
+        name: 'North Rhine-Westphalia'
+    },
+    {
+        secid: '11',
+        name: 'Rhineland-Palatinate'
+    },
+    {
+        secid: '12',
+        name: 'Saarland'
+    },
+    {
+        secid: '13',
+        name: 'Saxony'
+    },
+    {
+        secid: '14',
+        name: 'Saxony-Anhalt'
+    },
+    {
+        secid: '15',
+        name: 'Schleswig-Holstein'
+    },
+    {
+        secid: '16',
+        name: 'Thuringia'
+    }
+];
