@@ -11,7 +11,7 @@ import NotFound from "../../../[...not_found]/not-found";
 import NewsBody from "../components/NewsBody";
 import PostMeta from "../components/PostMeta";
 import PostSeclton from "../PostSkelton";
-import { FiBookmark } from "react-icons/fi";
+
 
 const slugify = (title: string) =>
   title
@@ -24,14 +24,7 @@ const Post: React.FC = () => {
   const { id, slug } = useParams(); // Get `id` and `slug` from the URL
 
   const { data: post, isLoading, isError } = useSinglePost(id);
-  const [bookmarked, setBookmarked] = useState(false);
 
-  useEffect(() => {
-    if (post && post._id) {
-      const bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
-      setBookmarked(bookmarks.includes(post._id));
-    }
-  }, [post]);
 
   useEffect(() => {
     if (post && post.title) {
@@ -50,18 +43,7 @@ const Post: React.FC = () => {
     return NotFound();
   }
 
-  const handleBookmark = () => {
-    if (!post || !post._id) return;
-    let bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
-    if (bookmarks.includes(post._id)) {
-      bookmarks = bookmarks.filter((id: string) => id !== post._id);
-      setBookmarked(false);
-    } else {
-      bookmarks.push(post._id);
-      setBookmarked(true);
-    }
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-  };
+
 
   return (
     <>
@@ -72,16 +54,7 @@ const Post: React.FC = () => {
           description={post.description}
           createdAt={post.createdAt}
         />
-        <div className="flex items-center gap-2 px-4 py-2">
-          <button
-            aria-label={bookmarked ? "Remove Bookmark" : "Add Bookmark"}
-            onClick={handleBookmark}
-            className={`text-xl ${bookmarked ? "text-yellow-500" : "text-gray-400"}`}
-          >
-            <FiBookmark />
-          </button>
-          <span>{bookmarked ? "Bookmarked" : "Bookmark this post"}</span>
-        </div>
+
         <div className="py-8">
           <Container className=" flex flex-col gap-8  md:flex-row">
             <div className="w-full md:w-3/4">
