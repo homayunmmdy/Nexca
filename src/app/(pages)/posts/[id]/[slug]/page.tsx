@@ -6,11 +6,12 @@ import { MainHead } from "@/components/molecules";
 import useSinglePost from "@/hooks/useSinglePost";
 import { SectionController } from "@/util/controller/sectionsController";
 import { useParams, useRouter } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NotFound from "../../../[...not_found]/not-found";
 import NewsBody from "../components/NewsBody";
 import PostMeta from "../components/PostMeta";
 import PostSeclton from "../PostSkelton";
+
 
 const slugify = (title: string) =>
   title
@@ -23,6 +24,7 @@ const Post: React.FC = () => {
   const { id, slug } = useParams(); // Get `id` and `slug` from the URL
 
   const { data: post, isLoading, isError } = useSinglePost(id);
+
 
   useEffect(() => {
     if (post && post.title) {
@@ -41,6 +43,8 @@ const Post: React.FC = () => {
     return NotFound();
   }
 
+
+
   return (
     <>
       <PostMeta post={post} slug={slug} />
@@ -50,6 +54,7 @@ const Post: React.FC = () => {
           description={post.description}
           createdAt={post.createdAt}
         />
+
         <div className="py-8">
           <Container className=" flex flex-col gap-8  md:flex-row">
             <div className="w-full md:w-3/4">
