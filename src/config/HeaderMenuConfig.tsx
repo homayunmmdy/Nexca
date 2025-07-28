@@ -46,6 +46,23 @@ const HeaderMenuConfig = (): HeaderMenuConfigType[] => [
   },
   {
     id: 3,
+    name: "Posts",
+    link: "#",
+    children: [
+      {
+        id: 1,
+        name: "My Liked Posts",
+        href: RouteConfig.posts.liked,
+      },
+      {
+        id: 2,
+        name: "Most Liked Posts",
+        href: RouteConfig.posts.mostLiked,
+      },
+    ],
+  },
+  {
+    id: 4,
     name: "Templates",
     link: "/templates",
     children: [

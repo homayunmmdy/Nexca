@@ -2,6 +2,7 @@ import {LinearAds} from "@/components/ads";
 import {
     Banner,
     MainPosts,
+    MostLikedPosts,
     PostsSec,
     SingleCardSec,
     SliderSec,
@@ -59,6 +60,10 @@ const DemoPage: React.FC = () => {
                         <LinearAds id={1}/>
                     </div>
                 </div>
+                
+                {/* Most Liked Posts Section */}
+                <MostLikedPosts limit={5} className="my-8" />
+                
             </Container>
             <SectionController sectionId={5}>
             <SliderSec/>

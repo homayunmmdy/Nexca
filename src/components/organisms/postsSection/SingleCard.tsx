@@ -1,5 +1,5 @@
 "use client";
-import { Button, SectionsTitle } from "@/components/atoms";
+import { Button, SectionsTitle, LikeButton } from "@/components/atoms";
 import { SINGLE_POST_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import SingleCardSkeleton from "./skeleton/SingleCardSkeleton";
+
 const SingleCard: React.FC = () => {
   const { data, loading } = useGetSection(SINGLE_POST_QUERY_KEY, -1, 3);
 
@@ -38,13 +39,20 @@ const SingleCard: React.FC = () => {
             <div className="card-body">
               <h3 className="card-title">{post.title.slice(0, 70)}</h3>
               <p>{post.description.slice(0, 150)}</p>
-              <Link
-                href={postLink}
-                title={post.title.slice(0, 70)}
-                className="card-actions justify-end"
-              >
-                <Button color="btn-primary">Read Now</Button>
-              </Link>
+              <div className="card-actions justify-between items-center">
+                <LikeButton 
+                  postId={post._id} 
+                  postTitle={post.title}
+                  initialLikes={post.likes || 0}
+                  size="sm"
+                />
+                <Link
+                  href={postLink}
+                  title={post.title.slice(0, 70)}
+                >
+                  <Button color="btn-primary">Read Now</Button>
+                </Link>
+              </div>
             </div>
           </Link>
         );
