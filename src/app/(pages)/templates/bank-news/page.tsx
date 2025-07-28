@@ -1,7 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   FiBarChart,
   FiBookmark,
@@ -17,6 +17,8 @@ import {
 import {LatestLinearPost} from "@/components/organisms";
 import LatestPosts from "@/app/(pages)/templates/(components)/LatestPosts";
 import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
+import PostCard from "@/components/organisms/postsSection/PostCard";
+import UnderMain from "@/app/(pages)/templates/bank-news/components/UnderMain";
 
 const BankNewsPage = () => {
 
@@ -32,78 +34,6 @@ const BankNewsPage = () => {
     time: "2 hours ago",
     trending: true,
   };
-
-  const latestNews = [
-    {
-      id: 1,
-      title: "Major Banks Report Strong Q1 Earnings Despite Economic Headwinds",
-      excerpt:
-        "JPMorgan Chase, Bank of America, and Wells Fargo exceed analyst expectations with robust lending growth and improved credit quality metrics.",
-      image:
-        "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop",
-      category: "Banking",
-      readTime: "3 min read",
-      time: "4 hours ago",
-      views: "12.5K",
-    },
-    {
-      id: 2,
-      title: "Treasury Yields Surge Following Stronger-Than-Expected Jobs Data",
-      excerpt:
-        "10-year Treasury yields climb to highest level in six weeks as employment figures suggest continued economic resilience.",
-      image:
-        "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=250&fit=crop",
-      category: "Markets",
-      readTime: "2 min read",
-      time: "6 hours ago",
-      views: "8.7K",
-    },
-    {
-      id: 3,
-      title: "Central Bank Digital Currency Pilot Program Enters Phase Two",
-      excerpt:
-        "Federal Reserve expands CBDC testing with additional financial institutions as digital dollar development accelerates.",
-      image:
-        "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=250&fit=crop",
-      category: "Digital Assets",
-      readTime: "5 min read",
-      time: "8 hours ago",
-      views: "15.2K",
-    },
-  ];
-
-  const popularNews = [
-    {
-      id: 1,
-      title: "Housing Market Shows Signs of Recovery Amid Lower Mortgage Rates",
-      views: "25.3K",
-      time: "1 day ago",
-      category: "Real Estate",
-    },
-    {
-      id: 2,
-      title:
-        "Regional Banks Face Renewed Scrutiny Over Commercial Real Estate Exposure",
-      views: "18.7K",
-      time: "2 days ago",
-      category: "Banking",
-    },
-    {
-      id: 3,
-      title:
-        "Inflation Data Signals Potential Shift in Monetary Policy Direction",
-      views: "22.1K",
-      time: "3 days ago",
-      category: "Economy",
-    },
-    {
-      id: 4,
-      title: "Cryptocurrency Regulation Framework Moves Forward in Congress",
-      views: "31.5K",
-      time: "4 days ago",
-      category: "Regulation",
-    },
-  ];
 
   const marketData = [
     { name: "S&P 500", value: "4,327.78", change: "+1.2%", positive: true },
@@ -136,36 +66,6 @@ const BankNewsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Market Ticker */}
-      <motion.div
-        className="bg-gray-900 text-white py-2 overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-      >
-        <div className="flex animate-pulse">
-          <div className="flex space-x-8 whitespace-nowrap">
-            {marketData.map((item, index) => (
-              <div key={index} className="flex items-center space-x-2 text-sm">
-                <span className="font-medium">{item.name}</span>
-                <span className="text-gray-300">{item.value}</span>
-                <span
-                  className={`flex items-center ${
-                    item.positive ? "text-green-400" : "text-red-400"
-                  }`}
-                >
-                  {item.positive ? (
-                    <FiTrendingUp className="w-3 h-3 mr-1" />
-                  ) : (
-                    <FiTrendingDown className="w-3 h-3 mr-1" />
-                  )}
-                  {item.change}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
@@ -225,78 +125,10 @@ const BankNewsPage = () => {
                 <h2 className="text-2xl font-bold text-gray-900">
                   Latest News
                 </h2>
-                <motion.button
-                  className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center"
-                  whileHover={{ x: 5 }}
-                >
-                  View All <FiChevronRight className="w-4 h-4 ml-1" />
-                </motion.button>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {latestNews.map((article, index) => (
-                  <motion.article
-                    key={article.id}
-                    className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                    variants={itemVariants}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="relative h-48 overflow-hidden">
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        width={250}
-                        height={192}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute top-3 left-3">
-                        <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-2 py-1 rounded text-xs font-medium">
-                          {article.category}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="p-4">
-                      <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
-                        {article.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                        {article.excerpt}
-                      </p>
-
-                      <div className="flex items-center justify-between text-xs text-gray-500">
-                        <div className="flex items-center space-x-3">
-                          <span className="flex items-center">
-                            <FiClock className="w-3 h-3 mr-1" />
-                            {article.time}
-                          </span>
-                          <span>{article.readTime}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="flex items-center">
-                            <FiEye className="w-3 h-3 mr-1" />
-                            {article.views}
-                          </span>
-                          <motion.button
-                            className="p-1 hover:bg-gray-100 rounded"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                          >
-                            <FiBookmark className="w-3 h-3" />
-                          </motion.button>
-                          <motion.button
-                            className="p-1 hover:bg-gray-100 rounded"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                          >
-                            <FiShare2 className="w-3 h-3" />
-                          </motion.button>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.article>
-                ))}
+                  <UnderMain />
               </div>
             </motion.section>
           </div>
