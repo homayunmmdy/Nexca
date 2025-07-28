@@ -18,5 +18,37 @@
       "sizes": "512x512",
       "type": "image/png"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "/static/Image/screenshots/1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "description": "Admin of Nexca"
+    },
+    {
+      "src": "/static/Image/screenshots/2.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "Default Template page"
+    },
+    {
+      "src": "/static/Image/screenshots/3.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "List of the posts in admin"
+    },
+    {
+      "src": "/static/Image/screenshots/4.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "World Map page"
+    },
+    {
+      "src": "/static/Image/screenshots/5.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "description": "Afghanistan Map as inside each country in world map"
+    }
   ]
 }
