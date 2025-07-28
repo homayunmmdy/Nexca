@@ -1,3 +1,4 @@
+import { LikeButton } from "@/components/atoms";
 import { PostsCashType } from "@/types/CashTypes";
 import { postLinkGenerator } from "@/util/ServerUtil";
 import Image from "next/image";
@@ -24,6 +25,14 @@ const PostCard = ({ post }: { post: any }) => {
               {post.title.slice(0, 70).slice(0, 100)}
             </h2>
             <p>{post.description.slice(0, 60)}</p>
+            <div className="card-actions justify-center mt-2">
+              <LikeButton 
+                postId={post._id} 
+                postTitle={post.title}
+                initialLikes={post.likes || 0}
+                size="sm"
+              />
+            </div>
           </section>
         </Link>
       </article>
