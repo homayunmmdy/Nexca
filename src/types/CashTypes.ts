@@ -22,7 +22,7 @@ export type PostsCashType = {
   masterEditor?: boolean;
   source?: string;
   author?: string;
-
+  likes?: number; // Add likes field
 } & BaseType;
 
 export type MapsCashType = {

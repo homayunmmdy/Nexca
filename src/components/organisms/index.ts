@@ -20,6 +20,7 @@ export { default as StatsSection } from "./sections/StatsSection";
 // posts sections
 export { default as LatestLinearPost } from "./postsSection/LatestLinearPost";
 export { default as MainPosts } from "./postsSection/MainPosts";
+export { default as MostLikedPosts } from "./postsSection/MostLikedPosts";
 export { default as MorePostsSec } from "./postsSection/MorePosts";
 export { default as MostCommentedLinearPost } from "./postsSection/MostCommentedLinearPost";
 export { default as PostsSec } from "./postsSection/Posts";

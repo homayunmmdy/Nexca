@@ -48,6 +48,10 @@ const RouteConfig = {
             }
         }
     },
+    posts: {
+        liked: "/liked-posts",
+        mostLiked: "/most-liked-posts"
+    }
 };
 
 export default RouteConfig;
