@@ -19,6 +19,7 @@ import LatestPosts from "@/app/(pages)/templates/(components)/LatestPosts";
 import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
 import PostCard from "@/components/organisms/postsSection/PostCard";
 import UnderMain from "@/app/(pages)/templates/bank-news/components/UnderMain";
+import MainSec from "@/app/(pages)/templates/bank-news/components/MainSec";
 
 const BankNewsPage = () => {
 
@@ -77,47 +78,7 @@ const BankNewsPage = () => {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Hero Section */}
-            <motion.section variants={itemVariants}>
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-64 sm:h-80">
-                  <Image
-                    src={heroNews.image}
-                    alt={heroNews.title}
-                    width={800}
-                    height={320}
-                    fetchPriority="high"
-                    loading="eager"
-                    priority
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                      <FiTrendingUp className="w-3 h-3 mr-1" />
-                      TRENDING
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center space-x-2 text-white/80 text-sm mb-2">
-                      <span className="bg-blue-600 px-2 py-1 rounded text-xs">
-                        {heroNews.category}
-                      </span>
-                      <span className="flex items-center">
-                        <FiClock className="w-3 h-3 mr-1" />
-                        {heroNews.time}
-                      </span>
-                      <span>{heroNews.readTime}</span>
-                    </div>
-                    <h1 className="text-white text-xl sm:text-2xl font-bold leading-tight">
-                      {heroNews.title}
-                    </h1>
-                    <p className="text-white/90 text-sm mt-2 line-clamp-2">
-                      {heroNews.excerpt}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.section>
+            <MainSec />
 
             {/* Latest News */}
             <motion.section variants={itemVariants}>
