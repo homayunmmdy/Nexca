@@ -1,48 +1,12 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
-import React, { useState } from "react";
-import {
-  FiBarChart,
-  FiBookmark,
-  FiChevronRight,
-  FiClock,
-  FiDollarSign,
-  FiEye,
-  FiGlobe,
-  FiShare2,
-  FiTrendingDown,
-  FiTrendingUp,
-} from "react-icons/fi";
-import {LatestLinearPost} from "@/components/organisms";
+import { motion } from "framer-motion";
 import LatestPosts from "@/app/(pages)/templates/(components)/LatestPosts";
 import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
-import PostCard from "@/components/organisms/postsSection/PostCard";
 import UnderMain from "@/app/(pages)/templates/bank-news/components/UnderMain";
 import MainSec from "@/app/(pages)/templates/bank-news/components/MainSec";
 import MarketSummary from "@/app/(pages)/templates/bank-news/components/MarketSummary";
 
 const BankNewsPage = () => {
-
-  const heroNews = {
-    title:
-      "Federal Reserve Signals Potential Rate Cut as Inflation Shows Signs of Cooling",
-    excerpt:
-      "Fed Chair Jerome Powell indicates central bank may consider easing monetary policy in upcoming meetings as core inflation metrics trend downward for third consecutive month.",
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=400&fit=crop",
-    category: "Policy",
-    readTime: "4 min read",
-    time: "2 hours ago",
-    trending: true,
-  };
-
-  const marketData = [
-    { name: "S&P 500", value: "4,327.78", change: "+1.2%", positive: true },
-    { name: "DOW JONES", value: "33,945.58", change: "+0.8%", positive: true },
-    { name: "NASDAQ", value: "13,581.72", change: "-0.3%", positive: false },
-    { name: "10Y TREASURY", value: "4.52%", change: "+0.05%", positive: true },
-  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },

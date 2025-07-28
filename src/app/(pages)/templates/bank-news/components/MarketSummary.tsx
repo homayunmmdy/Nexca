@@ -34,7 +34,7 @@ const MarketSummary = () => {
                 </h3>
 
                 <div className="space-y-3">
-                    {data.map((post : PostsCashType) => (
+                    {data?.map((post : PostsCashType) => (
                         <BulletPost post={post} key={post._id} />
                     ))}
                 </div>
