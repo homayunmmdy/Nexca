@@ -4,8 +4,11 @@ import Image from "next/image";
 import { FiTrendingUp} from "react-icons/fi";
 import {motion} from "framer-motion";
 import {PostsCashType} from "@/types/CashTypes";
+import {postLinkGenerator} from "@/util/ServerUtil";
+import Link from "next/link";
 
 const ImageCard = ({post } : {post : PostsCashType}) => {
+    const postLink = postLinkGenerator(post._id, post.title);
     const itemVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: {
@@ -19,7 +22,7 @@ const ImageCard = ({post } : {post : PostsCashType}) => {
     };
     return (
         <motion.section variants={itemVariants}>
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Link href={postLink} title={post.title} className="relative block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="relative ">
                     <Image
                         src={post.imgurl}
@@ -43,7 +46,7 @@ const ImageCard = ({post } : {post : PostsCashType}) => {
 
                     </div>
                 </div>
-            </div>
+            </Link>
         </motion.section>
     );
 };

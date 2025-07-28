@@ -20,6 +20,7 @@ import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
 import PostCard from "@/components/organisms/postsSection/PostCard";
 import UnderMain from "@/app/(pages)/templates/bank-news/components/UnderMain";
 import MainSec from "@/app/(pages)/templates/bank-news/components/MainSec";
+import MarketSummary from "@/app/(pages)/templates/bank-news/components/MarketSummary";
 
 const BankNewsPage = () => {
 
@@ -103,47 +104,7 @@ const BankNewsPage = () => {
             <EmailBox title="Stay Informed" description="Get the latest banking and financial news delivered to your
                 inbox daily." bg="bg-gradient-to-r from-blue-600 to-blue-700" ElementColor="ghost"/>
             {/* Market Summary */}
-            <motion.section
-              className="bg-white rounded-xl p-6 shadow-sm"
-              variants={itemVariants}
-            >
-              <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                <FiBarChart className="w-5 h-5 mr-2 text-green-500" />
-                Market Summary
-              </h3>
-
-              <div className="space-y-3">
-                {marketData.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-between p-3 rounded-lg bg-gray-50"
-                  >
-                    <div>
-                      <div className="font-medium text-sm text-gray-900">
-                        {item.name}
-                      </div>
-                      <div className="text-lg font-bold text-gray-900">
-                        {item.value}
-                      </div>
-                    </div>
-                    <div
-                      className={`text-right ${
-                        item.positive ? "text-green-600" : "text-red-600"
-                      }`}
-                    >
-                      <div className="flex items-center justify-end">
-                        {item.positive ? (
-                          <FiTrendingUp className="w-4 h-4 mr-1" />
-                        ) : (
-                          <FiTrendingDown className="w-4 h-4 mr-1" />
-                        )}
-                        <span className="font-medium">{item.change}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.section>
+             <MarketSummary />
           </div>
         </motion.div>
       </main>
