@@ -1,10 +1,11 @@
 {
-  "name": "Nexca , The Ultimate Admin Panel for Agencies and Individuals",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "name": "Nexca",
   "short_name": "Nexca",
   "description": "Nexca Your Lovely Admin Panel",
-  "start_url": "/",
   "display": "standalone",
-  "background_color": "#fff",
   "theme_color": "#4338CA",
   "icons": [
     {
