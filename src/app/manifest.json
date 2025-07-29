@@ -8,47 +8,56 @@
   "display": "standalone",
   "theme_color": "#4338CA",
   "icons": [
+      {
+      "src": "/static/icons/maskable_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
-      "src": "/static/Image/icon-192x192.png",
-      "sizes": "192x192",
+      "src": "/static/icons/1024x1024.png",
+      "sizes": "1024x1024",
       "type": "image/png"
     },
     {
-      "src": "/static/Image/icon-512x512.png",
+      "src": "/static/icons/512x512.png",
       "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icons/192x192.png",
+      "sizes": "192x192",
       "type": "image/png"
     }
   ],
   "screenshots": [
     {
-      "src": "/static/Image/screenshots/1.png",
-      "sizes": "1280x720",
+      "src": "/static/screenshots/1.png",
+      "sizes": "1920x913",
       "type": "image/png",
+      "form_factor": "wide",
       "description": "Admin of Nexca"
     },
     {
-      "src": "/static/Image/screenshots/2.png",
-      "sizes": "1920x1080",
+      "src": "/static/screenshots/2.png",
+      "sizes": "1920x913",
       "type": "image/png",
+      "form_factor": "wide",
       "description": "Default Template page"
     },
     {
-      "src": "/static/Image/screenshots/3.png",
-      "sizes": "1920x1080",
+      "src": "/static/screenshots/3.png",
+      "sizes": "1920x913",
       "type": "image/png",
-      "description": "List of the posts in admin"
-    },
-    {
-      "src": "/static/Image/screenshots/4.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
+      "form_factor": "wide",
       "description": "World Map page"
     },
     {
-      "src": "/static/Image/screenshots/5.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "description": "Afghanistan Map as inside each country in world map"
+      "src": "/static/screenshots/4.jpg",
+      "sizes": "1080x2289",
+      "type": "image/jpg",
+      "form_factor": "narrow",
+      "description": "Landing page of Nexca"
     }
   ]
 }
