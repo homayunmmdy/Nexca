@@ -3,23 +3,15 @@ import { Button, Input, Textarea } from "@/components/atoms";
 import SpeechToText from "@/components/organisms/SpeechToText";
 import {
   MAPS_API_URL,
-  POST_API_URL,
-  SECTIONS_API_URL,
-  SERVICES_API_URL,
 } from "@/config/apiConstants";
-import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
-import useFetch from "@/hooks/useFetch";
-import {MapsCashType, PostsCashType} from "@/types/CashTypes";
+import {MapsCashType} from "@/types/CashTypes";
 import FormHandler from "@/util/handler/FormHandler";
 import { checkMaster } from "@/util/Util";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { CategoryList, SelectField, SelectFiledSkeleton } from "../elements";
+import {  SelectField } from "../elements";
 import { FormLayout, ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
-import CategoriesForm from "./CategoriesForm";
-import { templatesData } from "@/config/tempaltes";
-import {AF_MAP_DATA} from "@/config/maps";
 import {CountriesMapData} from "@/config/countries";
 import {getProvinceData} from "@/config/getProvinceData";
 

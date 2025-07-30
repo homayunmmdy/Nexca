@@ -18,6 +18,7 @@ import { FormLayout, ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
 import CategoriesForm from "./CategoriesForm";
 import { templatesData } from "@/config/tempaltes";
+import {getSectionsData} from "@/config/getSectionsData";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -96,7 +97,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
                   label="Section"
                   value={formData.section}
                   onChange={handler.trakeChange}
-                  options={sections}
+                  options={getSectionsData(sections, formData.templates)}
                 />
               )}
             </div>
@@ -169,10 +170,10 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             <label htmlFor="body" className="label">
               Body
             </label>
-            <TiptapEditor
-              content={formData.body}
-              onChange={handler.trakeBodyChanges}
-            />
+            {/*<TiptapEditor*/}
+            {/*  content={formData.body}*/}
+            {/*  onChange={handler.trakeBodyChanges}*/}
+            {/*/>*/}
           </div>
           {!master && (
             <Input
