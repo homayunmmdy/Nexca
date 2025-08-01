@@ -149,19 +149,22 @@ class RequestHandler<
  * @param {string} value - The value to match in the specified field
  * @returns {NextResponse} - The response with the filtered data or error
  */
-  async GetByField(field :string,templateId: string) {
+  async GetByField(field :string,id: string) {
     try {
       if (process.env.NEXT_PUBLIC_STATUS === DEV_MODE) {
         // Filter cache by template ID
         const documents = this.Cache.filter(
-          (doc: any) => doc[field] === templateId
+          (doc: any) => doc[field] === id
         );
         return NextResponse.json<T[]>({ data: documents } as any, {
           status: 200,
         });
       } else {
         // Query database for posts with matching template ID
-        const documents = await this.Model.find({ field: templateId });
+         const query: Record<string, unknown> = {};
+         query[field] = id;
+
+        const documents = await this.Model.find(query as any);
         return NextResponse.json<T[]>({ data: documents } as any, {
           status: 200,
         });
