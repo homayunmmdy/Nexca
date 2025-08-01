@@ -1,6 +1,7 @@
 import nextPwa from "next-pwa";
+import {DEV_MODE} from "./src/config/Constants";
 
-const isDev = process.env.NEXT_PUBLIC_STATUS === "dev";
+const isDev = process.env.NEXT_PUBLIC_STATUS === DEV_MODE;
 
 const nextConfig = {
   images: {

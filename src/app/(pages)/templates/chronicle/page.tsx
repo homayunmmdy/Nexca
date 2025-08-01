@@ -7,6 +7,8 @@ import {FaXTwitter} from "react-icons/fa6";
 import Image from "next/image";
 import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
 import EmailListForm from "@/components/organisms/EmailListForm";
+import UnderMain from "@/app/(pages)/templates/bank-news/components/UnderMain";
+import LatestReports from "@/app/(pages)/templates/chronicle/components/LatestReports";
 
 
 const TheChronicle = () => {
@@ -258,59 +260,11 @@ const TheChronicle = () => {
                                     In-depth analysis and breaking developments from around the world
                                 </p>
                             </div>
-                            <motion.a
-                                href="#"
-                                className="hidden sm:flex items-center text-slate-900 font-medium hover:underline"
-                                whileHover={{ x: 4 }}
-                            >
-                                View All <FaArrowRight  className="ml-1 h-4 w-4" />
-                            </motion.a>
                         </div>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {latestNews.map((article, index) => (
-                            <motion.article
-                                key={article.id}
-                                className="group cursor-pointer bg-white"
-                                variants={itemVariants}
-                                whileHover={{ y: -4 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                <div className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                    <div className="relative overflow-hidden">
-                                        <Image
-                                            src={article.image}
-                                            alt={article.title}
-                                            width={384}
-                                            height={192}
-                                            loading='lazy'
-                                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                        <div className="absolute top-3 left-3">
-                      <span className="px-2 py-1 bg-black/70 backdrop-blur-sm text-white text-xs font-medium uppercase tracking-wider">
-                        {article.category}
-                      </span>
-                                        </div>
-                                    </div>
-                                    <div className="p-6">
-                                        <h3 className="text-xl font-serif font-bold text-slate-900 mb-3 group-hover:text-slate-700 transition-colors duration-200 leading-tight">
-                                            {article.title}
-                                        </h3>
-                                        <p className="text-slate-600 mb-4 line-clamp-3 font-light">
-                                            {article.excerpt}
-                                        </p>
-                                        <div className="flex items-center justify-between text-sm text-slate-500 border-t border-slate-100 pt-4">
-                                            <div className="flex items-center space-x-4">
-                                                <span className="font-medium">{article.author}</span>
-                                                <span>{article.readTime}</span>
-                                            </div>
-                                            <span>{article.publishedAt}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </motion.article>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <LatestReports />
                     </div>
                 </div>
             </motion.section>
