@@ -1,7 +1,6 @@
 import nextPwa from "next-pwa";
-import {DEV_MODE} from "./src/config/Constants";
 
-const isDev = process.env.NEXT_PUBLIC_STATUS === DEV_MODE;
+const isDev = process.env.NEXT_PUBLIC_STATUS === "dev";
 
 const nextConfig = {
   images: {
@@ -26,5 +25,10 @@ const nextConfig = {
 export default isDev ? nextConfig : nextPwa({
   dest: "public",
   register: true,
-  skipWaiting: true,
+  runtimeCaching: [
+    {
+      urlPattern: /\/manifest\.json$/,
+      handler: 'NetworkFirst'
+    }
+  ]
 })(nextConfig);
