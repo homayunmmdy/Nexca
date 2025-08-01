@@ -170,10 +170,10 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             <label htmlFor="body" className="label">
               Body
             </label>
-            {/*<TiptapEditor*/}
-            {/*  content={formData.body}*/}
-            {/*  onChange={handler.trakeBodyChanges}*/}
-            {/*/>*/}
+            <TiptapEditor
+              content={formData.body}
+              onChange={handler.trakeBodyChanges}
+            />
           </div>
           {!master && (
             <Input

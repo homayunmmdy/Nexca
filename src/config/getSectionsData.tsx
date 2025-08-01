@@ -5,7 +5,7 @@ export const getSectionsData = (sections: SectionCashType[], templateId: string)
     const finalData: FinalSectionCashType[] = [];
 
     sections?.map((section: SectionCashType) => {
-        return section.activate && section.templates == templateId && finalData.push({
+        return section.templates == templateId && finalData.push({
             secid: section.secid,
             name: section.name
         });
