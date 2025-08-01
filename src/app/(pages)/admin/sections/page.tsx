@@ -59,7 +59,6 @@ useEffect(() => {
             <table className="table table-zebra my-2">
               <thead>
               <tr>
-                <th>id</th>
                 <th>Name of Section</th>
                 <th>Template ID</th>
                 <th>activate</th>
@@ -74,7 +73,6 @@ useEffect(() => {
 
                 return (
                   <tr key={item._id}>
-                    <td>{item.secid}</td>
                     <td>{item.name}</td>
                     <td>{item.templates}</td>
                     <td>
