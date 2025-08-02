@@ -2,6 +2,7 @@ import { Button } from "@/components/atoms";
 import { DeleteBtn } from "@/components/molecules";
 import RouteConfig from "@/config/RouteConfig";
 import { PostsCashType } from "@/types/CashTypes";
+import { postLinkGenerator } from "@/util/ServerUtil";
 import Image from "next/image";
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
@@ -11,13 +12,14 @@ interface Props {
   baseURL: string;
 }
 const ItemsTable = ({ post, baseURL }: Props) => {
+  const postLink = postLinkGenerator(post._id, post.title);
   return (
     <tr key={post._id}>
       <td>
         <div className="flex flex-wrap items-center gap-3 sm:flex-nowrap">
           <div className="avatar">
             <Link
-              href={`/${baseURL}/${post._id}`}
+              href={postLink}
               className="mask mask-squircle h-32 w-32"
             >
               <Image
