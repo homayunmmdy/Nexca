@@ -18,14 +18,14 @@ export const features: FeaturesType[] = [
     title: "Full CRUD",
     icon: <SlEnergy color="#FFF" size={24} />,
     description:
-      "With Nexca panel you can Create Read Update Delete All your posts, services , ads and more without any coding knowlege",
+      "With Nexca panel you can Create Read Update Delete All your posts, services , ads and more without any coding knowledge",
   },
   {
     id: 2,
-    title: "Access All your posts Easily",
+    title: "Access All posts",
     icon: <BiBookContent color="#FFF" size={24} />,
     description:
-      "Inside of your panel you can see all your post and be able to modifiy theme. Also you can send any post to anywhere on your site",
+      "Inside of your panel you can see all your post and be able to modified theme. Also you can send any post to anywhere on your site",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const features: FeaturesType[] = [
     title: "Services",
     icon: <CgWebsite color="#FFF" size={24} />,
     description:
-      "Add Services page for your webiste from your panel and move you post into that.",
+      "Add Services page for your website from your panel and move you post into that.",
   },
 ];
 

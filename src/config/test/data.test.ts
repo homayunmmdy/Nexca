@@ -24,7 +24,7 @@ describe("Features Data", () => {
   it("should contain the expected feature titles", () => {
     const expectedTitles = [
       "Full CRUD",
-      "Access All your posts Easily",
+      "Access All posts",
       "FeedBack",
       "Services",
     ];
