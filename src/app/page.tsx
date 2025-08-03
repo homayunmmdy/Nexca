@@ -1,6 +1,7 @@
 import {
   Banner,
-  Companies, CTASec,
+  Companies,
+  CTASec,
   DocsHero,
   EmailList,
   FAQs,
@@ -12,6 +13,34 @@ import {
 import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
+
+/**
+ * LandingPage Component
+ *
+ * This is the main landing page of the website. It includes various sections such as Hero, Features, Companies, etc.
+ * The page is designed to be SEO-friendly and optimized for user engagement.
+ *
+ * @returns {React.FC} - Returns a React Functional Component representing the landing page.
+ */
+
+const LandingPage: React.FC = () => {
+  return (
+    <>
+      <Hero />
+      <Features />
+      <DocsHero />
+      <CTASec />
+      <Companies />
+      <StatsSection />
+      <FAQs />
+      <Banner />
+      <PriceList />
+      <EmailList />
+    </>
+  );
+};
+
+export default LandingPage;
 
 /**
  * Metadata configuration for the landing page.
@@ -51,33 +80,3 @@ export const metadata: Metadata = {
     },
   },
 };
-
-/**
- * LandingPage Component
- *
- * This is the main landing page of the website. It includes various sections such as Hero, Features, Companies, etc.
- * The page is designed to be SEO-friendly and optimized for user engagement.
- *
- * @returns {React.FC} - Returns a React Functional Component representing the landing page.
- */
-
-const LandingPage: React.FC = () => {
-  return (
-    <>
-      {/* Hidden h1 tag for SEO purposes to include the title in the DOM */}
-      <h1 className="hidden">{SiteConfig.title}</h1>
-      <Hero />
-      <Features />
-      <DocsHero />
-      <CTASec />
-      <Companies />
-      <StatsSection />
-      <FAQs />
-      <Banner />
-      <PriceList />
-      <EmailList />
-    </>
-  );
-};
-
-export default LandingPage;

@@ -12,7 +12,7 @@ const SiteConfig = {
   lang: "en",
   dir: "ltr",
   slogan:
-    "Experience the power of an open-source CMS built with Next.js. Effortlessly manage content, streamline workflows, and connect with your audience—perfect for agencies, bloggers, and creators.",
+    "Experience the power of an open-source CMS built with Next.js. Effortlessly manage content, streamline workflows, and connect with your audience. Perfect for agencies, bloggers, and creators.",
   // media
   email: "homayoun763@gmail.com",
   github: "https://github.com/homayunmmdy/Nexca",
