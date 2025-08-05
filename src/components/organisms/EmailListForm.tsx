@@ -19,7 +19,6 @@ const EmailListForm = ({ color = "primary" }: { color?: AllowedColors }) => {
           type="email"
           id="email"
           name="email"
-          className="text-black"
           value={formData.email}
         />
         <Button className="rounded-full" color={`btn-${color}`} type="submit">

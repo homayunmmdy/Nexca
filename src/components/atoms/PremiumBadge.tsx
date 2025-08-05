@@ -7,6 +7,7 @@ const PremiumBadge = ({ label }: { label: string }) => {
       initial={{ scale: 0.8, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: true }}
+      whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.8, delay: 0.2 }}
       className="inline-block mb-4"
     >
