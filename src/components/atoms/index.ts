@@ -12,3 +12,4 @@ export { default as Spinner } from "./Spinner";
 export { default as Textarea } from "./Textarea";
 export { default as ThemeIcon } from "./ThemeIcon";
 export { default as SkipToMain } from "./SkipToMain";
+export {default as PremiumBadge} from './PremiumBadge'
