@@ -84,13 +84,7 @@ const Hero: React.FC = () => {
             <motion.h1
               variants={contentVariants}
               className="font-bold  leading-tight text-5xl md:text-6xl xl:text-7xl"
-               style={{
-                background: "linear-gradient(135deg, #1e293b 0%, #475569 50%, #1e293b 100%)",
-                backgroundClip: "text",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                textShadow: "0 1px 3px rgba(0, 0, 0, 0.12)",
-              }}
+               
             >
               The content platform{" "}
               <span

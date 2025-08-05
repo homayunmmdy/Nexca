@@ -7,7 +7,7 @@ export { default as Header } from "./Header";
 
 // sections
 export { default as Banner } from "./Banner";
-export { default as Companies } from "./sections/Companies";
+export { default as TechStacks } from "./sections/TechStacks";
 export { default as CTASec } from "./sections/CTA";
 export { default as DocsHero } from "./sections/DocsHero";
 export { default as EmailList } from "./sections/EmailList";
