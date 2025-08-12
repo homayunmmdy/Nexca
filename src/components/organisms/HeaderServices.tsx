@@ -27,7 +27,7 @@ function HeaderServices() {
         ) : (
           data?.map((nav: ServicesCashType) => (
             <li key={nav._id}>
-              <Link href={`/services/${nav._id}`} title={nav.name}>
+              <Link href={`/services/${nav.secid}`} title={nav.name}>
                 {nav.name}
               </Link>
             </li>
