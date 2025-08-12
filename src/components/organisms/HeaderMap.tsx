@@ -14,9 +14,9 @@ function HeaderMap() {
       key={`desktop_menu_item_services`}
       className="mx-1 group static xl:px-1 py-2"
     >
-      <p className="rounded-xl border-2 border-base-100 hover:border-blue-700 hover:bg-base-100 hover:text-indigo-700">
+      <Link href='/maps' className="rounded-xl border-2 border-base-100 hover:border-blue-700 hover:bg-base-100 hover:text-indigo-700">
         Maps
-      </p>
+      </Link>
       <ul className="absolute top-12 right-0 hidden group-hover:flex bg-base-300 rounded-xl p-2.5 w-full gap-2.5 flex-wrap">
          <li key="news service">
           <Link href="/maps" title="Link to World map page">
