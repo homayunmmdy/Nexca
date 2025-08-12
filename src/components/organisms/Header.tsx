@@ -2,7 +2,6 @@
 import { Container, LogoName } from "@/components/atoms";
 import {
   GitHubBtn,
-  GlobalSearchInput,
   HamburgerIcon,
   ThemeBtn,
 } from "@/components/molecules";
@@ -49,7 +48,6 @@ const Header = () => {
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
             <div className="flex items-center gap-2">
               <LogoName />
-              <GlobalSearchInput className="hidden lg:block" />
             </div>
           </div>
           <div className="navbar-center relative hidden lg:flex lg:w-[50%] lg:justify-start">
@@ -57,7 +55,7 @@ const Header = () => {
           </div>
           <div className="navbar-end gap-3 lg:w-[20%]">
             <ThemeBtn />
-            <GitHubBtn />
+            <GitHubBtn aStyle="hidden lg:block"/>
           </div>
         </Container>
       </motion.header>

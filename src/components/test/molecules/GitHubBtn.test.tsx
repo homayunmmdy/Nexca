@@ -32,5 +32,25 @@ describe('Github button', () => {
         const BtnLink = screen.getByTestId('btnLink');
 
         expect(BtnLink).toHaveAttribute('href', 'https://google.com');
-    })
+    });
+    it('should apply custom className to the link when aStyle is provided', () => {
+        const customClass = 'custom-class';
+        render(<GitHubBtn aStyle={customClass} />);
+        const BtnLink = screen.getByTestId('btnLink');
+
+        expect(BtnLink).toHaveClass(customClass);
+    });
+
+    it('should combine default props and custom props correctly', () => {
+        const customClass = 'custom-class';
+        const customLink = 'https://custom.com';
+        render(<GitHubBtn link={customLink} aStyle={customClass} />);
+        const BtnLink = screen.getByTestId('btnLink');
+
+        expect(BtnLink).toHaveAttribute('href', customLink);
+        expect(BtnLink).toHaveClass(customClass);
+        // Verify other default attributes are still present
+        expect(BtnLink).toHaveAttribute('rel','nofollow');
+        expect(BtnLink).toHaveAttribute('aria-label','GitHub button link');
+    });
 })
