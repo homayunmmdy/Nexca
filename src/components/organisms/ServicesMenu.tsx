@@ -4,6 +4,7 @@ import { SERVICES_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { ServicesCashType } from "@/types/CashTypes";
 import { HeaderModeType } from "@/types/entities";
+import classNames from "classnames";
 import { useState } from "react";
 import { MenuItem } from "../atoms";
 import { MenuChildren } from "../molecules";
@@ -28,7 +29,10 @@ const ServicesMenu = ({ type = "desktop" }: { type?: HeaderModeType }) => {
     <li
       key={`desktop_menu_item_services`}
       onClick={() => serviceChildren && toggleItem(serviceId)}
-      className="mx-1 group static xl:px-1 py-2"
+      className={classNames({
+        "mx-1 group static xl:px-1 py-2": type === "desktop",
+        "mx-1 w-3/4": type === "mobile",
+      })}
     >
       <MenuItem name="Services" href="/services/1" type={type} />
       {type === "desktop" ? (

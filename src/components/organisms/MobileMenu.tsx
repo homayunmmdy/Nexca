@@ -3,13 +3,10 @@ import { GitHubBtn, MenuChildren } from "@/components/molecules";
 import { HeaderMenuConfigType } from "@/types/entities";
 import { useState } from "react";
 import { MenuItem } from "../atoms";
+import MapMenu from "./MapMenu";
 import ServicesMenu from "./ServicesMenu";
 
-const MobileMenu = ({
-  nav,
-}: {
-  nav: HeaderMenuConfigType[];
-}) => {
+const MobileMenu = ({ nav }: { nav: HeaderMenuConfigType[] }) => {
   const [activeId, setActiveId] = useState<number | null>(null);
 
   const toggleItem = (id: number) => {
@@ -38,12 +35,9 @@ const MobileMenu = ({
             </li>
           );
         })}
-        <li
-          className="flex items-center gap-3"
-          key={`mobile_menu_item_starter`}
-        >
-          <ServicesMenu type="mobile" />
-        </li>
+
+        <ServicesMenu type="mobile" />
+        <MapMenu type="mobile" />
         <li
           className="flex items-center gap-3"
           key={`mobile_menu_item_starter`}
