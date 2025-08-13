@@ -1,6 +1,7 @@
 "use client";
-import {GitHubBtn, GlobalSearchInput} from "@/components/molecules";
+import { GitHubBtn } from "@/components/molecules";
 import { HeaderMenuConfigType } from "@/types/entities";
+import classNames from "classnames";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -20,8 +21,6 @@ const MobileMenu = ({
   return (
     <nav className="fixed left-0 bg-base-200 top-[80px] z-50 mx-auto w-[90%] sm:w-[70%] md:w-[60%] h-full border-2 border-indigo-700 lg:hidden">
       <ul className="my-3 h-screen overflow-y-auto flex flex-col items-center gap-4 bg-inherit p-2  lg:hidden">
-
-
         {nav?.map((item) => {
           return (
             <li
@@ -29,23 +28,16 @@ const MobileMenu = ({
               onClick={() => item.children && toggleItem(item.id)}
               className="mx-1 w-3/4"
             >
-              {pathname === item.link ? (
-                <Link
+              <Link
                   href={item.link}
                   title={item.link}
-                  className="block w-full rounded-xl bg-indigo-700 p-2 text-center text-white hover:bg-indigo-700"
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                <Link
-                  className="block w-full rounded-xl border-2 border-indigo-700 p-2 text-center"
-                  href={item.link}
-                  title={item.link}
-                >
-                  {item.name}
-                </Link>
-              )}
+                  className={classNames({
+                    'block w-full border-2 rounded-xl border-indigo-700 text-center p-2': true,
+                    'bg-indigo-700 text-white': pathname === item.link
+                  })}
+              >
+                {item.name}
+              </Link>
               {item.children && (
                 <ul
                   className={`grid grid-cols-2 gap-4 mt-2 transition-all duration-300 ease-in-out overflow-hidden 
