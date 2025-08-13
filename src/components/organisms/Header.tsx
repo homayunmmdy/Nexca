@@ -3,7 +3,7 @@ import { Container, LogoName } from "@/components/atoms";
 import { GitHubBtn, HamburgerIcon, ThemeBtn } from "@/components/molecules";
 import { DEV_MODE } from "@/config/Constants";
 import HeaderMenuConfig from "@/config/HeaderMenuConfig";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import DesktopMenu from "./DesktopMenu";
@@ -17,8 +17,6 @@ const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  const shouldReduceMotion = useReducedMotion();
 
   // Check if the environment is production
   const isDev = process.env.NEXT_PUBLIC_STATUS === DEV_MODE;
@@ -47,7 +45,7 @@ const Header = () => {
             </div>
           </div>
           <div className="navbar-center relative hidden lg:flex lg:w-[50%] lg:justify-start">
-            <DesktopMenu pathname={pathname} nav={navBar} />
+            <DesktopMenu nav={navBar} />
           </div>
           <div className="navbar-end gap-3 lg:w-[20%]">
             <ThemeBtn />

@@ -8,7 +8,7 @@ interface Props {
   href: string;
 }
 
-const HorizontalMenuItem = ({ name, href }: Props) => {
+const MenuItem = ({ name, href }: Props) => {
   const pathname = usePathname();
   return (
     <Link
@@ -25,4 +25,4 @@ const HorizontalMenuItem = ({ name, href }: Props) => {
   );
 };
 
-export default HorizontalMenuItem;
+export default MenuItem;

@@ -16,3 +16,4 @@ export { default as ThemeBtn } from "./ThemeBtn";
 export { default as MainHead } from "./MainHead";
 export { default as ThemeFiled } from "./ThemeFiled";
 export { default as BannerTitle } from "./BannerTitle";
+export { default as MenuChildren } from "./MenuChildren";
