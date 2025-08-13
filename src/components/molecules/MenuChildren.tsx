@@ -3,11 +3,7 @@ import Link from "next/link";
 
 // Base props
 interface BaseProps {
-  children: {
-    id?: number;
-    name: string;
-    href: string;
-  }[];
+
   loading?: boolean;
 }
 
@@ -26,9 +22,9 @@ interface MobileProps extends BaseProps {
 // Combined type
 type Props = DesktopProps | MobileProps;
 
-
-
-const HorizontalMenuChildren = (props: Props) => {
+const MenuChildren = (
+  props: Props & { children?: Array<{ name: string; href: string }> }
+) => {
   const { children, loading = false } = props;
   if (!children) return null;
 
@@ -56,7 +52,7 @@ const HorizontalMenuChildren = (props: Props) => {
   const MobileChildren = (
     <ul
       className={`grid grid-cols-2 gap-4 mt-2 transition-all duration-300 ease-in-out overflow-hidden 
-               ${props.type === "mobile" && props.active ? "max-h-screen" : "max-h-0"}`}
+               ${props.type === "mobile" && props.active === props.id ? "max-h-screen" : "max-h-0"}`}
     >
       {children.map((nav) => (
         <li
@@ -73,4 +69,4 @@ const HorizontalMenuChildren = (props: Props) => {
   return props.type === "desktop" ? DesktopChildren : MobileChildren;
 };
 
-export default HorizontalMenuChildren;
+export default MenuChildren;

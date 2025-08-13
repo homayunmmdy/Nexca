@@ -26,11 +26,12 @@ const MobileMenu = ({ nav }: { nav: HeaderMenuConfigType[] }) => {
               <MenuItem name={item.name} href={item.link} type="mobile" />
               {item.children && (
                 <MenuChildren
-                  children={item.children}
                   type="mobile"
                   id={item.id}
                   active={activeId}
-                />
+                >
+                  {item.children}
+                </MenuChildren>
               )}
             </li>
           );

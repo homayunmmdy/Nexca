@@ -16,7 +16,9 @@ const DesktopMenu = ({ nav }: { nav: HeaderMenuConfigType[] }) => {
           >
             <MenuItem name={item.name} href={item.link} />
             {item.children && (
-              <MenuChildren type="desktop" children={item.children} />
+              <MenuChildren type="desktop"  >
+                {item.children}
+              </MenuChildren>
             )}
           </li>
         );

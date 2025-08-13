@@ -33,14 +33,17 @@ const MapMenu = ({ type = "desktop" }: { type?: HeaderModeType }) => {
     >
       <MenuItem name="World Map" href="/maps" type={type} />
       {type === "desktop" ? (
-        <MenuChildren children={countryChildren} type="desktop" />
+        <MenuChildren type="desktop" >
+          {countryChildren}
+        </MenuChildren>
       ) : (
         <MenuChildren
-          children={countryChildren}
           type="mobile"
           id={MapId}
           active={activeId}
-        />
+        >
+          {countryChildren}
+        </MenuChildren>
       )}
     </li>
   );

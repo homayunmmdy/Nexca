@@ -37,18 +37,20 @@ const ServicesMenu = ({ type = "desktop" }: { type?: HeaderModeType }) => {
       <MenuItem name="Services" href="/services/1" type={type} />
       {type === "desktop" ? (
         <MenuChildren
-          children={serviceChildren}
           loading={loading}
           type="desktop"
-        />
+        >
+          {serviceChildren}
+        </MenuChildren>
       ) : (
         <MenuChildren
-          children={serviceChildren}
           loading={loading}
           type="mobile"
           id={serviceId}
           active={activeId}
-        />
+        >
+          {serviceChildren}
+        </MenuChildren>
       )}
     </li>
   );
