@@ -4,17 +4,9 @@ import { SERVICES_QUERY_KEY } from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import { ServicesCashType } from "@/types/CashTypes";
 import { HeaderModeType } from "@/types/entities";
-import classNames from "classnames";
-import { useState } from "react";
-import { MenuItem } from "../atoms";
-import { MenuChildren } from "../molecules";
+import DropdownMenu from "./DropdownMenu";
 
 const ServicesMenu = ({ type = "desktop" }: { type?: HeaderModeType }) => {
-  const [activeId, setActiveId] = useState<number | null>(null);
-
-  const toggleItem = (id: number) => {
-    setActiveId(activeId === id ? null : id);
-  };
   const { data, loading } = useFetch(SERVICES_QUERY_KEY, SERVICES_API_URL);
 
   const serviceChildren = data?.map((nav: ServicesCashType) => ({
@@ -26,33 +18,14 @@ const ServicesMenu = ({ type = "desktop" }: { type?: HeaderModeType }) => {
   const serviceId = 5;
 
   return (
-    <li
-      key={`desktop_menu_item_services`}
-      onClick={() => serviceChildren && toggleItem(serviceId)}
-      className={classNames({
-        "mx-1 group static xl:px-1 py-2": type === "desktop",
-        "mx-1 w-3/4": type === "mobile",
-      })}
-    >
-      <MenuItem name="Services" href="/services/1" type={type} />
-      {type === "desktop" ? (
-        <MenuChildren
-          loading={loading}
-          type="desktop"
-        >
-          {serviceChildren}
-        </MenuChildren>
-      ) : (
-        <MenuChildren
-          loading={loading}
-          type="mobile"
-          id={serviceId}
-          active={activeId}
-        >
-          {serviceChildren}
-        </MenuChildren>
-      )}
-    </li>
+    <DropdownMenu
+      type={type}
+      id={serviceId}
+      menuName="services"
+      menuHref="/services/1"
+      childrenItems={serviceChildren}
+      loading={loading}
+    />
   );
 };
 
