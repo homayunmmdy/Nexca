@@ -1,16 +1,13 @@
 "use client";
-import { GitHubBtn } from "@/components/molecules";
+import { GitHubBtn, MenuChildren } from "@/components/molecules";
 import { HeaderMenuConfigType } from "@/types/entities";
-import Link from "next/link";
 import { useState } from "react";
 import { MenuItem } from "../atoms";
 import ServicesMenu from "./ServicesMenu";
 
 const MobileMenu = ({
-  pathname,
   nav,
 }: {
-  pathname: string;
   nav: HeaderMenuConfigType[];
 }) => {
   const [activeId, setActiveId] = useState<number | null>(null);
@@ -31,25 +28,22 @@ const MobileMenu = ({
             >
               <MenuItem name={item.name} href={item.link} type="mobile" />
               {item.children && (
-                <ul
-                  className={`grid grid-cols-2 gap-4 mt-2 transition-all duration-300 ease-in-out overflow-hidden 
-              ${activeId === item.id ? "max-h-screen" : "max-h-0"}`}
-                >
-                  {item.children.map((nav) => (
-                    <li
-                      key={nav.id}
-                      className="rounded-xl border-2 border-indigo-700 p-2"
-                    >
-                      <Link href={nav.href} title={nav.name}>
-                        {nav.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <MenuChildren
+                  children={item.children}
+                  type="mobile"
+                  id={item.id}
+                  active={activeId}
+                />
               )}
             </li>
           );
         })}
+        <li
+          className="flex items-center gap-3"
+          key={`mobile_menu_item_starter`}
+        >
+          <ServicesMenu type="mobile" />
+        </li>
         <li
           className="flex items-center gap-3"
           key={`mobile_menu_item_starter`}

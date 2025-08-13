@@ -97,10 +97,12 @@ const HeaderMenuConfig = (): HeaderMenuConfigType[] => [
     ],
   },
   {
-    id: 5,
+    id: 4,
     name: "Feed",
     link: "/feed",
   },
+  // The number 5 is services 
+  // The number 6 is maps
 ];
 
 export default HeaderMenuConfig;

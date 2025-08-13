@@ -4,13 +4,11 @@ import { GitHubBtn, HamburgerIcon, ThemeBtn } from "@/components/molecules";
 import { DEV_MODE } from "@/config/Constants";
 import HeaderMenuConfig from "@/config/HeaderMenuConfig";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
-  const pathname = usePathname();
   const navBar = HeaderMenuConfig();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -59,7 +57,7 @@ const Header = () => {
             className="fixed left-0 right-0 w-full top-0 z-10 lg:hidden backdrop-blur h-full"
             onClick={() => setIsOpen(false)}
           ></div>
-          <MobileMenu pathname={pathname} nav={navBar} />
+          <MobileMenu nav={navBar} />
         </>
       )}
     </>

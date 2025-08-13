@@ -15,7 +15,7 @@ const DesktopMenu = ({ nav }: { nav: HeaderMenuConfigType[] }) => {
             className="mx-1 group static xl:px-1 py-2"
           >
             <MenuItem name={item.name} href={item.link} />
-            {item.children && <MenuChildren children={item.children} />}
+            {item.children && <MenuChildren type="desktop" children={item.children} />}
           </li>
         );
       })}
@@ -45,7 +45,7 @@ const MapMenu = () => {
       className="mx-1 group static xl:px-1 py-2"
     >
       <MenuItem name="World Map" href="/maps" />
-      <MenuChildren children={countryChildren} />
+      <MenuChildren children={countryChildren} type="desktop"/>
     </li>
   );
 };
