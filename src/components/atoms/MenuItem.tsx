@@ -6,19 +6,26 @@ import { usePathname } from "next/navigation";
 interface Props {
   name: string;
   href: string;
+  type?: "desktop" | "mobile";
 }
 
-const MenuItem = ({ name, href }: Props) => {
+const MenuItem = ({ name, href, type = 'desktop' }: Props) => {
   const pathname = usePathname();
+  const DesktopClasses = classNames({
+    "rounded-xl border-2 border-base-100 hover:bg-indigo-700 hover:text-white transition-colors ease-in-out":
+      true,
+    "bg-indigo-700 text-white": pathname == href,
+  });
+  
+  const MobileClasses = classNames({
+    "block w-full border-2 rounded-xl border-indigo-700 text-center p-2": true,
+    "bg-indigo-700 text-white": pathname === href,
+  });
   return (
     <Link
       href={href}
       title={name}
-      className={classNames({
-        "rounded-xl border-2 border-base-100 hover:bg-indigo-700 hover:text-white transition-colors ease-in-out":
-          true,
-        "bg-indigo-700 text-white": pathname == href,
-      })}
+      className={type === 'desktop' ? DesktopClasses : MobileClasses}
     >
       {name}
     </Link>

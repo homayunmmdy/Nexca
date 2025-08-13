@@ -1,9 +1,9 @@
 "use client";
 import { GitHubBtn } from "@/components/molecules";
 import { HeaderMenuConfigType } from "@/types/entities";
-import classNames from "classnames";
 import Link from "next/link";
 import { useState } from "react";
+import { MenuItem } from "../atoms";
 
 const MobileMenu = ({
   pathname,
@@ -28,16 +28,7 @@ const MobileMenu = ({
               onClick={() => item.children && toggleItem(item.id)}
               className="mx-1 w-3/4"
             >
-              <Link
-                  href={item.link}
-                  title={item.link}
-                  className={classNames({
-                    'block w-full border-2 rounded-xl border-indigo-700 text-center p-2': true,
-                    'bg-indigo-700 text-white': pathname === item.link
-                  })}
-              >
-                {item.name}
-              </Link>
+              <MenuItem name={item.name} href={item.link} type="mobile" />
               {item.children && (
                 <ul
                   className={`grid grid-cols-2 gap-4 mt-2 transition-all duration-300 ease-in-out overflow-hidden 
@@ -59,8 +50,8 @@ const MobileMenu = ({
           );
         })}
         <li
-            className="flex items-center gap-3"
-            key={`mobile_menu_item_starter`}
+          className="flex items-center gap-3"
+          key={`mobile_menu_item_starter`}
         >
           <GitHubBtn />
         </li>
