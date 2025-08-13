@@ -4,6 +4,7 @@ import { HeaderMenuConfigType } from "@/types/entities";
 import Link from "next/link";
 import { useState } from "react";
 import { MenuItem } from "../atoms";
+import ServicesMenu from "./ServicesMenu";
 
 const MobileMenu = ({
   pathname,

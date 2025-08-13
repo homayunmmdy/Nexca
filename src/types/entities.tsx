@@ -96,3 +96,5 @@ export type adminPagesType = {
   icon: IconType;
   activate: boolean;
 };
+
+export type HeaderModeType = "desktop" | "mobile"
