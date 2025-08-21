@@ -1,21 +1,19 @@
-import {
-  Banner,
-  CTASec,
-  DocsHero,
-  EmailList,
-  FAQs,
-  Features,
-  Hero,
-  PriceList,
-  StatsSection,
-  TechStacks,
-} from "@/components/organisms";
 import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
+import DocsHero from "./components/DocsHero";
+import Features from "./components/Features";
+import Hero from "./components/Hero";
+import TechStacks from "./components/TechStacks";
+import FAQs from "./components/FAQs";
+import EmailList from "./components/EmailList";
+import PriceList from "./components/PriceList";
+import StatsSection from "./components/StatsSection";
+import CTA from "./components/CTA";
+import { Banner } from "@/components/organisms";
 
 /**
- * LandingPage Component
+ * LandingPage
  *
  * This is the main landing page of the website. It includes various sections such as Hero, Features, TechStacks, etc.
  * The page is designed to be SEO-friendly and optimized for user engagement.
@@ -23,13 +21,13 @@ import React from "react";
  * @returns {React.FC} - Returns a React Functional Component representing the landing page.
  */
 
-const LandingPage: React.FC = () => {
+const LandingPage = () => {
   return (
     <>
       <Hero />
       <Features />
       <DocsHero />
-      <CTASec />
+      <CTA />
       <TechStacks />
       <StatsSection />
       <FAQs />

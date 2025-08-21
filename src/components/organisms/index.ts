@@ -5,17 +5,7 @@
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
 
-// sections
 export { default as Banner } from "./Banner";
-export { default as TechStacks } from "./sections/TechStacks";
-export { default as CTASec } from "./sections/CTA";
-export { default as DocsHero } from "./sections/DocsHero";
-export { default as EmailList } from "./sections/EmailList";
-export { default as FAQs } from "./sections/FAQs";
-export { default as Features } from "./sections/Features";
-export { default as Hero } from "./sections/Hero";
-export { default as PriceList } from "./sections/PriceList";
-export { default as StatsSection } from "./sections/StatsSection";
 
 // posts sections
 export { default as LatestLinearPost } from "./postsSection/LatestLinearPost";

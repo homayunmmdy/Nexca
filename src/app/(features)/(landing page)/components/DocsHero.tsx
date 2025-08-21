@@ -1,5 +1,5 @@
+import { CTABtn } from "@/components/molecules";
 import { SlDocs } from "react-icons/sl";
-import { CTABtn } from "../../molecules";
 
 const DocsHero = () => {
   return (

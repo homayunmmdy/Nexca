@@ -1,8 +1,8 @@
 "use client";
 import { Button } from "@/components/atoms";
 import { useState } from "react";
-import LatestLinearPost from "../postsSection/LatestLinearPost";
-import MostCommentedLinearPost from "../postsSection/MostCommentedLinearPost";
+import LatestLinearPost from "./postsSection/LatestLinearPost";
+import MostCommentedLinearPost from "./postsSection/MostCommentedLinearPost";
 
 const MostTab = () => {
   const [activeTab, setActiveTab] = useState<"latest" | "most">("latest");
