@@ -180,7 +180,7 @@ const TechStacks: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: tech.delay + 0.1 }}
-                    className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 group-hover:text-indigo-700 transition-colors duration-300"
+                    className="text-xl sm:text-2xl font-bold  mb-4 group-hover:text-indigo-700 transition-colors duration-300"
                   >
                     {tech.title}
                   </motion.h3>
@@ -191,7 +191,7 @@ const TechStacks: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: tech.delay + 0.2 }}
-                    className="text-gray-600 leading-relaxed flex-grow text-sm sm:text-base"
+                    className=" leading-relaxed flex-grow text-sm sm:text-base"
                   >
                     {tech.description}
                   </motion.p>

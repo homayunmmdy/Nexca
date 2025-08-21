@@ -1,6 +1,6 @@
-import { FeaturesType } from "@/types/entities";
 import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
+import { FeaturesType } from "../types";
 
 interface Props {
   data: FeaturesType;

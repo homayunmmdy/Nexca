@@ -1,16 +1,14 @@
 import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
+import CTA from "./components/CTA";
 import DocsHero from "./components/DocsHero";
+import FAQs from "./components/FAQs";
 import Features from "./components/Features";
 import Hero from "./components/Hero";
-import TechStacks from "./components/TechStacks";
-import FAQs from "./components/FAQs";
-import EmailList from "./components/EmailList";
 import PriceList from "./components/PriceList";
 import StatsSection from "./components/StatsSection";
-import CTA from "./components/CTA";
-import { Banner } from "@/components/organisms";
+import TechStacks from "./components/TechStacks";
 
 /**
  * LandingPage
@@ -29,10 +27,8 @@ const LandingPage = () => {
       <DocsHero />
       <CTA />
       <TechStacks />
-      <StatsSection />
       <FAQs />
-      <Banner />
-      <EmailList />
+      <StatsSection />
       <PriceList />
     </>
   );
