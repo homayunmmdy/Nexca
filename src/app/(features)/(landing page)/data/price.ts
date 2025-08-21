@@ -3,45 +3,42 @@ import { PriceItemType } from "../types";
 export const PriceItemDate: PriceItemType[] = [
   {
     id: 1,
+    titr: "Starter",
+    description: "Perfect for individuals getting started with premium features and unlimited access.",
     special: false,
-    titr: "Basic",
-    description:
-      "Best option for personal use & for your next project. You can use it for free and forever.",
     features: [
-      { id: 1, name: "Posts Operation", mark: true },
-      { id: 2, name: "Service Creation", mark: true },
-      { id: 3, name: "Master Editor Access", mark: false },
-      { id: 4, name: "Section Creation", mark: false },
-      { id: 5, name: "Receive Latest Updates", mark: true },
-    ],
+      { id: 1, name: "Unlimited projects", mark: true },
+      { id: 2, name: "24/7 Support", mark: true },
+      { id: 3, name: "Advanced analytics", mark: false },
+      { id: 4, name: "Custom integrations", mark: false },
+      { id: 5, name: "Priority support", mark: false }
+    ]
   },
   {
     id: 2,
+    titr: "Professional",
+    description: "Ideal for professionals and small teams who need advanced features and priority support.",
     special: true,
-    titr: "Premium",
-    description:
-      "For you who want to grow your business. You can use this plan for free but you need to pay for the transaction fee.",
     features: [
-      { id: 1, name: "Posts Operation", mark: true },
-      { id: 2, name: "Service Creation", mark: true },
-      { id: 3, name: "Master Editor Access", mark: true },
-      { id: 4, name: "Section Creation", mark: true },
-      { id: 5, name: "Receive Latest Updates", mark: true },
-    ],
+      { id: 1, name: "Everything in Starter", mark: true },
+      { id: 2, name: "Advanced analytics", mark: true },
+      { id: 3, name: "Custom integrations", mark: true },
+      { id: 4, name: "Priority support", mark: true },
+      { id: 5, name: "White-label solution", mark: false }
+    ]
   },
   {
     id: 3,
+    titr: "Enterprise",
+    description: "Comprehensive solution for large organizations with custom needs and dedicated support.",
     special: false,
-    titr: "Pro",
-    description:
-      "For you who want to grow your business and don't want to pay for the transaction fee. You need to pay for this plan.",
     features: [
-      { id: 1, name: "Posts Operation", mark: true },
-      { id: 2, name: "Service Creation", mark: true },
-      { id: 3, name: "Master Editor Access", mark: false },
-      { id: 4, name: "Section Creation", mark: true },
-      { id: 5, name: "Receive Latest Updates", mark: true },
-    ],
-  },
+      { id: 1, name: "Everything in Professional", mark: true },
+      { id: 2, name: "White-label solution", mark: true },
+      { id: 3, name: "Dedicated account manager", mark: true },
+      { id: 4, name: "Custom development", mark: true },
+      { id: 5, name: "SLA guarantee", mark: true }
+    ]
+  }
 ];
 

@@ -32,8 +32,8 @@ const LandingPage = () => {
       <StatsSection />
       <FAQs />
       <Banner />
-      <PriceList />
       <EmailList />
+      <PriceList />
     </>
   );
 };

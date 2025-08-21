@@ -37,19 +37,19 @@ describe("Price Item Data", () => {
   });
 
   it("should have the correct pricing tiers", () => {
-    const expectedTiers = ["Basic", "Premium", "Pro"];
+    const expectedTiers = ["Starter", "Professional", "Enterprise"];
     const actualTiers = PriceItemDate.map((item) => item.titr);
     expect(actualTiers).toEqual(expectedTiers);
   });
 
-  it("should have Premium as the only special tier", () => {
-    const premiumItem = PriceItemDate.find((item) => item.titr === "Premium");
-    const nonPremiumItems = PriceItemDate.filter(
-      (item) => item.titr !== "Premium"
+  it("should have Professional as the only special tier", () => {
+    const professionalItem = PriceItemDate.find((item) => item.titr === "Professional");
+    const nonProfessionalItems = PriceItemDate.filter(
+      (item) => item.titr !== "Professional"
     );
 
-    expect(premiumItem?.special).toBe(true);
-    nonPremiumItems.forEach((item) => {
+    expect(professionalItem?.special).toBe(true);
+    nonProfessionalItems.forEach((item) => {
       expect(item.special).toBe(false);
     });
   });
