@@ -1,10 +1,10 @@
 "use client";
 import { PremiumBadge } from "@/components/atoms";
 import { FullHoverAnimation } from "@/components/molecules";
-import { features } from "@/config/data";
 import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 import Feature from "./Feature";
+import { featuresData } from "../data/features";
 
 const Features: React.FC = () => {
   const shouldReduceMotion = useReducedMotion(); // Respect user's motion preferences
@@ -45,7 +45,7 @@ const Features: React.FC = () => {
             variants={containerVariants}
           >
             <div className="grid max-w-xl grid-cols-1 gap-8  lg:max-w-none lg:grid-cols-2 ">
-              {features.map((feature) => (
+              {featuresData.map((feature) => (
                 <motion.div
                   key={feature.id}
                   className="h-full group"

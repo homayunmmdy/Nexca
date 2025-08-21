@@ -1,8 +1,8 @@
 "use client";
-import { PriceItemDate } from "@/config/data";
 import { motion, useInView } from "framer-motion";
 import React from "react";
 import PriceItem from "./PriceItem";
+import { PriceItemDate } from "../data/price";
 
 const PriceList: React.FC = () => {
   const containerVariants = {

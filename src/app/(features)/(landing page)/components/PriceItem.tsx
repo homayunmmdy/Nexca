@@ -1,8 +1,8 @@
 import RouteConfig from "@/config/RouteConfig";
-import { PriceItemType } from "@/types/entities";
 import Link from "next/link";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import { MdCancel } from "react-icons/md";
+import { PriceItemType } from "../types";
 
 const PriceItem = ({ item }: { item: PriceItemType }) => {
   return (
