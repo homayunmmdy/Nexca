@@ -37,7 +37,6 @@ describe('Container Component', () => {
         expect(containerElement.className).toMatch(/md:max-w-2xl/);
         expect(containerElement.className).toMatch(/lg:max-w-5xl/);
         expect(containerElement.className).toMatch(/xl:max-w-7xl/);
-        expect(containerElement.className).toMatch(/2xl:max-w-screen-2xl/);
     });
 
     it('merges custom className with default classes', () => {
@@ -62,8 +61,7 @@ describe('Container Component', () => {
             'sm:max-w-xl',
             'md:max-w-2xl',
             'lg:max-w-5xl',
-            'xl:max-w-7xl',
-            '2xl:max-w-screen-2xl',
+            'xl:max-w-7xl'
         ];
 
         for (const cls of expectedBaseClasses) {

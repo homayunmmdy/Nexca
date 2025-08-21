@@ -1,14 +1,14 @@
 import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
-import CTA from "./components/CTA";
-import DocsHero from "./components/DocsHero";
-import FAQs from "./components/FAQs";
-import Features from "./components/Features";
-import Hero from "./components/Hero";
-import PriceList from "./components/PriceList";
-import StatsSection from "./components/StatsSection";
-import TechStacks from "./components/TechStacks";
+const Hero = React.lazy(() => import("./components/Hero"));
+const Features = React.lazy(() => import("./components/Features"));
+const DocsHero = React.lazy(() => import("./components/DocsHero"));
+const CTA = React.lazy(() => import("./components/CTA"));
+const TechStacks = React.lazy(() => import("./components/TechStacks"));
+const FAQs = React.lazy(() => import("./components/FAQs"));
+const StatsSection = React.lazy(() => import("./components/StatsSection"));
+const PriceList = React.lazy(() => import("./components/PriceList"));
 
 /**
  * LandingPage
