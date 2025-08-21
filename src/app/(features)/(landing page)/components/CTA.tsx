@@ -1,114 +1,102 @@
-import { CTABtn } from '@/components/molecules';
-import React from 'react';
-
-
+import { PremiumBadge } from "@/components/atoms";
+import { CTABtn } from "@/components/molecules";
 
 const RouteConfig = {
   admin: {
-    base: "/admin"
-  }
+    base: "/admin",
+  },
 };
 
 // User avatar data with placeholder images
 const users = [
-  { id: 1, delay: '0ms' },
-  { id: 2, delay: '200ms' },
-  { id: 3, delay: '400ms' },
-  { id: 4, delay: '600ms' },
-  { id: 5, delay: '800ms' }
+  { id: 1, delay: "0ms" },
+  { id: 2, delay: "200ms" },
+  { id: 3, delay: "400ms" },
+  { id: 4, delay: "600ms" },
+  { id: 5, delay: "800ms" },
 ];
 
 function CTA() {
-    return (
-        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Animated background with glassmorphism */}
-              
+  return (
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Animated background with glassmorphism */}
 
-            {/* Main content */}
-            <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 sm:py-32 sm:px-6 lg:px-8">
-                <div className="text-center space-y-12">
-                    {/* Badge with animation */}
-                    <div className="inline-flex items-center justify-center animate-fade-in-up">
-                        <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur opacity-75 animate-pulse"></div>
-                            <span className="relative inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-purple-300 font-semibold text-sm tracking-wide uppercase">
-                                ✨ Get Started Now
-                            </span>
-                        </div>
-                    </div>
+      {/* Main content */}
+      <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <div className="text-center space-y-12">
+          {/* Badge with animation */}
+          <PremiumBadge>Get Started Now</PremiumBadge>
 
-                    {/* Main heading with text animations */}
-                    <div className="space-y-6 animate-fade-in-up animation-delay-400">
-                        <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight">
-                            <span className="block bg-gradient-to-r from-base-100 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-gradient-x">
-                                Discover your
-                            </span>
-                            <span className="block relative mt-2">
-                                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x">
-                                    potential
-                                </span>
-                                <span className="relative inline-block ml-4">
-                                    {/* Animated underline */}
-                                    <svg 
-                                        className="absolute bottom-2 left-0 w-full h-4 text-purple-400 animate-draw-line" 
-                                        viewBox="0 0 410 18" 
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path 
-                                            d="M6 6.4c16.8 16.8 380.8-11.2 397.6 5.602" 
-                                            stroke="currentColor" 
-                                            strokeWidth="3" 
-                                            fill="none" 
-                                            strokeLinecap="round"
-                                            className="animate-dash"
-                                        />
-                                    </svg>
-                                    <span className="relative bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                                        with us
-                                    </span>
-                                </span>
-                            </span>
-                        </h1>
-                    </div>
+          {/* Main heading with text animations */}
+          <div className="space-y-6 animate-fade-in-up animation-delay-400">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight">
+              <span className="block bg-gradient-to-r from-base-100 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-gradient-x">
+                Discover your
+              </span>
+              <span className="block relative mt-2">
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x">
+                  potential
+                </span>
+                <span className="relative inline-block ml-4">
+                  {/* Animated underline */}
+                  <svg
+                    className="absolute bottom-2 left-0 w-full h-4 text-purple-400 animate-draw-line"
+                    viewBox="0 0 410 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 6.4c16.8 16.8 380.8-11.2 397.6 5.602"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      fill="none"
+                      strokeLinecap="round"
+                      className="animate-dash"
+                    />
+                  </svg>
+                  <span className="relative bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    with us
+                  </span>
+                </span>
+              </span>
+            </h1>
+          </div>
 
-                    {/* Description with typewriter effect */}
-                    <div className="animate-fade-in-up animation-delay-600">
-                        <p className="max-w-4xl mx-auto text-xl sm:text-2xl  leading-relaxed">
-                            <span className="inline-block animate-typewriter">
-                                Sign up now and experience the difference in just one week
-                            </span>
-                        </p>
-                    </div>
+          {/* Description with typewriter effect */}
+          <div className="animate-fade-in-up animation-delay-600">
+            <p className="max-w-4xl mx-auto text-xl sm:text-2xl  leading-relaxed">
+              <span className="inline-block animate-typewriter">
+                Sign up now and experience the difference in just one week
+              </span>
+            </p>
+          </div>
 
-                    {/* CTA Button with enhanced animations */}
-                    <div className="pt-8 animate-fade-in-up animation-delay-800">
-                        <CTABtn href={RouteConfig.admin.base}>
-                            Admin Demo
-                        </CTABtn>
-                    </div>
+          {/* CTA Button with enhanced animations */}
+          <div className="pt-8 animate-fade-in-up animation-delay-800">
+            <CTABtn href={RouteConfig.admin.base}>Admin Demo</CTABtn>
+          </div>
 
-                    {/* Trust indicators */}
-                    <div className="pt-16 animate-fade-in-up animation-delay-1000">
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-8  text-sm">
-                            <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                                <span>Trusted by 10,000+ users</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse animation-delay-300"></div>
-                                <span>Free trial</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse animation-delay-600"></div>
-                                <span>No credit card required</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          {/* Trust indicators */}
+          <div className="pt-16 animate-fade-in-up animation-delay-1000">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8  text-sm">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span>Trusted by 10,000+ users</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse animation-delay-300"></div>
+                <span>Free trial</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse animation-delay-600"></div>
+                <span>No credit card required</span>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            {/* Inline styles for animations */}
-            <style>{`
+      {/* Inline styles for animations */}
+      <style>{`
                 @keyframes blob {
                     0%, 100% { transform: translate(0px, 0px) scale(1); }
                     33% { transform: translate(30px, -50px) scale(1.1); }
@@ -186,8 +174,8 @@ function CTA() {
                     }
                 }
             `}</style>
-        </section>
-    );
+    </section>
+  );
 }
 
 export default CTA;

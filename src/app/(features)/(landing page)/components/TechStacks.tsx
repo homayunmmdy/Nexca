@@ -95,7 +95,9 @@ const TechStacks: React.FC = () => {
           transition={{ duration: 1, ease: [0.04, 0.62, 0.23, 0.98] }}
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <PremiumBadge label="Premium Technology Stack"/>
+          <PremiumBadge >
+            Premium Technology Stack
+          </PremiumBadge>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

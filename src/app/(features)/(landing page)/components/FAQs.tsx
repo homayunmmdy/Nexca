@@ -114,7 +114,9 @@ const FQAs: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <PremiumBadge label="Frequently asked questions" />
+              <PremiumBadge >
+                Frequently asked questions
+              </PremiumBadge>
               <motion.h2
                 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-white via-indigo-100 to-white bg-clip-text text-transparent leading-tight"
                 initial={{ opacity: 0, y: 20 }}

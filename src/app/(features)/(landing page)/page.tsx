@@ -1,6 +1,7 @@
 import SiteConfig from "@/config/site";
 import { Metadata } from "next";
 import React from "react";
+import Popup from "./components/Popup";
 const Hero = React.lazy(() => import("./components/Hero"));
 const Features = React.lazy(() => import("./components/Features"));
 const DocsHero = React.lazy(() => import("./components/DocsHero"));
@@ -24,7 +25,7 @@ const LandingPage = () => {
     <>
       <Hero />
       <Features />
-      <DocsHero />
+      <Popup />
       <CTA />
       <TechStacks />
       <FAQs />

@@ -31,7 +31,9 @@ const Features: React.FC = () => {
       <div className="mx-auto my-10 max-w-7xl px-4">
         <div>
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-center lg:text-center">
-            <PremiumBadge label="Key Features" />
+            <PremiumBadge >
+              Key Features
+            </PremiumBadge>
             <h2 className="text-center text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl">
               Enhanced
               <FullHoverAnimation text="Content Management" />

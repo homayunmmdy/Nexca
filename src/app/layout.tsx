@@ -25,7 +25,7 @@ export default function RootLayout({
             <SkipToMain />
             <Header />
             <main id="main" className="mt-[90px]">{children}</main>
-            <PWAInstallPopup />
+            {/* <PWAInstallPopup /> */}
             <Footer />
           </body>
         </html>
