@@ -5,10 +5,11 @@ import { Button } from "../../../../components/atoms";
 interface Props {
   children: React.ReactNode;
   href?: string;
+  classNames?: string;
 }
-const MasterBtn = ({ children, href = RouteConfig.admin.master }: Props) => {
+const MasterBtn = ({ children, href = RouteConfig.admin.master, classNames = '' }: Props) => {
   return (
-    <Link href={href} className="my-4 max-w-full">
+    <Link href={href} className={`my-4 max-w-full ${classNames.trim()}`}>
       <Button
         type="button"
         color="btn-null"

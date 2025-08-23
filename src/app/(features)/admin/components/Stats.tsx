@@ -57,6 +57,7 @@ const Stats = () => {
   ];
   return (
     <Swiper
+      className="h-full"
       autoplay={{
         delay: 3000,
         disableOnInteraction: false,
@@ -76,6 +77,9 @@ const Stats = () => {
           slidesPerView: 2,
         },
         992: {
+          slidesPerView: 3,
+        },
+        1300: {
           slidesPerView: 4,
         },
       }}
@@ -83,8 +87,8 @@ const Stats = () => {
       {AllStats.map((stat) => {
         const LinkIcon = stat.icon;
         return (
-          <SwiperSlide className="py-5" key={stat.title}>
-            <Link href={stat.href}>
+          <SwiperSlide className="py-5 h-full" key={stat.title}>
+            <Link href={stat.href} className="h-full">
               <Stat
                 title={stat.title}
                 number={stat.length}

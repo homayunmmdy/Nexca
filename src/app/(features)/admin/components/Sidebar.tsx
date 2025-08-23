@@ -1,10 +1,10 @@
 "use client";
 import { Button, LogoName } from "@/components/atoms";
+import { HomeSettingBtn } from "@/components/molecules";
 import RouteConfig from "@/config/RouteConfig";
 import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
-import { HomeSettingBtn } from "@/components/molecules";
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -13,16 +13,16 @@ const Sidebar: React.FC = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <>
-      <div className="h-full w-full p-4">
-        <div className="flex items-center justify-between">
-          <Link
-            className="space-nowrap m-0 flex items-center gap-2 px-4 py-3 text-lg md:text-xl lg:text-2xl"
-            href={RouteConfig.admin.base}
-          >
-            Admin
-            <LogoName />
-          </Link>
+    <div className="h-full w-full p-2 sm:p-4">
+      <div className="flex items-center justify-between">
+        <Link
+          className="space-nowrap m-0 flex items-center gap-2 px-4 py-3 text-sm sm:text-lg md:text-xl xl:text-2xl"
+          href={RouteConfig.admin.base}
+        >
+          Admin
+          <LogoName />
+        </Link>
+        <div className="flex gap-1 sm:gap-3">
           <HomeSettingBtn />
           <Button
             className="lg:hidden"
@@ -55,10 +55,10 @@ const Sidebar: React.FC = () => {
             </svg>
           </Button>
         </div>
-        <hr className="mb-2 mt-0 h-px bg-transparent bg-linear-to-r from-transparent via-black/40 to-transparent" />
-        {isOpen && <NavLink />}
       </div>
-    </>
+      <hr className="mb-2 mt-0 h-px bg-transparent bg-linear-to-r from-transparent via-black/40 to-transparent" />
+      {isOpen && <NavLink />}
+    </div>
   );
 };
 

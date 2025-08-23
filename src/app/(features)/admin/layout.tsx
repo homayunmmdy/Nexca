@@ -13,7 +13,7 @@ export default function AdminLayout({
   return (
     <>
       <Toaster position="top-center" />
-      <div className="grid grid-cols-12 gap-5 p-5">
+      <div className="grid grid-cols-12 lg:gap-3 xl:gap-5 p-5">
         <aside className="col-span-12 rounded-xl border-2 border-indigo-400 shadow-xl lg:col-span-3">
           <Sidebar />
         </aside>

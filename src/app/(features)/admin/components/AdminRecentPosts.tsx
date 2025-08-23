@@ -30,7 +30,7 @@ const AdminRecentPosts: React.FC = () => {
             slidesPerView: 2.3,
           },
           992: {
-            slidesPerView: 3.3,
+            slidesPerView: 2.8,
           },
            1200: {
             slidesPerView: 4,
@@ -39,7 +39,7 @@ const AdminRecentPosts: React.FC = () => {
         navigation
       >
         {posts?.map((post: PostsCashType) => (
-          <SwiperSlide className="py-5" key={post._id}>
+          <SwiperSlide className="pt-5 lg:py-5" key={post._id}>
             <PostCard post={post} />
           </SwiperSlide>
         ))}

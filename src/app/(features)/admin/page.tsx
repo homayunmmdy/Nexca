@@ -5,6 +5,7 @@ import Stats from "./components/Stats";
 import AdminRecentPosts from "./components/AdminRecentPosts";
 import MasterBtn from "./components/MasterBtn";
 import { BsFiletypeDoc } from "react-icons/bs";
+import classNames from 'classnames';
 
 const Admin = () => {
   useCheckLogin();
@@ -13,13 +14,12 @@ const Admin = () => {
       <title>
         The Ultimate Admin Panel Nexca Good for Agencies and Individuals
       </title>
-      
       <Stats />
-      <div className="mx-auto max-w-7xl px-4 pb-8 pt-10 text-center sm:px-6 lg:px-8">
+      <div className="mx-auto hidden lg:block max-w-7xl px-4 pb-8 pt-10 text-center sm:px-6 lg:px-8">
         <BannerTitle />
       </div>
       <AdminRecentPosts />
-      <MasterBtn href="https://nexca-docs.vercel.app/">
+      <MasterBtn classNames="hidden xl:block" href="https://nexca-docs.vercel.app/">
         <BsFiletypeDoc /> Understand Nexca Deeply in our docs
       </MasterBtn>
     </div>
