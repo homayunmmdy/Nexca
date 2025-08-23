@@ -48,7 +48,7 @@ const FeatureCard = ({ data }: { data: FeaturesType }) => {
         />
 
         {/* Content */}
-        <div className="relative p-6 sm:p-8 h-full flex flex-col">
+        <div className="relative p-6 sm:p-3 lg:p-8 h-full flex flex-col">
           {/* Icon */}
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
@@ -86,7 +86,7 @@ const FeatureCard = ({ data }: { data: FeaturesType }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: data.delay + 0.2 }}
-            className=" leading-relaxed flex-grow text-sm sm:text-base"
+            className=" leading-relaxed flex-grow text-sm sm:text-base line-clamp-3"
           >
             {data.description}
           </motion.p>

@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import React from "react";
 import { PriceData } from "../data/PriceData";
 import PriceItem from "./PriceItem";
+import { Container } from "@/components/atoms";
 
 const PriceList = () => {
   const containerVariants = {
@@ -20,7 +21,7 @@ const PriceList = () => {
   const titleInView = useInView(titleRef, { once: true, amount: 0.5 });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -66,8 +67,8 @@ const PriceList = () => {
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="relative z-10 flex items-center justify-center min-h-screen">
-        <div className="mx-auto max-w-7xl px-4 py-16 lg:px-6 lg:py-24">
+      <div className="relative z-10 flex items-center justify-center py-12">
+        <Container>
           <div className="mx-auto mb-16 max-w-4xl text-center">
             <motion.div
               ref={titleRef}
@@ -113,13 +114,13 @@ const PriceList = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-3 md:gap-8 lg:gap-12 "
           >
             {PriceData.map((item) => (
               <PriceItem key={item.id} item={item} />
             ))}
           </motion.div>
-        </div>
+        </Container>
       </div>
     </div>
   );

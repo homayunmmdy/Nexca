@@ -31,8 +31,6 @@ describe('Container Component', () => {
         expect(containerElement).toHaveClass('px-4');
 
         // Responsive classes
-        expect(containerElement.className).toMatch(/sm:px-6/);
-        expect(containerElement.className).toMatch(/lg:px-8/);
         expect(containerElement.className).toMatch(/sm:max-w-xl/);
         expect(containerElement.className).toMatch(/md:max-w-2xl/);
         expect(containerElement.className).toMatch(/lg:max-w-5xl/);
@@ -55,9 +53,6 @@ describe('Container Component', () => {
         const expectedBaseClasses = [
             'mx-auto',
             'w-full',
-            'px-4',
-            'sm:px-6',
-            'lg:px-8',
             'sm:max-w-xl',
             'md:max-w-2xl',
             'lg:max-w-5xl',

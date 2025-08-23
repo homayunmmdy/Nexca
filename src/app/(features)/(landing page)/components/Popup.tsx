@@ -104,7 +104,7 @@ function Popup() {
 
                                 {/* Description */}
                                 <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                                    Explore comprehensive documentation guides to master Nexca's powerful features and unlock your full potential.
+                                    Explore comprehensive documentation guides to master Nexca is powerful features and unlock your full potential.
                                 </p>
 
                                 {/* CTA Button */}

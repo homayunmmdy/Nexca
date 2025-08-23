@@ -1,4 +1,4 @@
-import { PremiumBadge } from "@/components/atoms";
+import { Container } from "@/components/atoms";
 import { CTABtn } from "@/components/molecules";
 import Image from "next/image";
 
@@ -19,15 +19,12 @@ const users = [
 
 function CTA() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative w-full flex items-center justify-center overflow-hidden mt-9">
       {/* Animated background with glassmorphism */}
 
       {/* Main content */}
-      <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 sm:py-32 sm:px-6 lg:px-8">
+      <Container className="relative z-10">
         <div className="text-center space-y-4">
-          {/* Badge with animation */}
-          <PremiumBadge>Get Started Now</PremiumBadge>
-
           <div className="inline-flex items-end justify-center w-full text-center mx-auto">
             <Image
               src="/static/Image/user1.jpg"
@@ -114,7 +111,7 @@ function CTA() {
           </div>
 
           {/* Trust indicators */}
-          <div className="pt-6 animate-fade-in-up animation-delay-1000">
+          <div className="hidden lg:block pt-6 animate-fade-in-up animation-delay-1000">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8  text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -131,7 +128,7 @@ function CTA() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
 
       {/* Inline styles for animations */}
       <style>{`

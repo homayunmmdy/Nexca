@@ -1,5 +1,5 @@
 "use client";
-import { PremiumBadge } from "@/components/atoms";
+import { Container, PremiumBadge } from "@/components/atoms";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { TechStackData } from "../data/TechStackData";
@@ -52,12 +52,12 @@ const TechStacks: React.FC = () => {
     <motion.section
       ref={containerRef}
       style={{ opacity }}
-      className="relative min-h-screen py-12 sm:py-16 lg:py-24 overflow-hidden"
+      className="relative py-12 sm:py-16 lg:py-24 overflow-hidden"
     >
       {/* Animated Background */}
       <motion.div
         style={{ y: backgroundY }}
-        className="absolute inset-0 bg-base-200 "
+        className="absolute inset-0 bg-base-300 "
       />
 
       {/* Floating Elements */}
@@ -85,7 +85,7 @@ const TechStacks: React.FC = () => {
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Container className="relative">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
@@ -94,7 +94,6 @@ const TechStacks: React.FC = () => {
           transition={{ duration: 1, ease: [0.04, 0.62, 0.23, 0.98] }}
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <PremiumBadge>Premium Technology Stack</PremiumBadge>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -125,13 +124,13 @@ const TechStacks: React.FC = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8"
         >
           {TechStackData.map((data) => (
             <FeatureCard key={data.title} data={data} />
           ))}
         </motion.div>
-      </div>
+      </Container>
     </motion.section>
   );
 };

@@ -1,11 +1,11 @@
 'use client'
 import { motion, useInView } from "framer-motion";
 import React from "react";
-import { PriceItemType } from "../types";
 import { IoCheckmarkCircleSharp, IoSparkles } from "react-icons/io5";
 import { MdCancel } from "react-icons/md";
+import { PriceDataType } from "../types";
 
-const PriceItem = ({ item }: { item: PriceItemType }) => {
+const PriceItem = ({ item }: { item: PriceDataType }) => {
   const cardRef = React.useRef(null);
   const cardInView = useInView(cardRef, { once: true, amount: 0.3 });
 
@@ -65,7 +65,7 @@ const PriceItem = ({ item }: { item: PriceItemType }) => {
 
         <div
             className={`
-          relative h-full flex flex-col items-start space-y-8 rounded-3xl p-8 xl:p-10
+          relative h-full flex flex-col items-start space-y-8 rounded-3xl p-4 lg:p-8 xl:p-10
           backdrop-blur-xl border transition-all duration-500 overflow-hidden
           ${item.special
                 ? "bg-gradient-to-br from-indigo-900/20 via-purple-900/20 to-pink-900/20 border-indigo-400/50 shadow-2xl shadow-indigo-500/25"

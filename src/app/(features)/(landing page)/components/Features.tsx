@@ -1,5 +1,5 @@
 "use client";
-import { PremiumBadge } from "@/components/atoms";
+import { Container } from "@/components/atoms";
 import { FullHoverAnimation } from "@/components/molecules";
 import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
@@ -38,38 +38,33 @@ const Features: React.FC = () => {
   };
 
   return (
-    <>
-      <div className="mx-auto my-10 max-w-7xl px-4">
-        <div>
-          <div className="mx-auto flex max-w-5xl flex-col items-center justify-center lg:text-center">
-            <PremiumBadge>Key Features</PremiumBadge>
-            <h2 className="text-center text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl">
-              Enhanced
-              <FullHoverAnimation text="Content Management" />
-            </h2>
-          </div>
-          <motion.div
-            className="mx-auto mt-8 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }} // Trigger animation only once
-            variants={containerVariants}
-          >
-            <motion.div
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-50px" }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-            >
-              {FeaturesData.map((feature) => (
-                <FeatureCard data={feature} key={feature.title} />
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
+    <Container className="mt-5">
+      <div className="mx-auto flex  flex-col items-center justify-center lg:text-center">
+        <h2 className="text-center text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl">
+          Enhanced
+          <FullHoverAnimation text="Content Management" />
+        </h2>
       </div>
-    </>
+      <motion.div
+        className="mx-auto mt-8  w-full"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} // Trigger animation only once
+        variants={containerVariants}
+      >
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8"
+        >
+          {FeaturesData.map((feature) => (
+            <FeatureCard data={feature} key={feature.title} />
+          ))}
+        </motion.div>
+      </motion.div>
+    </Container>
   );
 };
 

@@ -1,5 +1,5 @@
 "use client";
-import { PremiumBadge } from "@/components/atoms";
+import { Container, PremiumBadge } from "@/components/atoms";
 import { CollapseType } from "@/types/entities";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
@@ -93,7 +93,7 @@ const FQAs: React.FC = () => {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Container>
         <motion.div
           className="relative overflow-hidden rounded-3xl backdrop-blur-sm bg-white/5 border border-white/10 shadow-2xl"
           variants={backgroundVariants}
@@ -174,7 +174,7 @@ const FQAs: React.FC = () => {
             </motion.div>
           </div>
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };

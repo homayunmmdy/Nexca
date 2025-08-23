@@ -1,5 +1,6 @@
 "use client";
 import HeroImage from "@/../public/static/Image/Hero.webp";
+import { Container } from "@/components/atoms";
 import { CTABtn } from "@/components/molecules";
 import RouteConfig from "@/config/RouteConfig";
 import SiteConfig from "@/config/site";
@@ -47,7 +48,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative pt-4">
-      <div className="mx-auto my-5 max-w-7xl px-4">
+      <Container>
         <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
           {/* Decorative Elements */}
           <div className="absolute inset-y-0 hidden w-full lg:right-0 lg:block lg:w-1/2">
@@ -167,7 +168,7 @@ const Hero: React.FC = () => {
             />
           </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
