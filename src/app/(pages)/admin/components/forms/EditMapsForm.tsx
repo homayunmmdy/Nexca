@@ -11,7 +11,7 @@ import { useState } from "react";
 import { SelectField } from "../elements";
 import { FormLayout, ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
-import { MapsCashType } from "@/app/(features)/map/types/types";
+import { MapsCashType } from "@/types/CashTypes";
 
 const EditMapsForm = ({ post }: { post: MapsCashType }) => {
   const EDITMODE = post._id !== "new";

@@ -1,6 +1,5 @@
 "use client";
 import { CountriesMapData } from "@/app/(features)/map/data/countries";
-import { MapsCashType } from "@/app/(features)/map/types/types";
 import ImgTable from "@/app/(pages)/admin/components/elements/ImgTable";
 import { Button, ErrorText, Spinner } from "@/components/atoms";
 import { SearchBar } from "@/components/molecules";
@@ -13,6 +12,7 @@ import {
 import { getProvinceData } from "@/config/getProvinceData";
 import RouteConfig from "@/config/RouteConfig";
 import useFetch from "@/hooks/useFetch";
+import { MapsCashType } from "@/types/CashTypes";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";

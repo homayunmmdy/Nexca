@@ -1,4 +1,4 @@
-import { MapsCashType } from "../types/types";
+import { MapsCashType } from "@/types/CashTypes";
 
 const MapsCash: MapsCashType[] = [
   {

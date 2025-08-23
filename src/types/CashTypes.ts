@@ -1,4 +1,4 @@
-export type BaseType = {
+type BaseType = {
   _id: string;
   body: string;
   createdAt: string;
@@ -96,3 +96,14 @@ export type CommentsCashType = {
   email: string;
   message: string;
 } & Omit<BaseType, "body">;
+
+
+export type MapsCashType = {
+  title: string;
+  imgurl: string;
+  description: string;
+  country: string;
+  province: string;
+  source?: string;
+  author?: string;
+} & BaseType;

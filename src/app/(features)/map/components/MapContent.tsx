@@ -1,8 +1,8 @@
 "use client";
 import useGetMapContent from "@/app/(features)/map/hooks/useGetMapContent";
 import { ErrorText, Spinner } from "@/components/atoms";
+import { MapsCashType } from "@/types/CashTypes";
 import Image from "next/image";
-import { MapsCashType } from "../types/types";
 
 interface Props {
   key: string;

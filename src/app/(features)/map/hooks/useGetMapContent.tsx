@@ -1,8 +1,8 @@
 "use client";
 import { MAPS_API_URL } from "@/config/apiConstants";
+import { MapsCashType } from "@/types/CashTypes";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { MapsCashType } from "../types/types";
 
 const useGetMapContent = (
   queryKey: string,

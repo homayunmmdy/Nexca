@@ -4,7 +4,7 @@ import {TIMELINE_KEY} from "@/config/Constants";
 import useFetch from "@/hooks/useFetch";
 import React from "react";
 import {ReleaseCashType} from "@/types/CashTypes";
-import ReleaseSec from "@/app/(pages)/release/components/ReleaseSec";
+import ReleaseSec from "./components/ReleaseSec";
 
 const ReleasePage: React.FC = () => {
     const {data} = useFetch(TIMELINE_KEY, RELEASE_API_URL);

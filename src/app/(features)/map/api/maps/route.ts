@@ -1,6 +1,6 @@
 import RequestHandler from "@/util/handler/RequestHandler";
 import MapsModel from "../../MapsModel";
-import MapsCash from "../../cash/MapsCash";
+import MapsCash from "@/cash/MapsCash";
 
 export async function GET() {
   const handler = new RequestHandler(MapsModel, MapsCash);
