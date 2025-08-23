@@ -49,7 +49,7 @@ const PriceList = () => {
 
       {/* Gradient orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-full blur-3xl"
         animate={{
           x: [0, 100, 0],
           y: [0, -50, 0],
@@ -58,7 +58,7 @@ const PriceList = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-pink-600/20 to-purple-600/20 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-to-r from-pink-600/20 to-purple-600/20 rounded-full blur-3xl"
         animate={{
           x: [0, -100, 0],
           y: [0, 50, 0],
@@ -67,9 +67,9 @@ const PriceList = () => {
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="relative z-10 flex items-center justify-center py-12">
+      <div className="relative z-10 flex items-center justify-center  py-5 md:py-12">
         <Container>
-          <div className="mx-auto mb-16 max-w-4xl text-center">
+          <div className="mx-auto mb-10 md:mb-16 max-w-4xl text-center">
             <motion.div
               ref={titleRef}
               initial={{ opacity: 0, y: 50 }}
@@ -77,7 +77,7 @@ const PriceList = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <motion.h2
-                className="mb-6 text-6xl font-black tracking-tight bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent"
+                className="mb-4 md:mb-6 text-4xl md:text-6xl font-black tracking-tight bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent"
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -91,14 +91,14 @@ const PriceList = () => {
               </motion.h2>
 
               <motion.div
-                className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-8"
+                className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-6 md:mb-8"
                 initial={{ width: 0 }}
                 animate={titleInView ? { width: 96 } : {}}
                 transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
               />
 
               <motion.p
-                className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto"
+                className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto px-2"
                 initial={{ opacity: 0 }}
                 animate={titleInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.3, duration: 0.8 }}
@@ -114,7 +114,7 @@ const PriceList = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-3 md:gap-8 lg:gap-12 "
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-3 md:gap-6 lg:gap-8"
           >
             {PriceData.map((item) => (
               <PriceItem key={item.id} item={item} />

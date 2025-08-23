@@ -13,7 +13,7 @@ const CopyRight: React.FC<Props> = ({ siteName }: Props) => {
         data-testid="copyrightText"
       >
         Copyright@{new Date().getFullYear()} All Right Reserved by{" "}
-        <Link href="/" title={siteName}>
+        <Link href="/" title={siteName} className="text-indigo-600 hover:underline font-bold px-3">
           {siteName}
         </Link>
       </span>

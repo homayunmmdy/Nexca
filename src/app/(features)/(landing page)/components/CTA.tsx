@@ -27,39 +27,39 @@ function CTA() {
         <div className="text-center space-y-4">
           <div className="inline-flex items-end justify-center w-full text-center mx-auto">
             <Image
-              src="/static/Image/user1.jpg"
+              src="https://avatar.iran.liara.run/public/9"
               width={48}
               height={48}
               alt=""
-              className="absolute transform translate-x-24 ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-white"
+              className="absolute transform translate-x-24 ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-indigo-600"
             />
             <Image
-              src="/static/Image/user2.jpg"
+              src="https://avatar.iran.liara.run/public/64"
               width={48}
               height={48}
               alt=""
-              className="absolute transform -translate-x-24 -ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-white"
+              className="absolute transform -translate-x-24 -ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-indigo-600"
             />
             <Image
-              src="/static/Image/user3.webp"
+              src="https://avatar.iran.liara.run/public/13"
               width={48}
               height={48}
               alt=""
-              className="absolute transform -translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-white"
+              className="absolute transform -translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-indigo-600"
             />
             <Image
-              src="/static/Image/user4.webp"
+              src="https://avatar.iran.liara.run/public/60"
               width={48}
               height={48}
               alt=""
-              className="absolute transform translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-white"
+              className="absolute transform translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-indigo-600"
             />
             <Image
-              src="/static/Image/user5.webp"
+              src="https://avatar.iran.liara.run/public/15"
               width={48}
               height={48}
               alt=""
-              className="rounded-full w-20 h-20 md:w-24 md:h-24 border-4 border-white relative"
+              className="rounded-full w-20 h-20 md:w-24 md:h-24 border-4 border-indigo-600 relative"
             />
           </div>
           {/* Main heading with text animations */}
