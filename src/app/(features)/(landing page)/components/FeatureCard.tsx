@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { TechStackTypeData } from "../types";
+import { FeaturesType } from "../types";
 
-const FeatureCard = ({ data }: { data: TechStackTypeData }) => {
+const FeatureCard = ({ data }: { data: FeaturesType }) => {
   const item = {
     hidden: {
       opacity: 0,

@@ -3,8 +3,8 @@ import { PremiumBadge } from "@/components/atoms";
 import { FullHoverAnimation } from "@/components/molecules";
 import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
-import Feature from "./Feature";
 import { FeaturesData } from "../data/FeaturesData";
+import FeatureCard from "./FeatureCard";
 
 const Features: React.FC = () => {
   const shouldReduceMotion = useReducedMotion(); // Respect user's motion preferences
@@ -16,6 +16,17 @@ const Features: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2, // Stagger child animations
+      },
+    },
+  };
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
       },
     },
   };
@@ -38,23 +49,23 @@ const Features: React.FC = () => {
             </h2>
           </div>
           <motion.div
-            className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
+            className="mx-auto mt-8 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }} // Trigger animation only once
             variants={containerVariants}
           >
-            <div className="grid max-w-xl grid-cols-1 gap-8  lg:max-w-none lg:grid-cols-2 ">
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-50px" }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+            >
               {FeaturesData.map((feature) => (
-                <motion.div
-                  key={feature.id}
-                  className="h-full group"
-                  variants={itemVariants}
-                >
-                  <Feature data={feature} />
-                </motion.div>
+                <FeatureCard data={feature} key={feature.title} />
               ))}
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

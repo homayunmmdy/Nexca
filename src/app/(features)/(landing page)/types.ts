@@ -8,14 +8,9 @@ export type PriceDataType = {
   features: { id: number; name: string; mark: boolean }[];
 };
 
-export type FeaturesType = {
-  id: number;
-  title: string;
-  icon: JSX.Element;
-  description: string;
-};
 
-export type TechStackTypeData = {
+
+export type FeaturesType = {
   Icon: IconType;
   title: string;
   description: string;

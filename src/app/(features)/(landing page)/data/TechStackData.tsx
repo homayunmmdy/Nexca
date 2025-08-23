@@ -1,9 +1,9 @@
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiMongodb, SiTypescript, SiVercel } from "react-icons/si";
-import { TechStackTypeData } from "../types";
+import { FeaturesType } from "../types";
 
-export const TechStackData: TechStackTypeData[] = [
+export const TechStackData: FeaturesType[] = [
   {
     Icon: RiNextjsFill,
     title: "Next.js",
