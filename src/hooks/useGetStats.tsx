@@ -1,5 +1,12 @@
-"use client"
-import { CONTACTS_API_URL, POST_API_URL, SECTIONS_API_URL, SERVICES_API_URL } from "@/config/apiConstants";
+"use client";
+import {
+  CONTACTS_API_URL,
+  EMAIL_API_URL,
+  MAPS_API_URL,
+  POST_API_URL,
+  SECTIONS_API_URL,
+  SERVICES_API_URL,
+} from "@/config/apiConstants";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -9,6 +16,8 @@ const useGetStats = () => {
     sections: [],
     contacts: [],
     services: [],
+    emails: [],
+    maps: [],
   });
 
   useEffect(() => {
@@ -19,12 +28,15 @@ const useGetStats = () => {
           sectionsResponse,
           contactsResponse,
           servicesResponse,
+          emailsResponse,
+          mapsResponse,
         ] = await Promise.all([
           axios.get(`${POST_API_URL}`),
           axios.get(`${SECTIONS_API_URL}`),
           axios.get(`${CONTACTS_API_URL}`),
           axios.get(`${SERVICES_API_URL}`),
-
+          axios.get(`${EMAIL_API_URL}`),
+          axios.get(`${MAPS_API_URL}`),
         ]);
 
         setData({
@@ -32,6 +44,8 @@ const useGetStats = () => {
           sections: sectionsResponse.data.data,
           contacts: contactsResponse.data.data,
           services: servicesResponse.data.data,
+          emails: emailsResponse.data.data,
+          maps: mapsResponse.data.data,
         });
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -40,7 +54,7 @@ const useGetStats = () => {
 
     fetchData();
   }, []);
-  return data
+  return data;
 };
 
 export default useGetStats;

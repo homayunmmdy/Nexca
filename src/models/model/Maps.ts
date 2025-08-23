@@ -1,6 +1,6 @@
-import { defaultSchemaOptions } from "@/models/schemaOptions";
 import mongoose, { Schema } from "mongoose";
-import "@/models/ConnetDB"; 
+import "../ConnetDB"; // Ensure the database connection is established
+import { defaultSchemaOptions } from "../schemaOptions"; // Importing default schema options
 
 const mapsSchema = new Schema(
   {
@@ -48,6 +48,6 @@ const mapsSchema = new Schema(
  *
  * @type {mongoose.Model<PostSchema>}
  */
-const MapsModel = mongoose.models.Maps || mongoose.model("Maps", mapsSchema);
+const Maps = mongoose.models.Maps || mongoose.model("Maps", mapsSchema);
 
-export default MapsModel;
+export default Maps;

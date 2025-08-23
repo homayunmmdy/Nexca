@@ -23,8 +23,8 @@ const AdminRecentPosts: React.FC = () => {
         modules={[Autoplay, Navigation, A11y]}
         spaceBetween={24}
         breakpoints={{
-          640: {
-            slidesPerView: 1.4,
+          0: {
+            slidesPerView: 1,
           },
           768: {
             slidesPerView: 2.3,
