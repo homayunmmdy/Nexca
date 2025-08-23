@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import { motion, useInView } from "framer-motion";
-import { PriceItemDate } from "../data/price";
 import React from "react";
+import { PriceData } from "../data/PriceData";
 import PriceItem from "./PriceItem";
 
 const PriceList = () => {
@@ -11,7 +11,7 @@ const PriceList = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
-        delayChildren: 0.2
+        delayChildren: 0.2,
       },
     },
   };
@@ -34,13 +34,13 @@ const PriceList = () => {
             animate={{
               y: [-50, -200],
               opacity: [0, 1, 0],
-              scale: [0, 1, 0]
+              scale: [0, 1, 0],
             }}
             transition={{
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 3,
-              ease: "easeOut"
+              ease: "easeOut",
             }}
           />
         ))}
@@ -49,19 +49,19 @@ const PriceList = () => {
       {/* Gradient orbs */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-full blur-3xl"
-        animate={{ 
+        animate={{
           x: [0, 100, 0],
           y: [0, -50, 0],
-          scale: [1, 1.2, 1]
+          scale: [1, 1.2, 1],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-pink-600/20 to-purple-600/20 rounded-full blur-3xl"
-        animate={{ 
+        animate={{
           x: [0, -100, 0],
           y: [0, 50, 0],
-          scale: [1, 1.3, 1]
+          scale: [1, 1.3, 1],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -77,28 +77,33 @@ const PriceList = () => {
             >
               <motion.h2
                 className="mb-6 text-6xl font-black tracking-tight bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent"
-                animate={{ 
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 Pay once, use forever
               </motion.h2>
-              
+
               <motion.div
                 className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-8"
                 initial={{ width: 0 }}
                 animate={titleInView ? { width: 96 } : {}}
                 transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
               />
-              
+
               <motion.p
                 className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto"
                 initial={{ opacity: 0 }}
                 animate={titleInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.3, duration: 0.8 }}
               >
-                Choose the perfect plan for your needs. Unlock premium features with our one-time payment solution.
+                Choose the perfect plan for your needs. Unlock premium features
+                with our one-time payment solution.
               </motion.p>
             </motion.div>
           </div>
@@ -110,8 +115,8 @@ const PriceList = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
           >
-            {PriceItemDate.map(item => (
-              <PriceItem key={item.id} item={item}  />
+            {PriceData.map((item) => (
+              <PriceItem key={item.id} item={item} />
             ))}
           </motion.div>
         </div>
@@ -120,4 +125,4 @@ const PriceList = () => {
   );
 };
 
-export default PriceList;
+export default PriceList;

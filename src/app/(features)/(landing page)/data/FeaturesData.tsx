@@ -5,7 +5,7 @@ import { SlEnergy } from "react-icons/sl";
 import { VscFeedback } from "react-icons/vsc";
 import { FeaturesType } from "../types";
 
-export const featuresData: FeaturesType[] = [
+export const FeaturesData: FeaturesType[] = [
   {
     id: 1,
     title: "Full CRUD",

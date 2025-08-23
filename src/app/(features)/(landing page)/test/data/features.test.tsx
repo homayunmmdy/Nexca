@@ -1,14 +1,14 @@
 import React from 'react';
-import { featuresData } from "../../data/features";
+import { FeaturesData } from "../../data/FeaturesData";
 
 describe("Features Data", () => {
   it("should have the correct structure and length", () => {
-    expect(Array.isArray(featuresData)).toBe(true);
-    expect(featuresData).toHaveLength(4);
+    expect(Array.isArray(FeaturesData)).toBe(true);
+    expect(FeaturesData).toHaveLength(4);
   });
 
   it("should have valid properties for each feature", () => {
-    featuresData.forEach((feature) => {
+    FeaturesData.forEach((feature) => {
       expect(feature).toHaveProperty("id");
       expect(feature).toHaveProperty("title");
       expect(feature).toHaveProperty("icon");
@@ -29,7 +29,7 @@ describe("Features Data", () => {
       "Services",
     ];
 
-    const actualTitles = featuresData.map((feature) => feature.title);
+    const actualTitles = FeaturesData.map((feature) => feature.title);
     expect(actualTitles).toEqual(expectedTitles);
   });
 });

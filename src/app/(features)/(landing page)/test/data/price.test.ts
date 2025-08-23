@@ -1,13 +1,13 @@
-import { PriceItemDate } from "../../data/price";
+import { PriceData } from "../../data/PriceData";
 
 describe("Price Item Data", () => {
   it("should have the correct structure and length", () => {
-    expect(Array.isArray(PriceItemDate)).toBe(true);
-    expect(PriceItemDate).toHaveLength(3);
+    expect(Array.isArray(PriceData)).toBe(true);
+    expect(PriceData).toHaveLength(3);
   });
 
   it("should have valid properties for each price item", () => {
-    PriceItemDate.forEach((item) => {
+    PriceData.forEach((item) => {
       expect(item).toHaveProperty("id");
       expect(item).toHaveProperty("special");
       expect(item).toHaveProperty("titr");
@@ -23,7 +23,7 @@ describe("Price Item Data", () => {
   });
 
   it("should have valid features structure for each price item", () => {
-    PriceItemDate.forEach((item) => {
+    PriceData.forEach((item) => {
       item.features.forEach((feature) => {
         expect(feature).toHaveProperty("id");
         expect(feature).toHaveProperty("name");
@@ -38,13 +38,15 @@ describe("Price Item Data", () => {
 
   it("should have the correct pricing tiers", () => {
     const expectedTiers = ["Starter", "Professional", "Enterprise"];
-    const actualTiers = PriceItemDate.map((item) => item.titr);
+    const actualTiers = PriceData.map((item) => item.titr);
     expect(actualTiers).toEqual(expectedTiers);
   });
 
   it("should have Professional as the only special tier", () => {
-    const professionalItem = PriceItemDate.find((item) => item.titr === "Professional");
-    const nonProfessionalItems = PriceItemDate.filter(
+    const professionalItem = PriceData.find(
+      (item) => item.titr === "Professional"
+    );
+    const nonProfessionalItems = PriceData.filter(
       (item) => item.titr !== "Professional"
     );
 

@@ -4,7 +4,7 @@ import { FullHoverAnimation } from "@/components/molecules";
 import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 import Feature from "./Feature";
-import { featuresData } from "../data/features";
+import { FeaturesData } from "../data/FeaturesData";
 
 const Features: React.FC = () => {
   const shouldReduceMotion = useReducedMotion(); // Respect user's motion preferences
@@ -31,9 +31,7 @@ const Features: React.FC = () => {
       <div className="mx-auto my-10 max-w-7xl px-4">
         <div>
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-center lg:text-center">
-            <PremiumBadge >
-              Key Features
-            </PremiumBadge>
+            <PremiumBadge>Key Features</PremiumBadge>
             <h2 className="text-center text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl">
               Enhanced
               <FullHoverAnimation text="Content Management" />
@@ -47,7 +45,7 @@ const Features: React.FC = () => {
             variants={containerVariants}
           >
             <div className="grid max-w-xl grid-cols-1 gap-8  lg:max-w-none lg:grid-cols-2 ">
-              {featuresData.map((feature) => (
+              {FeaturesData.map((feature) => (
                 <motion.div
                   key={feature.id}
                   className="h-full group"
