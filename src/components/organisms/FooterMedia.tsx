@@ -1,37 +1,46 @@
-import React from 'react'
 import Link from "next/link";
+import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaDev } from "react-icons/fa6";
 import { LuGithub } from "react-icons/lu";
 
 const FooterMedia: React.FC = () => {
   return (
-    <>
-      <div className="flex gap-3 sm:justify-center">
-        <Link
-          title="Github"
-          href="https://github.com/homayunmmdy"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white hover:shadow-md"
-        >
-          <LuGithub size={20} color="6A3FEA" />
-        </Link>
-        <Link
-          title="dev community"
-          href="https://dev.to/homayunmmdy"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white hover:shadow-md"
-        >
-          <FaDev size={20} color="6A3FEA" />
-        </Link>
-        <Link
-          title="Linkedin"
-          href="www.linkedin.com/in/homayunmmdy"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white hover:shadow-md"
-        >
-          <FaLinkedinIn size={20} color="6A3FEA" />
-        </Link>
-      </div>
-    </>
+    <div className="flex gap-3 sm:justify-center">
+      {FooterMediaData.map((item) => {
+        const LinkIcon = item.icon;
+        return (
+          <Link
+            title={item.title}
+            href={item.href}
+            key={item.title}
+            aria-label={`Link of ${item.title}`}
+            className="group flex h-9 w-9 items-center justify-center rounded-full bg-base-200 shadow-xl hover:shadow-2xl"
+          >
+            <LinkIcon size={20} className="group-hover:text-indigo-500" />
+          </Link>
+        );
+      })}
+    </div>
   );
 };
 
 export default FooterMedia;
+
+const FooterMediaData = [
+  {
+    title: "Github",
+    href: "https://github.com/homayunmmdy",
+    icon: LuGithub,
+  },
+  {
+    title: "Dev community",
+    href: "https://dev.to/homayunmmdy",
+    icon: FaDev,
+  },
+  {
+    title: "Linkedin",
+    href: "https://www.linkedin.com/in/homayunmmdy",
+    icon: FaLinkedinIn,
+  },
+];

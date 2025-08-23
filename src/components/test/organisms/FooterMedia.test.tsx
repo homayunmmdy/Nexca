@@ -6,41 +6,43 @@ describe("FooterMedia", () => {
   it("renders the component with all social media links", () => {
     render(<FooterMedia />);
 
-    // Check if the Github link is rendered
-    const githubLink = screen.getByTitle("Github");
-    expect(githubLink).toBeInTheDocument();
-    expect(githubLink).toHaveAttribute(
-      "href",
-      "https://github.com/homayunmmdy"
-    );
+    // Check if all social media links are rendered with correct hrefs
+const socialLinks = [
+      {
+        href: "https://github.com/homayunmmdy",
+        ariaLabel: "Link of Github"
+      },
+      {
+        href: "https://dev.to/homayunmmdy",
+        ariaLabel: "Link of Dev community"
+      },
+      {
+        href: "https://www.linkedin.com/in/homayunmmdy",
+        ariaLabel: "Link of Linkedin"
+      }
+    ];
 
-    // Check if the Dev community link is rendered
-    const devLink = screen.getByTitle("dev community");
-    expect(devLink).toBeInTheDocument();
-    expect(devLink).toHaveAttribute("href", "https://dev.to/homayunmmdy");
-
-    // Check if the Linkedin link is rendered
-    const linkedinLink = screen.getByTitle("Linkedin");
-    expect(linkedinLink).toBeInTheDocument();
-    expect(linkedinLink).toHaveAttribute(
-      "href",
-      "www.linkedin.com/in/homayunmmdy"
-    );
+    socialLinks.forEach(({ href, ariaLabel }) => {
+      const link = screen.getByLabelText(ariaLabel);
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute("href", href);
+    });
   });
 
   it("renders the correct icons for each social media link", () => {
     render(<FooterMedia />);
 
-    // Check if the Github icon is rendered
-    const githubIcon = screen.getByTitle("Github").querySelector("svg");
-    expect(githubIcon).toBeInTheDocument();
+    // Check if all icons are rendered within their links
+    const ariaLabels = [
+      "Link of Github",
+      "Link of Dev community",
+      "Link of Linkedin"
+    ];
 
-    // Check if the Dev community icon is rendered
-    const devIcon = screen.getByTitle("dev community").querySelector("svg");
-    expect(devIcon).toBeInTheDocument();
-
-    // Check if the Linkedin icon is rendered
-    const linkedinIcon = screen.getByTitle("Linkedin").querySelector("svg");
-    expect(linkedinIcon).toBeInTheDocument();
+    ariaLabels.forEach((ariaLabel) => {
+      const link = screen.getByLabelText(ariaLabel);
+      const icon = link.querySelector("svg");
+      expect(icon).toBeInTheDocument();
   });
+});
 });

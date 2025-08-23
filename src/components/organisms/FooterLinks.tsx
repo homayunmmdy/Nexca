@@ -4,12 +4,13 @@ import Link from "next/link";
 import { FaPhone } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import FooterLink from "./FooterLink";
+import FooterMedia from "./FooterMedia";
 
 const FooterLinks = () => {
   return (
     <>
-      <div className="col-span-full block text-center min-[500px]:col-span-6 md:col-span-4 xl:col-span-3 xl:py-16 xl:pl-5 xl:text-left">
-        <p className="mb-9 text-lg font-bold">Get In Touch</p>
+      <div className="col-span-full block text-center min-[500px]:col-span-6 md:col-span-6 xl:col-span-3 xl:py-16 xl:pl-5 xl:text-left">
+        <p className="lg:mb-9 mb-4 text-lg font-bold">Get In Touch</p>
         <ul className="grid justify-center gap-6 transition-all duration-500">
           <li>
             <Link
@@ -32,9 +33,12 @@ const FooterLinks = () => {
             </Link>
           </li>
         </ul>
+        <div className="flex xl:hidden justify-center mt-4 w-full">
+          <FooterMedia />
+        </div>
       </div>
       <div className="col-span-full block min-[500px]:col-span-6 md:col-span-4 xl:col-span-3 xl:py-16">
-        <p className="mb-9 text-center text-lg font-bold xl:text-left">
+        <p className="lg:mb-9 mb-4 text-center text-lg font-bold xl:text-left">
           Quick Links
         </p>
         <div className="flex gap-6 max-xl:justify-center xl:gap-12">
