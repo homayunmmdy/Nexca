@@ -5,7 +5,6 @@ import Stats from "./components/Stats";
 import AdminRecentPosts from "./components/AdminRecentPosts";
 import MasterBtn from "./components/MasterBtn";
 import { BsFiletypeDoc } from "react-icons/bs";
-import classNames from 'classnames';
 
 const Admin = () => {
   useCheckLogin();
