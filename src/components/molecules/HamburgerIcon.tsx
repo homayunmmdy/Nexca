@@ -8,8 +8,8 @@ const HamburgerIcon = ({ isOpen, toggleMenu }: Props) => {
   return (
     <div className="dropdown">
       <Button
-        color="btn-ghost"
-        className="lg:hidden"
+        color="btn-primary"
+        className="lg:hidden btn-outline mr-2.5"
         aria-label="close and open menu"
       >
         <svg
