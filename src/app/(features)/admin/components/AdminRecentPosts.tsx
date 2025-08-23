@@ -39,7 +39,7 @@ const AdminRecentPosts: React.FC = () => {
         navigation
       >
         {posts?.map((post: PostsCashType) => (
-          <SwiperSlide className="py-4" key={post._id}>
+          <SwiperSlide className="py-5" key={post._id}>
             <PostCard post={post} />
           </SwiperSlide>
         ))}

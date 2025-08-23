@@ -1,5 +1,4 @@
-'use client'
-import MasterEditorBtn from "@/components/molecules/MasterEditorBtn";
+"use client";
 import {
   adminPages,
   EditPostPages,
@@ -14,6 +13,7 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import LogoutButton from "./LogoutButton";
+import MasterBtn from "./MasterBtn";
 
 const NavLink: React.FC = () => {
   const pathname = usePathname();
@@ -30,7 +30,7 @@ const NavLink: React.FC = () => {
 
   // Load toggle states from local storage on component mount
   useEffect(() => {
-    const storedPages = localStorage.getItem('adminPages');
+    const storedPages = localStorage.getItem("adminPages");
     if (storedPages) {
       // If local storage data exists, use it
       const parsedPages = JSON.parse(storedPages);
@@ -55,7 +55,9 @@ const NavLink: React.FC = () => {
 
   // Merge local storage data with static data
   const finalData = data.map((link) => {
-    const storedLink = filteredData.find((storedLink) => storedLink.name === link.name);
+    const storedLink = filteredData.find(
+      (storedLink) => storedLink.name === link.name
+    );
     return {
       ...link,
       activate: storedLink ? storedLink.activate : link.activate,
@@ -123,7 +125,9 @@ const NavLink: React.FC = () => {
         <div className="my-4 max-w-full">
           <LogoutButton />
         </div>
-        <MasterEditorBtn />
+        <MasterBtn >
+          Become Master Editor
+        </MasterBtn>
       </div>
     </>
   );
