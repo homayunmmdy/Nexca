@@ -57,7 +57,7 @@ const Features: React.FC = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-8"
         >
           {FeaturesData.map((feature) => (
             <FeatureCard data={feature} key={feature.title} />

@@ -67,7 +67,7 @@ const PriceList = () => {
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="relative z-10 flex items-center justify-center  py-5 md:py-12">
+      <div className="md:relative z-10 flex items-center justify-center  py-5 md:py-12">
         <Container>
           <div className="mx-auto mb-10 md:mb-16 max-w-4xl text-center">
             <motion.div

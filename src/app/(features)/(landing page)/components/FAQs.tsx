@@ -60,7 +60,7 @@ const FQAs: React.FC = () => {
 
   return (
     <section
-      className="overflow-hidden bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 text-white sm:py-16 py-12 relative"
+      className="overflow-hidden bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 text-white sm:py-16 py-4 relative"
       id="FAQs"
     >
       {/* Animated background elements */}
@@ -106,17 +106,20 @@ const FQAs: React.FC = () => {
             <div className="h-full w-full rounded-3xl bg-gradient-to-br from-indigo-900/80 via-indigo-800/80 to-purple-900/80 backdrop-blur-sm" />
           </div>
 
-          <div className="relative z-10 px-8 py-16 sm:px-12 lg:px-16">
+          <div className="relative z-10 p-3 md:px-8  sm:px-12 lg:px-16">
             <motion.div
-              className="mb-12 text-center"
+              className="mb-3 md:mb-12 text-center"
               variants={headerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
+              <div className="hidden md:block">
+
               <PremiumBadge >
                 Frequently asked questions
               </PremiumBadge>
+              </div>
               <motion.h2
                 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-white via-indigo-100 to-white bg-clip-text text-transparent leading-tight"
                 initial={{ opacity: 0, y: 20 }}
@@ -141,7 +144,7 @@ const FQAs: React.FC = () => {
               </motion.h2>
 
               <motion.div
-                className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-6 rounded-full"
+                className="hidden md:block w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mt-6 rounded-full"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}

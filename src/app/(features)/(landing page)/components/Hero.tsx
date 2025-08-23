@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative pt-4">
       <Container>
-        <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
+        <div className="flex flex-col gap-10 lg:flex-row lg:gap-12 overflow-hidden">
           {/* Decorative Elements */}
           <div className="absolute inset-y-0 hidden w-full lg:right-0 lg:block lg:w-1/2">
             <motion.span
