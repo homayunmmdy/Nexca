@@ -1,5 +1,6 @@
 import { PremiumBadge } from "@/components/atoms";
 import { CTABtn } from "@/components/molecules";
+import Image from "next/image";
 
 const RouteConfig = {
   admin: {
@@ -23,12 +24,49 @@ function CTA() {
 
       {/* Main content */}
       <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 sm:py-32 sm:px-6 lg:px-8">
-        <div className="text-center space-y-12">
+        <div className="text-center space-y-4">
           {/* Badge with animation */}
           <PremiumBadge>Get Started Now</PremiumBadge>
 
+          <div className="inline-flex items-end justify-center w-full text-center mx-auto">
+            <Image
+              src="/static/Image/user1.jpg"
+              width={48}
+              height={48}
+              alt=""
+              className="absolute transform translate-x-24 ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-white"
+            />
+            <Image
+              src="/static/Image/user2.jpg"
+              width={48}
+              height={48}
+              alt=""
+              className="absolute transform -translate-x-24 -ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-white"
+            />
+            <Image
+              src="/static/Image/user3.webp"
+              width={48}
+              height={48}
+              alt=""
+              className="absolute transform -translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-white"
+            />
+            <Image
+              src="/static/Image/user4.webp"
+              width={48}
+              height={48}
+              alt=""
+              className="absolute transform translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-white"
+            />
+            <Image
+              src="/static/Image/user5.webp"
+              width={48}
+              height={48}
+              alt=""
+              className="rounded-full w-20 h-20 md:w-24 md:h-24 border-4 border-white relative"
+            />
+          </div>
           {/* Main heading with text animations */}
-          <div className="space-y-6 animate-fade-in-up animation-delay-400">
+          <div className="animate-fade-in-up animation-delay-400">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight">
               <span className="block bg-gradient-to-r from-base-100 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-gradient-x">
                 Discover your
@@ -71,12 +109,12 @@ function CTA() {
           </div>
 
           {/* CTA Button with enhanced animations */}
-          <div className="pt-8 animate-fade-in-up animation-delay-800">
+          <div className=" animate-fade-in-up animation-delay-800">
             <CTABtn href={RouteConfig.admin.base}>Admin Demo</CTABtn>
           </div>
 
           {/* Trust indicators */}
-          <div className="pt-16 animate-fade-in-up animation-delay-1000">
+          <div className="pt-6 animate-fade-in-up animation-delay-1000">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8  text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>

@@ -42,7 +42,7 @@ function Popup() {
         <>
             {/* Backdrop overlay */}
             <div 
-                className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300 ${
+                className={`fixed inset-0 bg-base-300 backdrop-blur-sm z-40 transition-opacity duration-300 ${
                     isAnimating ? 'opacity-100' : 'opacity-0'
                 }`}
                 onClick={handleClose}
