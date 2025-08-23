@@ -48,39 +48,11 @@ const templates = [
     },
     {
         id: 5,
-        title: 'e-commerce',
-        description: 'A template to sell you products',
-        imgurl: '/static/Image/logo.jpg',
-        link: '/templates/e-commerce'
-    },
-    {
-        id: 6,
         title: 'music',
         description: 'Share you latest songs and albums',
         imgurl: '/static/Image/logo.jpg',
         link: '/templates/music'
-    },
-    {
-        id: 7,
-        title: 'shop zone',
-        description: 'A place that you have to shop shop zone nice page to represent your products',
-        imgurl: '/static/Image/logo.jpg',
-        link: '/templates/shop-zone'
-    },
-    {
-        id: 8,
-        title: 'Star Scope',
-        description: 'See the news about your favorite celebrate here',
-        imgurl: '/static/Image/logo.jpg',
-        link: '/templates/star-scope'
-    },
-    {
-        id: 9,
-        title: 'Student Portfolio',
-        description: 'Share your latest studies and article among your colleges',
-        imgurl: '/static/Image/logo.jpg',
-        link: '/templates/student-portfolio'
-    },
+    }
 ]
 
 export default TemplatePage;

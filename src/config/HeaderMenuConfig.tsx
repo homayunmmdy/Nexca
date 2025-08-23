@@ -71,29 +71,9 @@ const HeaderMenuConfig = (): HeaderMenuConfigType[] => [
       },
       {
         id: 5,
-        name: "E-Commerce",
-        href: "/templates/e-commerce",
-      },
-      {
-        id: 6,
         name: "Music",
         href: "/templates/music",
-      },
-      {
-        id: 7,
-        name: "Shop Zone",
-        href: "/templates/shop-zone",
-      },
-      {
-        id: 8,
-        name: "Star Scope",
-        href: "/templates/star-scope",
-      },
-      {
-        id: 9,
-        name: "Student Portfolio",
-        href: "/templates/student-portfolio",
-      },
+      }
     ],
   },
   {
