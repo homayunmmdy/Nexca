@@ -59,7 +59,7 @@ const Login: React.FC = () => {
     }
 
     if (username === USERNAME && password === PASSWORD) {
-      toast.success("Welcome to Admin Dashboard! 🎉", {
+      toast.success("Welcome to Admin Panel! 🎉", {
         duration: 3000,
       });
       localStorage.setItem(AUTH_KEY, JSON.stringify(true));
@@ -114,7 +114,7 @@ const Login: React.FC = () => {
                   Welcome Back
                 </h1>
                 <p className="text-white/70 text-lg">
-                  Sign in to your admin dashboard
+                  Sign in to your admin panel
                 </p>
               </div>
 
@@ -187,7 +187,7 @@ const Login: React.FC = () => {
                       Signing In...
                     </div>
                   ) : (
-                    "Sign In to Dashboard"
+                    "Sign In to Admin Panel"
                   )}
                 </Button>
               </form>
