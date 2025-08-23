@@ -1,8 +1,8 @@
 "use client";
 import useCheckLogin from "@/app/(features)/admin/hooks/useCheckLogin";
-import RecentPosts from "@/app/(pages)/posts/[id]/components/RecentPosts";
 import { BannerTitle } from "@/components/molecules";
 import Stats from "./components/Stats";
+import AdminRecentPosts from "./components/AdminRecentPosts";
 
 const Admin = () => {
   useCheckLogin();
@@ -15,7 +15,7 @@ const Admin = () => {
       <div className="mx-auto max-w-7xl px-4 pb-8 pt-10 text-center sm:px-6 lg:px-8">
         <BannerTitle />
       </div>
-      <RecentPosts />
+      <AdminRecentPosts />
     </div>
   );
 };

@@ -55,3 +55,19 @@
     background: #3F00E7;
   }
 }
+
+.swiper-button-prev ,
+.swiper-button-next {
+    background-color: white !important;
+    border-radius: 50% !important;
+    display: flex;
+    width: 40px !important;
+    height: 40px !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-prev:after ,
+.swiper-button-next::after {
+    font-size: 20px !important;
+}

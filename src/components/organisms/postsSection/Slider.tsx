@@ -10,7 +10,6 @@ import { A11y, Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PostCard from "./PostCard";
 import Posts4x4Skeleton from "./skeleton/Posts4x4Skeleton";
-import "./styles.css";
 
 const Slider = () => {
   const { data, loading } = useGetSection(SWIPER_SEC, -8, 5);
