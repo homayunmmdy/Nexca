@@ -1,14 +1,12 @@
 import {
   COMMENTS_API_URL,
   CONTACTS_API_URL,
-  CONTRIBUTION_API_URL,
   EMAIL_API_URL,
   POST_API_URL,
   RELEASE_API_URL,
   SECTIONS_API_URL,
   SERVICES_API_URL,
   TEXTADV_API_URL,
-  TICKETS_API_URL,
 } from "../apiConstants";
 
 describe("API Constants", () => {
@@ -20,9 +18,7 @@ describe("API Constants", () => {
       CONTACTS_API_URL,
       EMAIL_API_URL,
       TEXTADV_API_URL,
-      TICKETS_API_URL,
       RELEASE_API_URL,
-      CONTRIBUTION_API_URL,
       COMMENTS_API_URL,
     };
 
@@ -66,16 +62,8 @@ describe("API Constants", () => {
       expect(TEXTADV_API_URL).toBe("/api/textadv");
     });
 
-    it("should have correct TICKETS_API_URL", () => {
-      expect(TICKETS_API_URL).toBe("/api/tickets");
-    });
-
     it("should have correct RELEASE_API_URL", () => {
       expect(RELEASE_API_URL).toBe("/api/release");
-    });
-
-    it("should have correct CONTRIBUTION_API_URL", () => {
-      expect(CONTRIBUTION_API_URL).toBe("/api/contribution");
     });
 
     it("should have correct COMMENTS_API_URL", () => {
@@ -92,9 +80,7 @@ describe("API Constants", () => {
         CONTACTS_API_URL,
         EMAIL_API_URL,
         TEXTADV_API_URL,
-        TICKETS_API_URL,
         RELEASE_API_URL,
-        CONTRIBUTION_API_URL,
         COMMENTS_API_URL,
       ];
       const uniqueUrls = new Set(urls);
