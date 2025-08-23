@@ -9,7 +9,6 @@ export { default as EmailsModel } from "./model/Emails";
 export { default as PostModel } from "./model/Post";
 export { default as SectionModel } from "./model/Section";
 export { default as ServiceModel } from "./model/Services";
-export { default as MapsModel } from "./model/Maps";
 export { default as TextAdvModel } from "./model/TextAdv";
 export { default as ReleaseModel } from "./model/Release";
 export { default as ImgAdvModel } from "./model/ImgAdv";

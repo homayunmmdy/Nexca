@@ -1,4 +1,7 @@
-import { CountriesMapData, CountriesMapDataType } from "@/config/countries";
+import {
+  CountriesMapData,
+  CountriesMapDataType,
+} from "@/app/(features)/map/data/countries";
 import { HeaderModeType } from "@/types/entities";
 import DropdownMenu from "./DropdownMenu";
 

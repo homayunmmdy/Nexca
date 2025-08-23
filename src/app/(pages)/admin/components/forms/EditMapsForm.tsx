@@ -1,19 +1,17 @@
 "use client";
+import { CountriesMapData } from "@/app/(features)/map/data/countries";
 import { Button, Input, Textarea } from "@/components/atoms";
 import SpeechToText from "@/components/organisms/SpeechToText";
-import {
-  MAPS_API_URL,
-} from "@/config/apiConstants";
-import {MapsCashType} from "@/types/CashTypes";
+import { MAPS_API_URL } from "@/config/apiConstants";
+import { getProvinceData } from "@/config/getProvinceData";
 import FormHandler from "@/util/handler/FormHandler";
 import { checkMaster } from "@/util/Util";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import {  SelectField } from "../elements";
+import { SelectField } from "../elements";
 import { FormLayout, ImagePreview } from "../shared";
 import TiptapEditor from "../TiptapEditor";
-import {CountriesMapData} from "@/config/countries";
-import {getProvinceData} from "@/config/getProvinceData";
+import { MapsCashType } from "@/app/(features)/map/types/types";
 
 const EditMapsForm = ({ post }: { post: MapsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -47,26 +45,25 @@ const EditMapsForm = ({ post }: { post: MapsCashType }) => {
         className="mb-3 flex w-full flex-col gap-3 md:flex-row"
       >
         <div className="w-full md:w-1/2">
-
           <div className="flex gap-3 flex-wrap sm:flex-nowrap">
             <div className="w-full">
               <SelectField
-                  id="country"
-                  name="country"
-                  label="country"
-                  value={formData.country}
-                  onChange={handler.trakeChange}
-                  options={CountriesMapData}
+                id="country"
+                name="country"
+                label="country"
+                value={formData.country}
+                onChange={handler.trakeChange}
+                options={CountriesMapData}
               />
             </div>
             <div className="w-full">
               <SelectField
-                  id="province"
-                  name="province"
-                  label="province"
-                  value={formData.province}
-                  onChange={handler.trakeChange}
-                  options={getProvinceData(formData.country)}
+                id="province"
+                name="province"
+                label="province"
+                value={formData.province}
+                onChange={handler.trakeChange}
+                options={getProvinceData(formData.country)}
               />
             </div>
           </div>

@@ -1,4 +1,4 @@
-type BaseType = {
+export type BaseType = {
   _id: string;
   body: string;
   createdAt: string;
@@ -25,15 +25,7 @@ export type PostsCashType = {
 
 } & BaseType;
 
-export type MapsCashType = {
-  title: string;
-  imgurl: string;
-  description: string;
-  country: string;
-  province: string;
-  source?: string;
-  author?: string;
-} & BaseType;
+
 
 export type ReleaseCashType = {
   title: string;
