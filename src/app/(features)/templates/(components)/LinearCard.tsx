@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { PostsCashType } from "@/types/CashTypes";
 import { motion } from "framer-motion";
 import { FaRegCalendar } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
-import FormatTime from "../../posts/components/FormatTime";
+import FormatTime from "../../../../components/molecules/FormatTime";
 
 function LinearCard({ data }: { data: PostsCashType }) {
   const itemVariants = {
@@ -28,17 +28,21 @@ function LinearCard({ data }: { data: PostsCashType }) {
       </h4>
       <div className="flex items-center justify-between text-sm ">
         <div className="flex items-center space-x-3">
-          
-            <span className="flex items-center bg-base-300 p-2 rounded-xl">
-              <FiUser data-testid="user-icon" className="mr-1" size={12} />
-              <span data-testid="author-sec">{data.author ? data.author : 'unknown'}</span>
+          <span className="flex items-center bg-base-300 p-2 rounded-xl">
+            <FiUser data-testid="user-icon" className="mr-1" size={12} />
+            <span data-testid="author-sec">
+              {data.author ? data.author : "unknown"}
             </span>
-          
+          </span>
         </div>
-        <span className="flex items-center" >
-          <FaRegCalendar data-testid="calender-icon" className="mr-1" size={12} />
+        <span className="flex items-center">
+          <FaRegCalendar
+            data-testid="calender-icon"
+            className="mr-1"
+            size={12}
+          />
           <span data-testid="formatted-time">
-          <FormatTime timestamp={data.createdAt} />
+            <FormatTime timestamp={data.createdAt} />
           </span>
         </span>
       </div>

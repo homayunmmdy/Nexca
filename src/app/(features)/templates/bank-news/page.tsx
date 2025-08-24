@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import LatestPosts from "@/app/(pages)/templates/(components)/LatestPosts";
-import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
-import UnderMain from "@/app/(pages)/templates/bank-news/components/UnderMain";
-import MainSec from "@/app/(pages)/templates/bank-news/components/MainSec";
-import MarketSummary from "@/app/(pages)/templates/bank-news/components/MarketSummary";
+import MainSec from "./components/MainSec";
+import UnderMain from "./components/UnderMain";
+import LatestPosts from "../(components)/LatestPosts";
+import EmailBox from "../(components)/EmailBox";
+import MarketSummary from "./components/MarketSummary";
 
 const BankNewsPage = () => {
 

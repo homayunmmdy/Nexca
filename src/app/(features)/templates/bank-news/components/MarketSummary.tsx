@@ -6,7 +6,7 @@ import {SectionController} from "@/util/controller/sectionsController";
 import useGetSection from "@/hooks/useGetSection";
 import {POSTS_QUERY_KEY} from "@/config/Constants";
 import {PostsCashType} from "@/types/CashTypes";
-import BulletPost from "@/app/(pages)/templates/(components)/BulletPost";
+import BulletPost from '../../(components)/BulletPost';
 
 const MarketSummary = () => {
     const itemVariants = {

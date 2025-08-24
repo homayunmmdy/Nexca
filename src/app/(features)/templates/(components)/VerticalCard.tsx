@@ -1,4 +1,5 @@
 "use client";
+import { FormatTime } from "@/components/molecules";
 import { PostsCashType } from "@/types/CashTypes";
 import { postLinkGenerator } from "@/util/ServerUtil";
 import { motion } from "framer-motion";
@@ -6,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaRegCalendar } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
-import FormatTime from "../../posts/components/FormatTime";
 
 function VerticalCard({ data }: { data: PostsCashType }) {
   const dataVariants = {

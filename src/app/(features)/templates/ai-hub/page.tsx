@@ -1,8 +1,5 @@
 "use client";
-import EmailBox from "@/app/(pages)/templates/(components)/EmailBox";
 import { ErrorText } from "@/components/atoms";
-import { ALL_POSTS_QUERY_KEY } from "@/config/Constants";
-import { POST_API_URL } from "@/config/apiConstants";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
 import { motion } from "framer-motion";
@@ -14,10 +11,11 @@ import TextHero from "../(components)/TextHero";
 import VerticalCard from "../(components)/VerticalCard";
 import { AI_HUB_categories } from "../(static-data)/aiHub";
 import MainSec from "./components/MainSec";
+import EmailBox from "../(components)/EmailBox";
 
 const AINewsHub = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-  const data = useFetch('all templates 2', '/api/posts/templates/2');
+  const data = useFetch("all templates 2", "/api/posts/templates/2");
   const [posts, setPosts] = useState(data?.data || []);
 
   useEffect(() => {

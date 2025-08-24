@@ -41,6 +41,7 @@ const Feed: React.FC = () => {
     isFetchingNextPage, // If the next page is being fetched
     error,
     isLoading,
+    // @ts-ignore
   } = useInfiniteQuery<PaginatedPosts>({
     queryKey: ["posts"],
     // @ts-ignore
