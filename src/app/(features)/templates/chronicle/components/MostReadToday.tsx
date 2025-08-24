@@ -26,7 +26,7 @@ const MostReadToday = () => {
       </h2>
       <div className="space-y-4">
         {data?.map((post: PostsCashType, index: number) => (
-          <PostOrder post={post} index={index} />
+          <PostOrder post={post} index={index} key={post._id}/>
         ))}
       </div>
     </motion.div>
