@@ -1,9 +1,9 @@
 "use client";
 import { Container, ErrorText, Spinner } from "@/components/atoms";
+import { PostItem } from "@/components/posts";
 import { PostsCashType } from "@/types/CashTypes";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import React, { useEffect, useRef } from "react";
-import PostItem from "./components/PostItem";
 
 // Define the structure of the paginated response
 interface PaginatedPosts {

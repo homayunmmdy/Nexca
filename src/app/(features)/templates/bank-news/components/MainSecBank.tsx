@@ -5,7 +5,7 @@ import useGetSection from "@/hooks/useGetSection";
 import {POSTS_QUERY_KEY} from "@/config/Constants";
 import ImageCard from '../../(components)/ImageCard';
 
-const MainSec = () => {
+const MainSecBank = () => {
     const { data } = useGetSection(POSTS_QUERY_KEY, -1, 15);
 
     return (
@@ -17,4 +17,4 @@ const MainSec = () => {
     );
 };
 
-export default MainSec;
+export default MainSecBank;

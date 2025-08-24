@@ -1,13 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import MainSec from "./components/MainSec";
-import UnderMain from "./components/UnderMain";
-import LatestPosts from "../(components)/LatestPosts";
 import EmailBox from "../(components)/EmailBox";
+import LatestPosts from "../(components)/LatestPosts";
+import MainSecBank from "./components/MainSecBank";
 import MarketSummary from "./components/MarketSummary";
+import UnderMainBank from "./components/UnderMainBank";
 
 const BankNewsPage = () => {
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +31,6 @@ const BankNewsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-3 gap-8"
@@ -43,7 +41,7 @@ const BankNewsPage = () => {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Hero Section */}
-            <MainSec />
+            <MainSecBank />
 
             {/* Latest News */}
             <motion.section variants={itemVariants}>
@@ -54,7 +52,7 @@ const BankNewsPage = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                  <UnderMain />
+                <UnderMainBank />
               </div>
             </motion.section>
           </div>
@@ -65,10 +63,15 @@ const BankNewsPage = () => {
             <LatestPosts />
 
             {/* Newsletter Signup */}
-            <EmailBox title="Stay Informed" description="Get the latest banking and financial news delivered to your
-                inbox daily." bg="bg-gradient-to-r from-blue-600 to-blue-700" ElementColor="ghost"/>
+            <EmailBox
+              title="Stay Informed"
+              description="Get the latest banking and financial news delivered to your
+                inbox daily."
+              bg="bg-gradient-to-r from-blue-600 to-blue-700"
+              ElementColor="ghost"
+            />
             {/* Market Summary */}
-             <MarketSummary />
+            <MarketSummary />
           </div>
         </motion.div>
       </main>
