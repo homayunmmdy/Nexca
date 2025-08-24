@@ -1177,7 +1177,7 @@ const PostsCash: PostsCashType[] = [
     author: "homayoun",
     field : "https://ts16.tarafdari.com/contents/user836235/content-sound/modern_talking_-_cheri_cheri_lady.mp3",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
-    postType : "1",
+    postType : "2",
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,

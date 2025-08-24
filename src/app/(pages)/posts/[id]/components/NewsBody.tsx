@@ -10,7 +10,6 @@ import { CommentsCashType } from "@/types/CashTypes";
 import DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import Comment from "./Comment";
-import BookmarkButton from "./BookmarkButton";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
 import SharePost from "./SharePost";
@@ -41,11 +40,11 @@ const NewsBody = ({ post }: { post: any }) => {
         priority
       />
       <div className="flex items-center justify-between gap-3 px-3">
-        {/* <p className="text-center">{readingTimeEstimate.text}</p> */}
-        <div className="flex items-center gap-2">
-          <ReadPost text={text} />
-          <BookmarkButton postId={post._id} />
-        </div>
+        {post.postType === "1" && (
+          <div className="flex items-center gap-2">
+            <ReadPost text={text} />
+          </div>
+        )}
         <NexcaMark master={post.masterEditor} />
       </div>
       <div
