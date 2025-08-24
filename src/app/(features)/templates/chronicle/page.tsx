@@ -8,6 +8,7 @@ import LatestReports from "./components/LatestReports";
 import EmailBox from "../(components)/EmailBox";
 import EmailListForm from "@/components/organisms/EmailListForm";
 import ChronicleTeleType from "./components/ChronicleTeleType";
+import MostReadToday from "./components/MostReadToday";
 
 const TheChronicle = () => {
   const [email, setEmail] = useState("");
@@ -182,13 +183,13 @@ const TheChronicle = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <>
       {/* Breaking News Ticker */}
       <ChronicleTeleType />
 
       {/* Hero Section */}
       <motion.section
-        className="pt-8 pb-12 px-4 sm:px-6 lg:px-8 bg-white"
+        className="pt-8 pb-12 px-4 sm:px-6 lg:px-8"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -254,7 +255,7 @@ const TheChronicle = () => {
 
       {/* Latest News Section */}
       <motion.section
-        className="py-16 bg-slate-50"
+        className="py-16 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -264,10 +265,10 @@ const TheChronicle = () => {
           <motion.div className="mb-12" variants={itemVariants}>
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="text-3xl sm:text-4xl font-serif font-bold text-slate-900 mb-2">
+                <h2 className="text-3xl sm:text-4xl font-serif font-bold  mb-2">
                   Latest Reports
                 </h2>
-                <p className="text-lg text-slate-600">
+                <p className="text-lg ">
                   In-depth analysis and breaking developments from around the
                   world
                 </p>
@@ -283,7 +284,7 @@ const TheChronicle = () => {
 
       {/* Trending and Categories Section */}
       <motion.section
-        className="py-16 bg-white"
+        className="py-16 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -291,45 +292,7 @@ const TheChronicle = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
-            <motion.div className="lg:col-span-2" variants={itemVariants}>
-              <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8 flex items-center">
-                <IoIosTrendingUp className="h-8 w-8 mr-3 text-red-500" />
-                Most Read Today
-              </h2>
-              <div className="space-y-4">
-                {trendingNews.map((article, index) => (
-                  <motion.div
-                    key={article.id}
-                    className="flex items-start p-6 bg-slate-50 hover:bg-slate-100 transition-colors duration-200 cursor-pointer group"
-                    whileHover={{ x: 4 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-slate-900 to-slate-700 flex items-center justify-center text-white font-bold text-lg mr-4">
-                      {index + 1}
-                    </div>
-                    <div className="flex-grow">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <span className="px-2 py-1 bg-white text-slate-700 text-xs font-medium uppercase tracking-wider">
-                          {article.category}
-                        </span>
-                        <span className="text-xs text-slate-500">
-                          {article.publishedAt}
-                        </span>
-                      </div>
-                      <h3 className="font-serif font-semibold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors duration-200">
-                        {article.title}
-                      </h3>
-                      <div className="flex items-center space-x-4 text-sm text-slate-500">
-                        <div className="flex items-center">
-                          <FaEye className="h-4 w-4 mr-1" />
-                          {article.views} reads
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+            <MostReadToday />
 
             <motion.div variants={itemVariants}>
               <EmailBox
@@ -345,7 +308,7 @@ const TheChronicle = () => {
 
       {/* Newsletter Section */}
       <motion.section
-        className="py-16 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white"
+        className="py-16 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -353,7 +316,7 @@ const TheChronicle = () => {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div variants={itemVariants}>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">
+            <h2 className="text-3xl text-white sm:text-4xl font-serif font-bold mb-4">
               Stay Informed
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto font-light">
@@ -369,7 +332,7 @@ const TheChronicle = () => {
           </motion.div>
         </div>
       </motion.section>
-    </div>
+    </>
   );
 };
 
