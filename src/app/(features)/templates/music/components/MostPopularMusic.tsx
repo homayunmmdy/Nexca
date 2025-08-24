@@ -1,12 +1,12 @@
 "use client";
-import { PLAY_LIST } from "@/config/Constants";
+import { MOST_POPULAR_MUSIC } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
 import { motion } from "framer-motion";
-import MusicCard from "./MusicCard";
+import ImageCard from "../../(components)/ImageCard";
 
-const PlayList = () => {
-  const { data } = useGetSection(PLAY_LIST, -4, 26);
+const MostPopularMusic = () => {
+  const { data } = useGetSection(MOST_POPULAR_MUSIC, -6, 25);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -18,7 +18,7 @@ const PlayList = () => {
     },
   };
   return (
-    <section className="py-20">
+    <section id="genres" className="py-20 bg-black/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,13 +28,13 @@ const PlayList = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Trending{" "}
+            Explore{" "}
             <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Playlists
+              MostPopular
             </span>
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Curated playlists for every mood and moment
+            Discover MostPopular musics
           </p>
         </motion.div>
 
@@ -43,10 +43,10 @@ const PlayList = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {data?.map((data: PostsCashType) => (
-            <MusicCard data={data} />
+          {data?.map((post: PostsCashType) => (
+            <ImageCard post={post} key={post._id}/>
           ))}
         </motion.div>
       </div>
@@ -54,4 +54,4 @@ const PlayList = () => {
   );
 };
 
-export default PlayList;
+export default MostPopularMusic;

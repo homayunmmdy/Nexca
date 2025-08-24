@@ -8,6 +8,7 @@ import LiveEvents from "./components/LiveEvents";
 import MusicHero from "./components/MusicHero";
 import MusicNews from "./components/MusicNews";
 import PlayList from "./components/PlayList";
+import MostPopularMusic from "./components/MostPopularMusic";
 
 export default function MusicHomepage() {
   const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -335,63 +336,7 @@ export default function MusicHomepage() {
       </section>
 
       {/* Music Genres Section */}
-      <section id="genres" className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Explore{" "}
-              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Genres
-              </span>
-            </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Discover music across all genres and find your perfect sound
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {genres.map((genre) => (
-              <motion.div
-                key={genre.name}
-                variants={itemVariants}
-                whileHover={cardHover}
-                className="group relative overflow-hidden rounded-2xl cursor-pointer"
-              >
-                <div className="aspect-video relative">
-                  <motion.img
-                    src={genre.image}
-                    alt={genre.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    whileHover={imageHover}
-                  />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r ${genre.color} opacity-60 group-hover:opacity-40 transition-opacity duration-300`}
-                  ></div>
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
-                </div>
-                <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <h3 className="text-white text-2xl font-bold mb-1">
-                    {genre.name}
-                  </h3>
-                  <p className="text-white/80">{genre.tracks} tracks</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <MostPopularMusic />
 
       {/* Trending Playlists Section */}
       <PlayList />

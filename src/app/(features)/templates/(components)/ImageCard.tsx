@@ -32,7 +32,7 @@ const ImageCard = ({post } : {post : PostsCashType}) => {
                         fetchPriority="high"
                         loading="eager"
                         priority
-                        className="w-full h-full object-cover"
+                        className="w-full h-full aspect-video object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                     <div className="absolute top-4 left-4">

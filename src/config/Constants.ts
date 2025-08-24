@@ -39,6 +39,7 @@ export const HERO_NEWS = "hero_news"
 export const FEATURE_TRACK_NEWS = "feature_track"
 export const PLAY_LIST = "play_list"
 export const LIVE_EVENT = "live_event"
+export const MOST_POPULAR_MUSIC = "most_popular_music"
 
 // ai hub - templates query key
 export const AIHUB_MAIN_QUERY_KEY = "aihub_main"
