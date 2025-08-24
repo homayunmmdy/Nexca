@@ -4,6 +4,8 @@ import useGetSection from "@/hooks/useGetSection";
 import {TELETYPE_QUERY_KEY} from "@/config/Constants";
 import {PostsCashType} from "@/types/CashTypes";
 import {Container} from "@/components/atoms";
+import { postLinkGenerator } from "@/util/ServerUtil";
+import Link from "next/link";
 
 export default function Teletype() {
     const {data} = useGetSection(TELETYPE_QUERY_KEY, -1, 7);
@@ -12,16 +14,19 @@ export default function Teletype() {
     const [postIndex, setPostIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
 
-    const titles = useMemo(() => {
-        return data?.map((post: PostsCashType) => post.title.slice(0, 85)) || [];
+    const posts = useMemo(() => {
+        return data || [];
     }, [data]);
 
-    useEffect(() => {
-        if (titles.length === 0) return;
+    const currentPost = posts[postIndex];
+    const postLink = currentPost ? postLinkGenerator(currentPost._id, currentPost.title) : '#';
 
-        if (charIndex <= titles[postIndex].length) {
+    useEffect(() => {
+        if (posts.length === 0) return;
+
+        if (charIndex <= posts[postIndex].title.slice(0, 85).length) {
             const timeout = setTimeout(() => {
-                setDisplayedText(titles[postIndex].slice(0, charIndex));
+                setDisplayedText(posts[postIndex].title.slice(0, 85).slice(0, charIndex));
                 setCharIndex((prev) => prev + 1);
             }, 50); // typing speed
             return () => clearTimeout(timeout);
@@ -29,16 +34,17 @@ export default function Teletype() {
             // After a full title is typed, pause before moving to the next
             const pause = setTimeout(() => {
                 setCharIndex(0);
-                setPostIndex((prev) => (prev + 1) % titles.length);
+                setPostIndex((prev) => (prev + 1) % posts.length);
             }, 2000); // pause between titles
             return () => clearTimeout(pause);
         }
-    }, [charIndex, postIndex, titles]);
+    }, [charIndex, postIndex, posts]);
 
     return (
         <div
             className="sticky top-[85px] mt-[-42px] z-10 w-full hidden lg:block backdrop-blur-md bg-white/30 dark:bg-black/30 shadow-md">
             <Container className="px-3 sm:px-4">
+                <Link href={postLink} className="block">
                 <div className="flex items-center justify-between h-12">
                     <div className="flex-1">
                         <h1
@@ -61,6 +67,7 @@ export default function Teletype() {
                         </div>
                     </div>
                 </div>
+                </Link>
             </Container>
         </div>
     );
