@@ -21,6 +21,7 @@ import {
   FaVolumeUp,
 } from "react-icons/fa";
 import { IoIosFlash } from "react-icons/io";
+import MusicNews from "./components/MusicNews";
 
 export default function MusicHomepage() {
   const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -247,13 +248,7 @@ export default function MusicHomepage() {
     setCurrentPlaying(currentPlaying === trackId ? null : trackId);
   };
 
-  const handleEmailSubmit = () => {
-    if (email && email.includes("@")) {
-      setIsSubscribed(true);
-      setEmail("");
-      setTimeout(() => setIsSubscribed(false), 3000);
-    }
-  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -840,70 +835,7 @@ export default function MusicHomepage() {
       </section>
 
       {/* Music News Section */}
-      <section className="py-20 bg-black/20">
-        <motion.div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Music{" "}
-              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                News
-              </span>
-            </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Stay updated with the latest happenings in the music world
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {musicNews.map((news) => (
-              <motion.article
-                key={news.id}
-                variants={itemVariants}
-                whileHover={cardHover}
-                className="group bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="relative h-48">
-                  <motion.img
-                    src={news.image}
-                    alt={news.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    whileHover={imageHover}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center space-x-2 text-pink-400 text-sm mb-3">
-                    <FaChartLine className="h-4 w-4" />
-                    <span>{news.date}</span>
-                  </div>
-                  <h3 className="text-white font-bold text-lg mb-3 leading-tight">
-                    {news.title}
-                  </h3>
-                  <p className="text-white/70 text-sm mb-4 line-clamp-2">
-                    {news.summary}
-                  </p>
-                  <button className="text-pink-400 hover:text-pink-300 font-semibold text-sm transition-colors">
-                    Read More →
-                  </button>
-                </div>
-              </motion.article>
-            ))}
-          </motion.div>
-        </motion.div>
-      </section>
+      <MusicNews />
 
       {/* Stats Section */}
       <section className="py-20">

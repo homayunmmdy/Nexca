@@ -15,8 +15,8 @@ export const templatesData = [
         secid : '4',
         name : 'Chronicle'
     },
-    // {
-    //     secid : '5',
-    //     name : 'Music'
-    // }
+    {
+        secid : '5',
+        name : 'Music'
+    }
 ]

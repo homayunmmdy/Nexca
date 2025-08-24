@@ -586,7 +586,7 @@ const PostsCash: PostsCashType[] = [
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
   },
-    {
+  {
     _id: "665db351j73932g6a08928db",
     title:
       "Section 10  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
@@ -602,7 +602,7 @@ const PostsCash: PostsCashType[] = [
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
   },
-      {
+  {
     _id: "665db3513739s2g6a08928db",
     title:
       "Section 11  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
@@ -669,11 +669,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665dd351a73932g6a08928db",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -685,11 +685,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665db351a73932g6208928db",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -701,11 +701,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665db351a73932g6a08920db",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -717,11 +717,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665db351a73932g9a08928db",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -733,11 +733,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665db351a73936g6a08928db",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -749,11 +749,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665db351a7a932g6a08928db",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -765,11 +765,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665db351a739n2g6a08928db",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -781,11 +781,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665db351a73932g6a089282b",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -797,11 +797,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab351a73932g6a08928db",
     title:
-        "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Under Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "16",
@@ -813,11 +813,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab351a73932g6a02928db",
     title:
-        "Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "15",
@@ -829,11 +829,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab351a73932gha029z8db",
     title:
-        "Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "15",
@@ -845,11 +845,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab351a73932g6a02a28db",
     title:
-        "Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "17",
@@ -861,11 +861,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab351a7z932g6a02928db",
     title:
-        "Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Main Bank news  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://ana.ir/files/fa/news/1404/3/28/875267_594.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "3",
     services: "2",
     section: "17",
@@ -877,11 +877,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab351au3932g6a029z8db",
     title:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "20",
@@ -893,11 +893,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab35na73932g6a029z8db",
     title:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "20",
@@ -909,11 +909,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "661ab351a73932g6a029z8db",
     title:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "20",
@@ -925,11 +925,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "265ab351a73932g6a029z8db",
     title:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "20",
@@ -941,11 +941,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab351a73932g6a029z88b",
     title:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "20",
@@ -957,11 +957,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab361a73932g6a029z8db",
     title:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "20",
@@ -970,14 +970,14 @@ const PostsCash: PostsCashType[] = [
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
   },
-    {
+  {
     _id: "665ab361a7393216a029z1db",
     title:
-        "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "18",
@@ -989,11 +989,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab361q7393216a029z8db",
     title:
-        "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "21",
@@ -1005,11 +1005,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab361a7393216a029q8db",
     title:
-        "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "21",
@@ -1021,11 +1021,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665ab361a7w93216a029z8db",
     title:
-        "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "21",
@@ -1037,11 +1037,11 @@ const PostsCash: PostsCashType[] = [
   {
     _id: "665abk61a7393216a029z8db",
     title:
-        "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Breakding news for chronic teletype , Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "2",
     section: "21",
@@ -1050,18 +1050,69 @@ const PostsCash: PostsCashType[] = [
     updatedAt: "2024-05-22T08:56:49.785Z",
     __v: 0,
   },
-    {
-    _id: "665ljk61a7393216a029z8db",
+  {
+    _id: "665ljk61a7393h16a029z8db",
     title:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
     imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
 
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
     templates: "4",
     services: "3",
     section: "19",
-    author : "homayoun",
+    author: "homayoun",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
+    createdAt: "2024-05-22T08:56:49.785Z",
+    updatedAt: "2024-05-22T08:56:49.785Z",
+    __v: 0,
+  },
+  {
+    _id: "665ljk61a7l93216a029z8db",
+    title:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+    imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
+
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+    templates: "5",
+    services: "3",
+    section: "29",
+    author: "homayoun",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
+    createdAt: "2024-05-22T08:56:49.785Z",
+    updatedAt: "2024-05-22T08:56:49.785Z",
+    __v: 0,
+  },
+  {
+    _id: "665ljk61a7393216a02928db",
+    title:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+    imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
+
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+    templates: "5",
+    services: "3",
+    section: "29",
+    author: "homayoun",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
+    createdAt: "2024-05-22T08:56:49.785Z",
+    updatedAt: "2024-05-22T08:56:49.785Z",
+    __v: 0,
+  },
+  {
+    _id: "665ljk61a7343216a029z8db",
+    title:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab magni possimus debitis necessitatibus repellat voluptates nesciunt ex blanditiis alias rerum veniam nisi architecto sequi, repellendus, sint velit eum, excepturi amet sed totam reiciendis soluta sunt nam maiores? Distinctio repellendus odio officiis quia atque molestiae! Facilis, pariatur temporibus necessitatibus tenetur suscipit perferendis, cum, maxime vel aliquam ratione minima quam nulla expedita.",
+    imgurl: "https://www.ibena.ir/files/fa/news/1404/5/10/188245_457.jpg",
+
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nam aspernatur tenetur dolorum doloremque cumque ullam culpa quidem voluptates pariatur repellendus repudiandae fugit, aliquam temporibus velit quam, itaque magni deserunt. Iste est amet excepturi laboriosam. Minima nihil doloribus atque laboriosam laudantium odio facilis commodi impedit dolorum iusto. Quaerat itaque esse laudantium repellendus iure ipsam similique quae corrupti cumque harum, ratione illo dicta soluta maxime, officiis repudiandae mollitia dolore, quidem quibusdam. Explicabo voluptatibus sunt nemo! Cumque sint ea earum molestias! Doloremque.",
+    templates: "5",
+    services: "3",
+    section: "29",
+    author: "homayoun",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
     createdAt: "2024-05-22T08:56:49.785Z",
     updatedAt: "2024-05-22T08:56:49.785Z",

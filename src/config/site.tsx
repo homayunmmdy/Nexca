@@ -1,6 +1,4 @@
-import RouteConfig from "./RouteConfig";
-
-const API_URL = process.env.API_URL || 'https://nexca.vercel.app';
+const API_URL = process.env.API_URL || "https://nexca.vercel.app";
 const SiteConfig = {
   name: "Nexca",
   title: "The Ultimate Admin Panel for Agencies and Individuals",
@@ -24,4 +22,3 @@ const SiteConfig = {
 };
 
 export default SiteConfig;
-
