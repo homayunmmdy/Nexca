@@ -1,13 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
-import { FaArrowRight, FaEye, FaRegClock, FaUser } from "react-icons/fa";
-import { IoIosGlobe, IoIosTrendingUp } from "react-icons/io";
-import LatestReports from "./components/LatestReports";
-import EmailBox from "../(components)/EmailBox";
 import EmailListForm from "@/components/organisms/EmailListForm";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import EmailBox from "../(components)/EmailBox";
+import ChronicleHero from "./components/ChronicleHero";
 import ChronicleTeleType from "./components/ChronicleTeleType";
+import LatestReports from "./components/LatestReports";
 import MostReadToday from "./components/MostReadToday";
 
 const TheChronicle = () => {
@@ -147,19 +145,6 @@ const TheChronicle = () => {
     },
   ];
 
-  const categories = [
-    "World News",
-    "Economics",
-    "Technology",
-    "Politics",
-    "Healthcare",
-    "Environment",
-    "Business",
-    "Science",
-    "Culture",
-    "Opinion",
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -194,62 +179,8 @@ const TheChronicle = () => {
         animate="visible"
         variants={containerVariants}
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div variants={itemVariants}>
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 mb-4">
-                <IoIosGlobe className="h-3 w-3 mr-1" />
-                Lead Story
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-slate-900 leading-tight mb-6">
-                {featuredNews.title}
-              </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed font-light">
-                {featuredNews.excerpt}
-              </p>
-              <div className="flex items-center space-x-6 text-sm text-slate-500 mb-8">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center mr-2">
-                    <FaUser className="h-4 w-4" />
-                  </div>
-                  <span className="font-medium">{featuredNews.author}</span>
-                </div>
-                <div className="flex items-center">
-                  <FaRegClock className="h-4 w-4 mr-2" />
-                  {featuredNews.readTime}
-                </div>
-                <span>{featuredNews.publishedAt}</span>
-              </div>
-              <motion.button
-                className="inline-flex items-center px-8 py-3 bg-slate-900 text-white rounded-none hover:bg-slate-800 transition-colors duration-200 font-medium text-sm tracking-wider uppercase"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Continue Reading
-                <FaArrowRight className="ml-2 h-4 w-4" />
-              </motion.button>
-            </motion.div>
-
-            <motion.div className="relative" variants={itemVariants}>
-              <div className="relative overflow-hidden shadow-2xl">
-                <Image
-                  src={featuredNews.image}
-                  alt={featuredNews.title}
-                  width={616}
-                  height={500}
-                  fetchPriority="high"
-                  loading="eager"
-                  priority
-                  className="w-full h-96 lg:h-[500px] object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-                  <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium uppercase tracking-wider">
-                    {featuredNews.category}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+        <div className="max-w-7xl mx-auto mt-6">
+          <ChronicleHero />
         </div>
       </motion.section>
 

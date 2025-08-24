@@ -33,6 +33,7 @@ export const MAIN_SPORT_QUERY_KEY = "main_sport";
 export const DEFAULT_TELETYPE_QUERY_KEY = "default_teletype"
 export const CHRONICLE_TELETYPE_QUERY_KEY = "chronicle_teletype"
 export const MOST_READ_TODAY = "most_read_today"
+export const CHRONICLE_MAIN = "chronicle_main"
 
 // ai hub - templates query key
 export const AIHUB_MAIN_QUERY_KEY = "aihub_main"
