@@ -2,6 +2,7 @@
 import { PLAY_LIST } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
+import { SectionController } from "@/util/controller/sectionsController";
 import { motion } from "framer-motion";
 import MusicCard from "./MusicCard";
 
@@ -18,39 +19,41 @@ const PlayList = () => {
     },
   };
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Trending{" "}
-            <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Playlists
-            </span>
-          </h2>
-          <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Curated playlists for every mood and moment
-          </p>
-        </motion.div>
+    <SectionController sectionId={26}>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+              Trending{" "}
+              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                Playlists
+              </span>
+            </h2>
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+              Curated playlists for every mood and moment
+            </p>
+          </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {data?.map((data: PostsCashType) => (
-            <MusicCard data={data} />
-          ))}
-        </motion.div>
-      </div>
-    </section>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            {data?.map((data: PostsCashType) => (
+              <MusicCard data={data} />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    </SectionController>
   );
 };
 

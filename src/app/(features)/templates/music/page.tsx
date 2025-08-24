@@ -10,6 +10,7 @@ import MusicNews from "./components/MusicNews";
 import PlayList from "./components/PlayList";
 import MostPopularMusic from "./components/MostPopularMusic";
 import MusicPodcast from "./components/MusicPodcast";
+import TopArtists from "./components/TopArtists";
 
 export default function MusicHomepage() {
   const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -231,41 +232,7 @@ export default function MusicHomepage() {
     },
   ];
 
-  // @ts-ignore
-  const playTrack = (trackId) => {
-    setCurrentPlaying(currentPlaying === trackId ? null : trackId);
-  };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const cardHover = {
-    scale: 1.03,
-    transition: { duration: 0.3 },
-  };
-
-  const imageHover = {
-    scale: 1.1,
-    transition: { duration: 0.5 },
-  };
   return (
     <motion.div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
@@ -275,66 +242,7 @@ export default function MusicHomepage() {
       <FeaturedTracks />
 
       {/* Top Artists Section */}
-      <section id="artists" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Top{" "}
-              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Artists
-              </span>
-            </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Follow your favorite artists and never miss their latest releases
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {topArtists.map((artist) => (
-              <motion.div
-                key={artist.id}
-                variants={itemVariants}
-                className="text-center group"
-              >
-                <div className="relative mb-6 mx-auto w-48 h-48">
-                  <motion.img
-                    src={artist.image}
-                    alt={artist.name}
-                    className="w-full h-full object-cover rounded-full shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                    whileHover={imageHover}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <h3 className="text-white text-xl font-bold mb-2">
-                  {artist.name}
-                </h3>
-                <p className="text-white/60 mb-4">
-                  {artist.followers} followers
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
-                >
-                  Follow
-                </motion.button>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <TopArtists />
 
       {/* Music Genres Section */}
       <MostPopularMusic />

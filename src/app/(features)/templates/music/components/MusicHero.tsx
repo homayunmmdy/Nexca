@@ -12,7 +12,7 @@ const MusicHero = () => {
   const { data } = useGetSection(HERO_NEWS, -1, 22);
 
   return (
-    <SectionController sectionId={29}>
+    <SectionController sectionId={22}>
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

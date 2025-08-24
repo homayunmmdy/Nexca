@@ -41,6 +41,7 @@ export const PLAY_LIST = "play_list"
 export const LIVE_EVENT = "live_event"
 export const MOST_POPULAR_MUSIC = "most_popular_music"
 export const PODCAST_MUSIC = "podcast_music"
+export const TOP_ARTISTS = "top_artists"
 
 // ai hub - templates query key
 export const AIHUB_MAIN_QUERY_KEY = "aihub_main"
