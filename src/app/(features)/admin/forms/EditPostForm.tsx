@@ -22,8 +22,8 @@ import FormLayout from "../components/FormLayout";
 import ImagePreview from "../components/ImagePreview";
 import SelectField from "../components/SelectField";
 import SelectFiledSkeleton from "../components/SelectFiledSkeleton";
-import TiptapEditor from "../components/TiptapEditor";
 import CategoriesForm from "./CategoriesForm";
+import TiptapEditor from "../components/TiptapEditor";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -147,28 +147,33 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               ))}
             </div>
           ) : null}
-          <Input
-            type="text"
-            id="source"
-            name="source"
-            label="source"
-            className="w-full mb-2"
-            color="input-primary"
-            value={formData.source}
-            onChange={handler.trakeChange}
-          />
-          {!master || formData.postType == "2" && (
-            <Input
-              type="text"
-              id="author"
-              name="author"
-              label={`${formData.postType == '2' ? 'artist' : 'author'}`}
-              className="w-full mb-2"
-              color="input-primary"
-              value={formData.author}
-              onChange={handler.trakeChange}
-            />
-          )}
+          <div className="flex gap-3 flex-wrap sm:flex-nowrap">
+            <div className="w-full">
+              <Input
+                type="text"
+                id="source"
+                name="source"
+                label="source"
+                className="w-full mb-2"
+                color="input-primary"
+                value={formData.source}
+                onChange={handler.trakeChange}
+              />
+            </div>
+            <div className="w-full">
+              <Input
+                type="text"
+                id="author"
+                name="author"
+                label={`${formData.postType == "2" ? "artist" : "author"}`}
+                className="w-full mb-2"
+                color="input-primary"
+                value={formData.author}
+                onChange={handler.trakeChange}
+              />
+            </div>
+          </div>
+
           <SpeechToText />
           <Button
             type="submit"

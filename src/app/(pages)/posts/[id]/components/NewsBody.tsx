@@ -65,7 +65,7 @@ const NewsBody = ({ post }: { post: any }) => {
         dangerouslySetInnerHTML={{ __html: PostBody }}
       />
       <div className="flex flex-wrap items-center justify-between gap-3">
-        {post.author && (
+        {post.postType === "1" && post.author && (
           <p>
             author : <span className="font-bold">{post.author}</span>
           </p>

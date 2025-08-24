@@ -22,6 +22,7 @@ import {
 } from "react-icons/fa";
 import { IoIosFlash } from "react-icons/io";
 import MusicNews from "./components/MusicNews";
+import MusicHero from "./components/MusicHero";
 
 export default function MusicHomepage() {
   const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -282,112 +283,7 @@ export default function MusicHomepage() {
   return (
     <motion.div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
-            >
-              <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-                Discover Your
-                <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  {" "}
-                  Sound
-                </span>
-              </h1>
-              <p className="text-xl text-white/80 leading-relaxed">
-                Explore millions of tracks, discover new artists, and create the
-                perfect playlist for every moment of your life.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-2xl"
-                >
-                  Start Listening
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/10 transition-all duration-300"
-                >
-                  Browse Music
-                </motion.button>
-              </div>
-              <div className="flex items-center space-x-8 text-white/60">
-                <div className="flex items-center space-x-2">
-                  <FaUsers className="h-5 w-5" />
-                  <span>50M+ Users</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <FaMusic className="h-5 w-5" />
-                  <span>100M+ Songs</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <FaStar className="h-5 w-5" />
-                  <span>4.9 Rating</span>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                  src="https://picsum.photos/600/400?random=hero"
-                  alt="Music Hero"
-                  className="w-full h-full object-cover"
-                  width={584}
-                  height={384}
-                  fetchPriority="high"
-                  loading="eager"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="text-white text-2xl font-bold mb-2">
-                    Now Playing
-                  </h3>
-                  <p className="text-white/80">
-                    Discover trending music from around the world
-                  </p>
-                </div>
-              </div>
-              <motion.div
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.8, 1, 0.8],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 3,
-                  ease: "easeInOut",
-                }}
-                className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full"
-              ></motion.div>
-              <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 2,
-                  ease: "easeInOut",
-                }}
-                className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full"
-              ></motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <MusicHero />
 
       {/* Featured Music Section */}
       <section id="music" className="py-20 bg-black/20">
@@ -836,45 +732,6 @@ export default function MusicHomepage() {
 
       {/* Music News Section */}
       <MusicNews />
-
-      {/* Stats Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center group">
-              <div className="bg-gradient-to-r from-pink-500 to-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <FaMusic className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">100M+</h3>
-              <p className="text-white/60">Songs Available</p>
-            </div>
-
-            <div className="text-center group">
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <FaUsers className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">50M+</h3>
-              <p className="text-white/60">Active Users</p>
-            </div>
-
-            <div className="text-center group">
-              <div className="bg-gradient-to-r from-green-500 to-teal-500 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <FaAward className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">500K+</h3>
-              <p className="text-white/60">Artists</p>
-            </div>
-
-            <div className="text-center group">
-              <div className="bg-gradient-to-r from-orange-500 to-red-500 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <IoIosFlash className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">24/7</h3>
-              <p className="text-white/60">Streaming</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Newsletter Section */}
       <section
