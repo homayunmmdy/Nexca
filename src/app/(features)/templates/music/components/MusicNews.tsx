@@ -63,7 +63,7 @@ const MusicNews = () => {
             className="grid md:grid-cols-3 gap-8"
           >
             {data?.map((post: PostsCashType) => (
-              <PostItem post={post} />
+              <PostItem post={post} key={post._id}/>
             ))}
           </motion.div>
         </motion.div>

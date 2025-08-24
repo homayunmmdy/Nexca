@@ -162,7 +162,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               type="text"
               id="author"
               name="author"
-              label="author"
+              label={`${formData.postType == '2' ? 'artist' : 'author'}`}
               className="w-full mb-2"
               color="input-primary"
               value={formData.author}

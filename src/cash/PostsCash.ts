@@ -1174,7 +1174,7 @@ const PostsCash: PostsCashType[] = [
     templates: "5",
     services: "3",
     section: "29",
-    author: "homayoun",
+    author: "Modern talking",
     field : "https://ts16.tarafdari.com/contents/user836235/content-sound/modern_talking_-_cheri_cheri_lady.mp3",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi vel accusamus dolores, at saepe illo aperiam quas architecto voluptatem minus? Reiciendis corrupti accusamus aliquid iure, officiis ducimus sit repellat harum tempora dolor, explicabo architecto natus ipsa voluptatum! Modi cupiditate vitae dolor cum, odit, ducimus nihil amet facilis dolores officia fugiat iure repudiandae inventore? Enim eveniet rem, id error iure, quod iusto veniam placeat alias sequi minus minima aliquid suscipit! Assumenda fuga nihil eaque nemo voluptatibus veniam architecto ut modi distinctio, quae voluptates odit adipisci? Tempora perferendis, totam quod dicta repellendus praesentium, reprehenderit odio eaque quidem expedita libero delectus deleniti enim tenetur tempore. Totam earum perspiciatis cupiditate nulla incidunt tenetur quaerat ipsa ratione, quia libero assumenda, iste molestiae, minima neque!",
     postType : "2",

@@ -13,6 +13,7 @@ import Comment from "./Comment";
 import ReadPost from "./ReadPost";
 import RenderTags from "./RenderTags";
 import SharePost from "./SharePost";
+import MusicPlayer from "@/components/organisms/MusicPlayer";
 
 const NewsBody = ({ post }: { post: any }) => {
   const text = `${post?.title}. ${post?.description}`;
@@ -28,6 +29,7 @@ const NewsBody = ({ post }: { post: any }) => {
   const comments = data?.filter((item: any) => item.postId == post._id);
   return (
     <>
+      {post.postType === "1" && (
       <Image
         className="aspect-video w-full rounded-3xl py-3"
         src={!post.imgurl ? "/static/Image/logo.jpg" : post.imgurl}
@@ -39,12 +41,17 @@ const NewsBody = ({ post }: { post: any }) => {
         fetchPriority="high"
         priority
       />
+      )}
+        {post.postType === "2" && (
+          <MusicPlayer url={post.field} title={post.title} artist={post.author} coverImage={post.imgurl}/>
+        )}
       <div className="flex items-center justify-between gap-3 px-3">
         {post.postType === "1" && (
           <div className="flex items-center gap-2">
             <ReadPost text={text} />
           </div>
         )}
+      
         <NexcaMark master={post.masterEditor} />
       </div>
       <div
