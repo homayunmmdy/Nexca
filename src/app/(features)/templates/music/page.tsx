@@ -9,6 +9,7 @@ import MusicHero from "./components/MusicHero";
 import MusicNews from "./components/MusicNews";
 import PlayList from "./components/PlayList";
 import MostPopularMusic from "./components/MostPopularMusic";
+import MusicPodcast from "./components/MusicPodcast";
 
 export default function MusicHomepage() {
   const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -342,88 +343,7 @@ export default function MusicHomepage() {
       <PlayList />
 
       {/* Podcasts Section */}
-      <section id="podcasts" className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Music{" "}
-              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Podcasts
-              </span>
-            </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Deep dive into the world of music with our exclusive podcast
-              series
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {podcasts.map((podcast) => (
-              <motion.div
-                key={podcast.id}
-                variants={itemVariants}
-                whileHover={cardHover}
-                className="bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-4 mb-6">
-                  <motion.img
-                    src={podcast.image}
-                    alt={podcast.title}
-                    className="w-20 h-20 object-cover rounded-xl"
-                    whileHover={{ rotate: 2 }}
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-white font-bold text-xl mb-1">
-                      {podcast.title}
-                    </h3>
-                    <p className="text-white/60">by {podcast.host}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center space-x-2 text-white/60">
-                    <FaPodcast className="h-4 w-4" />
-                    <span>{podcast.episodes} episodes</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-white/60">
-                    <FaClock className="h-4 w-4" />
-                    <span>{podcast.duration}</span>
-                  </div>
-                </div>
-
-                <div className="flex space-x-3">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 font-semibold"
-                  >
-                    Listen Now
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
-                  >
-                    <FaHeart className="h-5 w-5" />
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <MusicPodcast />
 
       {/* Live Events Section */}
       <LiveEvents />
