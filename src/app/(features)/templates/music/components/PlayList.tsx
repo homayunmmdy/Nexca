@@ -48,7 +48,7 @@ const PlayList = () => {
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {data?.map((data: PostsCashType) => (
-              <MusicCard data={data} />
+              <MusicCard data={data} key={data._id}/>
             ))}
           </motion.div>
         </div>
