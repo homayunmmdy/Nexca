@@ -12,7 +12,7 @@ export default function About() {
         <MainHead title="About Nexca" description="Elevating your digital presence with elegant solutions and seamless experiences." />
 
         {/* Content Sections */}
-        <Container className="py-16">
+        <Container className="py-16 mt-4">
           {/* Introduction */}
           <div className="mb-20">
             <div className="prose prose-lg max-w-none">

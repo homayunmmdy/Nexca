@@ -9,7 +9,7 @@ interface Props {
 
 function MainHead({ title, description, createdAt }: Props) {
   return (
-    <div className="relative mt-[30px] overflow-hidden bg-gradient-to-r from-indigo-900 via-indigo-800 to-purple-900">
+    <div className="relative py-3 md:py-6 overflow-hidden bg-gradient-to-r from-indigo-900 via-indigo-800 to-purple-900">
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent opacity-40"></div>
       <Container className="relative py-8">
         <h1 className="text-4xl text-center font-bold tracking-tight mb-4  text-white sm:text-5xl md:text-6xl line-clamp-3">
@@ -19,7 +19,7 @@ function MainHead({ title, description, createdAt }: Props) {
           {description}
         </p>
         {createdAt && (
-          <p className="my-3 text-center text-lg text-white">
+          <p className="mt-3 text-center text-lg text-white">
             <FormatTime timestamp={createdAt} />
           </p>
         )}

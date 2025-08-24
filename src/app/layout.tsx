@@ -24,7 +24,7 @@ export default function RootLayout({
           <body className={libre_Franklin.className}>
             <SkipToMain />
             <Header />
-            <main id="main" className="mt-[90px]">{children}</main>
+            <main id="main" className="mt-[80px]">{children}</main>
             {/* <PWAInstallPopup /> */}
             <Footer />
           </body>
