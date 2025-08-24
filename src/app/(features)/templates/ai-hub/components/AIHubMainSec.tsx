@@ -5,7 +5,7 @@ import { PostsCashType } from "@/types/CashTypes";
 import { SectionController } from "@/util/controller/sectionsController";
 import VerticalCard from "../../(components)/VerticalCard";
 
-function MainSec() {
+function AIHubMainSec() {
   const { data } = useGetSection(AIHUB_MAIN_QUERY_KEY, -1, 9);
 
   return (
@@ -19,4 +19,4 @@ function MainSec() {
   );
 }
 
-export default MainSec;
+export default AIHubMainSec;

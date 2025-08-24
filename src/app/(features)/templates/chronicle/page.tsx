@@ -7,6 +7,7 @@ import { IoIosGlobe, IoIosTrendingUp } from "react-icons/io";
 import LatestReports from "./components/LatestReports";
 import EmailBox from "../(components)/EmailBox";
 import EmailListForm from "@/components/organisms/EmailListForm";
+import ChronicleTeleType from "./components/ChronicleTeleType";
 
 const TheChronicle = () => {
   const [email, setEmail] = useState("");
@@ -183,25 +184,7 @@ const TheChronicle = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Breaking News Ticker */}
-      <motion.div
-        className="mt-16 bg-red-600 text-white py-2 overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        <div className="flex items-center">
-          <div className="flex-shrink-0 px-4 bg-red-700 py-2 font-bold text-sm">
-            BREAKING
-          </div>
-          <div className="flex animate-scroll whitespace-nowrap px-4">
-            <span className="text-sm">
-              European markets close higher amid positive economic indicators •
-              Tech sector leads gains with 3.2% increase • Oil prices stabilize
-              following diplomatic breakthrough
-            </span>
-          </div>
-        </div>
-      </motion.div>
+      <ChronicleTeleType />
 
       {/* Hero Section */}
       <motion.section

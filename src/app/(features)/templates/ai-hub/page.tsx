@@ -9,8 +9,8 @@ import LatestPosts from "../(components)/LatestPosts";
 import TabContent from "../(components)/TabContent";
 import TextHero from "../(components)/TextHero";
 import VerticalCard from "../(components)/VerticalCard";
-import { AI_HUB_categories } from "../(static-data)/aiHub";
-import MainSec from "./components/MainSec";
+import { AI_HUB_categories } from "../data/aiHub";
+import AIHubMainSec from "./components/AIHubMainSec";
 import EmailBox from "../(components)/EmailBox";
 
 const AINewsHub = () => {
@@ -58,7 +58,7 @@ const AINewsHub = () => {
         description="Your premier destination for artificial intelligence breakthroughs,
           industry insights, and cutting-edge research updates."
       />
-      <MainSec />
+      <AIHubMainSec />
 
       {/* Category Filter */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

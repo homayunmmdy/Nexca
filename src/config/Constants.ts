@@ -30,7 +30,8 @@ export const SINGLE_POST_QUERY_KEY = "single_post";
 export const VERTICAL_POSTS_QUERY_KEY = "vertical_posts";
 export const SWIPER_SEC = "swiper_sec";
 export const MAIN_SPORT_QUERY_KEY = "main_sport";
-export const TELETYPE_QUERY_KEY = "teletype"
+export const DEFAULT_TELETYPE_QUERY_KEY = "default_teletype"
+export const CHRONICLE_TELETYPE_QUERY_KEY = "chronicle_teletype"
 
 // ai hub - templates query key
 export const AIHUB_MAIN_QUERY_KEY = "aihub_main"

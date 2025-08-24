@@ -2,12 +2,10 @@ import { LinearAds } from "@/components/ads";
 import { Container } from "@/components/atoms";
 import {
   Banner,
-  MainPosts,
   PostsSec,
   SingleCardSec,
   SliderSec,
   SportSec,
-  TeletypeSec,
   VerticalPostsSec,
 } from "@/components/organisms";
 import MostTab from "@/components/organisms/MostTab";
@@ -15,6 +13,8 @@ import SiteConfig from "@/config/site";
 import { SectionController } from "@/util/controller/sectionsController";
 import { Metadata } from "next";
 import React from "react";
+import DefaultMainPosts from "./components/DefaultMainPosts";
+import DefaultTeleType from "./components/DefaultTeleType";
 
 export const metadata: Metadata = {
   title: `Default Templates page | ${SiteConfig.title}`,
@@ -42,12 +42,9 @@ const DemoPage: React.FC = () => {
       <h1 className="hidden">{`demo page | ${SiteConfig.title}`}</h1>
 
       <Container className="mt-30">
-        <SectionController sectionId={7}>
-          <TeletypeSec />
-        </SectionController>
-        <SectionController sectionId={1}>
-          <MainPosts />
-        </SectionController>
+        <DefaultTeleType />
+
+        <DefaultMainPosts />
 
         <Banner />
         <div className="grid grid-cols-12 md:gap-9">

@@ -2,10 +2,10 @@
 import { NEXT_MAIN_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";
 import { PostsCashType } from "@/types/CashTypes";
-import Link from "next/link";
-import NextMainSkeleton from "./skeleton/NextMain";
 import { postLinkGenerator } from "@/util/ServerUtil";
 import Image from "next/image";
+import Link from "next/link";
+import NextMainSkeleton from "../../../../../components/organisms/postsSection/skeleton/NextMain";
 
 const NextMain = () => {
   const { data, loading } = useGetSection(NEXT_MAIN_QUERY_KEY, -4, 1);

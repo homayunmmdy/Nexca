@@ -9,12 +9,10 @@ export { default as Banner } from "./Banner";
 
 // posts sections
 export { default as LatestLinearPost } from "./postsSection/LatestLinearPost";
-export { default as MainPosts } from "./postsSection/MainPosts";
 export { default as MorePostsSec } from "./postsSection/MorePosts";
 export { default as MostCommentedLinearPost } from "./postsSection/MostCommentedLinearPost";
 export { default as PostsSec } from "./postsSection/Posts";
 export { default as SingleCardSec } from "./postsSection/SingleCard";
 export { default as SliderSec } from "./postsSection/Slider";
 export { default as SportSec } from "./postsSection/Sport";
-export { default as TeletypeSec } from "./postsSection/Teletype";
 export { default as VerticalPostsSec } from "./postsSection/VerticalPosts";
