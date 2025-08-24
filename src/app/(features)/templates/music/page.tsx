@@ -23,6 +23,7 @@ import {
 import { IoIosFlash } from "react-icons/io";
 import MusicNews from "./components/MusicNews";
 import MusicHero from "./components/MusicHero";
+import FeaturedTracks from "./components/FeaturedTracks";
 
 export default function MusicHomepage() {
   const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -286,97 +287,7 @@ export default function MusicHomepage() {
       <MusicHero />
 
       {/* Featured Music Section */}
-      <section id="music" className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Featured{" "}
-              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Tracks
-              </span>
-            </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Handpicked songs that are trending right now
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {featuredTracks.map((track) => (
-              <motion.div
-                key={track.id}
-                variants={itemVariants}
-                whileHover={cardHover}
-                className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="relative mb-4 overflow-hidden rounded-xl">
-                  <motion.img
-                    src={track.image}
-                    alt={track.title}
-                    className="w-full aspect-square object-cover"
-                    whileHover={imageHover}
-                  />
-                  <button
-                    onClick={() => playTrack(track.id)}
-                    className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"
-                  >
-                    {currentPlaying === track.id ? (
-                      <FaPause className="h-12 w-12 text-white" />
-                    ) : (
-                      <FaPlay className="h-12 w-12 text-white" />
-                    )}
-                  </button>
-                </div>
-
-                <h3 className="text-white font-semibold text-lg mb-1">
-                  {track.title}
-                </h3>
-                <p className="text-white/60 mb-3">{track.artist}</p>
-
-                <div className="flex justify-between items-center text-sm text-white/50 mb-4">
-                  <span>{track.duration}</span>
-                  <span>{track.plays} plays</span>
-                </div>
-
-                <div className="flex space-x-2">
-                  <motion.button
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                    className="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Play
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
-                  >
-                    <FaHeart className="h-4 w-4" />
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
-                  >
-                    <FaShareAlt className="h-4 w-4" />
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <FeaturedTracks />
 
       {/* Top Artists Section */}
       <section id="artists" className="py-20">

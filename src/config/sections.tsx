@@ -23,7 +23,7 @@ export const SectionsConfig : SectionsConfigType[] = [
     { id: 20, activate: true },
     { id: 21, activate: false },
     { id: 22, activate: true },
-    { id: 23, activate: false },
+    { id: 23, activate: true },
     { id: 24, activate: false },
     { id: 25, activate: false },
     { id: 26, activate: false },

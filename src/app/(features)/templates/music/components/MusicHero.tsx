@@ -17,17 +17,23 @@ const MusicHero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {data?.map((music: PostsCashType) => {
-              const postLink = postLinkGenerator(music._id, music.title);
-            
+            const postLink = postLinkGenerator(music._id, music.title);
             return (
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div
+                className="grid lg:grid-cols-2 gap-12 items-center"
+                key={music._id}
+              >
                 <motion.div
                   initial={{ x: -50, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.8 }}
                   className="space-y-8"
                 >
-                  <Link href={postLink} title={music.title} className="text-5xl hover:underline lg:text-7xl font-bold text-white line-clamp-2 leading-tight">
+                  <Link
+                    href={postLink}
+                    title={music.title}
+                    className="text-5xl hover:underline lg:text-7xl font-bold text-white line-clamp-2 leading-tight"
+                  >
                     {music.title}
                   </Link>
                   <p className="text-xl line-clamp-3 text-white/80 leading-relaxed">
@@ -40,7 +46,11 @@ const MusicHero = () => {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="relative"
                 >
-                  <Link href={postLink} title={music.title} className="relative w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
+                  <Link
+                    href={postLink}
+                    title={music.title}
+                    className="relative w-full h-96 rounded-3xl overflow-hidden shadow-2xl"
+                  >
                     <Image
                       src={music.imgurl || "/static/Image/logo.jpg"}
                       alt={music.title}
