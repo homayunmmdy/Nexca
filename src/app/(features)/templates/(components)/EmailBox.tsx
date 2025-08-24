@@ -36,9 +36,9 @@ const EmailBox = ({title, description, bg = 'bg-blue-600', ElementColor = 'prima
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className={`${bg} rounded-xl shadow-md p-6 text-white`}
+            className={`${bg} rounded-xl shadow-md p-6 `}
         >
-            <motion.h3 variants={itemVariants} className="text-xl font-bold mb-3">
+            <motion.h3 variants={itemVariants} className="text-xl text-white font-bold mb-3">
                 {title}
             </motion.h3>
             <motion.p variants={itemVariants} className="text-blue-100 mb-4">

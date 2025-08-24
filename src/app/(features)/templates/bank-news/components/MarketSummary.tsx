@@ -25,10 +25,10 @@ const MarketSummary = () => {
     return (
         <SectionController sectionId={17}>
             <motion.section
-                className="bg-white rounded-xl p-6 shadow-sm"
+                className="bg-base-200 rounded-xl mb-4 p-6 shadow-sm"
                 variants={itemVariants}
             >
-                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                <h3 className="text-lg font-bold  mb-4 flex items-center">
                     <FiBarChart className="w-5 h-5 mr-2 text-green-500" />
                     Market Summary
                 </h3>

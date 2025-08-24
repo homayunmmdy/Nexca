@@ -7,7 +7,7 @@ const PostItem = ({ post }: { post: PostsCashType }) => {
   const postLink = postLinkGenerator(post._id, post.title);
 
   return (
-    <div className="group card h-full rounded-xl bg-base-100 shadow-xl transition-transform duration-500 ease-in-out md:hover:scale-105">
+    <div className="group card h-full rounded-xl bg-base-300 shadow-xl transition-transform duration-500 ease-in-out md:hover:scale-105">
       <figure>
         <Link href={postLink} className="block">
           <div className="relative">

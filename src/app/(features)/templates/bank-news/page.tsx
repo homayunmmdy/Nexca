@@ -1,4 +1,5 @@
 "use client";
+import { Container } from "@/components/atoms";
 import { motion } from "framer-motion";
 import EmailBox from "../(components)/EmailBox";
 import LatestPosts from "../(components)/LatestPosts";
@@ -30,52 +31,48 @@ const BankNewsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <motion.div
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Hero Section */}
-            <MainSecBank />
+    <Container>
+      <motion.div
+        className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Main Content */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Hero Section */}
+          <MainSecBank />
 
-            {/* Latest News */}
-            <motion.section variants={itemVariants}>
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">
-                  Latest News
-                </h2>
-              </div>
+          {/* Latest News */}
+          <motion.section variants={itemVariants}>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold ">Latest News</h2>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                <UnderMainBank />
-              </div>
-            </motion.section>
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-4">
+              <UnderMainBank />
+            </div>
+          </motion.section>
+        </div>
 
-          {/* Sidebar */}
-          <div className="space-y-8">
-            {/* Latest Posts */}
-            <LatestPosts />
+        {/* Sidebar */}
+        <div className="space-y-8">
+          {/* Latest Posts */}
+          <LatestPosts />
 
-            {/* Newsletter Signup */}
-            <EmailBox
-              title="Stay Informed"
-              description="Get the latest banking and financial news delivered to your
+          {/* Newsletter Signup */}
+          <EmailBox
+            title="Stay Informed"
+            description="Get the latest banking and financial news delivered to your
                 inbox daily."
-              bg="bg-gradient-to-r from-blue-600 to-blue-700"
-              ElementColor="ghost"
-            />
-            {/* Market Summary */}
-            <MarketSummary />
-          </div>
-        </motion.div>
-      </main>
-    </div>
+            bg="bg-gradient-to-r from-blue-600 to-blue-700"
+            ElementColor="primary"
+          />
+          {/* Market Summary */}
+          <MarketSummary />
+        </div>
+      </motion.div>
+    </Container>
   );
 };
 
