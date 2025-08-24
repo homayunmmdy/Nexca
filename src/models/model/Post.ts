@@ -71,6 +71,10 @@ const postSchema = new Schema(
       type: String,
       trim: true,
     },
+    postType: {
+      type: String,
+      trim: true,
+    },
     author: {
       type: String,
       trim: true,

@@ -16,6 +16,7 @@ export type PostsCashType = {
   imgurl: string;
   description: string;
   templates: string;
+  postType: string;
   services: string;
   section: string;
   categories?: CategoryType[];

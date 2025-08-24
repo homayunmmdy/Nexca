@@ -22,6 +22,7 @@ import CategoriesForm from "./CategoriesForm";
 import SelectField from "../components/SelectField";
 import SelectFiledSkeleton from "../components/SelectFiledSkeleton";
 import CategoryList from "../components/CategoryList";
+import { postTypesData } from "@/config/postTypes";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -33,6 +34,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
     description: EDITMODE ? post.description : "",
     body: EDITMODE ? post.body : "",
     templates: EDITMODE ? post.templates : "1",
+    postType: EDITMODE ? post.postType : "1",
     section: EDITMODE ? post.section : "1",
     services: EDITMODE ? post.services : "1",
     imgurl: EDITMODE ? post.imgurl : "",
@@ -153,6 +155,18 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             value={formData.source}
             onChange={handler.trakeChange}
           />
+            {!master && (
+            <Input
+              type="text"
+              id="author"
+              name="author"
+              label="author"
+              className="w-full mb-2"
+              color="input-primary"
+              value={formData.author}
+              onChange={handler.trakeChange}
+            />
+          )}
           <SpeechToText />
           <Button
             type="submit"
@@ -169,6 +183,14 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             title={formData.title}
             onChange={handler.trakeChange}
           />
+            <SelectField
+            id="postType"
+            name="postType"
+            label="postType"
+            value={formData.postType}
+            onChange={handler.trakeChange}
+            options={postTypesData}
+          />
           <div id="tiptap-style">
             <label htmlFor="body" className="label">
               Body
@@ -178,18 +200,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               onChange={handler.trakeBodyChanges}
             />
           </div>
-          {!master && (
-            <Input
-              type="text"
-              id="author"
-              name="author"
-              label="author"
-              className="w-full mb-2"
-              color="input-primary"
-              value={formData.author}
-              onChange={handler.trakeChange}
-            />
-          )}
+        
           <Button
             type="submit"
             color="btn-primary"
