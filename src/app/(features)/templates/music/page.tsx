@@ -24,6 +24,7 @@ import { IoIosFlash } from "react-icons/io";
 import MusicNews from "./components/MusicNews";
 import MusicHero from "./components/MusicHero";
 import FeaturedTracks from "./components/FeaturedTracks";
+import PlayList from "./components/PlayList";
 
 export default function MusicHomepage() {
   const [currentPlaying, setCurrentPlaying] = useState(null);
@@ -411,74 +412,8 @@ export default function MusicHomepage() {
       </section>
 
       {/* Trending Playlists Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Trending{" "}
-              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Playlists
-              </span>
-            </h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              Curated playlists for every mood and moment
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {playlists.map((playlist) => (
-              <motion.div
-                key={playlist.id}
-                variants={itemVariants}
-                whileHover={cardHover}
-                className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="relative mb-4">
-                  <motion.img
-                    src={playlist.image}
-                    alt={playlist.title}
-                    className="w-full aspect-square object-cover rounded-xl"
-                    whileHover={imageHover}
-                  />
-                  <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-2">
-                    <FaHeadphones className="h-5 w-5 text-white" />
-                  </div>
-                </div>
-
-                <h3 className="text-white font-semibold text-lg mb-2">
-                  {playlist.title}
-                </h3>
-                <div className="space-y-1 text-sm text-white/60 mb-4">
-                  <p>
-                    {playlist.tracks} tracks • {playlist.duration}
-                  </p>
-                  <p>{playlist.listeners} listeners</p>
-                </div>
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 font-semibold"
-                >
-                  Play Playlist
-                </motion.button>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <PlayList />
+      
 
       {/* Podcasts Section */}
       <section id="podcasts" className="py-20 bg-black/20">

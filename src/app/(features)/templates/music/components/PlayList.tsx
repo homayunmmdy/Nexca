@@ -1,12 +1,12 @@
 "use client";
-import { FEATURE_TRACK_NEWS } from "@/config/Constants";
-import useGetSection from "@/hooks/useGetSection";
-import { PostsCashType } from "@/types/CashTypes";
 import { motion } from "framer-motion";
 import MusicCard from "./MusicCard";
+import { PostsCashType } from "@/types/CashTypes";
+import useGetSection from "@/hooks/useGetSection";
+import { PLAY_LIST } from "@/config/Constants";
 
-const FeaturedTracks = () => {
-  const { data } = useGetSection(FEATURE_TRACK_NEWS, -4, 23);
+const PlayList = () => {
+      const { data } = useGetSection(PLAY_LIST, -4, 26);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -17,28 +17,8 @@ const FeaturedTracks = () => {
       },
     },
   };
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const cardHover = {
-    scale: 1.03,
-    transition: { duration: 0.3 },
-  };
-
-  const imageHover = {
-    scale: 1.1,
-    transition: { duration: 0.5 },
-  };
   return (
-    <section id="music" className="py-20 bg-black/20">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,13 +28,13 @@ const FeaturedTracks = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Featured{" "}
+            Trending{" "}
             <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Tracks
+              Playlists
             </span>
           </h2>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Handpicked songs that are trending right now
+            Curated playlists for every mood and moment
           </p>
         </motion.div>
 
@@ -74,4 +54,4 @@ const FeaturedTracks = () => {
   );
 };
 
-export default FeaturedTracks;
+export default PlayList;

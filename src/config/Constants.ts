@@ -37,6 +37,7 @@ export const CHRONICLE_MAIN = "chronicle_main"
 export const MUSIC_NEWS = "music_news"
 export const HERO_NEWS = "hero_news"
 export const FEATURE_TRACK_NEWS = "feature_track"
+export const PLAY_LIST = "play_list"
 
 // ai hub - templates query key
 export const AIHUB_MAIN_QUERY_KEY = "aihub_main"
