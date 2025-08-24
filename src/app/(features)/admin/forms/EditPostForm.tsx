@@ -8,6 +8,7 @@ import {
 } from "@/config/apiConstants";
 import { SECTIONS_QUERY_KEY, SERVICES_QUERY_KEY } from "@/config/Constants";
 import { getSectionsData } from "@/config/getSectionsData";
+import { postTypesData } from "@/config/postTypes";
 import { templatesData } from "@/config/tempaltes";
 import useFetch from "@/hooks/useFetch";
 import { PostsCashType } from "@/types/CashTypes";
@@ -15,14 +16,14 @@ import FormHandler from "@/util/handler/FormHandler";
 import { checkMaster } from "@/util/Util";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { FaMusic } from "react-icons/fa";
+import CategoryList from "../components/CategoryList";
 import FormLayout from "../components/FormLayout";
 import ImagePreview from "../components/ImagePreview";
-import TiptapEditor from "../components/TiptapEditor";
-import CategoriesForm from "./CategoriesForm";
 import SelectField from "../components/SelectField";
 import SelectFiledSkeleton from "../components/SelectFiledSkeleton";
-import CategoryList from "../components/CategoryList";
-import { postTypesData } from "@/config/postTypes";
+import TiptapEditor from "../components/TiptapEditor";
+import CategoriesForm from "./CategoriesForm";
 
 const EditPostForm = ({ post }: { post: PostsCashType }) => {
   const EDITMODE = post._id !== "new";
@@ -38,6 +39,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
     section: EDITMODE ? post.section : "1",
     services: EDITMODE ? post.services : "1",
     imgurl: EDITMODE ? post.imgurl : "",
+    field: EDITMODE ? post.field : "",
     categories: EDITMODE ? post.categories ?? [] : [],
     masterEditor: master ? true : false,
     source: EDITMODE ? post.source : "",
@@ -155,7 +157,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             value={formData.source}
             onChange={handler.trakeChange}
           />
-            {!master && (
+          {!master && (
             <Input
               type="text"
               id="author"
@@ -183,7 +185,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             title={formData.title}
             onChange={handler.trakeChange}
           />
-            <SelectField
+          <SelectField
             id="postType"
             name="postType"
             label="postType"
@@ -191,6 +193,19 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             onChange={handler.trakeChange}
             options={postTypesData}
           />
+          {formData.postType == "2" && (
+            <Input
+              id="field"
+              type="url"
+              name="field"
+              color="input-primary"
+              style="w-full mb-2"
+              placeholder="Enter url of music here"
+              icon={<FaMusic />}
+              value={formData.field}
+              onChange={handler.trakeChange}
+            />
+          )}
           <div id="tiptap-style">
             <label htmlFor="body" className="label">
               Body
@@ -200,7 +215,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
               onChange={handler.trakeBodyChanges}
             />
           </div>
-        
+
           <Button
             type="submit"
             color="btn-primary"
