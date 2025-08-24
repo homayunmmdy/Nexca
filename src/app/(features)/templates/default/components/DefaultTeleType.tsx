@@ -1,3 +1,4 @@
+'use client'
 import { Teletype } from "@/components/posts";
 import { DEFAULT_TELETYPE_QUERY_KEY } from "@/config/Constants";
 import useGetSection from "@/hooks/useGetSection";

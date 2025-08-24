@@ -7,7 +7,7 @@ import { postLinkGenerator } from "@/util/ServerUtil";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import MainSecSkeleton from "../../../../../components/organisms/postsSection/skeleton/MainSec";
+import MainSecSkeleton from "./MainSecSkeleton";
 
 const MainSec: React.FC = () => {
   const { data, loading } = useGetSection(MAIN_POSTS_QUERY_KEY, -1, 1);
@@ -21,7 +21,7 @@ const MainSec: React.FC = () => {
       {data?.map((post: PostsCashType) => {
         const postLink = postLinkGenerator(post._id, post.title);
         return (
-          <article className="col-span-12 md:col-span-6">
+          <article key={post._id} className="col-span-12 md:col-span-6">
             <div className="group cursor-pointer">
               <div className="rounded-md transition-all hover:scale-105 overflow-hidden">
                 <Link

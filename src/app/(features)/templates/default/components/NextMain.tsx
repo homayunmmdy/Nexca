@@ -5,7 +5,7 @@ import { PostsCashType } from "@/types/CashTypes";
 import { postLinkGenerator } from "@/util/ServerUtil";
 import Image from "next/image";
 import Link from "next/link";
-import NextMainSkeleton from "../../../../../components/organisms/postsSection/skeleton/NextMain";
+import NextMainSkeleton from "./NextMainSkeleton";
 
 const NextMain = () => {
   const { data, loading } = useGetSection(NEXT_MAIN_QUERY_KEY, -4, 1);
