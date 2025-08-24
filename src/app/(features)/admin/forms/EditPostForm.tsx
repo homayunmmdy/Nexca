@@ -157,7 +157,7 @@ const EditPostForm = ({ post }: { post: PostsCashType }) => {
             value={formData.source}
             onChange={handler.trakeChange}
           />
-          {!master && (
+          {!master || formData.postType == "2" && (
             <Input
               type="text"
               id="author"
