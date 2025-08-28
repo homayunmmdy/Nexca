@@ -111,7 +111,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-8 rounded-3xl shadow-2xl w-full mx-auto">
+    <div className="relative mb-3 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-8 rounded-3xl shadow-2xl w-full mx-auto">
       {/* Animated background effects */}
       <div className="absolute inset-0 rounded-3xl overflow-hidden">
         <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full animate-spin-slow"></div>
