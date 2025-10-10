@@ -1,58 +1,57 @@
-import React from 'react'
+import React from 'react';
 import { usePathname } from 'next/navigation';
-import HomeSettingBtn from "../../molecules/HomeSettingBtn";
-import {render,screen} from "@testing-library/react";
-import RouteConfig from "../../../config/RouteConfig";
-import { IoMdSettings } from "react-icons/io";
-import {expect} from "vitest";
+import HomeSettingBtn from '../../molecules/HomeSettingBtn';
+import { render, screen } from '@testing-library/react';
+import RouteConfig from '../../../config/RouteConfig';
+import { IoMdSettings } from 'react-icons/io';
+import { expect } from 'vitest';
 
 // Mock the usePathname hook
 vi.mock('next/navigation', () => ({
-    usePathname: vi.fn(),
+   usePathname: vi.fn(),
 }));
 
 describe('button for home and setting', () => {
-    beforeEach(() => {
-        // Reset the mock implementation before each test
-        (usePathname as any).mockReturnValue('/admin');
-    });
+   beforeEach(() => {
+      // Reset the mock implementation before each test
+      (usePathname as any).mockReturnValue('/admin');
+   });
 
-    afterEach(() => {
-        vi.clearAllMocks(); // Clear mock calls after each test
-    });
+   afterEach(() => {
+      vi.clearAllMocks(); // Clear mock calls after each test
+   });
 
-    it('should render the  setting link when user is in admin page', () => {
-        render(<HomeSettingBtn/>)
-        const BtnLink = screen.getByRole('link');
+   it('should render the  setting link when user is in admin page', () => {
+      render(<HomeSettingBtn />);
+      const BtnLink = screen.getByRole('link');
 
-        expect(BtnLink).toHaveAttribute('title', 'setting');
-        expect(BtnLink).toHaveAttribute('href', RouteConfig.admin.settings.base);
-        expect(BtnLink).toHaveAttribute('aria-label', 'Link to setting page');
-    });
+      expect(BtnLink).toHaveAttribute('title', 'setting');
+      expect(BtnLink).toHaveAttribute('href', RouteConfig.admin.settings.base);
+      expect(BtnLink).toHaveAttribute('aria-label', 'Link to setting page');
+   });
 
-    it('should render the setting icon when user is in admin page', () => {
-        render(<HomeSettingBtn/>);
+   it('should render the setting icon when user is in admin page', () => {
+      render(<HomeSettingBtn />);
 
-        expect(screen.getByTestId('settingIcon')).toBeInTheDocument();
-        expect(screen.queryByTestId('homeIcon')).not.toBeInTheDocument();
-    })
+      expect(screen.getByTestId('settingIcon')).toBeInTheDocument();
+      expect(screen.queryByTestId('homeIcon')).not.toBeInTheDocument();
+   });
 
-    it('should render the  home link when user is in setting page', () => {
-        (usePathname as any).mockReturnValue('/admin/settings');
-        render(<HomeSettingBtn/>)
-        const BtnLink = screen.getByRole('link');
+   it('should render the  home link when user is in setting page', () => {
+      (usePathname as any).mockReturnValue('/admin/settings');
+      render(<HomeSettingBtn />);
+      const BtnLink = screen.getByRole('link');
 
-        expect(BtnLink).toHaveAttribute('title', 'admin');
-        expect(BtnLink).toHaveAttribute('href', RouteConfig.admin.base);
-        expect(BtnLink).toHaveAttribute('aria-label', 'Link to admin page');
-    });
+      expect(BtnLink).toHaveAttribute('title', 'admin');
+      expect(BtnLink).toHaveAttribute('href', RouteConfig.admin.base);
+      expect(BtnLink).toHaveAttribute('aria-label', 'Link to admin page');
+   });
 
-    it('should render the home icon when user is in setting page', () => {
-        (usePathname as any).mockReturnValue('/admin/settings');
-        render(<HomeSettingBtn/>);
+   it('should render the home icon when user is in setting page', () => {
+      (usePathname as any).mockReturnValue('/admin/settings');
+      render(<HomeSettingBtn />);
 
-        expect(screen.getByTestId('homeIcon')).toBeInTheDocument();
-        expect(screen.queryByTestId('settingIcon')).not.toBeInTheDocument();
-    })
-
-})
+      expect(screen.getByTestId('homeIcon')).toBeInTheDocument();
+      expect(screen.queryByTestId('settingIcon')).not.toBeInTheDocument();
+   });
+});

@@ -1,4 +1,4 @@
 export type SectionsConfigType = {
-  id: number;
-  activate: boolean;
+   id: number;
+   activate: boolean;
 };

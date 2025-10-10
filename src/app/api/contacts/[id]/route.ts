@@ -3,13 +3,13 @@
  * @module /api/contacts/[id]
  */
 
-import ContactsCash from "@/cash/ContactsCash";
-import { ContactsModel } from "@/models";
-import RequestHandler from "@/util/handler/RequestHandler";
+import ContactsCash from '@/cash/ContactsCash';
+import { ContactsModel } from '@/models';
+import RequestHandler from '@/util/handler/RequestHandler';
 
 /**
  * Handles DELETE requests to delete a contact by its ID.
- * 
+ *
  * @param {Request} req - The incoming HTTP request.
  * @param {Object} params - The route parameters.
  * @param {string} params.id - The ID of the contact to delete.
@@ -17,10 +17,10 @@ import RequestHandler from "@/util/handler/RequestHandler";
  */
 
 export async function DELETE(
-  req: Request,
-  { params }: { params: { id: string } }
+   req: Request,
+   { params }: { params: { id: string } }
 ) {
-  const { id } = params;
-  const handler = new RequestHandler(ContactsModel, ContactsCash);
-  return handler.DELETE(id, "Post Deleted successfully");
+   const { id } = params;
+   const handler = new RequestHandler(ContactsModel, ContactsCash);
+   return handler.DELETE(id, 'Post Deleted successfully');
 }

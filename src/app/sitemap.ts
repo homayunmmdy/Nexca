@@ -1,4 +1,4 @@
-import SiteConfig from "@/config/site";
+import SiteConfig from '@/config/site';
 
 /**
  * Generates a sitemap for the website.
@@ -9,21 +9,21 @@ import SiteConfig from "@/config/site";
  * @returns {Array<{url: string}>} - An array of objects containing the URLs for the sitemap.
  */
 export default function sitemap() {
-  return [
-    {
-      url: SiteConfig.siteURL, // Homepage URL
-    },
-    {
-      url: `${SiteConfig.siteURL}/templates`, // URL for the templates page
-    },
-    {
-      url: `${SiteConfig.siteURL}/services/1`, // URL for a specific service page
-    },
-    {
-      url: `${SiteConfig.siteURL}/about`, // URL for the about page
-    },
-    {
-      url: `${SiteConfig.siteURL}/contacts`, // URL for the contact page
-    },
-  ];
+   return [
+      {
+         url: SiteConfig.siteURL, // Homepage URL
+      },
+      {
+         url: `${SiteConfig.siteURL}/templates`, // URL for the templates page
+      },
+      {
+         url: `${SiteConfig.siteURL}/services/1`, // URL for a specific service page
+      },
+      {
+         url: `${SiteConfig.siteURL}/about`, // URL for the about page
+      },
+      {
+         url: `${SiteConfig.siteURL}/contacts`, // URL for the contact page
+      },
+   ];
 }

@@ -1,6 +1,6 @@
-import mongoose, { Schema } from "mongoose";
-import "../ConnetDB"; // Ensure the database connection is established
-import { defaultSchemaOptions } from "../schemaOptions"; // Importing default schema options
+import mongoose, { Schema } from 'mongoose';
+import '../ConnetDB'; // Ensure the database connection is established
+import { defaultSchemaOptions } from '../schemaOptions'; // Importing default schema options
 
 /**
  * Schema definition for the Post model.
@@ -15,13 +15,13 @@ import { defaultSchemaOptions } from "../schemaOptions"; // Importing default sc
  * @property {number} __v - The version key for the comment (used by MongoDB).
  */
 const CommentsSchema = new Schema(
-  {
-    postId: String,
-    name: String,
-    email: String,
-    message: String,
-  },
-  defaultSchemaOptions
+   {
+      postId: String,
+      name: String,
+      email: String,
+      message: String,
+   },
+   defaultSchemaOptions
 );
 
 /**
@@ -30,6 +30,6 @@ const CommentsSchema = new Schema(
  * @type {mongoose.Model}
  */
 const Comments =
-  mongoose.models.Comments || mongoose.model("Comments", CommentsSchema);
+   mongoose.models.Comments || mongoose.model('Comments', CommentsSchema);
 
 export default Comments;

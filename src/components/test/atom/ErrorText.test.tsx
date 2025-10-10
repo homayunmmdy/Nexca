@@ -1,33 +1,33 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import ErrorText from "../../atoms/ErrorText";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import ErrorText from '../../atoms/ErrorText';
 
-describe("ErrorText Component", () => {
-  it("renders the children correctly", () => {
-    const testMessage = "This is an error message";
-    render(<ErrorText>{testMessage}</ErrorText>);
+describe('ErrorText Component', () => {
+   it('renders the children correctly', () => {
+      const testMessage = 'This is an error message';
+      render(<ErrorText>{testMessage}</ErrorText>);
 
-    // Check if the text is rendered
-    const errorTextElement = screen.getByText(testMessage);
+      // Check if the text is rendered
+      const errorTextElement = screen.getByText(testMessage);
 
-    expect(errorTextElement).toBeInTheDocument();
-    expect(errorTextElement).toHaveTextContent(/error/i);
-  });
+      expect(errorTextElement).toBeInTheDocument();
+      expect(errorTextElement).toHaveTextContent(/error/i);
+   });
 
-  it("should apply the red color to text", () => {
-    const testMessage = "This is an error message";
-    render(<ErrorText>{testMessage}</ErrorText>);
+   it('should apply the red color to text', () => {
+      const testMessage = 'This is an error message';
+      render(<ErrorText>{testMessage}</ErrorText>);
 
-    const errorTextElement = screen.getByText(testMessage);
-    expect(errorTextElement).toHaveClass("text-red-600");
-  });
+      const errorTextElement = screen.getByText(testMessage);
+      expect(errorTextElement).toHaveClass('text-red-600');
+   });
 
-  it("renders as a <p> element", () => {
-    const testMessage = "This is an error message";
-    render(<ErrorText>{testMessage}</ErrorText>);
+   it('renders as a <p> element', () => {
+      const testMessage = 'This is an error message';
+      render(<ErrorText>{testMessage}</ErrorText>);
 
-    // Check if the element is a <p> tag
-    const errorTextElement = screen.getByText(testMessage);
-    expect(errorTextElement.tagName).toBe("P");
-  });
+      // Check if the element is a <p> tag
+      const errorTextElement = screen.getByText(testMessage);
+      expect(errorTextElement.tagName).toBe('P');
+   });
 });

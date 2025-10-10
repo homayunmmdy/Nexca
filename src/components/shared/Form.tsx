@@ -1,12 +1,12 @@
-"use client";
-import { Button, Input, Textarea } from "@/components/atoms";
-import { ShareFormType } from "@/types/entities";
-import FormHandler from "@/util/handler/FormHandler";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { FaRegMessage, FaUser } from "react-icons/fa6";
-import { TfiEmail } from "react-icons/tfi";
-import { usePathname } from "next/navigation";
+'use client';
+import { Button, Input, Textarea } from '@/components/atoms';
+import { ShareFormType } from '@/types/entities';
+import FormHandler from '@/util/handler/FormHandler';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { FaRegMessage, FaUser } from 'react-icons/fa6';
+import { TfiEmail } from 'react-icons/tfi';
+import { usePathname } from 'next/navigation';
 
 /**
  * @typedef {Object} Props - The properties passed to the Form component.
@@ -24,78 +24,78 @@ import { usePathname } from "next/navigation";
  */
 
 const Form = ({ buttonText, initalData, API }: ShareFormType) => {
-  const router = useRouter();
-  const pathname = usePathname();
-  const [formData, setFormData] = useState(initalData);
+   const router = useRouter();
+   const pathname = usePathname();
+   const [formData, setFormData] = useState(initalData);
 
-  const handler = new FormHandler(setFormData, API, router);
+   const handler = new FormHandler(setFormData, API, router);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      await handler.submit(e, formData, undefined, pathname);
-      // Reset the form data after successful submission
-      setFormData(initalData);
-      router.refresh()
-    } catch (error) {
-      console.error("Form submission failed:", error);
-    }
-  };
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      try {
+         await handler.submit(e, formData, undefined, pathname);
+         // Reset the form data after successful submission
+         setFormData(initalData);
+         router.refresh();
+      } catch (error) {
+         console.error('Form submission failed:', error);
+      }
+   };
 
-  return (
-    <>
-      {handler.isLoading && (
-        <span className="loading loading-ring loading-lg absolute"></span>
-      )}
-      <form className="rounded-xl bg-base-300 p-5" onSubmit={handleSubmit}>
-        <div className="mb-6">
-          <Input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            color="input-primary"
-            onChange={handler.trakeChange}
-            required={true}
-            style="w-full"
-            icon={<FaUser />}
-          />
-        </div>
-        <div className="mb-6">
-          <Input
-            type="email"
-            name="email"
-            color="input-primary"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handler.trakeChange}
-            required={true}
-            style="w-full"
-            icon={<TfiEmail />}
-          />
-        </div>
-        <div className="mb-6">
-          <Textarea
-            rows={6}
-            name="message"
-            placeholder="Message"
-            value={formData.message}
-            color="textarea-primary"
-            onChange={handler.trakeChange}
-            required={true}
-            className="w-full"
-            style="w-full"
-            icon={<FaRegMessage />}
-          />
-        </div>
-        <div>
-          <Button type="submit" color="btn-primary" className="w-full p-3">
-            {buttonText}
-          </Button>
-        </div>
-      </form>
-    </>
-  );
+   return (
+      <>
+         {handler.isLoading && (
+            <span className="loading loading-ring loading-lg absolute"></span>
+         )}
+         <form className="rounded-xl bg-base-300 p-5" onSubmit={handleSubmit}>
+            <div className="mb-6">
+               <Input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  color="input-primary"
+                  onChange={handler.trakeChange}
+                  required={true}
+                  style="w-full"
+                  icon={<FaUser />}
+               />
+            </div>
+            <div className="mb-6">
+               <Input
+                  type="email"
+                  name="email"
+                  color="input-primary"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handler.trakeChange}
+                  required={true}
+                  style="w-full"
+                  icon={<TfiEmail />}
+               />
+            </div>
+            <div className="mb-6">
+               <Textarea
+                  rows={6}
+                  name="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  color="textarea-primary"
+                  onChange={handler.trakeChange}
+                  required={true}
+                  className="w-full"
+                  style="w-full"
+                  icon={<FaRegMessage />}
+               />
+            </div>
+            <div>
+               <Button type="submit" color="btn-primary" className="w-full p-3">
+                  {buttonText}
+               </Button>
+            </div>
+         </form>
+      </>
+   );
 };
 
 export default Form;

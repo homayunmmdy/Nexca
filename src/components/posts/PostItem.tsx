@@ -1,50 +1,50 @@
-import { PostsCashType } from "@/types/CashTypes";
-import { postLinkGenerator } from "@/util/ServerUtil";
-import Image from "next/image";
-import Link from "next/link";
+import { PostsCashType } from '@/types/CashTypes';
+import { postLinkGenerator } from '@/util/ServerUtil';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const PostItem = ({ post }: { post: PostsCashType }) => {
-  const postLink = postLinkGenerator(post._id, post.title);
+   const postLink = postLinkGenerator(post._id, post.title);
 
-  return (
-    <div className="group card h-full rounded-xl bg-base-300 shadow-xl transition-transform duration-500 ease-in-out md:hover:scale-105">
-      <figure>
-        <Link href={postLink} className="block">
-          <div className="relative">
-            <Image
-              src={post.imgurl || "/static/Image/logo.jpg"}
-              alt={post.title}
-              width={662.172}
-              height={372.469}
-              className="aspect-video rounded-xl bg-gray-600 object-cover"
-              loading="lazy"
-            />
-          </div>
-        </Link>
-      </figure>
-      <div className="card-body">
-        <Link
-          href={postLink}
-          title={post.title}
-          className="card-title group-hover:text-indigo-700 line-clamp-2"
-        >
-          {post.title}
-        </Link>
-        <p className="line-clamp-3">{post.description}</p>
-        <div className="card-actions justify-between">
-          <span>
-            {post.createdAt
-              ? new Date(post.createdAt).toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })
-              : "2 hours ago"}
-          </span>
-          <span>{post.author ? post.author : "unknown"}</span>
-        </div>
+   return (
+      <div className="group card h-full rounded-xl bg-base-300 shadow-xl transition-transform duration-500 ease-in-out md:hover:scale-105">
+         <figure>
+            <Link href={postLink} className="block">
+               <div className="relative">
+                  <Image
+                     src={post.imgurl || '/static/Image/logo.jpg'}
+                     alt={post.title}
+                     width={662.172}
+                     height={372.469}
+                     className="aspect-video rounded-xl bg-gray-600 object-cover"
+                     loading="lazy"
+                  />
+               </div>
+            </Link>
+         </figure>
+         <div className="card-body">
+            <Link
+               href={postLink}
+               title={post.title}
+               className="card-title group-hover:text-indigo-700 line-clamp-2"
+            >
+               {post.title}
+            </Link>
+            <p className="line-clamp-3">{post.description}</p>
+            <div className="card-actions justify-between">
+               <span>
+                  {post.createdAt
+                     ? new Date(post.createdAt).toLocaleDateString('en-US', {
+                          month: 'short',
+                          day: 'numeric',
+                       })
+                     : '2 hours ago'}
+               </span>
+               <span>{post.author ? post.author : 'unknown'}</span>
+            </div>
+         </div>
       </div>
-    </div>
-  );
+   );
 };
 
 export default PostItem;

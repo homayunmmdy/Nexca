@@ -1,4 +1,4 @@
-import SiteConfig from "@/config/site";
+import SiteConfig from '@/config/site';
 
 /**
  * Generates a robots.txt configuration for the website.
@@ -17,14 +17,14 @@ import SiteConfig from "@/config/site";
  */
 
 export default function robots() {
-  return {
-    // Rules for web crawlers (bots)
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: "/private/",
-    },
-    // Location of the sitemap file
-    sitemap: `${SiteConfig.siteURL}/sitemap.xml`,
-  };
+   return {
+      // Rules for web crawlers (bots)
+      rules: {
+         userAgent: '*',
+         allow: '/',
+         disallow: '/private/',
+      },
+      // Location of the sitemap file
+      sitemap: `${SiteConfig.siteURL}/sitemap.xml`,
+   };
 }

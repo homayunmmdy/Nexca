@@ -2,10 +2,9 @@
  * @file API route for handling comments by ID.
  * @module /api/comments/[id]
  */
-import CommentsCash from "@/cash/CommentsCash";
-import { CommentsModel } from "@/models";
-import RequestHandler from "@/util/handler/RequestHandler";
-
+import CommentsCash from '@/cash/CommentsCash';
+import { CommentsModel } from '@/models';
+import RequestHandler from '@/util/handler/RequestHandler';
 
 /**
  * Handles GET requests to fetch a comment by its ID.
@@ -16,12 +15,12 @@ import RequestHandler from "@/util/handler/RequestHandler";
  * @returns {Promise<Response>} A response containing the comment data or an error message.
  */
 export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
+   req: Request,
+   { params }: { params: { id: string } }
 ) {
-  const { id } = params;
-  const handler = new RequestHandler(CommentsModel, CommentsCash);
-  return handler.Get(id);
+   const { id } = params;
+   const handler = new RequestHandler(CommentsModel, CommentsCash);
+   return handler.Get(id);
 }
 
 /**
@@ -33,12 +32,12 @@ export async function GET(
  * @returns {Promise<Response>} A response indicating success or failure of the update operation.
  */
 export async function PUT(
-  req: Request,
-  { params }: { params: { id: string } }
+   req: Request,
+   { params }: { params: { id: string } }
 ) {
-  const { id } = params;
-  const handler = new RequestHandler(CommentsModel, CommentsCash);
-  return handler.PUT(id, req, "Comment Update Successfully");
+   const { id } = params;
+   const handler = new RequestHandler(CommentsModel, CommentsCash);
+   return handler.PUT(id, req, 'Comment Update Successfully');
 }
 
 /**
@@ -50,10 +49,10 @@ export async function PUT(
  * @returns {Promise<Response>} A response indicating success or failure of the deletion operation.
  */
 export async function DELETE(
-  req: Request,
-  { params }: { params: { id: string } }
+   req: Request,
+   { params }: { params: { id: string } }
 ) {
-  const { id } = params;
-  const handler = new RequestHandler(CommentsModel, CommentsCash);
-  return handler.DELETE(id, "Comment Deleted successfully");
+   const { id } = params;
+   const handler = new RequestHandler(CommentsModel, CommentsCash);
+   return handler.DELETE(id, 'Comment Deleted successfully');
 }

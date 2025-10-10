@@ -1,18 +1,18 @@
-import ThemeProvider from "@/providers/ThemeProvider";
-import React from "react";
-import OnlineStatusProvider from "./OnlineStatusProvider";
-import ReactQueryProvider from "./ReactQueryProvider";
+import ThemeProvider from '@/providers/ThemeProvider';
+import React from 'react';
+import OnlineStatusProvider from './OnlineStatusProvider';
+import ReactQueryProvider from './ReactQueryProvider';
 
 export default function MainProvider({
-  children,
+   children,
 }: {
-  children: React.ReactNode;
+   children: React.ReactNode;
 }) {
-  return (
-    <ReactQueryProvider>
-      <ThemeProvider>
-        <OnlineStatusProvider>{children}</OnlineStatusProvider>
-      </ThemeProvider>
-    </ReactQueryProvider>
-  );
+   return (
+      <ReactQueryProvider>
+         <ThemeProvider>
+            <OnlineStatusProvider>{children}</OnlineStatusProvider>
+         </ThemeProvider>
+      </ReactQueryProvider>
+   );
 }

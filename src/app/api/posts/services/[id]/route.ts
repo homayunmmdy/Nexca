@@ -1,12 +1,12 @@
-import PostsCash from "@/cash/PostsCash";
-import { PostModel } from "@/models";
-import RequestHandler from "@/util/handler/RequestHandler";
+import PostsCash from '@/cash/PostsCash';
+import { PostModel } from '@/models';
+import RequestHandler from '@/util/handler/RequestHandler';
 
 export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
+   req: Request,
+   { params }: { params: { id: string } }
 ) {
-  const { id } = params;
-  const handler = new RequestHandler(PostModel, PostsCash);
-  return handler.GetByField("services", id);
+   const { id } = params;
+   const handler = new RequestHandler(PostModel, PostsCash);
+   return handler.GetByField('services', id);
 }

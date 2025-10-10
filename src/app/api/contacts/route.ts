@@ -2,10 +2,9 @@
  * @module ContactsRouter
  * @description Handles HTTP requests related to contacts, including fetching all contact messages and sending new messages.
  */
-import ContactsCash from "@/cash/ContactsCash";
-import { ContactsModel } from "@/models";
-import RequestHandler from "@/util/handler/RequestHandler";
-
+import ContactsCash from '@/cash/ContactsCash';
+import { ContactsModel } from '@/models';
+import RequestHandler from '@/util/handler/RequestHandler';
 
 /**
  * @function GET
@@ -17,8 +16,8 @@ import RequestHandler from "@/util/handler/RequestHandler";
  */
 
 export async function GET() {
-  const handler = new RequestHandler(ContactsModel, ContactsCash);
-  return handler.GetAll();
+   const handler = new RequestHandler(ContactsModel, ContactsCash);
+   return handler.GetAll();
 }
 
 /**
@@ -36,6 +35,6 @@ export async function GET() {
  */
 
 export async function POST(req: Request) {
-  const handler = new RequestHandler(ContactsModel, ContactsCash);
-  return handler.Post(req, "Message Send successfully");
+   const handler = new RequestHandler(ContactsModel, ContactsCash);
+   return handler.Post(req, 'Message Send successfully');
 }

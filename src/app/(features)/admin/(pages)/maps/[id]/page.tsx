@@ -1,16 +1,16 @@
-import {MAPS_API_URL} from "@/config/apiConstants";
-import { SinglePagepParamsType } from "@/types/entities";
-import { FetchDataForEditPage } from "@/util/ServerUtil";
-import EditMapsForm from "../../../forms/EditMapsForm";
+import { MAPS_API_URL } from '@/config/apiConstants';
+import { SinglePagepParamsType } from '@/types/entities';
+import { FetchDataForEditPage } from '@/util/ServerUtil';
+import EditMapsForm from '../../../forms/EditMapsForm';
 
 const EditAdminPosts = async ({
-                                  params,
-                              }: {
-    params: SinglePagepParamsType;
+   params,
+}: {
+   params: SinglePagepParamsType;
 }) => {
-    const updateData = await FetchDataForEditPage(MAPS_API_URL, params.id);
+   const updateData = await FetchDataForEditPage(MAPS_API_URL, params.id);
 
-    return <EditMapsForm post={updateData} />;
+   return <EditMapsForm post={updateData} />;
 };
 
 export default EditAdminPosts;

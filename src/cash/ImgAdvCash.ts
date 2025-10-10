@@ -1,4 +1,4 @@
-import { ImgAdvCashType } from "@/types/CashTypes";
+import { ImgAdvCashType } from '@/types/CashTypes';
 
 /**
  * @typedef {Object} ImgAdvCashType
@@ -23,19 +23,18 @@ import { ImgAdvCashType } from "@/types/CashTypes";
  */
 
 const TextAdvCash: ImgAdvCashType[] = [
-    {
-      _id: "664dab349ddca5e2184ff317",
+   {
+      _id: '664dab349ddca5e2184ff317',
       advId: 1,
-      advName: "First Image Adv",
+      advName: 'First Image Adv',
       imgURL:
-          "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-      body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error ex debitis aliquam cupiditate eligendi. Beatae dignissimos esse quam voluptates odit.",
-      link: "https://nexca.vercel.app/",
-      createdAt: "2024-05-22T08:22:12.196Z",
-      updatedAt: "2024-05-22T08:22:12.196Z",
+         'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+      body: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error ex debitis aliquam cupiditate eligendi. Beatae dignissimos esse quam voluptates odit.',
+      link: 'https://nexca.vercel.app/',
+      createdAt: '2024-05-22T08:22:12.196Z',
+      updatedAt: '2024-05-22T08:22:12.196Z',
       __v: 0,
-    },
-  ];
-  
-  export default TextAdvCash;
-  
+   },
+];
+
+export default TextAdvCash;

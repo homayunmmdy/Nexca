@@ -1,8 +1,8 @@
-import SpeechToText from '@/components/organisms/SpeechToText'
-import React from 'react'
+import SpeechToText from '@/components/organisms/SpeechToText';
+import React from 'react';
 
 function SpeechToTextPage() {
-  return <SpeechToText />
+   return <SpeechToText />;
 }
 
-export default SpeechToTextPage
+export default SpeechToTextPage;

@@ -1,6 +1,6 @@
-import mongoose, { Schema } from "mongoose";
-import "../ConnetDB"; // Ensure the database connection is established
-import { defaultSchemaOptions } from "../schemaOptions"; // Importing default schema options
+import mongoose, { Schema } from 'mongoose';
+import '../ConnetDB'; // Ensure the database connection is established
+import { defaultSchemaOptions } from '../schemaOptions'; // Importing default schema options
 
 /**
  * Schema definition for the Post model.
@@ -21,70 +21,70 @@ import { defaultSchemaOptions } from "../schemaOptions"; // Importing default sc
  * @property {Date} updatedAt - Timestamp when the post was last updated (automatically added by Mongoose).
  */
 const postSchema = new Schema(
-  {
-    title: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    imgurl: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      trim: true,
-    },
-    templates: {
-      type: String,
-      trim: true,
-    },
-    section: {
-      type: String,
-      trim: true,
-    },
-    services: {
-      type: String,
-      trim: true,
-    },
-    body: {
-      type: String,
-      required: true,
-    },
-    categories: [
-      {
-        id: {
-          type: Number,
-          required: true,
-        },
-        name: {
-          type: String,
-          required: true,
-        },
+   {
+      title: {
+         type: String,
+         required: true,
+         trim: true,
       },
-    ],
-    masterEditor: {
-      type: Boolean,
-      default: false,
-    },
-    source: {
-      type: String,
-      trim: true,
-    },
-    postType: {
-      type: String,
-      trim: true,
-    },
-    field: {
-      type: String,
-      trim: true,
-    },
-    author: {
-      type: String,
-      trim: true,
-    },
-  },
-  defaultSchemaOptions // Apply default schema options (e.g., timestamps)
+      imgurl: {
+         type: String,
+         required: true,
+      },
+      description: {
+         type: String,
+         trim: true,
+      },
+      templates: {
+         type: String,
+         trim: true,
+      },
+      section: {
+         type: String,
+         trim: true,
+      },
+      services: {
+         type: String,
+         trim: true,
+      },
+      body: {
+         type: String,
+         required: true,
+      },
+      categories: [
+         {
+            id: {
+               type: Number,
+               required: true,
+            },
+            name: {
+               type: String,
+               required: true,
+            },
+         },
+      ],
+      masterEditor: {
+         type: Boolean,
+         default: false,
+      },
+      source: {
+         type: String,
+         trim: true,
+      },
+      postType: {
+         type: String,
+         trim: true,
+      },
+      field: {
+         type: String,
+         trim: true,
+      },
+      author: {
+         type: String,
+         trim: true,
+      },
+   },
+   defaultSchemaOptions // Apply default schema options (e.g., timestamps)
 );
 
 /**
@@ -94,6 +94,6 @@ const postSchema = new Schema(
  *
  * @type {mongoose.Model<PostSchema>}
  */
-const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
+const Post = mongoose.models.Post || mongoose.model('Post', postSchema);
 
 export default Post;

@@ -1,1 +1,1 @@
-export { default as LinearAds } from "./LinearAds";
+export { default as LinearAds } from './LinearAds';

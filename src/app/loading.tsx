@@ -1,5 +1,5 @@
-import { Spinner } from "@/components/atoms";
-import React from "react";
+import { Spinner } from '@/components/atoms';
+import React from 'react';
 
 /**
  * A loading indicator component.
@@ -10,6 +10,10 @@ import React from "react";
  * @returns {React.ReactElement} - A React element representing the loading spinner.
  */
 
-const Loading: React.FC = () => <div className="p-5"><Spinner /></div>;
+const Loading: React.FC = () => (
+   <div className="p-5">
+      <Spinner />
+   </div>
+);
 
 export default Loading;

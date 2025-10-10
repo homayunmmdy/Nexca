@@ -2,10 +2,9 @@
  * @module CommentsRouter
  * @description Handles HTTP requests related to comments, including fetching all comments and adding new comments.
  */
-import CommentsCash from "@/cash/CommentsCash";
-import { CommentsModel } from "@/models";
-import RequestHandler from "@/util/handler/RequestHandler";
-
+import CommentsCash from '@/cash/CommentsCash';
+import { CommentsModel } from '@/models';
+import RequestHandler from '@/util/handler/RequestHandler';
 
 /**
  * @function GET
@@ -16,8 +15,8 @@ import RequestHandler from "@/util/handler/RequestHandler";
  * fetch('/api/comments', { method: 'GET' });
  */
 export async function GET() {
-  const handler = new RequestHandler(CommentsModel, CommentsCash);
-  return handler.GetAll();
+   const handler = new RequestHandler(CommentsModel, CommentsCash);
+   return handler.GetAll();
 }
 
 /**
@@ -34,6 +33,6 @@ export async function GET() {
  * });
  */
 export async function POST(req: Request) {
-  const handler = new RequestHandler(CommentsModel, CommentsCash);
-  return handler.Post(req, "Comments Added successfully");
+   const handler = new RequestHandler(CommentsModel, CommentsCash);
+   return handler.Post(req, 'Comments Added successfully');
 }
