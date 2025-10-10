@@ -1,7 +1,7 @@
 import {
   CountriesMapData,
   CountriesMapDataType,
-} from "@/app/(features)/map/data/countries";
+} from "@/app/(features)/maps/data/countries";
 import { HeaderModeType } from "@/types/entities";
 import DropdownMenu from "./DropdownMenu";
 

@@ -1,5 +1,5 @@
 "use client";
-import { CountriesMapData } from "@/app/(features)/map/data/countries";
+import { CountriesMapData } from "@/app/(features)/maps/data/countries";
 import { Button, ErrorText, Spinner } from "@/components/atoms";
 import { SearchBar } from "@/components/molecules";
 import { MAPS_API_URL } from "@/config/apiConstants";

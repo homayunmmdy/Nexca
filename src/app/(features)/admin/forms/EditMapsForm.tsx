@@ -1,5 +1,5 @@
 "use client";
-import { CountriesMapData } from "@/app/(features)/map/data/countries";
+import { CountriesMapData } from "@/app/(features)/maps/data/countries";
 import { Button, Input, Textarea } from "@/components/atoms";
 import SpeechToText from "@/components/organisms/SpeechToText";
 import { MAPS_API_URL } from "@/config/apiConstants";
@@ -11,8 +11,8 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import FormLayout from "../components/FormLayout";
 import ImagePreview from "../components/ImagePreview";
-import TiptapEditor from "../components/TiptapEditor";
 import SelectField from "../components/SelectField";
+import TiptapEditor from "../components/TiptapEditor";
 
 const EditMapsForm = ({ post }: { post: MapsCashType }) => {
   const EDITMODE = post._id !== "new";

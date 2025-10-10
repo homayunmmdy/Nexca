@@ -1,5 +1,5 @@
 "use client";
-import useGetMapContent from "@/app/(features)/map/hooks/useGetMapContent";
+import useGetMapContent from "@/app/(features)/maps/hooks/useGetMapContent";
 import { ErrorText, Spinner } from "@/components/atoms";
 import { MapsCashType } from "@/types/CashTypes";
 import Image from "next/image";

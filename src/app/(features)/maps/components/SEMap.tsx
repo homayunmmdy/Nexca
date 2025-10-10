@@ -1,7 +1,7 @@
 "use client";
-import MapProps from "../components/MapTypes";
-import MapWrapper from "../components/MapWrapper";
 import useMapInteraction from "../hooks/useMapInteraction";
+import MapProps from "./MapTypes";
+import MapWrapper from "./MapWrapper";
 
 const SeMap = ({ setActiveProvinceId }: MapProps) => {
   const MapRef = useMapInteraction(setActiveProvinceId);
