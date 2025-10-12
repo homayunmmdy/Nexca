@@ -1,6 +1,6 @@
 {
    "*.{js,jsx,ts,tsx,css}": [
       "prettier --write",
-      "npm run test"
+      "vitest related --run --passWithNoTests"
    ]
 }
