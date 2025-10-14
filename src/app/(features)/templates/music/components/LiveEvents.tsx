@@ -5,9 +5,10 @@ import useGetSection from '@/hooks/useGetSection';
 import { PostsCashType } from '@/types/CashTypes';
 import { SectionController } from '@/util/controller/sectionsController';
 import { motion } from 'framer-motion';
+import LiveEventsLoading from './loading/LiveEventsLoading';
 
 const LiveEvents = () => {
-   const { data } = useGetSection(LIVE_EVENT, -3, 28);
+   const { data, loading } = useGetSection(LIVE_EVENT, -3, 28);
 
    const containerVariants = {
       hidden: { opacity: 0 },
@@ -18,6 +19,9 @@ const LiveEvents = () => {
          },
       },
    };
+   if (loading || !data) {
+      return <LiveEventsLoading />;
+   }
    return (
       <SectionController sectionId={28}>
          <section id="events" className="py-20">
