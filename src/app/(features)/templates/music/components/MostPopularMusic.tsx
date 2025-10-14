@@ -5,9 +5,10 @@ import { PostsCashType } from '@/types/CashTypes';
 import { SectionController } from '@/util/controller/sectionsController';
 import { motion } from 'framer-motion';
 import ImageCard from '../../(components)/ImageCard';
+import MostPopularMusicLoading from './loading/MostPopularMusicLoading';
 
 const MostPopularMusic = () => {
-   const { data } = useGetSection(MOST_POPULAR_MUSIC, -6, 25);
+   const { data, loading } = useGetSection(MOST_POPULAR_MUSIC, -6, 25);
 
    const containerVariants = {
       hidden: { opacity: 0 },
@@ -18,6 +19,9 @@ const MostPopularMusic = () => {
          },
       },
    };
+   if (loading || !data) {
+      return <MostPopularMusicLoading />;
+   }
    return (
       <SectionController sectionId={25}>
          <section id="genres" className="py-20 bg-black/20">
