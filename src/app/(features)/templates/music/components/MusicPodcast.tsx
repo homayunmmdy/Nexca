@@ -7,9 +7,10 @@ import { postLinkGenerator } from '@/util/ServerUtil';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import MusicPodcastLoading from './loading/MusicPodcastLoading';
 
 const MusicPodcast = () => {
-   const { data } = useGetSection(PODCAST_MUSIC, -3, 27);
+   const { data, loading } = useGetSection(PODCAST_MUSIC, -3, 27);
 
    const containerVariants = {
       hidden: { opacity: 0 },
@@ -36,6 +37,9 @@ const MusicPodcast = () => {
       scale: 1.03,
       transition: { duration: 0.3 },
    };
+   if (loading || !data) {
+      return <MusicPodcastLoading />;
+   }
    return (
       <SectionController sectionId={27}>
          <section id="podcasts" className="py-20 bg-black/20">
