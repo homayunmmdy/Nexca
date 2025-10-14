@@ -3,7 +3,7 @@ import { FEATURE_TRACK_NEWS } from '@/config/Constants';
 import useGetSection from '@/hooks/useGetSection';
 import { PostsCashType } from '@/types/CashTypes';
 import { motion } from 'framer-motion';
-import FeaturedTracksLoading from './FeaturedTracksLoading';
+import FeaturedTracksLoading from './loading/FeaturedTracksLoading';
 import MusicCard from './MusicCard';
 
 const FeaturedTracks = () => {

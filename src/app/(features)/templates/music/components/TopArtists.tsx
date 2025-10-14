@@ -7,9 +7,10 @@ import { postLinkGenerator } from '@/util/ServerUtil';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import TopArtistsLoading from './loading/TopArtistsLoading';
 
 const TopArtists = () => {
-   const { data } = useGetSection(TOP_ARTISTS, -4, 24);
+   const { data, loading } = useGetSection(TOP_ARTISTS, -4, 24);
 
    const containerVariants = {
       hidden: { opacity: 0 },
@@ -31,6 +32,9 @@ const TopArtists = () => {
          },
       },
    };
+   if (loading || !data) {
+      return <TopArtistsLoading />;
+   }
    return (
       <SectionController sectionId={24}>
          <section id="artists" className="py-20">

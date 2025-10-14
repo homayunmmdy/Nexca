@@ -7,7 +7,7 @@ import { postLinkGenerator } from '@/util/ServerUtil';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import MusicHeroLoading from './MusicHeroLoading';
+import MusicHeroLoading from './loading/MusicHeroLoading';
 
 const MusicHero = () => {
    const { data, loading } = useGetSection(HERO_NEWS, -1, 22);
