@@ -5,9 +5,10 @@ import useGetSection from '@/hooks/useGetSection';
 import { PostsCashType } from '@/types/CashTypes';
 import { SectionController } from '@/util/controller/sectionsController';
 import { motion } from 'framer-motion';
+import MusicNewsLoading from './loading/MusicNewsLoading';
 
 const MusicNews = () => {
-   const { data } = useGetSection(MUSIC_NEWS, -3, 29);
+   const { data, loading } = useGetSection(MUSIC_NEWS, -3, 29);
 
    const containerVariants = {
       hidden: { opacity: 0 },
@@ -18,21 +19,10 @@ const MusicNews = () => {
          },
       },
    };
-   const itemVariants = {
-      hidden: { y: 20, opacity: 0 },
-      visible: {
-         y: 0,
-         opacity: 1,
-         transition: {
-            duration: 0.5,
-         },
-      },
-   };
 
-   const cardHover = {
-      scale: 1.03,
-      transition: { duration: 0.3 },
-   };
+   if (loading || !data) {
+      return <MusicNewsLoading />;
+   }
    return (
       <SectionController sectionId={29}>
          <section className="py-20 bg-black/20">
