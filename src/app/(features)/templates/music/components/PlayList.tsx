@@ -5,9 +5,10 @@ import { PostsCashType } from '@/types/CashTypes';
 import { SectionController } from '@/util/controller/sectionsController';
 import { motion } from 'framer-motion';
 import MusicCard from './MusicCard';
+import PlayListLoading from './loading/PlayListLoading';
 
 const PlayList = () => {
-   const { data } = useGetSection(PLAY_LIST, -4, 26);
+   const { data, loading } = useGetSection(PLAY_LIST, -4, 26);
 
    const containerVariants = {
       hidden: { opacity: 0 },
@@ -18,6 +19,9 @@ const PlayList = () => {
          },
       },
    };
+   if (loading || !data) {
+      return <PlayListLoading />;
+   }
    return (
       <SectionController sectionId={26}>
          <section className="py-20">
