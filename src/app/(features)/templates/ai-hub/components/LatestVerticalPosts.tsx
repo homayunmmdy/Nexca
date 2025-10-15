@@ -1,12 +1,12 @@
 'use client';
 import { ErrorText } from '@/components/atoms';
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { PostsCashType } from '@/types/CashTypes';
 import useFetch from '@/hooks/useFetch';
+import { PostsCashType } from '@/types/CashTypes';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { FiTrendingUp } from 'react-icons/fi';
 import VerticalCard from '../../(components)/VerticalCard';
-import { useCategoryStore } from '../../(components)/categoryStore';
+import { useCategoryStore } from '../useCategoryStore';
 
 const LatestVerticalPosts = () => {
    const activeCategory = useCategoryStore((state) => state.activeCategory);

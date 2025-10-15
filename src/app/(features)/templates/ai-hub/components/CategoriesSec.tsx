@@ -1,7 +1,6 @@
-import React from 'react';
-import { AI_HUB_categories } from '../../data/aiHub';
 import TabContent from '../../(components)/TabContent';
-import { useCategoryStore } from '../../(components)/categoryStore';
+import { AI_HUB_categories } from '../../data/aiHub';
+import { useCategoryStore } from '../useCategoryStore';
 
 const CategoriesSec = () => {
    const { activeCategory, setActiveCategory } = useCategoryStore();
