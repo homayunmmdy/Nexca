@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { BiNews } from 'react-icons/bi';
 import LinearCard from './LinearCard';
+import LatestPostsLoading from './components/LatestPostsLoading';
 
 function LatestPosts() {
    const [recentSize] = useState(-5);
@@ -30,6 +31,9 @@ function LatestPosts() {
          },
       },
    };
+   if (loading) {
+      return <LatestPostsLoading />;
+   }
    return (
       <>
          <motion.div
