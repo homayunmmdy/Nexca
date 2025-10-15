@@ -8,7 +8,7 @@ interface Props {
       name: string;
       icon: IconType;
    };
-   setActiveCategory: (value: React.SetStateAction<string>) => void;
+   setActiveCategory: (category: string) => void;
    activeCategory: string;
 }
 
