@@ -1,6 +1,6 @@
 'use client';
-
 import { PropsWithChildren } from 'react';
+import React from 'react';
 
 const PremiumBadge = ({ children }: PropsWithChildren) => {
    return (
