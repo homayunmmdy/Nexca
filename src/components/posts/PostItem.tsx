@@ -1,9 +1,8 @@
-import { PostsCashType } from '@/types/CashTypes';
 import { postLinkGenerator } from '@/util/ServerUtil';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const PostItem = ({ post }: { post: PostsCashType }) => {
+const PostItem = ({ post }: { post: any }) => {
    const postLink = postLinkGenerator(post._id, post.title);
 
    return (

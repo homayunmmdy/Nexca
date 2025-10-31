@@ -31,7 +31,7 @@ const BankNewsPage = () => {
    };
 
    return (
-      <Container>
+      <Container className="mt-30">
          <motion.div
             className="grid grid-cols-1 lg:grid-cols-3 gap-8"
             variants={containerVariants}
