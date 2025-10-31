@@ -100,16 +100,14 @@ const Feed: React.FC = () => {
       );
 
    return (
-      <Container>
+      <Container className="mt-30 mb-5">
          {/*@ts-ignore*/}
          {data?.pages[0]?.data?.length === 0 ? (
             <div className="flex flex-col items-center justify-center">
-               <p className="text-lg font-medium text-gray-600">
-                  No posts available!
-               </p>
+               <p className="text-lg font-medium ">No posts available!</p>
             </div>
          ) : (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                {data?.pages.map((page, i) => (
                   <React.Fragment key={i}>
                      {/*@ts-ignore*/}
