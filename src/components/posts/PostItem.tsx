@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const PostItem = ({ post }: { post: any }) => {
-   const postLink = postLinkGenerator(post._id, post.title);
-
+   const postLink = post.link
+      ? post.link
+      : postLinkGenerator(post._id, post.title);
    return (
       <div className="group card h-full rounded-xl bg-base-300 shadow-xl transition-transform duration-500 ease-in-out md:hover:scale-105">
          <figure>
