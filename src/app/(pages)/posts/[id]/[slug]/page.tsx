@@ -6,7 +6,7 @@ import { MainHead } from '@/components/molecules';
 import useSinglePost from '@/hooks/useSinglePost';
 import { SectionController } from '@/util/controller/sectionsController';
 import { useParams, useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import NotFound from '../../../[...not_found]/not-found';
 import NewsBody from '../components/NewsBody';
 import PostMeta from '../components/PostMeta';
